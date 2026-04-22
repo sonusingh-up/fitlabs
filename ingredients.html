@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png"/>
+  <meta name="theme-color" content="#00A878"/>
+  <link rel="icon" type="image/svg+xml" href="../fav.svg"/>
+  <link rel="shortcut icon" href="../fav.svg"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="FitLabReviews Ingredient Library — 20+ supplement ingredients explained with full clinical evidence, dosing, safety data, and products that contain them."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://fitlabreviews.com/ingredients/"/>
+<title>Supplement Ingredient Library — FitLabReviews</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N23DKB7H8K"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N23DKB7H8K');</script>
+<link rel="stylesheet" href="../style.css"/>
+<style>
+html,body{overflow-x:hidden;max-width:100%}*{box-sizing:border-box}
+/* HERO */
+.lib-hero{background:linear-gradient(135deg,#0D1F1A 0%,#1A3D30 60%,#00A878 100%);padding:60px 0 50px;color:#fff}
+.lib-hero h1{font-family:var(--font-head);font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.12;margin-bottom:14px;letter-spacing:-.025em}
+.lib-hero p{font-size:1rem;color:rgba(255,255,255,.72);max-width:580px;line-height:1.72;margin-bottom:28px}
+.lib-stats{display:flex;gap:32px;flex-wrap:wrap}
+.lib-stat-num{font-family:var(--font-head);font-size:2rem;font-weight:700;line-height:1;color:#fff}
+.lib-stat-lbl{font-size:.72rem;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;letter-spacing:.07em;margin-top:4px}
+.breadcrumb{font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:16px}
+.breadcrumb a{color:rgba(255,255,255,.7)}
+/* SEARCH BAR */
+.lib-search{background:var(--white);border-bottom:1px solid var(--border);padding:20px 0;position:sticky;top:60px;z-index:40}
+.lib-search-inner{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.lib-search input{flex:1;min-width:200px;padding:10px 18px;border:1px solid var(--border);border-radius:50px;font-size:.92rem;font-family:var(--font-body);outline:none;transition:border .2s}
+.lib-search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(0,168,120,.1)}
+.filter-pill{padding:8px 18px;border-radius:50px;font-size:.82rem;font-weight:600;border:1px solid var(--border);background:var(--white);color:var(--muted);cursor:pointer;transition:all .2s;white-space:nowrap}
+.filter-pill:hover{border-color:var(--accent);color:var(--accent)}
+.filter-pill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+/* INGREDIENT GRID */
+.ing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:36px 0 80px}
+.ing-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;text-decoration:none;color:inherit;transition:all .22s;display:flex;flex-direction:column;gap:0;position:relative;overflow:hidden}
+.ing-card:hover{border-color:var(--accent);box-shadow:0 6px 24px rgba(0,168,120,.12);transform:translateY(-3px)}
+.ing-card.featured{border-color:var(--accent)}
+.ing-card-emoji{font-size:2.4rem;margin-bottom:12px}
+.ing-card-cat{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px}
+.ing-card-name{font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--dark);line-height:1.3;margin-bottom:6px}
+.ing-card-tagline{font-size:.82rem;color:var(--muted);line-height:1.55;margin-bottom:14px;flex:1}
+.ing-card-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;padding-top:12px;border-top:1px solid var(--border)}
+.ev-dot{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px}
+.ev-s{background:#DCFCE7;color:#15803D}
+.ev-vs{background:#DCFCE7;color:#15803D}
+.ev-m{background:#FEF9C3;color:#92400E}
+.ev-e{background:#DBEAFE;color:#1D4ED8}
+.ing-card-dose{font-size:.75rem;color:var(--muted);font-weight:600}
+.ing-card-arrow{position:absolute;bottom:18px;right:18px;color:var(--accent);font-size:1rem;opacity:0;transition:opacity .2s}
+.ing-card:hover .ing-card-arrow{opacity:1}
+/* Section headers */
+.section-group-title{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--dark);padding:20px 0 12px;border-bottom:2px solid var(--accent-soft);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.no-results{text-align:center;padding:60px 20px;color:var(--muted)}
+.no-results h3{font-family:var(--font-head);font-size:1.3rem;color:var(--dark);margin-bottom:8px}
+@media(max-width:1100px){.ing-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.ing-grid{grid-template-columns:repeat(2,1fr)}.lib-search-inner{gap:8px}}
+@media(max-width:480px){.ing-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">
+        <span class="nav__logo-text">fitlab<em>.</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../reviews.html">Reviews</a></li>
+        <li><a href="../brands.html">Brands</a></li>
+        <li><a href="../best/best-protein-powders.html">Best Of</a></li>
+        <li><a href="../stacks.html">Stacks</a></li>
+        <li><a href="../compare.html">Compare</a></li>
+        <li><a href="../goals.html">By Goal</a></li>
+        <li><a href="../india.html">🇮🇳 India</a></li>
+        <li><a href="../ingredients/index.html">Ingredients</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__search-btn" id="navSearchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="../ask-jake.html" class="nav__cta">Ask Jake
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="nav__search-overlay" id="navSearchOverlay">
+      <div class="nav__search-box">
+        <svg class="nav__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navSearchInput" class="nav__search-input" placeholder="Search reviews, ingredients, brands&#x2026;" autocomplete="off" spellcheck="false"/>
+        <button class="nav__search-close" id="navSearchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="nav__search-results" id="navSearchResults"></div>
+      <div class="nav__search-quick">
+        <span class="nav__search-quick-label">Popular:</span>
+        <a href="../reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard</a>
+        <a href="../reviews/transparent-labs-bulk-black-review.html">BULK Black</a>
+        <a href="../best/best-creatine.html">Best Creatine</a>
+        <a href="../stacks/sleep-optimization.html">Sleep Stack</a>
+        <a href="../compare.html">Compare Products</a>
+      </div>
+    </div>
+
+  <div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="nav__mobile-header">
+      <span class="nav__mobile-brand">fitlab<em>.</em></span>
+      <button class="nav__mobile-close" id="navClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-search" id="mobSearchTrigger">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span style="font-size:.9rem;color:var(--muted)">Search supplements&#x2026;</span>
+    </div>
+    <div class="nav__mobile-links">
+      <a href="../index.html">Home</a>
+      <a href="../reviews.html">Reviews</a>
+      <a href="../brands.html">Brands</a>
+      <a href="../best/best-protein-powders.html">Best Of</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="../stacks.html">Supplement Stacks</a>
+      <a href="../compare.html">Compare Products</a>
+      <a href="../goals.html">Browse by Goal</a>
+      <a href="../research/index.html">Research Summaries</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="../ingredients/index.html">Ingredients Library</a>
+      <a href="../blog.html">Blog &amp; Guides</a>
+      <a href="../about.html">About Jake</a>
+      <a href="../ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
+    </div>
+  </div>
+
+<!-- HERO -->
+<div class="lib-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="../index.html">Home</a> › Ingredient Library</nav>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border-radius:50px;padding:6px 16px;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:16px;letter-spacing:.05em;">🧬 INGREDIENT LIBRARY</div>
+    <h1>Every Ingredient.<br/>The Full Science.</h1>
+    <p>Clinical evidence, correct dosing, all forms compared, and which products actually contain the ingredient at an effective dose — no marketing, no fluff.</p>
+    <div class="lib-stats">
+      <div><div class="lib-stat-num">20+</div><div class="lib-stat-lbl">Ingredients Covered</div></div>
+      <div><div class="lib-stat-num">500+</div><div class="lib-stat-lbl">Studies Referenced</div></div>
+      <div><div class="lib-stat-num">0</div><div class="lib-stat-lbl">Paid Placements</div></div>
+      <div><div class="lib-stat-num">100%</div><div class="lib-stat-lbl">Independent</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH + FILTER -->
+<div class="lib-search">
+  <div class="container">
+    <div class="lib-search-inner">
+      <input type="text" id="ingSearch" placeholder="Search ingredients... e.g. creatine, sleep, pump" oninput="filterIngredients()"/>
+      <button class="filter-pill active" data-cat="all" onclick="setFilter('all',this)">All</button>
+      <button class="filter-pill" data-cat="strength" onclick="setFilter('strength',this)">💪 Strength</button>
+      <button class="filter-pill" data-cat="endurance" onclick="setFilter('endurance',this)">🏃 Endurance</button>
+      <button class="filter-pill" data-cat="sleep" onclick="setFilter('sleep',this)">🌙 Sleep</button>
+      <button class="filter-pill" data-cat="protein" onclick="setFilter('protein',this)">💊 Protein</button>
+      <button class="filter-pill" data-cat="adaptogen" onclick="setFilter('adaptogen',this)">🌿 Adaptogens</button>
+      <button class="filter-pill" data-cat="vitamin" onclick="setFilter('vitamin',this)">☀️ Vitamins</button>
+    </div>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="container">
+  <div id="ingResultsGrid">
+
+    <!-- PERFORMANCE & STRENGTH -->
+    <div class="section-group-title" data-group="strength endurance">💪 Performance & Strength</div>
+    <div class="ing-grid" id="grid-strength">
+
+      <a href="creatine.html" class="ing-card featured" data-cat="strength" data-name="creatine monohydrate strength power phosphocreatine atp">
+        <div class="ing-card-emoji">🧬</div>
+        <div class="ing-card-cat">Strength & Power</div>
+        <div class="ing-card-name">Creatine Monohydrate</div>
+        <div class="ing-card-tagline">The most studied performance supplement ever. Increases phosphocreatine stores by 20–40%, directly improving strength, power output, and muscle mass.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">3–5g/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="citrulline.html" class="ing-card" data-cat="strength endurance" data-name="citrulline malate nitric oxide pump vasodilation blood flow pre-workout">
+        <div class="ing-card-emoji">🩸</div>
+        <div class="ing-card-cat">Pump & Blood Flow</div>
+        <div class="ing-card-name">L-Citrulline</div>
+        <div class="ing-card-tagline">Raises nitric oxide via the citrulline → arginine pathway. Clinical dose increases reps to failure by up to 52% in research. Most pre-workouts underdose it.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">6,000–8,000mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="beta-alanine.html" class="ing-card" data-cat="strength endurance" data-name="beta alanine carnosine tingles paresthesia lactic acid buffer endurance">
+        <div class="ing-card-emoji">⚡</div>
+        <div class="ing-card-cat">Muscular Endurance</div>
+        <div class="ing-card-name">Beta-Alanine</div>
+        <div class="ing-card-tagline">Raises muscle carnosine — a pH buffer that delays the burn in high-rep sets and intervals. The tingling is harmless. Takes 4–8 weeks of daily use to fully load.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">3.2–6.4g/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="caffeine.html" class="ing-card featured" data-cat="strength endurance" data-name="caffeine energy focus adenosine stimulant pre-workout performance">
+        <div class="ing-card-emoji">☕</div>
+        <div class="ing-card-cat">Energy & Cognitive Performance</div>
+        <div class="ing-card-name">Caffeine</div>
+        <div class="ing-card-tagline">The most-studied ergogenic aid. Blocks adenosine receptors to reduce perceived effort and fatigue. Dose by bodyweight (3–6mg/kg), not by arbitrary mg count.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">3–6mg/kg BW</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="bcaa.html" class="ing-card" data-cat="strength protein" data-name="bcaa leucine isoleucine valine branched chain amino acid muscle">
+        <div class="ing-card-emoji">🏋️</div>
+        <div class="ing-card-cat">Amino Acids</div>
+        <div class="ing-card-name">BCAAs (Leucine, Isoleucine, Valine)</div>
+        <div class="ing-card-tagline">Branched-chain amino acids including leucine — the primary trigger of muscle protein synthesis via mTORC1. Redundant if total daily protein is adequate.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">5–10g (3:1:1 ratio)</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="hmb.html" class="ing-card" data-cat="strength" data-name="HMB beta-hydroxy beta-methylbutyrate leucine metabolite anti-catabolic">
+        <div class="ing-card-emoji">🛡️</div>
+        <div class="ing-card-cat">Anti-Catabolic</div>
+        <div class="ing-card-name">HMB (β-Hydroxy β-Methylbutyrate)</div>
+        <div class="ing-card-tagline">A leucine metabolite that reduces muscle protein breakdown. Most useful during caloric deficits or detraining periods. Smaller benefit in trained individuals with adequate protein.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">3g/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="betaine.html" class="ing-card" data-cat="strength endurance" data-name="betaine anhydrous trimethylglycine power output strength homocysteine">
+        <div class="ing-card-emoji">💎</div>
+        <div class="ing-card-cat">Power Output</div>
+        <div class="ing-card-name">Betaine Anhydrous</div>
+        <div class="ing-card-tagline">Osmolyte that supports cellular hydration and reduces homocysteine. Studies show meaningful improvements in power output and body composition at 2,500mg. Often underdosed.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">2,500mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="tyrosine.html" class="ing-card" data-cat="strength" data-name="tyrosine L-tyrosine dopamine focus cognition stress">
+        <div class="ing-card-emoji">🧠</div>
+        <div class="ing-card-cat">Focus & Cognition</div>
+        <div class="ing-card-name">L-Tyrosine</div>
+        <div class="ing-card-tagline">Precursor to dopamine, norepinephrine, and thyroid hormones. Maintains cognitive performance under stress, sleep deprivation, and cold. Often found in pre-workouts at 500–1,000mg.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">500–2,000mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- PROTEIN -->
+    <div class="section-group-title" data-group="protein">💊 Protein Sources</div>
+    <div class="ing-grid" id="grid-protein">
+
+      <a href="whey-protein.html" class="ing-card featured" data-cat="protein strength" data-name="whey protein concentrate isolate hydrolysate leucine muscle synthesis">
+        <div class="ing-card-emoji">💊</div>
+        <div class="ing-card-cat">Complete Protein</div>
+        <div class="ing-card-name">Whey Protein</div>
+        <div class="ing-card-tagline">Highest leucine content of any protein source (~10%). Fastest digesting complete protein. Concentrate for value, isolate for lactose intolerance. 30+ years of evidence.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">20–40g per serving</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="casein.html" class="ing-card" data-cat="protein" data-name="casein slow digesting protein overnight recovery micellar">
+        <div class="ing-card-emoji">🥛</div>
+        <div class="ing-card-cat">Slow-Release Protein</div>
+        <div class="ing-card-name">Casein Protein</div>
+        <div class="ing-card-tagline">Slow-digesting protein (6–8 hours vs 1–2 for whey). Ideal before bed for overnight muscle protein synthesis. Complementary to whey in a complete protein strategy.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">25–40g before bed</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="plant-protein.html" class="ing-card" data-cat="protein" data-name="plant protein pea rice soy vegan complete amino">
+        <div class="ing-card-emoji">🌱</div>
+        <div class="ing-card-cat">Plant-Based Protein</div>
+        <div class="ing-card-name">Plant Protein (Pea, Rice, Soy)</div>
+        <div class="ing-card-tagline">Combined pea + rice protein achieves a complete amino acid profile comparable to whey. Lower leucine content — partially offset with larger servings. Best vegan alternative.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">25–40g per serving</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="glutamine.html" class="ing-card" data-cat="protein" data-name="glutamine gut health immune recovery conditionally essential">
+        <div class="ing-card-emoji">🔬</div>
+        <div class="ing-card-cat">Recovery & Gut Health</div>
+        <div class="ing-card-name">L-Glutamine</div>
+        <div class="ing-card-tagline">Most abundant amino acid in muscle and blood. Conditionally essential during intense training and illness. Strong evidence for gut health and immune function; weaker for muscle building.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">5–10g/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- SLEEP & RECOVERY -->
+    <div class="section-group-title" data-group="sleep">🌙 Sleep & Recovery</div>
+    <div class="ing-grid" id="grid-sleep">
+
+      <a href="melatonin.html" class="ing-card featured" data-cat="sleep" data-name="melatonin sleep circadian jet lag dose 0.3mg onset">
+        <div class="ing-card-emoji">🌙</div>
+        <div class="ing-card-cat">Sleep Onset & Circadian</div>
+        <div class="ing-card-name">Melatonin</div>
+        <div class="ing-card-tagline">Circadian timing signal — not a sedative. 0.3–0.5mg is the research-backed dose. 95% of products are dosed 10–30× higher than necessary. Strong evidence for jet lag.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">0.3–0.5mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="magnesium.html" class="ing-card featured" data-cat="sleep adaptogen" data-name="magnesium glycinate threonate sleep recovery deficiency muscle cramp testosterone">
+        <div class="ing-card-emoji">🧲</div>
+        <div class="ing-card-cat">Essential Mineral</div>
+        <div class="ing-card-name">Magnesium</div>
+        <div class="ing-card-tagline">~50% of western adults are deficient. Involved in 300+ reactions including sleep (GABA modulation), muscle relaxation, and ATP production. Form matters — avoid oxide (4% absorption).</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">200–400mg elemental</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="theanine.html" class="ing-card" data-cat="sleep" data-name="theanine L-theanine alpha waves calm focus anxiety sleep">
+        <div class="ing-card-emoji">🍃</div>
+        <div class="ing-card-cat">Calm Focus & Sleep</div>
+        <div class="ing-card-name">L-Theanine</div>
+        <div class="ing-card-tagline">Promotes alpha brain waves — relaxed alertness without drowsiness. Pairs exceptionally with caffeine (reduces jitters). At 200mg before bed, reduces sleep latency and anxiety.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">100–200mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="gaba.html" class="ing-card" data-cat="sleep" data-name="GABA sleep neurotransmitter inhibitory relaxation anxiety">
+        <div class="ing-card-emoji">💤</div>
+        <div class="ing-card-cat">Sleep & Anxiety</div>
+        <div class="ing-card-name">GABA</div>
+        <div class="ing-card-tagline">The brain's primary inhibitory neurotransmitter. Oral GABA has poor blood-brain barrier penetration at standard doses, but novel delivery systems (nano-emulsion) show improved results.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">100–500mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="5-htp.html" class="ing-card" data-cat="sleep adaptogen" data-name="5-HTP serotonin tryptophan mood sleep anxiety depression">
+        <div class="ing-card-emoji">🌈</div>
+        <div class="ing-card-cat">Serotonin Precursor</div>
+        <div class="ing-card-name">5-HTP</div>
+        <div class="ing-card-tagline">Converts directly to serotonin (and subsequently melatonin) in the brain. Evidence for sleep quality, mood, and appetite suppression. Caution with antidepressants (serotonin syndrome risk).</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">50–200mg</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="apigenin.html" class="ing-card" data-cat="sleep" data-name="apigenin chamomile sleep anxiety GABA flavonoid huberman">
+        <div class="ing-card-emoji">🌼</div>
+        <div class="ing-card-cat">Sleep & Anti-Anxiety</div>
+        <div class="ing-card-name">Apigenin</div>
+        <div class="ing-card-tagline">A chamomile flavonoid that binds GABA-A receptors with mild sedative-anxiolytic effects. Popularised by Andrew Huberman's sleep stack. 50mg before bed is the standard approach.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-e">↑ Emerging</span>
+          <span class="ing-card-dose">50mg before bed</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- ADAPTOGENS -->
+    <div class="section-group-title" data-group="adaptogen">🌿 Adaptogens & Hormonal Support</div>
+    <div class="ing-grid" id="grid-adaptogens">
+
+      <a href="ashwagandha.html" class="ing-card featured" data-cat="adaptogen sleep" data-name="ashwagandha KSM-66 sensoril cortisol testosterone stress adaptogen withanolides">
+        <div class="ing-card-emoji">🌿</div>
+        <div class="ing-card-cat">Adaptogen</div>
+        <div class="ing-card-name">Ashwagandha (KSM-66)</div>
+        <div class="ing-card-tagline">The adaptogen with the strongest evidence base. 27.9% cortisol reduction (double-blind RCT). Also shown to improve VO2 max, testosterone, sleep, and muscle recovery. Extract quality critical.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">300–600mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="rhodiola.html" class="ing-card" data-cat="adaptogen" data-name="rhodiola rosea rosavins salidroside fatigue stress cognitive endurance">
+        <div class="ing-card-emoji">🏔️</div>
+        <div class="ing-card-cat">Adaptogen</div>
+        <div class="ing-card-name">Rhodiola Rosea</div>
+        <div class="ing-card-tagline">Scandinavian root adaptogen with solid evidence for reducing mental fatigue under stress and improving endurance exercise performance. Distinct mechanism from ashwagandha — can be combined.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Moderate-Strong</span>
+          <span class="ing-card-dose">200–600mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="zinc.html" class="ing-card" data-cat="adaptogen vitamin" data-name="zinc testosterone immune recovery ZMA athletes deficiency">
+        <div class="ing-card-emoji">⚙️</div>
+        <div class="ing-card-cat">Essential Mineral</div>
+        <div class="ing-card-name">Zinc</div>
+        <div class="ing-card-tagline">Essential for testosterone production, immune function, and protein synthesis. Athletes commonly deficient due to sweat losses. Supplementation in deficient individuals reliably improves testosterone.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">15–30mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="maca.html" class="ing-card" data-cat="adaptogen" data-name="maca root libido energy fertility Peru adaptogen hormonal">
+        <div class="ing-card-emoji">🟤</div>
+        <div class="ing-card-cat">Hormonal Support</div>
+        <div class="ing-card-name">Maca Root</div>
+        <div class="ing-card-tagline">Peruvian root with evidence for libido enhancement and mood improvement. Interestingly, appears to work without directly altering sex hormone levels — mechanism still being elucidated.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">1,500–3,000mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- VITAMINS & HEALTH -->
+    <div class="section-group-title" data-group="vitamin">☀️ Vitamins & Essential Nutrients</div>
+    <div class="ing-grid" id="grid-vitamins">
+
+      <a href="vitamin-d.html" class="ing-card" data-cat="vitamin" data-name="vitamin D D3 deficiency bone testosterone immune sunlight">
+        <div class="ing-card-emoji">☀️</div>
+        <div class="ing-card-cat">Essential Vitamin</div>
+        <div class="ing-card-name">Vitamin D3</div>
+        <div class="ing-card-tagline">~40% of the global population is deficient. Involved in testosterone synthesis, bone health, immune function, and mood. D3 (cholecalciferol) is the form that effectively raises blood levels.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">1,000–5,000 IU/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="omega-3.html" class="ing-card" data-cat="vitamin" data-name="omega-3 EPA DHA fish oil heart inflammation recovery joint">
+        <div class="ing-card-emoji">🐟</div>
+        <div class="ing-card-cat">Essential Fatty Acids</div>
+        <div class="ing-card-name">Omega-3 (EPA & DHA)</div>
+        <div class="ing-card-tagline">EPA and DHA are the active omega-3 forms from marine sources. Strong evidence for cardiovascular health, inflammation reduction, and joint health. Most people are chronically under-consuming.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">1,000–3,000mg EPA+DHA</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="vitamin-c.html" class="ing-card" data-cat="vitamin" data-name="vitamin C ascorbic acid immune antioxidant recovery collagen">
+        <div class="ing-card-emoji">🍊</div>
+        <div class="ing-card-cat">Antioxidant & Immune</div>
+        <div class="ing-card-name">Vitamin C</div>
+        <div class="ing-card-tagline">Essential for collagen synthesis, immune function, and iron absorption. Strong evidence for reducing duration of colds in athletes under high training stress. Note: high-dose antioxidants may blunt some training adaptations.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-vs">✔ Very Strong</span>
+          <span class="ing-card-dose">500–1,000mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="coq10.html" class="ing-card" data-cat="vitamin" data-name="CoQ10 ubiquinol energy mitochondria statins heart antioxidant">
+        <div class="ing-card-emoji">⚡</div>
+        <div class="ing-card-cat">Mitochondrial Support</div>
+        <div class="ing-card-name">CoQ10 (Ubiquinol)</div>
+        <div class="ing-card-tagline">Essential component of the mitochondrial electron transport chain. Declines with age and statin use. Evidence for cardiovascular health, energy in older adults, and statin-induced myopathy relief.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">100–300mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <!-- WEIGHT MANAGEMENT -->
+    <div class="section-group-title" data-group="endurance">🔥 Weight Management & Thermogenics</div>
+    <div class="ing-grid" id="grid-weight">
+
+      <a href="green-tea-egcg.html" class="ing-card" data-cat="endurance" data-name="green tea EGCG catechins thermogenic fat oxidation weight loss">
+        <div class="ing-card-emoji">🍵</div>
+        <div class="ing-card-cat">Thermogenic</div>
+        <div class="ing-card-name">Green Tea Extract (EGCG)</div>
+        <div class="ing-card-tagline">EGCG catechins inhibit catechol-O-methyltransferase (COMT), extending norepinephrine signalling and increasing fat oxidation. Most effective when paired with caffeine. Clinical dose: 400–500mg EGCG.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">400–500mg EGCG</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="glucomannan.html" class="ing-card" data-cat="endurance" data-name="glucomannan konjac fibre appetite satiety weight loss">
+        <div class="ing-card-emoji">🧸</div>
+        <div class="ing-card-cat">Appetite Suppression</div>
+        <div class="ing-card-name">Glucomannan</div>
+        <div class="ing-card-tagline">Soluble dietary fibre from konjac root. Absorbs water and expands in the stomach — mechanically increasing satiety. One of the few non-stimulant weight loss ingredients with FDA-reviewed evidence.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-s">✔ Strong</span>
+          <span class="ing-card-dose">3g/day (before meals)</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="cayenne-pepper.html" class="ing-card" data-cat="endurance" data-name="cayenne pepper capsaicin thermogenic metabolism fat burning">
+        <div class="ing-card-emoji">🌶️</div>
+        <div class="ing-card-cat">Thermogenic</div>
+        <div class="ing-card-name">Cayenne Pepper (Capsaicin)</div>
+        <div class="ing-card-tagline">Capsaicin activates TRPV1 receptors, triggering thermogenesis and temporarily increasing metabolic rate by 4–5%. Consistent daily use shows modest but real reductions in ad libitum calorie intake.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">2–6mg capsaicin/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+      <a href="green-coffee-bean.html" class="ing-card" data-cat="endurance" data-name="green coffee bean chlorogenic acid glucose metabolism weight loss">
+        <div class="ing-card-emoji">☕</div>
+        <div class="ing-card-cat">Glucose Metabolism</div>
+        <div class="ing-card-name">Green Coffee Bean Extract</div>
+        <div class="ing-card-tagline">Chlorogenic acids (the active compounds) inhibit glucose-6-phosphatase, reducing hepatic glucose output and post-meal blood glucose spikes. Evidence for modest weight loss — not primarily via thermogenesis.</div>
+        <div class="ing-card-meta">
+          <span class="ev-dot ev-m">~ Moderate</span>
+          <span class="ing-card-dose">400–800mg/day</span>
+        </div>
+        <span class="ing-card-arrow">→</span>
+      </a>
+
+    </div>
+
+    <div id="noResults" class="no-results" style="display:none">
+      <div style="font-size:3rem;margin-bottom:14px">🔍</div>
+      <h3>No ingredients found</h3>
+      <p>Try a different keyword — or <a href="../search.html" style="color:var(--accent)">use our full search</a></p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <a href="../index.html" class="footer__logo-link">
+            <span class="footer__logo-text">fitlab<em>.</em></span>
+          </a>
+          <p class="footer__desc">Science-backed supplement and fitness gadget reviews. We test ingredients, verify clinical doses, and call out the marketing fluff — so you spend money on what actually works.</p>
+          <div class="footer__trust">
+            <span>No paid placements</span>
+            <span>Independent reviews</span>
+            <span>Zero brand bias</span>
+            <span>Jake Reynolds, CISSN</span>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="footer__col">
+          <h4>Reviews</h4>
+          <a href="../reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard Whey</a>
+          <a href="../reviews/dymatize-iso100-review-2026.html">Dymatize ISO100</a>
+          <a href="../reviews/transparent-labs-bulk-black-review.html">BULK Black Pre-Workout</a>
+          <a href="../reviews/instant-knockout-cut-review-2026.html">Instant Knockout Cut</a>
+          <a href="../reviews/phenq-review-2026.html">PhenQ Fat Burner</a>
+          <a href="../reviews/yu-sleep-review.html">Yu Sleep</a>
+          <a href="../reviews.html" class="footer__more">All Reviews →</a>
+        </div>
+
+        <!-- Best Of -->
+        <div class="footer__col">
+          <h4>Best Of 2026</h4>
+          <a href="../best/best-pre-workouts.html">Best Pre-Workouts</a>
+          <a href="../best/best-protein-powders.html">Best Protein Powders</a>
+          <a href="../best/best-fat-burners.html">Best Fat Burners</a>
+          <a href="../best/best-creatine.html">Best Creatine</a>
+          <a href="../best/best-sleep-supplements.html">Best Sleep Supplements</a>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="footer__col">
+          <h4>Ingredients</h4>
+          <a href="../ingredients/creatine.html">Creatine Monohydrate</a>
+          <a href="../ingredients/caffeine.html">Caffeine</a>
+          <a href="../ingredients/citrulline.html">L-Citrulline</a>
+          <a href="../ingredients/whey-protein.html">Whey Protein</a>
+          <a href="../ingredients/ashwagandha.html">Ashwagandha</a>
+          <a href="../ingredients/magnesium.html">Magnesium</a>
+          <a href="../ingredients/index.html" class="footer__more">All 30 Ingredients →</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="../blog/best-supplements-for-muscle-gain.html">Muscle Gain Guide</a>
+          <a href="../blog/top-5-fat-burner-ingredients-clinical-backing.html">Fat Burner Ingredients</a>
+          <a href="../blog/how-to-read-supplement-label-red-flags.html">Label Red Flags</a>
+          <a href="../blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
+          <a href="../blog.html" class="footer__more">All Articles →</a>
+          <h4 style="margin-top:22px">Company</h4>
+          <a href="../about.html">About Jake Reynolds</a>
+          <a href="../privacy.html">Privacy Policy</a>
+          <a href="../terms.html">Terms of Use</a>
+        </div>
+
+      </div><!-- .footer__grid -->
+
+      <div class="footer__bottom-bar">
+        <span class="footer__copyright">© 2026 FitLabReviews.com · All rights reserved</span>
+        <div class="footer__bottom-links">
+          <a href="../privacy.html">Privacy</a>
+          <a href="../terms.html">Terms</a>
+          <a href="../about.html">About</a>
+          <a href="../search.html">Search</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Reviews authored by Jake Reynolds, CISSN (Certified Sports Nutritionist).
+      </p>
+
+    </div>
+  </footer>
+
+<script>
+let activeFilter = 'all';
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterIngredients();
+}
+
+function filterIngredients() {
+  const q = document.getElementById('ingSearch').value.toLowerCase().trim();
+  const cards = document.querySelectorAll('.ing-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    const catMatch = activeFilter === 'all' || (card.dataset.cat || '').includes(activeFilter);
+    const nameMatch = !q || (card.dataset.name || '').includes(q) || card.querySelector('.ing-card-name').textContent.toLowerCase().includes(q);
+    const show = catMatch && nameMatch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  // Hide/show section headers based on whether any card in their section is visible
+  document.querySelectorAll('.ing-grid').forEach(grid => {
+    const hasVisible = [...grid.querySelectorAll('.ing-card')].some(c => c.style.display !== 'none');
+    const header = grid.previousElementSibling;
+    if (header && header.classList.contains('section-group-title')) {
+      header.style.display = hasVisible ? '' : 'none';
+    }
+    grid.style.display = hasVisible ? '' : 'none';
+  });
+
+  document.getElementById('noResults').style.display = visible === 0 ? '' : 'none';
+}
+</script>
+<script>
+(function(){
+  // Hamburger menu
+  var btn=document.getElementById('navHamburger');
+  var drawer=document.getElementById('mobileNav');
+  var closeBtn=document.getElementById('navClose');
+  if(btn && drawer){
+    function openMenu(){
+      drawer.classList.add('open'); document.body.style.overflow='hidden';
+      btn.setAttribute('aria-expanded','true');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform='translateY(8px) rotate(45deg)';
+      bars[1].style.opacity='0';
+      bars[2].style.transform='translateY(-8px) rotate(-45deg)';
+    }
+    function closeMenu(){
+      drawer.classList.remove('open'); document.body.style.overflow='';
+      btn.setAttribute('aria-expanded','false');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform=''; bars[1].style.opacity=''; bars[2].style.transform='';
+    }
+    btn.addEventListener('click',function(){ drawer.classList.contains('open')?closeMenu():openMenu(); });
+    if(closeBtn) closeBtn.addEventListener('click',closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeMenu); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+    drawer.addEventListener('click',function(e){ if(e.target===drawer) closeMenu(); });
+  }
+
+  // Search overlay
+  var searchBtn=document.getElementById('navSearchBtn');
+  var searchOverlay=document.getElementById('navSearchOverlay');
+  var searchClose=document.getElementById('navSearchClose');
+  var searchInput=document.getElementById('navSearchInput');
+  var searchResults=document.getElementById('navSearchResults');
+
+  // Search data
+  var SEARCH_DATA=[
+    {t:'ON Gold Standard 100% Whey Review',url:'../reviews/on-gold-standard-whey-review-2026.html',cat:'Review'},
+    {t:'Dymatize ISO100 Hydrolyzed Whey Review',url:'../reviews/dymatize-iso100-review-2026.html',cat:'Review'},
+    {t:'Transparent Labs BULK Black Review',url:'../reviews/transparent-labs-bulk-black-review.html',cat:'Review'},
+    {t:'Instant Knockout Cut Review',url:'../reviews/instant-knockout-cut-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze Biozyme Whey Review',url:'../reviews/muscleblaze-biozyme-whey-review-2026.html',cat:'Review'},
+    {t:'Thorne Creatine Review',url:'../reviews/thorne-creatine-review-2026.html',cat:'Review'},
+    {t:'PhenQ Fat Burner Review',url:'../reviews/phenq-review-2026.html',cat:'Review'},
+    {t:'Gorilla Mode Pre-Workout Review',url:'../reviews/gorilla-mode-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Best Protein Powders 2026',url:'../best/best-protein-powders.html',cat:'Best Of'},
+    {t:'Best Pre-Workouts 2026',url:'../best/best-pre-workouts.html',cat:'Best Of'},
+    {t:'Best Creatine 2026',url:'../best/best-creatine.html',cat:'Best Of'},
+    {t:'Best Fat Burners 2026',url:'../best/best-fat-burners.html',cat:'Best Of'},
+    {t:'Best Sleep Supplements 2026',url:'../best/best-sleep-supplements.html',cat:'Best Of'},
+    {t:'Optimum Nutrition Brand Analysis',url:'../brands/optimum-nutrition.html',cat:'Brand'},
+    {t:'Transparent Labs Brand Analysis',url:'../brands/transparent-labs.html',cat:'Brand'},
+    {t:'Dymatize Brand Analysis',url:'../brands/dymatize.html',cat:'Brand'},
+    {t:'MuscleBlaze Brand Analysis',url:'../brands/muscleblaze.html',cat:'Brand'},
+    {t:'Muscle Gain Stack',url:'../stacks/muscle-gain.html',cat:'Stack'},
+    {t:'Sleep Optimization Stack',url:'../stacks/sleep-optimization.html',cat:'Stack'},
+    {t:'Fat Loss Support Stack',url:'../stacks/fat-loss.html',cat:'Stack'},
+    {t:'Pre-Workout Performance Stack',url:'../stacks/pre-workout-performance.html',cat:'Stack'},
+    {t:'Cognitive Focus Stack',url:'../stacks/cognitive-focus.html',cat:'Stack'},
+    {t:'Foundational Health Stack',url:'../stacks/foundational-health.html',cat:'Stack'},
+    {t:'Creatine Monohydrate — Ingredient Guide',url:'../ingredients/creatine.html',cat:'Ingredient'},
+    {t:'Caffeine — Ingredient Guide',url:'../ingredients/caffeine.html',cat:'Ingredient'},
+    {t:'L-Citrulline — Ingredient Guide',url:'../ingredients/citrulline.html',cat:'Ingredient'},
+    {t:'Ashwagandha — Ingredient Guide',url:'../ingredients/ashwagandha.html',cat:'Ingredient'},
+    {t:'Magnesium — Ingredient Guide',url:'../ingredients/magnesium.html',cat:'Ingredient'},
+    {t:'Whey Protein — Ingredient Guide',url:'../ingredients/whey-protein.html',cat:'Ingredient'},
+    {t:'ON Gold Standard vs ISO100 Comparison',url:'../comparisons/on-gold-standard-vs-iso100.html',cat:'Compare'},
+    {t:'Whey vs Plant Protein Comparison',url:'../comparisons/whey-vs-plant-protein.html',cat:'Compare'},
+    {t:'BULK Black vs C4 Original Comparison',url:'../comparisons/transparent-labs-vs-c4.html',cat:'Compare'},
+  ];
+
+  function openSearch(){
+    searchOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ if(searchInput) searchInput.focus(); },100);
+  }
+  function closeSearch(){
+    searchOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(searchInput) searchInput.value='';
+    if(searchResults) searchResults.innerHTML='';
+  }
+
+  if(searchBtn) searchBtn.addEventListener('click', openSearch);
+  if(searchClose) searchClose.addEventListener('click', closeSearch);
+  if(searchOverlay){
+    searchOverlay.addEventListener('click',function(e){
+      if(e.target===searchOverlay) closeSearch();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeSearch();
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){ e.preventDefault(); openSearch(); }
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      var q=this.value.trim().toLowerCase();
+      if(!q || q.length < 2){ searchResults.innerHTML=''; return; }
+      var hits=SEARCH_DATA.filter(function(d){ return d.t.toLowerCase().includes(q); }).slice(0,6);
+      if(!hits.length){ searchResults.innerHTML='<div style="padding:16px 18px;font-size:.88rem;color:var(--muted)">No results for \\"'+q+'\\"</div>'; return; }
+      searchResults.innerHTML=hits.map(function(h){
+        return '<a href="'+h.url+'" class="nav__search-result-item">'
+          +'<span class="sr-cat">'+h.cat+'</span>'
+          +'<span>'+h.t+'</span>'
+          +'</a>';
+      }).join('');
+    });
+  }
+})();
+</script>
+<script>var mT=document.getElementById("mobSearchTrigger");if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){document.getElementById("mobileNav").classList.remove("open");document.body.style.overflow="";setTimeout(function(){var so=document.getElementById("navSearchOverlay");if(so){so.classList.add("open");document.body.style.overflow="hidden";setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}},200);});}</script>
+</body>
+</html>
