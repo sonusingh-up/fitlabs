@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#00A878"/>
+  <link rel="icon" type="image/svg+xml" href="fav.svg"/>
+  <link rel="shortcut icon" href="fav.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex, follow"/>
+  <title id="pageTitle">Search — FitLabReviews</title>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N23DKB7H8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-N23DKB7H8K');
+  </script>
+
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .search-page { padding: 0 0 90px; }
+
+    /* ── SEARCH HEADER ── */
+    .search-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0 36px;
+    }
+    .search-header h1 {
+      font-family: var(--font-head);
+      font-size: 1.8rem; font-weight: 700;
+      color: var(--dark); margin-bottom: 20px;
+      letter-spacing: -.018em;
+    }
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      max-width: 620px;
+    }
+    .search-bar input {
+      flex: 1;
+      padding: 13px 18px;
+      border: 2px solid var(--border);
+      border-radius: 50px;
+      font-size: 1rem;
+      font-family: var(--font-body);
+      outline: none;
+      background: var(--white);
+      color: var(--text);
+      transition: border .2s;
+    }
+    .search-bar input:focus { border-color: var(--accent); }
+    .search-bar button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 13px 28px;
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .search-bar button:hover { background: var(--accent-dark); }
+    .search-meta {
+      margin-top: 12px;
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    .search-meta strong { color: var(--accent); }
+
+    /* ── FILTER TABS ── */
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 20px 0 0;
+    }
+    .filter-tab {
+      padding: 7px 18px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-tab:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .filter-tab .count {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.25);
+      border-radius: 50px;
+      font-size: .75rem;
+      padding: 1px 7px;
+      margin-left: 4px;
+      font-weight: 700;
+    }
+    .filter-tab:not(.active) .count {
+      background: var(--bg);
+      color: var(--muted);
+    }
+
+    /* ── RESULTS LAYOUT ── */
+    .results-wrap {
+      padding: 36px 0;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── SECTION HEADING ── */
+    .results-section-title {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--muted);
+      margin: 28px 0 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .results-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .results-section-title:first-child { margin-top: 0; }
+
+    /* ── RESULT CARD ── */
+    .result-card {
+      display: flex;
+      gap: 16px;
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-bottom: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all .22s;
+      align-items: flex-start;
+    }
+    .result-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 18px rgba(0,168,120,.1);
+      transform: translateY(-2px);
+    }
+    .result-card__thumb {
+      width: 72px; height: 72px;
+      border-radius: var(--radius);
+      background: var(--accent-soft);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; flex-shrink: 0; overflow: hidden;
+    }
+    .result-card__thumb img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .result-card__body { flex: 1; min-width: 0; }
+    .result-card__type {
+      font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .07em;
+      color: var(--accent); margin-bottom: 4px;
+    }
+    .result-card__title {
+      font-family: var(--font-head);
+      font-size: 1.05rem; font-weight: 600; color: var(--dark);
+      line-height: 1.3; margin-bottom: 6px;
+    }
+    .result-card__excerpt {
+      font-size: .85rem; color: var(--muted);
+      line-height: 1.6; margin-bottom: 8px;
+    }
+    .result-card__meta {
+      display: flex; align-items: center; gap: 12px;
+      font-size: .78rem; color: var(--muted); flex-wrap: wrap;
+    }
+    .result-card__score {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      font-size: .8rem; font-weight: 700; flex-shrink: 0;
+    }
+    .result-card__score.mid { background: var(--amber); }
+    .result-card__score.low { background: var(--red); }
+    .result-card__arrow {
+      margin-left: auto; color: var(--accent);
+      font-size: 1.2rem; flex-shrink: 0;
+      align-self: center;
+    }
+
+    /* highlight matched text */
+    mark {
+      background: #FEF9C3;
+      color: var(--dark);
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+
+    /* ── EMPTY / NO RESULTS ── */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .no-results-icon { font-size: 3rem; margin-bottom: 14px; }
+    .no-results h3 { font-family: var(--font-head); font-size: 1.3rem; color: var(--dark); margin-bottom: 8px; }
+    .no-results p { font-size: .93rem; margin-bottom: 24px; line-height: 1.7; }
+    .suggestions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+    .suggestion-pill {
+      background: var(--accent-soft); color: var(--accent-dark);
+      border-radius: 50px; padding: 6px 16px;
+      font-size: .85rem; font-weight: 600; cursor: pointer;
+      border: 1px solid rgba(0,168,120,.15); transition: all .2s;
+    }
+    .suggestion-pill:hover { background: var(--accent); color: #fff; }
+
+    /* ── LOADING ── */
+    .search-loading {
+      display: flex; align-items: center; gap: 10px;
+      padding: 40px 0; color: var(--muted); font-size: .93rem;
+    }
+    .spinner {
+      width: 20px; height: 20px; border-radius: 50%;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── SIDEBAR ── */
+    .sidebar-widget {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 20px; margin-bottom: 18px;
+    }
+    .sidebar-widget h3 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+      color: var(--dark); margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+    .popular-tag {
+      display: inline-flex; margin: 0 5px 8px 0;
+      padding: 5px 14px; border-radius: 50px;
+      background: var(--bg); color: var(--text);
+      font-size: .82rem; font-weight: 600; cursor: pointer;
+      border: 1px solid var(--border); transition: all .2s;
+    }
+    .popular-tag:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .recent-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+      text-decoration: none; color: var(--text);
+      font-size: .85rem; font-weight: 500; transition: color .2s;
+    }
+    .recent-item:last-child { border-bottom: none; }
+    .recent-item:hover { color: var(--accent); }
+    .recent-item-icon {
+      width: 34px; height: 34px; border-radius: var(--radius);
+      background: var(--accent-soft); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .results-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .search-bar { flex-direction: column; }
+      .search-bar button { border-radius: 50px; }
+      .result-card__thumb { width: 54px; height: 54px; font-size: 1.5rem; }
+    }
+  html,body{overflow-x:hidden;max-width:100%}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">fitlab<em>.</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="best/best-protein-powders.html">Best Of</a></li>
+        <li><a href="stacks.html">Stacks</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="goals.html">By Goal</a></li>
+        <li><a href="india.html">🇮🇳 India</a></li>
+        <li><a href="ingredients/index.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__search-btn" id="navSearchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="ask-jake.html" class="nav__cta">Ask Jake
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="nav__search-overlay" id="navSearchOverlay">
+      <div class="nav__search-box">
+        <svg class="nav__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navSearchInput" class="nav__search-input" placeholder="Search reviews, ingredients, brands&#x2026;" autocomplete="off" spellcheck="false"/>
+        <button class="nav__search-close" id="navSearchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="nav__search-results" id="navSearchResults"></div>
+      <div class="nav__search-quick">
+        <span class="nav__search-quick-label">Popular:</span>
+        <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard</a>
+        <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black</a>
+        <a href="best/best-creatine.html">Best Creatine</a>
+        <a href="stacks/sleep-optimization.html">Sleep Stack</a>
+        <a href="compare.html">Compare Products</a>
+      </div>
+    </div>
+
+  <div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="nav__mobile-header">
+      <span class="nav__mobile-brand">fitlab<em>.</em></span>
+      <button class="nav__mobile-close" id="navClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-search" id="mobSearchTrigger">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span style="font-size:.9rem;color:var(--muted)">Search supplements&#x2026;</span>
+    </div>
+    <div class="nav__mobile-links">
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="brands.html">Brands</a>
+      <a href="best/best-protein-powders.html">Best Of</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="stacks.html">Supplement Stacks</a>
+      <a href="compare.html">Compare Products</a>
+      <a href="goals.html">Browse by Goal</a>
+      <a href="research/index.html">Research Summaries</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="ingredients/index.html">Ingredients Library</a>
+      <a href="blog.html">Blog &amp; Guides</a>
+      <a href="about.html">About Jake</a>
+      <a href="ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
+    </div>
+  </div>
+
+<!-- SEARCH HEADER -->
+<div class="search-header">
+  <div class="container">
+    <h1>🔍 Search FitLabReviews</h1>
+    <div class="search-bar">
+      <input type="text" id="mainSearchInput" placeholder="Search reviews, articles, ingredients..." autocomplete="off" autocorrect="off"/>
+      <button onclick="doSearch()">Search</button>
+    </div>
+    <div class="search-meta" id="searchMeta" style="display:none"></div>
+    <div class="filter-tabs" id="filterTabs" style="display:none">
+      <button class="filter-tab active" data-filter="all" onclick="setFilter('all',this)">All <span class="count" id="countAll">0</span></button>
+      <button class="filter-tab" data-filter="review" onclick="setFilter('review',this)">Reviews <span class="count" id="countReview">0</span></button>
+      <button class="filter-tab" data-filter="post" onclick="setFilter('post',this)">Blog Posts <span class="count" id="countPost">0</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div class="search-page">
+  <div class="container">
+    <div class="results-wrap">
+
+      <!-- MAIN RESULTS -->
+      <main>
+        <div id="resultsContainer">
+          <!-- Initial state: show popular searches -->
+          <div class="no-results" id="initialState">
+            <div class="no-results-icon">🔬</div>
+            <h3>What are you looking for?</h3>
+            <p>Search across all our supplement reviews, blog articles, ingredients, and buying guides.</p>
+            <div class="suggestions">
+              <span class="suggestion-pill" onclick="quickSearch('creatine')">creatine</span>
+              <span class="suggestion-pill" onclick="quickSearch('pre-workout')">pre-workout</span>
+              <span class="suggestion-pill" onclick="quickSearch('protein')">protein</span>
+              <span class="suggestion-pill" onclick="quickSearch('fat burner')">fat burner</span>
+              <span class="suggestion-pill" onclick="quickSearch('sleep')">sleep</span>
+              <span class="suggestion-pill" onclick="quickSearch('transparent labs')">transparent labs</span>
+              <span class="suggestion-pill" onclick="quickSearch('whey')">whey</span>
+              <span class="suggestion-pill" onclick="quickSearch('BCAA')">BCAA</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="sidebar-widget">
+          <h3>🔥 Popular Searches</h3>
+          <div>
+            <span class="popular-tag" onclick="quickSearch('creatine')">creatine</span>
+            <span class="popular-tag" onclick="quickSearch('pre-workout')">pre-workout</span>
+            <span class="popular-tag" onclick="quickSearch('whey protein')">whey protein</span>
+            <span class="popular-tag" onclick="quickSearch('fat burner')">fat burner</span>
+            <span class="popular-tag" onclick="quickSearch('sleep supplement')">sleep supplement</span>
+            <span class="popular-tag" onclick="quickSearch('beta-alanine')">beta-alanine</span>
+            <span class="popular-tag" onclick="quickSearch('citrulline')">citrulline</span>
+            <span class="popular-tag" onclick="quickSearch('melatonin')">melatonin</span>
+            <span class="popular-tag" onclick="quickSearch('ashwagandha')">ashwagandha</span>
+            <span class="popular-tag" onclick="quickSearch('caffeine')">caffeine</span>
+          </div>
+        </div>
+        <div class="sidebar-widget">
+          <h3>📂 Browse by Category</h3>
+          <a href="reviews.html" class="recent-item"><div class="recent-item-icon">💊</div>Protein Powders</a>
+          <a href="reviews.html" class="recent-item"><div class="recent-item-icon">⚡</div>Pre-Workouts</a>
+          <a href="reviews.html" class="recent-item"><div class="recent-item-icon">🌿</div>Fat Burners</a>
+          <a href="reviews.html" class="recent-item"><div class="recent-item-icon">🌙</div>Sleep Supplements</a>
+          <a href="reviews.html" class="recent-item"><div class="recent-item-icon">🔩</div>Fitness Gadgets</a>
+          <a href="blog.html" class="recent-item"><div class="recent-item-icon">🧬</div>Supplement Science</a>
+          <a href="blog.html" class="recent-item"><div class="recent-item-icon">🏋️</div>Training Tips</a>
+          <a href="blog.html" class="recent-item"><div class="recent-item-icon">📋</div>Buying Guides</a>
+        </div>
+        <div class="sidebar-widget" style="background:var(--accent-soft);border-color:rgba(0,168,120,.2);">
+          <h3 style="color:var(--accent-dark);">💡 Search Tips</h3>
+          <p style="font-size:.82rem;color:var(--text);line-height:1.7;">
+            Try searching by <strong>ingredient name</strong> (citrulline), <strong>brand</strong> (Transparent Labs), <strong>goal</strong> (muscle gain), or <strong>product type</strong> (pre-workout).
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__logo-link">
+            <span class="footer__logo-text">fitlab<em>.</em></span>
+          </a>
+          <p class="footer__desc">Science-backed supplement and fitness gadget reviews. We test ingredients, verify clinical doses, and call out the marketing fluff — so you spend money on what actually works.</p>
+          <div class="footer__trust">
+            <span>No paid placements</span>
+            <span>Independent reviews</span>
+            <span>Zero brand bias</span>
+            <span>Jake Reynolds, CISSN</span>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="footer__col">
+          <h4>Reviews</h4>
+          <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard Whey</a>
+          <a href="reviews/dymatize-iso100-review-2026.html">Dymatize ISO100</a>
+          <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black Pre-Workout</a>
+          <a href="reviews/instant-knockout-cut-review-2026.html">Instant Knockout Cut</a>
+          <a href="reviews/phenq-review-2026.html">PhenQ Fat Burner</a>
+          <a href="reviews/yu-sleep-review.html">Yu Sleep</a>
+          <a href="reviews.html" class="footer__more">All Reviews →</a>
+        </div>
+
+        <!-- Best Of -->
+        <div class="footer__col">
+          <h4>Best Of 2026</h4>
+          <a href="best/best-pre-workouts.html">Best Pre-Workouts</a>
+          <a href="best/best-protein-powders.html">Best Protein Powders</a>
+          <a href="best/best-fat-burners.html">Best Fat Burners</a>
+          <a href="best/best-creatine.html">Best Creatine</a>
+          <a href="best/best-sleep-supplements.html">Best Sleep Supplements</a>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="footer__col">
+          <h4>Ingredients</h4>
+          <a href="ingredients/creatine.html">Creatine Monohydrate</a>
+          <a href="ingredients/caffeine.html">Caffeine</a>
+          <a href="ingredients/citrulline.html">L-Citrulline</a>
+          <a href="ingredients/whey-protein.html">Whey Protein</a>
+          <a href="ingredients/ashwagandha.html">Ashwagandha</a>
+          <a href="ingredients/magnesium.html">Magnesium</a>
+          <a href="ingredients/index.html" class="footer__more">All 30 Ingredients →</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="blog/best-supplements-for-muscle-gain.html">Muscle Gain Guide</a>
+          <a href="blog/top-5-fat-burner-ingredients-clinical-backing.html">Fat Burner Ingredients</a>
+          <a href="blog/how-to-read-supplement-label-red-flags.html">Label Red Flags</a>
+          <a href="blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
+          <a href="blog.html" class="footer__more">All Articles →</a>
+          <h4 style="margin-top:22px">Company</h4>
+          <a href="about.html">About Jake Reynolds</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+
+      </div><!-- .footer__grid -->
+
+      <div class="footer__bottom-bar">
+        <span class="footer__copyright">© 2026 FitLabReviews.com · All rights reserved</span>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="about.html">About</a>
+          <a href="search.html">Search</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Reviews authored by Jake Reynolds, CISSN (Certified Sports Nutritionist).
+      </p>
+
+    </div>
+  </footer>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  FitLabReviews — Site Search Engine
+//  Searches: CMS localStorage + static content index
+// ═══════════════════════════════════════════════════════
+
+// ── STATIC CONTENT INDEX ─────────────────────────────
+// Add every page you publish here so it's always searchable
+// even if visitor opens in a different browser
+var STATIC_INDEX = [
+  {
+    type:'review', title:'Transparent Labs BULK Black Pre-Workout Review',
+    brand:'Transparent Labs', category:'Pre-Workout',
+    excerpt:'Fully transparent formula with clinical doses. 8g citrulline, 4g beta-alanine, 275mg caffeine split. No prop blends — fully disclosed ingredients. Best pre-workout for experienced lifters.',
+    score:'9.4', tags:['pre-workout','citrulline','beta-alanine','caffeine','no prop blend','transparent labs','bulk black'],
+    link:'reviews/transparent-labs-bulk-black-review.html', emoji:'⚡', date:'2025-03-29'
+  },
+  {
+    type:'review', title:'Yu Sleep Review 2026 — Nano Sleep Formula',
+    brand:'YuSleep', category:'Sleep Supplement',
+    excerpt:'Nano-emulsion delivery system with adenosine support. GABA, melatonin, L-theanine, 5-HTP in nano form for superior absorption. Real sleep tracker data over 90 days.',
+    score:'8.7', tags:['sleep','melatonin','gaba','theanine','nano','adenosine','sleep supplement','insomnia'],
+    link:'reviews/yu-sleep-review.html', emoji:'🌙', date:'2026-03-29'
+  },
+  {
+    type:'post', title:'Creatine HCL vs Monohydrate: What the Research Actually Says',
+    category:'Supplement Science',
+    excerpt:'We compare both forms of creatine across 500+ studies. Which one actually works better? Spoiler: the research answer might surprise you. Dosing, absorption, cost, and side effects compared.',
+    tags:['creatine','monohydrate','hcl','strength','muscle gain','supplement science','research'],
+    link:'blog/creatine-hcl-vs-monohydrate.html', emoji:'🧬',
+    author:'Jake Reynolds', date:'2025-03-28', readTime:5
+  },
+];
+
+// ── CMS DATA LAYER ────────────────────────────────────
+function dbGet(k){ try{ return JSON.parse(localStorage.getItem('flr_'+k))||[]; }catch(e){ return []; } }
+
+// ── STATE ─────────────────────────────────────────────
+var allResults = [];
+var currentFilter = 'all';
+var currentQuery = '';
+
+// ── HELPERS ───────────────────────────────────────────
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function slug(t){ return (t||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''); }
+function fmtDate(d){ if(!d)return''; try{ return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }catch(e){ return d; } }
+function wc(s){ return Math.max(1,Math.round((s||'').replace(/<[^>]*>/g,' ').trim().split(/\s+/).length/200)); }
+function scoreClass(n){ return parseFloat(n||0)>=8?'':'mid'; }
+function initials(name){ return (name||'FL').split(' ').map(function(w){return w[0];}).join('').substring(0,2).toUpperCase(); }
+
+// highlight matched terms in text
+function highlight(text, query){
+  if(!query||!text) return esc(text||'');
+  var escaped = esc(text);
+  var terms = query.trim().split(/\s+/).filter(function(t){ return t.length>1; });
+  terms.forEach(function(term){
+    var re = new RegExp('('+term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')', 'gi');
+    escaped = escaped.replace(re, '<mark>$1</mark>');
+  });
+  return escaped;
+}
+
+// score match relevance
+function matchScore(item, terms){
+  var score = 0;
+  var searchText = [
+    item.title, item.brand, item.category, item.excerpt,
+    (item.tags||[]).join(' '), item.author
+  ].join(' ').toLowerCase();
+
+  terms.forEach(function(term){
+    var t = term.toLowerCase();
+    if((item.title||'').toLowerCase().includes(t)) score += 10;
+    if((item.brand||'').toLowerCase().includes(t)) score += 8;
+    if((item.category||'').toLowerCase().includes(t)) score += 5;
+    if((item.tags||[]).some(function(tag){ return tag.toLowerCase().includes(t); })) score += 6;
+    if((item.excerpt||'').toLowerCase().includes(t)) score += 3;
+    if(searchText.includes(t)) score += 1;
+  });
+  return score;
+}
+
+// ── BUILD SEARCH INDEX ────────────────────────────────
+function buildIndex(){
+  var index = [];
+
+  // 1. Static index (always available)
+  STATIC_INDEX.forEach(function(item){
+    index.push(Object.assign({}, item, {_source:'static'}));
+  });
+
+  // 2. CMS reviews (from localStorage)
+  dbGet('reviews').filter(function(r){ return r.status==='published'; }).forEach(function(r){
+    var existing = index.findIndex(function(i){ return slug(i.title)===slug(r.title); });
+    var item = {
+      type:'review',
+      title: r.title, brand: r.brand||'', category: r.category||'Review',
+      excerpt: r.excerpt||'', score: r.score,
+      tags: r.tags||[],
+      link: 'reviews/'+slug(r.title)+'.html',
+      featuredImage: r.featuredImage||'', emoji:'⭐',
+      date: r.date||'', pros: r.pros||[], _source:'cms'
+    };
+    if(existing>-1) index[existing] = item; // CMS overrides static
+    else index.push(item);
+  });
+
+  // 3. CMS posts (from localStorage)
+  dbGet('posts').filter(function(p){ return p.status==='published'; }).forEach(function(p){
+    var existing = index.findIndex(function(i){ return slug(i.title)===slug(p.title); });
+    var item = {
+      type:'post',
+      title: p.title, category: p.category||'Article',
+      excerpt: p.excerpt||'', tags: p.tags||[],
+      link: 'blog/'+slug(p.title)+'.html',
+      featuredImage: p.featuredImage||'', emoji:'📝',
+      author: p.author||'Jake Reynolds',
+      date: p.date||'', content: p.content||'', _source:'cms'
+    };
+    if(existing>-1) index[existing] = item;
+    else index.push(item);
+  });
+
+  return index;
+}
+
+// ── SEARCH FUNCTION ───────────────────────────────────
+function search(query){
+  if(!query||query.trim().length<2) return [];
+  var terms = query.trim().split(/\s+/);
+  var index = buildIndex();
+
+  return index
+    .map(function(item){
+      var ms = matchScore(item, terms);
+      return { item: item, score: ms };
+    })
+    .filter(function(r){ return r.score>0; })
+    .sort(function(a,b){ return b.score-a.score; })
+    .map(function(r){ return r.item; });
+}
+
+// ── RENDER RESULT CARD ────────────────────────────────
+function renderCard(item, query){
+  var isReview = item.type==='review';
+  var thumb = item.featuredImage
+    ? '<img src="'+esc(item.featuredImage)+'" alt="'+esc(item.title)+'"/>'
+    : '<span style="font-size:2rem">'+esc(item.emoji||'📝')+'</span>';
+  var scoreHtml = isReview && item.score
+    ? '<div class="result-card__score '+scoreClass(item.score)+'">'+esc(item.score)+'</div>'
+    : '';
+  var metaItems = [];
+  if(item.date) metaItems.push('📅 '+fmtDate(item.date));
+  if(item.author) metaItems.push('✍️ '+esc(item.author));
+  if(item.readTime) metaItems.push('⏱ '+item.readTime+' min read');
+  if(!item.readTime && item.content) metaItems.push('⏱ '+wc(item.content)+' min read');
+  var tags = (item.tags||[]).slice(0,3).map(function(t){
+    return '<span style="background:var(--accent-soft);color:var(--accent-dark);border-radius:50px;padding:2px 9px;font-size:.72rem;font-weight:700;">'+esc(t)+'</span>';
+  }).join('');
+
+  return '<a href="'+esc(item.link)+'" class="result-card">'
+    +'<div class="result-card__thumb">'+thumb+'</div>'
+    +'<div class="result-card__body">'
+    +'<div class="result-card__type">'+esc(isReview?'⭐ Review':'📝 Blog Post')+' · '+esc(item.category||'')+'</div>'
+    +'<div class="result-card__title">'+highlight(item.title, query)+'</div>'
+    +'<div class="result-card__excerpt">'+highlight((item.excerpt||'').substring(0,140)+(item.excerpt&&item.excerpt.length>140?'…':''), query)+'</div>'
+    +(tags?'<div style="display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;">'+tags+'</div>':'')
+    +'<div class="result-card__meta">'+scoreHtml+metaItems.join('<span>·</span>')+'</div>'
+    +'</div>'
+    +'<div class="result-card__arrow">→</div>'
+    +'</a>';
+}
+
+// ── RENDER RESULTS ────────────────────────────────────
+function renderResults(){
+  var container = document.getElementById('resultsContainer');
+  var initial = document.getElementById('initialState');
+
+  var filtered = currentFilter==='all'
+    ? allResults
+    : allResults.filter(function(r){ return r.type===currentFilter; });
+
+  if(initial) initial.style.display='none';
+
+  if(filtered.length===0){
+    container.innerHTML = '<div class="no-results">'
+      +'<div class="no-results-icon">🔍</div>'
+      +'<h3>No results for "'+esc(currentQuery)+'"</h3>'
+      +'<p>Try different keywords, check the spelling, or browse by category below.</p>'
+      +'<div class="suggestions">'
+      +'<span class="suggestion-pill" onclick="quickSearch(\'creatine\')">creatine</span>'
+      +'<span class="suggestion-pill" onclick="quickSearch(\'pre-workout\')">pre-workout</span>'
+      +'<span class="suggestion-pill" onclick="quickSearch(\'protein\')">protein</span>'
+      +'<span class="suggestion-pill" onclick="quickSearch(\'sleep\')">sleep</span>'
+      +'</div></div>';
+    return;
+  }
+
+  var reviews = filtered.filter(function(r){ return r.type==='review'; });
+  var posts   = filtered.filter(function(r){ return r.type==='post'; });
+
+  var html = '';
+  if(currentFilter==='all'){
+    if(reviews.length){
+      html += '<div class="results-section-title">⭐ Supplement Reviews ('+reviews.length+')</div>';
+      html += reviews.map(function(r){ return renderCard(r, currentQuery); }).join('');
+    }
+    if(posts.length){
+      html += '<div class="results-section-title">📝 Blog Articles ('+posts.length+')</div>';
+      html += posts.map(function(p){ return renderCard(p, currentQuery); }).join('');
+    }
+  } else {
+    html += filtered.map(function(item){ return renderCard(item, currentQuery); }).join('');
+  }
+
+  container.innerHTML = html;
+}
+
+// ── FILTER TABS ───────────────────────────────────────
+function setFilter(filter, btn){
+  currentFilter = filter;
+  document.querySelectorAll('.filter-tab').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  renderResults();
+}
+
+// ── UPDATE COUNTS ─────────────────────────────────────
+function updateCounts(){
+  var reviews = allResults.filter(function(r){ return r.type==='review'; }).length;
+  var posts   = allResults.filter(function(r){ return r.type==='post'; }).length;
+  var all     = allResults.length;
+  document.getElementById('countAll').textContent    = all;
+  document.getElementById('countReview').textContent = reviews;
+  document.getElementById('countPost').textContent   = posts;
+  document.getElementById('filterTabs').style.display = all>0 ? '' : 'none';
+}
+
+// ── DO SEARCH ─────────────────────────────────────────
+function doSearch(q){
+  var query = q || document.getElementById('mainSearchInput').value.trim();
+  if(!query || query.length<2) return;
+
+  currentQuery = query;
+  currentFilter = 'all';
+  document.querySelectorAll('.filter-tab').forEach(function(b){ b.classList.remove('active'); });
+  document.querySelector('[data-filter="all"]').classList.add('active');
+
+  // Update URL
+  var url = new URL(window.location);
+  url.searchParams.set('q', query);
+  window.history.pushState({}, '', url);
+
+  // Update title
+  document.title = 'Search: "'+query+'" — FitLabReviews';
+
+  // Show loading
+  var container = document.getElementById('resultsContainer');
+  var initial   = document.getElementById('initialState');
+  if(initial) initial.style.display='none';
+  container.innerHTML = '<div class="search-loading"><div class="spinner"></div>Searching...</div>';
+
+  // Small delay for UX feel
+  setTimeout(function(){
+    allResults = search(query);
+    updateCounts();
+
+    // Update meta
+    var meta = document.getElementById('searchMeta');
+    meta.style.display='';
+    meta.innerHTML = allResults.length>0
+      ? 'Found <strong>'+allResults.length+' result'+(allResults.length!==1?'s':'')+
+        '</strong> for "<strong>'+esc(query)+'</strong>"'
+      : 'No results found for "<strong>'+esc(query)+'</strong>"';
+
+    // Track search in GA4
+    if(typeof gtag!=='undefined'){
+      gtag('event','search',{ search_term: query, results_count: allResults.length });
+    }
+
+    renderResults();
+  }, 200);
+}
+
+function quickSearch(term){
+  document.getElementById('mainSearchInput').value = term;
+  doSearch(term);
+}
+
+// ── KEYBOARD SHORTCUTS ────────────────────────────────
+document.getElementById('mainSearchInput').addEventListener('keydown', function(e){
+  if(e.key==='Enter') doSearch();
+  if(e.key==='Escape') this.value='';
+});
+
+// ── AUTO-SEARCH FROM URL ──────────────────────────────
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var q = params.get('q');
+  if(q){
+    document.getElementById('mainSearchInput').value = q;
+    doSearch(q);
+  }
+})();
+</script>
+
+<script>
+(function(){
+  // Hamburger menu
+  var btn=document.getElementById('navHamburger');
+  var drawer=document.getElementById('mobileNav');
+  var closeBtn=document.getElementById('navClose');
+  if(btn && drawer){
+    function openMenu(){
+      drawer.classList.add('open'); document.body.style.overflow='hidden';
+      btn.setAttribute('aria-expanded','true');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform='translateY(8px) rotate(45deg)';
+      bars[1].style.opacity='0';
+      bars[2].style.transform='translateY(-8px) rotate(-45deg)';
+    }
+    function closeMenu(){
+      drawer.classList.remove('open'); document.body.style.overflow='';
+      btn.setAttribute('aria-expanded','false');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform=''; bars[1].style.opacity=''; bars[2].style.transform='';
+    }
+    btn.addEventListener('click',function(){ drawer.classList.contains('open')?closeMenu():openMenu(); });
+    if(closeBtn) closeBtn.addEventListener('click',closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeMenu); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+    drawer.addEventListener('click',function(e){ if(e.target===drawer) closeMenu(); });
+  }
+
+  // Search overlay
+  var searchBtn=document.getElementById('navSearchBtn');
+  var searchOverlay=document.getElementById('navSearchOverlay');
+  var searchClose=document.getElementById('navSearchClose');
+  var searchInput=document.getElementById('navSearchInput');
+  var searchResults=document.getElementById('navSearchResults');
+
+  // Search data
+  var SEARCH_DATA=[
+    // ─── Articles ───
+    {t:'Ashwagandha — What the Research Actually Shows (2026 Evidence Review)',url:'blog/ashwagandha-what-research-shows.html',cat:'Article'},
+    {t:'Creatine and Brain Health — The Emerging Cognitive Science (2026)',url:'blog/creatine-brain-health.html',cat:'Article'},
+    {t:'Creatine for Women — The Science Most Articles Get Wrong',url:'blog/creatine-for-women.html',cat:'Article'},
+    {t:'Creatine HCl vs Monohydrate — The Definitive 2026 Guide',url:'blog/creatine-hcl-vs-monohydrate.html',cat:'Article'},
+    {t:'Electrolytes: Do You Actually Need Them? The Science Behind Hydration Supplements',url:'blog/electrolytes-do-you-need-them.html',cat:'Article'},
+    {t:'How to Build a Supplement Stack from Scratch — The Right Order for Every Goal',url:'blog/how-to-build-supplement-stack.html',cat:'Article'},
+    {t:'How to Read a Supplement Label: 7 Red Flags Every Buyer Should Know (2026)',url:'blog/how-to-read-supplement-label-red-flags.html',cat:'Article'},
+    {t:'Plant Protein vs Whey — Does the Source Actually Matter for Muscle? (2026 Evidence)',url:'blog/plant-protein-vs-whey.html',cat:'Article'},
+    {t:'Pre-Workout Side Effects — What\'s Normal, What\'s a Warning Sign (2026 Guide)',url:'blog/pre-workout-side-effects.html',cat:'Article'},
+    {t:'The Protein Timing Myth — Does It Actually Matter When You Eat Protein?',url:'blog/protein-timing-myth.html',cat:'Article'},
+    {t:'Best Supplements for Muscle Gain in 2026 — What Actually Works (Science-Ranked)',url:'blog/best-supplements-for-muscle-gain.html',cat:'Article'},
+    {t:'Top 5 Fat Burner Ingredients With Clinical Backing (2026)',url:'blog/top-5-fat-burner-ingredients-clinical-backing.html',cat:'Article'},
+    {t:'Wearable Technology + AI Personalization: The #1 Fitness Trend of 2026',url:'blog/wearable-technology-ai-personalization.html',cat:'Article'},
+    // ─── Reviews ───
+    {t:'ON Gold Standard 100% Whey Review',url:'reviews/on-gold-standard-whey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Isolate Review',url:'reviews/on-gold-standard-100-isolate-review-2026.html',cat:'Review'},
+    {t:'ON Platinum Hydrowhey Review',url:'reviews/on-platinum-hydrowhey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Casein Review',url:'reviews/on-gold-standard-casein-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Plant Review',url:'reviews/on-gold-standard-plant-protein-review-2026.html',cat:'Review'},
+    {t:'ON Serious Mass Review',url:'reviews/on-serious-mass-review-2026.html',cat:'Review'},
+    {t:'Dymatize ISO100 Hydrolyzed Review',url:'reviews/dymatize-iso100-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze Biozyme Performance Whey Review',url:'reviews/muscleblaze-biozyme-whey-review-2026.html',cat:'Review'},
+    {t:'MyProtein Impact Whey Isolate Review',url:'reviews/myprotein-impact-whey-review-2026.html',cat:'Review'},
+    {t:'Garden of Life Sport Organic Plant Review',url:'reviews/garden-of-life-sport-plant-protein-review.html',cat:'Review'},
+    {t:'Transparent Labs BULK Black Review',url:'reviews/transparent-labs-bulk-black-review.html',cat:'Review'},
+    {t:'Gorilla Mode Pre-Workout Review',url:'reviews/gorilla-mode-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Legion Pulse Pre-Workout Review',url:'reviews/legion-pulse-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard Pre-Workout Review',url:'reviews/on-gold-standard-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Essential Amino Energy Review',url:'reviews/on-essential-amino-energy-review-2026.html',cat:'Review'},
+    {t:'C4 Original Pre-Workout Review',url:'reviews/c4-original-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Instant Knockout Cut Review',url:'reviews/instant-knockout-cut-review-2026.html',cat:'Review'},
+    {t:'PhenQ Fat Burner Review',url:'reviews/phenq-review-2026.html',cat:'Review'},
+    {t:'LeanBiome (Probiotic + Fat Loss) Review',url:'reviews/leanbiome-review-2026.html',cat:'Review'},
+    {t:'Old School Labs Vintage Burn Review',url:'reviews/old-school-labs-vintage-burn-review-2026.html',cat:'Review'},
+    {t:'Citrus Burn Review',url:'reviews/citrus-burn-review-2026.html',cat:'Review'},
+    {t:'Java Burn Coffee Additive Review',url:'reviews/java-burn-review-2026.html',cat:'Review'},
+    {t:'Lipovive Review',url:'reviews/lipovive-review.html',cat:'Review'},
+    {t:'Trimology Review',url:'reviews/trimology-review-2026.html',cat:'Review'},
+    {t:'Thorne Creatine (NSF Certified) Review',url:'reviews/thorne-creatine-review-2026.html',cat:'Review'},
+    {t:'Momentous Creatine (Creapure® + NSF) Review',url:'reviews/momentous-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Transparent Labs Creatine HMB Review',url:'reviews/transparent-labs-creatine-hmb-review-2026.html',cat:'Review'},
+    {t:'Kaged Creatine HCl (CON-CRET®) Review',url:'reviews/kaged-creatine-hcl-review-2026.html',cat:'Review'},
+    {t:'ON Micronized Creatine (4 Formats) Review',url:'reviews/on-micronized-creatine-review-2026.html',cat:'Review'},
+    {t:'BulkSupplements Creatine Monohydrate Review',url:'reviews/bulksupplements-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze CreAMP Creatine Review',url:'reviews/muscleblaze-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Yu Sleep Nano Formula Review',url:'reviews/yu-sleep-review.html',cat:'Review'},
+    {t:'Momentous Magtein (Magnesium L-Threonate) Review',url:'reviews/momentous-magtein-magnesium-l-threonate-review-2026.html',cat:'Review'},
+    {t:'Life Extension Melatonin 5mg Review',url:'reviews/life-extension-melatonin-5mg-review-2026.html',cat:'Review'},
+    {t:'NOW Foods L-Theanine 200mg Review',url:'reviews/now-foods-l-theanine-200mg-review-2026.html',cat:'Review'},
+    {t:'ON Opti-Men Multivitamin Review',url:'reviews/on-opti-men-multivitamin-review-2026.html',cat:'Review'},
+    {t:'ON Superior Amino 2222 Tablets Review',url:'reviews/on-superior-amino-2222-review-2026.html',cat:'Review'},
+    {t:'Prostavive Review',url:'reviews/prostavive-review-2026.html',cat:'Review'},
+    {t:'ProDentim Probiotic Review',url:'reviews/prodentim-review-2026.html',cat:'Review'},
+    // ─── Best Of ───
+    {t:'Best Protein Powders 2026',url:'best/best-protein-powders.html',cat:'Best Of'},
+    {t:'Best Pre-Workouts 2026',url:'best/best-pre-workouts.html',cat:'Best Of'},
+    {t:'Best Creatine Supplements 2026',url:'best/best-creatine.html',cat:'Best Of'},
+    {t:'Best Fat Burners 2026',url:'best/best-fat-burners.html',cat:'Best Of'},
+    {t:'Best Sleep Supplements 2026',url:'best/best-sleep-supplements.html',cat:'Best Of'},
+    // ─── India Guides ───
+    {t:'Best Protein Supplements in India 2026',url:'india/best-protein-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Pre-Workout Supplements in India 2026',url:'india/best-pre-workout-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Vitamins & Minerals in India 2026',url:'india/best-vitamins-minerals-india-2026.html',cat:'India Guide'},
+    // ─── Brands ───
+    {t:'Optimum Nutrition Brand Analysis',url:'brands/optimum-nutrition.html',cat:'Brand'},
+    {t:'Transparent Labs Brand Analysis',url:'brands/transparent-labs.html',cat:'Brand'},
+    {t:'Dymatize Brand Analysis',url:'brands/dymatize.html',cat:'Brand'},
+    {t:'MuscleBlaze Brand Analysis',url:'brands/muscleblaze.html',cat:'Brand'},
+    {t:'Momentous Brand Analysis',url:'brands/momentous.html',cat:'Brand'},
+    {t:'Kaged Brand Analysis',url:'brands/kaged.html',cat:'Brand'},
+    // ─── Stacks ───
+    {t:'Muscle Gain Stack',url:'stacks/muscle-gain.html',cat:'Stack'},
+    {t:'Sleep Optimization Stack',url:'stacks/sleep-optimization.html',cat:'Stack'},
+    {t:'Fat Loss Support Stack',url:'stacks/fat-loss.html',cat:'Stack'},
+    {t:'Pre-Workout Performance Stack',url:'stacks/pre-workout-performance.html',cat:'Stack'},
+    {t:'Cognitive Focus Stack',url:'stacks/cognitive-focus.html',cat:'Stack'},
+    {t:'Foundational Health Stack',url:'stacks/foundational-health.html',cat:'Stack'},
+    // ─── Ingredients ───
+    {t:'Creatine Monohydrate — Ingredient Guide',url:'ingredients/creatine.html',cat:'Ingredient'},
+    {t:'Caffeine — Ingredient Guide',url:'ingredients/caffeine.html',cat:'Ingredient'},
+    {t:'L-Citrulline — Ingredient Guide',url:'ingredients/citrulline.html',cat:'Ingredient'},
+    {t:'Ashwagandha — Ingredient Guide',url:'ingredients/ashwagandha.html',cat:'Ingredient'},
+    {t:'Magnesium — Ingredient Guide',url:'ingredients/magnesium.html',cat:'Ingredient'},
+    {t:'Whey Protein — Ingredient Guide',url:'ingredients/whey-protein.html',cat:'Ingredient'},
+    {t:'L-Theanine — Ingredient Guide',url:'ingredients/l-theanine.html',cat:'Ingredient'},
+    {t:'Beta-Alanine — Ingredient Guide',url:'ingredients/beta-alanine.html',cat:'Ingredient'},
+    {t:'HMB — Ingredient Guide',url:'ingredients/hmb.html',cat:'Ingredient'},
+    // ─── Comparisons ───
+    {t:'ON Gold Standard vs ISO100 Comparison',url:'comparisons/on-gold-standard-vs-iso100.html',cat:'Compare'},
+    {t:'Whey vs Plant Protein Comparison',url:'comparisons/whey-vs-plant-protein.html',cat:'Compare'},
+    {t:'BULK Black vs C4 Original Comparison',url:'comparisons/transparent-labs-vs-c4.html',cat:'Compare'},
+    {t:'Creatine Monohydrate vs HCl Comparison',url:'comparisons/creatine-monohydrate-vs-hcl.html',cat:'Compare'},
+  ];
+
+  function openSearch(){
+    searchOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ if(searchInput) searchInput.focus(); },100);
+  }
+  function closeSearch(){
+    searchOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(searchInput) searchInput.value='';
+    if(searchResults) searchResults.innerHTML='';
+  }
+
+  if(searchBtn) searchBtn.addEventListener('click', openSearch);
+  if(searchClose) searchClose.addEventListener('click', closeSearch);
+  if(searchOverlay){
+    searchOverlay.addEventListener('click',function(e){
+      if(e.target===searchOverlay) closeSearch();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeSearch();
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){ e.preventDefault(); openSearch(); }
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      var q=this.value.trim().toLowerCase();
+      if(!q || q.length < 2){ searchResults.innerHTML=''; return; }
+      var hits=SEARCH_DATA.filter(function(d){ return d.t.toLowerCase().includes(q); }).slice(0,6);
+      if(!hits.length){ searchResults.innerHTML='<div style="padding:16px 18px;font-size:.88rem;color:var(--muted)">No results for \\"'+q+'\\"</div>'; return; }
+      searchResults.innerHTML=hits.map(function(h){
+        return '<a href="'+h.url+'" class="nav__search-result-item">'
+          +'<span class="sr-cat">'+h.cat+'</span>'
+          +'<span>'+h.t+'</span>'
+          +'</a>';
+      }).join('');
+    });
+  }
+})();
+</script>
+<script>var mT=document.getElementById("mobSearchTrigger");if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){document.getElementById("mobileNav").classList.remove("open");document.body.style.overflow="";setTimeout(function(){var so=document.getElementById("navSearchOverlay");if(so){so.classList.add("open");document.body.style.overflow="hidden";setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}},200);});}</script>
+</body>
+</html>

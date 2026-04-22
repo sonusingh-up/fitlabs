@@ -1,0 +1,35 @@
+# FitLabReviews.com — robots.txt
+# Updated: 2026-04-14
+
+User-agent: *
+Allow: /
+
+# Block admin pages only
+Disallow: /admin.html
+
+# Allow all sitemaps explicitly (must be BEFORE any Disallow)
+Allow: /sitemap.xml
+Allow: /sitemap-core.xml
+Allow: /sitemap-reviews.xml
+Allow: /sitemap-brands.xml
+Allow: /sitemap-blog.xml
+Allow: /sitemap-ingredients.xml
+Allow: /sitemap-stacks.xml
+Allow: /sitemap-comparisons.xml
+
+# Block non-sitemap XML and JSON (admin/config files)
+Disallow: /feed.xml
+Disallow: /*.json$
+
+# Crawl-delay for non-Google bots
+User-agent: Bingbot
+Crawl-delay: 2
+
+User-agent: Slurp
+Crawl-delay: 5
+
+User-agent: DuckDuckBot
+Crawl-delay: 2
+
+# Sitemap locations
+Sitemap: https://fitlabreviews.com/sitemap.xml

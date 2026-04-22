@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#00A878"/>
+  <link rel="icon" type="image/svg+xml" href="fav.svg"/>
+  <link rel="shortcut icon" href="fav.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Browse all 39 supplement reviews on FitLabReviews. Honest, science-backed ratings on protein, pre-workout, fat burners, and more."/>
+  <title>Supplement Reviews — FitLabReviews</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── PAGE HEADER ─────────────────────────── */
+    .page-header {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 52px 0 40px;
+    }
+    .page-header__inner { max-width: 640px; }
+    .page-header h1 { font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--dark); line-height: 1.15; margin-bottom: 12px; }
+    .page-header p { color: var(--muted); font-size: 1rem; }
+
+    /* ── LAYOUT ──────────────────────────────── */
+    .reviews-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 40px;
+      padding: 50px 0;
+    }
+
+    /* ── FILTERS ─────────────────────────────── */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .filter-btn {
+      padding: 7px 18px;
+      border-radius: 50px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    /* ── REVIEW FULL CARD ───────────────────── */
+    .review-full-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .review-full-card__img {
+      background: linear-gradient(135deg, var(--accent-soft), #C3ECD8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+      border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+      min-height: 180px;
+    }
+    .review-full-card__body { padding: 22px 24px; }
+    .review-full-card__top {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+    }
+    .review-full-card__cat {
+      font-size: .75rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--accent);
+    }
+    .review-full-card__title {
+      font-family: var(--font-head);
+      font-size: 1.2rem; font-weight: 600; color: var(--dark);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .review-full-card__excerpt {
+      font-size: .88rem; color: var(--muted); line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .review-full-card__bottom {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .pros-cons {
+      display: flex; gap: 16px; font-size: .8rem;
+    }
+    .pros-cons__pro { color: var(--accent); font-weight: 600; }
+    .pros-cons__con { color: #EF4444; font-weight: 600; }
+    .fitlab-score {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .fitlab-score__num {
+      font-family: var(--font-head);
+      font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1;
+    }
+    .fitlab-score__label { font-size: .7rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* ── SCORE BAR ──────────────────────────── */
+    .score-bars { margin-top: 6px; }
+    .score-bar {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .78rem; color: var(--muted); margin-bottom: 5px;
+    }
+    .score-bar__label { width: 90px; flex-shrink: 0; }
+    .score-bar__track {
+      flex: 1; height: 5px; background: var(--border); border-radius: 50px; overflow: hidden;
+    }
+    .score-bar__fill {
+      height: 100%; background: var(--accent); border-radius: 50px;
+    }
+    .score-bar__num { width: 30px; text-align: right; font-weight: 600; color: var(--dark); }
+
+    /* ── VERDICT BOX ────────────────────────── */
+    .verdict-box {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .verdict-box.top { background: var(--accent); color: #fff; }
+    .verdict-box.good { background: #DCFCE7; color: #15803D; }
+    .verdict-box.avg  { background: #FEF9C3; color: #854D0E; }
+    .verdict-box.skip { background: #FEE2E2; color: #B91C1C; }
+
+    /* ── SIDEBAR ─────────────────────────────── */
+    .sidebar-search {
+      display: flex; gap: 8px; margin-bottom: 14px;
+    }
+    .sidebar-search input {
+      flex: 1; padding: 9px 14px; border-radius: var(--radius);
+      border: 1px solid var(--border); font-family: var(--font-body);
+      font-size: .85rem; outline: none;
+    }
+    .sidebar-search input:focus { border-color: var(--accent); }
+    .sidebar-cat-list a {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+      font-size: .88rem; color: var(--text); font-weight: 500;
+      transition: color .2s;
+    }
+    .sidebar-cat-list a:hover { color: var(--accent); }
+    .sidebar-cat-list a span {
+      background: var(--tag-bg); color: var(--muted);
+      font-size: .75rem; padding: 2px 8px; border-radius: 50px; font-weight: 600;
+    }
+    .top-rated-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+    }
+    .top-rated-item__icon {
+      width: 40px; height: 40px;
+      background: var(--accent-soft);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; flex-shrink: 0;
+    }
+    .top-rated-item__title { font-size: .85rem; font-weight: 600; color: var(--dark); line-height: 1.3; }
+    .top-rated-item__score { font-size: .78rem; color: var(--accent); font-weight: 700; }
+
+    @media (max-width: 900px) {
+      .reviews-layout { grid-template-columns: 1fr; }
+      .review-full-card { grid-template-columns: 1fr; }
+      .review-full-card__img { border-radius: var(--radius-lg) var(--radius-lg) 0 0; min-height: 140px; }
+    }
+  html,body{overflow-x:hidden;max-width:100%}
+</style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N23DKB7H8K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-N23DKB7H8K');
+  </script>
+<style>
+  #reviewsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .review-full-card { transition: transform .22s, box-shadow .22s; }
+  .review-full-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.09); }
+  .article-card__footer { padding: 12px 18px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; font-size: .82rem; color: var(--muted); }
+  .read-more { color: var(--accent); font-weight: 600; }
+  @media(max-width:768px){ #reviewsGrid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">fitlab<em>.</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="best/best-protein-powders.html">Best Of</a></li>
+        <li><a href="stacks.html">Stacks</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="goals.html">By Goal</a></li>
+        <li><a href="india.html">🇮🇳 India</a></li>
+        <li><a href="ingredients/index.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__search-btn" id="navSearchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="ask-jake.html" class="nav__cta">Ask Jake
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="nav__search-overlay" id="navSearchOverlay">
+      <div class="nav__search-box">
+        <svg class="nav__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navSearchInput" class="nav__search-input" placeholder="Search reviews, ingredients, brands&#x2026;" autocomplete="off" spellcheck="false"/>
+        <button class="nav__search-close" id="navSearchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="nav__search-results" id="navSearchResults"></div>
+      <div class="nav__search-quick">
+        <span class="nav__search-quick-label">Popular:</span>
+        <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard</a>
+        <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black</a>
+        <a href="best/best-creatine.html">Best Creatine</a>
+        <a href="stacks/sleep-optimization.html">Sleep Stack</a>
+        <a href="compare.html">Compare Products</a>
+      </div>
+    </div>
+
+  <div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="nav__mobile-header">
+      <span class="nav__mobile-brand">fitlab<em>.</em></span>
+      <button class="nav__mobile-close" id="navClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-search" id="mobSearchTrigger">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span style="font-size:.9rem;color:var(--muted)">Search supplements&#x2026;</span>
+    </div>
+    <div class="nav__mobile-links">
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="brands.html">Brands</a>
+      <a href="best/best-protein-powders.html">Best Of</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="stacks.html">Supplement Stacks</a>
+      <a href="compare.html">Compare Products</a>
+      <a href="goals.html">Browse by Goal</a>
+      <a href="research/index.html">Research Summaries</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="ingredients/index.html">Ingredients Library</a>
+      <a href="blog.html">Blog &amp; Guides</a>
+      <a href="about.html">About Jake</a>
+      <a href="ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header__inner">
+        <div class="section-label">Supplement &amp; Gadget Reviews</div>
+        <h1>Independent, Science-Backed Reviews</h1>
+        <p>We test ingredients, dosages, and real-world performance — then score each product objectively so you know exactly what you're buying.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="reviews-layout">
+
+      <!-- LEFT: REVIEWS LIST -->
+      <main>
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All (39)</button>
+          <button class="filter-btn" data-filter="protein">🥛 Protein (11)</button>
+          <button class="filter-btn" data-filter="preworkout">⚡ Pre-Workout (6)</button>
+          <button class="filter-btn" data-filter="fatburner">🔥 Fat Burners (8)</button>
+          <button class="filter-btn" data-filter="creatine">💪 Creatine (7)</button>
+          <button class="filter-btn" data-filter="sleep">😴 Sleep (4)</button>
+          <button class="filter-btn" data-filter="vitamins">💊 Vitamins (1)</button>
+          <button class="filter-btn" data-filter="health">🌿 Health (2)</button>
+        </div>
+
+
+        <!-- Reviews Grid -->
+        <div id="reviewsGrid">
+
+          <!-- Section: 🥛 Protein Powders -->
+          <div class="section-divider" data-cat="protein" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">🥛 Protein Powders</span><span style="font-size:.78rem;color:var(--muted)">11 reviews</span></div>
+          <a href="reviews/on-gold-standard-whey-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/on-gold-standard-whey.webp" alt="ON Gold Standard 100% Whey" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🥛'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Protein Powder</div>
+                <span class="verdict-box top">⭐ Editor's Choice</span>
+              </div>
+              <div class="review-full-card__title">ON Gold Standard 100% Whey — Full Review 2026</div>
+              <div class="stars">★★★★★ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">World's best-selling whey. 24g protein, WPI-first, Informed Sport certified. The benchmark everything else is compared against.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-gold-standard-100-isolate-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61t1RRQjgkL._SL1500_.jpg" alt="ON Gold Standard 100% Isolate" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💎'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Whey Isolate</div>
+                <span class="verdict-box good">Best Isolate</span>
+              </div>
+              <div class="review-full-card__title">ON Gold Standard 100% Isolate — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Pure WPI with hydrolyzed fraction. 25g protein, 1g carbs, ~95% lactose-free. Worth the premium over GS Whey for lactose-sensitive users and competition prep.</p>
+            </div>
+            <div class="article-card__footer"><span>14 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-platinum-hydrowhey-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/71WMvJykTXL._SL1500_.jpg" alt="ON Platinum Hydrowhey" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='⚡'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Whey Isolate</div>
+                <span class="verdict-box good">Twice-Daily Athletes</span>
+              </div>
+              <div class="review-full-card__title">ON Platinum Hydrowhey — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.9 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">100% hydrolyzed WPI, 30g protein, 8.8g BCAAs. Fastest absorption in the ON lineup. Worth it for twice-daily training athletes.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-gold-standard-casein-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/71SXDyvOp1L._SL1500_.jpg" alt="ON Gold Standard 100% Casein" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌙'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Casein Protein</div>
+                <span class="verdict-box top">Best Casein</span>
+              </div>
+              <div class="review-full-card__title">ON Gold Standard 100% Casein — Full Review 2026</div>
+              <div class="stars">★★★★★ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Best slow-digesting protein for overnight MPS support. 24g micellar casein. The pre-sleep protein benchmark.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-gold-standard-plant-protein-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61Sy9tqkmcL._SL1500_.jpg" alt="ON Gold Standard 100% Plant" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌱'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Plant Protein</div>
+                <span class="verdict-box good">Best Plant</span>
+              </div>
+              <div class="review-full-card__title">ON Gold Standard 100% Plant — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.6 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Complete amino profile from pea+rice blend. 24g protein. Best plant protein from ON.</p>
+            </div>
+            <div class="article-card__footer"><span>11 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-serious-mass-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61DQLVMdwsL._SL1500_.jpg" alt="ON Serious Mass" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💪'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Mass Gainer</div>
+                <span class="verdict-box avg">Hardgainers Only</span>
+              </div>
+              <div class="review-full-card__title">ON Serious Mass — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.3 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">1,260 calories, 50g protein, 5g creatine per serving. The mass gainer benchmark — for hardgainers only.</p>
+            </div>
+            <div class="article-card__footer"><span>14 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/dymatize-iso100-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/dymatize-iso100.webp" alt="Dymatize ISO100 Hydrolyzed" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🧬'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Whey Isolate</div>
+                <span class="verdict-box top">Best Isolate</span>
+              </div>
+              <div class="review-full-card__title">Dymatize ISO100 Hydrolyzed — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.0 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Zero lactose, 25g hydrolysed WPI per serving. The cleanest protein for lactose-intolerant users.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/muscleblaze-biozyme-whey-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/muscleblaze-biozyme-performance-whey.webp" alt="MuscleBlaze Biozyme Performance Whey" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🇮🇳'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Whey Protein</div>
+                <span class="verdict-box top">India #1</span>
+              </div>
+              <div class="review-full-card__title">MuscleBlaze Biozyme Performance Whey — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.4 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">India's best domestic whey. EAF enzyme complex improves absorption. Best price-quality ratio in India.</p>
+            </div>
+            <div class="article-card__footer"><span>11 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/myprotein-impact-whey-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/81zrBq5mRDL._SL1500_.jpg" alt="MyProtein Impact Whey Isolate" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🏋️'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Whey Protein</div>
+                <span class="verdict-box good">Good Value</span>
+              </div>
+              <div class="review-full-card__title">MyProtein Impact Whey Isolate — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.1 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Budget-friendly WPI from a trusted UK brand. 25g protein per serving at strong value.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/garden-of-life-sport-plant-protein-review.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/719QNQS-3hL._SL1500_.jpg" alt="Garden of Life Sport Organic Plant" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌿'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Plant Protein</div>
+                <span class="verdict-box good">NSF Certified</span>
+              </div>
+              <div class="review-full-card__title">Garden of Life Sport Organic Plant — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">NSF Certified for Sport plant protein. Clean organic ingredients. Best certified plant protein.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-superior-amino-2222-review-2026.html" class="card review-full-card" data-cat="protein" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61rZUzMbM5L._SL1500_.jpg" alt="ON Superior Amino 2222 Tablets" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Amino Acids</div>
+                <span class="verdict-box avg">Travel Use</span>
+              </div>
+              <div class="review-full-card__title">ON Superior Amino 2222 Tablets — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">2.2g of 18 amino acids per serving. Travel and trace-amino niche only — a protein shake is far more efficient.</p>
+            </div>
+            <div class="article-card__footer"><span>11 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: ⚡ Pre-Workouts -->
+          <div class="section-divider" data-cat="preworkout" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">⚡ Pre-Workouts</span><span style="font-size:.78rem;color:var(--muted)">6 reviews</span></div>
+          <a href="reviews/transparent-labs-bulk-black-review.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/tl-bulk-black-preworkout.webp" alt="Transparent Labs BULK Black" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🔬'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Pre-Workout</div>
+                <span class="verdict-box top">Editor's Choice</span>
+              </div>
+              <div class="review-full-card__title">Transparent Labs BULK Black — Full Review 2026</div>
+              <div class="stars">★★★★★ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.4 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">The fully-dosed benchmark: 8g citrulline, 4g beta-alanine, 300mg caffeine. No proprietary blends.</p>
+            </div>
+            <div class="article-card__footer"><span>15 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/gorilla-mode-pre-workout-review-2026.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61hK7H4uq3L._AC_SL1500_.jpg" alt="Gorilla Mode Pre-Workout" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🦍'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Pre-Workout</div>
+                <span class="verdict-box top">Maximum Formula</span>
+              </div>
+              <div class="review-full-card__title">Gorilla Mode Pre-Workout — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.0 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Maximalist formula with 9g citrulline, 5g creatine, 350mg caffeine. Best pump-focused pre-workout.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/legion-pulse-pre-workout-review-2026.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/715mPXFs-UL._AC_SL1500_.jpg" alt="Legion Pulse Pre-Workout" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='⚡'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Pre-Workout</div>
+                <span class="verdict-box top">Clinically Dosed</span>
+              </div>
+              <div class="review-full-card__title">Legion Pulse Pre-Workout — Full Review 2026</div>
+              <div class="stars">★★★★★ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Clinically-dosed: 8g citrulline, 3.6g beta-alanine, 200mg caffeine. Natural ingredients throughout.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-gold-standard-pre-workout-review-2026.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61lZAyFLdjL._AC_SL1500_.jpg" alt="ON Gold Standard Pre-Workout" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Pre-Workout</div>
+                <span class="verdict-box avg">Moderate Stim</span>
+              </div>
+              <div class="review-full-card__title">ON Gold Standard Pre-Workout — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">175mg caffeine, 3g Creapure® creatine. Moderate-stim daily pre-workout. Key ingredients underdosed.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-essential-amino-energy-review-2026.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/81t3qtOa4DL._SL1500_.jpg" alt="ON Essential Amino Energy" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌿'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Energy & Aminos</div>
+                <span class="verdict-box avg">Any-Time Energy</span>
+              </div>
+              <div class="review-full-card__title">ON Essential Amino Energy — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.6 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">100mg natural caffeine, 5g aminos. Flexible any-time energy drink — not a performance pre-workout.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/c4-original-pre-workout-review-2026.html" class="card review-full-card" data-cat="preworkout" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/81P9Qn5OnsL._AC_SL1500_.jpg" alt="C4 Original Pre-Workout" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🔋'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Pre-Workout</div>
+                <span class="verdict-box avg">Entry Level</span>
+              </div>
+              <div class="review-full-card__title">C4 Original Pre-Workout — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.4 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">150mg caffeine, basic formula. Best entry-level pre-workout for beginners.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: 🔥 Fat Burners -->
+          <div class="section-divider" data-cat="fatburner" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">🔥 Fat Burners</span><span style="font-size:.78rem;color:var(--muted)">8 reviews</span></div>
+          <a href="reviews/instant-knockout-cut-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/instant-knockout-cut.webp" alt="Instant Knockout Cut" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🔥'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box top">Editor's Choice</span>
+              </div>
+              <div class="review-full-card__title">Instant Knockout Cut — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.4 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Fully-disclosed label, clinical EGCG dose. Best evidence-based fat burner available.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/phenq-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/phenq.webp" alt="PhenQ Fat Burner" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box good">Recommended</span>
+              </div>
+              <div class="review-full-card__title">PhenQ Fat Burner — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.0 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Multi-mechanism formula: thermogenic + appetite + mood. Strong brand but proprietary blend.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/leanbiome-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/leanbiome.webp" alt="LeanBiome (Probiotic + Fat Loss)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🦠'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box good">Innovative Formula</span>
+              </div>
+              <div class="review-full-card__title">LeanBiome (Probiotic + Fat Loss) — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.4 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Unique probiotic-fat loss combination. LactoSpore® + Green Select® phytosome.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/old-school-labs-vintage-burn-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/81bkKqnPIiL._AC_SL1500_.jpg" alt="Old School Labs Vintage Burn" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🏺'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box good">Transparent Label</span>
+              </div>
+              <div class="review-full-card__title">Old School Labs Vintage Burn — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">9 disclosed ingredients. EGCG/caffeine synergy. Transparent label at a fair price.</p>
+            </div>
+            <div class="article-card__footer"><span>15 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/citrus-burn-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://fitlabreviews.com/images/products/citrusburn.webp" alt="Citrus Burn" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🍊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box avg">With Caution</span>
+              </div>
+              <div class="review-full-card__title">Citrus Burn — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Synephrine-based thermogenic. Works but has regulatory grey areas in some jurisdictions.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/java-burn-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/javaburn.webp" alt="Java Burn Coffee Additive" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='☕'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box skip">Skip</span>
+              </div>
+              <div class="review-full-card__title">Java Burn Coffee Additive — Full Review 2026</div>
+              <div class="stars">★★★☆☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">5.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Tasteless coffee add-in concept. Very light evidence base for the formula.</p>
+            </div>
+            <div class="article-card__footer"><span>9 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/lipovive-review.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/lipovive.webp" alt="Lipovive" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box avg">Average</span>
+              </div>
+              <div class="review-full-card__title">Lipovive — Full Review 2026</div>
+              <div class="stars">★★★☆☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">6.0 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Modest multi-ingredient fat burner. Average formula quality.</p>
+            </div>
+            <div class="article-card__footer"><span>9 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/trimology-review-2026.html" class="card review-full-card" data-cat="fatburner" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://fitlabreviews.com/images/products/trimology-sp.webp" alt="Trimology" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌿'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Fat Burner</div>
+                <span class="verdict-box avg">Average</span>
+              </div>
+              <div class="review-full-card__title">Trimology — Full Review 2026</div>
+              <div class="stars">★★★☆☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">6.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Herbal fat burner blend. Limited clinical evidence for the ingredient combination.</p>
+            </div>
+            <div class="article-card__footer"><span>9 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: 💪 Creatine -->
+          <div class="section-divider" data-cat="creatine" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">💪 Creatine</span><span style="font-size:.78rem;color:var(--muted)">7 reviews</span></div>
+          <a href="reviews/thorne-creatine-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/thorne-creatine-creapure.webp" alt="Thorne Creatine (NSF Certified)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🏆'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box top">Editor's Choice</span>
+              </div>
+              <div class="review-full-card__title">Thorne Creatine (NSF Certified) — Full Review 2026</div>
+              <div class="stars">★★★★★ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">9.1 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">NSF Certified for Sport, 5g per serving. Best value certified creatine — the recommendation for most people.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/momentous-creatine-monohydrate-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/71VzpNZOvwL._AC_SL1500_.jpg" alt="Momentous Creatine (Creapure® + NSF)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💎'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box good">Maximum Certs</span>
+              </div>
+              <div class="review-full-card__title">Momentous Creatine (Creapure® + NSF) — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Creapure® source + NSF Certified for Sport. Only product with both credentials. Best for drug-tested athletes.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/transparent-labs-creatine-hmb-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/51tBdAa1pgL._AC_SL1000_.jpg" alt="Transparent Labs Creatine HMB" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🔬'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box good">Best Stack</span>
+              </div>
+              <div class="review-full-card__title">Transparent Labs Creatine HMB — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.6 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">5g creatine + 1.5g HMB + 5,000 IU D3. Informed Sport certified. Best for beginners and users in a deficit.</p>
+            </div>
+            <div class="article-card__footer"><span>14 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/kaged-creatine-hcl-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/715y91UgZwL._AC_SL1500_.jpg" alt="Kaged Creatine HCl (CON-CRET®)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='⚗️'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box avg">GI Sensitive</span>
+              </div>
+              <div class="review-full-card__title">Kaged Creatine HCl (CON-CRET®) — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">7.8 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">CON-CRET® patented HCl form. 60× more water-soluble than monohydrate. Best for GI-sensitive users.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/on-micronized-creatine-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61yKEkaszjL._SL1500_.jpg" alt="ON Micronized Creatine (4 Formats)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box good">Best Format Range</span>
+              </div>
+              <div class="review-full-card__title">ON Micronized Creatine (4 Formats) — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.7 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Powder, Capsules, Gummies, or Creatine+. All formats reviewed. $0.38/serving for the powder.</p>
+            </div>
+            <div class="article-card__footer"><span>15 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/bulksupplements-creatine-monohydrate-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/bulk-supplements-creatine.webp" alt="BulkSupplements Creatine Monohydrate" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='📦'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box good">Best Budget</span>
+              </div>
+              <div class="review-full-card__title">BulkSupplements Creatine Monohydrate — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.7 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Best cost-per-gram creatine available. $0.10/serving. No frills, high purity.</p>
+            </div>
+            <div class="article-card__footer"><span>11 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/muscleblaze-creatine-monohydrate-review-2026.html" class="card review-full-card" data-cat="creatine" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/muscleblaze-creatine.webp" alt="MuscleBlaze CreAMP Creatine" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🇮🇳'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Creatine</div>
+                <span class="verdict-box top">India #1</span>
+              </div>
+              <div class="review-full-card__title">MuscleBlaze CreAMP Creatine — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.3 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Best domestic India creatine. FSSAI certified. Micronized monohydrate at best India price.</p>
+            </div>
+            <div class="article-card__footer"><span>10 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: 😴 Sleep & Cognitive -->
+          <div class="section-divider" data-cat="sleep" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">😴 Sleep & Cognitive</span><span style="font-size:.78rem;color:var(--muted)">4 reviews</span></div>
+          <a href="reviews/yu-sleep-review.html" class="card review-full-card" data-cat="sleep" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/on-gold-standard-whey.webp" alt="Yu Sleep Nano Formula" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='😴'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Sleep</div>
+                <span class="verdict-box top">Editor's Choice</span>
+              </div>
+              <div class="review-full-card__title">Yu Sleep Nano Formula — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.7 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Nano-emulsion magnesium + L-theanine + melatonin. Faster absorption than standard capsules.</p>
+            </div>
+            <div class="article-card__footer"><span>12 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/momentous-magtein-magnesium-l-threonate-review-2026.html" class="card review-full-card" data-cat="sleep" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/719cI28gNhL._AC_SL1500_.jpg" alt="Momentous Magtein (Magnesium L-Threonate)" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🧠'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Sleep / Cognitive</div>
+                <span class="verdict-box top">BBB-Penetrant</span>
+              </div>
+              <div class="review-full-card__title">Momentous Magtein (Magnesium L-Threonate) — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.7 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">MIT-developed Magtein®. Only magnesium form proven to cross the blood-brain barrier. NSF Certified.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/life-extension-melatonin-5mg-review-2026.html" class="card review-full-card" data-cat="sleep" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/71fSCTuMeCL._AC_SL1500_.jpg" alt="Life Extension Melatonin 5mg" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌙'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Sleep</div>
+                <span class="verdict-box good">Best Value Sleep</span>
+              </div>
+              <div class="review-full-card__title">Life Extension Melatonin 5mg — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.3 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Best quality melatonin at lowest price. $0.13/dose, ConsumerLab verified. Best for jet lag and shift work.</p>
+            </div>
+            <div class="article-card__footer"><span>11 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/now-foods-l-theanine-200mg-review-2026.html" class="card review-full-card" data-cat="sleep" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/71Ms3qrwxoL._AC_SL1500_.jpg" alt="NOW Foods L-Theanine 200mg" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🍵'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Sleep / Cognitive</div>
+                <span class="verdict-box top">Best Value</span>
+              </div>
+              <div class="review-full-card__title">NOW Foods L-Theanine 200mg — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.9 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">200mg L-theanine. Reduces anxiety, improves sleep quality, synergistic with caffeine. Best value cognitive + sleep.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: 💊 Vitamins & Health -->
+          <div class="section-divider" data-cat="vitamins" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">💊 Vitamins & Health</span><span style="font-size:.78rem;color:var(--muted)">1 reviews</span></div>
+          <a href="reviews/on-opti-men-multivitamin-review-2026.html" class="card review-full-card" data-cat="vitamins" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://m.media-amazon.com/images/I/61ou4fOWT8L._AC_SL1500_.jpg" alt="ON Opti-Men Multivitamin" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='💊'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Multivitamin</div>
+                <span class="verdict-box good">Comprehensive</span>
+              </div>
+              <div class="review-full-card__title">ON Opti-Men Multivitamin — Full Review 2026</div>
+              <div class="stars">★★★★☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">8.1 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">75+ active ingredients, 22 essential vitamins & minerals, amino and botanical blends. Best men's multi on Amazon India.</p>
+            </div>
+            <div class="article-card__footer"><span>13 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+          <!-- Section: 🌿 Health & Wellness -->
+          <div class="section-divider" data-cat="health" style="grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:20px 0 8px;border-top:2px solid var(--border);margin-top:12px"><span style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--dark)">🌿 Health & Wellness</span><span style="font-size:.78rem;color:var(--muted)">2 reviews</span></div>
+          <a href="reviews/prostavive-review-2026.html" class="card review-full-card" data-cat="health" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="https://fitlabreviews.com/images/products/prostavive-sp.webp" alt="Prostavive" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🌿'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Men's Health</div>
+                <span class="verdict-box skip">Weak Evidence</span>
+              </div>
+              <div class="review-full-card__title">Prostavive — Full Review 2026</div>
+              <div class="stars">★★★☆☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">5.5 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Prostate health formula. Limited independent evidence for the ingredient combination.</p>
+            </div>
+            <div class="article-card__footer"><span>8 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+          <a href="reviews/prodentim-review-2026.html" class="card review-full-card" data-cat="health" style="text-decoration:none;color:inherit;display:block">
+            <div class="review-full-card__img" style="background:var(--accent-soft);display:flex;align-items:center;justify-content:center;height:180px">
+              <img src="images/products/prodentim.webp" alt="ProDentim Probiotic" style="height:140px;object-fit:contain" onerror="this.style.display='none';this.parentElement.innerHTML+='🦷'"/>
+            </div>
+            <div class="review-full-card__body">
+              <div class="review-full-card__top">
+                <div class="review-full-card__cat">Oral Health</div>
+                <span class="verdict-box skip">Skip</span>
+              </div>
+              <div class="review-full-card__title">ProDentim Probiotic — Full Review 2026</div>
+              <div class="stars">★★★☆☆ <span style="font-size:.82rem;color:var(--muted);font-weight:500;margin-left:4px;">5.2 / 10</span></div>
+              <p class="review-full-card__excerpt" style="margin-top:8px;">Oral probiotic blend. Novelty concept with very limited clinical evidence for teeth/gum outcomes.</p>
+            </div>
+            <div class="article-card__footer"><span>8 min read</span><span class="read-more">Read Review →</span></div>
+          </a>
+
+        </div><!-- #reviewsGrid -->
+      </main>
+
+      <!-- RIGHT: SIDEBAR -->
+      <aside>
+        <!-- Search -->
+        <div class="sidebar-widget">
+          <h3>🔍 Search Reviews</h3>
+          <div class="sidebar-search">
+            <input type="text" id="reviewSearchInput" placeholder="e.g. creatine, whey..." onkeydown="if(event.key==='Enter'&&this.value.trim())window.location='search.html?q='+encodeURIComponent(this.value.trim())"/>
+            <button class="btn btn-primary" style="padding:9px 14px;" onclick="var q=document.getElementById('reviewSearchInput').value.trim();if(q)window.location='search.html?q='+encodeURIComponent(q)">Go</button>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget">
+          <h3>📂 Categories</h3>
+          <nav class="sidebar-cat-list">
+            <a href="#">Protein Powders <span>34</span></a>
+            <a href="#">Pre-Workouts <span>28</span></a>
+            <a href="#">Fat Burners <span>19</span></a>
+            <a href="#">Creatine <span>12</span></a>
+            <a href="#">BCAAs / EAAs <span>15</span></a>
+            <a href="#">Fitness Gadgets <span>22</span></a>
+            <a href="#">Vitamins & Greens <span>10</span></a>
+          </nav>
+        </div>
+
+        <!-- Top Rated -->
+        <div class="sidebar-widget">
+          <h3>🏆 Top Rated</h3>
+          <div class="top-rated-item">
+            <div class="top-rated-item__icon">💊</div>
+            <div>
+              <div class="top-rated-item__title">ON Gold Standard Whey</div>
+              <div class="top-rated-item__score">★★★★★ 9.8/10</div>
+            </div>
+          </div>
+          <div class="top-rated-item">
+            <div class="top-rated-item__icon">⚡</div>
+            <div>
+              <div class="top-rated-item__title">TL BULK Black Pre-Workout</div>
+              <div class="top-rated-item__score">★★★★★ 9.5/10</div>
+            </div>
+          </div>
+          <div class="top-rated-item">
+            <div class="top-rated-item__icon">🧬</div>
+            <div>
+              <div class="top-rated-item__title">Thorne Creatine Monohydrate</div>
+              <div class="top-rated-item__score">★★★★★ 9.3/10</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disclosure -->
+        <div class="sidebar-widget" style="background:var(--accent-soft);border-color:rgba(0,168,120,.2);">
+          <h3 style="color:var(--accent-dark);">📋 Our Review Process</h3>
+          <p style="font-size:.82rem;color:var(--text);line-height:1.65;">Every supplement is scored on ingredients, dosing, transparency, taste, and value. We never accept paid reviews. <a href="about.html" style="color:var(--accent);font-weight:600;">Learn our methodology →</a></p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__logo-link">
+            <span class="footer__logo-text">fitlab<em>.</em></span>
+          </a>
+          <p class="footer__desc">Science-backed supplement and fitness gadget reviews. We test ingredients, verify clinical doses, and call out the marketing fluff — so you spend money on what actually works.</p>
+          <div class="footer__trust">
+            <span>No paid placements</span>
+            <span>Independent reviews</span>
+            <span>Zero brand bias</span>
+            <span>Jake Reynolds, CISSN</span>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="footer__col">
+          <h4>Reviews</h4>
+          <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard Whey</a>
+          <a href="reviews/dymatize-iso100-review-2026.html">Dymatize ISO100</a>
+          <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black Pre-Workout</a>
+          <a href="reviews/instant-knockout-cut-review-2026.html">Instant Knockout Cut</a>
+          <a href="reviews/phenq-review-2026.html">PhenQ Fat Burner</a>
+          <a href="reviews/yu-sleep-review.html">Yu Sleep</a>
+          <a href="reviews.html" class="footer__more">All Reviews →</a>
+        </div>
+
+        <!-- Best Of -->
+        <div class="footer__col">
+          <h4>Best Of 2026</h4>
+          <a href="best/best-pre-workouts.html">Best Pre-Workouts</a>
+          <a href="best/best-protein-powders.html">Best Protein Powders</a>
+          <a href="best/best-fat-burners.html">Best Fat Burners</a>
+          <a href="best/best-creatine.html">Best Creatine</a>
+          <a href="best/best-sleep-supplements.html">Best Sleep Supplements</a>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="footer__col">
+          <h4>Ingredients</h4>
+          <a href="ingredients/creatine.html">Creatine Monohydrate</a>
+          <a href="ingredients/caffeine.html">Caffeine</a>
+          <a href="ingredients/citrulline.html">L-Citrulline</a>
+          <a href="ingredients/whey-protein.html">Whey Protein</a>
+          <a href="ingredients/ashwagandha.html">Ashwagandha</a>
+          <a href="ingredients/magnesium.html">Magnesium</a>
+          <a href="ingredients/index.html" class="footer__more">All 30 Ingredients →</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="blog/best-supplements-for-muscle-gain.html">Muscle Gain Guide</a>
+          <a href="blog/top-5-fat-burner-ingredients-clinical-backing.html">Fat Burner Ingredients</a>
+          <a href="blog/how-to-read-supplement-label-red-flags.html">Label Red Flags</a>
+          <a href="blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
+          <a href="blog.html" class="footer__more">All Articles →</a>
+          <h4 style="margin-top:22px">Company</h4>
+          <a href="about.html">About Jake Reynolds</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+
+      </div><!-- .footer__grid -->
+
+      <div class="footer__bottom-bar">
+        <span class="footer__copyright">© 2026 FitLabReviews.com · All rights reserved</span>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="about.html">About</a>
+          <a href="search.html">Search</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Reviews authored by Jake Reynolds, CISSN (Certified Sports Nutritionist).
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+    // Filter buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+<script>
+// Filter functionality
+(function(){
+  var btns = document.querySelectorAll('.filter-btn[data-cat]');
+  var cards = document.querySelectorAll('#reviewsGrid .review-full-card');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){b.classList.remove('active')});
+      btn.classList.add('active');
+      var cat = btn.getAttribute('data-cat');
+      cards.forEach(function(card){
+        if(cat==='all' || card.getAttribute('data-cat')===cat){
+          card.style.display='';
+        } else {
+          card.style.display='none';
+        }
+      });
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  // Hamburger menu
+  var btn=document.getElementById('navHamburger');
+  var drawer=document.getElementById('mobileNav');
+  var closeBtn=document.getElementById('navClose');
+  if(btn && drawer){
+    function openMenu(){
+      drawer.classList.add('open'); document.body.style.overflow='hidden';
+      btn.setAttribute('aria-expanded','true');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform='translateY(8px) rotate(45deg)';
+      bars[1].style.opacity='0';
+      bars[2].style.transform='translateY(-8px) rotate(-45deg)';
+    }
+    function closeMenu(){
+      drawer.classList.remove('open'); document.body.style.overflow='';
+      btn.setAttribute('aria-expanded','false');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform=''; bars[1].style.opacity=''; bars[2].style.transform='';
+    }
+    btn.addEventListener('click',function(){ drawer.classList.contains('open')?closeMenu():openMenu(); });
+    if(closeBtn) closeBtn.addEventListener('click',closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeMenu); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+    drawer.addEventListener('click',function(e){ if(e.target===drawer) closeMenu(); });
+  }
+
+  // Search overlay
+  var searchBtn=document.getElementById('navSearchBtn');
+  var searchOverlay=document.getElementById('navSearchOverlay');
+  var searchClose=document.getElementById('navSearchClose');
+  var searchInput=document.getElementById('navSearchInput');
+  var searchResults=document.getElementById('navSearchResults');
+
+  // Search data
+  var SEARCH_DATA=[
+    // ─── Articles ───
+    {t:'Ashwagandha — What the Research Actually Shows (2026 Evidence Review)',url:'blog/ashwagandha-what-research-shows.html',cat:'Article'},
+    {t:'Creatine and Brain Health — The Emerging Cognitive Science (2026)',url:'blog/creatine-brain-health.html',cat:'Article'},
+    {t:'Creatine for Women — The Science Most Articles Get Wrong',url:'blog/creatine-for-women.html',cat:'Article'},
+    {t:'Creatine HCl vs Monohydrate — The Definitive 2026 Guide',url:'blog/creatine-hcl-vs-monohydrate.html',cat:'Article'},
+    {t:'Electrolytes: Do You Actually Need Them? The Science Behind Hydration Supplements',url:'blog/electrolytes-do-you-need-them.html',cat:'Article'},
+    {t:'How to Build a Supplement Stack from Scratch — The Right Order for Every Goal',url:'blog/how-to-build-supplement-stack.html',cat:'Article'},
+    {t:'How to Read a Supplement Label: 7 Red Flags Every Buyer Should Know (2026)',url:'blog/how-to-read-supplement-label-red-flags.html',cat:'Article'},
+    {t:'Plant Protein vs Whey — Does the Source Actually Matter for Muscle? (2026 Evidence)',url:'blog/plant-protein-vs-whey.html',cat:'Article'},
+    {t:'Pre-Workout Side Effects — What\'s Normal, What\'s a Warning Sign (2026 Guide)',url:'blog/pre-workout-side-effects.html',cat:'Article'},
+    {t:'The Protein Timing Myth — Does It Actually Matter When You Eat Protein?',url:'blog/protein-timing-myth.html',cat:'Article'},
+    {t:'Best Supplements for Muscle Gain in 2026 — What Actually Works (Science-Ranked)',url:'blog/best-supplements-for-muscle-gain.html',cat:'Article'},
+    {t:'Top 5 Fat Burner Ingredients With Clinical Backing (2026)',url:'blog/top-5-fat-burner-ingredients-clinical-backing.html',cat:'Article'},
+    {t:'Wearable Technology + AI Personalization: The #1 Fitness Trend of 2026',url:'blog/wearable-technology-ai-personalization.html',cat:'Article'},
+    // ─── Reviews ───
+    {t:'ON Gold Standard 100% Whey Review',url:'reviews/on-gold-standard-whey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Isolate Review',url:'reviews/on-gold-standard-100-isolate-review-2026.html',cat:'Review'},
+    {t:'ON Platinum Hydrowhey Review',url:'reviews/on-platinum-hydrowhey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Casein Review',url:'reviews/on-gold-standard-casein-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Plant Review',url:'reviews/on-gold-standard-plant-protein-review-2026.html',cat:'Review'},
+    {t:'ON Serious Mass Review',url:'reviews/on-serious-mass-review-2026.html',cat:'Review'},
+    {t:'Dymatize ISO100 Hydrolyzed Review',url:'reviews/dymatize-iso100-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze Biozyme Performance Whey Review',url:'reviews/muscleblaze-biozyme-whey-review-2026.html',cat:'Review'},
+    {t:'MyProtein Impact Whey Isolate Review',url:'reviews/myprotein-impact-whey-review-2026.html',cat:'Review'},
+    {t:'Garden of Life Sport Organic Plant Review',url:'reviews/garden-of-life-sport-plant-protein-review.html',cat:'Review'},
+    {t:'Transparent Labs BULK Black Review',url:'reviews/transparent-labs-bulk-black-review.html',cat:'Review'},
+    {t:'Gorilla Mode Pre-Workout Review',url:'reviews/gorilla-mode-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Legion Pulse Pre-Workout Review',url:'reviews/legion-pulse-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard Pre-Workout Review',url:'reviews/on-gold-standard-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Essential Amino Energy Review',url:'reviews/on-essential-amino-energy-review-2026.html',cat:'Review'},
+    {t:'C4 Original Pre-Workout Review',url:'reviews/c4-original-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Instant Knockout Cut Review',url:'reviews/instant-knockout-cut-review-2026.html',cat:'Review'},
+    {t:'PhenQ Fat Burner Review',url:'reviews/phenq-review-2026.html',cat:'Review'},
+    {t:'LeanBiome (Probiotic + Fat Loss) Review',url:'reviews/leanbiome-review-2026.html',cat:'Review'},
+    {t:'Old School Labs Vintage Burn Review',url:'reviews/old-school-labs-vintage-burn-review-2026.html',cat:'Review'},
+    {t:'Citrus Burn Review',url:'reviews/citrus-burn-review-2026.html',cat:'Review'},
+    {t:'Java Burn Coffee Additive Review',url:'reviews/java-burn-review-2026.html',cat:'Review'},
+    {t:'Lipovive Review',url:'reviews/lipovive-review.html',cat:'Review'},
+    {t:'Trimology Review',url:'reviews/trimology-review-2026.html',cat:'Review'},
+    {t:'Thorne Creatine (NSF Certified) Review',url:'reviews/thorne-creatine-review-2026.html',cat:'Review'},
+    {t:'Momentous Creatine (Creapure® + NSF) Review',url:'reviews/momentous-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Transparent Labs Creatine HMB Review',url:'reviews/transparent-labs-creatine-hmb-review-2026.html',cat:'Review'},
+    {t:'Kaged Creatine HCl (CON-CRET®) Review',url:'reviews/kaged-creatine-hcl-review-2026.html',cat:'Review'},
+    {t:'ON Micronized Creatine (4 Formats) Review',url:'reviews/on-micronized-creatine-review-2026.html',cat:'Review'},
+    {t:'BulkSupplements Creatine Monohydrate Review',url:'reviews/bulksupplements-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze CreAMP Creatine Review',url:'reviews/muscleblaze-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Yu Sleep Nano Formula Review',url:'reviews/yu-sleep-review.html',cat:'Review'},
+    {t:'Momentous Magtein (Magnesium L-Threonate) Review',url:'reviews/momentous-magtein-magnesium-l-threonate-review-2026.html',cat:'Review'},
+    {t:'Life Extension Melatonin 5mg Review',url:'reviews/life-extension-melatonin-5mg-review-2026.html',cat:'Review'},
+    {t:'NOW Foods L-Theanine 200mg Review',url:'reviews/now-foods-l-theanine-200mg-review-2026.html',cat:'Review'},
+    {t:'ON Opti-Men Multivitamin Review',url:'reviews/on-opti-men-multivitamin-review-2026.html',cat:'Review'},
+    {t:'ON Superior Amino 2222 Tablets Review',url:'reviews/on-superior-amino-2222-review-2026.html',cat:'Review'},
+    {t:'Prostavive Review',url:'reviews/prostavive-review-2026.html',cat:'Review'},
+    {t:'ProDentim Probiotic Review',url:'reviews/prodentim-review-2026.html',cat:'Review'},
+    // ─── Best Of ───
+    {t:'Best Protein Powders 2026',url:'best/best-protein-powders.html',cat:'Best Of'},
+    {t:'Best Pre-Workouts 2026',url:'best/best-pre-workouts.html',cat:'Best Of'},
+    {t:'Best Creatine Supplements 2026',url:'best/best-creatine.html',cat:'Best Of'},
+    {t:'Best Fat Burners 2026',url:'best/best-fat-burners.html',cat:'Best Of'},
+    {t:'Best Sleep Supplements 2026',url:'best/best-sleep-supplements.html',cat:'Best Of'},
+    // ─── India Guides ───
+    {t:'Best Protein Supplements in India 2026',url:'india/best-protein-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Pre-Workout Supplements in India 2026',url:'india/best-pre-workout-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Vitamins & Minerals in India 2026',url:'india/best-vitamins-minerals-india-2026.html',cat:'India Guide'},
+    // ─── Brands ───
+    {t:'Optimum Nutrition Brand Analysis',url:'brands/optimum-nutrition.html',cat:'Brand'},
+    {t:'Transparent Labs Brand Analysis',url:'brands/transparent-labs.html',cat:'Brand'},
+    {t:'Dymatize Brand Analysis',url:'brands/dymatize.html',cat:'Brand'},
+    {t:'MuscleBlaze Brand Analysis',url:'brands/muscleblaze.html',cat:'Brand'},
+    {t:'Momentous Brand Analysis',url:'brands/momentous.html',cat:'Brand'},
+    {t:'Kaged Brand Analysis',url:'brands/kaged.html',cat:'Brand'},
+    // ─── Stacks ───
+    {t:'Muscle Gain Stack',url:'stacks/muscle-gain.html',cat:'Stack'},
+    {t:'Sleep Optimization Stack',url:'stacks/sleep-optimization.html',cat:'Stack'},
+    {t:'Fat Loss Support Stack',url:'stacks/fat-loss.html',cat:'Stack'},
+    {t:'Pre-Workout Performance Stack',url:'stacks/pre-workout-performance.html',cat:'Stack'},
+    {t:'Cognitive Focus Stack',url:'stacks/cognitive-focus.html',cat:'Stack'},
+    {t:'Foundational Health Stack',url:'stacks/foundational-health.html',cat:'Stack'},
+    // ─── Ingredients ───
+    {t:'Creatine Monohydrate — Ingredient Guide',url:'ingredients/creatine.html',cat:'Ingredient'},
+    {t:'Caffeine — Ingredient Guide',url:'ingredients/caffeine.html',cat:'Ingredient'},
+    {t:'L-Citrulline — Ingredient Guide',url:'ingredients/citrulline.html',cat:'Ingredient'},
+    {t:'Ashwagandha — Ingredient Guide',url:'ingredients/ashwagandha.html',cat:'Ingredient'},
+    {t:'Magnesium — Ingredient Guide',url:'ingredients/magnesium.html',cat:'Ingredient'},
+    {t:'Whey Protein — Ingredient Guide',url:'ingredients/whey-protein.html',cat:'Ingredient'},
+    {t:'L-Theanine — Ingredient Guide',url:'ingredients/l-theanine.html',cat:'Ingredient'},
+    {t:'Beta-Alanine — Ingredient Guide',url:'ingredients/beta-alanine.html',cat:'Ingredient'},
+    {t:'HMB — Ingredient Guide',url:'ingredients/hmb.html',cat:'Ingredient'},
+    // ─── Comparisons ───
+    {t:'ON Gold Standard vs ISO100 Comparison',url:'comparisons/on-gold-standard-vs-iso100.html',cat:'Compare'},
+    {t:'Whey vs Plant Protein Comparison',url:'comparisons/whey-vs-plant-protein.html',cat:'Compare'},
+    {t:'BULK Black vs C4 Original Comparison',url:'comparisons/transparent-labs-vs-c4.html',cat:'Compare'},
+    {t:'Creatine Monohydrate vs HCl Comparison',url:'comparisons/creatine-monohydrate-vs-hcl.html',cat:'Compare'},
+  ];
+
+  function openSearch(){
+    searchOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ if(searchInput) searchInput.focus(); },100);
+  }
+  function closeSearch(){
+    searchOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(searchInput) searchInput.value='';
+    if(searchResults) searchResults.innerHTML='';
+  }
+
+  if(searchBtn) searchBtn.addEventListener('click', openSearch);
+  if(searchClose) searchClose.addEventListener('click', closeSearch);
+  if(searchOverlay){
+    searchOverlay.addEventListener('click',function(e){
+      if(e.target===searchOverlay) closeSearch();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeSearch();
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){ e.preventDefault(); openSearch(); }
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      var q=this.value.trim().toLowerCase();
+      if(!q || q.length < 2){ searchResults.innerHTML=''; return; }
+      var hits=SEARCH_DATA.filter(function(d){ return d.t.toLowerCase().includes(q); }).slice(0,6);
+      if(!hits.length){ searchResults.innerHTML='<div style="padding:16px 18px;font-size:.88rem;color:var(--muted)">No results for \\"'+q+'\\"</div>'; return; }
+      searchResults.innerHTML=hits.map(function(h){
+        return '<a href="'+h.url+'" class="nav__search-result-item">'
+          +'<span class="sr-cat">'+h.cat+'</span>'
+          +'<span>'+h.t+'</span>'
+          +'</a>';
+      }).join('');
+    });
+  }
+})();
+</script>
+<script>var mT=document.getElementById("mobSearchTrigger");if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){document.getElementById("mobileNav").classList.remove("open");document.body.style.overflow="";setTimeout(function(){var so=document.getElementById("navSearchOverlay");if(so){so.classList.add("open");document.body.style.overflow="hidden";setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}},200);});}</script>
+<script>
+(function(){
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.card[data-cat]');
+  var dividers = document.querySelectorAll('.section-divider');
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      btns.forEach(function(b){ b.classList.remove('active'); });
+      this.classList.add('active');
+      var f = this.getAttribute('data-filter');
+      cards.forEach(function(c){
+        c.style.display = (f==='all' || c.getAttribute('data-cat')===f) ? 'block' : 'none';
+      });
+      dividers.forEach(function(d){
+        var haVisible = false;
+        var next = d.nextElementSibling;
+        while(next && !next.classList.contains('section-divider')){
+          if(next.style.display !== 'none') haVisible = true;
+          next = next.nextElementSibling;
+        }
+        d.style.display = (f==='all' || d.getAttribute('data-cat')===f) ? 'flex' : 'none';
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

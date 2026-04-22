@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#00A878"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Evidence-based supplement science, nutrition guides, and ingredient deep dives. 13 articles by Jake Reynolds, CISSN. No paid placements."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://fitlabreviews.com/blog.html"/>
+  <meta property="og:title" content="FitLab Blog — Evidence-Based Supplement & Nutrition Science"/>
+  <meta property="og:description" content="13 science-backed articles on supplements, nutrition, and fitness by Jake Reynolds CISSN."/>
+  <meta property="og:type" content="website"/>
+  <title>Blog — Evidence-Based Supplement Science | FitLabReviews</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N23DKB7H8K"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N23DKB7H8K');</script>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    html,body{overflow-x:hidden}
+    .blog-featured{transition:box-shadow .2s}
+    .blog-featured:hover{box-shadow:0 12px 36px rgba(0,0,0,.18)}
+    @media(max-width:900px){
+      .blog-featured{grid-template-columns:1fr!important}
+      .blog-featured > div:last-child{display:none!important}
+      .blog-layout{grid-template-columns:1fr!important}
+      #blogGrid{grid-template-columns:repeat(2,1fr)!important}
+    }
+    @media(max-width:560px){
+      #blogGrid{grid-template-columns:1fr!important}
+    }
+    .blog-tab{transition:all .15s;cursor:pointer}
+    .blog-card{cursor:pointer;flex-direction:column}
+    .blog-layout{display:grid;grid-template-columns:1fr 300px;gap:36px;padding:40px 0 60px}
+  </style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">fitlab<em>.</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="best/best-protein-powders.html">Best Of</a></li>
+        <li><a href="stacks.html">Stacks</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="goals.html">By Goal</a></li>
+        <li><a href="india.html">🇮🇳 India</a></li>
+        <li><a href="ingredients/index.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__search-btn" id="navSearchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="ask-jake.html" class="nav__cta">Ask Jake
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="nav__search-overlay" id="navSearchOverlay">
+      <div class="nav__search-box">
+        <svg class="nav__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navSearchInput" class="nav__search-input" placeholder="Search reviews, ingredients, brands&#x2026;" autocomplete="off" spellcheck="false"/>
+        <button class="nav__search-close" id="navSearchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="nav__search-results" id="navSearchResults"></div>
+      <div class="nav__search-quick">
+        <span class="nav__search-quick-label">Popular:</span>
+        <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard</a>
+        <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black</a>
+        <a href="best/best-creatine.html">Best Creatine</a>
+        <a href="stacks/sleep-optimization.html">Sleep Stack</a>
+        <a href="compare.html">Compare Products</a>
+      </div>
+    </div>
+
+  <div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="nav__mobile-header">
+      <span class="nav__mobile-brand">fitlab<em>.</em></span>
+      <button class="nav__mobile-close" id="navClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-search" id="mobSearchTrigger">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span style="font-size:.9rem;color:var(--muted)">Search supplements&#x2026;</span>
+    </div>
+    <div class="nav__mobile-links">
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="brands.html">Brands</a>
+      <a href="best/best-protein-powders.html">Best Of</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="stacks.html">Supplement Stacks</a>
+      <a href="compare.html">Compare Products</a>
+      <a href="goals.html">Browse by Goal</a>
+      <a href="research/index.html">Research Summaries</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="ingredients/index.html">Ingredients Library</a>
+      <a href="blog.html">Blog &amp; Guides</a>
+      <a href="about.html">About Jake</a>
+      <a href="ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
+    </div>
+  </div>
+
+<!-- PAGE HEADER -->
+<div style="background:var(--bg);border-bottom:1px solid var(--border);padding:44px 0 32px">
+  <div class="container">
+    <div style="max-width:680px">
+      <div class="section-label" style="margin-bottom:8px">FitLab Blog · 13 Articles Published</div>
+      <h1 style="font-family:var(--font-head);font-size:2.4rem;font-weight:700;color:var(--dark);line-height:1.15;margin-bottom:12px;letter-spacing:-.025em">Evidence-Based Supplement &amp; Nutrition Science</h1>
+      <p style="color:var(--muted);font-size:.97rem;line-height:1.72;margin-bottom:20px">Written by Jake Reynolds, CISSN. Every article cites primary research — no marketing copy, no brand affiliations, no paid content.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:8px 16px;font-size:.8rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          13 articles published
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:8px 16px;font-size:.8rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          8 topic categories
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:8px 16px;font-size:.8rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          Updated Apr 2026
+        </div>
+        <!-- Inline search -->
+        <div style="display:flex;align-items:center;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);padding:6px 14px;gap:8px;min-width:220px;flex:1;max-width:340px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="blogSearch" type="text" placeholder="Search articles…" style="border:none;outline:none;font-family:var(--font-body);font-size:.83rem;color:var(--dark);background:transparent;flex:1"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar"><div class="container"><nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="index.html">Home</a><span class="breadcrumb__sep">›</span>
+  <span>Blog</span>
+</nav></div></div>
+
+<!-- MAIN LAYOUT -->
+<div class="container">
+  <div class="blog-layout">
+    <main>
+      <div style="background:linear-gradient(135deg,var(--dark) 0%,#0a2540 100%);border-radius:var(--r-lg);overflow:hidden;display:grid;grid-template-columns:1fr 360px;margin-bottom:36px" class="blog-featured">
+  <div style="padding:36px 32px 32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+      <span style="background:var(--accent);color:#fff;font-size:.68rem;font-weight:700;padding:3px 12px;border-radius:50px;text-transform:uppercase;letter-spacing:.06em">⭐ Featured</span>
+      <span style="background:#D1FAE5;color:#065F46;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:.04em;white-space:nowrap">Ingredient Science</span>
+      <span style="font-size:.74rem;color:var(--muted)">📅 Apr 11, 2026</span>
+      <span style="font-size:.74rem;color:var(--muted)">⏱ 12 min read</span>
+    </div>
+    <h2 style="font-family:var(--font-head);font-size:1.55rem;font-weight:700;color:#fff;line-height:1.25;margin-bottom:14px;letter-spacing:-.02em">Ashwagandha — What the Research Actually Shows (2026 Evidence Review)</h2>
+    <p style="font-size:.92rem;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:24px">Cortisol reduction: real. Testosterone increase: modest. Sleep improvement: genuine. An honest review of 14 human RCTs — separating the marketing claims from what the evidence actually shows.</p>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:36px;height:36px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.82rem;flex-shrink:0">JR</div>
+      <div>
+        <div style="font-size:.84rem;font-weight:700;color:#fff">Jake Reynolds, CISSN</div>
+        <div style="font-size:.74rem;color:rgba(255,255,255,.5)">Certified Sports Nutritionist</div>
+      </div>
+    </div>
+    <a href="blog/ashwagandha-what-research-shows.html" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:11px 24px;border-radius:50px;font-size:.88rem;font-weight:700;text-decoration:none;margin-top:22px;transition:background .15s" onmouseover="this.style.background='#008060'" onmouseout="this.style.background='var(--accent)'">
+      Read Article
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <div style="background:linear-gradient(135deg,rgba(0,168,120,.15),rgba(0,168,120,.04));display:flex;align-items:center;justify-content:center;font-size:8rem;padding:40px;border-left:1px solid rgba(255,255,255,.06)">
+    🌿
+  </div>
+</div>
+
+      <!-- TOPIC FILTER TABS -->
+      <div class="blog-filter-tabs" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px">
+  <button class="blog-tab active" data-cat="all" style="padding:7px 18px;border-radius:50px;border:1.5px solid var(--accent);background:var(--accent);color:#fff;font-family:var(--font-body);font-size:.82rem;font-weight:700;cursor:pointer">All Posts (13)</button>
+  <button class="blog-tab" data-cat="Buyer's Guide" style="padding:7px 18px;border-radius:50px;border:1.5px solid #FEF3C7;background:#FEF3C7;color:#7C2D12;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#FEF3C7" data-fg="#7C2D12">Buyer's Guide (2)</button>
+  <button class="blog-tab" data-cat="Fat Loss Science" style="padding:7px 18px;border-radius:50px;border:1.5px solid #FEE2E2;background:#FEE2E2;color:#7C1D1D;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#FEE2E2" data-fg="#7C1D1D">Fat Loss Science (1)</button>
+  <button class="blog-tab" data-cat="Fitness Technology" style="padding:7px 18px;border-radius:50px;border:1.5px solid #E0F2FE;background:#E0F2FE;color:#0C4A6E;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#E0F2FE" data-fg="#0C4A6E">Fitness Technology (1)</button>
+  <button class="blog-tab" data-cat="Ingredient Science" style="padding:7px 18px;border-radius:50px;border:1.5px solid #D1FAE5;background:#D1FAE5;color:#065F46;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#D1FAE5" data-fg="#065F46">Ingredient Science (3)</button>
+  <button class="blog-tab" data-cat="Muscle Building" style="padding:7px 18px;border-radius:50px;border:1.5px solid #EDE9FE;background:#EDE9FE;color:#1E3A5F;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#EDE9FE" data-fg="#1E3A5F">Muscle Building (1)</button>
+  <button class="blog-tab" data-cat="Nutrition Science" style="padding:7px 18px;border-radius:50px;border:1.5px solid #DBEAFE;background:#DBEAFE;color:#1E3A5F;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#DBEAFE" data-fg="#1E3A5F">Nutrition Science (3)</button>
+  <button class="blog-tab" data-cat="Safety Guide" style="padding:7px 18px;border-radius:50px;border:1.5px solid #FEF9C3;background:#FEF9C3;color:#713F12;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#FEF9C3" data-fg="#713F12">Safety Guide (1)</button>
+  <button class="blog-tab" data-cat="Women's Health" style="padding:7px 18px;border-radius:50px;border:1.5px solid #FCE7F3;background:#FCE7F3;color:#831843;font-family:var(--font-body);font-size:.82rem;font-weight:600;cursor:pointer" data-bg="#FCE7F3" data-fg="#831843">Women's Health (1)</button>
+</div>
+
+      <!-- NO RESULTS MESSAGE -->
+      <div id="blogNoResults" style="display:none;text-align:center;padding:40px;color:var(--muted);font-size:.9rem">
+        No articles match this filter. <a href="#" onclick="document.querySelectorAll('.blog-tab')[0].click();return false" style="color:var(--accent);font-weight:600">Show all →</a>
+      </div>
+
+      <!-- ARTICLES GRID -->
+      <div class="blog-grid" id="blogGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px">
+    <a href="blog/ashwagandha-what-research-shows.html" class="blog-card" data-cat="Ingredient Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#D1FAE5 0%,#D1FAE5cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #D1FAE5">
+        🌿
+        <span style="position:absolute;top:10px;left:12px;background:#D1FAE5;color:#065F46;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Ingredient Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Ashwagandha — What the Research Actually Shows (2026 Evidence Review)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Cortisol reduction: real. Testosterone increase: modest. Sleep improvement: genuine. An honest review of 14 human RCTs — separating the marketing claims from wh…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/creatine-brain-health.html" class="blog-card" data-cat="Ingredient Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#D1FAE5 0%,#D1FAE5cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #D1FAE5">
+        🧠
+        <span style="position:absolute;top:10px;left:12px;background:#D1FAE5;color:#065F46;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Ingredient Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Creatine and Brain Health — The Emerging Cognitive Science (2026)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Your brain uses phosphocreatine too. Creatine supplementation improved cognitive performance in 4 of 5 reviewed RCTs — with the strongest effects in sleep-depri…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/creatine-for-women.html" class="blog-card" data-cat="Women's Health" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#FCE7F3 0%,#FCE7F3cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #FCE7F3">
+        👩
+        <span style="position:absolute;top:10px;left:12px;background:#FCE7F3;color:#831843;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Women's Health</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 15 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Creatine for Women — The Science Most Articles Get Wrong</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Most creatine research used exclusively male subjects. Here's what the female-specific studies actually show — including the evidence on menstrual cycle timing …</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/creatine-hcl-vs-monohydrate.html" class="blog-card" data-cat="Ingredient Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#D1FAE5 0%,#D1FAE5cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #D1FAE5">
+        ⚗️
+        <span style="position:absolute;top:10px;left:12px;background:#D1FAE5;color:#065F46;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Ingredient Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Creatine HCl vs Monohydrate — The Definitive 2026 Guide</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">HCl is 60× more water-soluble than monohydrate. But does solubility translate to better phosphocreatine loading? We reviewed every independent human trial on th…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/electrolytes-do-you-need-them.html" class="blog-card" data-cat="Nutrition Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#DBEAFE 0%,#DBEAFEcc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #DBEAFE">
+        💧
+        <span style="position:absolute;top:10px;left:12px;background:#DBEAFE;color:#1E3A5F;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Nutrition Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Electrolytes: Do You Actually Need Them? The Science Behind Hydration Supplements</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Electrolyte supplements are often unnecessary for casual gym-goers. Here's the specific workout duration, sweat rate, and dietary context where they actually ma…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/how-to-build-supplement-stack.html" class="blog-card" data-cat="Buyer's Guide" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#FEF3C7 0%,#FEF3C7cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #FEF3C7">
+        🧱
+        <span style="position:absolute;top:10px;left:12px;background:#FEF3C7;color:#7C2D12;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Buyer's Guide</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">How to Build a Supplement Stack from Scratch — The Right Order for Every Goal</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Priority order matters more than product selection: food → sleep → protein → creatine → everything else. A step-by-step framework for building a stack that actu…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/how-to-read-supplement-label-red-flags.html" class="blog-card" data-cat="Buyer's Guide" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#FEF3C7 0%,#FEF3C7cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #FEF3C7">
+        🏷️
+        <span style="position:absolute;top:10px;left:12px;background:#FEF3C7;color:#7C2D12;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Buyer's Guide</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 18 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">How to Read a Supplement Label: 7 Red Flags Every Buyer Should Know (2026)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Proprietary blends, amino-spiking, artificial inflated serving sizes, misleading "clinically studied" claims — 7 label patterns that should make you put the pro…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/plant-protein-vs-whey.html" class="blog-card" data-cat="Nutrition Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#DBEAFE 0%,#DBEAFEcc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #DBEAFE">
+        🌱
+        <span style="position:absolute;top:10px;left:12px;background:#DBEAFE;color:#1E3A5F;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Nutrition Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 12 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Plant Protein vs Whey — Does the Source Actually Matter for Muscle? (2026 Evidence)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">For muscle protein synthesis, the gap between high-quality plant protein (pea+rice) and whey is smaller than the supplement industry suggests. Here's what the c…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/pre-workout-side-effects.html" class="blog-card" data-cat="Safety Guide" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#FEF9C3 0%,#FEF9C3cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #FEF9C3">
+        ⚠️
+        <span style="position:absolute;top:10px;left:12px;background:#FEF9C3;color:#713F12;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Safety Guide</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 14 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Pre-Workout Side Effects — What's Normal, What's a Warning Sign (2026 Guide)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Beta-alanine tingling is harmless and expected. These 6 pre-workout side effects are not — including signs of excessive stimulant load, cardiac symptoms, and wh…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/protein-timing-myth.html" class="blog-card" data-cat="Nutrition Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#DBEAFE 0%,#DBEAFEcc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #DBEAFE">
+        ⏱️
+        <span style="position:absolute;top:10px;left:12px;background:#DBEAFE;color:#1E3A5F;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Nutrition Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 11, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 13 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">The Protein Timing Myth — Does It Actually Matter When You Eat Protein?</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">The "anabolic window" theory said you had 30 minutes post-workout to consume protein or lose gains. Multiple meta-analyses have since dismantled this. What the …</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/best-supplements-for-muscle-gain.html" class="blog-card" data-cat="Muscle Building" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#EDE9FE 0%,#EDE9FEcc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #EDE9FE">
+        💪
+        <span style="position:absolute;top:10px;left:12px;background:#EDE9FE;color:#1E3A5F;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Muscle Building</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 4, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 13 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Best Supplements for Muscle Gain in 2026 — What Actually Works (Science-Ranked)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">Ranked by strength of evidence: creatine monohydrate at the top, caffeine for training quality, protein to hit daily targets. A hierarchy of what actually moves…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/top-5-fat-burner-ingredients-clinical-backing.html" class="blog-card" data-cat="Fat Loss Science" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#FEE2E2 0%,#FEE2E2cc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #FEE2E2">
+        🔥
+        <span style="position:absolute;top:10px;left:12px;background:#FEE2E2;color:#7C1D1D;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Fat Loss Science</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 4, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 18 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Top 5 Fat Burner Ingredients With Clinical Backing (2026)</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">EGCG, caffeine, synephrine, glucomannan, and L-carnitine are the only fat burner ingredients with meaningful human RCT support. What each does, at what dose, an…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+    <a href="blog/wearable-technology-ai-personalization.html" class="blog-card" data-cat="Fitness Technology" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;background:var(--white);border:1.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:all .2s" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(0,168,120,.1)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='';this.style.boxShadow=''">
+      <div style="height:148px;background:linear-gradient(135deg,#E0F2FE 0%,#E0F2FEcc 100%);display:flex;align-items:center;justify-content:center;font-size:4rem;position:relative;border-bottom:1px solid #E0F2FE">
+        ⌚
+        <span style="position:absolute;top:10px;left:12px;background:#E0F2FE;color:#0C4A6E;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:50px;letter-spacing:.04em">Fitness Technology</span>
+      </div>
+      <div style="padding:18px 20px;flex:1;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px">
+          <span style="font-size:.72rem;color:var(--muted)">📅 Apr 1, 2026</span>
+          <span style="color:var(--border)">·</span>
+          <span style="font-size:.72rem;color:var(--muted)">⏱ 18 min</span>
+        </div>
+        <div style="font-family:var(--font-head);font-size:.97rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:10px">Wearable Technology + AI Personalization: The #1 Fitness Trend of 2026</div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.7;margin:0 0 14px;flex:1">AI-personalised training from wearable biometric data is the defining fitness shift of 2026. What the early evidence shows about outcomes — and where the market…</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-size:.83rem;font-weight:700;margin-top:auto">
+          Read Article
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </div>
+      </div>
+    </a>
+</div>
+
+      <!-- COMING SOON / UPCOMING SECTION -->
+      <div style="background:var(--bg);border:1.5px dashed var(--border);border-radius:var(--r-lg);padding:28px 32px;margin-top:8px">
+        <div style="font-family:var(--font-head);font-size:1.05rem;font-weight:700;color:var(--dark);margin-bottom:6px">🔜 Coming Next</div>
+        <p style="font-size:.85rem;color:var(--muted);line-height:1.7;margin:0 0 18px">New articles are published as research reviews complete. Upcoming topics:</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px" class="upcoming-grid">
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;align-items:flex-start;gap:10px">
+            <span style="color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+            <div><div style="font-size:.84rem;font-weight:600;color:var(--dark)">Vitamin D3 Deficiency Guide</div><div style="font-size:.74rem;color:var(--muted)">Why 70% of Indians are deficient despite sun exposure</div></div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;align-items:flex-start;gap:10px">
+            <span style="color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+            <div><div style="font-size:.84rem;font-weight:600;color:var(--dark)">HMB Evidence Review 2026</div><div style="font-size:.74rem;color:var(--muted)">Anti-catabolic effects: who actually benefits</div></div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;align-items:flex-start;gap:10px">
+            <span style="color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+            <div><div style="font-size:.84rem;font-weight:600;color:var(--dark)">Caffeine + L-Theanine Synergy</div><div style="font-size:.74rem;color:var(--muted)">COMT inhibition mechanism — why 200:200 works</div></div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;align-items:flex-start;gap:10px">
+            <span style="color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+            <div><div style="font-size:.84rem;font-weight:600;color:var(--dark)">Pre-Workout Citrulline Deep Dive</div><div style="font-size:.74rem;color:var(--muted)">Why most pre-workouts are dosed at 12% of clinical</div></div>
+          </div>
+        </div>
+        <p style="font-size:.77rem;color:var(--muted);margin:16px 0 0">When new articles publish, the sitemap at <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:.74rem">fitlabreviews.com/sitemap-blog.xml</code> is updated automatically.</p>
+      </div>
+
+    </main>
+    <aside>
+  <!-- Stats banner -->
+  <div style="background:linear-gradient(135deg,var(--dark),#0a2540);border-radius:var(--r-lg);padding:20px 22px;margin-bottom:22px;color:#fff">
+    <div style="font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:4px">📝 The FitLab Blog</div>
+    <div style="font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.6">Evidence-based supplement and nutrition science. Written by Jake Reynolds, CISSN. No paid placements.</div>
+    <div style="display:flex;gap:16px;margin-top:14px;flex-wrap:wrap">
+      <div><div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700">13</div><div style="font-size:.7rem;color:rgba(255,255,255,.5)">Articles</div></div>
+      <div><div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700">8</div><div style="font-size:.7rem;color:rgba(255,255,255,.5)">Categories</div></div>
+      <div><div style="font-family:var(--font-head);font-size:1.2rem;font-weight:700">Apr 2026</div><div style="font-size:.7rem;color:rgba(255,255,255,.5)">Updated</div></div>
+    </div>
+  </div>
+
+  <!-- Categories -->
+  <div class="sidebar-box" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:18px">
+    <div style="font-family:var(--font-head);font-size:.9rem;font-weight:700;color:var(--dark);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem">Browse by Topic</div>
+    <div style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--accent);font-weight:700" onclick="document.querySelectorAll('.blog-tab')[0].click()">All Posts <span style="background:var(--accent-soft);color:var(--accent);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:700">13</span></div>
+    <a href="#" class="blog-cat-filter" data-cat="Buyer's Guide" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Buyer's Guide<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">2</span></a><a href="#" class="blog-cat-filter" data-cat="Fat Loss Science" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Fat Loss Science<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">1</span></a><a href="#" class="blog-cat-filter" data-cat="Fitness Technology" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Fitness Technology<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">1</span></a><a href="#" class="blog-cat-filter" data-cat="Ingredient Science" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Ingredient Science<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">3</span></a><a href="#" class="blog-cat-filter" data-cat="Muscle Building" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Muscle Building<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">1</span></a><a href="#" class="blog-cat-filter" data-cat="Nutrition Science" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Nutrition Science<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">3</span></a><a href="#" class="blog-cat-filter" data-cat="Safety Guide" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Safety Guide<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">1</span></a><a href="#" class="blog-cat-filter" data-cat="Women's Health" style="display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:.87rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .15s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text)'">Women's Health<span style="background:var(--bg);color:var(--muted);font-size:.74rem;padding:2px 8px;border-radius:50px;font-weight:600">1</span></a>
+  </div>
+
+  <!-- Recent posts -->
+  <div class="sidebar-box" style="background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:18px">
+    <div style="font-family:var(--font-head);font-size:.78rem;font-weight:700;color:var(--dark);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em">Latest Articles</div>
+    <a href="blog/ashwagandha-what-research-shows.html" style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'"><span style="font-size:1.5rem;flex-shrink:0;line-height:1.2">🌿</span><div><div style="font-size:.84rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:3px">Ashwagandha — What the Research Actually Shows (2026 Evidenc…</div><div style="font-size:.72rem;color:var(--muted)">Apr 11, 2026 · 12 min</div></div></a><a href="blog/creatine-brain-health.html" style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'"><span style="font-size:1.5rem;flex-shrink:0;line-height:1.2">🧠</span><div><div style="font-size:.84rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:3px">Creatine and Brain Health — The Emerging Cognitive Science (…</div><div style="font-size:.72rem;color:var(--muted)">Apr 11, 2026 · 12 min</div></div></a><a href="blog/creatine-for-women.html" style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'"><span style="font-size:1.5rem;flex-shrink:0;line-height:1.2">👩</span><div><div style="font-size:.84rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:3px">Creatine for Women — The Science Most Articles Get Wrong</div><div style="font-size:.72rem;color:var(--muted)">Apr 11, 2026 · 15 min</div></div></a><a href="blog/creatine-hcl-vs-monohydrate.html" style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'"><span style="font-size:1.5rem;flex-shrink:0;line-height:1.2">⚗️</span><div><div style="font-size:.84rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:3px">Creatine HCl vs Monohydrate — The Definitive 2026 Guide</div><div style="font-size:.72rem;color:var(--muted)">Apr 11, 2026 · 12 min</div></div></a><a href="blog/electrolytes-do-you-need-them.html" style="display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'"><span style="font-size:1.5rem;flex-shrink:0;line-height:1.2">💧</span><div><div style="font-size:.84rem;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:3px">Electrolytes: Do You Actually Need Them? The Science Behind …</div><div style="font-size:.72rem;color:var(--muted)">Apr 11, 2026 · 12 min</div></div></a>
+  </div>
+
+  <!-- About Jake box -->
+  <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+      <div style="width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0">JR</div>
+      <div>
+        <div style="font-size:.88rem;font-weight:700;color:var(--dark)">Jake Reynolds</div>
+        <div style="font-size:.74rem;color:var(--accent)">CISSN · NSCA-CPT</div>
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);line-height:1.7;margin:0 0 12px">Certified Sports Nutritionist covering supplement science, training nutrition, and evidence-based fitness since 2016.</p>
+    <a href="ask-jake.html" style="display:flex;align-items:center;justify-content:center;gap:7px;background:var(--accent);color:#fff;padding:9px 16px;border-radius:50px;font-size:.82rem;font-weight:700;text-decoration:none">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Ask Jake a Question →
+    </a>
+  </div>
+</aside>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__logo-link">
+            <span class="footer__logo-text">fitlab<em>.</em></span>
+          </a>
+          <p class="footer__desc">Science-backed supplement and fitness gadget reviews. We test ingredients, verify clinical doses, and call out the marketing fluff — so you spend money on what actually works.</p>
+          <div class="footer__trust">
+            <span>No paid placements</span>
+            <span>Independent reviews</span>
+            <span>Zero brand bias</span>
+            <span>Jake Reynolds, CISSN</span>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="footer__col">
+          <h4>Reviews</h4>
+          <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard Whey</a>
+          <a href="reviews/dymatize-iso100-review-2026.html">Dymatize ISO100</a>
+          <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black Pre-Workout</a>
+          <a href="reviews/instant-knockout-cut-review-2026.html">Instant Knockout Cut</a>
+          <a href="reviews/phenq-review-2026.html">PhenQ Fat Burner</a>
+          <a href="reviews/yu-sleep-review.html">Yu Sleep</a>
+          <a href="reviews.html" class="footer__more">All Reviews →</a>
+        </div>
+
+        <!-- Best Of -->
+        <div class="footer__col">
+          <h4>Best Of 2026</h4>
+          <a href="best/best-pre-workouts.html">Best Pre-Workouts</a>
+          <a href="best/best-protein-powders.html">Best Protein Powders</a>
+          <a href="best/best-fat-burners.html">Best Fat Burners</a>
+          <a href="best/best-creatine.html">Best Creatine</a>
+          <a href="best/best-sleep-supplements.html">Best Sleep Supplements</a>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="footer__col">
+          <h4>Ingredients</h4>
+          <a href="ingredients/creatine.html">Creatine Monohydrate</a>
+          <a href="ingredients/caffeine.html">Caffeine</a>
+          <a href="ingredients/citrulline.html">L-Citrulline</a>
+          <a href="ingredients/whey-protein.html">Whey Protein</a>
+          <a href="ingredients/ashwagandha.html">Ashwagandha</a>
+          <a href="ingredients/magnesium.html">Magnesium</a>
+          <a href="ingredients/index.html" class="footer__more">All 30 Ingredients →</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="blog/best-supplements-for-muscle-gain.html">Muscle Gain Guide</a>
+          <a href="blog/top-5-fat-burner-ingredients-clinical-backing.html">Fat Burner Ingredients</a>
+          <a href="blog/how-to-read-supplement-label-red-flags.html">Label Red Flags</a>
+          <a href="blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
+          <a href="blog.html" class="footer__more">All Articles →</a>
+          <h4 style="margin-top:22px">Company</h4>
+          <a href="about.html">About Jake Reynolds</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+
+      </div><!-- .footer__grid -->
+
+      <div class="footer__bottom-bar">
+        <span class="footer__copyright">© 2026 FitLabReviews.com · All rights reserved</span>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="about.html">About</a>
+          <a href="search.html">Search</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Reviews authored by Jake Reynolds, CISSN (Certified Sports Nutritionist).
+      </p>
+
+    </div>
+  </footer>
+<script>var mT=document.getElementById("mobSearchTrigger");if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){document.getElementById("mobileNav").classList.remove("open");document.body.style.overflow="";setTimeout(function(){var so=document.getElementById("navSearchOverlay");if(so){so.classList.add("open");document.body.style.overflow="hidden";setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}},200);});}</script>
+<script>var mT=document.getElementById("mobSearchTrigger");if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){document.getElementById("mobileNav").classList.remove("open");document.body.style.overflow="";setTimeout(function(){var so=document.getElementById("navSearchOverlay");if(so){so.classList.add("open");document.body.style.overflow="hidden";setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}},200);});}</script>
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.blog-tab');
+  var cards = document.querySelectorAll('.blog-card');
+  var sidebarLinks = document.querySelectorAll('.blog-cat-filter');
+
+  function filterTo(cat){
+    tabs.forEach(function(t){ 
+      var isActive = (cat==='all' && t.getAttribute('data-cat')==='all') || t.getAttribute('data-cat')===cat;
+      if(isActive){
+        t.style.background = t.getAttribute('data-cat')==='all' ? 'var(--accent)' : (t.getAttribute('data-bg') || 'var(--accent-soft)');
+        t.style.color = t.getAttribute('data-cat')==='all' ? '#fff' : (t.getAttribute('data-fg') || 'var(--accent)');
+        t.style.borderColor = t.getAttribute('data-cat')==='all' ? 'var(--accent)' : (t.getAttribute('data-bg') || 'var(--accent-soft)');
+        t.classList.add('active');
+      } else {
+        t.style.background='var(--white)'; t.style.color='var(--text)'; t.style.borderColor='var(--border)';
+        t.classList.remove('active');
+      }
+    });
+    var visible = 0;
+    cards.forEach(function(c){
+      var show = cat==='all' || c.getAttribute('data-cat')===cat;
+      c.style.display = show ? 'flex' : 'none';
+      if(show) visible++;
+    });
+    // Update grid column count
+    var grid = document.getElementById('blogGrid');
+    if(grid) grid.style.gridTemplateColumns = visible===1 ? '1fr' : visible===2 ? 'repeat(2,1fr)' : 'repeat(3,1fr)';
+    // Scroll to grid
+    var grid2 = document.getElementById('blogGrid');
+    if(grid2 && cat!=='all') grid2.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  tabs.forEach(function(t){ t.addEventListener('click',function(){ filterTo(this.getAttribute('data-cat')); }); });
+  sidebarLinks.forEach(function(l){ l.addEventListener('click',function(e){ e.preventDefault(); filterTo(this.getAttribute('data-cat')); window.scrollTo({top:0,behavior:'smooth'}); }); });
+
+  // Search inside blog
+  var searchInput = document.getElementById('blogSearch');
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      var q = this.value.trim().toLowerCase();
+      if(!q){ filterTo('all'); return; }
+      tabs.forEach(function(t){ t.classList.remove('active'); t.style.background='var(--white)'; t.style.color='var(--text)'; t.style.borderColor='var(--border)'; });
+      cards.forEach(function(c){
+        var text = (c.textContent||'').toLowerCase();
+        c.style.display = text.includes(q) ? 'flex' : 'none';
+      });
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  // Hamburger menu
+  var btn=document.getElementById('navHamburger');
+  var drawer=document.getElementById('mobileNav');
+  var closeBtn=document.getElementById('navClose');
+  if(btn && drawer){
+    function openMenu(){
+      drawer.classList.add('open'); document.body.style.overflow='hidden';
+      btn.setAttribute('aria-expanded','true');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform='translateY(8px) rotate(45deg)';
+      bars[1].style.opacity='0';
+      bars[2].style.transform='translateY(-8px) rotate(-45deg)';
+    }
+    function closeMenu(){
+      drawer.classList.remove('open'); document.body.style.overflow='';
+      btn.setAttribute('aria-expanded','false');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform=''; bars[1].style.opacity=''; bars[2].style.transform='';
+    }
+    btn.addEventListener('click',function(){ drawer.classList.contains('open')?closeMenu():openMenu(); });
+    if(closeBtn) closeBtn.addEventListener('click',closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeMenu); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+    drawer.addEventListener('click',function(e){ if(e.target===drawer) closeMenu(); });
+  }
+
+  // Search overlay
+  var searchBtn=document.getElementById('navSearchBtn');
+  var searchOverlay=document.getElementById('navSearchOverlay');
+  var searchClose=document.getElementById('navSearchClose');
+  var searchInput=document.getElementById('navSearchInput');
+  var searchResults=document.getElementById('navSearchResults');
+
+  // Search data
+  var SEARCH_DATA=[
+    // ─── Articles ───
+    {t:'Ashwagandha What Research Shows',url:'blog/ashwagandha-what-research-shows.html',cat:'Article'},
+    {t:'Creatine Brain Health',url:'blog/creatine-brain-health.html',cat:'Article'},
+    {t:'Creatine For Women',url:'blog/creatine-for-women.html',cat:'Article'},
+    {t:'Creatine Hcl Vs Monohydrate',url:'blog/creatine-hcl-vs-monohydrate.html',cat:'Article'},
+    {t:'Electrolytes Do You Need Them',url:'blog/electrolytes-do-you-need-them.html',cat:'Article'},
+    {t:'How To Build Supplement Stack',url:'blog/how-to-build-supplement-stack.html',cat:'Article'},
+    {t:'How To Read Supplement Label Red Flags',url:'blog/how-to-read-supplement-label-red-flags.html',cat:'Article'},
+    {t:'Plant Protein Vs Whey',url:'blog/plant-protein-vs-whey.html',cat:'Article'},
+    {t:'Pre Workout Side Effects',url:'blog/pre-workout-side-effects.html',cat:'Article'},
+    {t:'Protein Timing Myth',url:'blog/protein-timing-myth.html',cat:'Article'},
+    {t:'Best Supplements For Muscle Gain',url:'blog/best-supplements-for-muscle-gain.html',cat:'Article'},
+    {t:'Top 5 Fat Burner Ingredients Clinical Backing',url:'blog/top-5-fat-burner-ingredients-clinical-backing.html',cat:'Article'},
+    {t:'Wearable Technology Ai Personalization',url:'blog/wearable-technology-ai-personalization.html',cat:'Article'},
+    {t:'Creapure Vs Generic Creatine',url:'blog/creapure-vs-generic-creatine.html',cat:'Article'},
+    {t:'Hmb Supplement Evidence',url:'blog/hmb-supplement-evidence.html',cat:'Article'},
+    {t:'Creatine Loading Phase',url:'blog/creatine-loading-phase.html',cat:'Article'},
+    {t:'Vitamin D How Much Do You Need',url:'blog/vitamin-d-how-much-do-you-need.html',cat:'Article'},
+    {t:'Mass Gainer Vs Whole Food',url:'blog/mass-gainer-vs-whole-food.html',cat:'Article'},
+    {t:'Protein Post Workout Timing',url:'blog/protein-post-workout-timing.html',cat:'Article'},
+    {t:'Alpha Brain Waves Cognitive Performance',url:'blog/alpha-brain-waves-cognitive-performance.html',cat:'Article'},
+    {t:'Protein Timing Total Vs Timing',url:'blog/protein-timing-total-vs-timing.html',cat:'Article'},
+    {t:'Magnesium Forms Comparison',url:'blog/magnesium-forms-comparison.html',cat:'Article'},
+    {t:'L Theanine Caffeine Stack',url:'blog/l-theanine-caffeine-stack.html',cat:'Article'},
+    {t:'Caffeine Egcg Thermogenic Science',url:'blog/caffeine-egcg-thermogenic-science.html',cat:'Article'},
+    {t:'Wpi Vs Wpc Whey Protein',url:'blog/wpi-vs-wpc-whey-protein.html',cat:'Article'},
+    {t:'Bcaa Supplements Evidence',url:'blog/bcaa-supplements-evidence.html',cat:'Article'},
+    {t:'Pre Workout Ingredients Explained',url:'blog/pre-workout-ingredients-explained.html',cat:'Article'},
+    {t:'Jet Lag Supplement Protocol',url:'blog/jet-lag-supplement-protocol.html',cat:'Article'},
+    // ─── Reviews ───
+    {t:'ON Gold Standard 100% Whey Review',url:'reviews/on-gold-standard-whey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Isolate Review',url:'reviews/on-gold-standard-100-isolate-review-2026.html',cat:'Review'},
+    {t:'ON Platinum Hydrowhey Review',url:'reviews/on-platinum-hydrowhey-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Casein Review',url:'reviews/on-gold-standard-casein-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard 100% Plant Review',url:'reviews/on-gold-standard-plant-protein-review-2026.html',cat:'Review'},
+    {t:'ON Serious Mass Review',url:'reviews/on-serious-mass-review-2026.html',cat:'Review'},
+    {t:'Dymatize ISO100 Hydrolyzed Review',url:'reviews/dymatize-iso100-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze Biozyme Performance Whey Review',url:'reviews/muscleblaze-biozyme-whey-review-2026.html',cat:'Review'},
+    {t:'MyProtein Impact Whey Isolate Review',url:'reviews/myprotein-impact-whey-review-2026.html',cat:'Review'},
+    {t:'Garden of Life Sport Organic Plant Review',url:'reviews/garden-of-life-sport-plant-protein-review.html',cat:'Review'},
+    {t:'Transparent Labs BULK Black Review',url:'reviews/transparent-labs-bulk-black-review.html',cat:'Review'},
+    {t:'Gorilla Mode Pre-Workout Review',url:'reviews/gorilla-mode-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Legion Pulse Pre-Workout Review',url:'reviews/legion-pulse-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Gold Standard Pre-Workout Review',url:'reviews/on-gold-standard-pre-workout-review-2026.html',cat:'Review'},
+    {t:'ON Essential Amino Energy Review',url:'reviews/on-essential-amino-energy-review-2026.html',cat:'Review'},
+    {t:'C4 Original Pre-Workout Review',url:'reviews/c4-original-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Instant Knockout Cut Review',url:'reviews/instant-knockout-cut-review-2026.html',cat:'Review'},
+    {t:'PhenQ Fat Burner Review',url:'reviews/phenq-review-2026.html',cat:'Review'},
+    {t:'LeanBiome (Probiotic + Fat Loss) Review',url:'reviews/leanbiome-review-2026.html',cat:'Review'},
+    {t:'Old School Labs Vintage Burn Review',url:'reviews/old-school-labs-vintage-burn-review-2026.html',cat:'Review'},
+    {t:'Citrus Burn Review',url:'reviews/citrus-burn-review-2026.html',cat:'Review'},
+    {t:'Java Burn Coffee Additive Review',url:'reviews/java-burn-review-2026.html',cat:'Review'},
+    {t:'Lipovive Review',url:'reviews/lipovive-review.html',cat:'Review'},
+    {t:'Trimology Review',url:'reviews/trimology-review-2026.html',cat:'Review'},
+    {t:'Thorne Creatine (NSF Certified) Review',url:'reviews/thorne-creatine-review-2026.html',cat:'Review'},
+    {t:'Momentous Creatine (Creapure® + NSF) Review',url:'reviews/momentous-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Transparent Labs Creatine HMB Review',url:'reviews/transparent-labs-creatine-hmb-review-2026.html',cat:'Review'},
+    {t:'Kaged Creatine HCl (CON-CRET®) Review',url:'reviews/kaged-creatine-hcl-review-2026.html',cat:'Review'},
+    {t:'ON Micronized Creatine (4 Formats) Review',url:'reviews/on-micronized-creatine-review-2026.html',cat:'Review'},
+    {t:'BulkSupplements Creatine Monohydrate Review',url:'reviews/bulksupplements-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze CreAMP Creatine Review',url:'reviews/muscleblaze-creatine-monohydrate-review-2026.html',cat:'Review'},
+    {t:'Yu Sleep Nano Formula Review',url:'reviews/yu-sleep-review.html',cat:'Review'},
+    {t:'Momentous Magtein (Magnesium L-Threonate) Review',url:'reviews/momentous-magtein-magnesium-l-threonate-review-2026.html',cat:'Review'},
+    {t:'Life Extension Melatonin 5mg Review',url:'reviews/life-extension-melatonin-5mg-review-2026.html',cat:'Review'},
+    {t:'NOW Foods L-Theanine 200mg Review',url:'reviews/now-foods-l-theanine-200mg-review-2026.html',cat:'Review'},
+    {t:'ON Opti-Men Multivitamin Review',url:'reviews/on-opti-men-multivitamin-review-2026.html',cat:'Review'},
+    {t:'ON Superior Amino 2222 Tablets Review',url:'reviews/on-superior-amino-2222-review-2026.html',cat:'Review'},
+    {t:'Prostavive Review',url:'reviews/prostavive-review-2026.html',cat:'Review'},
+    {t:'ProDentim Probiotic Review',url:'reviews/prodentim-review-2026.html',cat:'Review'},
+    // ─── Best Of ───
+    {t:'Best Protein Powders 2026',url:'best/best-protein-powders.html',cat:'Best Of'},
+    {t:'Best Pre-Workouts 2026',url:'best/best-pre-workouts.html',cat:'Best Of'},
+    {t:'Best Creatine Supplements 2026',url:'best/best-creatine.html',cat:'Best Of'},
+    {t:'Best Fat Burners 2026',url:'best/best-fat-burners.html',cat:'Best Of'},
+    {t:'Best Sleep Supplements 2026',url:'best/best-sleep-supplements.html',cat:'Best Of'},
+    // ─── India Guides ───
+    {t:'Best Protein Supplements in India 2026',url:'india/best-protein-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Pre-Workout Supplements in India 2026',url:'india/best-pre-workout-supplements-india-2026.html',cat:'India Guide'},
+    {t:'Best Vitamins & Minerals in India 2026',url:'india/best-vitamins-minerals-india-2026.html',cat:'India Guide'},
+    // ─── Brands ───
+    {t:'Optimum Nutrition Brand Analysis',url:'brands/optimum-nutrition.html',cat:'Brand'},
+    {t:'Transparent Labs Brand Analysis',url:'brands/transparent-labs.html',cat:'Brand'},
+    {t:'Dymatize Brand Analysis',url:'brands/dymatize.html',cat:'Brand'},
+    {t:'MuscleBlaze Brand Analysis',url:'brands/muscleblaze.html',cat:'Brand'},
+    {t:'Momentous Brand Analysis',url:'brands/momentous.html',cat:'Brand'},
+    {t:'Kaged Brand Analysis',url:'brands/kaged.html',cat:'Brand'},
+    // ─── Stacks ───
+    {t:'Muscle Gain Stack',url:'stacks/muscle-gain.html',cat:'Stack'},
+    {t:'Sleep Optimization Stack',url:'stacks/sleep-optimization.html',cat:'Stack'},
+    {t:'Fat Loss Support Stack',url:'stacks/fat-loss.html',cat:'Stack'},
+    {t:'Pre-Workout Performance Stack',url:'stacks/pre-workout-performance.html',cat:'Stack'},
+    {t:'Cognitive Focus Stack',url:'stacks/cognitive-focus.html',cat:'Stack'},
+    {t:'Foundational Health Stack',url:'stacks/foundational-health.html',cat:'Stack'},
+    // ─── Ingredients ───
+    {t:'Creatine Monohydrate — Ingredient Guide',url:'ingredients/creatine.html',cat:'Ingredient'},
+    {t:'Caffeine — Ingredient Guide',url:'ingredients/caffeine.html',cat:'Ingredient'},
+    {t:'L-Citrulline — Ingredient Guide',url:'ingredients/citrulline.html',cat:'Ingredient'},
+    {t:'Ashwagandha — Ingredient Guide',url:'ingredients/ashwagandha.html',cat:'Ingredient'},
+    {t:'Magnesium — Ingredient Guide',url:'ingredients/magnesium.html',cat:'Ingredient'},
+    {t:'Whey Protein — Ingredient Guide',url:'ingredients/whey-protein.html',cat:'Ingredient'},
+    {t:'L-Theanine — Ingredient Guide',url:'ingredients/l-theanine.html',cat:'Ingredient'},
+    {t:'Beta-Alanine — Ingredient Guide',url:'ingredients/beta-alanine.html',cat:'Ingredient'},
+    {t:'HMB — Ingredient Guide',url:'ingredients/hmb.html',cat:'Ingredient'},
+    // ─── Comparisons ───
+    {t:'ON Gold Standard vs ISO100 Comparison',url:'comparisons/on-gold-standard-vs-iso100.html',cat:'Compare'},
+    {t:'Whey vs Plant Protein Comparison',url:'comparisons/whey-vs-plant-protein.html',cat:'Compare'},
+    {t:'BULK Black vs C4 Original Comparison',url:'comparisons/transparent-labs-vs-c4.html',cat:'Compare'},
+    {t:'Creatine Monohydrate vs HCl Comparison',url:'comparisons/creatine-monohydrate-vs-hcl.html',cat:'Compare'},
+  ];
+
+  function openSearch(){
+    searchOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ if(searchInput) searchInput.focus(); },100);
+  }
+  function closeSearch(){
+    searchOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(searchInput) searchInput.value='';
+    if(searchResults) searchResults.innerHTML='';
+  }
+
+  if(searchBtn) searchBtn.addEventListener('click', openSearch);
+  if(searchClose) searchClose.addEventListener('click', closeSearch);
+  if(searchOverlay){
+    searchOverlay.addEventListener('click',function(e){
+      if(e.target===searchOverlay) closeSearch();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeSearch();
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){ e.preventDefault(); openSearch(); }
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      var q=this.value.trim().toLowerCase();
+      if(!q || q.length < 2){ searchResults.innerHTML=''; return; }
+      var hits=SEARCH_DATA.filter(function(d){ return d.t.toLowerCase().includes(q); }).slice(0,6);
+      if(!hits.length){ searchResults.innerHTML='<div style="padding:16px 18px;font-size:.88rem;color:var(--muted)">No results for \\"'+q+'\\"</div>'; return; }
+      searchResults.innerHTML=hits.map(function(h){
+        return '<a href="'+h.url+'" class="nav__search-result-item">'
+          +'<span class="sr-cat">'+h.cat+'</span>'
+          +'<span>'+h.t+'</span>'
+          +'</a>';
+      }).join('');
+    });
+  }
+})();
+</script>
+</body>
+</html>
