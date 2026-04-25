@@ -147,7 +147,7 @@ img{max-width:100%}
       <div class="nav__mobile-divider"></div>
       <a href="ingredients/index.html">Ingredients Library</a>
       <a href="blog.html">Blog &amp; Guides</a>
-      <a href="about.html">About Jake</a>
+      <a href="authors/index.html">Our Team</a>
       <a href="ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
     </div>
   </div>
@@ -156,7 +156,9 @@ img{max-width:100%}
     <div class="aj-hero__badge">&#x1F916; AI Supplement Assistant</div>
     <h1>Ask Jake</h1>
     <p>Instant, research-backed answers on protein, creatine, pre-workouts, fat burners, supplement stacks, dosing, and timing — powered by Jake Reynolds' knowledge base.</p>
-    <div class="aj-disclaimer">&#x2139;&#xFE0F; For informational purposes only. Always consult a healthcare professional before starting any supplement regimen.</div>
+    <div class="aj-disclaimer">
+      <strong>⚠️ AI-Generated Responses</strong> — This tool is powered by artificial intelligence. Responses are not written or personally reviewed by a human expert. Information is for general reference only and may contain errors. Always consult a qualified healthcare professional or pharmacist before starting any supplement, especially if you take medication or have a health condition.
+    </div>
   </div>
 </div>
 <div class="container">
@@ -176,9 +178,9 @@ img{max-width:100%}
 
     <div class="chat-window" id="chatWindow">
       <div class="msg">
-        <div class="msg__avatar msg__avatar--jake">JR</div>
+        <div class="msg__avatar msg__avatar--jake">FS</div>
         <div class="msg__bubble msg__bubble--jake">
-          <strong>Hey, I'm Jake.</strong> I'm the CISSN-certified sports nutritionist behind FitLabReviews. Ask me anything about supplements — I'll give you honest, research-backed answers. No brand loyalty, no upselling, just the science.<br><br>
+          <strong>Hey, welcome to FitLabReviews AI.</strong> I'm the AI supplement assistant built on the FitLab Science Team's research database. Ask me anything about supplements — I'll give you honest, evidence-backed answers. No brand loyalty, no upselling, just the science.<br><br>
           What would you like to know?
         </div>
       </div>
@@ -190,7 +192,7 @@ img{max-width:100%}
     </div>
 
     <div style="font-size:.74rem;color:var(--muted);text-align:center;margin-top:10px">
-      Powered by <strong>FitLabReviews AI</strong> using Jake Reynolds' research database &middot; <a href="about.html" style="color:var(--accent)">About Jake</a>
+      Powered by <strong>FitLabReviews AI</strong> — AI-generated content, not personal expert advice &middot; <a href="authors/index.html" style="color:var(--accent)">Our Team</a>
     </div>
 
     <!-- Topic shortcuts -->
@@ -238,7 +240,7 @@ img{max-width:100%}
             <span>No paid placements</span>
             <span>Independent reviews</span>
             <span>Zero brand bias</span>
-            <span>Jake Reynolds, CISSN</span>
+            <span>Pankaj Singh, B.Pharma</span>
           </div>
         </div>
 
@@ -285,7 +287,7 @@ img{max-width:100%}
           <a href="blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
           <a href="blog.html" class="footer__more">All Articles →</a>
           <h4 style="margin-top:22px">Company</h4>
-          <a href="about.html">About Jake Reynolds</a>
+          <a href="authors/index.html">Our Team Reynolds</a>
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Use</a>
         </div>
@@ -303,7 +305,7 @@ img{max-width:100%}
       </div>
 
       <p class="footer__disclaimer">
-        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Reviews authored by Jake Reynolds, CISSN (Certified Sports Nutritionist).
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Content produced by the FitLab Science Team under editorial oversight of Pankaj Singh (B.Pharma, DMLT), Founder of FitLabReviews.
       </p>
 
     </div>
@@ -363,7 +365,7 @@ function addTyping(){
   var win=document.getElementById('chatWindow');
   var div=document.createElement('div');
   div.id=id;div.className='msg';
-  div.innerHTML='<div class="msg__avatar msg__avatar--jake">JR</div>'
+  div.innerHTML='<div class="msg__avatar msg__avatar--jake">FS</div>'
     +'<div class="msg__bubble msg__bubble--jake"><span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span></div>';
   win.appendChild(div);win.scrollTop=win.scrollHeight;return id;
 }
