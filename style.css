@@ -1216,3 +1216,38 @@ button { cursor: pointer; font-family: var(--font-body); }
   .eeeat-card { flex-direction: column; }
   .expert-bar__right { width: 100%; }
 }
+
+/* ── MOBILE OVERFLOW FIXES ───────────────────────────────── */
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { min-width: 500px; }
+pre, code { overflow-x: auto; white-space: pre-wrap; word-break: break-word; }
+
+@media (max-width: 768px) {
+  .review-layout {
+    display: block;
+  }
+  .review-sidebar {
+    margin-top: 32px;
+  }
+  .review-main {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+  article, main {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+  .article-content {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+  table {
+    font-size: .82rem;
+  }
+  .method-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .score-card {
+    flex-direction: column;
+  }
+}
