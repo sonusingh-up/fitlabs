@@ -1020,3 +1020,199 @@ button { cursor: pointer; font-family: var(--font-body); }
 .hero__buy-btn--in:hover { background: #E55A00; }
 .hero__buy-btn--us { background: var(--amazon); color: #fff; }
 .hero__buy-btn--us:hover { background: var(--amazon-dark); }
+
+/* ============================================================
+   GOOGLE 2026 HELPFUL CONTENT — E-E-A-T & AFFILIATE TRUST
+   ============================================================ */
+
+/* ── AFFILIATE TOP BAR (above-fold disclosure) ─────────────── */
+.aff-top-bar {
+  background: #FFFBEB;
+  border-bottom: 1px solid #FDE68A;
+  padding: 9px 0;
+  font-size: .78rem;
+  color: #78350F;
+  text-align: center;
+  line-height: 1.5;
+}
+.aff-top-bar__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.aff-top-bar a { color: #92400E; text-decoration: underline; }
+.aff-top-bar a:hover { color: #78350F; }
+.aff-top-bar__icon { flex-shrink: 0; }
+
+/* ── EXPERT AUTHOR BAR (review pages, best-of pages) ───────── */
+.expert-bar {
+  background: var(--accent-soft);
+  border-bottom: 1px solid rgba(0,168,120,.18);
+  padding: 11px 0;
+}
+.expert-bar__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.expert-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.expert-bar__avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.expert-bar__name {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+.expert-bar__creds {
+  font-size: .75rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.expert-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.expert-bar__meta {
+  font-size: .75rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.expert-bar__method-link {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.expert-bar__method-link:hover { color: var(--accent); }
+
+/* ── WHY TRUST THIS (review pages) ─────────────────────────── */
+.trust-box {
+  background: var(--accent-soft);
+  border: 1px solid rgba(0,168,120,.2);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--r-md);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+.trust-box__title {
+  font-family: var(--font-head);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.trust-box__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.trust-box__list li {
+  font-size: .82rem;
+  color: var(--text);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+}
+.trust-box__list li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── E-E-A-T AUTHOR CARD (homepage) ────────────────────────── */
+.eeeat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.eeeat-card__avatar {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: -.03em;
+}
+.eeeat-card__body { flex: 1; min-width: 0; }
+.eeeat-card__name {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.eeeat-card__title {
+  font-size: .82rem;
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.eeeat-card__desc {
+  font-size: .85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+.eeeat-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.eeeat-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(0,168,120,.18);
+  color: var(--accent-dark);
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: .72rem;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .eeeat-card { flex-direction: column; }
+  .expert-bar__right { width: 100%; }
+}
