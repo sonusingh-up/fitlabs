@@ -245,7 +245,7 @@ tr:hover td{background:var(--bg);}
     <div class="sidebar-user">
       <div class="sidebar-user-avatar" id="sidebarAvatar">JR</div>
       <div>
-        <div class="sidebar-user-name" id="sidebarName">Jake Reynolds</div>
+        <div class="sidebar-user-name" id="sidebarName">FitLab Science Team</div>
         <div class="sidebar-user-role">Admin · CISSN</div>
       </div>
     </div>
@@ -309,7 +309,7 @@ const DB = {
 // Seed demo data if empty
 function seedData(){
   if(DB.get('authors').length === 0){
-    DB.set('authors',[{id:1,name:'Jake Reynolds',initials:'JR',credentials:'CISSN · NSCA-CPT',bio:'Certified sports nutritionist with 10 years experience in supplement research.',email:'jake@fitlabreview.com'}]);
+    DB.set('authors',[{id:1,name:'FitLab Science Team',initials:'JR',credentials:'CISSN · NSCA-CPT',bio:'Certified sports nutritionist with 10 years experience in supplement research.',email:'jake@fitlabreview.com'}]);
   }
   if(DB.get('categories').length === 0){
     DB.set('categories',[
@@ -329,7 +329,7 @@ function seedData(){
     ]);
   }
   if(DB.get('settings').name === undefined){
-    DB.setOne('settings',{name:'Jake Reynolds',initials:'JR',siteName:'FitLabReviews.com',siteUrl:'https://fitlabreviews.com',disclaimer:'We may earn a commission from links on this site.'});
+    DB.setOne('settings',{name:'FitLab Science Team',initials:'JR',siteName:'FitLabReviews.com',siteUrl:'https://fitlabreviews.com',disclaimer:'We may earn a commission from links on this site.'});
   }
 }
 
@@ -1011,7 +1011,7 @@ function openAuthorModal(author=null){
     <div class="form-grid-2">
       <div class="form-group">
         <label class="form-label">Full Name<span>*</span></label>
-        <input type="text" id="aName" placeholder="e.g. Jake Reynolds" value="${esc(a.name||'')}"/>
+        <input type="text" id="aName" placeholder="e.g. FitLab Science Team" value="${esc(a.name||'')}"/>
       </div>
       <div class="form-group">
         <label class="form-label">Initials</label>
