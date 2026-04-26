@@ -158,6 +158,11 @@
       background: var(--tag-bg); color: var(--muted);
       font-size: .75rem; padding: 2px 8px; border-radius: 50px; font-weight: 600;
     }
+    .sidebar-cat-list a.coming-soon { opacity: .55; cursor: default; pointer-events: none; }
+    .sidebar-cat-list .cs-badge {
+      background: #FEF9C3; color: #92400E;
+      font-size: .7rem; padding: 2px 8px; border-radius: 50px; font-weight: 700;
+    }
     .top-rated-item {
       display: flex; align-items: center; gap: 12px;
       padding: 10px 0; border-bottom: 1px solid var(--border);
@@ -937,13 +942,14 @@
         <div class="sidebar-widget">
           <h3>📂 Categories</h3>
           <nav class="sidebar-cat-list">
-            <a href="#">Protein Powders <span>34</span></a>
-            <a href="#">Pre-Workouts <span>28</span></a>
-            <a href="#">Fat Burners <span>19</span></a>
-            <a href="#">Creatine <span>12</span></a>
-            <a href="#">BCAAs / EAAs <span>15</span></a>
-            <a href="#">Fitness Gadgets <span>22</span></a>
-            <a href="#">Vitamins & Greens <span>10</span></a>
+            <a href="#">Protein Powders <span>11</span></a>
+            <a href="#">Pre-Workouts <span>6</span></a>
+            <a href="#">Fat Burners <span>8</span></a>
+            <a href="#">Creatine <span>7</span></a>
+            <a href="#">Sleep <span>4</span></a>
+            <a href="#">Vitamins &amp; Health <span>3</span></a>
+            <a class="coming-soon">BCAAs / EAAs <span class="cs-badge">Coming Soon</span></a>
+            <a class="coming-soon">Fitness Gadgets <span class="cs-badge">Coming Soon</span></a>
           </nav>
         </div>
 
