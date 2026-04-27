@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="FitLabReviews — Honest, Science-backed supplement reviews, brand ratings, ingredient analysis, and India-specific pricing. Zero paid placements. Test-driven data by Fitlab science team."/>
+  <meta name="robots" content="index,follow"/>
+  <meta name="author" content="Fitlab science Team"/>
+  <link rel="canonical" href="https://fitlabreviews.com/"/>
+  <meta property="og:title" content="FitLabReviews — Supplements That Actually Work"/>
+  <meta property="og:description" content="Independent supplement reviews, brand analysis, evidence-based stacks, and India pricing. Zero paid placements."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://fitlabreviews.com/"/>
+  <title>FitLabReviews — Honest, Science-Backed Supplement Reviews by Fitlab science team</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta name="theme-color" content="#00A878"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N23DKB7H8K"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-N23DKB7H8K');</script>
+  <link rel="stylesheet" href="style.css"/>
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "FitLabReviews",
+      "url": "https://fitlabreviews.com",
+      "description": "Independent supplement review platform applying pharmaceutical science to ingredient analysis. No paid placements.",
+      "potentialAction": {"@type":"SearchAction","target":"https://fitlabreviews.com/search.html?q={search_term_string}","query-input":"required name=search_term_string"}
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://fitlabreviews.com/#organization",
+      "name": "FitLabReviews",
+      "url": "https://fitlabreviews.com",
+      "logo": "https://fitlabreviews.com/favicon-32x32.png",
+      "description": "Independent supplement review platform applying pharmaceutical science to ingredient analysis. No paid placements. No brand bias.",
+      "founder": {
+        "@type": "Person",
+        "name": "Pankaj Singh",
+        "url": "https://fitlabreviews.com/authors/pankaj-singh.html",
+        "sameAs": "https://www.linkedin.com/in/pankaj-singh-77b93a368/"
+      },
+      "sameAs": ["https://www.linkedin.com/in/pankaj-singh-77b93a368/"]
+    }
+  ]
+  </script>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-text">fitlab<em>.</em></span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="best/best-protein-powders.html">Best Of</a></li>
+        <li><a href="stacks.html">Stacks</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="goals.html">By Goal</a></li>
+        <li><a href="india.html">🇮🇳 India</a></li>
+        <li><a href="ingredients.html">Ingredients</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="how-we-score.html">Methodology</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__search-btn" id="navSearchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <a href="ask-jake.html" class="nav__cta">Ask Jake
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="nav__search-overlay" id="navSearchOverlay">
+      <div class="nav__search-box">
+        <svg class="nav__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="navSearchInput" class="nav__search-input" placeholder="Search reviews, ingredients, brands&#x2026;" autocomplete="off" spellcheck="false"/>
+        <button class="nav__search-close" id="navSearchClose" aria-label="Close search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="nav__search-results" id="navSearchResults"></div>
+      <div class="nav__search-quick">
+        <span class="nav__search-quick-label">Popular:</span>
+        <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard</a>
+        <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black</a>
+        <a href="best/best-creatine.html">Best Creatine</a>
+        <a href="stacks/sleep-optimization.html">Sleep Stack</a>
+        <a href="compare.html">Compare Products</a>
+      </div>
+    </div>
+
+  <div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="nav__mobile-header">
+      <span class="nav__mobile-brand">fitlab<em>.</em></span>
+      <button class="nav__mobile-close" id="navClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="nav__mobile-search" id="mobSearchTrigger">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span style="font-size:.9rem;color:var(--muted)">Search supplements&#x2026;</span>
+    </div>
+    <div class="nav__mobile-links">
+      <a href="index.html">Home</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="brands.html">Brands</a>
+      <a href="best/best-protein-powders.html">Best Of</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="stacks.html">Supplement Stacks</a>
+      <a href="compare.html">Compare Products</a>
+      <a href="goals.html">Browse by Goal</a>
+      <a href="research/index.html">Research Summaries</a>
+      <div class="nav__mobile-divider"></div>
+      <a href="ingredients.html">Ingredients Library</a>
+      <a href="blog.html">Blog &amp; Guides</a>
+      <a href="authors/index.html">Our Team</a>
+      <a href="ask-jake.html" class="nav__mob-cta">Ask Jake AI &#x2192;</a>
+    </div>
+  </div>
+
+  
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <div class="hero__badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+          Science-Backed Reviews
+        </div>
+        <h1 class="hero__title fade-up">Supplements That <em>Actually</em> Work.</h1>
+        <p class="hero__sub fade-up delay-1">We test, analyze, and review fitness supplements using real data — no paid placements, no brand bias, just the science.</p>
+        <div class="hero__actions fade-up delay-2">
+          <a href="reviews.html" class="btn btn-primary btn-lg">Browse Reviews →</a>
+          <a href="goals.html" class="btn btn-ghost btn-lg">By Goal</a>
+        </div>
+        <div class="hero__stats fade-up delay-3">
+          <div class="hero__stat"><div class="hero__stat-num">25<span>+</span></div><div class="hero__stat-label">Products Reviewed</div></div>
+          <div class="hero__stat"><div class="hero__stat-num">20+</div><div class="hero__stat-label">Brands Rated</div></div>
+          <div class="hero__stat"><div class="hero__stat-num">9.8</div><div class="hero__stat-label">Top FitLab Score</div></div>
+        </div>
+      </div>
+      <div class="hero__visual fade-up delay-2">
+        <div class="hero__card-main">
+          <div class="hero__card-img">
+            <img src="images/products/on-whey.webp" alt="ON Gold Standard 100% Whey"
+              onerror="this.parentElement.innerHTML='<svg width=&quot;32&quot; height=&quot;32&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;var(--accent)&quot; stroke-width=&quot;1.5&quot;><rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;3&quot;/></svg>'"/>
+          </div>
+          <div class="hero__card-body">
+            <div class="hero__card-cat">Whey Protein</div>
+            <div class="hero__card-title">ON Gold Standard 100% Whey</div>
+            <div class="hero__card-stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              <span>5.0 / 5.0</span>
+            </div>
+            <div class="hero__card-meta">Protein &middot; Editor's Choice</div>
+            <div class="hero__card-verdict">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <a href="https://www.informed-sport.com/certified-products/" target="_blank" rel="noopener" title="View Informed Sport certified products" style="color:inherit;text-decoration:none;">Lab Verified ↗</a>
+            </div>
+            <div class="hero__buy-links">
+              <a href="https://amzn.to/3QhE1aJ" onclick="gtag('event','affiliate_click',{product:'on-gold-standard-whey-hero',network:'amazon_in'})" target="_blank" rel="nofollow noopener sponsored" class="hero__buy-btn hero__buy-btn--in">&#x1F1EE;&#x1F1F3; India</a>
+              <a href="https://amzn.to/4tiiqNR" onclick="gtag('event','affiliate_click',{product:'on-gold-standard-whey-hero',network:'amazon_us'})" target="_blank" rel="nofollow noopener sponsored" class="hero__buy-btn hero__buy-btn--us">&#x1F1FA;&#x1F1F8; USA</a>
+            </div>
+          </div>
+          <div class="hero__card-score">9.8</div>
+        </div>
+        <div class="hero__cards-row">
+          <a href="reviews/thorne-creatine-review-2026.html" class="hero__card-sm hero__card-sm--accent">
+            <div class="hero__card-sm-label">Latest Review</div>
+            <div class="hero__card-sm-val">Thorne Creatine (Creapure®)</div>
+          </a>
+          <a href="compare.html" class="hero__card-sm">
+            <div class="hero__card-sm-label">Tool</div>
+            <div class="hero__card-sm-val">Compare Any Two Products →</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Independently Lab-Tested</div>
+      <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>Zero Paid Placements</div>
+      <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Transparent Ingredient Analysis</div>
+      <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>CISSN Certified Reviewer</div>
+      <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>Updated Monthly</div>
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Browse by Category</div>
+      <div class="section__head"><h2 class="h2">What Are You Looking For?</h2></div>
+      <div class="cat-grid">
+        <a href="categories/protein-powders.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="cat-card__name">Protein Powders</div><div class="cat-card__count">8 reviewed</div></a>
+        <a href="categories/pre-workouts.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="cat-card__name">Pre-Workout</div><div class="cat-card__count">4 reviewed</div></a>
+        <a href="categories/fat-burners.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><div class="cat-card__name">Fat Burners</div><div class="cat-card__count">5 reviewed</div></a>
+        <a href="best/best-creatine.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="cat-card__name">Creatine</div><div class="cat-card__count">3 reviewed</div></a>
+        <a href="categories/sleep-supplements.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div><div class="cat-card__name">Sleep Supplements</div><div class="cat-card__count">3 reviewed</div></a>
+        <a href="brands.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="cat-card__name">Brand Ratings</div><div class="cat-card__count">26 brands</div></a>
+        <a href="ingredients.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div><div class="cat-card__name">Ingredient Library</div><div class="cat-card__count">30 guides</div></a>
+        <a href="blog.html" class="cat-card"><div class="cat-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="cat-card__name">Blog &amp; Guides</div><div class="cat-card__count">13 articles</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROWSE BY GOAL -->
+  <section class="section section--bg">
+    <div class="container">
+      <div class="section-label">Goal-Based Stacks</div>
+      <div class="section__head"><h2 class="h2">Find Supplements for Your Goal</h2><a href="goals.html" class="btn btn-outline">All Goals →</a></div>
+      <div class="goals-strip">
+        <a href="stacks/muscle-gain.html" class="goal-chip"><div class="goal-chip__dot" style="background:#00A878"></div>Muscle Gain</a>
+        <a href="stacks/fat-loss.html" class="goal-chip"><div class="goal-chip__dot" style="background:#EF4444"></div>Fat Loss</a>
+        <a href="stacks/sleep-optimization.html" class="goal-chip"><div class="goal-chip__dot" style="background:#6366F1"></div>Better Sleep</a>
+        <a href="stacks/pre-workout-performance.html" class="goal-chip"><div class="goal-chip__dot" style="background:#F59E0B"></div>Pre-Workout</a>
+        <a href="stacks/cognitive-focus.html" class="goal-chip"><div class="goal-chip__dot" style="background:#3B82F6"></div>Focus</a>
+        <a href="stacks/foundational-health.html" class="goal-chip"><div class="goal-chip__dot" style="background:#0EA5E9"></div>Foundational Health</a>
+        <a href="stacks/recovery.html" class="goal-chip"><div class="goal-chip__dot" style="background:#10B981"></div>Recovery</a>
+        <a href="stacks/stress-cortisol.html" class="goal-chip"><div class="goal-chip__dot" style="background:#8B5CF6"></div>Stress Support</a>
+        <a href="stacks/endurance.html" class="goal-chip"><div class="goal-chip__dot" style="background:#F97316"></div>Endurance</a>
+      </div>
+      <div class="goal-cards">
+        <a href="stacks/muscle-gain.html" class="goal-card" style="--gc:#00A878"><div class="goal-card__accent"></div><div class="goal-card__body"><div class="goal-card__label">Muscle Gain Stack</div><div class="goal-card__desc">Creatine &middot; Whey Protein &middot; Vitamin D3 &middot; Magnesium</div><div class="goal-card__meta">4 ingredients &middot; ~$1.20/day</div></div><svg class="goal-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="stacks/sleep-optimization.html" class="goal-card" style="--gc:#6366F1"><div class="goal-card__accent"></div><div class="goal-card__body"><div class="goal-card__label">Sleep Optimization Stack</div><div class="goal-card__desc">Mag Glycinate &middot; L-Theanine &middot; Apigenin &middot; 0.5mg Melatonin</div><div class="goal-card__meta">4 ingredients &middot; ~$0.80/day</div></div><svg class="goal-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="stacks/foundational-health.html" class="goal-card" style="--gc:#0EA5E9"><div class="goal-card__accent"></div><div class="goal-card__body"><div class="goal-card__label">Foundational Health Stack</div><div class="goal-card__desc">Vitamin D3/K2 &middot; Omega-3 &middot; Magnesium &middot; Zinc</div><div class="goal-card__meta">4 ingredients &middot; ~$0.65/day</div></div><svg class="goal-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="stacks/fat-loss.html" class="goal-card" style="--gc:#EF4444"><div class="goal-card__accent"></div><div class="goal-card__body"><div class="goal-card__label">Fat Loss Support Stack</div><div class="goal-card__desc">Caffeine &middot; EGCG &middot; Protein &middot; Glucomannan</div><div class="goal-card__meta">4 ingredients &middot; ~$1.50/day</div></div><svg class="goal-card__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST REVIEWS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">Top Rated</div>
+      <div class="section__head"><h2 class="h2">Latest Reviews</h2><a href="reviews.html" class="btn btn-outline">All Reviews →</a></div>
+      <div class="reviews-grid">
+        <!-- Review Card 1: ON Gold Standard Whey -->
+        <div class="review-card-wrap">
+          <a href="reviews/on-gold-standard-whey-review-2026.html" style="display:block;text-decoration:none">
+            <div class="review-card__img-wrap"><img src="images/products/on-gold-standard-whey.webp" alt="ON Gold Standard Whey" loading="lazy"/><span class="review-card__badge badge--green">Editor's Choice</span></div>
+            <div class="review-card__body">
+              <div class="review-card__cat">Whey Protein</div>
+              <div class="review-card__title">ON Gold Standard 100% Whey Review</div>
+              <div class="stars">★★★★★</div>
+              <p class="review-card__excerpt">WPI-first blend, Informed Sport certified, 24g protein. The benchmark protein powder for 15 years.</p>
+              <div class="review-card__meta">
+                <div class="review-card__score"><div class="score-circle great">9.8</div><span>FitLab Score</span></div>
+                <span class="review-card__link">Read Review →</span>
+              </div>
+            </div>
+          </a>
+          <div class="review-card__cta">
+            <span class="review-card__price">From $0.88/serving</span>
+            <a href="https://amzn.to/4dYf0Lr" onclick="gtag('event','affiliate_click',{product:'on-gold-standard-whey',network:'amazon_us'})" target="_blank" rel="nofollow noopener sponsored" class="review-card__buy">Check Price on Amazon</a>
+          </div>
+        </div>
+
+        <!-- Review Card 2: BULK Black Pre-Workout -->
+        <div class="review-card-wrap">
+          <a href="reviews/transparent-labs-bulk-black-review.html" style="display:block;text-decoration:none">
+            <div class="review-card__img-wrap"><img src="images/products/tl-bulk-black-preworkout.webp" alt="BULK Black" loading="lazy"/><span class="review-card__badge badge--blue">Best Pre-Workout</span></div>
+            <div class="review-card__body">
+              <div class="review-card__cat">Pre-Workout</div>
+              <div class="review-card__title">Transparent Labs BULK Black Review</div>
+              <div class="stars">★★★★★</div>
+              <p class="review-card__excerpt">8g citrulline, 300mg caffeine, zero prop blends. Clinical benchmark for pre-workouts.</p>
+              <div class="review-card__meta">
+                <div class="review-card__score"><div class="score-circle great">9.4</div><span>FitLab Score</span></div>
+                <span class="review-card__link">Read Review →</span>
+              </div>
+            </div>
+          </a>
+          <div class="review-card__cta">
+            <span class="review-card__price">$59 on official site</span>
+            <a href="https://amzn.to/4cBELz1" onclick="gtag('event','affiliate_click',{product:'tl-bulk-black',network:'brand'})" target="_blank" rel="nofollow noopener sponsored" class="review-card__buy">Check Price on Amazon</a>
+          </div>
+        </div>
+
+        <!-- Review Card 3: Thorne Creatine -->
+        <div class="review-card-wrap">
+          <a href="reviews/thorne-creatine-review-2026.html" style="display:block;text-decoration:none">
+            <div class="review-card__img-wrap"><img src="images/products/thorne-creatine-creapure.webp" alt="Thorne Creatine" loading="lazy"/><span class="review-card__badge badge--purple">NSF Certified</span></div>
+            <div class="review-card__body">
+              <div class="review-card__cat">Creatine</div>
+              <div class="review-card__title">Thorne Creatine (Creapure®) Review</div>
+              <div class="stars">★★★★★</div>
+              <p class="review-card__excerpt">Pharmaceutical-grade Creapure®. NSF Certified for Sport. Best for drug-tested athletes.</p>
+              <div class="review-card__meta">
+                <div class="review-card__score"><div class="score-circle great">9.1</div><span>FitLab Score</span></div>
+                <span class="review-card__link">Read Review →</span>
+              </div>
+            </div>
+          </a>
+          <div class="review-card__cta">
+            <span class="review-card__price">From $0.48/serving</span>
+            <a href="https://amzn.to/423nppX" onclick="gtag('event','affiliate_click',{product:'thorne-creatine',network:'amazon_us'})" target="_blank" rel="nofollow noopener sponsored" class="review-card__buy">Check Price on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- INDIA PICKS -->
+  <section class="section india-section">
+    <div class="container">
+      <div class="india-badge">&#x1F1EE;&#x1F1F3; India Picks</div>
+      <div class="section__head">
+        <div>
+          <h2 class="h2">Best Supplements for India</h2>
+          <p style="color:var(--muted);font-size:.92rem;margin-top:6px">Tested and ranked &middot; INR pricing &middot; Amazon India links &middot; FSSAI-certified</p>
+        </div>
+        <a href="best/best-protein-powders.html" class="btn btn-outline">All India Picks →</a>
+      </div>
+      <div class="india-cards">
+
+        <!-- Card 1 -->
+        <div class="india-card" style="display:flex;flex-direction:column">
+          <a href="reviews/muscleblaze-biozyme-whey-review-2026.html" style="display:block;text-decoration:none;flex:1">
+            <div class="india-card__img">
+              <img src="images/products/muscleblaze-biozyme-performance-whey.webp" alt="MuscleBlaze Biozyme Whey" loading="lazy"/>
+            </div>
+            <div class="india-card__body">
+              <div class="india-card__cat">Whey Protein &middot; &#x1F947; India #1</div>
+              <div class="india-card__name">MuscleBlaze Biozyme Performance Whey</div>
+              <div class="india-card__prices">
+                <span class="india-card__inr">₹2,799<small style="font-size:.72rem;font-weight:500;color:var(--muted)">/kg</small></span>
+                <div style="display:flex;align-items:center;gap:5px;font-size:.77rem;color:var(--muted)"><div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700">8.4</div>FitLab</div>
+              </div>
+              <p style="font-size:.8rem;color:var(--muted);line-height:1.6;margin:0">Enhanced Absorption Formula (EAF) · 25g protein per scoop · FSSAI certified · Widely available across India</p>
+            </div>
+          </a>
+          <div class="india-card__footer">
+            <a href="https://amzn.to/4vEULIZ" onclick="gtag('event','affiliate_click',{product:'muscleblaze-biozyme',network:'amazon_in'})" target="_blank" rel="nofollow noopener sponsored" class="india-card__buy">
+              Buy on Amazon India &#x2192;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="india-card" style="display:flex;flex-direction:column">
+          <a href="reviews/muscleblaze-creatine-monohydrate-review-2026.html" style="display:block;text-decoration:none;flex:1">
+            <div class="india-card__img">
+              <img src="images/products/muscleblaze-creatine.webp" alt="MuscleBlaze Creatine" loading="lazy"/>
+            </div>
+            <div class="india-card__body">
+              <div class="india-card__cat">Creatine &middot; &#x1F947; India #1</div>
+              <div class="india-card__name">MuscleBlaze CreAMP Creatine Monohydrate</div>
+              <div class="india-card__prices">
+                <span class="india-card__inr">₹799<small style="font-size:.72rem;font-weight:500;color:var(--muted)">/250g</small></span>
+                <div style="display:flex;align-items:center;gap:5px;font-size:.77rem;color:var(--muted)"><div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700">8.3</div>FitLab</div>
+              </div>
+              <p style="font-size:.8rem;color:var(--muted);line-height:1.6;margin:0">Micronized monohydrate · FSSAI certified · Pure, no additives · Best value creatine you can buy in India</p>
+            </div>
+          </a>
+          <div class="india-card__footer">
+            <a href="https://amzn.to/3QhE7iB" onclick="gtag('event','affiliate_click',{product:'muscleblaze-creatine',network:'amazon_in'})" target="_blank" rel="nofollow noopener sponsored" class="india-card__buy">
+              Buy on Amazon India &#x2192;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="india-card" style="display:flex;flex-direction:column">
+          <a href="reviews/on-gold-standard-whey-review-2026.html" style="display:block;text-decoration:none;flex:1">
+            <div class="india-card__img">
+              <img src="images/products/on-gold-standard-whey.webp" alt="ON Gold Standard Whey" loading="lazy"/>
+            </div>
+            <div class="india-card__body">
+              <div class="india-card__cat">Whey Protein &middot; &#x1F30E; Premium Pick</div>
+              <div class="india-card__name">ON Gold Standard 100% Whey</div>
+              <div class="india-card__prices">
+                <span class="india-card__inr">₹3,499<small style="font-size:.72rem;font-weight:500;color:var(--muted)">/1kg</small></span>
+                <div style="display:flex;align-items:center;gap:5px;font-size:.77rem;color:var(--muted)"><div style="width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700">9.8</div>FitLab</div>
+              </div>
+              <p style="font-size:.8rem;color:var(--muted);line-height:1.6;margin:0">World's best-selling protein · Informed Sport certified · Available on Amazon India with fast delivery</p>
+            </div>
+          </a>
+          <div class="india-card__footer">
+            <a href="https://amzn.to/4vowkzF" onclick="gtag('event','affiliate_click',{product:'on-whey-india',network:'amazon_in'})" target="_blank" rel="nofollow noopener sponsored" class="india-card__buy">
+              Buy on Amazon India &#x2192;
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <p style="text-align:center;margin-top:18px;font-size:.78rem;color:var(--muted)">Prices verified weekly &middot; Amazon India affiliate links &middot; Prices may vary at time of purchase</p>
+    </div>
+  </section>
+
+  <!-- BRAND RATINGS -->
+  <section class="section section--bg">
+    <div class="container">
+      <div class="section-label">Independent Brand Analysis</div>
+      <div class="section__head"><h2 class="h2">Top-Rated Brands</h2><a href="brands.html" class="btn btn-outline">All 26 Brands →</a></div>
+      <div class="brand-strip">
+        <a href="brands/optimum-nutrition.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">9.5</div><div class="brand-chip__name">Optimum Nutrition</div><div class="brand-chip__tag">Highly Recommended</div></a>
+        <a href="brands/transparent-labs.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">9.4</div><div class="brand-chip__name">Transparent Labs</div><div class="brand-chip__tag">Highly Recommended</div></a>
+        <a href="brands/thorne.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">9.2</div><div class="brand-chip__name">Thorne</div><div class="brand-chip__tag">Highly Recommended</div></a>
+        <a href="brands/dymatize.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">9.0</div><div class="brand-chip__name">Dymatize</div><div class="brand-chip__tag">Highly Recommended</div></a>
+        <a href="brands/legion-athletics.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">8.8</div><div class="brand-chip__name">Legion Athletics</div><div class="brand-chip__tag">Highly Recommended</div></a>
+        <a href="brands/muscleblaze.html" class="brand-chip"><div class="brand-chip__score" style="background:#00A878">8.4</div><div class="brand-chip__name">MuscleBlaze</div><div class="brand-chip__tag">India's Best</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="featured-products-section">
+    <div class="container">
+      <div class="section-label">FitLab Picks</div>
+      <div class="section__head"><h2 class="h2">Top Products by Category</h2><a href="ingredients.html" class="btn btn-outline">Ingredient Library →</a></div>
+      <div class="fp-row-header"><a href="ingredients/whey-protein.html" class="fp-ing-tag">Whey Protein →</a><span>Ranked by amino acid profile, mixability &amp; value</span></div>
+      <div class="fp-grid" style="margin-bottom:44px">
+        <a href="reviews/on-gold-standard-whey-review-2026.html" class="fp-card editors-choice"><div class="fp-img-real"><span class="fp-badge badge--green">Editor's Choice</span><span class="fp-score">9.8</span><img src="images/products/on-gold-standard-whey.webp" alt="ON Gold Standard Whey" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Whey Protein</div><div class="fp-name">ON Gold Standard 100% Whey</div><div class="fp-brand">Optimum Nutrition</div><div class="fp-highlights"><div class="fp-highlight">24g protein · 5.5g BCAAs per serving</div><div class="fp-highlight">Informed Sport Certified</div><div class="fp-highlight">WPI-first blend · 20+ flavours</div></div></div><div class="fp-footer"><span class="fp-price">From $0.88/srv</span><span class="fp-cta">Read Review →</span></div></a>
+        <a href="reviews/dymatize-iso100-review-2026.html" class="fp-card"><div class="fp-img-real"><span class="fp-badge badge--blue">Best Isolate</span><span class="fp-score">9.0</span><img src="images/products/dymatize-iso100.webp" alt="Dymatize ISO100" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Whey Isolate</div><div class="fp-name">Dymatize ISO100 Hydrolyzed</div><div class="fp-brand">Dymatize</div><div class="fp-highlights"><div class="fp-highlight">25g protein · Zero lactose</div><div class="fp-highlight">Hydrolysed — fastest absorption</div><div class="fp-highlight">Informed Choice certified</div></div></div><div class="fp-footer"><span class="fp-price">From $1.18/srv</span><span class="fp-cta">See Review →</span></div></a>
+        <a href="reviews/muscleblaze-biozyme-whey-review-2026.html" class="fp-card"><div class="fp-img-real"><span class="fp-badge badge--india">India Pick</span><span class="fp-score">8.4</span><img src="images/products/muscleblaze-biozyme-performance-whey.webp" alt="MuscleBlaze Biozyme" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Whey Protein · India</div><div class="fp-name">MuscleBlaze Biozyme Whey</div><div class="fp-brand">MuscleBlaze</div><div class="fp-highlights"><div class="fp-highlight">Enhanced Absorption Formula (EAF)</div><div class="fp-highlight">25g protein · FSSAI certified</div><div class="fp-highlight">Best domestic India value</div></div></div><div class="fp-footer"><span class="fp-price">₹2,799/kg</span><span class="fp-cta">Read Review →</span></div></a>
+        <a href="reviews/myprotein-impact-whey-review-2026.html" class="fp-card"><div class="fp-img-real"><span class="fp-badge badge--purple">Best Budget</span><span class="fp-score">8.5</span><img src="images/products/myprotein-impact-whey.webp" alt="MyProtein Impact Whey" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Whey Concentrate</div><div class="fp-name">MyProtein Impact Whey</div><div class="fp-brand">MyProtein</div><div class="fp-highlights"><div class="fp-highlight">21g protein · 80+ flavours</div><div class="fp-highlight">From $0.78/serving on sale</div><div class="fp-highlight">Best budget protein available</div></div></div><div class="fp-footer"><span class="fp-price">From $0.78/srv</span><span class="fp-cta">Read Review →</span></div></a>
+      </div>
+      <div class="fp-row-header"><a href="ingredients/creatine.html" class="fp-ing-tag">Creatine →</a><span>Ranked by purity, form, and third-party certification</span></div>
+      <div class="fp-grid">
+        <a href="reviews/thorne-creatine-review-2026.html" class="fp-card editors-choice"><div class="fp-img-real"><span class="fp-badge badge--green">NSF Certified</span><span class="fp-score">9.1</span><img src="images/products/thorne-creatine-creapure.webp" alt="Thorne Creatine" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Creatine Monohydrate</div><div class="fp-name">Thorne Creatine (Creapure®)</div><div class="fp-brand">Thorne</div><div class="fp-highlights"><div class="fp-highlight">Pharmaceutical-grade Creapure®</div><div class="fp-highlight">NSF Certified for Sport</div><div class="fp-highlight">Best for drug-tested athletes</div></div></div><div class="fp-footer"><span class="fp-price">~$0.48/serving</span><span class="fp-cta">Read Review →</span></div></a>
+        <a href="reviews/bulksupplements-creatine-monohydrate-review-2026.html" class="fp-card"><div class="fp-img-real"><span class="fp-badge badge--purple">Best Value</span><span class="fp-score">8.7</span><img src="images/products/bulk-supplements-creatine.webp" alt="BulkSupplements Creatine" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Creatine Monohydrate</div><div class="fp-name">BulkSupplements Creatine</div><div class="fp-brand">BulkSupplements</div><div class="fp-highlights"><div class="fp-highlight">Pure creatine monohydrate</div><div class="fp-highlight">From $0.10/serving</div><div class="fp-highlight">Lab-tested purity certificate</div></div></div><div class="fp-footer"><span class="fp-price">From $0.10/srv</span><span class="fp-cta">Read Review →</span></div></a>
+        <a href="reviews/muscleblaze-creatine-monohydrate-review-2026.html" class="fp-card"><div class="fp-img-real"><span class="fp-badge badge--india">India Pick</span><span class="fp-score">8.3</span><img src="images/products/muscleblaze-creatine.webp" alt="MuscleBlaze Creatine" loading="lazy"/></div><div class="fp-body"><div class="fp-cat">Creatine · India</div><div class="fp-name">MuscleBlaze CreAMP Creatine</div><div class="fp-brand">MuscleBlaze</div><div class="fp-highlights"><div class="fp-highlight">Micronized monohydrate</div><div class="fp-highlight">FSSAI certified</div><div class="fp-highlight">Best India creatine value</div></div></div><div class="fp-footer"><span class="fp-price">₹799/250g</span><span class="fp-cta">Read Review →</span></div></a>
+        <a href="best/best-creatine.html" class="fp-card" style="border-style:dashed;background:var(--bg)"><div class="fp-img-real" style="background:transparent"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="fp-body"><div class="fp-cat">Rankings</div><div class="fp-name">Best Creatine Supplements</div><div class="fp-brand">Full ranked comparison</div><div class="fp-highlights"><div class="fp-highlight">All forms compared</div><div class="fp-highlight">Price vs quality analysis</div><div class="fp-highlight">India + Global pricing</div></div></div><div class="fp-footer"><span class="fp-price">Free guide</span><span class="fp-cta">View Rankings →</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH TEASER -->
+  <section class="section section--bg">
+    <div class="container">
+      <div class="section-label">Evidence-Based</div>
+      <div class="section__head"><h2 class="h2">Research Library</h2><a href="research/index.html" class="btn btn-outline">All Research →</a></div>
+      <div class="research-strip">
+        <a href="research/index.html" class="research-card"><div class="research-card__type" style="background:#6366F1">Meta-Analysis</div><div class="research-card__title">Creatine &amp; Muscle Strength: 22 RCTs</div><div class="research-card__finding">+8.1% strength vs placebo over 4–16 weeks</div><div class="research-card__journal">J. Strength &amp; Conditioning Research · 2023</div></a>
+        <a href="research/index.html" class="research-card"><div class="research-card__type" style="background:#0EA5E9">Systematic Review</div><div class="research-card__title">Protein Supplementation &amp; Muscle Mass: 49 RCTs</div><div class="research-card__finding">Plateau at 1.62g/kg/day — no benefit above this</div><div class="research-card__journal">British Journal of Sports Medicine · 2018</div></a>
+        <a href="research/index.html" class="research-card"><div class="research-card__type" style="background:#10B981">RCT</div><div class="research-card__title">KSM-66 Ashwagandha for Cortisol Reduction</div><div class="research-card__finding">27.9% cortisol reduction vs placebo at 60 days</div><div class="research-card__journal">Indian Journal of Alternative Medicine · 2012</div></a>
+        <a href="research/index.html" class="research-card"><div class="research-card__type" style="background:#F59E0B">RCT</div><div class="research-card__title">8g Citrulline Malate &amp; Rep Performance</div><div class="research-card__finding">52.9% more reps to failure vs placebo</div><div class="research-card__journal">J. Strength &amp; Conditioning Research · 2010</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section">
+    <div class="container">
+      <div class="newsletter" style="background:#0E1A15!important;background-color:#0E1A15!important">
+        <div class="newsletter__inner">
+          <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.65)">Weekly Digest</div>
+          <h2>Get the Latest Reviews in Your Inbox</h2>
+          <p>No spam. Honest supplement reviews, science breakdowns, India deals, and exclusive picks every week.</p>
+          <div class="newsletter__form">
+            <input class="newsletter__input" type="email" placeholder="your@email.com"/>
+            <button class="btn btn-primary" style="white-space:nowrap">Subscribe →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- E-E-A-T AUTHOR SECTION — Google 2026 trust signal -->
+  <section class="section" style="padding:40px 0 48px">
+    <div class="container">
+      <div class="section-label">Who Reviews These Products</div>
+      <h2 class="h2" style="margin-bottom:20px">Reviewed by a Certified Expert, Not an Algorithm</h2>
+      <div class="eeeat-card">
+        <div class="eeeat-card__avatar">FS</div>
+        <div class="eeeat-card__body">
+          <div class="eeeat-card__name">FitLab Science Team</div>
+          <div class="eeeat-card__title">Pharma-reviewed by <a href="authors/pankaj-singh.html" style="color:var(--accent-dark);text-decoration:underline">Pankaj Singh</a> · B.Pharma Student &amp; DMLT Graduate · Founder, FitLabReviews</div>
+          <p class="eeeat-card__desc">
+            Every review on this site applies pharmaceutical science to ingredient analysis — checking bioavailability, clinical dosing accuracy, and third-party lab testing claims using frameworks taught in pharmacy school. No brand ever pays for placement or influences a score.
+          </p>
+          <div class="eeeat-card__badges">
+            <span class="eeeat-badge">🎓 B.Pharma — Millennium Group of Institutions, M.P</span>
+            <span class="eeeat-badge">🧪 DMLT — Medical Laboratory Technology</span>
+            <span class="eeeat-badge">🔬 Pharma-backed Ingredient Analysis</span>
+            <span class="eeeat-badge">✅ No Paid Placements</span>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="authors/index.html" class="btn btn-outline" style="font-size:.82rem;padding:7px 16px">Meet Our Team →</a>
+            <a href="how-we-score.html" class="btn btn-outline" style="font-size:.82rem;padding:7px 16px">Our Review Methodology →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <a href="index.html" class="footer__logo-link">
+            <span class="footer__logo-text">fitlab<em>.</em></span>
+          </a>
+          <p class="footer__desc">Science-backed supplement and fitness gadget reviews. We test ingredients, verify clinical doses, and call out the marketing fluff — so you spend money on what actually works.</p>
+          <div class="footer__trust">
+            <span>No paid placements</span>
+            <span>Independent reviews</span>
+            <span>Zero brand bias</span>
+            <span>Pankaj Singh, B.Pharma</span>
+          </div>
+        </div>
+
+        <!-- Reviews -->
+        <div class="footer__col">
+          <h4>Reviews</h4>
+          <a href="reviews/on-gold-standard-whey-review-2026.html">ON Gold Standard Whey</a>
+          <a href="reviews/dymatize-iso100-review-2026.html">Dymatize ISO100</a>
+          <a href="reviews/transparent-labs-bulk-black-review.html">BULK Black Pre-Workout</a>
+          <a href="reviews/instant-knockout-cut-review-2026.html">Instant Knockout Cut</a>
+          <a href="reviews/phenq-review-2026.html">PhenQ Fat Burner</a>
+          <a href="reviews/yu-sleep-review.html">Yu Sleep</a>
+          <a href="reviews.html" class="footer__more">All Reviews →</a>
+        </div>
+
+        <!-- Best Of -->
+        <div class="footer__col">
+          <h4>Best Of</h4>
+          <a href="best/best-pre-workouts.html">Best Pre-Workouts</a>
+          <a href="best/best-protein-powders.html">Best Protein Powders</a>
+          <a href="best/best-fat-burners.html">Best Fat Burners</a>
+          <a href="best/best-creatine.html">Best Creatine</a>
+          <a href="best/best-sleep-supplements.html">Best Sleep Supplements</a>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="footer__col">
+          <h4>Ingredients</h4>
+          <a href="ingredients/creatine.html">Creatine Monohydrate</a>
+          <a href="ingredients/caffeine.html">Caffeine</a>
+          <a href="ingredients/citrulline.html">L-Citrulline</a>
+          <a href="ingredients/whey-protein.html">Whey Protein</a>
+          <a href="ingredients/ashwagandha.html">Ashwagandha</a>
+          <a href="ingredients/magnesium.html">Magnesium</a>
+          <a href="ingredients.html" class="footer__more">All 30 Ingredients →</a>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Blog</h4>
+          <a href="blog/best-supplements-for-muscle-gain.html">Muscle Gain Guide</a>
+          <a href="blog/top-5-fat-burner-ingredients-clinical-backing.html">Fat Burner Ingredients</a>
+          <a href="blog/how-to-read-supplement-label-red-flags.html">Label Red Flags</a>
+          <a href="blog/creatine-hcl-vs-monohydrate.html">Creatine HCL vs Mono</a>
+          <a href="blog.html" class="footer__more">All Articles →</a>
+          <h4 style="margin-top:22px">Company</h4>
+          <a href="about.html">About FitLabReviews</a>
+          <a href="authors/index.html">Our Team</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+
+      </div><!-- .footer__grid -->
+
+      <div class="footer__bottom-bar">
+        <span class="footer__copyright">© 2026 FitLabReviews.com · All rights reserved</span>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="about.html">About</a>
+          <a href="search.html">Search</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">
+        <strong>Affiliate Disclosure:</strong> FitLabReviews.com participates in affiliate marketing programmes. We may earn a commission when you purchase through our links at no additional cost to you. Affiliate relationships never influence our rankings or review scores — products are evaluated solely on ingredient quality, clinical dosing, transparency, and value. Content produced by the FitLab Science Team under editorial oversight of Pankaj Singh (B.Pharma, DMLT), Founder of FitLabReviews. <a href="about.html" style="color:inherit;text-decoration:underline">Learn more about our methodology →</a>
+      </p>
+
+    </div>
+  </footer>
+
+<script>
+(function(){
+  // Hamburger menu
+  var btn=document.getElementById('navHamburger');
+  var drawer=document.getElementById('mobileNav');
+  var closeBtn=document.getElementById('navClose');
+  if(btn && drawer){
+    function openMenu(){
+      drawer.classList.add('open'); document.body.style.overflow='hidden';
+      btn.setAttribute('aria-expanded','true');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform='translateY(8px) rotate(45deg)';
+      bars[1].style.opacity='0';
+      bars[2].style.transform='translateY(-8px) rotate(-45deg)';
+    }
+    function closeMenu(){
+      drawer.classList.remove('open'); document.body.style.overflow='';
+      btn.setAttribute('aria-expanded','false');
+      var bars=btn.querySelectorAll('span');
+      bars[0].style.transform=''; bars[1].style.opacity=''; bars[2].style.transform='';
+    }
+    btn.addEventListener('click',function(){ drawer.classList.contains('open')?closeMenu():openMenu(); });
+    if(closeBtn) closeBtn.addEventListener('click',closeMenu);
+    drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',closeMenu); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeMenu(); });
+    drawer.addEventListener('click',function(e){ if(e.target===drawer) closeMenu(); });
+  }
+
+  // Search overlay
+  var searchBtn=document.getElementById('navSearchBtn');
+  var searchOverlay=document.getElementById('navSearchOverlay');
+  var searchClose=document.getElementById('navSearchClose');
+  var searchInput=document.getElementById('navSearchInput');
+  var searchResults=document.getElementById('navSearchResults');
+
+  // Search data
+  var SEARCH_DATA=[
+    {t:'ON Gold Standard 100% Whey Review',url:'reviews/on-gold-standard-whey-review-2026.html',cat:'Review'},
+    {t:'Dymatize ISO100 Hydrolyzed Whey Review',url:'reviews/dymatize-iso100-review-2026.html',cat:'Review'},
+    {t:'Transparent Labs BULK Black Review',url:'reviews/transparent-labs-bulk-black-review.html',cat:'Review'},
+    {t:'Instant Knockout Cut Review',url:'reviews/instant-knockout-cut-review-2026.html',cat:'Review'},
+    {t:'MuscleBlaze Biozyme Whey Review',url:'reviews/muscleblaze-biozyme-whey-review-2026.html',cat:'Review'},
+    {t:'Thorne Creatine Review',url:'reviews/thorne-creatine-review-2026.html',cat:'Review'},
+    {t:'PhenQ Fat Burner Review',url:'reviews/phenq-review-2026.html',cat:'Review'},
+    {t:'Gorilla Mode Pre-Workout Review',url:'reviews/gorilla-mode-pre-workout-review-2026.html',cat:'Review'},
+    {t:'Best Protein Powders 2026',url:'best/best-protein-powders.html',cat:'Best Of'},
+    {t:'Best Pre-Workouts 2026',url:'best/best-pre-workouts.html',cat:'Best Of'},
+    {t:'Best Creatine 2026',url:'best/best-creatine.html',cat:'Best Of'},
+    {t:'Best Fat Burners 2026',url:'best/best-fat-burners.html',cat:'Best Of'},
+    {t:'Best Sleep Supplements 2026',url:'best/best-sleep-supplements.html',cat:'Best Of'},
+    {t:'Optimum Nutrition Brand Analysis',url:'brands/optimum-nutrition.html',cat:'Brand'},
+    {t:'Transparent Labs Brand Analysis',url:'brands/transparent-labs.html',cat:'Brand'},
+    {t:'Dymatize Brand Analysis',url:'brands/dymatize.html',cat:'Brand'},
+    {t:'MuscleBlaze Brand Analysis',url:'brands/muscleblaze.html',cat:'Brand'},
+    {t:'Muscle Gain Stack',url:'stacks/muscle-gain.html',cat:'Stack'},
+    {t:'Sleep Optimization Stack',url:'stacks/sleep-optimization.html',cat:'Stack'},
+    {t:'Fat Loss Support Stack',url:'stacks/fat-loss.html',cat:'Stack'},
+    {t:'Pre-Workout Performance Stack',url:'stacks/pre-workout-performance.html',cat:'Stack'},
+    {t:'Cognitive Focus Stack',url:'stacks/cognitive-focus.html',cat:'Stack'},
+    {t:'Foundational Health Stack',url:'stacks/foundational-health.html',cat:'Stack'},
+    {t:'Creatine Monohydrate — Ingredient Guide',url:'ingredients/creatine.html',cat:'Ingredient'},
+    {t:'Caffeine — Ingredient Guide',url:'ingredients/caffeine.html',cat:'Ingredient'},
+    {t:'L-Citrulline — Ingredient Guide',url:'ingredients/citrulline.html',cat:'Ingredient'},
+    {t:'Ashwagandha — Ingredient Guide',url:'ingredients/ashwagandha.html',cat:'Ingredient'},
+    {t:'Magnesium — Ingredient Guide',url:'ingredients/magnesium.html',cat:'Ingredient'},
+    {t:'Whey Protein — Ingredient Guide',url:'ingredients/whey-protein.html',cat:'Ingredient'},
+    {t:'ON Gold Standard vs ISO100 Comparison',url:'comparisons/on-gold-standard-vs-iso100.html',cat:'Compare'},
+    {t:'Whey vs Plant Protein Comparison',url:'comparisons/whey-vs-plant-protein.html',cat:'Compare'},
+    {t:'BULK Black vs C4 Original Comparison',url:'comparisons/transparent-labs-vs-c4.html',cat:'Compare'},
+  ];
+
+  function openSearch(){
+    searchOverlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ if(searchInput) searchInput.focus(); },100);
+  }
+  function closeSearch(){
+    searchOverlay.classList.remove('open');
+    document.body.style.overflow='';
+    if(searchInput) searchInput.value='';
+    if(searchResults) searchResults.innerHTML='';
+  }
+
+  if(searchBtn) searchBtn.addEventListener('click', openSearch);
+  if(searchClose) searchClose.addEventListener('click', closeSearch);
+  if(searchOverlay){
+    searchOverlay.addEventListener('click',function(e){
+      if(e.target===searchOverlay) closeSearch();
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') closeSearch();
+    if((e.ctrlKey||e.metaKey)&&e.key==='k'){ e.preventDefault(); openSearch(); }
+  });
+
+  if(searchInput){
+    searchInput.addEventListener('input',function(){
+      var q=this.value.trim().toLowerCase();
+      if(!q || q.length < 2){ searchResults.innerHTML=''; return; }
+      var hits=SEARCH_DATA.filter(function(d){ return d.t.toLowerCase().includes(q); }).slice(0,6);
+      if(!hits.length){ searchResults.innerHTML='<div style="padding:16px 18px;font-size:.88rem;color:var(--muted)">No results for \\"'+q+'\\"</div>'; return; }
+      searchResults.innerHTML=hits.map(function(h){
+        return '<a href="'+h.url+'" class="nav__search-result-item">'
+          +'<span class="sr-cat">'+h.cat+'</span>'
+          +'<span>'+h.t+'</span>'
+          +'</a>';
+      }).join('');
+    });
+  }
+})();
+</script>
+<script>
+var mT=document.getElementById("mobSearchTrigger");
+if(mT){mT.style.cursor="pointer";mT.addEventListener("click",function(){
+  document.getElementById("mobileNav").classList.remove("open");
+  document.body.style.overflow="";
+  setTimeout(function(){
+    var so=document.getElementById("navSearchOverlay");
+    if(so){so.classList.add("open");document.body.style.overflow="hidden";
+    setTimeout(function(){var si=document.getElementById("navSearchInput");if(si)si.focus();},100);}
+  },200);
+});}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+# FitLabReviews.com — AI Crawler Guide
+# https://fitlabreviews.com/llms.txt
+# Updated: 2026-04-12
+
+## About FitLabReviews
+
+FitLabReviews is an independent supplement review website. No paid placements.
+All reviews are written by Jake Reynolds (CISSN, NSCA-CPT) using clinical research and personal testing.
+
+## Content Summary
+
+- **Supplement Reviews**: Deep ingredient analysis, macros, side effects, pricing for protein powders, creatine, pre-workouts, and fat burners
+- **Brand Pages**: Independent brand ratings (0-10) across 26 supplement brands on ingredient quality, clinical dosing, transparency, and value
+- **Best Of Lists**: Ranked comparisons across protein powders, pre-workouts, creatine, fat burners, sleep supplements
+- **Ingredient Guides**: Science-backed ingredient pages covering 30+ key supplement ingredients
+- **Blog**: Sports nutrition science content
+
+## Key Pages
+
+- Homepage: https://fitlabreviews.com/
+- Reviews Index: https://fitlabreviews.com/reviews.html
+- Brand Ratings: https://fitlabreviews.com/brands.html
+- Best Protein Powders: https://fitlabreviews.com/best/best-protein-powders.html
+- Best Pre-Workouts: https://fitlabreviews.com/best/best-pre-workouts.html
+
+## Top Reviewed Products (2026)
+
+- ON Gold Standard 100% Whey: 9.8/10 — https://fitlabreviews.com/reviews/on-gold-standard-whey-review-2026.html
+- Transparent Labs BULK Black: 9.4/10 — https://fitlabreviews.com/reviews/transparent-labs-bulk-black-review.html
+- Dymatize ISO100: 9.0/10 — https://fitlabreviews.com/reviews/dymatize-iso100-review-2026.html
+- Garden of Life Sport Plant Protein: 8.2/10 — https://fitlabreviews.com/reviews/garden-of-life-sport-plant-protein-review.html
+- Instant Knockout Cut: 8.4/10 — https://fitlabreviews.com/reviews/instant-knockout-cut-review-2026.html
+
+## Disclosure
+
+Affiliate links used throughout. Brand scores are never influenced by affiliate relationships.
+Author: Jake Reynolds — CISSN, NSCA-CPT
+Contact: https://fitlabreviews.com/about.html
