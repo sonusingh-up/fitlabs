@@ -133,7 +133,7 @@ const FilterGroup = ({ label, value, setValue, options }) => (
 );
 
 const BrandCard = ({ brand }) => (
-  <a href="#" className="card" style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
+  <a href={`/brands/${brand.slug}`} className="card" style={{ padding: 24, display: "flex", flexDirection: "column", gap: 16 }}>
     <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
       <BrandMark brand={brand} size={56} square/>
       <div style={{ flex: 1, minWidth: 0 }}>

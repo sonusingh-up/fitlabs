@@ -127,24 +127,24 @@ const Icon = ({ name, size = 16, stroke = "currentColor", strokeWidth = 1.5 }) =
 const TopNav = ({ active = "home" }) => {
   const items = [
     ["home",        "Home",        "/"],
-    ["reviews",     "Reviews",     "#"],
-    ["best-of",     "Best Picks",  "#"],
-    ["compare",     "Compare",     "#"],
-    ["ingredients", "Ingredients", "#"],
-    ["stacks",      "Stacks",      "#"],
-    ["brands",      "Brands",      "#"],
-    ["research",    "Research",    "#"],
-    ["by-goal",     "By Goal",     "#"],
-    ["india",       "India",       "#"],
+    ["reviews",     "Reviews",     "/reviews"],
+    ["best-of",     "Best Picks",  "/best"],
+    ["compare",     "Compare",     "/compare"],
+    ["ingredients", "Ingredients", "/ingredients"],
+    ["stacks",      "Stacks",      "/stacks"],
+    ["brands",      "Brands",      "/brands"],
+    ["research",    "Research",    "/research"],
+    ["by-goal",     "By Goal",     "/goals"],
+    ["india",       "India",       "/india"],
   ];
   return (
     <nav className="fl-topbar">
       <div className="fl-container" style={{ display: "flex", alignItems: "center", gap: 32, height: 68 }}>
-        <FLLogo />
+        <a href="/"><FLLogo /></a>
         <ul style={{ display: "flex", gap: 24, listStyle: "none", margin: 0, padding: 0, alignItems: "center", flex: 1 }}>
-          {items.map(([k, label]) => (
+          {items.map(([k, label, href]) => (
             <li key={k}>
-              <a href="#" className={`nav-link${active === k ? " active" : ""}`}>
+              <a href={href} className={`nav-link${active === k ? " active" : ""}`}>
                 {label}
                 {k === "india" && <span style={{ marginLeft: 6, fontSize: 9, padding: "2px 5px", borderRadius: 999, background: "var(--accent-soft)", color: "var(--accent-ink)", fontFamily: "var(--mono)", letterSpacing: "0.06em" }}>2026</span>}
               </a>
@@ -178,16 +178,16 @@ const Footer = () => (
           </div>
         </div>
         {[
-          ["Reviews", ["Protein", "Pre-Workout", "Creatine", "Fat Burners", "Sleep", "Multivitamins"]],
-          ["Library", ["Ingredients", "Stacks", "Compare", "Research"]],
-          ["Brands", ["All brands", "Optimum Nutrition", "Thorne", "MuscleBlaze", "Transparent Labs"]],
-          ["India", ["Best Protein 2026", "Best Pre‑Workout 2026", "Best Vitamins 2026"]],
+          ["Reviews", [["Protein","/reviews"],["Pre-Workout","/reviews"],["Creatine","/reviews"],["Fat Burners","/reviews"],["Sleep","/reviews"],["Multivitamins","/reviews"]]],
+          ["Library", [["Ingredients","/ingredients"],["Stacks","/stacks"],["Compare","/compare"],["Research","/research"]]],
+          ["Brands",  [["All brands","/brands"],["Optimum Nutrition","/brands/optimum-nutrition"],["Thorne","/brands/thorne"],["MuscleBlaze","/brands/muscleblaze"],["Transparent Labs","/brands/transparent-labs"]]],
+          ["India",   [["Best Protein 2026","/india"],["Best Pre‑Workout 2026","/india"],["Best Vitamins 2026","/india"]]],
         ].map(([title, links]) => (
           <div key={title}>
             <div className="eyebrow" style={{ color: "var(--muted)", marginBottom: 14 }}>{title}</div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 10 }}>
-              {links.map(l => (
-                <li key={l}><a className="t-body-sm" href="#" style={{ color: "var(--ink-2)" }}>{l}</a></li>
+              {links.map(([l, href]) => (
+                <li key={l}><a className="t-body-sm" href={href} style={{ color: "var(--ink-2)" }}>{l}</a></li>
               ))}
             </ul>
           </div>
