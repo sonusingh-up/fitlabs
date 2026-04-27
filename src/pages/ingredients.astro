@@ -1,0 +1,7 @@
+---
+import Base from '../layouts/Base.astro';
+import { IngredientsLibrary } from '../components/library.jsx';
+---
+<Base title="Ingredients Library — FitLab" description="Evidence-graded ingredient library. Dose guidance, mechanism of action, and cited research for every active.">
+  <IngredientsLibrary client:load />
+</Base>

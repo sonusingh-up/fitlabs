@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { BlogDetailPage } from '../../components/detail-pages.jsx';
+import { POSTS } from '../../data/blog.js';
+
+export function getStaticPaths() {
+  return POSTS.map((p) => ({
+    params: { slug: p.slug },
+    props: { post: p },
+  }));
+}
+
+const { post } = Astro.props;
+const title = `${post.title} | FitLab`;
+const description = post.excerpt;
+---
+<Base title={title} description={description}>
+  <BlogDetailPage post={post} client:load />
+</Base>

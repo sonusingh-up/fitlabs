@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { ReviewDetailPage } from '../../components/detail-pages.jsx';
+import { REVIEWS } from '../../data/reviews.js';
+
+export function getStaticPaths() {
+  return REVIEWS.map((r) => ({
+    params: { slug: r.slug },
+    props: { review: r },
+  }));
+}
+
+const { review } = Astro.props;
+const title = `${review.name} review — ${review.brand} | FitLab`;
+const description = `${review.short} FitLab independent score: ${review.score.toFixed(1)}/10.`;
+---
+<Base title={title} description={description}>
+  <ReviewDetailPage review={review} client:load />
+</Base>
