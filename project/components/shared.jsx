@@ -125,6 +125,7 @@ const Icon = ({ name, size = 16, stroke = "currentColor", strokeWidth = 1.5 }) =
 };
 
 const TopNav = ({ active = "home" }) => {
+  const [open, setOpen] = React.useState(false);
   const items = [
     ["home",        "Home",        "/"],
     ["reviews",     "Reviews",     "/reviews"],
@@ -139,9 +140,9 @@ const TopNav = ({ active = "home" }) => {
   ];
   return (
     <nav className="fl-topbar">
-      <div className="fl-container" style={{ display: "flex", alignItems: "center", gap: 32, height: 68 }}>
-        <a href="/"><FLLogo /></a>
-        <ul style={{ display: "flex", gap: 24, listStyle: "none", margin: 0, padding: 0, alignItems: "center", flex: 1 }}>
+      <div className="fl-container fl-nav-row">
+        <a href="/" className="fl-nav-logo"><FLLogo /></a>
+        <ul className="fl-nav-links">
           {items.map(([k, label, href]) => (
             <li key={k}>
               <a href={href} className={`nav-link${active === k ? " active" : ""}`}>
@@ -151,15 +152,39 @@ const TopNav = ({ active = "home" }) => {
             </li>
           ))}
         </ul>
-        <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <button className="btn btn-ghost" style={{ padding: "8px 12px" }}>
+        <div className="fl-nav-actions">
+          <button className="btn btn-ghost fl-nav-search" style={{ padding: "8px 12px" }}>
             <Icon name="search" size={14} />
-            <span style={{ color: "var(--muted)", fontSize: 13 }}>Search ingredients, products…</span>
-            <span style={{ marginLeft: 24, fontSize: 11, color: "var(--muted-2)", fontFamily: "var(--mono)" }}>⌘K</span>
+            <span style={{ color: "var(--muted)", fontSize: 13 }} className="fl-nav-search-label">Search ingredients, products…</span>
+            <span style={{ marginLeft: 24, fontSize: 11, color: "var(--muted-2)", fontFamily: "var(--mono)" }} className="fl-nav-search-kbd">⌘K</span>
           </button>
-          <button className="btn btn-primary">Newsletter</button>
+          <button className="btn btn-primary fl-nav-cta">Newsletter</button>
+          <button className="fl-nav-burger" aria-label="Open menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+            <Icon name={open ? "x" : "menu"} size={22} stroke="var(--ink)" />
+          </button>
         </div>
       </div>
+      {open && (
+        <div className="fl-nav-mobile">
+          <ul>
+            {items.map(([k, label, href]) => (
+              <li key={k}>
+                <a href={href} className={`fl-nav-mobile-link${active === k ? " active" : ""}`} onClick={() => setOpen(false)}>
+                  {label}
+                  {k === "india" && <span style={{ marginLeft: 6, fontSize: 10, padding: "2px 6px", borderRadius: 999, background: "var(--accent-soft)", color: "var(--accent-ink)", fontFamily: "var(--mono)" }}>2026</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="fl-nav-mobile-actions">
+            <button className="btn btn-ghost" style={{ width: "100%", justifyContent: "center" }}>
+              <Icon name="search" size={14} />
+              <span>Search</span>
+            </button>
+            <button className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>Newsletter</button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
@@ -167,7 +192,7 @@ const TopNav = ({ active = "home" }) => {
 const Footer = () => (
   <footer style={{ borderTop: "1px solid var(--line)", marginTop: 96, background: "var(--surface-2)" }}>
     <div className="fl-container" style={{ paddingTop: 64, paddingBottom: 40 }}>
-      <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", gap: 40 }}>
+      <div className="fl-footer-grid">
         <div>
           <FLLogo />
           <p className="t-body-sm" style={{ color: "var(--muted)", marginTop: 16, maxWidth: 280 }}>
@@ -196,7 +221,7 @@ const Footer = () => (
       <div className="rule" style={{ marginTop: 56, marginBottom: 32 }}/>
 
       {/* Disclosures block */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 32 }}>
+      <div className="fl-grid-2" style={{ gap: 24, marginBottom: 32 }}>
         <div style={{ padding: 20, border: "1px solid var(--line)", borderRadius: 10, background: "var(--bg)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
             <Icon name="info" size={14} stroke="var(--accent)"/>
@@ -218,7 +243,7 @@ const Footer = () => (
       </div>
 
       <div className="rule" style={{ marginBottom: 24 }}/>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div className="fl-footer-meta">
         <div className="t-meta" style={{ color: "var(--muted)" }}>© 2026 FitLab Research, Inc.  ·  Editorial standards  ·  Funding disclosure  ·  Methodology v3.1</div>
         <div className="t-meta" style={{ color: "var(--muted)" }}>Made with citations.</div>
       </div>
