@@ -14,6 +14,7 @@ import ValueMetricPanel from "@/components/ui/ValueMetricPanel";
 import MobileTOC from "@/components/ui/MobileTOC";
 import ReviewCard from "@/components/ui/ReviewCard";
 import IngredientCard from "@/components/ui/IngredientCard";
+import ProductCard from "@/components/ui/ProductCard";
 import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
@@ -47,6 +48,7 @@ const tocItems = [
   { id: "claim-audit", label: "Claim Audit" },
   { id: "flavours", label: "Flavour Guide" },
   { id: "comparison", label: "vs. Competitors" },
+  { id: "products", label: "Products at a Glance" },
   { id: "pros-cons", label: "Pros & Cons" },
   { id: "safety", label: "Safety & Side Effects" },
   { id: "value", label: "Price & Value" },
@@ -708,6 +710,72 @@ export default function ONGoldStandardReview() {
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
                   Prices are approximate market rates as of May 2025 (Amazon India / US). INR/USD fluctuates — verify before purchase.
                 </p>
+              </section>
+
+              {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
+              <section id="products" style={{ marginBottom: 56 }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Quick buy cards for every product in this comparison — prices verified May 2026.</p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
+                  <ProductCard
+                    name="Gold Standard 100% Whey"
+                    brand="Optimum Nutrition"
+                    category="Whey Protein"
+                    score={9}
+                    priceUSD="$33–36 / 2 lb"
+                    priceINR="₹2,795–2,960"
+                    tags={["Informed Choice", "WPC + WPI", "24g protein"]}
+                    buyUrl="https://amzn.to/on-gold-standard-whey"
+                    buyLabel="Check Price"
+                    reviewSlug="optimum-nutrition-gold-standard-whey"
+                    bgFrom="#1A2E1E"
+                    bgTo="#0F1A11"
+                    accent="#2D6A4F"
+                    featured={true}
+                  />
+                  <ProductCard
+                    name="Biozyme Performance Whey"
+                    brand="MuscleBlaze"
+                    category="Whey Protein"
+                    score={8}
+                    priceUSD="$28–32 / kg"
+                    priceINR="₹1,900–2,300"
+                    tags={["India Brand", "Biozyme", "25g protein"]}
+                    buyUrl="https://amzn.to/muscleblaze-biozyme-whey"
+                    buyLabel="Check Price"
+                    bgFrom="#1E1B18"
+                    bgTo="#141210"
+                    accent="#C4622D"
+                  />
+                  <ProductCard
+                    name="Whey Protein 80 (WPC)"
+                    brand="AS-IT-IS Nutrition"
+                    category="Whey Protein"
+                    score={7}
+                    priceUSD="$22–26 / kg"
+                    priceINR="₹1,600–2,000"
+                    tags={["Budget Pick", "No Frills", "25g protein"]}
+                    buyUrl="https://amzn.to/asitis-whey"
+                    buyLabel="Check Price"
+                    bgFrom="#1E1B18"
+                    bgTo="#141210"
+                    accent="#8B7355"
+                  />
+                  <ProductCard
+                    name="ISO100 Hydrolyzed Whey"
+                    brand="Dymatize"
+                    category="Whey Isolate"
+                    score={9}
+                    priceUSD="$55–65 / kg"
+                    priceINR="₹4,200–5,000"
+                    tags={["Informed Choice", "Isolate", "Lactose-Free"]}
+                    buyUrl="https://amzn.to/dymatize-iso100"
+                    buyLabel="Check Price"
+                    bgFrom="#1B1A2E"
+                    bgTo="#12111E"
+                    accent="#5C5CBF"
+                  />
+                </div>
               </section>
 
               {/* ─── PROS / CONS ────────────────────────────────────────────── */}

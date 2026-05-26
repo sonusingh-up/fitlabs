@@ -31,17 +31,18 @@ export default function EvidenceBadge({ level, showIcon = true }: EvidenceBadgeP
       style={{
         display: "inline-flex",
         alignItems: "center",
-        gap: 6,
-        padding: "4px 10px",
+        gap: 5,
+        padding: "4px 9px",
         backgroundColor: bg,
         border: `1px solid ${color}33`,
         borderRadius: 8,
         fontFamily: "var(--font-dm-mono), monospace",
-        fontSize: 10,
-        letterSpacing: "0.12em",
+        fontSize: 9,
+        letterSpacing: "0.10em",
         textTransform: "uppercase",
         color,
         whiteSpace: "nowrap",
+        lineHeight: 1.4,
       }}
     >
       {showIcon && (

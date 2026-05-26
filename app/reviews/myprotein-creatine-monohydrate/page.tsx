@@ -12,6 +12,7 @@ import ClaimAudit from "@/components/ui/ClaimAudit";
 import ValueMetricPanel from "@/components/ui/ValueMetricPanel";
 import MobileTOC from "@/components/ui/MobileTOC";
 import ReviewCard from "@/components/ui/ReviewCard";
+import ProductCard from "@/components/ui/ProductCard";
 import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
@@ -43,6 +44,7 @@ const tocItems = [
   { id: "claim-audit", label: "Claim Audit" },
   { id: "dosing", label: "How to Dose It" },
   { id: "comparison", label: "vs. Competitors" },
+  { id: "products", label: "Products at a Glance" },
   { id: "pros-cons", label: "Pros & Cons" },
   { id: "safety", label: "Safety" },
   { id: "value", label: "Price & Value" },
@@ -677,6 +679,72 @@ export default function MyproteinCreatineReview() {
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
                     <strong>AS-IT-IS is cheaper but rougher:</strong> AS-IT-IS Nutrition sells creatine monohydrate at a lower price point and has built a reputation for no-frills honesty. The product is legitimate. The powder is coarser and mixability is poorer. If price is the only consideration, AS-IT-IS is your answer.
                   </p>
+                </div>
+              </section>
+
+              {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
+              <section id="products" style={{ marginBottom: 56 }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Quick buy cards for every creatine in this comparison — prices verified May 2026.</p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
+                  <ProductCard
+                    name="Creatine Monohydrate"
+                    brand="MyProtein"
+                    category="Creatine"
+                    score={8}
+                    priceUSD="$18–22 / 500g"
+                    priceINR="₹1,500–1,800"
+                    tags={["5g serving", "Unflavoured", "Value pick"]}
+                    buyUrl="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852500.html"
+                    buyLabel="Check Price"
+                    reviewSlug="myprotein-creatine-monohydrate"
+                    bgFrom="#1A1E2E"
+                    bgTo="#11131E"
+                    accent="#3A5F8B"
+                    featured={true}
+                  />
+                  <ProductCard
+                    name="Creatine Monohydrate"
+                    brand="AS-IT-IS Nutrition"
+                    category="Creatine"
+                    score={7}
+                    priceUSD="$12–16 / 500g"
+                    priceINR="₹1,000–1,350"
+                    tags={["Budget", "5g serving", "No Frills"]}
+                    buyUrl="https://amzn.to/asitis-creatine"
+                    buyLabel="Check Price"
+                    bgFrom="#1E1B18"
+                    bgTo="#141210"
+                    accent="#8B7355"
+                  />
+                  <ProductCard
+                    name="Micronised Creatine"
+                    brand="Optimum Nutrition"
+                    category="Creatine"
+                    score={9}
+                    priceUSD="$22–28 / 500g"
+                    priceINR="₹1,800–2,300"
+                    tags={["Informed Choice", "5g serving", "Sport Tested"]}
+                    buyUrl="https://amzn.to/on-creatine"
+                    buyLabel="Check Price"
+                    bgFrom="#1A2E1E"
+                    bgTo="#0F1A11"
+                    accent="#2D6A4F"
+                  />
+                  <ProductCard
+                    name="Creatine Monohydrate"
+                    brand="MuscleBlaze"
+                    category="Creatine"
+                    score={7}
+                    priceUSD="$14–18 / 500g"
+                    priceINR="₹1,200–1,500"
+                    tags={["India Brand", "3g serve ⚠", "Tub"]}
+                    buyUrl="https://amzn.to/muscleblaze-creatine"
+                    buyLabel="Check Price"
+                    bgFrom="#1E1B18"
+                    bgTo="#141210"
+                    accent="#C4622D"
+                  />
                 </div>
               </section>
 

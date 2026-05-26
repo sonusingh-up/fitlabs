@@ -210,20 +210,26 @@
 /* ── Claim audit rows ─────────────────────────────────────────────────── */
 .layout-claim-row {
   display: grid;
-  grid-template-columns: 1fr 160px 120px;
+  grid-template-columns: 1fr 168px minmax(140px, max-content);
 }
 .claim-col-header-row {
   display: grid;
-  grid-template-columns: 1fr 160px 120px;
+  grid-template-columns: 1fr 168px minmax(140px, max-content);
   gap: 0;
 }
 .claim-verdict-cell { border-left: 1px solid #EDE8DF; }
 .claim-evidence-cell { border-left: 1px solid #EDE8DF; }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .layout-claim-row { grid-template-columns: 1fr 152px; }
+  .claim-col-header-row { grid-template-columns: 1fr 152px; }
+  .claim-evidence-cell { display: none; }
+  .claim-evidence-header { display: none; }
+}
+@media (max-width: 540px) {
   .layout-claim-row { grid-template-columns: 1fr; }
   .claim-col-header-row { display: none; }
   .claim-verdict-cell { border-left: none; border-top: 1px solid #EDE8DF; }
-  .claim-evidence-cell { border-left: none; border-top: 1px solid #EDE8DF; }
+  .claim-evidence-cell { display: none; }
 }
 
 /* ── Score pillar label row ───────────────────────────────────────────── */
