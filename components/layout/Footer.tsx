@@ -6,18 +6,18 @@ import NewsletterForm from "./NewsletterForm";
 
 const footerLinks = {
   "Reviews": [
-    { label: "All Reviews", href: "/category/all" },
-    { label: "Protein Powders", href: "/category/protein" },
+    { label: "All Reviews", href: "/reviews" },
+    { label: "Protein Powders", href: "/category/protein-powder" },
     { label: "Pre-Workout", href: "/category/pre-workout" },
     { label: "Creatine", href: "/category/creatine" },
-    { label: "Vitamins", href: "/category/vitamins" },
+    { label: "Best-Of Roundups", href: "/best" },
   ],
-  "Research": [
-    { label: "Ingredient Library", href: "/ingredients/creatine" },
-    { label: "Latest Articles", href: "/research/creatine-guide" },
-    { label: "Goal Guides", href: "/goals/muscle-gain" },
-    { label: "Compare Products", href: "/compare/whey-vs-plant" },
-    { label: "Brand Directory", href: "/brands/optimum-nutrition" },
+  "Research & Goals": [
+    { label: "Research Articles", href: "/research" },
+    { label: "Blog", href: "/blog" },
+    { label: "Goal Guides", href: "/goals" },
+    { label: "Ingredient Library", href: "/ingredients" },
+    { label: "Brand Directory", href: "/brands" },
   ],
   "About": [
     { label: "About FitLab", href: "/about" },

@@ -8,14 +8,14 @@ import { Menu, X, Search, ChevronDown } from "lucide-react";
 const nav = [
   {
     label: "Reviews",
-    href: "/category",
+    href: "/reviews",
     children: [
-      { label: "All Categories", href: "/category" },
+      { label: "All Reviews", href: "/reviews" },
+      { label: "By Category", href: "/category" },
       { label: "Protein Powder", href: "/category/protein-powder" },
       { label: "Pre-Workout", href: "/category/pre-workout" },
       { label: "Creatine", href: "/category/creatine" },
       { label: "Vitamins & Minerals", href: "/category/vitamins-minerals" },
-      { label: "Adaptogens", href: "/category/adaptogens" },
     ],
   },
   {
@@ -56,15 +56,25 @@ const nav = [
   },
   {
     label: "Goals",
-    href: "/goals/muscle-gain",
+    href: "/goals",
     children: [
+      { label: "All Goal Guides", href: "/goals" },
       { label: "Muscle Gain", href: "/goals/muscle-gain" },
-      { label: "Weight Loss", href: "/goals/weight-loss" },
-      { label: "Energy & Focus", href: "/goals/energy-focus" },
-      { label: "Recovery & Sleep", href: "/goals/recovery" },
+      { label: "Fat Loss", href: "/goals/fat-loss" },
+      { label: "Strength", href: "/goals/strength" },
+      { label: "Endurance", href: "/goals/endurance" },
+      { label: "Recovery", href: "/goals/recovery" },
     ],
   },
-  { label: "Methodology", href: "/methodology" },
+  {
+    label: "Research",
+    href: "/research",
+    children: [
+      { label: "All Articles", href: "/research" },
+      { label: "Blog", href: "/blog" },
+      { label: "Methodology", href: "/methodology" },
+    ],
+  },
   {
     label: "About",
     href: "/authors",
@@ -169,7 +179,7 @@ export default function Header() {
             </Link>
             {/* All Reviews button — desktop only */}
             <Link
-              href="/category"
+              href="/reviews"
               className="header-cta-btn"
               style={{
                 padding: "7px 14px",
@@ -237,7 +247,7 @@ export default function Header() {
             {/* Mobile CTA */}
             <div style={{ paddingTop: 16 }}>
               <Link
-                href="/category"
+                href="/reviews"
                 style={{ display: "block", textAlign: "center", padding: "12px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
                 onClick={() => setMobileOpen(false)}
               >
