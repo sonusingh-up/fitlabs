@@ -321,7 +321,7 @@ export default function WellMedrReview() {
               </div>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <Link
-                  href="https://www.wellmedr.com/pages/get-started-weight-loss"
+                  href="#"
                   target="_blank"
                   rel="nofollow noopener sponsored"
                   style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
@@ -581,7 +581,7 @@ export default function WellMedrReview() {
                       <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>$88<span style={{ fontSize: "1rem", fontWeight: 400, color: "#8A8480" }}>/mo</span></p>
                     </div>
                     <Link
-                      href="https://www.wellmedr.com/pages/get-started-weight-loss"
+                      href="#"
                       target="_blank"
                       rel="nofollow noopener sponsored"
                       style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, textDecoration: "none" }}
@@ -621,7 +621,7 @@ export default function WellMedrReview() {
                 {/* Competitor brand cards */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
-                    { name: "WellMedr", score: "8/10", tag: "Our Top Pick", tagColor: "#C4622D", tagBg: "rgba(196,98,45,0.1)", border: "#C4622D", img: "/products/wellmedr-product.png", href: "https://www.wellmedr.com/pages/get-started-weight-loss" },
+                    { name: "WellMedr", score: "8/10", tag: "Our Top Pick", tagColor: "#C4622D", tagBg: "rgba(196,98,45,0.1)", border: "#C4622D", img: "/products/wellmedr-product.png", href: "#" },
                     { name: "Ro Body", score: "7/10", tag: "~$145/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "#", href: "#" },
                     { name: "Hers", score: "7/10", tag: "~$99–149/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "#", href: "#" },
                     { name: "SkinnyRx", score: "6/10", tag: "~$99/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "#", href: "#" },
@@ -845,7 +845,7 @@ export default function WellMedrReview() {
                       <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.5rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>8<span style={{ fontSize: "1.2rem", fontWeight: 400, color: "#8A8480" }}> / 10</span></p>
                     </div>
                     <Link
-                      href="https://www.wellmedr.com/pages/get-started-weight-loss"
+                      href="#"
                       target="_blank"
                       rel="nofollow noopener sponsored"
                       style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 14, fontWeight: 600, borderRadius: 8, textDecoration: "none" }}
