@@ -376,9 +376,9 @@
 }
 
 /* Hamburger — show on mobile, hide on desktop */
-.header-hamburger { display: flex; }
+.header-hamburger { display: flex; align-items: center; }
 @media (min-width: 1024px) {
-  .header-hamburger { display: none; }
+  .header-hamburger { display: none !important; }
 }
 
 /* ── Prevent horizontal overflow site-wide ───────────────────────────── */

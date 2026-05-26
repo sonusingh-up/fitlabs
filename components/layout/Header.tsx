@@ -186,7 +186,7 @@ export default function Header() {
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="header-hamburger"
-              style={{ color: "#1A1714", padding: 6, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
+              style={{ color: "#1A1714", padding: 6, background: "none", border: "none", cursor: "pointer" }}
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
