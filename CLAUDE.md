@@ -50,7 +50,7 @@ title: "Optimum Nutrition Gold Standard 100% Whey Protein Powder Review 2026"
 
 **Template for review pages:**
 ```
-"[Product] review: [key fact 1], [key fact 2], USD + INR pricing, [comparison]. FSP [score]/10."
+"[Product] review: [key fact 1], [key fact 2], price, [comparison]. FSP [score]/10."
 ```
 
 ---
@@ -171,10 +171,10 @@ Before committing any new page or metadata change, verify:
 ## 9. Content Standards
 
 - **No AI fluff**: No phrases like "game-changer", "unlock your potential", "science-backed" (overused), "revolutionary"
-- **Prices**: Always show both USD and INR. State exchange rate and date. Use range (not single figure).
+- **Prices — primary currency is USD.** Always show USD first. INR is optional and only included when the section explicitly covers India availability (e.g. a "Buying in India" sub-section). Never require both currencies everywhere. State the price date and use a range, not a single figure.
 - **Evidence claims**: Reference the specific study (author, year, journal) — not "studies show"
 - **Dosage**: Always state the dose used in the clinical evidence, not just the supplement's dose
-- **Counterfeit warnings**: Every India-market review must mention verification method (QR code, official store)
+- **Counterfeit warnings**: Mention verification methods (QR code, official store) only in sections that explicitly cover a specific regional market — not on every page.
 
 ---
 
@@ -191,7 +191,30 @@ Use static pages for all fully-written reviews.
 
 ---
 
-## 11. Build Verification
+## 11. Ingredient Article Skill
+
+Use the `/ingredient-article <slug>` slash command to build a new ingredient research article.
+
+**What it does:**
+- Creates `app/ingredients/<slug>/page.tsx` (static route — takes priority over the `[slug]` fallback)
+- Enforces all 10+ required sections (stats panel, mechanism, benefits, dosage, forms, safety, who-for, pricing, references, FAQ)
+- Applies correct JSON-LD (Article + FAQPage), SEO metadata, and CSS class patterns
+- Runs the pre-commit checklist automatically
+
+**When to use it:**
+```
+/ingredient-article beta-alanine
+/ingredient-article caffeine
+/ingredient-article omega-3
+```
+
+**Skill file location:** `.claude/commands/ingredient-article.md` (local only — not committed; canonical reference copy is `docs/ingredient-article-skill.md`)
+
+The skill uses the creatine article (`app/ingredients/creatine/page.tsx`) as the structural gold standard. Read it before writing any new ingredient page.
+
+---
+
+## 12. Build Verification
 
 Before every `git push`, run:
 ```bash
