@@ -392,3 +392,100 @@ html, body {
   overflow-x: hidden;
   max-width: 100vw;
 }
+
+/* ── Ingredients hub ─────────────────────────────────────────────────── */
+.ing-evidence-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Ingredient row: figure col + content col + badge col */
+.ing-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  padding: 20px 24px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+@media (max-width: 640px) {
+  .ing-row { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+}
+
+.ing-row-inner {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 480px) {
+  .ing-row-inner { grid-template-columns: 1fr; gap: 4px; }
+  .ing-figure-col { display: none; }
+}
+
+.ing-badge-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@media (max-width: 640px) {
+  .ing-badge-col {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Ingredient [slug] article body */
+.ingredient-article h2 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A1714;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+.ingredient-article h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1A1714;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.ingredient-article p {
+  font-size: 15px;
+  color: #2D2926;
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+.ingredient-article ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+.ingredient-article li {
+  font-size: 15px;
+  color: #2D2926;
+  line-height: 1.75;
+  margin-bottom: 6px;
+}
+
+/* Ingredient stats quick-panel */
+.ing-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #D4C9B8;
+  border: 1px solid #D4C9B8;
+  border-radius: 12px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .ing-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

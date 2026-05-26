@@ -145,12 +145,12 @@ const ingredients = [
   },
 ];
 
-const categories = [...new Set(ingredients.map(i => i.category))];
+const categories = [...new Set(ingredients.map((i) => i.category))];
 
 const evidenceSummary = [
-  { level: "strong" as EvidenceLevel, count: ingredients.filter(i => i.evidence === "strong").length, desc: "Multiple meta-analyses with consistent results" },
-  { level: "moderate" as EvidenceLevel, count: ingredients.filter(i => i.evidence === "moderate").length, desc: "Several consistent RCTs with good effect sizes" },
-  { level: "limited" as EvidenceLevel, count: ingredients.filter(i => i.evidence === "limited").length, desc: "Few studies or inconsistent results" },
+  { level: "strong" as EvidenceLevel, count: ingredients.filter((i) => i.evidence === "strong").length, desc: "Multiple meta-analyses, consistent results" },
+  { level: "moderate" as EvidenceLevel, count: ingredients.filter((i) => i.evidence === "moderate").length, desc: "Several consistent RCTs, good effect sizes" },
+  { level: "limited" as EvidenceLevel, count: ingredients.filter((i) => i.evidence === "limited").length, desc: "Few studies or inconsistent results" },
 ];
 
 export default function IngredientsHubPage() {
@@ -159,7 +159,7 @@ export default function IngredientsHubPage() {
 
       {/* Breadcrumb */}
       <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", gap: 8, padding: "12px 24px" }}>
           <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
           <span style={{ color: "#D4C9B8" }}>/</span>
           <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Ingredients</span>
@@ -167,23 +167,23 @@ export default function IngredientsHubPage() {
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 48px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+      <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>INGREDIENT INDEX · {ingredients.length} PROFILES</span>
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Research-Verified</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             Ingredient{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Research Index</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620, marginBottom: 28 }}>
-            Every ingredient profile covers mechanism of action, clinically effective dosages, supplement form comparisons, and a full evidence classification. No marketing — only research.
+          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 600, marginBottom: 28 }}>
+            Every profile covers mechanism of action, clinically effective dosages, supplement form comparisons, and a full evidence classification. No marketing — only research.
           </p>
 
           {/* Evidence legend */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+          <div className="ing-evidence-legend">
             {evidenceSummary.map((e) => (
               <div key={e.level} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                 <EvidenceBadge level={e.level} showIcon={false} />
@@ -199,19 +199,19 @@ export default function IngredientsHubPage() {
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 
-        {/* Category filter chips */}
+        {/* Category filter chips — horizontal scroll on mobile */}
         <div style={{ marginBottom: 32, display: "flex", flexWrap: "wrap", gap: 8 }}>
-          <span style={{ padding: "5px 14px", border: "1px solid #1A1714", borderRadius: 20, fontSize: 11, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", backgroundColor: "#1A1714", cursor: "pointer" }}>
-            <span style={{ color: "#F2EBD9" }}>All</span>
+          <span style={{ padding: "5px 14px", border: "1px solid #1A1714", borderRadius: 20, fontSize: 11, color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", backgroundColor: "#1A1714", cursor: "pointer", whiteSpace: "nowrap" }}>
+            All
           </span>
           {categories.map((cat) => (
-            <span key={cat} style={{ padding: "5px 14px", border: "1px solid #D4C9B8", borderRadius: 20, fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", backgroundColor: "#F8F2E4", cursor: "pointer" }}>
+            <span key={cat} style={{ padding: "5px 14px", border: "1px solid #D4C9B8", borderRadius: 20, fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", backgroundColor: "#F8F2E4", cursor: "pointer", whiteSpace: "nowrap" }}>
               {cat}
             </span>
           ))}
         </div>
 
-        {/* Ingredient grid */}
+        {/* Ingredient list */}
         <section>
           <SectionHeading label="All Ingredients" figure="§ 01" title="Research" titleItalic="profiles" size="sm" />
           <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
@@ -219,11 +219,12 @@ export default function IngredientsHubPage() {
               <Link
                 key={ing.slug}
                 href={`/ingredients/${ing.slug}`}
-                style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 24, padding: "20px 24px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", textDecoration: "none", transition: "background-color 0.15s" }}
-                className="hub-row-link"
+                className="ing-row hub-row-link"
+                style={{ borderBottom: i < ingredients.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}
               >
-                <div style={{ display: "grid", gridTemplateColumns: "56px 1fr", gap: 16, alignItems: "start" }}>
-                  <div>
+                {/* Left: figure + content */}
+                <div className="ing-row-inner">
+                  <div className="ing-figure-col">
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.15em", textTransform: "uppercase", margin: 0, marginBottom: 4 }}>{ing.figure}</p>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", letterSpacing: "0.1em", margin: 0 }}>{ing.dose}</p>
                   </div>
@@ -240,7 +241,9 @@ export default function IngredientsHubPage() {
                     </div>
                   </div>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8, flexShrink: 0 }}>
+
+                {/* Right: badge + CTA */}
+                <div className="ing-badge-col">
                   <EvidenceBadge level={ing.evidence} showIcon={false} />
                   <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>Read Profile →</span>
                 </div>
@@ -253,7 +256,7 @@ export default function IngredientsHubPage() {
         <div style={{ marginTop: 48, padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "3px solid #D4A96A" }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>Medical Disclaimer</p>
           <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
-            Ingredient profiles are for informational purposes only. They do not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation, especially if you have pre-existing conditions or take medications.{" "}
+            Ingredient profiles are for informational purposes only and do not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation, especially if you have pre-existing conditions or take medications.{" "}
             <Link href="/medical-disclaimer" style={{ color: "#C4622D", fontWeight: 600 }}>Full disclaimer →</Link>
           </p>
         </div>
