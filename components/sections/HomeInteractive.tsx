@@ -14,12 +14,11 @@ const bestOfItems = [
 ];
 
 const articles = [
-  { title: "The Complete Guide to Creatine Loading", href: "/research/creatine-guide", date: "Apr 2026", code: "ART-01", category: "Ingredient Science", bg: "linear-gradient(145deg, #0F1E1C 0%, #0A1614 100%)" },
-  { title: "Whey vs Plant Protein: What the Research Says", href: "/research/whey-vs-plant", date: "Mar 2026", code: "ART-02", category: "Comparison", bg: "linear-gradient(145deg, #1E1608 0%, #140F06 100%)" },
-  { title: "Pre-Workout Ingredients Decoded", href: "/research/pre-workout-ingredients", date: "Mar 2026", code: "ART-03", category: "Ingredient Science", bg: "linear-gradient(145deg, #2A1410 0%, #1A0E0A 100%)" },
-  { title: "Should Beginners Take Supplements?", href: "/research/supplements-for-beginners", date: "Feb 2026", code: "ART-04", category: "Beginner Guide", bg: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)" },
-  { title: "Supplement Timing: Does It Actually Matter?", href: "/research/supplement-timing", date: "Feb 2026", code: "ART-05", category: "Protocols", bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)" },
-  { title: "How to Read a Supplement Label", href: "/research/reading-supplement-labels", date: "Jan 2026", code: "ART-06", category: "Consumer Guide", bg: "linear-gradient(145deg, #1A1714 0%, #2D2420 100%)" },
+  { title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging", href: "/blog/sleep-window-anti-aging", date: "May 2026", code: "BLG-001", category: "Longevity & Sleep", bg: "linear-gradient(145deg, #0A1C12 0%, #061009 100%)" },
+  { title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss", href: "/blog/glp1-benefits-beyond-weight-loss", date: "May 2026", code: "BLG-002", category: "Pharmacology", bg: "linear-gradient(145deg, #2A1410 0%, #1A0E0A 100%)" },
+  { title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally", href: "/blog/plant-foods-menopause", date: "May 2026", code: "BLG-003", category: "Women's Health", bg: "linear-gradient(145deg, #0F1E14 0%, #0A1410 100%)" },
+  { title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety", href: "/blog/diet-depression-anxiety", date: "May 2026", code: "BLG-004", category: "Mental Health", bg: "linear-gradient(145deg, #1E1608 0%, #140F06 100%)" },
+  { title: "Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat", href: "/blog/fitness-travel-2026", date: "May 2026", code: "BLG-005", category: "Training & Lifestyle", bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)" },
 ];
 
 const gridOverlay = {

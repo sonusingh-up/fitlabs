@@ -47,6 +47,9 @@ next-env.d.ts
 /public/sitemap*.xml
 /public/robots.txt
 
+# llms.txt — served dynamically via app/llms.txt/route.ts (do not add static file)
+/public/llms.txt
+
 # claude session data — exclude everything except slash commands
 .claude/*
 !.claude/commands

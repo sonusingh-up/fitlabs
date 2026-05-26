@@ -16,13 +16,21 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ReviewCard from "@/components/ui/ReviewCard";
 import IngredientCard from "@/components/ui/IngredientCard";
 import GoalCard from "@/components/ui/GoalCard";
-import { BestOfGrid, TrustGrid, ArticlesGrid } from "@/components/sections/HomeInteractive";
+import { BestOfGrid, TrustGrid } from "@/components/sections/HomeInteractive";
 import type { ReviewRating, EvidenceLevel } from "@/lib/types";
 
 const featuredReviews = [
   { slug: "optimum-nutrition-gold-standard-whey", title: "Optimum Nutrition Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark protein powder. Consistent quality, excellent amino acid profile, and the cleanest label at this price tier.", publishedAt: "2026-04-10", figNumber: "01", tags: ["whey", "muscle-gain", "post-workout"] },
-  { slug: "musclepharm-assault-pre-workout-review", title: "MusclePharm Assault Pre-Workout", brand: "MusclePharm", category: "Pre-Workout", rating: 7 as ReviewRating, verdict: "Solid stimulant blend with transparent labelling but under-dosed citrulline is a notable gap.", publishedAt: "2026-03-22", figNumber: "02", tags: ["pre-workout", "energy", "focus"] },
-  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate available in India. No frills, just results.", publishedAt: "2026-03-08", figNumber: "03", tags: ["creatine", "strength", "budget"] },
+  { slug: "wellmedr", title: "WellMedr Weight Management", brand: "WellMedr", category: "GLP-1 Program", rating: 9 as ReviewRating, verdict: "Clinician-supervised GLP-1 weight management with comprehensive telehealth support. The strongest evidence-based programme we have reviewed.", publishedAt: "2026-05-15", figNumber: "02", tags: ["glp-1", "weight-loss", "telehealth"] },
+  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate on the market. No frills, just results.", publishedAt: "2026-03-08", figNumber: "03", tags: ["creatine", "strength", "budget"] },
+];
+
+const blogPosts = [
+  { slug: "sleep-window-anti-aging", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging", category: "Longevity & Sleep", figure: "BLG-001", readTime: "9 min", date: "May 2026", accent: "#1A6B3A", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
+  { slug: "glp1-benefits-beyond-weight-loss", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss", category: "Pharmacology", figure: "BLG-002", readTime: "13 min", date: "May 2026", accent: "#C4622D", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
+  { slug: "plant-foods-menopause", title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally", category: "Women's Health", figure: "BLG-003", readTime: "12 min", date: "May 2026", accent: "#2D6A4F", badge: "Moderate Evidence", badgeColor: "#92620A" },
+  { slug: "diet-depression-anxiety", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety", category: "Mental Health", figure: "BLG-004", readTime: "14 min", date: "May 2026", accent: "#92620A", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
+  { slug: "fitness-travel-2026", title: "Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat", category: "Training & Lifestyle", figure: "BLG-005", readTime: "11 min", date: "May 2026", accent: "#7EB8D4", badge: "Practical Guide", badgeColor: "#5C5650" },
 ];
 
 const ingredients = [
@@ -70,7 +78,7 @@ export default function HomePage() {
               We analyse the science behind every label so you can buy smarter. Independent, ingredient-first reviews for the Indian and global wellness market.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/category/all" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                 Browse Reviews <ArrowRight size={14} />
               </Link>
               <Link href="/editorial-policy" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, fontWeight: 500, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
@@ -118,7 +126,7 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{ marginTop: 32, textAlign: "center" }}>
-          <Link href="/category/all" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
             All Reviews <ArrowRight size={13} />
           </Link>
         </div>
@@ -160,7 +168,7 @@ export default function HomePage() {
             {ingredients.map((ing) => (<IngredientCard key={ing.slug} {...ing} />))}
           </div>
           <div style={{ marginTop: 32, textAlign: "center" }}>
-            <Link href="/ingredients/creatine" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+            <Link href="/ingredients" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
               Explore Ingredient Library <ArrowRight size={13} />
             </Link>
           </div>
@@ -180,10 +188,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LATEST ARTICLES */}
+      {/* LATEST FROM THE BLOG */}
       <section style={{ borderTop: "1px solid #D4C9B8", maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
-        <SectionHeading label="Research Articles" figure="SEC. 06" title="From the" titleItalic="archive" />
-        <ArticlesGrid />
+        <SectionHeading label="Blog" figure="SEC. 06" title="From the" titleItalic="blog" subtitle="Research-led articles on nutrition science, longevity, mental health, and fitness lifestyle." />
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
+          {blogPosts.map((post, i) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="hub-card"
+              style={{ display: "block", borderRadius: 12, overflow: "hidden", border: "1px solid #D4C9B8", textDecoration: "none", backgroundColor: "#F8F2E4" }}
+            >
+              <div style={{ height: 4, backgroundColor: post.accent }} />
+              <div style={{ padding: "16px 18px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{post.figure}</span>
+                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, color: "#8A8480", textTransform: "uppercase" }}>{post.category}</span>
+                  <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", textTransform: "uppercase", color: post.badgeColor, backgroundColor: `${post.badgeColor}14`, border: `1px solid ${post.badgeColor}33` }}>{post.badge}</span>
+                </div>
+                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{post.title}</h4>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{post.date} · {post.readTime} read →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div style={{ marginTop: 32, textAlign: "center" }}>
+          <Link href="/blog" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+            All Articles <ArrowRight size={13} />
+          </Link>
+        </div>
       </section>
 
     </div>

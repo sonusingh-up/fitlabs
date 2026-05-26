@@ -9,7 +9,7 @@ const sanity = createClient({
 
 const SITE_URL = process.env.SITE_URL || "https://fitlabreviews.com";
 
-const HIGH_PRIORITY_PATHS = ["/", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors"];
+const HIGH_PRIORITY_PATHS = ["/", "/reviews", "/blog", "/research", "/goals", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors"];
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
