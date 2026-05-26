@@ -3,8 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Fitness & Nutrition Blog — Practical Guides",
-  description: "Practical fitness and nutrition articles covering training principles, diet strategy, supplement mistakes, and evidence-based habits. No fluff, no sponsored content.",
+  title: "Fitness, Nutrition & Longevity Blog",
+  description: "Evidence-led articles on sleep science, GLP-1 research, nutritional psychiatry, and fitness travel — every claim named and cited. No fluff, no sponsored content.",
   alternates: { canonical: "/blog" },
 };
 
@@ -19,113 +19,88 @@ type BlogPost = {
   tags: string[];
   accent: string;
   featured: boolean;
+  evidenceBadge: "strong" | "moderate" | "guide";
 };
 
 const posts: BlogPost[] = [
   {
-    slug: "how-to-read-a-supplement-label",
-    title: "How to Read a Supplement Label Without Getting Deceived",
-    category: "Label Literacy",
+    slug: "sleep-window-anti-aging",
+    title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging",
+    category: "Longevity & Sleep",
     figure: "BLG-001",
-    readTime: "8 min",
-    publishedAt: "May 2026",
-    excerpt: "Proprietary blends, amino spiking, serving size tricks, and misleading percentage claims — here's exactly what to look for before buying any supplement.",
-    tags: ["Label Reading", "Buying Guide", "Beginners"],
-    accent: "#C4622D",
-    featured: true,
-  },
-  {
-    slug: "supplements-you-dont-need",
-    title: "7 Supplements Most People Don't Actually Need",
-    category: "Supplement Strategy",
-    figure: "BLG-002",
-    readTime: "6 min",
-    publishedAt: "April 2026",
-    excerpt: "BCAAs when you eat enough protein, glutamine for muscle gain, testosterone boosters, and four others — save your money on these overhyped categories.",
-    tags: ["Savings", "Overrated", "Strategy"],
-    accent: "#2D6A4F",
-    featured: true,
-  },
-  {
-    slug: "creatine-myths-debunked",
-    title: "5 Creatine Myths Debunked by the Research",
-    category: "Myth-Busting",
-    figure: "BLG-003",
-    readTime: "7 min",
-    publishedAt: "March 2026",
-    excerpt: "Creatine causes hair loss, damages kidneys, and only works for men — none of these hold up under scrutiny. We go through each myth with the actual data.",
-    tags: ["Creatine", "Myths", "Research"],
-    accent: "#D4A96A",
-    featured: false,
-  },
-  {
-    slug: "protein-intake-calculator",
-    title: "How Much Protein Do You Actually Need?",
-    category: "Nutrition Basics",
-    figure: "BLG-004",
     readTime: "9 min",
-    publishedAt: "March 2026",
-    excerpt: "The 1g-per-pound rule is an overestimate for most people. Meta-analyses converge on 1.6–2.2g/kg for muscle gain. We break down the evidence by goal and training status.",
-    tags: ["Protein", "Dosage", "Muscle Gain"],
+    publishedAt: "May 2026",
+    excerpt: "Mortality risk rises steeply below 6 hours and above 9. A 1.1 million-person study and five mechanisms explain why the window is narrower than most people assume.",
+    tags: ["Sleep", "Longevity", "Anti-Aging"],
+    accent: "#1A6B3A",
+    featured: true,
+    evidenceBadge: "strong",
+  },
+  {
+    slug: "diet-depression-anxiety",
+    title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",
+    category: "Mental Health",
+    figure: "BLG-004",
+    readTime: "14 min",
+    publishedAt: "May 2026",
+    excerpt: "The SMILES trial produced a 32% remission rate vs 8% with dietary counselling alone. The gut-brain axis mechanisms behind that gap — and what to eat to close it.",
+    tags: ["Nutrition", "Depression", "Gut Health"],
+    accent: "#92620A",
+    featured: true,
+    evidenceBadge: "strong",
+  },
+  {
+    slug: "glp1-benefits-beyond-weight-loss",
+    title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss",
+    category: "Pharmacology",
+    figure: "BLG-002",
+    readTime: "13 min",
+    publishedAt: "May 2026",
+    excerpt: "20% MACE reduction in SELECT, 24% kidney failure reduction in FLOW, ~50% drop in alcohol relapse — GLP-1 agonists are proving effective far outside the metabolic clinic.",
+    tags: ["GLP-1", "Cardiovascular", "Ozempic"],
     accent: "#C4622D",
     featured: false,
+    evidenceBadge: "strong",
   },
   {
-    slug: "best-time-to-take-supplements",
-    title: "The Best Time to Take Each Supplement",
-    category: "Timing & Protocols",
-    figure: "BLG-005",
-    readTime: "10 min",
-    publishedAt: "February 2026",
-    excerpt: "Creatine timing is flexible. Caffeine should be 45–60 min pre-workout. Protein matters daily, not post-workout. A complete timing guide for every common supplement.",
-    tags: ["Timing", "Protocols", "Optimization"],
-    accent: "#7EB8D4",
-    featured: false,
-  },
-  {
-    slug: "indian-supplement-buying-guide",
-    title: "Buying Supplements in India — What to Watch For",
-    category: "Regional Guide",
-    figure: "BLG-006",
-    readTime: "11 min",
-    publishedAt: "January 2026",
-    excerpt: "Counterfeit risk, import vs. local manufacturing, price-per-gram benchmarks, and trusted retailers. Everything you need to buy smartly in the Indian market.",
-    tags: ["India", "Buying Guide", "Counterfeit"],
+    slug: "plant-foods-menopause",
+    title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally",
+    category: "Women's Health",
+    figure: "BLG-003",
+    readTime: "12 min",
+    publishedAt: "May 2026",
+    excerpt: "Visceral fat roughly doubles during the menopause transition. These seven food categories — from flaxseed to fermented foods — have RCT evidence behind each claim.",
+    tags: ["Menopause", "Women's Health", "Phytoestrogens"],
     accent: "#2D6A4F",
     featured: false,
+    evidenceBadge: "moderate",
   },
   {
-    slug: "progressive-overload-explained",
-    title: "Progressive Overload — The Only Training Principle That Matters",
-    category: "Training",
-    figure: "BLG-007",
-    readTime: "7 min",
-    publishedAt: "December 2025",
-    excerpt: "No supplement compensates for a program that doesn't progressively challenge you. Here's how to apply overload systematically — weight, reps, volume, density.",
-    tags: ["Training", "Fundamentals", "Strength"],
-    accent: "#D4A96A",
-    featured: false,
-  },
-  {
-    slug: "sleep-and-muscle-recovery",
-    title: "Sleep Is Your Most Underrated Recovery Tool",
-    category: "Recovery",
-    figure: "BLG-008",
-    readTime: "6 min",
-    publishedAt: "November 2025",
-    excerpt: "Growth hormone peaks during deep sleep, muscle protein synthesis continues overnight, and cortisol spikes with sleep deprivation. 7–9 hours isn't a suggestion.",
-    tags: ["Sleep", "Recovery", "Hormones"],
+    slug: "fitness-travel-2026",
+    title: "Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat",
+    category: "Training & Lifestyle",
+    figure: "BLG-005",
+    readTime: "11 min",
+    publishedAt: "May 2026",
+    excerpt: "Two sessions per week is all it takes to prevent detraining over 14 days. A complete protocol: hotel gym strategy, jet lag recovery, supplement carry-on, and top destinations.",
+    tags: ["Travel", "Training", "Jet Lag"],
     accent: "#7EB8D4",
     featured: false,
+    evidenceBadge: "guide",
   },
 ];
 
 const categoryGroups = [
-  { label: "Supplement Guides", categories: ["Label Literacy", "Supplement Strategy", "Timing & Protocols"] },
-  { label: "Nutrition & Science", categories: ["Nutrition Basics", "Myth-Busting"] },
-  { label: "Training & Recovery", categories: ["Training", "Recovery"] },
-  { label: "Buying Guides", categories: ["Regional Guide"] },
+  { label: "Longevity & Science", categories: ["Longevity & Sleep", "Pharmacology"] },
+  { label: "Nutrition & Health", categories: ["Mental Health", "Women's Health"] },
+  { label: "Training & Lifestyle", categories: ["Training & Lifestyle"] },
 ];
+
+const evidenceBadgeStyles: Record<string, { color: string; bg: string; border: string; label: string }> = {
+  strong:   { color: "#1A6B3A", bg: "rgba(26,107,58,0.08)",   border: "rgba(26,107,58,0.2)",   label: "Strong Evidence" },
+  moderate: { color: "#92620A", bg: "rgba(146,98,10,0.08)",   border: "rgba(146,98,10,0.2)",   label: "Moderate Evidence" },
+  guide:    { color: "#5C5650", bg: "rgba(92,86,80,0.06)",    border: "rgba(92,86,80,0.15)",   label: "Practical Guide" },
+};
 
 const featured = posts.filter(p => p.featured);
 const nonFeatured = posts.filter(p => !p.featured);
@@ -193,7 +168,7 @@ export default function BlogHubPage() {
                     <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{post.figure}</span>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#8A8480", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4 }}>{post.category}</span>
-                      <span style={{ marginLeft: "auto", padding: "2px 8px", backgroundColor: "rgba(196,98,45,0.1)", border: "1px solid rgba(196,98,45,0.25)", borderRadius: 4, fontSize: 9, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 700 }}>Featured</span>
+                      <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}` }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
                     </div>
                     <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{post.title}</h2>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, flex: 1 }}>{post.excerpt}</p>
@@ -243,10 +218,10 @@ export default function BlogHubPage() {
                         ))}
                       </div>
                     </div>
-                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #EDE8DF", minWidth: 110 }}>
-                      <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0, textAlign: "right" }}>{post.readTime} read</p>
+                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #EDE8DF", minWidth: 130 }}>
+                      <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}`, whiteSpace: "nowrap" }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
                       <div style={{ textAlign: "right" }}>
-                        <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{post.publishedAt}</p>
+                        <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{post.publishedAt} · {post.readTime}</p>
                         <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", display: "block", marginTop: 4 }}>Read →</span>
                       </div>
                     </div>
