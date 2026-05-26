@@ -144,9 +144,11 @@ rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const name = slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   return {
-    title: `Review: ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}`,
-    description: `Evidence-led, in-depth supplement review with ingredient analysis, dosage breakdown, FSP score, and honest verdict.`,
+    title: `${name} Review (2026)`,
+    description: `Evidence-led supplement review of ${name}: ingredient analysis, dosage breakdown, FSP score, and honest verdict.`,
+    alternates: { canonical: `/reviews/${slug}` },
   };
 }
 

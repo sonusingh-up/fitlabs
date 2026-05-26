@@ -18,14 +18,20 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Optimum Nutrition Gold Standard Whey Review (2025) — 9/10 · Fitlabreviews",
+  // Title rule: use template ("%s · Fitlabreviews" from layout) — keep %s under 55 chars.
+  // Use { absolute } ONLY when you must include the brand in the title string itself.
+  title: "ON Gold Standard Whey Review (2026) — Rated 9/10",
   description:
-    "Comprehensive 4-year review of ON Gold Standard 100% Whey. Amino acid profile, lab test data, USD pricing, comparison vs MuscleBlaze & Dymatize ISO100. FSP Score: 9/10.",
+    "4-year review of ON Gold Standard Whey: full amino acid profile, Informed Choice lab data, USD + INR pricing, vs MuscleBlaze & Dymatize ISO100. FSP 9/10.",
+  alternates: {
+    canonical: "/reviews/optimum-nutrition-gold-standard-whey",
+  },
   openGraph: {
-    title: "ON Gold Standard Whey Review — Is It Still Worth It in 2025?",
+    title: "ON Gold Standard Whey Review (2026) — Is It Still Worth It?",
     description:
-      "4 years, dozens of tubs, third-party lab data. Our most thorough whey protein review. FSP Score: 9/10.",
+      "4 years, 20+ tubs, third-party lab data. Our most thorough whey protein review. FSP Score: 9/10.",
     url: "https://fitlabreviews.com/reviews/optimum-nutrition-gold-standard-whey",
+    type: "article",
   },
 };
 
@@ -194,7 +200,7 @@ const reviewSchema = {
     "Comprehensive 4-year review of ON Gold Standard Whey covering formula integrity, amino acid profile, third-party lab data, pricing analysis, and comparison vs MuscleBlaze Biozyme Whey, AS-IT-IS Nutrition Whey, and Dymatize ISO100. FSP Score: 9/10.",
   reviewRating: { "@type": "Rating", ratingValue: 9, bestRating: 10, worstRating: 1 },
   datePublished: "2025-04-10",
-  dateModified: "2025-05-26",
+  dateModified: "2026-05-26",
   author: { "@type": "Person", name: "Pankaj Singh", url: "https://fitlabreviews.com/authors/pankaj-singh" },
   publisher: { "@id": "https://fitlabreviews.com/#organization" },
   itemReviewed: {

@@ -92,9 +92,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://fitlabreviews.com",
-  },
+  // ⚠ NO alternates.canonical here — root layout canonical propagates to ALL
+  // child pages and overrides their individual canonicals. Each page sets its
+  // own via `alternates: { canonical: "/its-own-path" }` in its own metadata.
 };
 
 const GA_ID = "G-N23DKB7H8K";

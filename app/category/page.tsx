@@ -3,8 +3,9 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Supplement Categories — Fitlabreviews",
+  title: "Supplement Reviews by Category",
   description: "Browse supplement reviews by category. Every category page includes key ingredient analysis, evidence ratings, and independently reviewed products.",
+  alternates: { canonical: "/category" },
 };
 
 const categories = [

@@ -1,5 +1,17 @@
-﻿import Link from "next/link";
+﻿import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, FlaskConical, BookOpen, Target, ShieldCheck } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Fitlabreviews — Evidence-Led Supplement Reviews",
+  },
+  description:
+    "Research-grade supplement reviews, ingredient analysis, and wellness guidance for smarter buying decisions. Evidence-led, editorially independent. No bias.",
+  alternates: {
+    canonical: "/",
+  },
+};
 import SectionHeading from "@/components/ui/SectionHeading";
 import ReviewCard from "@/components/ui/ReviewCard";
 import IngredientCard from "@/components/ui/IngredientCard";

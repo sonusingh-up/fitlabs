@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Editorial Policy & Independence — Fitlabreviews",
-  description: "How Fitlabreviews researches, rates, and publishes supplement reviews. Our independence guarantee, scoring criteria, conflict of interest disclosures, and corrections policy.",
+  title: "Editorial Policy & Independence",
+  description: "How Fitlabreviews researches, rates, and publishes supplement reviews. Our independence guarantee, scoring criteria, COI disclosures, and corrections policy.",
+  alternates: { canonical: "/editorial-policy" },
 };
 
 const methodology = [

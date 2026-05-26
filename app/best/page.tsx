@@ -3,8 +3,9 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Best Supplement Roundups — Fitlabreviews",
+  title: "Best Supplement Picks — Ranked Roundups",
   description: "Evidence-ranked best-of lists for every major supplement category. Each roundup compares top products on formula quality, value, and third-party verification.",
+  alternates: { canonical: "/best" },
 };
 
 const roundups = [

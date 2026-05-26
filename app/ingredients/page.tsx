@@ -5,8 +5,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import type { EvidenceLevel } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Ingredient Research Index — Fitlabreviews",
-  description: "Evidence-based ingredient profiles covering dosage guidelines, mechanism of action, safety data, and supplement form comparisons for every major sports nutrition ingredient.",
+  title: "Supplement Ingredient Research Index",
+  description: "Evidence-based ingredient profiles: dosage guidelines, mechanism of action, safety data, and supplement form comparisons for every major sports nutrition ingredient.",
+  alternates: { canonical: "/ingredients" },
 };
 
 const ingredients = [

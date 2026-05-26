@@ -3,8 +3,9 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
-  title: "Our Authors — Fitlabreviews",
+  title: "Our Research Team & Authors",
   description: "Meet the research team behind Fitlabreviews. Independent supplement researchers, formula analysts, and evidence-based writers.",
+  alternates: { canonical: "/authors" },
 };
 
 export const authors = [

@@ -16,13 +16,17 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "MyProtein Creatine Monohydrate Review (2025) — 8/10 · Fitlabreviews",
+  title: "MyProtein Creatine Monohydrate Review (2026) — Rated 8/10",
   description:
-    "Honest, no-fluff review of MyProtein Creatine Monohydrate. Formula analysis, lab verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. FSP Score: 8/10.",
+    "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. India market focus. FSP 8/10.",
+  alternates: {
+    canonical: "/reviews/myprotein-creatine-monohydrate",
+  },
   openGraph: {
-    title: "MyProtein Creatine Monohydrate Review — The Honest Assessment",
-    description: "Pure creatine at a budget price. Here is what it does well, what it skips, and whether it matters.",
+    title: "MyProtein Creatine Review (2026) — Good Product. One Real Gap.",
+    description: "Pure creatine at a budget price. What it does well, what it skips, and whether that matters for you.",
     url: "https://fitlabreviews.com/reviews/myprotein-creatine-monohydrate",
+    type: "article",
   },
 };
 
@@ -179,7 +183,7 @@ const reviewSchema = {
     "No-fluff review of MyProtein Creatine Monohydrate covering formula analysis, third-party verification gaps, USD/INR pricing, comparison vs AS-IT-IS and ON Creatine, real-world use observations, and dosing guidance.",
   reviewRating: { "@type": "Rating", ratingValue: 8, bestRating: 10, worstRating: 1 },
   datePublished: "2025-03-08",
-  dateModified: "2025-05-26",
+  dateModified: "2026-05-26",
   author: { "@type": "Organization", name: "Fitlab Research Team", url: "https://fitlabreviews.com/authors" },
   publisher: { "@id": "https://fitlabreviews.com/#organization" },
   itemReviewed: {

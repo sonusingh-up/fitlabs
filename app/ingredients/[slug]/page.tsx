@@ -7,9 +7,11 @@ import type { EvidenceLevel, ReviewRating } from "@/lib/types";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const name = slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
   return {
-    title: `${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Ingredient Research Profile`,
-    description: `Evidence-based ingredient profile: benefits, dosage, safety, research summary, and supplement forms.`,
+    title: `${name} — Evidence-Based Ingredient Profile`,
+    description: `Evidence-based profile of ${name}: benefits, effective dose, safety data, forms comparison, and supplement recommendations.`,
+    alternates: { canonical: `/ingredients/${slug}` },
   };
 }
 
