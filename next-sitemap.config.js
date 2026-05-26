@@ -1,61 +1,97 @@
+const { createClient } = require("@sanity/client");
+
+const sanity = createClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "381hs563",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
+  apiVersion: "2024-01-01",
+  useCdn: false,
+});
+
+const SITE_URL = process.env.SITE_URL || "https://fitlabreviews.com";
+
+const HIGH_PRIORITY_PATHS = ["/", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors"];
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://fitlabreviews.com",
+  siteUrl: SITE_URL,
   generateRobotsTxt: true,
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: [
-    "/privacy",
-    "/terms",
-    "/search",
-    "/api/*",
-  ],
-  additionalPaths: async (config) => [
-    await config.transform(config, "/"),
-    await config.transform(config, "/category"),
-    await config.transform(config, "/brands"),
-    await config.transform(config, "/ingredients"),
-    await config.transform(config, "/best"),
-    await config.transform(config, "/methodology"),
-    await config.transform(config, "/authors"),
-  ],
+  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*"],
+
+  additionalPaths: async (config) => {
+    const paths = [];
+
+    // Static hub pages
+    for (const p of HIGH_PRIORITY_PATHS) {
+      paths.push(await config.transform(config, p));
+    }
+
+    // Dynamic Sanity content
+    const [reviews, ingredients, brands] = await Promise.all([
+      sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
+      sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`),
+      sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`),
+    ]);
+
+    for (const r of reviews) {
+      paths.push({
+        loc: `/reviews/${r.slug}`,
+        changefreq: "monthly",
+        priority: 0.9,
+        lastmod: (r.updatedAt || r.publishedAt || new Date().toISOString()),
+      });
+    }
+
+    for (const i of ingredients) {
+      paths.push({
+        loc: `/ingredients/${i.slug}`,
+        changefreq: "monthly",
+        priority: 0.8,
+        lastmod: new Date().toISOString(),
+      });
+    }
+
+    for (const b of brands) {
+      paths.push({
+        loc: `/brands/${b.slug}`,
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: new Date().toISOString(),
+      });
+    }
+
+    return paths;
+  },
+
   robotsTxtOptions: {
+    // Single wildcard block — allow + disallow must be in one policy entry
     policies: [
-      // General crawlers
-      { userAgent: "*", allow: "/" },
-      { userAgent: "*", disallow: ["/api/", "/_next/"] },
-      // OpenAI
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"] },
+      // AI crawlers — explicitly welcomed for GEO (Generative Engine Optimisation)
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
       { userAgent: "OAI-SearchBot", allow: "/" },
-      // Anthropic
       { userAgent: "anthropic-ai", allow: "/" },
       { userAgent: "Claude-Web", allow: "/" },
       { userAgent: "ClaudeBot", allow: "/" },
-      // Google AI / Gemini
       { userAgent: "Google-Extended", allow: "/" },
-      // Perplexity
       { userAgent: "PerplexityBot", allow: "/" },
-      // Meta AI
       { userAgent: "FacebookBot", allow: "/" },
-      // Common AI research crawlers
       { userAgent: "Applebot-Extended", allow: "/" },
       { userAgent: "cohere-ai", allow: "/" },
       { userAgent: "YouBot", allow: "/" },
     ],
-    additionalSitemaps: [
-      `${process.env.SITE_URL || "https://fitlabreviews.com"}/sitemap.xml`,
-    ],
+    // No additionalSitemaps — robots.txt auto-points to sitemap.xml (the index)
   },
+
   transform: async (config, path) => {
-    // Boost priority for key hub pages
-    const highPriority = ["/", "/category", "/brands", "/ingredients", "/best", "/methodology"];
-    const reviewMatch = path.startsWith("/reviews/");
+    const isReview = path.startsWith("/reviews/");
     return {
       loc: path,
-      changefreq: reviewMatch ? "monthly" : config.changefreq,
-      priority: highPriority.includes(path) ? 1.0 : reviewMatch ? 0.9 : config.priority,
+      changefreq: isReview ? "monthly" : config.changefreq,
+      priority: HIGH_PRIORITY_PATHS.includes(path) ? 1.0 : isReview ? 0.9 : config.priority,
       lastmod: new Date().toISOString(),
     };
   },
