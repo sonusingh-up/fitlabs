@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TableOfContents from "@/components/ui/TableOfContents";
+import MobileTOC from "@/components/ui/MobileTOC";
 
 export const metadata: Metadata = {
   title: "The Perfect Sleep Window: 6.4–7.8 Hours for Anti-Aging",
@@ -79,6 +80,11 @@ export default function SleepWindowArticle() {
 
           {/* Article body */}
           <article style={{ maxWidth: 680, minWidth: 0 }}>
+
+            {/* Mobile TOC — visible below 1024px where the sidebar is hidden */}
+            <div className="block lg:hidden" style={{ marginBottom: 32 }}>
+              <MobileTOC items={tocItems} />
+            </div>
 
             {/* Intro */}
             <p style={{ fontSize: 16, color: "#2D2926", lineHeight: 1.85, marginBottom: 48 }}>
@@ -319,20 +325,220 @@ export default function SleepWindowArticle() {
               </div>
             </section>
 
-            {/* Nav to blog */}
-            <div style={{ borderTop: "1px solid #D4C9B8", paddingTop: 28, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-              <Link href="/blog" style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-                ← Back to Blog
-              </Link>
-              <div style={{ display: "flex", gap: 8 }}>
-                <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Sleep</span>
-                <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Longevity</span>
-                <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Anti-Aging</span>
-              </div>
-            </div>
-
           </article>
         </div>
+
+        {/* ── Related Content ─────────────────────────────────────────── */}
+        <section style={{ marginTop: 72, paddingTop: 48, borderTop: "2px solid #D4C9B8" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>Related Content</span>
+            <span style={{ flex: 1, height: 1, backgroundColor: "#D4C9B8" }} />
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Sleep · Recovery · Longevity</span>
+          </div>
+
+          {/* Research Articles */}
+          <div style={{ marginBottom: 40 }}>
+            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Research Articles</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
+              {[
+                {
+                  href: "/research/ashwagandha-ksm66-vs-sensoril",
+                  label: "Adaptogen Research",
+                  title: "KSM-66 vs Sensoril",
+                  sub: "Ashwagandha extract comparison",
+                  teaser: "KSM-66 leads on cortisol and testosterone endpoints; Sensoril edges it for perceived stress biomarkers.",
+                  accent: "#2D6A4F",
+                  evidence: "Moderate",
+                  evidenceColor: "#92620A",
+                },
+                {
+                  href: "/research/caffeine-tolerance-reset",
+                  label: "Stimulant Science",
+                  title: "Caffeine Tolerance",
+                  sub: "How to reset and cycle effectively",
+                  teaser: "A 10–14 day abstinence period fully restores adenosine receptor sensitivity in most individuals.",
+                  accent: "#D4A96A",
+                  evidence: "Moderate",
+                  evidenceColor: "#92620A",
+                },
+                {
+                  href: "/research/protein-timing-myth",
+                  label: "Nutrition Science",
+                  title: "The Protein Timing Myth",
+                  sub: "vs. reality",
+                  teaser: "Total daily protein intake outweighs precise timing for muscle protein synthesis in trained individuals.",
+                  accent: "#C4622D",
+                  evidence: "Strong",
+                  evidenceColor: "#1A6B3A",
+                },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="hub-card"
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                >
+                  <div style={{ backgroundColor: item.accent }} />
+                  <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
+                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: item.evidenceColor, padding: "1px 6px", backgroundColor: `${item.evidenceColor}12`, border: `1px solid ${item.evidenceColor}25`, borderRadius: 3 }}>{item.evidence}</span>
+                    </div>
+                    <div>
+                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p>
+                    </div>
+                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>Read Article →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Related Ingredients */}
+          <div style={{ marginBottom: 40 }}>
+            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Related Ingredients</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12 }}>
+              {[
+                {
+                  href: "/ingredients/ashwagandha",
+                  label: "Adaptogen",
+                  title: "Ashwagandha",
+                  sub: "KSM-66 · Sensoril",
+                  teaser: "Cortisol reduction, sleep latency, and stress resilience — the most evidence-backed adaptogen.",
+                  accent: "#2D6A4F",
+                },
+                {
+                  href: "/ingredients/magnesium",
+                  label: "Mineral",
+                  title: "Magnesium Glycinate",
+                  sub: "Best-absorbed form",
+                  teaser: "Modest but consistent reduction in sleep latency. Most effective in people with marginal deficiency.",
+                  accent: "#7EB8D4",
+                },
+                {
+                  href: "/ingredients/l-theanine",
+                  label: "Amino Acid",
+                  title: "L-Theanine",
+                  sub: "Combined with caffeine",
+                  teaser: "Promotes relaxed alertness by increasing alpha brain wave activity. Takes the edge off caffeine.",
+                  accent: "#D4A96A",
+                },
+                {
+                  href: "/ingredients/beta-alanine",
+                  label: "Amino Acid",
+                  title: "Beta-Alanine",
+                  sub: "Carnosine precursor",
+                  teaser: "Evidence on post-exercise recovery and its interaction with sleep quality in trained athletes.",
+                  accent: "#C4622D",
+                },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="hub-card"
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                >
+                  <div style={{ backgroundColor: item.accent }} />
+                  <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
+                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
+                    <div>
+                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p>
+                    </div>
+                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>View Profile →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Reviews */}
+          <div style={{ marginBottom: 40 }}>
+            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Product Reviews</p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
+              {[
+                {
+                  href: "/reviews/wellmedr",
+                  label: "Wellness · Health",
+                  title: "WellMedr Health Supplement",
+                  brand: "Wellmedr",
+                  verdict: "Decent formulation for general wellness with reasonable label transparency.",
+                  rating: 7,
+                  accent: "#D4A96A",
+                },
+                {
+                  href: "/reviews/optimum-nutrition-gold-standard-whey",
+                  label: "Protein Powder",
+                  title: "ON Gold Standard Whey",
+                  brand: "Optimum Nutrition",
+                  verdict: "The benchmark whey — Informed Choice certified, consistent protein yield, clean label.",
+                  rating: 9,
+                  accent: "#C4622D",
+                },
+                {
+                  href: "/reviews/myprotein-creatine-monohydrate",
+                  label: "Creatine",
+                  title: "MyProtein Creatine Monohydrate",
+                  brand: "MyProtein",
+                  verdict: "Best budget creatine — pure monohydrate, no fillers, well-priced per gram.",
+                  rating: 8,
+                  accent: "#2D6A4F",
+                },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="hub-card"
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                >
+                  <div style={{ backgroundColor: item.accent }} />
+                  <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 1 }}>
+                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: item.rating >= 9 ? "#1A6B3A" : "#C4622D", lineHeight: 1 }}>{item.rating}</span>
+                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>/10</span>
+                      </div>
+                    </div>
+                    <div>
+                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.brand}</p>
+                    </div>
+                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.verdict}</p>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>Read Review →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* More from Blog */}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>More from Blog</p>
+              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Practical fitness &amp; nutrition guides — no fluff, no sponsorship.</p>
+            </div>
+            <Link href="/blog" style={{ padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", borderRadius: 8, fontSize: 12, fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", flexShrink: 0, letterSpacing: "0.04em" }}>
+              Browse All Articles →
+            </Link>
+          </div>
+
+          {/* Back nav + tags */}
+          <div style={{ marginTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+            <Link href="/blog" style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              ← Back to Blog
+            </Link>
+            <div style={{ display: "flex", gap: 8 }}>
+              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Sleep</span>
+              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Longevity</span>
+              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Anti-Aging</span>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   );

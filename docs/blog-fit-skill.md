@@ -66,10 +66,22 @@ export const metadata: Metadata = {
     <TableOfContents items={tocItems} />
   </aside>
   <article style={{ maxWidth: 680, minWidth: 0 }}>
+    {/* Mobile TOC — shown below 1024px where sidebar is hidden */}
+    <div className="block lg:hidden" style={{ marginBottom: 32 }}>
+      <MobileTOC items={tocItems} />
+    </div>
     ...
   </article>
 </div>
 ```
+
+**Required imports for TOC:**
+```tsx
+import TableOfContents from "@/components/ui/TableOfContents";
+import MobileTOC from "@/components/ui/MobileTOC";
+```
+
+`MobileTOC` is a `"use client"` component — importing it into a Server Component page is fine. Next.js handles the RSC boundary automatically.
 
 ### 5. Opening paragraph (no H2)
 - 3–4 sentences that frame the specific insight the article delivers
@@ -90,11 +102,48 @@ Each section:
 - References block immediately after — every cited study listed as:
   `Author Last, Initials. Title fragment. Journal. Year;Vol(Issue):pages.`
 
-### 8. Back to Blog nav footer
+### 8. Related Content section
+Place this **outside and after** the `layout-sidebar` div, spanning the full container width.
+
+Four sub-sections in order:
+1. **Research Articles** — 3 cards linking to `/research/<slug>`, each showing evidence level badge
+2. **Related Ingredients** — 3–4 cards linking to `/ingredients/<slug>`, each with label + teaser
+3. **Product Reviews** — 3 cards linking to `/reviews/<slug>`, each showing FSP score
+4. **More from Blog CTA** — dark-bg strip with "Browse All Articles →" link to `/blog`
+
+Card pattern for all three card groups (3px accent bar on left):
+```tsx
+<Link href="..." className="hub-card"
+  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none",
+           border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+  <div style={{ backgroundColor: accentColor }} />
+  <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
+    <span style={{ fontFamily: "var(--font-dm-mono)...", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>Category Label</span>
+    <p style={{ fontFamily: "var(--font-playfair)...", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714" }}>Title</p>
+    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>Teaser sentence.</p>
+    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Article →</span>
+  </div>
+</Link>
+```
+
+Grid layout: `gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))"` for research/reviews, `minmax(220px, 1fr)` for ingredients.
+
+Section header pattern:
+```tsx
+<div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
+  <span style={{ fontFamily: "var(--font-dm-mono)...", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>Related Content</span>
+  <span style={{ flex: 1, height: 1, backgroundColor: "#D4C9B8" }} />
+  <span style={{ fontFamily: "var(--font-dm-mono)...", fontSize: 9, color: "#C4622D", textTransform: "uppercase" }}>Topic Tags</span>
+</div>
+```
+
+Choose related items that genuinely connect to the article's subject matter — don't use generic fallbacks.
+
+### 9. Back to Blog nav footer
 ```tsx
 <Link href="/blog">← Back to Blog</Link>
 ```
-with topic tag chips on the right.
+with topic tag chips on the right. Place inside the Related Content section, after the More from Blog CTA.
 
 ---
 
