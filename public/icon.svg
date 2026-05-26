@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="110" ry="110" fill="#F0ECE4"/>
+  <!-- F letter -->
+  <text
+    x="90"
+    y="340"
+    font-family="Arial Black, Impact, 'Franklin Gothic Heavy', sans-serif"
+    font-weight="900"
+    font-size="290"
+    fill="#1A1714"
+  >FL</text>
+  <!-- Left rule -->
+  <line x1="100" y1="410" x2="220" y2="410" stroke="#9A9080" stroke-width="6"/>
+  <!-- Rust dot -->
+  <circle cx="256" cy="410" r="18" fill="#C4622D"/>
+  <!-- Right rule -->
+  <line x1="292" y1="410" x2="412" y2="410" stroke="#9A9080" stroke-width="6"/>
+</svg>
