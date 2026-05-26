@@ -158,7 +158,49 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
   const publishedDate = "April 10, 2025";
   const updatedDate = "May 2025";
 
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "@id": `https://fitlabreviews.com/reviews/${slug}#review`,
+    name: `${productName} — Fitlabreviews FSP Review`,
+    reviewBody:
+      "In-depth, evidence-led review using the Fitlab Scoring Protocol (FSP). Analysis covers formula integrity, label transparency, third-party verification, value efficiency, and practical quality.",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: rubric.editorialScore,
+      bestRating: 10,
+      worstRating: 1,
+    },
+    datePublished: "2025-04-10",
+    dateModified: "2025-05-01",
+    author: {
+      "@type": "Organization",
+      name: "Fitlab Research Team",
+      url: "https://fitlabreviews.com/authors",
+    },
+    publisher: {
+      "@id": "https://fitlabreviews.com/#organization",
+    },
+    itemReviewed: {
+      "@type": "Product",
+      name: productName,
+      brand: {
+        "@type": "Brand",
+        name: brand,
+      },
+      category: category,
+      description:
+        "Whey protein concentrate blend with 24g protein per serving. Informed Choice certified, NSF-GMP facility.",
+    },
+    url: `https://fitlabreviews.com/reviews/${slug}`,
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
     <div style={{ backgroundColor: "#F2EBD9" }}>
 
       {/* Breadcrumb */}
@@ -444,5 +486,6 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         </div>
       </div>
     </div>
+    </>
   );
 }

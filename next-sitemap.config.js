@@ -22,8 +22,27 @@ module.exports = {
   ],
   robotsTxtOptions: {
     policies: [
+      // General crawlers
       { userAgent: "*", allow: "/" },
       { userAgent: "*", disallow: ["/api/", "/_next/"] },
+      // OpenAI
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      // Anthropic
+      { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      // Google AI / Gemini
+      { userAgent: "Google-Extended", allow: "/" },
+      // Perplexity
+      { userAgent: "PerplexityBot", allow: "/" },
+      // Meta AI
+      { userAgent: "FacebookBot", allow: "/" },
+      // Common AI research crawlers
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "YouBot", allow: "/" },
     ],
     additionalSitemaps: [
       `${process.env.SITE_URL || "https://fitlabreviews.com"}/sitemap.xml`,

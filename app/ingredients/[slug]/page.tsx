@@ -16,6 +16,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function IngredientPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
+  const ingredientSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://fitlabreviews.com/ingredients/${slug}#article`,
+    headline: `${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Evidence-Based Ingredient Profile`,
+    description:
+      "Comprehensive, evidence-based ingredient profile including benefits, dosages, safety data, and supplement forms analysis.",
+    datePublished: "2025-03-01",
+    dateModified: "2025-05-01",
+    author: {
+      "@type": "Organization",
+      name: "Fitlab Research Team",
+      url: "https://fitlabreviews.com/authors",
+    },
+    publisher: {
+      "@id": "https://fitlabreviews.com/#organization",
+    },
+    url: `https://fitlabreviews.com/ingredients/${slug}`,
+    mainEntityOfPage: `https://fitlabreviews.com/ingredients/${slug}`,
+    articleSection: "Ingredient Research",
+    keywords: ["supplement ingredients", "evidence-based", slug.replace(/-/g, " ")],
+  };
+
   const ingredient = {
     name: "Creatine Monohydrate",
     category: "Performance & Strength",
@@ -52,6 +75,11 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
   ];
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ingredientSchema) }}
+      />
     <div style={{ backgroundColor: "#F2EBD9" }}>
       <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
@@ -152,5 +180,6 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
         </section>
       </div>
     </div>
+    </>
   );
 }

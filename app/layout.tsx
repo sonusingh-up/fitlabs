@@ -99,6 +99,48 @@ export const metadata: Metadata = {
 
 const GA_ID = "G-N23DKB7H8K";
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://fitlabreviews.com/#organization",
+  name: "Fitlabreviews",
+  url: "https://fitlabreviews.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://fitlabreviews.com/logo-banner.svg",
+    width: 148,
+    height: 36,
+  },
+  description:
+    "Evidence-led supplement reviews, ingredient analysis, and wellness guidance for the Indian and global market. Editorially independent.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "editorial@fitlabreviews.com",
+    contactType: "Editorial",
+  },
+  sameAs: ["https://www.linkedin.com/in/pankaj-singh-77b93a368/"],
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://fitlabreviews.com/#website",
+  url: "https://fitlabreviews.com",
+  name: "Fitlabreviews",
+  description:
+    "Research-grade supplement reviews, ingredient analysis, and wellness guidance. Evidence-led, editorially independent.",
+  publisher: { "@id": "https://fitlabreviews.com/#organization" },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://fitlabreviews.com/search?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+  inLanguage: "en-US",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -111,6 +153,17 @@ export default function RootLayout({
       style={{ backgroundColor: "#F2EBD9" }}
     >
       <head>
+        {/* JSON-LD: Organization + WebSite structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+        />
+        {/* RSS Feed discovery */}
+        <link rel="alternate" type="application/rss+xml" title="Fitlabreviews — Latest Reviews" href="/feed.xml" />
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
