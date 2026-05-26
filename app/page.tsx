@@ -20,9 +20,9 @@ import { BestOfGrid, TrustGrid, ArticlesGrid } from "@/components/sections/HomeI
 import type { ReviewRating, EvidenceLevel } from "@/lib/types";
 
 const featuredReviews = [
-  { slug: "optimum-nutrition-gold-standard-whey", title: "Optimum Nutrition Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark protein powder. Consistent quality, excellent amino acid profile, and the cleanest label at this price tier.", publishedAt: "2025-04-10", figNumber: "01", tags: ["whey", "muscle-gain", "post-workout"] },
-  { slug: "musclepharm-assault-pre-workout", title: "MusclePharm Assault Pre-Workout", brand: "MusclePharm", category: "Pre-Workout", rating: 7 as ReviewRating, verdict: "Solid stimulant blend with transparent labelling but under-dosed citrulline is a notable gap.", publishedAt: "2025-03-22", figNumber: "02", tags: ["pre-workout", "energy", "focus"] },
-  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate available in India. No frills, just results.", publishedAt: "2025-03-08", figNumber: "03", tags: ["creatine", "strength", "budget"] },
+  { slug: "optimum-nutrition-gold-standard-whey", title: "Optimum Nutrition Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark protein powder. Consistent quality, excellent amino acid profile, and the cleanest label at this price tier.", publishedAt: "2026-04-10", figNumber: "01", tags: ["whey", "muscle-gain", "post-workout"] },
+  { slug: "musclepharm-assault-pre-workout-review", title: "MusclePharm Assault Pre-Workout", brand: "MusclePharm", category: "Pre-Workout", rating: 7 as ReviewRating, verdict: "Solid stimulant blend with transparent labelling but under-dosed citrulline is a notable gap.", publishedAt: "2026-03-22", figNumber: "02", tags: ["pre-workout", "energy", "focus"] },
+  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate available in India. No frills, just results.", publishedAt: "2026-03-08", figNumber: "03", tags: ["creatine", "strength", "budget"] },
 ];
 
 const ingredients = [
