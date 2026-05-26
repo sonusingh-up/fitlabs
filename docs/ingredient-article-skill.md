@@ -1,4 +1,5 @@
 ---
+name: ingredient-article
 description: Build a complete, SEO-optimised ingredient research article for /ingredients/[slug]/page.tsx
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 ---
