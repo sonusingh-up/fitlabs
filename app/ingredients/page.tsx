@@ -143,6 +143,17 @@ const ingredients = [
     mechanism: "Eicosanoid pathway modulation",
     bestFor: ["Joint health", "Heart health", "Recovery", "Inflammation"],
   },
+  {
+    slug: "tirzepatide",
+    name: "Tirzepatide (GLP-1/GIP)",
+    category: "Weight Management",
+    evidence: "strong" as EvidenceLevel,
+    figure: "ING-013",
+    summary: "Dual GIP/GLP-1 receptor agonist with the strongest weight-loss evidence of any approved medication. Mean 20.9% body weight reduction at 15mg/week in SURMOUNT-1. Prescription only — US only.",
+    dose: "2.5–15mg / week (Rx)",
+    mechanism: "Dual GIP + GLP-1 receptor agonism",
+    bestFor: ["Weight loss", "Type 2 diabetes", "Cardiometabolic risk"],
+  },
 ];
 
 const categories = [...new Set(ingredients.map((i) => i.category))];
