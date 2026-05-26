@@ -15,7 +15,7 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "WellMedr Review (2026) — GLP-1 Telehealth Rated 8/10",
+  title: "WellMedr Review (2026) — Is This GLP-1 Telehealth Worth It?",
   description:
     "WellMedr GLP-1 telehealth review: tirzepatide & semaglutide from $88/mo, same-day consults, microdosing option, 300+ TrustPilot reviews. FSP 8/10.",
   alternates: {
@@ -269,7 +269,7 @@ export default function WellMedrReview() {
           {/* Product image — right side */}
           <div style={{ position: "absolute", right: "8%", bottom: 0, width: 220, height: 280, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
             <Image
-              src="/products/wellmedr-product.png"
+              src="/products/wellmedr-product.webp"
               alt="WellMedr compounded GLP-1/GIP tirzepatide vial with syringe"
               width={220}
               height={280}
