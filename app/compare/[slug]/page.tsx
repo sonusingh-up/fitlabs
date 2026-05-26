@@ -83,7 +83,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section">
 
         <div style={{ marginBottom: 56, textAlign: "center" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>DIRECT COMPARISON · 2025</p>
+          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>DIRECT COMPARISON · 2026</p>
           <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             {products[0].name} <em style={{ fontWeight: 400, fontStyle: "italic", color: "#5C5650" }}>vs</em> {products[1].name}
           </h1>

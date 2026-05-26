@@ -88,18 +88,18 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
         {/* Hero */}
         <div style={{ marginBottom: 56, maxWidth: 720 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>ROUNDUP · 2025</span>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>ROUNDUP · 2026</span>
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Tested & Ranked</span>
           </div>
           <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
-            Best {pageTitle} in India <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2025</em>
+            Best {pageTitle} in India <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026</em>
           </h1>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>
             We reviewed {topPicks.length * 4}+ products to find the best options across budget, mid-range, and premium tiers. Each product was evaluated on formula quality, label transparency, price per serving, and real-world results.
           </p>
           <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
-            Last updated: May 2025 · {topPicks.length * 4}+ products reviewed · Independently tested
+            Last updated: May 2026 · {topPicks.length * 4}+ products reviewed · Independently tested
           </p>
         </div>
 

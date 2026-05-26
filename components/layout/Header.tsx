@@ -89,7 +89,7 @@ export default function Header() {
       <div className="header-strip" style={{ borderBottom: "1px solid #D4C9B8", padding: "5px 0" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480" }}>
-            VOL. I · 2025 · EVIDENCE-LED SUPPLEMENT RESEARCH
+            VOL. I · 2026 · EVIDENCE-LED SUPPLEMENT RESEARCH
           </span>
           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480" }}>
             INDIA &amp; GLOBAL EDITION

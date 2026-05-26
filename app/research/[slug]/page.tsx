@@ -51,7 +51,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             The Complete Guide to <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Creatine Loading</em>
           </h1>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
-            <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>Published: April 2025</span>
+            <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>Published: April 2026</span>
             <span style={{ color: "#D4C9B8" }}>·</span>
             <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>12 min read</span>
             <span style={{ color: "#D4C9B8" }}>·</span>

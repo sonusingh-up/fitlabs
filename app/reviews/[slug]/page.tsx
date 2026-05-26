@@ -158,7 +158,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
   const brand = "Optimum Nutrition";
   const category = "Protein Powder";
   const publishedDate = "April 10, 2025";
-  const updatedDate = "May 2025";
+  const updatedDate = "May 2026";
 
   const reviewSchema = {
     "@context": "https://schema.org",
@@ -174,7 +174,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       worstRating: 1,
     },
     datePublished: "2025-04-10",
-    dateModified: "2025-05-01",
+    dateModified: "2026-05-26",
     author: {
       "@type": "Organization",
       name: "Fitlab Research Team",

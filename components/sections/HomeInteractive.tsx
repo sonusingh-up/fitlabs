@@ -14,12 +14,12 @@ const bestOfItems = [
 ];
 
 const articles = [
-  { title: "The Complete Guide to Creatine Loading", href: "/research/creatine-guide", date: "Apr 2025", code: "ART-01", category: "Ingredient Science", bg: "linear-gradient(145deg, #0F1E1C 0%, #0A1614 100%)" },
-  { title: "Whey vs Plant Protein: What the Research Says", href: "/research/whey-vs-plant", date: "Mar 2025", code: "ART-02", category: "Comparison", bg: "linear-gradient(145deg, #1E1608 0%, #140F06 100%)" },
-  { title: "Pre-Workout Ingredients Decoded", href: "/research/pre-workout-ingredients", date: "Mar 2025", code: "ART-03", category: "Ingredient Science", bg: "linear-gradient(145deg, #2A1410 0%, #1A0E0A 100%)" },
-  { title: "Should Beginners Take Supplements?", href: "/research/supplements-for-beginners", date: "Feb 2025", code: "ART-04", category: "Beginner Guide", bg: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)" },
-  { title: "Supplement Timing: Does It Actually Matter?", href: "/research/supplement-timing", date: "Feb 2025", code: "ART-05", category: "Protocols", bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)" },
-  { title: "How to Read a Supplement Label", href: "/research/reading-supplement-labels", date: "Jan 2025", code: "ART-06", category: "Consumer Guide", bg: "linear-gradient(145deg, #1A1714 0%, #2D2420 100%)" },
+  { title: "The Complete Guide to Creatine Loading", href: "/research/creatine-guide", date: "Apr 2026", code: "ART-01", category: "Ingredient Science", bg: "linear-gradient(145deg, #0F1E1C 0%, #0A1614 100%)" },
+  { title: "Whey vs Plant Protein: What the Research Says", href: "/research/whey-vs-plant", date: "Mar 2026", code: "ART-02", category: "Comparison", bg: "linear-gradient(145deg, #1E1608 0%, #140F06 100%)" },
+  { title: "Pre-Workout Ingredients Decoded", href: "/research/pre-workout-ingredients", date: "Mar 2026", code: "ART-03", category: "Ingredient Science", bg: "linear-gradient(145deg, #2A1410 0%, #1A0E0A 100%)" },
+  { title: "Should Beginners Take Supplements?", href: "/research/supplements-for-beginners", date: "Feb 2026", code: "ART-04", category: "Beginner Guide", bg: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)" },
+  { title: "Supplement Timing: Does It Actually Matter?", href: "/research/supplement-timing", date: "Feb 2026", code: "ART-05", category: "Protocols", bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)" },
+  { title: "How to Read a Supplement Label", href: "/research/reading-supplement-labels", date: "Jan 2026", code: "ART-06", category: "Consumer Guide", bg: "linear-gradient(145deg, #1A1714 0%, #2D2420 100%)" },
 ];
 
 const gridOverlay = {

@@ -321,7 +321,7 @@ export default function ONGoldStandardReview() {
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Gold Standard 100% Whey<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Still Worth It in 2025?</em>
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Still Worth It in 2026?</em>
               </h2>
               <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
                 4 years of continuous use, 20+ tubs across Amazon India and Flipkart, and one simple conclusion: the name is earned. Here is everything we know — from the formula to the lab reports.
@@ -343,7 +343,7 @@ export default function ONGoldStandardReview() {
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
           <MetadataStrip items={[
             { label: "Published", value: "Apr 10, 2025" },
-            { label: "Last Updated", value: "May 26, 2025" },
+            { label: "Last Updated", value: "May 26, 2026" },
             { label: "Testing Period", value: "4 Years (2020–2024)" },
             { label: "Tubs Tested", value: "20+" },
             { label: "Price (2 lb)", value: "$33–36 USD" },
@@ -708,7 +708,7 @@ export default function ONGoldStandardReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
-                  Prices are approximate market rates as of May 2025 (Amazon India / US). INR/USD fluctuates — verify before purchase.
+                  Prices are approximate market rates as of May 2026 (Amazon India / US). INR/USD fluctuates — verify before purchase.
                 </p>
               </section>
 
@@ -852,7 +852,7 @@ export default function ONGoldStandardReview() {
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Exchange rate reference: $1 ≈ ₹83–84 (May 2025). Verify current rates before purchase.</p>
+                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Exchange rate reference: $1 ≈ ₹83–84 (May 2026). Verify current rates before purchase.</p>
               </section>
 
               {/* ─── WHERE TO BUY ────────────────────────────────────────────── */}

@@ -26,7 +26,7 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
     description:
       "Comprehensive, evidence-based ingredient profile including benefits, dosages, safety data, and supplement forms analysis.",
     datePublished: "2025-03-01",
-    dateModified: "2025-05-01",
+    dateModified: "2026-05-26",
     author: {
       "@type": "Organization",
       name: "Fitlab Research Team",
@@ -45,7 +45,7 @@ export default async function IngredientPage({ params }: { params: Promise<{ slu
     name: "Creatine Monohydrate",
     category: "Performance & Strength",
     evidenceLevel: "strong" as EvidenceLevel,
-    publishedDate: "March 2025",
+    publishedDate: "March 2026",
     figure: "ING-001",
     summary: "Creatine is one of the most researched ergogenic aids in sports science, with a robust body of evidence supporting its role in improving short-burst power, strength, and lean mass accumulation.",
     whatItIs: "Creatine is a naturally occurring compound synthesised from three amino acids — arginine, glycine, and methionine. It is stored primarily in skeletal muscle as phosphocreatine and plays a central role in the ATP-PCr (phosphocreatine) energy system, which powers short, intense bursts of activity.",

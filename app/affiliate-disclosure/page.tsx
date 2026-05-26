@@ -24,7 +24,7 @@ export default function AffiliateDisclosurePage() {
             Affiliate Disclosure
           </h1>
           <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75 }}>
-            Last updated: May 2025
+            Last updated: May 2026
           </p>
         </div>
 

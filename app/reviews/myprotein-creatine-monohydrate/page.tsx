@@ -309,7 +309,7 @@ export default function MyproteinCreatineReview() {
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
           <MetadataStrip items={[
             { label: "Published", value: "Mar 8, 2025" },
-            { label: "Last Updated", value: "May 26, 2025" },
+            { label: "Last Updated", value: "May 26, 2026" },
             { label: "Ingredients", value: "1 (Creatine Monohydrate)" },
             { label: "Serving Size", value: "5g" },
             { label: "Price (500g)", value: "$18–22 / ₹1,500–1,800" },
