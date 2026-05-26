@@ -354,3 +354,35 @@
 .hub-row-link:hover {
   background-color: #EDE8DF !important;
 }
+
+/* ── Header responsive classes ───────────────────────────────────────── */
+
+/* Top editorial strip — hide on mobile */
+.header-strip { display: block; }
+@media (max-width: 767px) {
+  .header-strip { display: none; }
+}
+
+/* Desktop nav — hide on mobile, flex on desktop */
+.header-desktop-nav { display: none; }
+@media (min-width: 1024px) {
+  .header-desktop-nav { display: flex; }
+}
+
+/* "All Reviews" CTA — hide on mobile */
+.header-cta-btn { display: none; }
+@media (min-width: 1024px) {
+  .header-cta-btn { display: inline-flex; }
+}
+
+/* Hamburger — show on mobile, hide on desktop */
+.header-hamburger { display: flex; }
+@media (min-width: 1024px) {
+  .header-hamburger { display: none; }
+}
+
+/* ── Prevent horizontal overflow site-wide ───────────────────────────── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -80,70 +80,41 @@ const nav = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   return (
-    <header
-      style={{
-        borderBottom: "1px solid #D4C9B8",
-        backgroundColor: "#F2EBD9",
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
-      }}
-    >
-      {/* Top editorial strip */}
-      <div
-        style={{
-          borderBottom: "1px solid #D4C9B8",
-          padding: "6px 0",
-          fontSize: 10,
-          letterSpacing: "0.18em",
-          textTransform: "uppercase",
-          color: "#8A8480",
-          fontFamily: "var(--font-dm-mono), monospace",
-        }}
-      >
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span>VOL. I · 2025 · EVIDENCE-LED SUPPLEMENT RESEARCH</span>
-          <span>INDIA &amp; GLOBAL EDITION</span>
+    <header style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#F2EBD9", position: "sticky", top: 0, zIndex: 50 }}>
+
+      {/* Top editorial strip — hidden on mobile */}
+      <div className="header-strip" style={{ borderBottom: "1px solid #D4C9B8", padding: "5px 0" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480" }}>
+            VOL. I · 2025 · EVIDENCE-LED SUPPLEMENT RESEARCH
+          </span>
+          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480" }}>
+            INDIA &amp; GLOBAL EDITION
+          </span>
         </div>
       </div>
 
       {/* Main nav row */}
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 1.5rem" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 16px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 56 }}>
 
-          {/* Logo — image on md+, text fallback on mobile */}
+          {/* Logo */}
           <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }} aria-label="Fitlabreviews home">
-            {/* Full wordmark — hidden on very small screens */}
-            <span className="hidden sm:block">
-              <Image
-                src="/logo-banner.svg"
-                alt="Fitlabreviews — Reviews · No Bias"
-                width={160}
-                height={40}
-                priority
-                style={{ objectFit: "contain", objectPosition: "left" }}
-              />
-            </span>
-            {/* Text fallback for tiny screens when banner is hidden */}
-            <span
-              className="sm:hidden"
-              style={{
-                fontFamily: "var(--font-dm-mono), monospace",
-                fontWeight: 700,
-                fontSize: 14,
-                letterSpacing: "0.05em",
-                color: "#1A1714",
-                textTransform: "uppercase",
-              }}
-            >
-              Fitlabreviews
-            </span>
+            <Image
+              src="/logo-banner.svg"
+              alt="Fitlabreviews"
+              width={148}
+              height={36}
+              priority
+              style={{ objectFit: "contain", objectPosition: "left" }}
+            />
           </Link>
 
-          {/* Desktop nav */}
-          <nav style={{ display: "flex", alignItems: "center", gap: 4 }} className="hidden lg:flex">
+          {/* Desktop nav — CSS controls visibility, NO display in inline style */}
+          <nav className="header-desktop-nav" style={{ alignItems: "center", gap: 2 }}>
             {nav.map((item) => (
               <div
                 key={item.label}
@@ -154,60 +125,33 @@ export default function Header() {
                 <Link
                   href={item.href}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 3,
-                    padding: "6px 12px",
-                    fontSize: 13,
-                    fontWeight: 500,
-                    letterSpacing: "0.01em",
+                    display: "flex", alignItems: "center", gap: 3,
+                    padding: "6px 10px",
+                    fontSize: 13, fontWeight: 500,
                     color: openDropdown === item.label ? "#C4622D" : "#1A1714",
                     fontFamily: "var(--font-dm-sans), sans-serif",
-                    borderRadius: 8,
-                    transition: "color 0.15s",
-                    textDecoration: "none",
+                    borderRadius: 6, transition: "color 0.15s", textDecoration: "none",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   {item.label}
-                  {item.children && <ChevronDown size={12} style={{ opacity: 0.5 }} />}
+                  {item.children && <ChevronDown size={11} style={{ opacity: 0.5 }} />}
                 </Link>
 
                 {item.children && openDropdown === item.label && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "100%",
-                      left: 0,
-                      minWidth: 210,
-                      backgroundColor: "#F8F2E4",
-                      border: "1px solid #D4C9B8",
-                      boxShadow: "0 8px 32px -8px rgba(26,23,20,0.14)",
-                      borderRadius: 8,
-                      padding: "8px 0",
-                      zIndex: 100,
-                    }}
-                  >
+                  <div style={{
+                    position: "absolute", top: "100%", left: 0, minWidth: 200,
+                    backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8",
+                    boxShadow: "0 8px 32px -8px rgba(26,23,20,0.14)",
+                    borderRadius: 8, padding: "6px 0", zIndex: 100,
+                  }}>
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
-                        style={{
-                          display: "block",
-                          padding: "8px 16px",
-                          fontSize: 13,
-                          color: "#2D2926",
-                          fontFamily: "var(--font-dm-sans), sans-serif",
-                          textDecoration: "none",
-                          transition: "background 0.1s, color 0.1s",
-                        }}
-                        onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLElement).style.backgroundColor = "#F0E8D0";
-                          (e.currentTarget as HTMLElement).style.color = "#C4622D";
-                        }}
-                        onMouseLeave={(e) => {
-                          (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
-                          (e.currentTarget as HTMLElement).style.color = "#2D2926";
-                        }}
+                        style={{ display: "block", padding: "8px 14px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "#F0E8D0"; (e.currentTarget as HTMLElement).style.color = "#C4622D"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "transparent"; (e.currentTarget as HTMLElement).style.color = "#2D2926"; }}
                       >
                         {child.label}
                       </Link>
@@ -219,96 +163,88 @@ export default function Header() {
           </nav>
 
           {/* Right actions */}
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <Link
-              href="/search"
-              style={{ color: "#5C5650", display: "flex", alignItems: "center", padding: 6 }}
-              aria-label="Search"
-            >
+          <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
+            <Link href="/search" style={{ color: "#5C5650", display: "flex", alignItems: "center", padding: 6 }} aria-label="Search">
               <Search size={18} />
             </Link>
-
+            {/* All Reviews button — desktop only */}
             <Link
-              href="/category/all"
+              href="/category"
+              className="header-cta-btn"
               style={{
-                display: "none",
-                padding: "7px 16px",
-                backgroundColor: "#1A1714",
-                color: "#F2EBD9",
-                fontSize: 12,
-                fontWeight: 600,
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                borderRadius: 8,
-                fontFamily: "var(--font-dm-sans), sans-serif",
-                textDecoration: "none",
+                padding: "7px 14px",
+                backgroundColor: "#1A1714", color: "#F2EBD9",
+                fontSize: 12, fontWeight: 600, letterSpacing: "0.05em",
+                textTransform: "uppercase", borderRadius: 7,
+                fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none",
+                whiteSpace: "nowrap",
               }}
-              className="lg:block"
             >
               All Reviews
             </Link>
-
+            {/* Hamburger — mobile only */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              style={{ color: "#1A1714", padding: 6 }}
+              className="header-hamburger"
+              style={{ color: "#1A1714", padding: 6, background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
               aria-label="Toggle menu"
-              className="lg:hidden"
             >
-              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu drawer */}
       {mobileOpen && (
-        <div
-          style={{
-            borderTop: "1px solid #D4C9B8",
-            backgroundColor: "#F8F2E4",
-            padding: "16px 24px 24px",
-          }}
-        >
-          {nav.map((item) => (
-            <div key={item.label} style={{ borderBottom: "1px solid #EDE8DF", paddingBottom: 12, marginBottom: 12 }}>
+        <div style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#F8F2E4", maxHeight: "80vh", overflowY: "auto" }}>
+          <div style={{ padding: "8px 16px 24px" }}>
+            {nav.map((item) => (
+              <div key={item.label} style={{ borderBottom: "1px solid #EDE8DF" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <Link
+                    href={item.href}
+                    style={{ display: "block", flex: 1, fontWeight: 600, fontSize: 15, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", padding: "12px 0" }}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.children && (
+                    <button
+                      onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                      style={{ background: "none", border: "none", cursor: "pointer", padding: "12px 4px", color: "#8A8480" }}
+                    >
+                      <ChevronDown size={16} style={{ transform: mobileExpanded === item.label ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+                    </button>
+                  )}
+                </div>
+                {item.children && mobileExpanded === item.label && (
+                  <div style={{ paddingLeft: 12, paddingBottom: 8 }}>
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        href={child.href}
+                        style={{ display: "block", fontSize: 13, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif", padding: "6px 0", textDecoration: "none" }}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            {/* Mobile CTA */}
+            <div style={{ paddingTop: 16 }}>
               <Link
-                href={item.href}
-                style={{
-                  display: "block",
-                  fontWeight: 600,
-                  fontSize: 15,
-                  color: "#1A1714",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  textDecoration: "none",
-                  marginBottom: item.children ? 8 : 0,
-                }}
+                href="/category"
+                style={{ display: "block", textAlign: "center", padding: "12px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
                 onClick={() => setMobileOpen(false)}
               >
-                {item.label}
+                Browse All Reviews →
               </Link>
-              {item.children && (
-                <div style={{ paddingLeft: 12 }}>
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.label}
-                      href={child.href}
-                      style={{
-                        display: "block",
-                        fontSize: 13,
-                        color: "#5C5650",
-                        fontFamily: "var(--font-dm-sans), sans-serif",
-                        padding: "4px 0",
-                        textDecoration: "none",
-                      }}
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
             </div>
-          ))}
+          </div>
         </div>
       )}
     </header>
