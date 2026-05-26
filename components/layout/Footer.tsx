@@ -137,10 +137,6 @@ export default function Footer() {
             <Link href="/medical-disclaimer" style={{ color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Full disclaimer →</Link>
           </p>
           <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
-            <strong style={{ color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>AI-assisted analysis.</strong>{" "}
-            Product evaluations, scores, and summaries on this site are produced with the assistance of AI tools applied to our structured scoring inputs and editorial criteria. AI can make errors of omission or interpretation. Always verify label claims, ingredient dosages, and current pricing directly with the brand before making a purchase decision.
-          </p>
-          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
             <strong style={{ color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>Affiliate disclosure.</strong>{" "}
             Fitlabreviews participates in affiliate programmes. Some product links on this site are affiliate links — if you click and buy, we earn a small commission at no extra cost to you. This never influences our scores, rankings, or recommendations.{" "}
             <Link href="/affiliate-disclosure" style={{ color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Full disclosure →</Link>

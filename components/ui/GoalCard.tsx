@@ -9,7 +9,6 @@ interface GoalCardProps {
   label: string;
   description: string;
   topIngredients: string[];
-  icon?: string;
   code?: string;
   image?: string;
 }
@@ -21,7 +20,7 @@ const goalStyle: Record<string, { bg: string; accent: string }> = {
   recovery:       { bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)", accent: "#7EB8D4" },
 };
 
-export default function GoalCard({ slug, label, description, topIngredients, icon, code, image }: GoalCardProps) {
+export default function GoalCard({ slug, label, description, topIngredients, code, image }: GoalCardProps) {
   const gs = goalStyle[slug] ?? { bg: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)", accent: "#C4622D" };
 
   return (
@@ -60,13 +59,8 @@ export default function GoalCard({ slug, label, description, topIngredients, ico
             style={{ objectFit: "cover", objectPosition: "center center" }}
           />
         ) : (
-          /* Fallback: gradient + ghost icon when no image */
-          <span style={{
-            position: "absolute", left: "50%", top: "50%",
-            transform: "translate(-50%, -50%)",
-            fontSize: "4rem", opacity: 0.2,
-            userSelect: "none", pointerEvents: "none",
-          }}>{icon}</span>
+          /* Fallback: just the gradient when no image */
+          null
         )}
 
         {/* Code chip — top-left, always visible */}
@@ -92,15 +86,12 @@ export default function GoalCard({ slug, label, description, topIngredients, ico
       {/* Card body — label sits here now, fully readable on light bg */}
       <div style={{ padding: "16px 20px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
 
-        {/* Icon + label */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <span style={{ fontSize: "1.3rem", lineHeight: 1, flexShrink: 0 }}>{icon}</span>
-          <h3 style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
-            fontSize: "1.1rem", fontWeight: 700,
-            color: "#1A1714", letterSpacing: "-0.01em", margin: 0,
-          }}>{label}</h3>
-        </div>
+        {/* Label */}
+        <h3 style={{
+          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontSize: "1.1rem", fontWeight: 700,
+          color: "#1A1714", letterSpacing: "-0.01em", margin: 0,
+        }}>{label}</h3>
 
         <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, flex: 1 }}>{description}</p>
 

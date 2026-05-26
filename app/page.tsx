@@ -20,10 +20,10 @@ const ingredients = [
 ];
 
 const goals = [
-  { slug: "muscle-gain", label: "Muscle Gain", description: "Build lean muscle effectively with evidence-backed supplement protocols and foundational diet structure.", topIngredients: ["Creatine", "Whey Protein", "Beta-Alanine"], icon: "💪", code: "G-01", image: "/goals/muscle-gain.jpg" },
-  { slug: "weight-loss", label: "Weight Loss", description: "Support your calorie deficit with ingredients that preserve muscle, improve satiety, and support metabolism.", topIngredients: ["Protein", "Caffeine", "L-Carnitine"], icon: "⚖️", code: "G-02", image: "/goals/weight-loss.jpg" },
-  { slug: "energy-focus", label: "Energy & Focus", description: "From morning productivity to high-intensity training — build a clean stimulant stack that performs without crashing.", topIngredients: ["Caffeine", "L-Theanine", "Ashwagandha"], icon: "⚡", code: "G-03", image: "/goals/energy-focus.jpg" },
-  { slug: "recovery", label: "Recovery & Sleep", description: "Reduce soreness, improve sleep quality, and optimize your body's natural repair processes.", topIngredients: ["Magnesium", "Ashwagandha", "BCAA"], icon: "🌙", code: "G-04", image: "/goals/recovery.jpg" },
+  { slug: "muscle-gain", label: "Muscle Gain", description: "Build lean muscle effectively with evidence-backed supplement protocols and foundational diet structure.", topIngredients: ["Creatine", "Whey Protein", "Beta-Alanine"], code: "G-01", image: "/goals/muscle-gain.jpg" },
+  { slug: "weight-loss", label: "Weight Loss", description: "Support your calorie deficit with ingredients that preserve muscle, improve satiety, and support metabolism.", topIngredients: ["Protein", "Caffeine", "L-Carnitine"], code: "G-02", image: "/goals/weight-loss.jpg" },
+  { slug: "energy-focus", label: "Energy & Focus", description: "From morning productivity to high-intensity training — build a clean stimulant stack that performs without crashing.", topIngredients: ["Caffeine", "L-Theanine", "Ashwagandha"], code: "G-03", image: "/goals/energy-focus.jpg" },
+  { slug: "recovery", label: "Recovery & Sleep", description: "Reduce soreness, improve sleep quality, and optimize your body's natural repair processes.", topIngredients: ["Magnesium", "Ashwagandha", "BCAA"], code: "G-04", image: "/goals/recovery.jpg" },
 ];
 
 const trustPoints = [
@@ -174,15 +174,6 @@ export default function HomePage() {
         <ArticlesGrid />
       </section>
 
-      {/* DISCLAIMER */}
-      <div style={{ backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8", padding: "20px 24px" }}>
-        <p style={{ maxWidth: 1280, margin: "0 auto", fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.7 }}>
-          <strong style={{ color: "#5C5650" }}>Medical Disclaimer:</strong> Fitlabreviews content is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement regimen.{" "}
-          <Link href="/medical-disclaimer" style={{ color: "#C4622D" }}>Full disclaimer →</Link>
-          {" · "}
-          <Link href="/affiliate-disclosure" style={{ color: "#C4622D" }}>Affiliate disclosure →</Link>
-        </p>
-      </div>
     </div>
   );
 }
