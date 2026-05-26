@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ExternalLink, AlertTriangle, CheckCircle, XCircle, ShieldCheck, Star } from "lucide-react";
@@ -621,7 +621,7 @@ export default function WellMedrReview() {
                 {/* Competitor brand cards */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
-                    { name: "WellMedr", score: "8/10", tag: "Our Top Pick", tagColor: "#C4622D", tagBg: "rgba(196,98,45,0.1)", border: "#C4622D", img: "/products/wellmedr-product.webp" },
+                    { name: "WellMedr", score: "8/10", tag: "Our Top Pick", tagColor: "#C4622D", tagBg: "rgba(196,98,45,0.1)", border: "#C4622D", img: "/products/wellmedr-product.webp", href: "https://www.wellmedr.com/pages/get-started-weight-loss" },
                     { name: "Ro Body", score: "7/10", tag: "~$145/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "/products/ro.webp", href: "#" },
                     { name: "Hers", score: "7/10", tag: "~$99–149/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "/products/Hers.webp", href: "#" },
                     { name: "SkinnyRx", score: "6/10", tag: "~$99/mo", tagColor: "#5C5650", tagBg: "#EDE8DF", border: "#D4C9B8", img: "/products/SkinnyRx.webp", href: "#" },

@@ -214,7 +214,33 @@ The skill uses the creatine article (`app/ingredients/creatine/page.tsx`) as the
 
 ---
 
-## 12. Build Verification
+## 12. Blog Article Skill
+
+Use the `/blog-fit <slug> "<title>"` slash command to build a new blog article.
+
+**What it does:**
+- Creates `app/blog/<slug>/page.tsx` (static route — takes priority over any `[slug]` fallback)
+- Enforces all required sections: hero with stat callouts, sidebar TOC, 6–9 body sections, numbered mechanism panels, bottom line dark panel, references block
+- Applies correct SEO metadata, canonical tags, and design system tokens
+- Enforces editorial voice: every factual claim gets a named citation, no AI fluff phrases
+- Runs the pre-commit checklist automatically
+
+**When to use it:**
+```
+/blog-fit sleep-window-anti-aging "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging"
+/blog-fit glp1-benefits-beyond-weight-loss "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss"
+/blog-fit plant-foods-menopause "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally"
+```
+
+**Skill file location:** `.claude/commands/blog-fit.md` (local only — not committed; canonical reference copy is `docs/blog-fit-skill.md`)
+
+The skill uses `app/blog/sleep-window-anti-aging/page.tsx` as the structural gold standard. Read it before writing any new blog article.
+
+**Blog article figure codes:** Increment from `BLG-001`. Check existing articles in `app/blog/` for the next available number.
+
+---
+
+## 13. Build Verification
 
 Before every `git push`, run:
 ```bash
