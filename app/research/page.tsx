@@ -153,6 +153,32 @@ const articles: ResearchArticle[] = [
     tags: ["Ashwagandha", "Adaptogens", "Stress"],
     accent: "#2D6A4F",
   },
+  {
+    slug: "beef-organ-supplements-safety",
+    title: "Are Beef Organ Supplements Safe?",
+    titleItalic: "Risks, Contraindications & Safe Use",
+    figure: "ART-011",
+    topic: "Organ Supplement Science",
+    readTime: "13 min",
+    publishedAt: "May 2026",
+    summary: "Vitamin A toxicity from chronic retinol excess, heavy metal accumulation, hemochromatosis risk in iron-overload patients, and purine load in gout — we examine the four primary safety concerns with beef organ supplements and establish evidence-based safe-use guidelines.",
+    evidence: "moderate",
+    tags: ["Safety", "Vitamin A Toxicity", "Heavy Metals", "Contraindications", "Organ Supplements"],
+    accent: "#8B4513",
+  },
+  {
+    slug: "freeze-dried-vs-desiccated-organ-supplements",
+    title: "Freeze-Dried vs. Desiccated Organ Supplements:",
+    titleItalic: "Which Processing Method Preserves More Nutrients?",
+    figure: "ART-012",
+    topic: "Organ Supplement Science",
+    readTime: "11 min",
+    publishedAt: "May 2026",
+    summary: "Freeze-drying (lyophilisation) operates below 0°C under vacuum, preserving heat-labile vitamins and enzymes at the cost of higher manufacturing expense. Traditional desiccation uses low-heat airflow at 37–40°C. We compare nutrient retention, enzyme survival, and cost implications across both methods.",
+    evidence: "moderate",
+    tags: ["Processing Methods", "Freeze-Dried", "Nutrient Retention", "Organ Supplements", "Enzymes"],
+    accent: "#A0522D",
+  },
 ];
 
 const topicGroups = [
@@ -162,6 +188,7 @@ const topicGroups = [
   { label: "Ingredient Science", topics: ["Ingredient Science", "Ingredient Mechanism"] },
   { label: "Nutrition & Protocols", topics: ["Nutrition Science", "Comparative Analysis"] },
   { label: "Stimulants & Adaptogens", topics: ["Stimulant Science", "Adaptogen Research"] },
+  { label: "Organ Supplement Science", topics: ["Organ Supplement Science"] },
 ];
 
 const evidenceConfig = {
