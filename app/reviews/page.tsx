@@ -63,6 +63,19 @@ const reviews: Review[] = [
     thirdParty: false,
     accent: "#D4A96A",
   },
+  {
+    slug: "dymatize-iso100-review-2026",
+    title: "Dymatize ISO100 Hydrolyzed Whey Isolate",
+    brand: "Dymatize",
+    category: "Protein Powder",
+    figure: "REV-004",
+    rating: 9,
+    verdict: "Dual NSF + Informed Choice certified hydrolyzed isolate. 25g protein, 2.7g leucine, benchmark flavour. Premium price is the only caveat.",
+    publishedAt: "2026-05-27",
+    tags: ["Whey Isolate", "Hydrolyzed", "NSF Certified", "Informed Choice"],
+    thirdParty: true,
+    accent: "#2D6A4F",
+  },
 ];
 
 const categoryGroups: { label: string; categories: string[] }[] = [
