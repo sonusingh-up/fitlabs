@@ -258,8 +258,9 @@ Define `faqSchema` as a const above the component (7 questions minimum). The FAQ
 ### TableOfContents
 ```tsx
 <TableOfContents items={tocItems} />
-// Wrap in: <aside className="header-desktop-nav" style={{ display: "block" }}>
-//           <div style={{ position: "sticky", top: 24 }}>
+// Wrap in: <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+// ✗ WRONG: className="header-desktop-nav" style={{ display: "block" }}
+//   that class controls the top-nav, not the sidebar. Inline display overrides responsive CSS.
 ```
 
 ### ProsCons
@@ -322,65 +323,204 @@ Define `faqSchema` as a const above the component (7 questions minimum). The FAQ
 
 ## Step 8 — Page layout skeleton
 
+This is the VERIFIED pattern from the live review pages. Follow it exactly.
+
 ```tsx
 export default function ProductNameReview() {
   return (
     <>
-      {/* JSON-LD schemas — both scripts here */}
+      {/* JSON-LD schemas — both <script> tags here, before outer div */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
 
-        {/* 1. Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-          <div style={{ maxWidth: 1280, margin: "0 auto" }} className="breadcrumb-pad">
-            {/* Home / Reviews / Category / Product */}
+        {/* 1. Breadcrumb — breadcrumb-pad on OUTER div */}
+        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+          <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            {[
+              { label: "Home", href: "/" },
+              { label: "Reviews", href: "/reviews" },
+              { label: "Category", href: "/category/slug" },
+            ].map((crumb, i, arr) => (
+              <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+              </span>
+            ))}
+            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Product Name</span>
           </div>
         </div>
 
-        {/* 2. Hero — layout-hero-split */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
-          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-            <div className="layout-hero-split">
-              {/* Left: badge pill + H1 + verdict sentence + CTA buttons */}
-              {/* Right: ReviewScoreBadge + product Image */}
+        {/* 2. Feature Banner — full-width dark gradient with h1 + stars + product image */}
+        <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #bgFrom 0%, #bgTo 100%)", position: "relative", overflow: "hidden" }}>
+          <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+          {/* Product image — right side */}
+          <div style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+            <Image src="/products/image.webp" alt="Product name" width={200} height={260}
+              style={{ objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.6))" }} priority />
+          </div>
+          {/* Text */}
+          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-XXX · CATEGORY</span>
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+              Brand Name<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Product Name</em>
+            </h1>
+            <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
+              <div style={{ display: "flex", gap: 4 }}>
+                {[1,2,3,4,5,6,7,8].map((s) => <Star key={s} size={14} fill="#accent" color="#accent" />)}
+                {[9,10].map((s) => <Star key={s} size={14} fill="none" color="#accent" />)}
+              </div>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
+            </div>
+          </div>
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+        </div>
+
+        {/* 3. Hero row — review code pill + layout-hero-split with h2 (not h1) + CTA buttons + ReviewScoreBadge */}
+        <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>REV-2026-XXX</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#accent" }}>Full Review · FSP Scored · Descriptor</span>
+          </div>
+          <div className="layout-hero-split">
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+                Brand · Category · Sub-type
+              </p>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+                Product Name<br />
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Worth It in 2026?</em>
+              </h2>
+              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+                One-paragraph hook — what the product claims, what we actually tested.
+              </p>
+              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                <a href="AFFILIATE_URL" target="_blank" rel="nofollow noopener noreferrer"
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#accent", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                  Buy on Amazon <ExternalLink size={13} />
+                </a>
+                <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                  FSP {rubric.compositeScore.toFixed(1)} → How we score
+                </Link>
+              </div>
+            </div>
+            <ReviewScoreBadge rating={editorialScore} size="lg" />
+          </div>
+        </div>
+
+        {/* 4. MetadataStrip — wrapped in maxWidth div */}
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+          <MetadataStrip items={[
+            { label: "Published", value: "May 27, 2026" },
+            { label: "Last Updated", value: "May 27, 2026" },
+            { label: "Category", value: "Whey Protein" },
+            { label: "FSP Score", value: `${rubric.compositeScore.toFixed(1)} / 10` },
+          ]} />
+        </div>
+
+        {/* 5. Author box */}
+        <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+            <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>PS</span>
+              {/* Use "FL" initials and "Fitlab Research Team" if not a personal-use review */}
+            </div>
+            <div style={{ flex: 1, minWidth: 200 }}>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+                <Link href="/authors/pankaj-singh" style={{ color: "#1A1714", textDecoration: "none" }}>Pankaj Singh</Link>
+                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Founder, Fitlabreviews</span>
+              </p>
+              <p style={{ fontSize: 12, color: "#5C5650" }}>X years of personal use · Y tubs tested · Verified purchase history</p>
+            </div>
+            <div style={{ display: "flex", gap: 8 }}>
+              <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Verified Buyer</span>
             </div>
           </div>
         </div>
 
-        {/* 3. MetadataStrip */}
-        <MetadataStrip items={[...]} />
+        {/* 6. Affiliate disclosure */}
+        <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              Affiliate disclosure: links below may earn a commission. Scores and verdicts are editorially independent.{" "}
+              <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
+            </p>
+          </div>
+        </div>
 
-        {/* 4. Mobile TOC */}
+        {/* 7. Mobile TOC */}
         <div className="block lg:hidden" style={{ borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
         </div>
 
-        {/* 5. Main content + sidebar */}
+        {/* 8. Main content + sidebar */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="container-pad">
           <div className="layout-sidebar">
 
-            {/* Sidebar — desktop only */}
-            <aside className="header-desktop-nav" style={{ display: "block" }}>
-              <div style={{ position: "sticky", top: 24 }}>
-                <TableOfContents items={tocItems} />
-              </div>
+            {/* Desktop TOC — hidden lg:block, NOT header-desktop-nav */}
+            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+              <TableOfContents items={tocItems} />
             </aside>
 
-            {/* Article body */}
-            <main>
+            {/* Article body — <article> not <main>, minWidth: 0 required */}
+            <article style={{ minWidth: 0 }}>
               {/* sections here */}
-            </main>
+
+              {/* Research References — always last inside article */}
+              <section style={{ marginBottom: 56 }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                  <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+                    {["Author A et al. (Year). Study title. Journal.", "..."].map((ref, i) => (
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                    ))}
+                  </ol>
+                </div>
+              </section>
+            </article>
 
           </div>
         </div>
+
+        {/* 9. Related Reviews — OUTSIDE layout-sidebar and container-pad */}
+        <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
+              <div>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
+                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
+              </div>
+              <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
+              {relatedReviews.map((r) => <ReviewCard key={r.slug} {...r} />)}
+            </div>
+          </div>
+        </section>
 
       </div>
     </>
   );
 }
 ```
+
+**Critical structural rules:**
+- `breadcrumb-pad` goes on the **outer** border-bottom div, NOT the inner max-width div
+- Feature banner holds the **`<h1>`** — the hero row below it uses **`<h2>`**
+- `Star` must be imported from `lucide-react` for the feature banner
+- Sidebar uses `className="hidden lg:block"` — **never** `header-desktop-nav`
+- Do NOT add `style={{ display: "block" }}` to the aside — it overrides responsive CSS
+- Main content wrapper is **`<article style={{ minWidth: 0 }}>`** — not `<main>`
+- `MetadataStrip` must be wrapped in a `maxWidth: 1280` div
+- Related reviews go **outside** the `container-pad` div as a full-width bottom section
+- References go **inside** the article, as the final section before `</article>`
 
 ---
 
@@ -508,6 +648,17 @@ Verify before committing:
 - [ ] `rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags)` called
 - [ ] `editorialScore = rubric.editorialScore` derived from rubric
 - [ ] All 17+ sections present with correct `id` attributes
+- [ ] Feature banner present with `<h1>` — hero row uses `<h2>` (not `<h1>`)
+- [ ] `Star` imported from lucide-react (needed for feature banner)
+- [ ] Sidebar uses `className="hidden lg:block"` NOT `header-desktop-nav`
+- [ ] No inline `style={{ display: "block" }}` on the aside
+- [ ] Article wrapper is `<article style={{ minWidth: 0 }}>` NOT `<main>`
+- [ ] `MetadataStrip` wrapped in `<div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>`
+- [ ] Author box present after MetadataStrip
+- [ ] Affiliate disclosure present after author box
+- [ ] Research references section is last inside `</article>`
+- [ ] Related reviews section is OUTSIDE container-pad div (bottom of page)
+- [ ] `breadcrumb-pad` class is on the OUTER div, not the inner max-width div
 - [ ] `<FlagSystem flags={rubric.flags}>` — NOT `green={} red={}`
 - [ ] `<ClaimAudit items={rubric.claimAudit}>` — NOT items defined inline
 - [ ] `<ValueMetricPanel metric={rubric.valueMetric}>` — NOT individual props

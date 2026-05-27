@@ -312,6 +312,40 @@ Use the `/review-article <slug>` slash command to build a new product review art
 <ValueMetricPanel priceUSD={} servings={} />
 ```
 
+**Critical layout patterns (verified from live pages — structural errors cause broken mobile/responsive):**
+```tsx
+// ✅ CORRECT sidebar
+<aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+  <TableOfContents items={tocItems} />
+</aside>
+
+// ❌ WRONG sidebar (header-desktop-nav is for the top nav, not TOC; display:block overrides CSS)
+<aside className="header-desktop-nav" style={{ display: "block" }}>
+
+// ✅ CORRECT article wrapper
+<article style={{ minWidth: 0 }}>
+
+// ❌ WRONG (main doesn't get the correct CSS grid behavior)
+<main>
+
+// ✅ CORRECT breadcrumb — breadcrumb-pad on OUTER div
+<div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+  <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
+
+// ❌ WRONG — breadcrumb-pad on INNER div means the border-bottom gets no padding
+<div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+  <div style={{ maxWidth: 1280, margin: "0 auto" }} className="breadcrumb-pad">
+```
+
+**Required sections that reviews must have (beyond the body sections):**
+- Feature banner (full-width dark gradient with `<h1>`, stars, product image) before the hero row
+- Hero row (uses `<h2>`, not `<h1>`, since h1 is in the banner)
+- `Star` import from `lucide-react` (needed for feature banner rating stars)
+- Author box after MetadataStrip
+- Affiliate disclosure after author box
+- Research references as the final section inside `</article>`
+- Related reviews as a full-width bottom section **outside** the `container-pad` div
+
 **ScoringRubric pattern — compositeScore must be assigned AFTER const:**
 ```typescript
 const rubric: ScoringRubric = {
