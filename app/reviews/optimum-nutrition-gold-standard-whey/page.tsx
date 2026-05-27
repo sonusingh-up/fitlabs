@@ -21,14 +21,14 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 export const metadata: Metadata = {
   // Title rule: use template ("%s · Fitlabreviews" from layout) — keep %s under 55 chars.
   // Use { absolute } ONLY when you must include the brand in the title string itself.
-  title: "ON Gold Standard Whey Review (2026) — Rated 9/10",
+  title: "ON Gold Standard 100% Whey Review 2026 — 9/10",
   description:
     "4-year review of ON Gold Standard Whey: full amino acid profile, Informed Choice lab data, USD + INR pricing, vs MuscleBlaze & Dymatize ISO100. FSP 9/10.",
   alternates: {
     canonical: "/reviews/optimum-nutrition-gold-standard-whey",
   },
   openGraph: {
-    title: "ON Gold Standard Whey Review (2026) — Is It Still Worth It?",
+    title: "ON Gold Standard 100% Whey Review 2026 — 9/10",
     description:
       "4 years, 20+ tubs, third-party lab data. Our most thorough whey protein review. FSP Score: 9/10.",
     url: "https://fitlabreviews.com/reviews/optimum-nutrition-gold-standard-whey",

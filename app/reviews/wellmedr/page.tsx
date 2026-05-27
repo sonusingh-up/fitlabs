@@ -15,14 +15,14 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "WellMedr Review (2026) — Is This GLP-1 Telehealth Worth It?",
+  title: "WellMedr GLP-1 Telehealth Review 2026 — 8/10",
   description:
     "WellMedr GLP-1 telehealth review: tirzepatide & semaglutide from $88/mo, same-day consults, microdosing option, 300+ TrustPilot reviews. FSP 8/10.",
   alternates: {
     canonical: "/reviews/wellmedr",
   },
   openGraph: {
-    title: "WellMedr Review (2026) — Is This GLP-1 Telehealth Worth It?",
+    title: "WellMedr GLP-1 Telehealth Review 2026 — 8/10",
     description:
       "Tirzepatide & semaglutide online from $88/mo. Same-day consults, microdosing protocols, 300+ verified reviews. Our full analysis.",
     url: "https://fitlabreviews.com/reviews/wellmedr",
@@ -267,7 +267,7 @@ export default function WellMedrReview() {
         <div style={{ width: "100%", height: 320, background: "linear-gradient(145deg, #0F1E2A 0%, #091520 100%)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
           {/* Product image — right side */}
-          <div style={{ position: "absolute", right: "8%", bottom: 0, width: 220, height: 280, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, width: 220, height: 280, alignItems: "flex-end", justifyContent: "center" }}>
             <Image
               src="/products/wellmedr-product.webp"
               alt="WellMedr compounded GLP-1/GIP tirzepatide vial with syringe"
