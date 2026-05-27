@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, BookOpen, Star } from "lucide-react";
 
 export interface ProductCardProps {
@@ -15,6 +16,8 @@ export interface ProductCardProps {
   buyUrl: string;
   buyLabel?: string;
   reviewSlug?: string;
+  /** filename inside /public/products/ e.g. "on-gold-standard-whey.webp" */
+  image?: string;
   /** hex gradient start e.g. "#1E1B18" */
   bgFrom?: string;
   bgTo?: string;
@@ -34,6 +37,7 @@ export default function ProductCard({
   buyUrl,
   buyLabel = "Check Price",
   reviewSlug,
+  image,
   bgFrom = "#1E1B18",
   bgTo = "#141210",
   accent = "#C4622D",
@@ -78,70 +82,109 @@ export default function ProductCard({
         position: "relative",
         overflow: "hidden",
         flexShrink: 0,
-        display: "flex",
+        display: image ? "block" : "flex",
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
         gap: 8,
       }}>
-        {/* Grid overlay */}
+        {/* Grid texture */}
         <div style={{
           position: "absolute",
           inset: 0,
           backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
+          zIndex: 0,
         }} />
 
-        {/* Score ring */}
-        {score !== undefined && (
-          <div style={{ position: "relative", zIndex: 2 }}>
-            <svg width={72} height={72} viewBox="0 0 72 72">
-              <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(242,235,217,0.08)" strokeWidth={4} />
-              <circle
-                cx={36} cy={36} r={30}
-                fill="none"
-                stroke={accent}
-                strokeWidth={4}
-                strokeDasharray={`${(score / maxScore) * 188.5} 188.5`}
-                strokeLinecap="round"
-                transform="rotate(-90 36 36)"
-              />
-              <text x={36} y={40} textAnchor="middle" fill="#F2EBD9" fontSize={20} fontWeight={800} fontFamily="Georgia, serif">
-                {score}
-              </text>
-            </svg>
-          </div>
+        {image ? (
+          <>
+            {/* Actual product photo */}
+            <Image
+              src={`/products/${image}`}
+              alt={`${name} by ${brand}`}
+              fill
+              style={{ objectFit: "contain", padding: "16px 20px", zIndex: 1 }}
+              sizes="(max-width: 768px) 50vw, 280px"
+            />
+            {/* Small score ring — bottom-right */}
+            {score !== undefined && (
+              <div style={{ position: "absolute", bottom: 10, right: 10, zIndex: 3 }}>
+                <svg width={52} height={52} viewBox="0 0 52 52">
+                  <circle cx={26} cy={26} r={22} fill="rgba(20,18,16,0.82)" />
+                  <circle cx={26} cy={26} r={20} fill="none" stroke="rgba(242,235,217,0.08)" strokeWidth={3} />
+                  <circle
+                    cx={26} cy={26} r={20}
+                    fill="none"
+                    stroke={accent}
+                    strokeWidth={3}
+                    strokeDasharray={`${(score / maxScore) * 125.7} 125.7`}
+                    strokeLinecap="round"
+                    transform="rotate(-90 26 26)"
+                  />
+                  <text x={26} y={31} textAnchor="middle" fill="#F2EBD9" fontSize={15} fontWeight={800} fontFamily="Georgia, serif">
+                    {score}
+                  </text>
+                </svg>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            {/* No image — large centered score ring + stars */}
+            {score !== undefined && (
+              <div style={{ position: "relative", zIndex: 2 }}>
+                <svg width={72} height={72} viewBox="0 0 72 72">
+                  <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(242,235,217,0.08)" strokeWidth={4} />
+                  <circle
+                    cx={36} cy={36} r={30}
+                    fill="none"
+                    stroke={accent}
+                    strokeWidth={4}
+                    strokeDasharray={`${(score / maxScore) * 188.5} 188.5`}
+                    strokeLinecap="round"
+                    transform="rotate(-90 36 36)"
+                  />
+                  <text x={36} y={40} textAnchor="middle" fill="#F2EBD9" fontSize={20} fontWeight={800} fontFamily="Georgia, serif">
+                    {score}
+                  </text>
+                </svg>
+              </div>
+            )}
+            {score !== undefined && (
+              <div style={{ display: "flex", gap: 2, position: "relative", zIndex: 2 }}>
+                {Array.from({ length: 10 }).map((_, i) => (
+                  <Star
+                    key={i}
+                    size={8}
+                    fill={i < score ? accent : "none"}
+                    color={i < score ? accent : "rgba(242,235,217,0.2)"}
+                  />
+                ))}
+              </div>
+            )}
+          </>
         )}
 
-        {/* Stars row */}
-        {score !== undefined && (
-          <div style={{ display: "flex", gap: 2, position: "relative", zIndex: 2 }}>
-            {Array.from({ length: 10 }).map((_, i) => (
-              <Star
-                key={i}
-                size={8}
-                fill={i < score ? accent : "none"}
-                color={i < score ? accent : "rgba(242,235,217,0.2)"}
-              />
-            ))}
-          </div>
-        )}
-
-        {/* Category tag */}
+        {/* Category tag — pinned bottom */}
         <span style={{
-          position: "relative",
-          zIndex: 2,
+          position: "absolute",
+          bottom: 8,
+          left: image ? 12 : "50%",
+          transform: image ? "none" : "translateX(-50%)",
+          zIndex: 3,
           fontFamily: "var(--font-dm-mono), monospace",
           fontSize: 8,
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: "rgba(242,235,217,0.35)",
+          color: "rgba(242,235,217,0.38)",
+          whiteSpace: "nowrap",
         }}>
           {category}
         </span>
 
         {/* Bottom fade */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${bgTo})` }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${bgTo})`, zIndex: 2 }} />
       </div>
 
       {/* ── Accent line ─────────────────────────────────────────────────── */}

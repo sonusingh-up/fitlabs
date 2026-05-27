@@ -698,6 +698,7 @@ export default function MyproteinCreatineReview() {
                     buyUrl="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852500.html"
                     buyLabel="Check Price"
                     reviewSlug="myprotein-creatine-monohydrate"
+                    image="bulk-supplements-creatine.webp"
                     bgFrom="#1A1E2E"
                     bgTo="#11131E"
                     accent="#3A5F8B"
@@ -727,6 +728,7 @@ export default function MyproteinCreatineReview() {
                     tags={["Informed Choice", "5g serving", "Sport Tested"]}
                     buyUrl="https://amzn.to/on-creatine"
                     buyLabel="Check Price"
+                    image="on-micronized-creatine-monohydrate-powder.webp"
                     bgFrom="#1A2E1E"
                     bgTo="#0F1A11"
                     accent="#2D6A4F"
@@ -741,6 +743,7 @@ export default function MyproteinCreatineReview() {
                     tags={["India Brand", "3g serve ⚠", "Tub"]}
                     buyUrl="https://amzn.to/muscleblaze-creatine"
                     buyLabel="Check Price"
+                    image="muscleblaze-creatine.webp"
                     bgFrom="#1E1B18"
                     bgTo="#141210"
                     accent="#C4622D"

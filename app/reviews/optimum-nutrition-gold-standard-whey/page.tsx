@@ -728,6 +728,7 @@ export default function ONGoldStandardReview() {
                     buyUrl="https://amzn.to/on-gold-standard-whey"
                     buyLabel="Check Price"
                     reviewSlug="optimum-nutrition-gold-standard-whey"
+                    image="on-gold-standard-whey.webp"
                     bgFrom="#1A2E1E"
                     bgTo="#0F1A11"
                     accent="#2D6A4F"
@@ -743,6 +744,7 @@ export default function ONGoldStandardReview() {
                     tags={["India Brand", "Biozyme", "25g protein"]}
                     buyUrl="https://amzn.to/muscleblaze-biozyme-whey"
                     buyLabel="Check Price"
+                    image="muscleblaze-biozyme-performance-whey.webp"
                     bgFrom="#1E1B18"
                     bgTo="#141210"
                     accent="#C4622D"
@@ -771,6 +773,7 @@ export default function ONGoldStandardReview() {
                     tags={["Informed Choice", "Isolate", "Lactose-Free"]}
                     buyUrl="https://amzn.to/dymatize-iso100"
                     buyLabel="Check Price"
+                    image="dymatize-iso100.webp"
                     bgFrom="#1B1A2E"
                     bgTo="#12111E"
                     accent="#5C5CBF"
