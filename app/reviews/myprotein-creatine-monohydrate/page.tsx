@@ -17,14 +17,14 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "MyProtein Creatine Monohydrate Review 2026 — 8/10",
+  title: "MyProtein Creatine Monohydrate Review 2026: Results, Dosage & Honest Verdict",
   description:
     "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. India market focus. FSP 8/10.",
   alternates: {
     canonical: "/reviews/myprotein-creatine-monohydrate",
   },
   openGraph: {
-    title: "MyProtein Creatine Monohydrate Review 2026 — 8/10",
+    title: "MyProtein Creatine Monohydrate Review 2026: Results, Dosage & Honest Verdict",
     description: "Pure creatine at a budget price. What it does well, what it skips, and whether that matters for you.",
     url: "https://fitlabreviews.com/reviews/myprotein-creatine-monohydrate",
     type: "article",
