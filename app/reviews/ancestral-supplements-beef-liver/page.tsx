@@ -18,14 +18,14 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Ancestral Supplements Beef Liver Review 2026 — 8/10",
+  title: "Ancestral Supplements Beef Liver Review (2026): Worth It?",
   description:
     "Ancestral Supplements Beef Liver review: NZ grass-fed freeze-dried organ, full nutrient breakdown, Vitamin A limits, USD pricing, vs competitors. FSP 8/10.",
   alternates: {
     canonical: "/reviews/ancestral-supplements-beef-liver",
   },
   openGraph: {
-    title: "Ancestral Supplements Beef Liver Review 2026 — 8/10",
+    title: "Ancestral Supplements Beef Liver Review (2026): Worth It?",
     description:
       "Is freeze-dried beef liver worth $45? NZ sourcing, heavy metal COA, Vitamin A reality check, and whether it beats buying liver from a butcher.",
     url: "https://fitlabreviews.com/reviews/ancestral-supplements-beef-liver",
