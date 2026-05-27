@@ -24,6 +24,19 @@ type ResearchArticle = {
 
 const articles: ResearchArticle[] = [
   {
+    slug: "creatine-brain-health",
+    title: "Creatine for Brain Health:",
+    titleItalic: "Cognition, Memory & Mental Energy",
+    figure: "ART-010",
+    topic: "Brain & Cognitive Health",
+    readTime: "14 min",
+    publishedAt: "May 2026",
+    summary: "Multiple RCTs show creatine improves working memory (effect size g = 0.34 in a 2023 meta-analysis of 10 trials, rising to g = 0.54 in adults over 65). Effects are strongest in vegetarians, older adults, and sleep-deprived individuals — populations with chronically low brain phosphocreatine.",
+    evidence: "strong",
+    tags: ["Creatine", "Cognition", "Working Memory", "Mental Fatigue", "Vegetarians"],
+    accent: "#5B7FBD",
+  },
+  {
     slug: "sleep-duration-biological-aging",
     title: "Sleep Duration and Biological Aging:",
     titleItalic: "Why 6.4–7.8 Hours May Be the Sweet Spot",
@@ -143,6 +156,7 @@ const articles: ResearchArticle[] = [
 ];
 
 const topicGroups = [
+  { label: "Brain & Cognitive Health", topics: ["Brain & Cognitive Health"] },
   { label: "Longevity & Sleep", topics: ["Longevity & Sleep"] },
   { label: "GLP-1 & Medications", topics: ["GLP-1 & Medications"] },
   { label: "Ingredient Science", topics: ["Ingredient Science", "Ingredient Mechanism"] },
