@@ -15,14 +15,14 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "WellMedr GLP-1 Telehealth Review 2026 — 8/10",
+  title: "WellMedr Review 2026: Legit GLP-1 Weight Loss Telehealth or Not Worth It?",
   description:
     "WellMedr GLP-1 telehealth review: tirzepatide & semaglutide from $88/mo, same-day consults, microdosing option, 300+ TrustPilot reviews. FSP 8/10.",
   alternates: {
     canonical: "/reviews/wellmedr",
   },
   openGraph: {
-    title: "WellMedr GLP-1 Telehealth Review 2026 — 8/10",
+    title: "WellMedr Review 2026: Legit GLP-1 Weight Loss Telehealth or Not Worth It?",
     description:
       "Tirzepatide & semaglutide online from $88/mo. Same-day consults, microdosing protocols, 300+ verified reviews. Our full analysis.",
     url: "https://fitlabreviews.com/reviews/wellmedr",
