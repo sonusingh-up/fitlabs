@@ -279,7 +279,61 @@ Read the matching template before writing any new research article.
 
 ---
 
-## 14. Build Verification
+## 14. Review Article Skill
+
+Use the `/review-article <slug>` slash command to build a new product review article.
+
+**What it does:**
+- Creates `app/reviews/<slug>/page.tsx` (static route — takes priority over the `[slug]` fallback)
+- Encodes the full `ScoringRubric` type with all 7 required fields and exact prop signatures for every review component (`ReviewScoreBadge`, `FlagSystem`, `ClaimAudit`, `ValueMetricPanel`, `PillarBreakdown`, `ProductCard`, `ReviewHeader`)
+- Enforces FSP v2.1 scoring weights (Formula 35%, Transparency 25%, Verification 20%, Value 12%, Practical 8%)
+- Applies correct JSON-LD (Review + FAQPage), SEO metadata, canonical tags, and design tokens
+- Runs the pre-commit checklist automatically
+
+**When to use it:**
+```
+/review-article optimum-nutrition-gold-standard-whey
+/review-article myprotein-impact-whey-isolate
+/review-article legion-pulse-pre-workout
+```
+
+**Critical component prop patterns (TypeScript enforced — wrong props = build failure):**
+```tsx
+// ✅ CORRECT
+<ReviewScoreBadge rating={editorialScore} size="lg" />
+<FlagSystem flags={rubric.flags} />
+<ClaimAudit items={rubric.claimAudit} />
+<ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="creatine monohydrate" />
+
+// ❌ WRONG (cause build errors)
+<ReviewScoreBadge score={} maxScore={} accent={} />
+<FlagSystem green={[]} red={[]} />
+<ClaimAudit claims={[]} />
+<ValueMetricPanel priceUSD={} servings={} />
+```
+
+**ScoringRubric pattern — compositeScore must be assigned AFTER const:**
+```typescript
+const rubric: ScoringRubric = {
+  pillars: [...],           // 5 required
+  flags: [...],             // green/red with type, label, detail, deduction?
+  claimAudit: [...],        // 4–6 claims
+  valueMetric: { pricePerServing, primaryActiveGrams, pricePerGramActive, categoryAvgPricePerGram, efficiency },
+  compositeScore: 0,        // ← always 0 here
+  editorialScore: 8 as ReviewRating,
+};
+rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);  // ← assigned after
+```
+
+**Review figure codes:** `REV-2026-NNN`. Check existing review pages for the next available number (current highest in use: REV-2026-044).
+
+**Skill file location:** `.claude/commands/review-article.md` (local only — not committed; canonical reference copy is `docs/review-article-skill.md`)
+
+**Product image filenames** available in `/public/products/` — pass the filename as the `image` prop on `ProductCard`. If no matching image exists, omit the prop and the card renders a gradient with a centered score ring.
+
+---
+
+## 15. Build Verification
 
 Before every `git push`, run:
 ```bash
