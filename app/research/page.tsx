@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Supplement Research & Science Articles",
-  description: "Evidence-based research articles on supplement science, ingredient mechanisms, dosing protocols, and clinical study breakdowns. Written for serious athletes and coaches.",
+  description: "Evidence-graded research articles on supplement science, longevity, GLP-1 medications, sleep biology, and clinical trial breakdowns. Every claim is linked to named peer-reviewed studies.",
   alternates: { canonical: "/research" },
 };
 
@@ -23,6 +23,45 @@ type ResearchArticle = {
 };
 
 const articles: ResearchArticle[] = [
+  {
+    slug: "sleep-duration-biological-aging",
+    title: "Sleep Duration and Biological Aging:",
+    titleItalic: "Why 6.4–7.8 Hours May Be the Sweet Spot",
+    figure: "ART-007",
+    topic: "Longevity & Sleep",
+    readTime: "13 min",
+    publishedAt: "May 2026",
+    summary: "Data from over 1.1 million adults links 6.4–7.8 hours of sleep to the slowest biological aging. We examine five mechanisms — growth hormone release, glymphatic clearance, telomere length, inflammation, and cortisol — and what they mean in practice.",
+    evidence: "strong",
+    tags: ["Sleep", "Biological Aging", "Telomeres", "Longevity"],
+    accent: "#1A6B3A",
+  },
+  {
+    slug: "glp1-beyond-weight-loss",
+    title: "GLP-1 Medications Beyond Weight Loss:",
+    titleItalic: "Heart, Brain, Blood Pressure & More",
+    figure: "ART-008",
+    topic: "GLP-1 & Medications",
+    readTime: "15 min",
+    publishedAt: "May 2026",
+    summary: "The SELECT trial showed a 20% cardiovascular event reduction. The FLOW trial was stopped early for a 24% kidney failure benefit. GLP-1 agonists also reduce blood pressure, show migraine promise via CGRP modulation, and are being investigated for depression and alcohol use disorder.",
+    evidence: "strong",
+    tags: ["GLP-1", "Semaglutide", "Cardiovascular", "Kidney Health", "Mental Health"],
+    accent: "#C4622D",
+  },
+  {
+    slug: "microdose-glp1",
+    title: "Microdose GLP-1 Telehealth:",
+    titleItalic: "Does It Work?",
+    figure: "ART-009",
+    topic: "GLP-1 & Medications",
+    readTime: "11 min",
+    publishedAt: "May 2026",
+    summary: "Microdosing semaglutide or tirzepatide at sub-therapeutic doses is gaining traction among telehealth providers as a lower-side-effect alternative. We review the evidence base, dose thresholds, and what the studies actually show about efficacy at reduced doses.",
+    evidence: "moderate",
+    tags: ["GLP-1", "Microdosing", "Telehealth", "Semaglutide"],
+    accent: "#7EB8D4",
+  },
   {
     slug: "creatine-loading-guide",
     title: "The Complete Guide to",
@@ -104,6 +143,8 @@ const articles: ResearchArticle[] = [
 ];
 
 const topicGroups = [
+  { label: "Longevity & Sleep", topics: ["Longevity & Sleep"] },
+  { label: "GLP-1 & Medications", topics: ["GLP-1 & Medications"] },
   { label: "Ingredient Science", topics: ["Ingredient Science", "Ingredient Mechanism"] },
   { label: "Nutrition & Protocols", topics: ["Nutrition Science", "Comparative Analysis"] },
   { label: "Stimulants & Adaptogens", topics: ["Stimulant Science", "Adaptogen Research"] },
@@ -118,8 +159,8 @@ const evidenceConfig = {
 const stats = [
   { label: "Articles Published", value: articles.length.toString() },
   { label: "Strong Evidence", value: articles.filter(a => a.evidence === "strong").length.toString() },
-  { label: "Topics Covered", value: "12+" },
-  { label: "Avg Read Time", value: "8 min" },
+  { label: "Topics Covered", value: topicGroups.length.toString() },
+  { label: "Avg Read Time", value: "10 min" },
 ];
 
 export default function ResearchHubPage() {
@@ -148,7 +189,7 @@ export default function ResearchHubPage() {
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Research</em>
           </h1>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620, marginBottom: 28 }}>
-            Deep-dives into ingredient mechanisms, dosing science, and clinical study breakdowns. Every article is evidence-graded — strong, moderate, or limited — based on the quality and consistency of the underlying research.
+            Deep-dives into clinical trial data, ingredient mechanisms, longevity science, and GLP-1 pharmacology. Every article is evidence-graded — strong, moderate, or limited — based on the quality and consistency of the underlying research.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
             {stats.map((s) => (

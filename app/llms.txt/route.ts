@@ -49,6 +49,35 @@ const BLOG_ARTICLES = [
   },
 ];
 
+// ─── Research Articles ────────────────────────────────────────────────────────
+
+const RESEARCH_ARTICLES = [
+  {
+    slug: "sleep-duration-biological-aging",
+    title: "Sleep Duration and Biological Aging: Why 6.4–7.8 Hours May Be the Sweet Spot",
+    evidence: "Strong Evidence",
+    readTime: "13 min",
+    summary:
+      "ART-007. Kripke 2002 (1.1M adults), Cappuccio 2010 meta-analysis. Five mechanisms: growth hormone (70–80% released in slow-wave sleep), glymphatic clearance (~10× faster during sleep), telomere shortening (<6h), IL-6/CRP inflammation, cortisol dysregulation. U-curve risk table, 6 practical protocol tips.",
+  },
+  {
+    slug: "glp1-beyond-weight-loss",
+    title: "GLP-1 Medications Beyond Weight Loss: Heart, Brain, Blood Pressure & More",
+    evidence: "Strong Evidence",
+    readTime: "15 min",
+    summary:
+      "ART-008. SELECT trial (2023, NEJM): 20% MACE reduction in 17,604 non-diabetic adults. FLOW trial (2024, NEJM): 24% kidney failure reduction, stopped early. SURMOUNT-OSA: ~60% AHI reduction. ESSENCE trial: 62.9% MASH resolution. Blood pressure: −3.57 mmHg systolic (meta-analysis, 60 trials). Migraine/CGRP pathway, depression/reward modulation, ~50% alcohol relapse reduction (Klausen 2022).",
+  },
+  {
+    slug: "microdose-glp1",
+    title: "Microdose GLP-1 Telehealth: Does It Work?",
+    evidence: "Moderate Evidence",
+    readTime: "11 min",
+    summary:
+      "ART-009. Sub-therapeutic dosing of semaglutide and tirzepatide to reduce side effects while preserving weight-loss benefit. Evidence base, dose thresholds, and what the studies show about efficacy at reduced doses versus titration schedules.",
+  },
+];
+
 const STATIC_REVIEWS = [
   { slug: "wellmedr", title: "WellMedr Weight Management", category: "GLP-1 Program", fsp: "9.2/10", summary: "Clinician-supervised telehealth GLP-1 programme. Programme structure, prescribing criteria, cost, semaglutide/tirzepatide evidence base." },
   { slug: "optimum-nutrition-gold-standard-whey", title: "Optimum Nutrition Gold Standard Whey", category: "Protein Powder", fsp: "9/10", summary: "Benchmark whey protein. Amino acid profile, third-party testing, value vs premium alternatives." },
@@ -101,6 +130,14 @@ export async function GET() {
   ]) {
     lines.push(`- [${label}](${SITE}${path})`);
   }
+  lines.push("");
+
+  lines.push("## Research Articles");
+  lines.push("");
+  for (const article of RESEARCH_ARTICLES) {
+    lines.push(`- [${article.title}](${SITE}/research/${article.slug}): ${article.summary} [${article.evidence}, ${article.readTime} read]`);
+  }
+  lines.push(`- Full research index: ${SITE}/research`);
   lines.push("");
 
   lines.push("## Blog Articles");
