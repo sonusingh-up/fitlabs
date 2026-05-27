@@ -240,7 +240,46 @@ The skill uses `app/blog/sleep-window-anti-aging/page.tsx` as the structural gol
 
 ---
 
-## 13. Build Verification
+## 13. Research Article Skill
+
+Use the `/research-article <slug>` slash command to build a new deep-dive research article.
+
+**What it does:**
+- Creates `app/research/<slug>/page.tsx` (static route — takes priority over the `[slug]` fallback)
+- Enforces: breadcrumb, optional medical disclaimer, hero with evidence badge + author bar, dark stats panel, Quick Answer box, 6–10 body sections with trial cards / mechanism panels, Bottom Line dark panel, FAQ accordion, clickable PubMed reference list, related content block
+- Applies correct JSON-LD (Article + FAQPage), SEO metadata, and ART figure code
+- Syncs the article to `app/research/page.tsx` hub array
+- Runs the pre-commit checklist automatically
+
+**When to use it:**
+```
+/research-article sleep-duration-biological-aging
+/research-article glp1-beyond-weight-loss
+/research-article creatine-phosphocreatine-mechanism
+/research-article omega3-cardiovascular-evidence
+```
+
+**Skill file location:** `.claude/commands/research-article.md` (local only — not committed; canonical reference copy is `docs/research-article-skill.md`)
+
+**Gold standard templates:**
+- Longevity/biology topics → `app/research/sleep-duration-biological-aging/page.tsx` (ART-007)
+- Pharmacology/trials topics → `app/research/glp1-beyond-weight-loss/page.tsx` (ART-008)
+
+Read the matching template before writing any new research article.
+
+**Research article figure codes:** `ART-XXX`. Current highest: ART-009. Check `app/research/page.tsx` `articles` array for the next available number.
+
+**Key differences from blog articles:**
+- Research articles are longer (12–20 min read), trial-card-heavy, and use numbered `§ 01` section headings via `SectionHeading`
+- No sidebar TOC — content lives in a single `maxWidth: 780` column
+- References are clickable numbered divs with real PubMed/DOI URLs, not an `<ol>` list
+- Author bar is mandatory in the hero
+- Medical disclaimer banner required for any prescription drug content
+- ART figure code used (not BLG-)
+
+---
+
+## 14. Build Verification
 
 Before every `git push`, run:
 ```bash
