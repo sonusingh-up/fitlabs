@@ -125,6 +125,31 @@ export default function SleepDurationAgingPage() {
             ))}
           </div>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#A89880" }}>Updated May 2026 · 11 min read · ART-007</p>
+
+          {/* Author bar */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, marginTop: 18, borderTop: "1px solid #D4C9B8" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#C4622D", letterSpacing: "0.04em" }}>FLR</span>
+              </div>
+              <div>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  Fitlab Research Team
+                </Link>
+              </div>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -366,23 +391,27 @@ export default function SleepDurationAgingPage() {
         {/* References */}
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="References" figure="§ 08" title="Clinical" titleItalic="References" size="sm" />
-          <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
+          <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
             {[
-              "Kripke DF, et al. (2002). Mortality associated with sleep duration and insomnia. Archives of General Psychiatry, 59(2), 131–136.",
-              "Cappuccio FP, et al. (2010). Sleep duration and all-cause mortality: a systematic review and meta-analysis. Sleep, 33(5), 585–592.",
-              "Van Cauter E, et al. (2000). Age-related changes in slow wave sleep and REM sleep and relationship with growth hormone and cortisol levels in healthy men. JAMA, 284(7), 861–868.",
-              "Xie L, et al. (2013). Sleep drives metabolite clearance from the adult brain. Science, 342(6156), 373–377.",
-              "Xiao Q, et al. (2022). Sleep characteristics and telomere length in adults. Aging (Albany NY), 14(1), 399–414.",
-              "Mullington JM, et al. (2009). Cardiovascular, inflammatory, and metabolic consequences of sleep deprivation. Progress in Cardiovascular Diseases, 51(4), 294–302.",
-              "Epel ES, et al. (2013). Stress and telomere biology: A lifespan perspective. Psychoneuroendocrinology, 38(9), 1835–1842.",
-              "Prather AA, et al. (2015). Behaviorally assessed sleep and susceptibility to the common cold. Sleep, 38(9), 1353–1359.",
-              "Spiegel K, et al. (2004). Brief communication: Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. Annals of Internal Medicine, 141(11), 846–850.",
-              "Shokri-Kojori E, et al. (2018). β-Amyloid accumulation in the human brain after one night of sleep deprivation. PNAS, 115(17), 4483–4488.",
-              "Irwin MR, et al. (2016). Sleep disturbance, sleep duration, and inflammation. Biological Psychiatry, 80(1), 40–52.",
-              "Gooley JJ, et al. (2011). Exposure to room light before bedtime suppresses melatonin onset. Journal of Clinical Endocrinology & Metabolism, 96(3), E463–E472.",
-              "Zhdanova IV, et al. (1995). Sleep-inducing effects of low doses of melatonin. Clinical Pharmacology & Therapeutics, 57(5), 552–558.",
+              { text: "Kripke DF, Garfinkel L, Wingard DL, Klauber MR, Marler MR. Mortality associated with sleep duration and insomnia. Arch Gen Psychiatry. 2002;59(2):131–136.", url: "https://pubmed.ncbi.nlm.nih.gov/11825133/" },
+              { text: "Cappuccio FP, D'Elia L, Strazzullo P, Miller MA. Sleep duration and all-cause mortality: a systematic review and meta-analysis of prospective studies. Sleep. 2010;33(5):585–592.", url: "https://pubmed.ncbi.nlm.nih.gov/20469800/" },
+              { text: "Van Cauter E, Leproult R, Plat L. Age-related changes in slow wave sleep and REM sleep and relationship with growth hormone and cortisol levels in healthy men. JAMA. 2000;284(7):861–868.", url: "https://pubmed.ncbi.nlm.nih.gov/10907652/" },
+              { text: "Xie L, Kang H, Xu Q, et al. Sleep drives metabolite clearance from the adult brain. Science. 2013;342(6156):373–377.", url: "https://pubmed.ncbi.nlm.nih.gov/24136970/" },
+              { text: "Xiao Q, Hale L, Caporaso NE, et al. Sleep duration and telomere length: a Mendelian randomization study. Aging (Albany NY). 2022;14(1):399–414.", url: "https://pubmed.ncbi.nlm.nih.gov/35029540/" },
+              { text: "Mullington JM, Haack M, Toth M, Serrador JM, Meier-Ewert HK. Cardiovascular, inflammatory, and metabolic consequences of sleep deprivation. Prog Cardiovasc Dis. 2009;51(4):294–302.", url: "https://pubmed.ncbi.nlm.nih.gov/19110130/" },
+              { text: "Epel ES, Blackburn EH, Lin J, et al. Stress and telomere biology: a lifespan perspective. Psychoneuroendocrinology. 2013;38(9):1835–1842.", url: "https://pubmed.ncbi.nlm.nih.gov/23946831/" },
+              { text: "Prather AA, Janicki-Deverts D, Hall MH, Cohen S. Behaviorally assessed sleep and susceptibility to the common cold. Sleep. 2015;38(9):1353–1359.", url: "https://pubmed.ncbi.nlm.nih.gov/26118561/" },
+              { text: "Spiegel K, Tasali E, Penev P, Van Cauter E. Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. Ann Intern Med. 2004;141(11):846–850.", url: "https://pubmed.ncbi.nlm.nih.gov/15583226/" },
+              { text: "Shokri-Kojori E, Wang GJ, Wiers CE, et al. β-Amyloid accumulation in the human brain after one night of sleep deprivation. Proc Natl Acad Sci USA. 2018;115(17):4483–4488.", url: "https://pubmed.ncbi.nlm.nih.gov/29632177/" },
+              { text: "Irwin MR, Olmstead R, Carroll JE. Sleep disturbance, sleep duration, and inflammation: a systematic review and meta-analysis of cohort studies and experimental sleep deprivation. Biol Psychiatry. 2016;80(1):40–52.", url: "https://pubmed.ncbi.nlm.nih.gov/26140821/" },
+              { text: "Gooley JJ, Chamberlain K, Smith KA, et al. Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans. J Clin Endocrinol Metab. 2011;96(3):E463–E472.", url: "https://pubmed.ncbi.nlm.nih.gov/20944099/" },
+              { text: "Zhdanova IV, Wurtman RJ, Lynch HJ, et al. Sleep-inducing effects of low doses of melatonin ingested in the evening. Clin Pharmacol Ther. 1995;57(5):552–558.", url: "https://pubmed.ncbi.nlm.nih.gov/7768073/" },
             ].map((ref, i) => (
-              <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{ref}</li>
+              <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                {ref.text}{" "}
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
+              </li>
             ))}
           </ol>
         </section>

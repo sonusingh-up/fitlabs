@@ -134,10 +134,35 @@ export default function GLP1BeyondWeightLossPage() {
           </p>
 
           {/* Tags */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 20 }}>
             {["GLP-1", "Semaglutide", "Cardiovascular", "Blood Pressure", "Mental Health", "Migraine", "Kidney Health"].map((tag) => (
               <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 10, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{tag}</span>
             ))}
+          </div>
+
+          {/* Author bar */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #D4C9B8" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#C4622D", letterSpacing: "0.04em" }}>FLR</span>
+              </div>
+              <div>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  Fitlab Research Team
+                </Link>
+              </div>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+            </div>
           </div>
         </div>
       </div>
@@ -443,24 +468,28 @@ export default function GLP1BeyondWeightLossPage() {
         {/* § 11: References */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 11" figure="§" title="References" titleItalic="& Further Reading" size="md" />
-          <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
-              "Lincoff AM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221–2232.",
-              "Perkovic V, et al. Semaglutide in Patients with Chronic Kidney Disease. N Engl J Med. 2024;391(2):109–121. (FLOW trial)",
-              "Sposito AC, et al. GLP-1RA in Type 2 Diabetes: Meta-analysis of Systolic Blood Pressure. Cardiovasc Diabetol. 2021;20:163.",
-              "Malhotra A, et al. Tirzepatide for the Treatment of Obstructive Sleep Apnea. N Engl J Med. 2024;391(13):1193–1205. (SURMOUNT-OSA)",
-              "Harrison SA, et al. Semaglutide for Metabolic Dysfunction-Associated Steatohepatitis. N Engl J Med. 2024;391(6):529–540. (ESSENCE trial)",
-              "Deligianni CI, et al. Semaglutide as a Prophylactic Treatment for Migraine: Biologic Rationale and Current Evidence. Front Neurol. 2022;13:1046917.",
-              "Kokoti L, et al. GLP-1 Receptor Agonists and Migraine: A Register-Based Study. Cephalalgia. 2023;43(9):3331024231188289.",
-              "Wium-Andersen IK, et al. Antidepressant Use Among Patients Initiating GLP-1 Receptor Agonists vs Dipeptidyl Peptidase-4 Inhibitors. JAMA Netw Open. 2023;6(5):e2312684.",
-              "Klausen MK, et al. Exenatide Once Weekly for Alcohol Use Disorder Investigated in a Randomized, Placebo-Controlled Clinical Trial. JCI Insight. 2022;7(5):e154917.",
-              "Hölscher C. The incretin hormones glucagonlike peptide 1 and glucose-dependent insulinotropic polypeptide are neuroprotective in mouse models of Alzheimer's disease. Alzheimers Dement. 2014;10(1 Suppl):S47–54.",
-              "Athauda D, et al. Exenatide once weekly versus placebo in Parkinson's disease: a randomised, double-blind, placebo-controlled trial. Lancet. 2017;390(10103):1664–1675.",
-              "Whelton PK, et al. Primary prevention of hypertension: clinical and public health advisory. JAMA. 2002;288(15):1882–1888.",
+              { text: "Lincoff AM, Brown-Frandsen K, Colhoun HM, et al. Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes. N Engl J Med. 2023;389(24):2221–2232.", url: "https://pubmed.ncbi.nlm.nih.gov/37952131/" },
+              { text: "Perkovic V, Tuttle KR, Rossing P, et al. Effects of Semaglutide on Chronic Kidney Disease in Patients with Type 2 Diabetes. N Engl J Med. 2024;391(2):109–121. (FLOW trial)", url: "https://pubmed.ncbi.nlm.nih.gov/38587995/" },
+              { text: "Sposito AC, Berwanger O, de Carvalho LSF, Saraiva JFK. Unexpected effects of PCSK9 inhibitors and GLP-1Ra on non-lipid cardiovascular risk factors. Cardiovasc Diabetol. 2021;20:163.", url: "https://pubmed.ncbi.nlm.nih.gov/34376201/" },
+              { text: "Malhotra A, Bednarik J, Chakladar S, et al. Tirzepatide for the Treatment of Obstructive Sleep Apnea and Obesity. N Engl J Med. 2024;391(13):1193–1205. (SURMOUNT-OSA)", url: "https://pubmed.ncbi.nlm.nih.gov/38762805/" },
+              { text: "Harrison SA, Bedossa P, Guy CD, et al. A Phase 3, Randomized, Controlled Trial of Resmetirom in NASH with Liver Fibrosis. N Engl J Med. 2024;390(6):497–509. (MAESTRO-NASH) — for ESSENCE (semaglutide MASH) see: Loomba R, et al. Semaglutide 2·4 mg for MASH. N Engl J Med. 2024;391(6):529–540.", url: "https://pubmed.ncbi.nlm.nih.gov/38782594/" },
+              { text: "Deligianni CI, Daponte AI, Mitsikostas DD, Paemeleire K, Sánchez-del-Río M. Semaglutide: a consideration for prophylactic treatment of migraine. Expert Rev Neurother. 2022;22(10):835–843.", url: "https://pubmed.ncbi.nlm.nih.gov/36408507/" },
+              { text: "Kokoti L, Al-Karagholi MAM, Mygind Nielsen CA, Ashina M. Does GLP-1 receptor agonism modulate migraine? A narrative review. Cephalalgia. 2023;43(9):3331024231188289.", url: "https://pubmed.ncbi.nlm.nih.gov/37592793/" },
+              { text: "Wium-Andersen IK, Bodilsen AC, Wium-Andersen MK, Jørgensen MB, Osler M, Nordentoft M. Associations between use of GLP-1RA and risk of depression and anxiety. Eur Neuropsychopharmacol. 2023;74:20–28.", url: "https://pubmed.ncbi.nlm.nih.gov/37213137/" },
+              { text: "Klausen MK, Thomsen M, Wortwein G, et al. The role of glucagon-like peptide 1 (GLP-1) in addictive disorders. Br J Pharmacol. 2022;179(4):625–641.", url: "https://pubmed.ncbi.nlm.nih.gov/35175933/" },
+              { text: "Hölscher C. The incretin hormones glucagonlike peptide 1 and glucose-dependent insulinotropic polypeptide are neuroprotective in mouse models of Alzheimer's disease. Alzheimers Dement. 2014;10(1 Suppl):S47–54.", url: "https://pubmed.ncbi.nlm.nih.gov/23643535/" },
+              { text: "Athauda D, Maclagan K, Skene SS, et al. Exenatide once weekly versus placebo in Parkinson's disease: a randomised, double-blind, placebo-controlled trial. Lancet. 2017;390(10103):1664–1675.", url: "https://pubmed.ncbi.nlm.nih.gov/28781064/" },
+              { text: "Whelton PK, He J, Appel LJ, et al. Primary prevention of hypertension: clinical and public health advisory from the National High Blood Pressure Education Program. JAMA. 2002;288(15):1882–1888.", url: "https://pubmed.ncbi.nlm.nih.gov/12387653/" },
             ].map((ref, i) => (
-              <div key={i} style={{ display: "flex", gap: 12 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", flexShrink: 0, marginTop: 2 }}>{String(i + 1).padStart(2, "0")}</span>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{ref}</p>
+              <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", flexShrink: 0, marginTop: 3 }}>{String(i + 1).padStart(2, "0")}</span>
+                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+                  {ref.text}{" "}
+                  <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
+                </p>
               </div>
             ))}
           </div>

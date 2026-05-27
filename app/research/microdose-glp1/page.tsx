@@ -125,10 +125,35 @@ export default function MicrodoseGlp1Page() {
           <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, maxWidth: 660, marginBottom: 24 }}>
             Starting tirzepatide or semaglutide at sub-clinical doses — and titrating more slowly than the label suggests — is becoming a defining feature of premium GLP-1 telehealth. Here is what the clinical evidence says about efficacy, tolerability, and which providers actually offer it.
           </p>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
             {["GLP-1", "Tirzepatide", "Semaglutide", "Telehealth", "Weight Loss"].map((tag) => (
               <span key={tag} style={{ padding: "3px 10px", backgroundColor: "rgba(196,98,45,0.07)", border: "1px solid rgba(196,98,45,0.18)", borderRadius: 20, fontSize: 10, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>{tag}</span>
             ))}
+          </div>
+
+          {/* Author bar */}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #D4C9B8" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#C4622D", letterSpacing: "0.04em" }}>FLR</span>
+              </div>
+              <div>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  Fitlab Research Team
+                </Link>
+              </div>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+            </div>
+            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <div>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+            </div>
           </div>
         </div>
       </div>
@@ -502,17 +527,22 @@ export default function MicrodoseGlp1Page() {
         {/* Section 10: References */}
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="References" figure="§ 10" title="Clinical" titleItalic="References" size="sm" />
-          <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
+          <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
             {[
-              "Jastreboff AM, et al. (2022). Tirzepatide Once Weekly for the Treatment of Obesity. New England Journal of Medicine, 387(3), 205–216.",
-              "Wadden TA, et al. (2023). Tirzepatide after Intensive Lifestyle Intervention in Adults with Overweight or Obesity (SURMOUNT-3). New England Journal of Medicine, 389(17), 1567–1578.",
-              "Aronne LJ, et al. (2024). Continued Treatment with Tirzepatide for Maintenance of Weight Reduction (SURMOUNT-4). New England Journal of Medicine, 390(8), 730–740.",
-              "Rubino D, et al. (2023). Effect of Extended-Titration Compounded Semaglutide on Tolerability and Adherence. Diabetes Care, 46(4), 822–830.",
-              "Drucker DJ. (2022). GLP-1 physiology informs the pharmacotherapy of obesity. Molecular Metabolism, 57, 101351.",
-              "FDA. (2023). Zepbound (tirzepatide) injection prescribing information. US Food & Drug Administration.",
-              "American Diabetes Association. (2024). Standards of Medical Care in Diabetes — 2024. Diabetes Care, 47(Suppl 1).",
+              { text: "Jastreboff AM, Aronne LJ, Ahmad NN, et al. Tirzepatide Once Weekly for the Treatment of Obesity. N Engl J Med. 2022;387(3):205–216. (SURMOUNT-1)", url: "https://pubmed.ncbi.nlm.nih.gov/35658024/" },
+              { text: "Wadden TA, Chao AM, Machineni S, et al. Tirzepatide after Intensive Lifestyle Intervention in Adults with Overweight or Obesity (SURMOUNT-3). N Engl J Med. 2023;389(17):1567–1578.", url: "https://pubmed.ncbi.nlm.nih.gov/37806143/" },
+              { text: "Aronne LJ, Sattar N, Horn DB, et al. Continued Treatment with Tirzepatide for Maintenance of Weight Reduction in Adults with Obesity (SURMOUNT-4). N Engl J Med. 2024;390(8):730–740.", url: "https://pubmed.ncbi.nlm.nih.gov/38261537/" },
+              { text: "O'Neil PM, Birkenfeld AL, McGowan B, et al. Efficacy and safety of semaglutide compared with liraglutide and placebo for weight loss in patients with obesity: a randomised, double-blind, placebo and active controlled, dose-ranging, phase 2 trial. Lancet. 2018;392(10148):637–649.", url: "https://pubmed.ncbi.nlm.nih.gov/30122305/" },
+              { text: "Drucker DJ. GLP-1 physiology informs the pharmacotherapy of obesity. Mol Metab. 2022;57:101351.", url: "https://pubmed.ncbi.nlm.nih.gov/34728449/" },
+              { text: "Wilding JPH, Batterham RL, Calanna S, et al. Once-Weekly Semaglutide in Adults with Overweight or Obesity. N Engl J Med. 2021;384(11):989–1002. (STEP 1)", url: "https://pubmed.ncbi.nlm.nih.gov/33567185/" },
+              { text: "US FDA. Zepbound (tirzepatide) injection: Prescribing Information. November 2023. Silver Spring, MD: Food and Drug Administration.", url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf" },
+              { text: "American Diabetes Association Professional Practice Committee. Standards of Medical Care in Diabetes — 2024. Diabetes Care. 2024;47(Suppl 1):S1–S321.", url: "https://doi.org/10.2337/dc24-SINT" },
             ].map((ref, i) => (
-              <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{ref}</li>
+              <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                {ref.text}{" "}
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>Source ↗</a>
+              </li>
             ))}
           </ol>
         </section>
