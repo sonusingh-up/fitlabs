@@ -256,8 +256,8 @@ export default function AncestralBeefLiverReview() {
         {/* ── Feature Banner ─────────────────────────────────────────────────── */}
         <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #1E1208 0%, #120C06 100%)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-          {/* Product image — right side */}
-          <div style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+          {/* Product image — right side, hidden on mobile so it can't overlap the title */}
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, alignItems: "flex-end", justifyContent: "center" }}>
             <Image
               src="/products/ancestral-supplements-beefliv.webp"
               alt="Ancestral Supplements Beef Liver bottle"
@@ -368,7 +368,7 @@ export default function AncestralBeefLiverReview() {
         </div>
 
         {/* Mobile TOC */}
-        <div className="block lg:hidden" style={{ borderBottom: "1px solid #D4C9B8" }}>
+        <div className="block lg:hidden" style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 16 }}>
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
