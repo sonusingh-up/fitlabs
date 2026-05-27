@@ -18,12 +18,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Dymatize ISO100 Whey Isolate Review 2026 — 9/10",
+  title: "Dymatize ISO100 Review 2026: Best Hydrolyzed Whey Protein for Muscle Gain?",
   description:
     "Dymatize ISO100 review: 25g hydrolyzed whey isolate, dual NSF + Informed Choice certified, $2.09/serving. How it compares to ON Gold Standard. FSP 9/10.",
   alternates: { canonical: "/reviews/dymatize-iso100-review-2026" },
   openGraph: {
-    title: "Dymatize ISO100 Whey Isolate Review 2026 — 9/10",
+    title: "Dymatize ISO100 Review 2026: Best Hydrolyzed Whey Protein for Muscle Gain?",
     description:
       "The only hydrolyzed isolate with dual NSF + Informed Choice certification. 25g protein, 2.7g leucine, zero fillers. Worth the premium price? Full FSP analysis.",
     url: "https://fitlabreviews.com/reviews/dymatize-iso100-review-2026",
