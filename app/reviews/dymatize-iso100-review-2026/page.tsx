@@ -339,10 +339,10 @@ export default function DymatizeISO100Review() {
 
         {/* ── Hero Row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>REV-2026-045</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F" }}>Full Review · FSP Scored · Dual Certified</span>
+          <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-045</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Dual Certified</span>
           </div>
           <div className="layout-hero-split">
             <div>
@@ -452,7 +452,7 @@ export default function DymatizeISO100Review() {
                     The single legitimate criticism is price. At $2.09/serving, ISO100 costs 50–65% more than comparable isolates. If you compete at a tested level (WADA/NSF) or have documented lactose sensitivity requiring the purest isolate possible, the premium is rational. For the majority of recreational lifters, ON Gold Standard at $1.30–1.40/serving delivers 92–94% of the practical benefit at a fraction of the cost.
                   </p>
                   {/* 5-pillar quick grid */}
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
+                  <div className="review-pillar-grid">
                     {rubric.pillars.map((p) => (
                       <div key={p.pillar} style={{ backgroundColor: "rgba(242,235,217,0.04)", border: "1px solid rgba(212,201,184,0.12)", borderRadius: 8, padding: "12px 14px" }}>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 6 }}>{p.pillar}</p>
@@ -727,8 +727,8 @@ export default function DymatizeISO100Review() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   ISO100 vs. Competitors
                 </h2>
-                <div style={{ overflowX: "auto" }}>
-                  <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <div className="review-table-wrap">
+                  <table style={{ borderCollapse: "collapse", fontSize: 13, fontFamily: "var(--font-dm-sans), sans-serif", minWidth: 620 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714", color: "#F2EBD9" }}>
                         {["Product", "Protein Type", "Protein/Serve", "Leucine", "3rd-Party Cert", "Price/Serving", "FSP"].map((h) => (

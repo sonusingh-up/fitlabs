@@ -286,9 +286,9 @@ export default function AncestralBeefLiverReview() {
 
         {/* ── Hero row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>REV-2026-044</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
+          <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-044</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A" }}>Full Review · FSP Scored · NZ Grass-Fed Organ</span>
           </div>
           <div className="layout-hero-split">
@@ -398,7 +398,7 @@ export default function AncestralBeefLiverReview() {
                   </p>
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 1, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 1, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { label: "Formula", value: "9.0 / 10", sub: "Single ingredient, zero fillers" },
                     { label: "Transparency", value: "9.0 / 10", sub: "Source + process disclosed" },
@@ -636,8 +636,8 @@ export default function AncestralBeefLiverReview() {
               <section id="comparison" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The desiccated/freeze-dried liver supplement market is small but competitive. Key differences are sourcing, processing method, and whether the brand publishes testing data.</p>
-                <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8" }}>
-                  <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 580 }}>
+                <div className="review-table-wrap">
+                  <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         {["", "Ancestral Supps", "Dr. Ron's Ultra-Pure", "Perfect Supplements", "Carlson Desiccated"].map((h, i) => (

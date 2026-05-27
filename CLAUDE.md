@@ -337,6 +337,53 @@ Use the `/review-article <slug>` slash command to build a new product review art
   <div style={{ maxWidth: 1280, margin: "0 auto" }} className="breadcrumb-pad">
 ```
 
+**Mobile-responsive patterns (verified against live pages — always use these):**
+
+1. **Hero pill row** — hide the decorative REV code / sub-label row on mobile:
+   ```tsx
+   // ✅ CORRECT — hidden on mobile, flex on sm+
+   <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+     <span style={{ ..., whiteSpace: "nowrap" }}>REV-2026-045</span>
+     <span style={{ ..., flexShrink: 0 }} />
+     <span style={{ ..., whiteSpace: "nowrap" }}>Full Review · FSP Scored</span>
+   </div>
+
+   // ❌ WRONG — inline display:flex overrides Tailwind hidden class
+   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+   ```
+
+2. **Comparison tables** — never use `width: "100%"` inside an overflow wrapper:
+   ```tsx
+   // ✅ CORRECT — use .review-table-wrap CSS class + minWidth on <table>
+   <div className="review-table-wrap">
+     <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
+
+   // ❌ WRONG — width:100% constrains table to container, overflow-x never activates
+   <div style={{ overflowX: "auto" }}>
+     <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 580 }}>
+   ```
+   The `.review-table-wrap` class (in `globals.css`) also adds a "swipe to see more →" hint on mobile via `::after`.
+
+3. **5-pillar verdict grid** — use the `.review-pillar-grid` CSS class so 3 pillars fit per row on mobile:
+   ```tsx
+   // ✅ CORRECT — repeat(auto-fit, minmax(100px, 1fr)) gives 2–3 cols at mobile
+   <div className="review-pillar-grid">
+     {rubric.pillars.map(...)}
+   </div>
+
+   // ❌ WRONG — minmax(130px) forces only 1–2 cols, orphaning the 5th pillar
+   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
+   ```
+
+4. **Feature banner image** — hide product image on mobile to prevent overflow:
+   ```tsx
+   // ✅ CORRECT
+   <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, ... }}>
+
+   // ❌ WRONG — display:flex overrides hidden
+   <div style={{ display: "flex", position: "absolute", ... }}>
+   ```
+
 **Required sections that reviews must have (beyond the body sections):**
 - Feature banner (full-width dark gradient with `<h1>`, stars, product image) before the hero row
 - Hero row (uses `<h2>`, not `<h1>`, since h1 is in the banner)
@@ -359,7 +406,7 @@ const rubric: ScoringRubric = {
 rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);  // ← assigned after
 ```
 
-**Review figure codes:** `REV-2026-NNN`. Check existing review pages for the next available number (current highest in use: REV-2026-044).
+**Review figure codes:** `REV-2026-NNN`. Check existing review pages for the next available number (current highest in use: REV-2026-045).
 
 **Skill file location:** `.claude/commands/review-article.md` (local only — not committed; canonical reference copy is `docs/review-article-skill.md`)
 

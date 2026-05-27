@@ -356,8 +356,8 @@ export default function ProductNameReview() {
         {/* 2. Feature Banner — full-width dark gradient with h1 + stars + product image */}
         <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #bgFrom 0%, #bgTo 100%)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-          {/* Product image — right side */}
-          <div style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+          {/* Product image — right side — HIDDEN on mobile to prevent overflow */}
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, alignItems: "flex-end", justifyContent: "center" }}>
             <Image src="/products/image.webp" alt="Product name" width={200} height={260}
               style={{ objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.6))" }} priority />
           </div>
@@ -380,10 +380,11 @@ export default function ProductNameReview() {
 
         {/* 3. Hero row — review code pill + layout-hero-split with h2 (not h1) + CTA buttons + ReviewScoreBadge */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>REV-2026-XXX</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#accent" }}>Full Review · FSP Scored · Descriptor</span>
+          {/* Pill row — hidden on mobile (never use inline display:flex — it overrides Tailwind hidden) */}
+          <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-XXX</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#accent", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Descriptor</span>
           </div>
           <div className="layout-hero-split">
             <div>
@@ -522,6 +523,12 @@ export default function ProductNameReview() {
 - Related reviews go **outside** the `container-pad` div as a full-width bottom section
 - References go **inside** the article, as the final section before `</article>`
 
+**Mobile-specific rules (inline `display` always beats Tailwind utility classes):**
+- Feature banner image: `className="hidden sm:flex"` — never `style={{ display: "flex" }}`
+- Hero pill row: `className="hidden sm:flex"` — never `style={{ display: "flex" }}`
+- Comparison tables: `<div className="review-table-wrap">` + `minWidth` (px) on `<table>` — never `width: "100%"` inside an overflow wrapper
+- 5-pillar grid: `<div className="review-pillar-grid">` — never inline `display: grid` with `minmax(130px+)`
+
 ---
 
 ## Step 9 — Required sections (in this order)
@@ -548,6 +555,29 @@ export default function ProductNameReview() {
 | 18 | (no id) | Related Reviews | 2–3 `<ReviewCard>` items |
 
 **Sections 2, 9 are flexible** — adapt label and content to the product type.
+
+**Mobile patterns for key sections:**
+
+- **§1 Quick Verdict — 5-pillar grid**: use the `.review-pillar-grid` CSS class (not inline `display:grid`):
+  ```tsx
+  <div className="review-pillar-grid">
+    {rubric.pillars.map((p) => (
+      <div key={p.pillar} style={{ ... }}>...</div>
+    ))}
+  </div>
+  ```
+
+- **§10 Comparison table**: use `.review-table-wrap` wrapper + `minWidth` on `<table>` (never `width: "100%"`):
+  ```tsx
+  <div className="review-table-wrap">
+    <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
+      ...
+    </table>
+  </div>
+  ```
+  The `.review-table-wrap` class adds `overflow-x: auto` and a "swipe to see more →" hint on mobile via CSS `::after`.
+
+Both CSS classes are defined in `app/globals.css`.
 
 ---
 
@@ -666,6 +696,10 @@ Verify before committing:
 - [ ] ProductCard images verified to exist in `public/products/`
 - [ ] No unused imports
 - [ ] Build passes with zero TypeScript errors
+- [ ] **Mobile** — Hero pill row uses `className="hidden sm:flex"` (not inline `display: "flex"`)
+- [ ] **Mobile** — Feature banner product image uses `className="hidden sm:flex"` (not inline `display: "flex"`)
+- [ ] **Mobile** — Comparison table wrapped in `<div className="review-table-wrap">` with no `width: "100%"` on `<table>`
+- [ ] **Mobile** — 5-pillar verdict grid uses `<div className="review-pillar-grid">` (not inline `display: grid`)
 
 ---
 

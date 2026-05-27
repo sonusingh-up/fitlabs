@@ -489,3 +489,46 @@ html, body {
 @media (max-width: 640px) {
   .ing-stats-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ── Review hero pill row ─────────────────────────────────────────────── */
+/* Hide the decorative REV-code + descriptor pill row on mobile.           */
+/* Use className="hidden sm:flex" — never put display in inline style.     */
+/* This is already handled by Tailwind hidden/sm:flex; no extra CSS needed.*/
+
+/* ── Review comparison table ─────────────────────────────────────────── */
+/* Tables inside overflow-x:auto must NOT have width:100%.                */
+/* Use minWidth (px) so the table can grow past the viewport and scroll.  */
+.review-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid #D4C9B8;
+}
+@media (max-width: 640px) {
+  /* Subtle swipe hint below the table on mobile */
+  .review-table-wrap::after {
+    content: "swipe to see more →";
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: #A89880;
+    padding: 6px 12px;
+    font-family: var(--font-dm-mono), monospace;
+    letter-spacing: 0.08em;
+    border-top: 1px solid #EDE8DF;
+    background: #F8F2E4;
+  }
+}
+
+/* ── Review quick-verdict pillar grid ────────────────────────────────── */
+/* Use auto-fit + minmax(100px) so 3 cards/row at mobile instead of 2.   */
+/* This prevents the 5th (last) pillar from sitting alone on its own row. */
+.review-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+@media (max-width: 380px) {
+  .review-pillar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* end review utilities */
