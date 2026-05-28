@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ExternalLink, AlertTriangle, CheckCircle, XCircle, ShieldCheck, Star } from "lucide-react";
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -17,26 +18,28 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Ancestral Supplements Beef Organs Review (2026): 9/10",
+  title: "Ancestral Supplements Beef Liver Review (2026): Worth It?",
   description:
-    "Ancestral Supplements Beef Organs review: 5-organ NZ grass-fed blend, freeze-dried, zero fillers, $1.50/serving. Most transparent sourcing in the category. FSP 9/10.",
-  alternates: { canonical: "/reviews/ancestral-supplements-beef-organs" },
+    "Ancestral Supplements Beef Liver review: NZ grass-fed freeze-dried organ, full nutrient breakdown, Vitamin A limits, USD pricing, vs competitors. FSP 8/10.",
+  alternates: {
+    canonical: "/reviews/ancestral-supplements-beef-liver",
+  },
   openGraph: {
-    title: "Ancestral Supplements Beef Organs Review (2026): 9/10",
+    title: "Ancestral Supplements Beef Liver Review (2026): Worth It?",
     description:
-      "The gold standard for multi-organ supplements — 5 NZ grass-fed organs, freeze-dried at body temperature, no fillers. Is the $45 price justified? Full FSP analysis.",
-    url: "https://fitlabreviews.com/reviews/ancestral-supplements-beef-organs",
+      "Is freeze-dried beef liver worth $45? NZ sourcing, heavy metal COA, Vitamin A reality check, and whether it beats buying liver from a butcher.",
+    url: "https://fitlabreviews.com/reviews/ancestral-supplements-beef-liver",
     type: "article",
   },
 };
 
 const tocItems = [
   { id: "verdict", label: "Quick Verdict" },
-  { id: "what-is", label: "What Is This Product?" },
+  { id: "what-is-liver", label: "Why Liver, Why Capsules" },
   { id: "score-breakdown", label: "Score Breakdown" },
   { id: "flags", label: "Red & Green Flags" },
   { id: "supplement-facts", label: "Supplement Facts" },
-  { id: "nutrients", label: "Key Nutrients by Organ" },
+  { id: "nutrients", label: "Key Nutrients" },
   { id: "sourcing", label: "Sourcing & Processing" },
   { id: "lab-data", label: "Lab & Verification" },
   { id: "claim-audit", label: "Claim Audit" },
@@ -57,49 +60,48 @@ const rubric: ScoringRubric = {
       pillar: "formula",
       score: 9.0,
       notes:
-        "Five-organ blend: freeze-dried beef liver, heart, kidney, spleen, and pancreas from New Zealand grass-fed cattle. Each organ provides a distinct and non-overlapping nutritional profile — liver (retinol, B12, copper, heme iron), heart (CoQ10, taurine), kidney (selenium, riboflavin), spleen (heme iron, zinc, purines), pancreas (proteolytic enzymes, B vitamins). The five-organ approach captures more of the ancestral nose-to-tail nutrition pattern than any single-organ supplement can. Zero fillers, zero flow agents, bovine gelatin capsule only. Minor deduction: organ ratios are not individually listed on the label — the 3,000mg is a blended total.",
+        "Single ingredient: freeze-dried grass-fed beef liver. 3,000mg per 6-capsule serving. Zero fillers, no magnesium stearate, no flow agents, no carriers. The formulation is about as honest as a supplement can be — it is exactly what it says it is. Minor deduction: at 3,000mg per serving, you are getting roughly the nutrient equivalent of 15–18g fresh liver. Meaningful amounts, but well below a real food serving (85–100g). The brand's own 'ancestral serving' guidance suggests 6–12 capsules, which acknowledges this gap.",
     },
     {
       pillar: "transparency",
       score: 9.0,
       notes:
-        "Ancestral Supplements publishes their sourcing country (New Zealand), livestock certification (grass-fed, grass-finished), and processing method (freeze-dried below body temperature) clearly on all product pages. The five organs in the blend are individually named. NZ Ministry for Primary Industries (MPI) regulations are externally verifiable and set high standards for pasture access and no added hormones. The main transparency limitation is that per-organ dose within the 3,000mg blend is not disclosed — liver retinol contribution cannot be precisely calculated. This is the standard for organ blends industry-wide, but it remains a gap.",
+        "Ancestral Supplements is more transparent than most whole-food supplement brands. They explicitly state New Zealand sourcing, grass-fed and grass-finished certification, freeze-drying process temperature (never above body temperature, ~37°C), and that nutrient values vary batch to batch. That last point is actually a mark of honesty — listing exact nutrient mg on a whole-food label would be false precision. No proprietary blends possible. One ingredient.",
     },
     {
       pillar: "verification",
-      score: 7.0,
+      score: 7.5,
       notes:
-        "Third-party heavy metal testing (lead, cadmium, arsenic, mercury) is conducted and COA is available on request from the brand. New Zealand MPI regulations provide independent oversight of sourcing claims. No Informed Sport or NSF certification — these test for sport-banned substances and are not the primary concern for organ supplements, where contaminant testing is more relevant. The gap: batch-specific COAs are not attached to the label or accessible via a QR code at point of sale. Requires an email request. No adverse event reports, no FDA warning letters in the brand's history.",
+        "Third-party heavy metal testing (lead, cadmium, arsenic, mercury) is conducted and COA is available on request. New Zealand's Ministry for Primary Industries (MPI) enforces strict livestock regulations. However: batch-specific certificates are not printed on the label or easily accessible on Amazon product pages. No Informed Choice or NSF certification — these are not relevant for organ supplements, but some buyers expect a recognisable cert logo. No adverse event reports or recalls in the brand's history.",
     },
     {
       pillar: "value",
-      score: 8.5,
+      score: 6.5,
       notes:
-        "At approximately $45–49 for 180 capsules (30 servings at 6 caps), this is $1.50–$1.63/serving. For a five-organ, NZ-sourced, freeze-dried blend with no fillers, this sits at the upper-middle of the market — below Heart & Soil ($1.83) and above commodity organ blends that use grain-fed US sources. The nutritional breadth of five organs spread across one serving justifies the premium over single-organ products. For buyers focused on multi-organ coverage without paying the Informed Sport premium, this is the category's best value proposition.",
+        "At $43–47 for 180 capsules (30 servings at 6 caps), you are paying roughly $1.43–$1.57 per day. Comparable grass-fed beef liver from a butcher or farmers' market in the US runs $6–10/lb — a full weekly dose (300–400g) of real liver costs roughly $3–6. The supplement premium is significant. What you are paying for: convenience (no cooking, no smell, no texture), consistent sourcing, freeze-dried nutrient preservation, and the ability to travel with it. For people who genuinely will not eat liver, the cost is justified. For people who could buy and eat real liver, it is harder to defend.",
     },
     {
       pillar: "practical",
       score: 8.0,
       notes:
-        "Six capsules per serving. Large bovine gelatin capsules — a meaningful pill burden, especially if you take other supplements at the same time. No taste, no smell after encapsulation. Room temperature stable for 18 months. Travel-friendly. The common workaround — splitting 3 caps at breakfast and 3 at lunch — is effective and does not change the nutritional outcome. Starting at 3 caps/day for the first week is recommended to allow digestive adjustment to concentrated organ matter.",
+        "Six capsules per serving is a lot. You feel it the first time you take them with breakfast — it is a handful. They are large capsules. On the other hand: no taste, no smell, room temperature stable for 18 months, travel-friendly, and no prep work. Taking them with food (which you should) helps with the cap count. People who split the serving across morning and evening report better tolerance.",
     },
   ],
   flags: [
-    { type: "green", label: "Five-organ blend — comprehensive nose-to-tail coverage", detail: "Liver, heart, kidney, spleen, and pancreas each contribute unique nutrients not found in high concentrations in any single organ. The five-organ approach is nutritionally superior to single-liver products." },
-    { type: "green", label: "NZ grass-fed, grass-finished — externally verified", detail: "New Zealand MPI regulations require year-round pasture access and prohibit growth hormones. Grass-finishing is the industry norm in NZ, verifiable through livestock export documentation. Not a marketing claim." },
-    { type: "green", label: "Freeze-dried at ≤37°C — superior nutrient preservation", detail: "Freeze-drying removes moisture under vacuum below body temperature, preserving heat-sensitive CoQ10, B-vitamins, and enzymes better than conventional heat desiccation. A meaningful process difference." },
-    { type: "green", label: "Zero fillers — bovine gelatin capsule only", detail: "No magnesium stearate, no silicon dioxide, no flow agents. Single-sourced bovine gelatin capsule. The supplement is as clean as it is possible to make a capsule-based product." },
-    { type: "green", label: "Heavy metal testing conducted", detail: "Third-party testing for lead, cadmium, arsenic, and mercury is performed on batches. COA available on request. Organ meats concentrate environmental contaminants — this testing is essential and present." },
-    { type: "red", label: "Per-organ dose not disclosed", detail: "The 3,000mg is a blended total. Exact liver contribution (and therefore precise retinol load) cannot be calculated by consumers. This matters for Vitamin A safety math.", deduction: 0.3 },
-    { type: "red", label: "Batch COA requires email request", detail: "Not accessible via label QR code or product page at time of purchase. Less convenient than batch-transparent brands. Not a red flag for quality, but a transparency gap.", deduction: 0.1 },
-    { type: "red", label: "Not suitable for pregnant women without medical guidance", detail: "Liver-containing products provide preformed retinol (Vitamin A). NHS and obstetric guidelines flag concentrated liver supplements during pregnancy. Requires a doctor conversation.", deduction: 0.1 },
+    { type: "green", label: "Single ingredient — zero fillers", detail: "No magnesium stearate, no flow agents, no silicon dioxide. Just beef liver and a bovine gelatin capsule." },
+    { type: "green", label: "NZ grass-fed, grass-finished", detail: "New Zealand MPI regulations require year-round pasture access. Grass-finishing is the industry norm, not a premium exception." },
+    { type: "green", label: "Freeze-dried below body temperature", detail: "Preserved at ≤37°C — retains heat-sensitive CoQ10 and B-vitamins better than conventional heat desiccation." },
+    { type: "green", label: "Heavy metal COA available", detail: "Third-party testing for lead, cadmium, arsenic, and mercury. Available on request. Organ meats concentrate environmental contaminants — this testing is essential." },
+    { type: "red", label: "Batch COA not on label or Amazon listing", detail: "Requires email request to obtain. Less convenient than a QR code at point of purchase.", deduction: 0.2 },
+    { type: "red", label: "6 caps per serving is burdensome", detail: "High capsule count — especially for people already taking multiple supplements. Splitting across two meals helps." },
+    { type: "red", label: "Not suitable for pregnant women without medical guidance", detail: "Preformed retinol at this concentration is flagged in obstetric guidelines. Requires a doctor conversation.", deduction: 0.1 },
   ],
   claimAudit: [
-    { claim: "\"Nature's original multivitamin\"", verdict: "overstated", evidence: "moderate", notes: "The five-organ blend delivers an exceptional range of micronutrients, particularly fat-soluble vitamins, B vitamins, and trace minerals. But it is low in Vitamin C, omega-3 fatty acids, magnesium, and several other essential nutrients. 'Original multivitamin' is directionally accurate but implies completeness it does not have." },
-    { claim: "\"New Zealand grass-fed, grass-finished beef\"", verdict: "supported", evidence: "strong", notes: "NZ MPI regulations require pasture-based farming year-round and prohibit hormone use. Grass-finishing is the industry norm in NZ. Claim is consistent with independently verifiable regulatory framework." },
-    { claim: "\"Freeze-dried raw — never heated above body temperature\"", verdict: "supported", evidence: "strong", notes: "Freeze-drying at ≤37°C is established industrial food science. Superior to heat desiccation for heat-labile nutrients. Consistent with how commercial freeze-dryers operate at these temperature parameters." },
-    { claim: "\"Contains enzymes, peptides, and cofactors found nowhere else\"", verdict: "overstated", evidence: "limited", notes: "Organ meats do contain enzymes and bioactive peptides not common in muscle meat. However, the bioavailability and activity of these compounds after digestion is not well-established in controlled trials. The 'found nowhere else' framing is marketing language rather than established science." },
-    { claim: "\"No fillers, no flow agents, no magnesium stearate\"", verdict: "supported", evidence: "strong", notes: "Confirmed by ingredient declaration: five freeze-dried organ powders plus bovine gelatin capsule only. No excipients. Verified by label inspection." },
+    { claim: "\"Liver is nature's most nutrient-dense food\"", verdict: "overstated", evidence: "moderate", notes: "Liver ranks among the most nutrient-dense foods by most metrics, but 'most' depends on which nutrients you prioritise. Oysters beat it on zinc, salmon on omega-3. Directionally accurate, technically imprecise." },
+    { claim: "\"New Zealand grass-fed, grass-finished beef\"", verdict: "supported", evidence: "strong", notes: "NZ MPI regulations require pasture-based farming year-round. Grass-finishing is the industry norm in NZ, verifiable through livestock export documentation." },
+    { claim: "\"Freeze-dried raw — never heated above body temperature\"", verdict: "supported", evidence: "strong", notes: "Freeze-drying at ≤37°C is established food science. Superior to heat desiccation for preserving heat-labile nutrients. Process claim is consistent with industrial freeze-dryer operation." },
+    { claim: "\"No fillers, no flow agents, no magnesium stearate\"", verdict: "supported", evidence: "strong", notes: "Label lists beef liver and bovine gelatin capsule only. Confirmed by ingredient declaration. No excipients detected." },
+    { claim: "\"Contains all cofactors needed for optimal health\"", verdict: "unsupported", evidence: "limited", notes: "Liver is low in Vitamin C, omega-3 fatty acids, and several other essential nutrients. 'All cofactors for optimal health' overstates the product's completeness." },
   ],
   valueMetric: {
     pricePerServing: 1.50,
@@ -109,7 +111,7 @@ const rubric: ScoringRubric = {
     efficiency: "below",
   },
   compositeScore: 0,
-  editorialScore: 9 as ReviewRating,
+  editorialScore: 8 as ReviewRating,
 };
 
 rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);
@@ -119,18 +121,18 @@ const composite = rubric.compositeScore;
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "Review",
-  "@id": "https://fitlabreviews.com/reviews/ancestral-supplements-beef-organs#review",
-  name: "Ancestral Supplements Beef Organs — Fitlabreviews FSP Review",
+  "@id": "https://fitlabreviews.com/reviews/ancestral-supplements-beef-liver#review",
+  name: "Ancestral Supplements Beef Liver — Fitlabreviews FSP Review",
   reviewBody:
-    "In-depth evaluation of Ancestral Supplements Beef Organs using the Fitlab Scoring Protocol (FSP). Analysis covers the five-organ blend (liver, heart, kidney, spleen, pancreas), New Zealand grass-fed sourcing, freeze-drying process, nutrient profile by organ, heavy metal verification, Vitamin A safety limits, and value versus competing organ supplement brands.",
+    "In-depth evaluation of Ancestral Supplements Beef Liver using the Fitlab Scoring Protocol (FSP). Analysis covers New Zealand grass-fed sourcing, freeze-drying process, nutrient profile, heavy metal verification, Vitamin A safety limits, and value versus buying real liver.",
   reviewRating: {
     "@type": "Rating",
     ratingValue: editorialScore,
     bestRating: 10,
     worstRating: 1,
   },
-  datePublished: "2026-05-20",
-  dateModified: "2026-05-28",
+  datePublished: "2026-05-27",
+  dateModified: "2026-05-27",
   author: {
     "@type": "Organization",
     name: "Fitlab Research Team",
@@ -138,18 +140,18 @@ const reviewSchema = {
   },
   itemReviewed: {
     "@type": "Product",
-    name: "Ancestral Supplements Beef Organs",
+    name: "Ancestral Supplements Beef Liver",
     brand: { "@type": "Brand", name: "Ancestral Supplements" },
     category: "Organ Supplement",
     description:
-      "Five-organ freeze-dried blend: beef liver, heart, kidney, spleen, and pancreas from NZ grass-fed cattle. 3,000mg per 6-capsule serving. Zero fillers.",
+      "Freeze-dried New Zealand grass-fed beef liver capsules. 3,000mg per serving. Single ingredient, no fillers.",
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",
-      price: "47.00",
+      price: "43.00",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://amzn.to/43xRRca",
+      url: "https://amzn.to/49RAlmU",
     },
   },
 };
@@ -160,58 +162,58 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What organs are in Ancestral Supplements Beef Organs?",
+      name: "Is Ancestral Supplements Beef Liver safe to take daily?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Ancestral Supplements Beef Organs contains five freeze-dried organs from New Zealand grass-fed cattle: beef liver, beef heart, beef kidney, beef spleen, and beef pancreas. Each organ contributes a distinct nutritional profile — liver for retinol and B12, heart for CoQ10 and taurine, kidney for selenium and riboflavin, spleen for heme iron and zinc, and pancreas for proteolytic enzymes. The blend totals 3,000mg per 6-capsule serving.",
+        text: "At the standard 6-capsule serving, yes — for most healthy adults. The main nutrient to track is preformed Vitamin A (retinol). Six capsules provides an estimated 1,000–2,500 IU of retinol, well below the 10,000 IU/day tolerable upper intake level. If you also eat fortified foods, other liver, or take a Vitamin A supplement separately, add those sources before concluding you are within safe limits.",
       },
     },
     {
       "@type": "Question",
-      name: "How does Ancestral Supplements Beef Organs compare to Heart & Soil?",
+      name: "What is the difference between freeze-dried and desiccated beef liver?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Both are premium five-organ NZ/US grass-fed blends at the 9/10 rating. The key difference is third-party testing: Heart & Soil holds Informed Sport certification (every batch tested for 200+ WADA-banned substances), which Ancestral Supplements does not. For competitive athletes subject to drug testing, Heart & Soil is the safer choice. For everyone else, Ancestral Supplements is approximately $0.33/serving less expensive, uses New Zealand sourcing (well-regulated and verifiable), and has equivalent heavy metal testing. Both are excellent products.",
+        text: "Desiccation uses heat (typically 50–70°C) to remove moisture. Freeze-drying removes moisture under vacuum at very low temperatures, which preserves heat-sensitive nutrients like CoQ10, certain B vitamins, and enzymes more effectively. The difference in practice is meaningful but not dramatic — both deliver the core nutrient profile of liver. Freeze-drying is the superior process, which is reflected in the higher price.",
       },
     },
     {
       "@type": "Question",
-      name: "Is Ancestral Supplements Beef Organs safe to take daily?",
+      name: "How many capsules should I take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For most healthy adults, yes. The main nutrient to monitor is preformed Vitamin A (retinol) from the beef liver component. At 6 capsules, the estimated retinol load from this blend is lower than a single-organ beef liver supplement (because liver is diluted across five organs), but the exact amount is not disclosed. Estimated 500–1,500 mcg RAE per serving — well below the 3,000 mcg RAE tolerable upper intake level. Add up all sources of preformed Vitamin A in your diet (multivitamins, fortified foods, other liver products) before concluding you are within safe limits. Pregnant women should consult a doctor before use.",
+        text: "The label says 6 capsules. The brand suggests 6–12 as an 'ancestral serving.' Start with 3 and see how your digestion responds. Most people settle at 6. Taking 12 capsules daily is on the high end — Vitamin A intake would approach the upper limit if combined with a fortified diet.",
       },
     },
     {
       "@type": "Question",
-      name: "Why NZ sourcing rather than US?",
+      name: "Is it worth the price vs eating real liver?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "New Zealand's Animal Products Act and MPI regulations require year-round pasture access for cattle and prohibit synthetic growth hormones. Grass-finishing — meaning no grain feedlot period before slaughter — is the industry norm in NZ, not a premium exception. US 'grass-fed' labels allow grain finishing and do not require continuous pasture access in the same way. NZ sourcing is independently verifiable through livestock export regulations, rather than relying solely on brand claims.",
+        text: "Nutritionally, no — real grass-fed liver from a butcher gives you more per dollar. The supplement makes sense if you genuinely will not eat liver, need travel-friendly nutrition, want consistent sourcing documentation, or hate the taste and texture of the real thing. For anyone who can cook and stomach actual liver, the butcher wins on value.",
       },
     },
     {
       "@type": "Question",
-      name: "How many capsules per day?",
+      name: "Can I take it on an empty stomach?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The label serving is 6 capsules per day. Start with 3 capsules for the first week — some people experience mild digestive adjustment (nausea or loose stools) when introducing concentrated organ matter. After a week at 3 caps, move to the full 6-cap serving. Split the serving across two meals (3 at breakfast, 3 at lunch) for better tolerance. Always take with food that contains fat — the fat-soluble vitamins in liver and heart absorb significantly better with dietary fat present.",
+        text: "You can, but some people report nausea taking concentrated organ supplements fasted. Take with food for best tolerance, especially when starting out. Fat-soluble vitamins (A, D, K2) in liver also absorb better with dietary fat present.",
       },
     },
     {
       "@type": "Question",
-      name: "Why is there no Vitamin A amount on the label?",
+      name: "Is this available in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Beef liver is a whole food, and its retinol content varies by animal age, diet, season, and batch. Publishing a precise mg figure on a whole-food label implies laboratory precision that does not exist for batch-variable foods. This is appropriate scientific honesty, not evasion. For comparison, USDA data for raw beef liver averages ~6,582 mcg RAE per 100g — but actual values range ±30–40%. Since this blend divides 3,000mg across five organs, liver's share is likely 500–1,200mg of the total, suggesting a retinol contribution of roughly 500–1,500 mcg RAE per serving.",
+        text: "Yes, through Amazon.in — but pricing is substantially higher due to import duties and shipping. Expect ₹3,800–4,800 per bottle. Verify the seller is fulfilled by Amazon (not a third-party reseller) and check the seal on delivery. This is an expensive imported product and counterfeit risk is real.",
       },
     },
     {
       "@type": "Question",
-      name: "Is it available in India?",
+      name: "Is Ancestral Supplements Beef Liver suitable for pregnant women?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, through Amazon.in as an import, but pricing is substantially elevated due to import duties and international shipping. Expect approximately ₹4,200–5,400 per bottle. Verify the seller is fulfilled by Amazon rather than a third-party reseller, and check the tamper seal on delivery. Request the heavy metal COA from the brand using the lot number printed on the bottle base if you want verification of that batch.",
+        text: "Pregnant women should consult a doctor before taking this product. Preformed Vitamin A (retinol) in excess is teratogenic. The NHS and most obstetric guidelines recommend avoiding high-dose liver supplements during pregnancy precisely because of retinol load. Real food liver is similarly flagged.",
       },
     },
   ],
@@ -221,12 +223,11 @@ const relatedReviews: {
   slug: string; title: string; brand: string; category: string;
   rating: ReviewRating; verdict: string; publishedAt: string; figNumber: string;
 }[] = [
-  { slug: "heart-and-soil-beef-organs", title: "Heart & Soil Beef Organs", brand: "Heart & Soil", category: "Organ Supplements", rating: 9 as ReviewRating, verdict: "Informed Sport certified 5-organ blend from US regenerative farms. Premium price is justified for drug-tested athletes.", publishedAt: "2026-05-20", figNumber: "046" },
-  { slug: "left-coast-performance-beef-organs", title: "Left Coast Performance Beef Organs", brand: "Left Coast Performance", category: "Organ Supplements", rating: 8 as ReviewRating, verdict: "NZ-sourced 5-organ blend at $1.17/serving — the best value premium option for budget-conscious buyers.", publishedAt: "2026-05-20", figNumber: "047" },
-  { slug: "perfect-supplements-beef-liver", title: "Perfect Supplements Beef Liver", brand: "Perfect Supplements", category: "Organ Supplements", rating: 8 as ReviewRating, verdict: "USDA Organic certified, Brazil grass-fed freeze-dried liver. Excellent for clean-label buyers.", publishedAt: "2026-05-20", figNumber: "048" },
+  { slug: "optimum-nutrition-gold-standard-whey", title: "ON Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark whey. Informed Choice certified, consistent yield across 4 years of testing.", publishedAt: "2025-04-10", figNumber: "01" },
+  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "Pure creatine at a budget price. One real gap: no third-party batch certificate.", publishedAt: "2025-03-08", figNumber: "02" },
 ];
 
-export default function AncestralBeefOrgansReview() {
+export default function AncestralBeefLiverReview() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
@@ -248,29 +249,37 @@ export default function AncestralBeefOrgansReview() {
               </span>
             ))}
             <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Ancestral Supplements Beef Organs</span>
+            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Ancestral Supplements Beef Liver</span>
           </div>
         </div>
 
         {/* ── Feature Banner ─────────────────────────────────────────────────── */}
         <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #1E1208 0%, #120C06 100%)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+          {/* Product image — right side, hidden on mobile so it can't overlap the title */}
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 260, alignItems: "flex-end", justifyContent: "center" }}>
+            <Image
+              src="/products/ancestral-supplements-beefliv.webp"
+              alt="Ancestral Supplements Beef Liver bottle"
+              width={200}
+              height={260}
+              style={{ objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.6))" }}
+              priority
+            />
+          </div>
           {/* Text — center */}
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-045 · ORGAN SUPPLEMENT</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 600, padding: "0 24px" }}>
-              Ancestral Supplements<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Beef Organs</em>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-044 · ORGAN SUPPLEMENT</span>
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+              Ancestral Supplements<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Beef Liver</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
               <div style={{ display: "flex", gap: 4 }}>
-                {[1,2,3,4,5,6,7,8,9].map((s) => <Star key={s} size={14} fill="#7B3B1A" color="#7B3B1A" />)}
-                {[10].map((s) => <Star key={s} size={14} fill="none" color="#7B3B1A" />)}
+                {[1,2,3,4,5,6,7,8].map((s) => <Star key={s} size={14} fill="#7B3B1A" color="#7B3B1A" />)}
+                {[9,10].map((s) => <Star key={s} size={14} fill="none" color="#7B3B1A" />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>9 / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
             </div>
-          </div>
-          <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
-            <img src="/products/ancestral-supplements-beefliv.webp" alt="Ancestral Supplements Beef Organs" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
           </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
         </div>
@@ -278,25 +287,25 @@ export default function AncestralBeefOrgansReview() {
         {/* ── Hero row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-045</span>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-044</span>
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · NZ Grass-Fed 5-Organ Blend</span>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A" }}>Full Review · FSP Scored · NZ Grass-Fed Organ</span>
           </div>
           <div className="layout-hero-split">
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
-                Ancestral Supplements · Organ Supplement · 5-Organ Freeze-Dried Blend
+                Ancestral Supplements · Organ Supplement · Freeze-Dried Beef Liver
               </p>
               <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
-                Beef Organs — The Category&apos;s<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Gold Standard for Nose-to-Tail Nutrition</em>
+                Beef Liver — Is Freeze-Dried<br />
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Worth the Premium in 2026?</em>
               </h2>
               <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
-                Five NZ grass-fed organs — liver, heart, kidney, spleen, and pancreas — freeze-dried at ≤37°C, blended into 3,000mg per serving. Zero fillers. We tested whether the sourcing, Vitamin A math, and value proposition actually hold up.
+                NZ grass-fed, grass-finished beef liver. Freeze-dried at ≤37°C. Zero fillers. Six capsules. We tested whether the sourcing, processing, and Vitamin A math actually hold up.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a
-                  href="https://amzn.to/43xRRca"
+                  href="https://amzn.to/49RAlmU"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
@@ -318,9 +327,9 @@ export default function AncestralBeefOrgansReview() {
             { label: "Category", value: "Organ Supplement" },
             { label: "Form", value: "Capsules (180 ct)" },
             { label: "Serving", value: "6 caps / 3,000mg" },
-            { label: "Organs", value: "5-Organ Blend" },
             { label: "Source", value: "NZ Grass-Fed" },
-            { label: "Published", value: "May 20, 2026" },
+            { label: "Published", value: "May 27, 2026" },
+            { label: "Last Updated", value: "May 27, 2026" },
           ]} />
         </div>
 
@@ -337,7 +346,7 @@ export default function AncestralBeefOrgansReview() {
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
               </p>
               <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                Organ supplement research · USDA FDC nutrient analysis · NZ MPI sourcing verification · Vitamin A safety literature review
+                Organ supplement research · USDA FDC nutrient analysis · Vitamin A safety literature review
               </p>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -380,24 +389,24 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "24px 28px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Quick Verdict · REV-2026-045</p>
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Quick Verdict · REV-2026-044</p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
-                    The most complete organ supplement on the market for most buyers. Five New Zealand grass-fed organs — liver, heart, kidney, spleen, and pancreas — freeze-dried at body temperature, with zero fillers. The sourcing is independently verifiable through NZ MPI regulations, the processing is the best available method for preserving heat-sensitive nutrients, and the price is competitive for the quality.
+                    The sourcing and processing are genuinely excellent — New Zealand grass-fed, grass-finished beef liver, freeze-dried below body temperature, with zero additives. For a whole-food organ supplement, it is hard to do better on the formulation side.
                   </p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8 }}>
-                    The only buyer who should look elsewhere is a competitive drug-tested athlete who requires an Informed Sport or NSF certification — for that specific use case, Heart &amp; Soil&apos;s certified blend is the correct choice. For everyone else, this is the category&apos;s gold standard.
+                    The honest limitation: six capsules give you roughly the nutritional equivalent of 15–18g of fresh liver. A meaningful amount, but not a replacement for actually eating liver. At $43–47 per bottle, you are paying a significant premium over the real thing. That premium is justified if you genuinely will not eat liver. If you will, a grass-fed liver from a butcher is cheaper and more effective.
                   </p>
                 </div>
 
-                <div className="review-pillar-grid">
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: 1, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
-                    { label: "Formula", value: "9.0 / 10", sub: "5-organ blend, NZ sourced" },
-                    { label: "Transparency", value: "9.0 / 10", sub: "Sourcing + process disclosed" },
-                    { label: "Verification", value: "7.0 / 10", sub: "COA on request, no Informed Sport" },
-                    { label: "Value", value: "8.5 / 10", sub: "$1.50/serving — category best" },
-                    { label: "Practical", value: "8.0 / 10", sub: "6 caps, odorless, travel-ready" },
+                    { label: "Formula", value: "9.0 / 10", sub: "Single ingredient, zero fillers" },
+                    { label: "Transparency", value: "9.0 / 10", sub: "Source + process disclosed" },
+                    { label: "Verification", value: "7.5 / 10", sub: "COA on request, no batch QR" },
+                    { label: "Value", value: "6.5 / 10", sub: "Premium vs real liver" },
+                    { label: "Practical", value: "8.0 / 10", sub: "6 caps is a lot but odorless" },
                   ].map((s) => (
-                    <div key={s.label} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", border: "1px solid #EDE8DF", borderRadius: 8 }}>
+                    <div key={s.label} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", borderRight: "1px solid #EDE8DF" }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
                       <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{s.value}</p>
                       <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
@@ -406,37 +415,26 @@ export default function AncestralBeefOrgansReview() {
                 </div>
               </section>
 
-              {/* ─── WHAT IS THIS PRODUCT ────────────────────────────────────── */}
-              <section id="what-is" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>What Is Ancestral Supplements Beef Organs?</h2>
+              {/* ─── WHY LIVER / WHY CAPSULES ───────────────────────────────── */}
+              <section id="what-is-liver" style={{ marginBottom: 56 }}>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Why Liver. Why Capsules.</h2>
 
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
-                  Ancestral Supplements built their brand on a straightforward premise: modern diets systematically exclude organ meats, and that exclusion has nutritional consequences. The organs discarded by mainstream food culture — liver, heart, kidney, spleen, pancreas — contain concentrated micronutrients found in higher amounts here than almost anywhere else in the human diet. Nose-to-tail eating was the norm for most of human history. The supplement is an attempt to recapture that without asking anyone to cook organs.
+                  Beef liver is not a trendy superfood. It is, by USDA nutrient database rankings, one of the most nutrient-dense foods humans have access to. Per 100g it delivers more B12 than almost any other food, more preformed Vitamin A than anything except cod liver oil, substantial copper, heme iron, CoQ10, choline, and folate — all in highly bioavailable forms. Our ancestors did not waste the organ meats. Modern diets almost exclusively do.
                 </p>
 
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
-                  The Beef Organs product is their flagship multi-organ blend. Where their single-ingredient Beef Liver capsule isolates the highest-density organ, Beef Organs spreads the serving across five different tissues, each selected for its distinct nutritional contribution. The formulation argument is that no single organ covers everything — you need the breadth of multiple organs to replicate the full ancestral pattern.
+                  The reason most people stopped eating liver is sensory, not rational. Raw liver smells. Cooked liver has a texture and taste that most people raised on processed food find difficult. Ancestral Supplements recognised this gap and built a business on it: freeze-dry the liver at low temperature, encapsulate it, and sell it to people who want the nutrition without the experience.
                 </p>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 20 }}>
-                  {[
-                    { organ: "Beef Liver", role: "Retinol, B12, Copper, Heme Iron, Choline", color: "#7B3B1A" },
-                    { organ: "Beef Heart", role: "CoQ10, Taurine, Carnitine, B Vitamins", color: "#8B4513" },
-                    { organ: "Beef Kidney", role: "Selenium, Riboflavin (B2), B12, Zinc", color: "#9B5523" },
-                    { organ: "Beef Spleen", role: "Heme Iron, Zinc, Purines, Chromium", color: "#A06030" },
-                    { organ: "Beef Pancreas", role: "Proteolytic Enzymes, Lipase, B Vitamins", color: "#6B3515" },
-                  ].map((item) => (
-                    <div key={item.organ} style={{ padding: "14px 16px", border: `1px solid ${item.color}33`, borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 6 }}>{item.organ}</p>
-                      <p style={{ fontSize: 11, color: "#5C5650", lineHeight: 1.6 }}>{item.role}</p>
-                    </div>
-                  ))}
-                </div>
+                <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
+                  The product works as described. The question is whether the cost is reasonable for what you get — and that depends entirely on whether your alternative is eating real liver or taking nothing.
+                </p>
 
                 <div style={{ padding: "18px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF", borderLeft: "3px solid #7B3B1A" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>Organs vs Muscle Meat: the nutritional gap</p>
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>Why freeze-dried over desiccated</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
-                    Compared to skeletal muscle (what most people call &quot;beef&quot;), organs are 4–40× more concentrated in specific micronutrients. Liver has 40× the B12 of lean beef. Spleen has 3× the heme iron. Heart has 6× the CoQ10. If the goal is micronutrient density rather than protein, organs are categorically more efficient — which is why the supplement exists and why it commands a premium over standard protein products.
+                    Desiccation uses heat (typically 50–70°C) to drive off moisture. Freeze-drying removes moisture under vacuum at temperatures as low as −50°C, then gradually warms to no higher than body temperature (~37°C). This matters for heat-sensitive nutrients — CoQ10, certain B vitamins, and enzymes degrade measurably under conventional drying heat. Freeze-dried liver retains more of these compounds. It is a meaningful difference, not a marketing distinction, and it is reflected in the price.
                   </p>
                 </div>
               </section>
@@ -444,7 +442,7 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── SCORE BREAKDOWN ────────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FSP Score Breakdown</h2>
-                <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-045" />
+                <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-044" />
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 12 }}>
                   FSP v2.1 composite: {composite.toFixed(2)}/10 → editorial score: {editorialScore}/10.
                   Weighting: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%.
@@ -470,86 +468,68 @@ export default function AncestralBeefOrgansReview() {
                   </div>
 
                   <div style={{ padding: "0 20px", backgroundColor: "#F8F2E4" }}>
-                    {[
-                      { name: "Grass-Fed Beef Liver (Freeze-Dried)", amount: "600mg*" },
-                      { name: "Grass-Fed Beef Heart (Freeze-Dried)", amount: "600mg*" },
-                      { name: "Grass-Fed Beef Kidney (Freeze-Dried)", amount: "600mg*" },
-                      { name: "Grass-Fed Beef Spleen (Freeze-Dried)", amount: "600mg*" },
-                      { name: "Grass-Fed Beef Pancreas (Freeze-Dried)", amount: "600mg*" },
-                    ].map((item, i) => (
-                      <div key={item.name} style={{ padding: "10px 0", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", display: "flex", justifyContent: "space-between" }}>
-                        <span style={{ fontSize: 13, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.name}</span>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-dm-mono), monospace" }}>{item.amount}</span>
-                      </div>
-                    ))}
-                    <div style={{ padding: "10px 0", borderTop: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between" }}>
+                    <div style={{ padding: "12px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>Grass-Fed Beef Liver (Freeze-Dried)</span>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-dm-mono), monospace" }}>3,000mg</span>
+                    </div>
+                    <div style={{ padding: "8px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>Source</span>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>New Zealand</span>
+                    </div>
+                    <div style={{ padding: "8px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>Certification</span>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Grass-Fed, Grass-Finished</span>
+                    </div>
+                    <div style={{ padding: "8px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>Processing</span>
+                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Freeze-Dried (≤37°C)</span>
+                    </div>
+                    <div style={{ padding: "8px 0", display: "flex", justifyContent: "space-between" }}>
                       <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>Other ingredients</span>
-                      <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 700 }}>Bovine gelatin capsule only</span>
+                      <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 700 }}>None</span>
                     </div>
                   </div>
 
                   <div style={{ padding: "12px 20px", backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8" }}>
                     <p style={{ fontSize: 11, color: "#8A8480", lineHeight: 1.6 }}>
-                      * Estimated per-organ breakdown based on equal 600mg distribution across 5 organs totalling 3,000mg. Actual per-organ ratios are not disclosed on the label — the 3,000mg is the total blend. Source: New Zealand grass-fed, grass-finished cattle. Processing: freeze-dried below body temperature (≤37°C).
+                      <strong style={{ color: "#5C5650" }}>Why no exact nutrient amounts?</strong> Beef liver is a whole food. Vitamin A, B12, copper, and iron content vary by animal age, diet, season, and batch. Publishing exact mg would imply laboratory precision that does not exist for a batch-variable whole food. This is appropriate, not evasive. For comparison: USDA data for raw beef liver (per 100g) shows Vitamin A at ~6,582 mcg RAE, B12 at 59.3mcg, copper at 9.76mg.
                     </p>
                   </div>
                 </div>
               </section>
 
-              {/* ─── KEY NUTRIENTS BY ORGAN ─────────────────────────────────── */}
+              {/* ─── KEY NUTRIENTS ──────────────────────────────────────────── */}
               <section id="nutrients" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Key Nutrients — What Each Organ Contributes</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Per 6-capsule serving (3,000mg blended total). Estimates based on USDA FDC data for each organ, adjusted for freeze-drying concentration (~5–6×) and estimated 600mg per organ. Values are inherently variable for whole-food ingredients.</p>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Key Nutrients — What You Are Actually Getting</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Approximate values per 6-capsule serving (3,000mg freeze-dried liver ≈ 15–18g fresh liver). Based on USDA FDC #174489 adjusted for freeze-drying concentration factor.</p>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
-                    { organ: "Beef Liver", nutrients: [
-                      { name: "Vitamin B12", amount: "~18–30 mcg", dv: "~750–1,250% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Vitamin A (Retinol)", amount: "~300–750 mcg RAE", dv: "~33–83% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Copper", amount: "~0.5–1.0 mg", dv: "~56–111% DV", evidence: "strong" as EvidenceLevel },
-                    ], color: "#7B3B1A" },
-                    { organ: "Beef Heart", nutrients: [
-                      { name: "CoQ10", amount: "~5–12 mg", dv: "No DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Taurine", amount: "~30–80 mg", dv: "No DV", evidence: "moderate" as EvidenceLevel },
-                      { name: "Vitamin B12", amount: "~4–8 mcg", dv: "~167–333% DV", evidence: "strong" as EvidenceLevel },
-                    ], color: "#8B4513" },
-                    { organ: "Beef Kidney", nutrients: [
-                      { name: "Selenium", amount: "~15–30 mcg", dv: "~27–55% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Riboflavin (B2)", amount: "~0.25–0.5 mg", dv: "~19–38% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Vitamin B12", amount: "~10–20 mcg", dv: "~417–833% DV", evidence: "strong" as EvidenceLevel },
-                    ], color: "#9B5523" },
-                    { organ: "Beef Spleen", nutrients: [
-                      { name: "Heme Iron", amount: "~2–5 mg", dv: "~11–28% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Zinc", amount: "~0.6–1.2 mg", dv: "~5–11% DV", evidence: "strong" as EvidenceLevel },
-                      { name: "Chromium", amount: "~1–3 mcg", dv: "~3–9% DV", evidence: "moderate" as EvidenceLevel },
-                    ], color: "#A06030" },
-                    { organ: "Beef Pancreas", nutrients: [
-                      { name: "Proteolytic Enzymes", amount: "Present (variable)", dv: "No DV", evidence: "limited" as EvidenceLevel },
-                      { name: "Lipase", amount: "Present (variable)", dv: "No DV", evidence: "limited" as EvidenceLevel },
-                      { name: "Vitamin B12", amount: "~3–7 mcg", dv: "~125–292% DV", evidence: "moderate" as EvidenceLevel },
-                    ], color: "#6B3515" },
+                    { nutrient: "Vitamin B12", amount: "~70–130 mcg", dv: "~2,900–5,400% DV", evidence: "strong" as EvidenceLevel, note: "The single highest B12 source in the human diet. Deficiency is endemic in populations avoiding animal products. Bioavailability from liver is near 100%." },
+                    { nutrient: "Vitamin A (Retinol)", amount: "~1,000–2,500 mcg RAE", dv: "~110–280% DV", evidence: "strong" as EvidenceLevel, note: "Preformed retinol — the active form. Far more bioavailable than beta-carotene. See the Safety section for the Vitamin A upper limit discussion." },
+                    { nutrient: "Copper", amount: "~1.4–2.8 mg", dv: "~155–310% DV", evidence: "strong" as EvidenceLevel, note: "Liver is the richest copper source in food. Critical for iron metabolism, connective tissue synthesis, and mitochondrial function." },
+                    { nutrient: "Heme Iron", amount: "~1.5–3.5 mg", dv: "~8–19% DV", evidence: "strong" as EvidenceLevel, note: "Heme iron absorption is 15–35% vs 2–20% for non-heme iron. For iron-deficiency anaemia, liver is one of the most effective food interventions." },
+                    { nutrient: "Riboflavin (B2)", amount: "~0.6–1.2 mg", dv: "~46–92% DV", evidence: "strong" as EvidenceLevel, note: "Essential for electron transport chain function. Liver is among the top food sources." },
+                    { nutrient: "Folate", amount: "~60–120 mcg DFE", dv: "~15–30% DV", evidence: "strong" as EvidenceLevel, note: "Natural food folate, not folic acid. The natural form requires no MTHFR conversion — relevant for people with MTHFR polymorphisms." },
+                    { nutrient: "CoQ10", amount: "~5–15 mg", dv: "No established DV", evidence: "moderate" as EvidenceLevel, note: "Liver is one of the highest dietary CoQ10 sources. The freeze-drying process preserves CoQ10 better than heat drying. Relevant for mitochondrial energy production and heart function." },
+                    { nutrient: "Choline", amount: "~60–130 mg", dv: "~11–24% DV", evidence: "strong" as EvidenceLevel, note: "Essential for liver health, neurotransmitter synthesis, and cell membrane integrity. Liver is the best dietary choline source." },
                   ].map((row, i) => (
-                    <div key={row.organ} style={{ borderBottom: i < 4 ? "1px solid #EDE8DF" : "none" }}>
-                      <div style={{ padding: "10px 16px", backgroundColor: "#1A1714", display: "flex", alignItems: "center", gap: 10 }}>
-                        <span style={{ width: 10, height: 10, borderRadius: "50%", backgroundColor: row.color, flexShrink: 0 }} />
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880" }}>{row.organ}</span>
-                      </div>
-                      {row.nutrients.map((n, j) => (
-                        <div key={n.name} style={{ display: "grid", gridTemplateColumns: "1fr 1fr", backgroundColor: (i + j) % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: j < 2 ? "1px solid #EDE8DF" : "none" }}>
-                          <div style={{ padding: "12px 16px", borderRight: "1px solid #EDE8DF" }}>
-                            <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 3 }}>{n.name}</p>
-                            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>{n.amount}</p>
-                            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{n.dv}</p>
-                          </div>
-                          <div style={{ padding: "12px 16px", display: "flex", alignItems: "center" }}>
-                            <EvidenceBadge level={n.evidence} showIcon={false} />
-                          </div>
+                    <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "160px 1fr", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: i < 7 ? "1px solid #EDE8DF" : "none" }}>
+                      <div style={{ padding: "14px 16px", borderRight: "1px solid #EDE8DF" }}>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 4 }}>{row.nutrient}</p>
+                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>{row.amount}</p>
+                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{row.dv}</p>
+                        <div style={{ marginTop: 6 }}>
+                          <EvidenceBadge level={row.evidence} showIcon={false} />
                         </div>
-                      ))}
+                      </div>
+                      <div style={{ padding: "14px 16px" }}>
+                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{row.note}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#8A8480", marginTop: 8 }}>Values estimated from USDA FDC data for individual organs (raw), adjusted for freeze-drying concentration factor (~5–6×) and equal 600mg organ distribution. Actual values vary by animal and batch.</p>
+                <p style={{ fontSize: 11, color: "#8A8480", marginTop: 8 }}>Values are estimates based on USDA FDC #174489 (raw beef liver) adjusted for freeze-drying concentration. Actual values vary by batch and animal.</p>
               </section>
 
               {/* ─── SOURCING & PROCESSING ──────────────────────────────────── */}
@@ -559,16 +539,16 @@ export default function AncestralBeefOrgansReview() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {[
                     {
-                      title: "New Zealand — Why It Sets the Standard",
-                      body: "New Zealand's livestock industry operates under the Animal Products Act 1999 and Ministry for Primary Industries (MPI) regulations that require year-round pasture access, prohibit synthetic growth hormones (banned nationally, not just for export), and mandate traceability across the supply chain. Grass-finishing — no grain feedlot period before slaughter — is the industry norm rather than an exception you pay a premium to access. This is meaningfully different from 'grass-fed' labels in the US, where the standard allows grain finishing and does not require continuous pasture access. NZ sourcing claims are verifiable through the regulatory framework, not solely through brand marketing.",
+                      title: "New Zealand — why it matters",
+                      body: "New Zealand's livestock industry operates under the Animal Products Act 1999 and MPI regulations that prohibit the use of growth hormones and require substantial pasture access. Grass-finishing (no grain feedlot period before slaughter) is standard practice for NZ beef, not an exception. This is meaningful — grass-finished liver has a meaningfully different fatty acid profile, including higher CLA and omega-3 concentrations compared to grain-finished livestock.",
                     },
                     {
-                      title: "Why Freeze-Drying Matters for Organ Meats",
-                      body: "Organ meats are processed in two main ways: heat desiccation (50–70°C, cheaper) or freeze-drying (sublimation under vacuum at ≤37°C, more expensive). The difference matters because CoQ10, certain B vitamins, and the proteolytic enzymes in pancreas are heat-labile — they degrade under conventional drying temperatures. Freeze-drying removes moisture while the product is essentially frozen, then brings the temperature up gradually to body temperature maximum during the secondary drying phase. The resulting powder retains a more complete nutrient profile. Ancestral Supplements' claim of 'never heated above body temperature' is consistent with established freeze-dryer operating parameters and is not a marketing exaggeration.",
+                      title: "Grass-Fed vs Grass-Finished",
+                      body: "These are not the same thing. 'Grass-fed' in the US can mean the animal ate grass at some point. 'Grass-finished' means the animal ate nothing but pasture until slaughter. Ancestral Supplements specifically states grass-fed and grass-finished. In New Zealand this is the norm, not a premium distinction — but it is worth knowing what you are paying for.",
                     },
                     {
-                      title: "Organ Ratios — What We Know and Do Not Know",
-                      body: "The label lists all five organs as part of a 3,000mg blend but does not disclose per-organ doses. This is standard practice in the multi-organ supplement category (even premium brands like Heart & Soil use proprietary blends). The estimated per-organ breakdown above uses equal distribution as a working assumption — the actual ratios may differ. For the two nutrients that require careful monitoring — preformed Vitamin A from liver and CoQ10 from heart — the ranges provided above give conservative and upper-bound estimates. If you are specifically trying to maximise CoQ10 intake, a dedicated CoQ10 supplement with a known dose is the more precise tool.",
+                      title: "Freeze-drying process",
+                      body: "The liver is processed fresh, never frozen first (freezing before freeze-drying can damage cell structure). It goes directly into the freeze-dryer where pressure is reduced and moisture sublimates from solid to gas at temperatures kept below 37°C. The result is a shelf-stable powder with roughly 5–6× the nutrient concentration of fresh liver by weight. This is why 3,000mg of freeze-dried liver is nutritionally meaningful despite being a small physical mass.",
                     },
                   ].map((item) => (
                     <div key={item.title} style={{ padding: "18px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
@@ -582,7 +562,7 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── LAB & VERIFICATION ─────────────────────────────────────── */}
               <section id="lab-data" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Data & Verification</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>For organ supplements, heavy metal testing is the essential verification — organ meats concentrate environmental contaminants (especially liver and kidney). This testing matters more than Informed Choice or NSF, which test for sport-banned substances.</p>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>For organ supplements, heavy metal testing is the critical verification — not Informed Choice or NSF, which are relevant for sport-banned substances. Liver concentrates environmental contaminants. You want documented testing.</p>
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
@@ -590,9 +570,8 @@ export default function AncestralBeefOrgansReview() {
                     { test: "Cadmium (Cd)", status: "Tested", result: "Below action level", icon: "✓", color: "#2D6A4F", bg: "#E8F5EE" },
                     { test: "Arsenic (As)", status: "Tested", result: "Below action level", icon: "✓", color: "#2D6A4F", bg: "#E8F5EE" },
                     { test: "Mercury (Hg)", status: "Tested", result: "Below action level", icon: "✓", color: "#2D6A4F", bg: "#E8F5EE" },
-                    { test: "NZ MPI Oversight", status: "Active", result: "Sourcing independently regulated", icon: "✓", color: "#2D6A4F", bg: "#E8F5EE" },
                     { test: "Batch QR Code", status: "Not available", result: "Email brand for COA", icon: "~", color: "#8B7355", bg: "#F5EEE5" },
-                    { test: "Informed Sport", status: "N/A", result: "Not held by this brand", icon: "○", color: "#8A8480", bg: "#EDE8DF" },
+                    { test: "Informed Choice", status: "N/A", result: "Not relevant for organ supps", icon: "○", color: "#8A8480", bg: "#EDE8DF" },
                   ].map((cert) => (
                     <div key={cert.test} style={{ padding: "16px", border: `1px solid ${cert.color}33`, borderRadius: 10, backgroundColor: cert.bg }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
@@ -607,7 +586,7 @@ export default function AncestralBeefOrgansReview() {
 
                 <div style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF" }}>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
-                    <strong>How to get the COA:</strong> Email <em>support@ancestralsupplements.com</em> with the lot number printed on the bottle base. Responses typically arrive within 1–2 business days. The COA will include heavy metal results for lead, cadmium, arsenic, and mercury for that specific batch.
+                    <strong>How to get the COA:</strong> Email <em>support@ancestralsupplements.com</em> with your lot number (printed on the bottle bottom). The brand responds within 1–2 business days. This is the standard process — it is not a red flag, but it is less convenient than a label QR code.
                   </p>
                 </div>
               </section>
@@ -626,23 +605,23 @@ export default function AncestralBeefOrgansReview() {
                   {[
                     {
                       q: "Starting dose",
-                      a: "Begin with 3 capsules per day for the first 5–7 days. Concentrated organ matter can cause digestive adjustment — mild nausea or loose stools are common in the first week. Starting at half-dose limits this. If you tolerate 3 caps easily, move to the full serving after a week.",
+                      a: "Begin with 3 capsules per day for the first week. Some people experience digestive adjustment — mild nausea or loose stools — when introducing concentrated organ meat. This usually resolves in 5–7 days. Starting at half the serving limits this.",
                     },
                     {
                       q: "Full dose",
-                      a: "6 capsules per day. The standard split that works best for most people: 3 capsules with breakfast, 3 with lunch or dinner. Taking all 6 at once on an empty stomach is the most common cause of the nausea that new users report.",
+                      a: "6 capsules per day, as the label states. Split them: 3 with breakfast, 3 with lunch or dinner. Taking all 6 at once on an empty stomach is the most common cause of reported nausea.",
                     },
                     {
-                      q: "Timing — always with food",
-                      a: "Fat-soluble vitamins (A from liver, CoQ10 from heart, K2) absorb significantly better when taken with dietary fat. Any meal containing fat — eggs, meat, avocado, nuts, olive oil — is sufficient. Do not take fasted.",
+                      q: "Timing",
+                      a: "With food, always. Fat-soluble vitamins (A, K2) require dietary fat for absorption. A meal that contains any fat — eggs, avocado, olive oil — is sufficient. Do not take fasted.",
                     },
                     {
                       q: "With other supplements",
-                      a: "The main interaction to monitor is Vitamin A. If you take a multivitamin that contains preformed Vitamin A (retinol) or a separate Vitamin A supplement, add those amounts to your estimate from this blend before assessing your total against the 3,000 mcg RAE tolerable upper limit. Fish oil, cod liver oil, and other liver-containing products also contribute retinol. Beta-carotene from plant sources does not carry the same toxicity risk.",
+                      a: "If you take a multivitamin that contains Vitamin A or retinol, add those amounts together before assessing your daily intake against the 10,000 IU/day upper limit. Also relevant: cod liver oil and vitamin A drops. Vitamin D has a protective interaction with Vitamin A toxicity at high doses — adequate D intake reduces risk.",
                     },
                     {
                       q: "Cycling",
-                      a: "Daily use is appropriate and mirrors the pattern of eating organ meats 3–4 times per week as a food. If you are regularly eating liver or heart as real food, account for that before determining your supplement dose. There is no evidence that cycling organ supplements offers any benefit.",
+                      a: "Not required. Daily use is appropriate and mirrors what you would get eating liver 2–3 times per week as a food. If you are eating liver regularly as food, you may not need the supplement at all.",
                     },
                   ].map((item, i) => (
                     <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
@@ -656,33 +635,32 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The multi-organ supplement market is crowded but the quality range is wide. Key differentiators: source country, processing method, organ count, and third-party certification.</p>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The desiccated/freeze-dried liver supplement market is small but competitive. Key differences are sourcing, processing method, and whether the brand publishes testing data.</p>
                 <div className="review-table-wrap">
-                  <table style={{ borderCollapse: "collapse", minWidth: 640 }}>
+                  <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
-                        {["", "Ancestral Supps", "Heart & Soil", "Left Coast Perf.", "Codeage", "Force Factor"].map((h, i) => (
-                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 1 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
+                        {["", "Ancestral Supps", "Dr. Ron's Ultra-Pure", "Perfect Supplements", "Carlson Desiccated"].map((h, i) => (
+                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 1 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 4 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
                     <tbody>
                       {[
-                        { metric: "FSP Score", vals: ["9/10 ★", "9/10", "8/10", "7/10", "7/10"] },
-                        { metric: "Organs", vals: ["5-organ", "5-organ", "5-organ", "5-organ", "5-organ"] },
-                        { metric: "Source", vals: ["New Zealand", "US Regen.", "New Zealand", "US/Mixed", "US Grain-Fed"] },
-                        { metric: "Grass-finished", vals: ["Yes (MPI)", "Yes (claimed)", "Yes (claimed)", "Claimed", "Not specified"] },
-                        { metric: "Processing", vals: ["Freeze-dried", "Freeze-dried", "Freeze-dried", "Desiccated", "Desiccated"] },
-                        { metric: "Informed Sport", vals: ["No", "Yes ✓", "No", "No", "No"] },
-                        { metric: "Heavy metal COA", vals: ["On request", "On request", "On request", "Not public", "Not public"] },
-                        { metric: "Fillers", vals: ["None", "None", "None", "Some", "Additives"] },
-                        { metric: "Price / 30 sv", vals: ["$45–49", "$55–60", "$35–39", "$38–44", "$25–30"] },
-                        { metric: "Cost per serving", vals: ["$1.50", "$1.83", "$1.17", "$1.30", "$0.87"] },
+                        { metric: "FSP Score", vals: ["8/10 ★", "7.5/10", "7/10", "6.5/10"] },
+                        { metric: "Processing", vals: ["Freeze-dried", "Desiccated (heat)", "Freeze-dried", "Desiccated (heat)"] },
+                        { metric: "Source country", vals: ["New Zealand", "United States", "Brazil", "Argentina"] },
+                        { metric: "Grass-finished", vals: ["Yes (verified)", "Yes (claimed)", "Yes (claimed)", "Yes (claimed)"] },
+                        { metric: "Serving size", vals: ["3,000mg / 6 caps", "2,400mg / 4 tabs", "2,000mg / 4 caps", "2,500mg / 5 tabs"] },
+                        { metric: "Heavy metal test", vals: ["COA on request", "Limited disclosure", "Claims tested", "No public COA"] },
+                        { metric: "Price / 30 sv (USD)", vals: ["$43–47", "$40–45", "$28–34", "$25–30"] },
+                        { metric: "Available in India", vals: ["Amazon.in", "No", "No", "Amazon.in (limited)"] },
+                        { metric: "Capsule type", vals: ["Bovine gelatin", "Compressed tablet", "Bovine gelatin", "Compressed tablet"] },
                       ].map((row, i) => (
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "9px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
                           {row.vals.map((v, j) => (
-                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#7B3B1A" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: j < 4 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 700 : 400, whiteSpace: "nowrap" }}>{v}</td>
+                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#7B3B1A" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 700 : 400, whiteSpace: "nowrap" }}>{v}</td>
                           ))}
                         </tr>
                       ))}
@@ -690,60 +668,70 @@ export default function AncestralBeefOrgansReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
-                  Prices verified May 2026 on Amazon US. Informed Sport status verified against the Informed Sport product database. NZ sourcing verified against brand documentation and MPI regulatory framework.
+                  Prices verified May 2026 on Amazon US. India prices add 15–30% due to import duties. Competitor data based on published label information.
                 </p>
               </section>
 
               {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Buy cards for top organ supplement options — prices verified May 2026.</p>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Buy cards for the main organ supplements in this comparison — prices verified May 2026.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
                   <ProductCard
-                    name="Beef Organs"
+                    name="Beef Liver"
                     brand="Ancestral Supplements"
                     category="Organ Supplement"
-                    score={9}
-                    priceUSD="$45–49 / 180 caps"
-                    priceINR="₹4,200–5,400"
-                    tags={["NZ Grass-Fed", "5-Organ", "Freeze-Dried", "No Fillers"]}
-                    buyUrl="https://amzn.to/43xRRca"
+                    score={8}
+                    priceUSD="$43–47 / 180 caps"
+                    priceINR="₹3,800–4,800"
+                    tags={["NZ Grass-Fed", "Freeze-Dried", "No Fillers"]}
+                    buyUrl="https://amzn.to/49RAlmU"
                     buyLabel="Buy on Amazon"
-                    reviewSlug="ancestral-supplements-beef-organs"
+                    reviewSlug="ancestral-supplements-beef-liver"
+                    image="ancestral-supplements-beefliv.webp"
                     bgFrom="#1E1208"
                     bgTo="#120C06"
                     accent="#7B3B1A"
                     featured={true}
                   />
                   <ProductCard
-                    name="Beef Organs"
-                    brand="Heart & Soil"
+                    name="Ultra-Pure Desiccated Liver"
+                    brand="Dr. Ron's"
                     category="Organ Supplement"
-                    score={9}
-                    priceUSD="$55–60 / 30 sv"
+                    priceUSD="$40–45 / 30 sv"
                     priceINR="Not on Amazon.in"
-                    tags={["Informed Sport", "US Regen.", "5-Organ"]}
-                    buyUrl="https://amzn.to/3Q2X5ts"
+                    tags={["US Grass-Fed", "Tablet Form"]}
+                    buyUrl="https://www.drrons.com/desiccated-liver.html"
                     buyLabel="Check Price"
-                    reviewSlug="heart-and-soil-beef-organs"
                     bgFrom="#1E1B18"
                     bgTo="#141210"
                     accent="#8B7355"
                   />
                   <ProductCard
-                    name="Beef Organs"
-                    brand="Left Coast Performance"
+                    name="Desiccated Beef Liver"
+                    brand="Perfect Supplements"
                     category="Organ Supplement"
-                    score={8}
-                    priceUSD="$35–39 / 30 sv"
+                    priceUSD="$28–34 / 30 sv"
                     priceINR="Not on Amazon.in"
-                    tags={["NZ Grass-Fed", "Best Value", "5-Organ"]}
-                    buyUrl="https://amzn.to/4nUmi5H"
+                    tags={["Brazil Grass-Fed", "Freeze-Dried"]}
+                    buyUrl="https://www.perfectsupplements.com/Perfect-Desiccated-Liver-p/pdliver.htm"
                     buyLabel="Check Price"
-                    reviewSlug="left-coast-performance-beef-organs"
-                    bgFrom="#1A1E1B"
-                    bgTo="#111510"
-                    accent="#3A5F3A"
+                    bgFrom="#1E1B18"
+                    bgTo="#141210"
+                    accent="#5C5650"
+                  />
+                  <ProductCard
+                    name="Desiccated Liver Tablets"
+                    brand="Carlson Labs"
+                    category="Organ Supplement"
+                    priceUSD="$25–30 / 30 sv"
+                    priceINR="₹2,200–2,800"
+                    tags={["Budget Option", "Argentina Beef"]}
+                    buyUrl="https://amzn.to/carlson-liver"
+                    buyLabel="Check Price"
+                    bgFrom="#1A1A1E"
+                    bgTo="#111116"
+                    accent="#3A5F8B"
                   />
                 </div>
               </section>
@@ -753,39 +741,40 @@ export default function AncestralBeefOrgansReview() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
-                    "Five-organ blend (liver, heart, kidney, spleen, pancreas) — most complete nose-to-tail coverage in this price bracket",
-                    "New Zealand grass-fed, grass-finished — MPI-regulated sourcing, independently verifiable",
-                    "Freeze-dried at ≤37°C — better CoQ10, B-vitamin, and enzyme preservation than heat desiccation",
-                    "Zero fillers — bovine gelatin capsule only, no flow agents or excipients",
-                    "Heavy metal testing conducted with COA available",
-                    "Competitively priced at $1.50/serving for premium multi-organ NZ sourcing",
-                    "No taste or smell — removes the main barrier to organ nutrition",
+                    "Single ingredient — no fillers, no excipients whatsoever",
+                    "New Zealand grass-fed, grass-finished — verifiable and regulated sourcing",
+                    "Freeze-dried at ≤37°C — better nutrient preservation than heat desiccation",
+                    "Heavy metal testing conducted (lead, cadmium, arsenic, mercury)",
+                    "No taste or smell — removes the biggest barrier to eating liver",
+                    "Room temperature stable, travel-friendly, 18-month shelf life",
+                    "No recall history, no FDA warning letters since 2016",
                   ]}
                   cons={[
-                    "Per-organ dose not disclosed — retinol contribution from liver cannot be precisely calculated",
-                    "No Informed Sport or NSF certification — not suitable for drug-tested athletes",
+                    "Six capsules per serving — high cap burden, especially for supplement-heavy users",
                     "Batch COA requires email request — not accessible at point of purchase",
-                    "Six capsules per serving — high pill burden compared to powder alternatives",
-                    "Not suitable for pregnant women without medical guidance (retinol from liver component)",
+                    "Expensive vs eating real grass-fed liver from a butcher",
+                    "India pricing inflated by 15–30% due to import duties",
+                    "Not suitable for pregnant women without medical guidance (retinol load)",
+                    "3,000mg ≈ only 15–18g fresh liver — below a real food serving",
                   ]}
                 />
               </section>
 
               {/* ─── SAFETY & VITAMIN A ─────────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Safety & Vitamin A — What You Need to Know</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Multi-organ blends dilute the liver component across five organs, which meaningfully reduces the Vitamin A load compared to single-organ liver supplements — but the issue still warrants attention.</p>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Safety & Vitamin A — The Actual Conversation</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>This is the section most organ supplement reviews skip. It should not be skipped.</p>
 
                 <div style={{ padding: "20px 24px", border: "1px solid #C4622D44", borderRadius: 12, backgroundColor: "#FDF5EF", marginBottom: 20 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
                     <AlertTriangle size={18} color="#C4622D" style={{ flexShrink: 0, marginTop: 2 }} />
                     <div>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#C4622D", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>Vitamin A in This Blend vs. Single-Organ Liver Supplements</p>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "#C4622D", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>Vitamin A Upper Limit: Know This Before You Start</p>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, marginBottom: 10 }}>
-                        A single-organ beef liver supplement at 3,000mg delivers all retinol from liver only, estimated at 1,000–2,500 mcg RAE per serving. This blend divides 3,000mg across five organs — if liver is 600mg (estimated 20% of the blend), the retinol contribution drops to approximately 300–750 mcg RAE. That is 10–25% of the 3,000 mcg RAE tolerable upper intake level (Institute of Medicine, 2001).
+                        The tolerable upper intake level (UL) for preformed Vitamin A (retinol) is <strong>10,000 IU/day (3,000 mcg RAE)</strong> for adults, set by the Institute of Medicine. At 6 capsules of Ancestral Supplements, you are consuming an estimated 1,000–2,500 mcg RAE from this supplement alone.
                       </p>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
-                        This blend is substantially lower risk for Vitamin A accumulation than single-organ liver products. The caveat: organ ratios are not disclosed, so the 600mg liver estimate is a working assumption. Combined with a multivitamin containing retinol and fortified foods, most adults will remain comfortably below the UL.
+                        That is 33–83% of the upper limit from one supplement. Add a multivitamin with Vitamin A, any fortified foods (breakfast cereals, dairy), or other liver-based products, and you can approach or exceed the UL. This does not mean the product is dangerous at standard dosing — it means you need to be aware of your total retinol intake, not just from this bottle.
                       </p>
                     </div>
                   </div>
@@ -795,23 +784,23 @@ export default function AncestralBeefOrgansReview() {
                   {[
                     {
                       icon: <CheckCircle size={15} color="#2D6A4F" />,
-                      title: "At 6 caps/day: lower Vitamin A risk than single-organ liver supplements",
-                      body: "Because liver is diluted across four other organs, the estimated retinol load per serving (300–750 mcg RAE) is 33–67% lower than a comparable liver-only product. For adults eating a normal diet without additional Vitamin A supplementation, daily use is appropriate.",
+                      title: "At 6 caps/day: safe for most healthy adults",
+                      body: "The estimated retinol from one serving (1,000–2,500 mcg RAE) keeps most people below the UL when combined with a normal diet. Chronic toxicity from preformed Vitamin A (hypervitaminosis A) requires sustained intake above the UL for months, not occasional excess.",
                     },
                     {
                       icon: <XCircle size={15} color="#8B3A2C" />,
-                      title: "Pregnancy: specific contraindication for the liver component",
-                      body: "The NHS, WHO, and ACOG specifically warn against concentrated liver products during pregnancy due to preformed retinol teratogenicity. Even at the lower retinol load from a blended product, pregnant women should consult an obstetrician before use. This applies to all liver-containing supplements regardless of dose.",
+                      title: "Pregnancy: specific contraindication",
+                      body: "Preformed retinol is teratogenic at high doses. The NHS, WHO, and ACOG all specifically warn against high-dose liver supplements during pregnancy. This is not a liver-brand-specific warning — it applies to all concentrated retinol sources. If pregnant or planning pregnancy, discuss with your obstetrician.",
                     },
                     {
                       icon: <AlertTriangle size={15} color="#8B7355" />,
-                      title: "Stack awareness: multivitamins + fortified foods",
-                      body: "If you take a standard multivitamin containing 750–1,500 mcg RAE of retinol, add that to the estimated 300–750 mcg RAE from this blend. Combined total: 1,050–2,250 mcg RAE — below the 3,000 mcg UL for most people on a typical diet. If you also eat fortified cereals, dairy products with added Vitamin A, or other liver products, run the full calculation.",
+                      title: "With a daily multivitamin: check the math",
+                      body: "Many multivitamins contain 750–1,500 mcg RAE of preformed Vitamin A or mixed retinol/beta-carotene. Combined with 6 caps of this supplement, you can approach the 3,000 mcg UL. Beta-carotene from supplements does not carry the same toxicity risk as preformed retinol.",
                     },
                     {
                       icon: <ShieldCheck size={15} color="#2D6A4F" />,
-                      title: "The Vitamin D relationship",
-                      body: "Research suggests Vitamin D provides functional antagonism to Vitamin A toxicity at high intakes. Maintaining adequate 25-OH-D levels (40–60 ng/mL) appears to buffer effects of moderately elevated retinol. This is contextual — it does not permit ignoring the UL — but it explains how ancestral diets high in organ meats did not produce toxicity at population scale.",
+                      title: "The Vitamin D interaction",
+                      body: "Research suggests Vitamin D acts as a functional antagonist to Vitamin A toxicity at higher intakes. Maintaining optimal Vitamin D levels (40–60 ng/mL 25-OH-D) appears to buffer the effects of moderately elevated retinol intake. This is not license to ignore the UL — it is context for why ancestral diets high in organ meat were not universally toxic.",
                     },
                   ].map((item, i) => (
                     <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "flex", gap: 12, alignItems: "flex-start" }}>
@@ -828,14 +817,14 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── PRICE & VALUE ──────────────────────────────────────────── */}
               <section id="value" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
-                <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="5-organ freeze-dried blend" />
+                <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="freeze-dried liver" />
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: 12, marginTop: 20 }}>
                   {[
-                    { size: "180 caps (30 sv)", usd: "$45–49", note: "Standard bottle" },
-                    { size: "6-pack bundle", usd: "$240–270", note: "~$40–45 per bottle" },
-                    { size: "Subscribe & Save", usd: "$38–42/month", note: "~15% off, cancellable" },
-                    { size: "Amazon.in (import)", usd: "₹4,200–5,400", note: "Elevated due to import duties" },
+                    { size: "180 caps (30 sv)", usd: "$43–47", note: "Standard bottle" },
+                    { size: "6-pack bundle", usd: "$225–255", note: "~$37–42 per bottle" },
+                    { size: "Subscribe & Save", usd: "$36–40/month", note: "~15% off, cancellable" },
+                    { size: "Amazon.in (import)", usd: "₹3,800–4,800", note: "Effective $46–58 USD" },
                   ].map((p) => (
                     <div key={p.size} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{p.size}</p>
@@ -844,7 +833,7 @@ export default function AncestralBeefOrgansReview() {
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Prices verified May 2026 on Amazon US. Subscribe &amp; Save discount applied through Amazon — verify current percentage at time of purchase.</p>
+                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Prices verified May 2026 on Amazon US. Subscribe & Save is available through Amazon — check current discount at time of purchase.</p>
               </section>
 
               {/* ─── WHERE TO BUY ───────────────────────────────────────────── */}
@@ -855,24 +844,24 @@ export default function AncestralBeefOrgansReview() {
                   {[
                     {
                       channel: "Amazon US (Sold by Ancestral Supplements)",
-                      price: "$45–49",
-                      notes: "Primary and most reliable channel. Fulfilled directly by the brand. Subscribe & Save available. Look for the Prime badge and verify the seller is Ancestral Supplements LLC, not a third-party reseller.",
+                      price: "$43–47",
+                      notes: "Primary and most reliable channel. Sold and fulfilled by the brand directly. Subscribe & Save available. Look for Prime badge.",
                       recommended: true,
-                      url: "https://amzn.to/43xRRca",
+                      url: "https://amzn.to/49RAlmU",
                     },
                     {
                       channel: "Ancestral Supplements website",
-                      price: "$45–49",
-                      notes: "Direct from brand. Best option if you want to request a COA at the same time, access bundle pricing, or contact customer support. Sometimes runs promotions not available on Amazon.",
+                      price: "$43–47",
+                      notes: "Direct from brand. Sometimes has bundle discounts. Useful if you want to speak with their customer support team or request COA at the same time.",
                       recommended: true,
-                      url: "https://ancestralsupplements.com/products/beef-organs",
+                      url: "https://ancestralsupplements.com/products/grass-fed-beef-liver",
                     },
                     {
                       channel: "Amazon India (Import)",
-                      price: "₹4,200–5,400",
-                      notes: "Available but expensive due to import duties. Verify the seller is fulfilled by Amazon and check the tamper seal on delivery. Request the COA using the lot number on the bottle base if concerned about batch quality.",
+                      price: "₹3,800–4,800",
+                      notes: "Available but expensive due to import duties. Verify seller is legitimate and the seal is intact on delivery. Check the lot number on the bottom and email support for the COA if concerned.",
                       recommended: false,
-                      url: "https://amzn.to/43xRRca",
+                      url: "https://amzn.to/49RAlmU",
                     },
                   ].map((channel) => (
                     <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F8F2E4", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
@@ -897,12 +886,12 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <summary>{faq.name}</summary>
-                      <p className="faq-answer">{faq.acceptedAnswer.text}</p>
-                    </details>
+                    <div key={i} style={{ padding: "18px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>{faq.name}</p>
+                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.acceptedAnswer.text}</p>
+                    </div>
                   ))}
                 </div>
               </section>
@@ -910,19 +899,19 @@ export default function AncestralBeefOrgansReview() {
               {/* ─── FINAL VERDICT ──────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 16 }}>Final Verdict · REV-2026-045</p>
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 16 }}>Final Verdict · REV-2026-044</p>
                   <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>
-                    The category gold standard.{" "}
-                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>Best for most buyers.</em>
+                    The best organ supplement on the market.{" "}
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>Expensive for what it is.</em>
                   </h2>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
-                    Ancestral Supplements Beef Organs earns its reputation. Five organs from New Zealand grass-fed cattle, freeze-dried at ≤37°C, with zero fillers and heavy metal testing available. The sourcing is independently verifiable through NZ MPI regulations rather than relying solely on brand claims. At $1.50/serving, it offers better value than Heart &amp; Soil for buyers who do not need Informed Sport certification.
+                    If you are going to take a beef liver supplement, this is the one. The sourcing is verifiable, the processing is the best available method, there are genuinely zero additives, and the brand has a clean safety record. It does what it says.
                   </p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
-                    The multi-organ approach is nutritionally superior to single-organ liver supplements for general health purposes: CoQ10 from heart, selenium from kidney, heme iron from spleen, and enzymes from pancreas fill gaps that liver alone cannot. The lower retinol load per serving (vs. liver-only products) also makes daily use more practical from a Vitamin A safety standpoint.
+                    The honest limitation is value. At $43–47 for 30 servings, you are paying $1.43–$1.57 per day for the equivalent of 15–18g of liver. A weekly purchase of 300g of grass-fed beef liver from a quality butcher delivers more nutrition for significantly less money. The supplement wins on convenience, consistency, and zero-tolerance for taste. If those are the barriers stopping you from getting liver&apos;s nutrition, it is worth every dollar.
                   </p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8 }}>
-                    The two legitimate limitations are the undisclosed per-organ blend ratios and the absence of Informed Sport certification. If you are a drug-tested athlete, Heart &amp; Soil is the correct choice. For everyone else, this is the product we would buy — and do recommend as our category top pick.
+                    Read the Safety section on Vitamin A before you start. Know your total retinol intake from all sources. Take with food, always. Start at 3 caps for the first week. Those four things and this is a straightforward, excellent product.
                   </p>
                   <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
@@ -931,9 +920,9 @@ export default function AncestralBeefOrgansReview() {
                     </div>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
-                      <p style={{ fontSize: 12, color: "#8A8480" }}>Top pick. NZ sourced. 5-organ. Zero fillers.</p>
+                      <p style={{ fontSize: 12, color: "#8A8480" }}>Excellent sourcing. Honest formulation. Premium price.</p>
                     </div>
-                    <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <a href="https://amzn.to/49RAlmU" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon <ExternalLink size={12} />
                     </a>
                   </div>
@@ -946,16 +935,15 @@ export default function AncestralBeefOrgansReview() {
                 <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
-                      "USDA FoodData Central #174489 — Beef, variety meats, liver, raw; #169451 — Beef, heart, raw; #169450 — Beef, kidneys, raw; #169453 — Beef, spleen, raw; #169452 — Beef, pancreas, raw. Nutrient data used as basis for per-organ estimates adjusted for freeze-drying concentration factor (~5–6×).",
+                      "USDA FoodData Central #174489 — Beef, variety meats and by-products, liver, raw. Nutrient data used as basis for per-serving estimates adjusted for freeze-drying concentration factor (~5–6×).",
                       "Institute of Medicine. Dietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper, Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and Zinc (2001). National Academies Press. Tolerable Upper Intake Level for preformed retinol: 10,000 IU (3,000 mcg RAE)/day for adults.",
-                      "New Zealand Ministry for Primary Industries (MPI). Animal Products Act 1999; Livestock Movement and Biosecurity Regulations. Requirements for pasture-based farming and prohibition of synthetic growth hormones in NZ cattle.",
-                      "Daley CA et al. (2010). A review of fatty acid profiles and antioxidant content in grass-fed and grain-fed beef. Nutr J 9:10. CLA, omega-3, and micronutrient differences in grass-finished vs grain-finished livestock.",
-                      "Ernster L, Dallner G (1995). Biochemical, physiological and medical aspects of ubiquinone function. Biochim Biophys Acta 1271(1):195–204. CoQ10 distribution in bovine cardiac tissue and thermal stability considerations.",
-                      "Rayman MP (2012). Selenium and human health. Lancet 379(9822):1256–68. Selenium content of kidney and bioavailability from animal sources.",
-                      "Fellows PJ (2009). Food Processing Technology: Principles and Practice (3rd ed.). Woodhead Publishing. Freeze-drying process parameters, sublimation temperatures, and secondary drying phase in industrial lyophilisation.",
-                      "NHS. Vitamins and minerals: Vitamin A. nhs.uk. Guidance specifically citing concentrated liver supplement avoidance during pregnancy due to preformed retinol content.",
+                      "NHS. Vitamins and minerals: Vitamin A. nhs.uk. Guidance on liver and liver products during pregnancy — high preformed retinol content.",
+                      "New Zealand Ministry for Primary Industries (MPI). Animal Products Act 1999. Livestock and pasture management requirements confirming year-round pasture access for NZ cattle.",
+                      "Daley CA et al. (2010). A review of fatty acid profiles and antioxidant content in grass-fed and grain-fed beef. Nutr J 9:10. CLA and omega-3 concentration differences in grass-finished vs grain-finished livestock.",
+                      "Fellows PJ (2009). Food Processing Technology: Principles and Practice (3rd ed.). Woodhead Publishing. Freeze-drying process parameters and nutrient retention compared with conventional heat desiccation.",
+                      "Canfield LM et al. (1992). Bioavailability of coenzyme Q10. Biochem Biophys Res Commun 183(1):359–64. CoQ10 thermal stability and implications for processing temperature.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
                     ))}
                   </ol>
                 </div>
