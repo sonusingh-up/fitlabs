@@ -38,7 +38,8 @@ const topPicks = [
     servingCost: "$0.50",
     badge: "Editor's Choice",
     badgeColor: "#C4622D",
-    image: "#",
+    image: "/products/ancestral-supplements-beefliv.webp",
+    buyUrl: "https://amzn.to/43xRRca",
   },
   {
     rank: 2,
@@ -59,7 +60,8 @@ const topPicks = [
     servingCost: "$0.61",
     badge: "Best Premium",
     badgeColor: "#185FA5",
-    image: "#",
+    image: "/products/HEART-SOIL.webp",
+    buyUrl: "https://amzn.to/3Q2X5ts",
   },
   {
     rank: 3,
@@ -80,7 +82,8 @@ const topPicks = [
     servingCost: "$0.39",
     badge: "Best for Women",
     badgeColor: "#0F6E56",
-    image: "#",
+    image: "/products/left-coast-performance-beef-organ.webp",
+    buyUrl: "https://amzn.to/4nUmi5H",
   },
   {
     rank: 4,
@@ -101,7 +104,8 @@ const topPicks = [
     servingCost: "$0.33",
     badge: "Best Organic",
     badgeColor: "#3B6D11",
-    image: "#",
+    image: "/products/perfect-supplement.webp",
+    buyUrl: "https://amzn.to/4odctAl",
   },
   {
     rank: 5,
@@ -122,7 +126,8 @@ const topPicks = [
     servingCost: "$0.18",
     badge: "Best Budget",
     badgeColor: "#854F0B",
-    image: "#",
+    image: "/products/Force-Factor-Primal-Origins.webp",
+    buyUrl: "https://amzn.to/43wF5e3",
   },
   {
     rank: 6,
@@ -143,7 +148,8 @@ const topPicks = [
     servingCost: "$0.31",
     badge: "",
     badgeColor: "",
-    image: "#",
+    image: "/products/ForestLeaf-Beef-Organ.webp",
+    buyUrl: "https://amzn.to/4dzvZTM",
   },
   {
     rank: 7,
@@ -164,7 +170,8 @@ const topPicks = [
     servingCost: "$0.47",
     badge: "",
     badgeColor: "",
-    image: "#",
+    image: "/products/Codeage.webp",
+    buyUrl: "https://amzn.to/4wUtzqk",
   },
 ];
 
@@ -398,13 +405,18 @@ export default function BestBeefOrganSupplementsPage() {
                 </div>
 
                 {/* Footer */}
-                <div style={{ padding: "14px 24px", borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                <div style={{ padding: "14px 24px", borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
                   <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
                     {pick.certifications !== "None" ? `Certification: ${pick.certifications}` : "No third-party certification"}
                   </p>
-                  <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                    Read full review →
-                  </Link>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                      Buy on Amazon ↗
+                    </a>
+                    <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                      Full review →
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

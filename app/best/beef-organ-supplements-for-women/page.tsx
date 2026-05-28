@@ -66,7 +66,8 @@ export default function BestBeefOrganSupplementsWomenPage() {
       tag: "Best Overall for Women",
       price: "$1.50/serving",
       href: "/reviews/ancestral-supplements-beef-liver",
-      image: "#",
+      image: "/products/ancestral-supplements-beefliv.webp",
+      buyUrl: "https://amzn.to/43xRRca",
       why: "NZ grass-fed liver provides the highest retinol, B12, folate, and heme iron per serving of any single-organ product. Published heavy metal COA. Lot-specific traceability. The gold standard for women seeking a liver-first nutrient protocol. Retinol dose is disclosed, enabling safe monitoring.",
       nutrients: ["Retinol 16,899µg/100g", "Folate 290µg/100g", "B12 59.3µg/100g", "Heme iron 6.2mg/100g"],
       caution: "Pregnant women must consult OB/GYN — liver retinol exceeds first-trimester safe intake in large doses.",
@@ -78,7 +79,8 @@ export default function BestBeefOrganSupplementsWomenPage() {
       tag: "Best for Athletes & Verified Purity",
       price: "$1.83/serving",
       href: "/reviews/heart-and-soil-beef-organs",
-      image: "#",
+      image: "/products/HEART-SOIL.webp",
+      buyUrl: "https://amzn.to/3Q2X5ts",
       why: "The only Informed Sport certified organ supplement — decisive for competitive female athletes. 5-organ nose-to-tail formula covers CoQ10 (energy), selenium (thyroid), and spleen iron alongside liver. Dr. Saladino also offers female-specific formulas including reproductive organ tissue for those interested in the ancestral approach. Premium but justified for verified-purity needs.",
       nutrients: ["5 organs: liver, heart, kidney, spleen, pancreas", "Informed Sport certified", "US Regenerative farm sourcing", "Heavy metal COA available"],
       caution: "Proprietary blend — individual organ doses undisclosed. Retinol calculation requires physician guidance.",
@@ -90,7 +92,8 @@ export default function BestBeefOrganSupplementsWomenPage() {
       tag: "Best Value for Iron + Broad Nutrition",
       price: "$0.39/serving",
       href: "/reviews/left-coast-performance-beef-organs",
-      image: "#",
+      image: "/products/left-coast-performance-beef-organ.webp",
+      buyUrl: "https://amzn.to/4nUmi5H",
       why: "NZ sourced 5-organ blend at the lowest price of the credible products reviewed. For premenopausal women on a budget, the liver + spleen combination within the 5-organ formula provides excellent iron density. Popular with women following the carnivore diet. No female-specific marketing, but the nutritional profile is well-suited.",
       nutrients: ["5 organs (NZ sourced)", "$0.39/serving", "Best price-to-quality ratio", "Spleen included for iron density"],
       caution: "No heavy metal COA publicly available. Adequate for most users.",
@@ -102,7 +105,8 @@ export default function BestBeefOrganSupplementsWomenPage() {
       tag: "Best Female-Specific Iron Focus",
       price: "$0.63/serving",
       href: "/reviews/happee-beef-organ-women",
-      image: "#",
+      image: "/products/Happee-Grass-Fed-Beef-Organ.webp",
+      buyUrl: "https://amzn.to/4uDGXOc",
       why: "The only product in this roundup specifically designed around female iron needs — the liver + spleen combination provides the highest heme iron density of any reviewed formula. NZ grass-fed sourcing. Explicit female-focused protocol. Held back by lack of third-party testing and no published heavy metal COA.",
       nutrients: ["Liver + Spleen (iron-dense)", "Kidney (selenium, B2)", "NZ grass-fed", "Female-specific protocol"],
       caution: "No third-party testing. Proprietary blend — retinol incalculable. Not suitable during pregnancy without physician approval.",
@@ -114,7 +118,8 @@ export default function BestBeefOrganSupplementsWomenPage() {
       tag: "Best for Targeted Iron Optimisation",
       price: "$1.10/serving",
       href: "/reviews/enviromedica-terraferrin",
-      image: "#",
+      image: "/products/Enviromedica.webp",
+      buyUrl: "https://amzn.to/4vhPma3",
       why: "Unique lactoferrin + desiccated liver formula. Lactoferrin has clinical evidence for modestly improving iron absorption and immune modulation. Disclosed ingredient doses (not a proprietary blend). Argentine grass-fed sourcing with published COA. Best suited for iron-focused women who want the lactoferrin synergy or want to stack with a broader multi-organ supplement.",
       nutrients: ["Lactoferrin + beef liver", "Disclosed doses (not proprietary)", "Argentine grass-fed", "COA on website"],
       caution: "Liver-only (no CoQ10/selenium). Expensive as a standalone at $1.10/serving.",
@@ -243,9 +248,14 @@ export default function BestBeefOrganSupplementsWomenPage() {
                   {pick.caution && (
                     <p style={{ fontSize: 12, color: "#8A8480", fontStyle: "italic", marginBottom: 14 }}>⚠ {pick.caution}</p>
                   )}
-                  <Link href={pick.href} style={{ display: "inline-block", fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600 }}>
-                    Read full review →
-                  </Link>
+                  <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
+                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                      Buy on Amazon ↗
+                    </a>
+                    <Link href={pick.href} style={{ fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600, whiteSpace: "nowrap" }}>
+                      Full review →
+                    </Link>
+                  </div>
                 </div>
                 <div style={{ width: 90, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
                   <div style={{ width: 90, height: 110, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
