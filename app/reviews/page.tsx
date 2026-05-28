@@ -38,6 +38,7 @@ const reviews: Review[] = [
     tags: ["Whey", "Muscle Gain", "Informed Choice"],
     thirdParty: true,
     accent: "#C4622D",
+    image: "/products/on-gold-standard-whey.webp",
   },
   {
     slug: "myprotein-creatine-monohydrate",
@@ -64,6 +65,7 @@ const reviews: Review[] = [
     tags: ["Wellness", "Health", "General Use"],
     thirdParty: false,
     accent: "#D4A96A",
+    image: "/products/wellmedr-product.webp",
   },
   {
     slug: "dymatize-iso100-review-2026",
@@ -77,6 +79,7 @@ const reviews: Review[] = [
     tags: ["Whey Isolate", "Hydrolyzed", "NSF Certified", "Informed Choice"],
     thirdParty: true,
     accent: "#2D6A4F",
+    image: "/products/dymatize-iso100.webp",
   },
   {
     slug: "ancestral-supplements-beef-organs",

@@ -485,34 +485,42 @@ export default function HappeeBeefOrganWomenPage() {
             {/* Comparison */}
             <section id="comparison" style={{ marginBottom: 56 }}>
               <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs Competitors</h2>
-              <div className="review-table-wrap">
-                <table style={{ borderCollapse: "collapse", minWidth: 560 }}>
-                  <thead>
-                    <tr style={{ backgroundColor: "#1A1714" }}>
-                      {["Brand", "Price/Serving", "Female Focus", "Iron Density", "Verification", "Score"].map((h) => (
-                        <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.08em" }}>{h}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ["Happee (Women)", "$0.63", "High", "Very High (liver+spleen)", "None", "7/10"],
-                      ["Heart & Soil Women's", "$1.83+", "High", "Moderate (5-organ)", "Informed Sport", "9/10"],
-                      ["Left Coast Performance", "$0.39", "Low", "High (5-organ)", "None", "8/10"],
-                      ["Ancestral Supplements Liver", "$1.50", "Low", "High (liver focus)", "Heavy metal COA", "9/10"],
-                      ["Terraferrin", "$1.10", "Moderate", "High (liver focus)", "COA Available", "7/10"],
-                    ].map(([brand, price, female, iron, cert, score], i) => (
-                      <tr key={brand} style={{ backgroundColor: brand.includes("Happee") ? "#FEF9F7" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", fontWeight: brand.includes("Happee") ? 600 : 400 }}>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#1A1714" }}>{brand}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{price}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{female}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{iron}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{cert}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{score}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(168px, 1fr))", gap: 12 }}>
+                {[
+                  { name: "Happee (Women)", image: "/products/Happee-Grass-Fed-Beef-Organ.webp", score: "7/10", price: "$0.63/serving", spec1: "Iron: Very High", spec2: "Female-specific", buyUrl: "https://amzn.to/4uDGXOc", reviewUrl: "/reviews/happee-beef-organ-women", isCurrent: true },
+                  { name: "Heart & Soil Women's", image: "/products/HEART-SOIL.webp", score: "9/10", price: "$1.83+/serving", spec1: "Iron: High (5-organ)", spec2: "Informed Sport cert.", buyUrl: "https://amzn.to/3Q2X5ts", reviewUrl: "/reviews/heart-and-soil-beef-organs" },
+                  { name: "Left Coast Performance", image: "/products/left-coast-performance-beef-organ.webp", score: "8/10", price: "$0.39/serving", spec1: "Iron: High (5-organ)", spec2: "Women's line avail.", buyUrl: "https://amzn.to/4nUmi5H", reviewUrl: "/reviews/left-coast-performance-beef-organs" },
+                  { name: "Ancestral Supplements", image: "/products/ancestral-supplements-beefliv.webp", score: "9/10", price: "$1.50/serving", spec1: "Iron: High (liver)", spec2: "Heavy metal COA", buyUrl: "https://amzn.to/43xRRca", reviewUrl: "/reviews/ancestral-supplements-beef-organs" },
+                  { name: "Enviromedica Terraferrin", image: "/products/Enviromedica.webp", score: "7/10", price: "$1.10/serving", spec1: "Iron: High (liver)", spec2: "Lactoferrin formula", buyUrl: "https://amzn.to/4vhPma3", reviewUrl: "/reviews/enviromedica-terraferrin" },
+                ].map((comp) => (
+                  <div key={comp.name} style={{ border: `${comp.isCurrent ? "2" : "1"}px solid ${comp.isCurrent ? "#C4622D" : "#D4C9B8"}`, borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
+                    {comp.isCurrent && (
+                      <div style={{ padding: "4px 8px", backgroundColor: "#C4622D", textAlign: "center" }}>
+                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#F2EBD9" }}>This product</span>
+                      </div>
+                    )}
+                    <div style={{ height: 100, backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "center", padding: 10 }}>
+                      <img src={comp.image} alt={comp.name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }} />
+                    </div>
+                    <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column", gap: 4 }}>
+                      <p style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{comp.name}</p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 15, fontWeight: 700, color: "#C4622D", margin: 0 }}>{comp.score}</p>
+                      <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{comp.price}</p>
+                      <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec1}</p>
+                      <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec2}</p>
+                    </div>
+                    <div style={{ padding: "10px 14px", borderTop: "1px solid #EDE8DF", display: "flex", gap: 6 }}>
+                      <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "6px 8px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                        Buy ↗
+                      </a>
+                      {!comp.isCurrent && (
+                        <Link href={comp.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: "#7B3B1A", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", padding: "6px 8px", border: "1px solid #D4C9B8", borderRadius: 5 }}>
+                          Read →
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
 

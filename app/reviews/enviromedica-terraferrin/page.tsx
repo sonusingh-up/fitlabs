@@ -441,33 +441,42 @@ export default function EnviromediciaTerraferrinPage() {
             {/* Comparison */}
             <section id="comparison" style={{ marginBottom: 56 }}>
               <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs Standard Organ Blends</h2>
-              <div className="review-table-wrap">
-                <table style={{ borderCollapse: "collapse", minWidth: 540 }}>
-                  <thead>
-                    <tr style={{ backgroundColor: "#1A1714" }}>
-                      {["", "Terraferrin", "Left Coast Performance", "Ancestral Supplements"].map((h) => (
-                        <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.08em" }}>{h}</th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {[
-                      ["Organs covered", "Liver only", "5 organs", "1–5 organs"],
-                      ["Price/serving", "$1.10", "$0.39", "$1.50"],
-                      ["Lactoferrin", "✓ Included", "✗ None", "✗ None"],
-                      ["Iron focus", "Primary focus", "Partial (spleen/liver)", "Partial (liver)"],
-                      ["COA available", "Yes", "Limited", "Yes"],
-                      ["Sourcing", "Argentine", "NZ", "NZ"],
-                    ].map(([attr, t, lc, as_], i) => (
-                      <tr key={attr} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                        <td style={{ padding: "10px 14px", fontSize: 12, fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480", letterSpacing: "0.05em" }}>{attr}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{t}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{lc}</td>
-                        <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{as_}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12 }}>
+                {[
+                  { name: "Enviromedica Terraferrin", image: "/products/Enviromedica.webp", score: "7/10", price: "$1.10/serving", spec1: "Organs: Liver only", spec2: "Lactoferrin: ✓ Included", spec3: "COA: Yes · Argentine", buyUrl: "https://amzn.to/4vhPma3", reviewUrl: "/reviews/enviromedica-terraferrin", isCurrent: true },
+                  { name: "Left Coast Performance", image: "/products/left-coast-performance-beef-organ.webp", score: "8/10", price: "$0.39/serving", spec1: "Organs: 5-organ blend", spec2: "Lactoferrin: None", spec3: "COA: Limited · NZ", buyUrl: "https://amzn.to/4nUmi5H", reviewUrl: "/reviews/left-coast-performance-beef-organs" },
+                  { name: "Ancestral Supplements", image: "/products/ancestral-supplements-beefliv.webp", score: "9/10", price: "$1.50/serving", spec1: "Organs: 1–5 organs", spec2: "Lactoferrin: None", spec3: "COA: Yes · NZ", buyUrl: "https://amzn.to/43xRRca", reviewUrl: "/reviews/ancestral-supplements-beef-organs" },
+                  { name: "Happee (Women)", image: "/products/Happee-Grass-Fed-Beef-Organ.webp", score: "7/10", price: "$0.63/serving", spec1: "Organs: 4-organ blend", spec2: "Lactoferrin: None", spec3: "Female-specific", buyUrl: "https://amzn.to/4uDGXOc", reviewUrl: "/reviews/happee-beef-organ-women" },
+                ].map((comp) => (
+                  <div key={comp.name} style={{ border: `${comp.isCurrent ? "2" : "1"}px solid ${comp.isCurrent ? "#C4622D" : "#D4C9B8"}`, borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
+                    {comp.isCurrent && (
+                      <div style={{ padding: "4px 8px", backgroundColor: "#C4622D", textAlign: "center" }}>
+                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#F2EBD9" }}>This product</span>
+                      </div>
+                    )}
+                    <div style={{ height: 100, backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "center", padding: 10 }}>
+                      <img src={comp.image} alt={comp.name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }} />
+                    </div>
+                    <div style={{ padding: "12px 14px", flex: 1, display: "flex", flexDirection: "column", gap: 4 }}>
+                      <p style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{comp.name}</p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 15, fontWeight: 700, color: "#C4622D", margin: 0 }}>{comp.score}</p>
+                      <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{comp.price}</p>
+                      <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec1}</p>
+                      <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec2}</p>
+                      <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec3}</p>
+                    </div>
+                    <div style={{ padding: "10px 14px", borderTop: "1px solid #EDE8DF", display: "flex", gap: 6 }}>
+                      <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "6px 8px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                        Buy ↗
+                      </a>
+                      {!comp.isCurrent && (
+                        <Link href={comp.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: "#7B3B1A", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", padding: "6px 8px", border: "1px solid #D4C9B8", borderRadius: 5 }}>
+                          Read →
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
 
