@@ -106,6 +106,7 @@ const rubric: ScoringRubric = {
 
 rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);
 const editorialScore = rubric.editorialScore;
+const composite = rubric.compositeScore;
 
 const reviewSchema = {
   "@context": "https://schema.org",
@@ -187,125 +188,178 @@ const cons = [
 
 export default function EnviromediciaTerraferrinPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Feature banner */}
-      <div style={{ background: "linear-gradient(135deg, #1A1714 0%, #2D2520 60%, #3D2E28 100%)", padding: "48px 24px 40px", position: "relative", overflow: "hidden" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", position: "relative", zIndex: 1, display: "flex", alignItems: "flex-end", gap: 32 }}>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", whiteSpace: "nowrap" }}>REV-2026-052</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#3D3830", display: "inline-block", flexShrink: 0 }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", whiteSpace: "nowrap" }}>Full Review · FSP Scored</span>
-            </div>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, color: "#F2EBD9", lineHeight: 1.1, marginBottom: 16, maxWidth: 680 }}>
-              Enviromedica Terraferrin
-              <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#8A8480", fontSize: "0.7em", marginTop: 8 }}>
-                Liver + lactoferrin — a targeted iron formula with a premium price
-              </em>
-            </h1>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                {[1,2,3,4,5].map((i) => (
-                  <Star key={i} size={16} fill={i <= Math.round(editorialScore / 2) ? "#C4622D" : "none"} color={i <= Math.round(editorialScore / 2) ? "#C4622D" : "#5C5650"} />
-                ))}
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8A8480", marginLeft: 8 }}>{editorialScore}/10</span>
-              </div>
-              <a href="https://amzn.to/4vhPma3" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-                Buy on Amazon <ExternalLink size={11} />
-              </a>
-            </div>
-          </div>
-          <div className="hidden sm:flex" style={{ width: 120, height: 148, flexShrink: 0, alignItems: "flex-end", justifyContent: "center" }}>
-            <img src="/products/Enviromedica.webp" alt="Enviromedica Terraferrin" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
-          </div>
-        </div>
-      </div>
-
       {/* Breadcrumb */}
       <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/reviews" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Reviews</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Enviromedica Terraferrin</span>
+        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          <Link href="/" style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Home</Link>
+          <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
+          <Link href="/reviews" style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Reviews</Link>
+          <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
+          <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Enviromedica Terraferrin</span>
         </div>
       </div>
 
-      {/* Body */}
-      <div style={{ maxWidth: 1280, margin: "0 auto" }} className="container-pad">
-        <div className="review-layout">
+      {/* Feature Banner */}
+      <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #1E1208 0%, #120C06 100%)", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
+          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-052 · ORGAN SUPPLEMENT</span>
+          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+            Enviromedica<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Terraferrin</em>
+          </h1>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
+            <div style={{ display: "flex", gap: 4 }}>
+              {Array.from({ length: editorialScore }, (_, i) => <Star key={i} size={14} fill="#7B3B1A" color="#7B3B1A" />)}
+              {Array.from({ length: 10 - editorialScore }, (_, i) => <Star key={i + editorialScore} size={14} fill="none" color="#7B3B1A" />)}
+            </div>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
+          </div>
+        </div>
+        <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
+          <img src="/products/Enviromedica.webp" alt="Enviromedica Terraferrin" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
+        </div>
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+      </div>
 
-          {/* Sidebar TOC */}
+      {/* Hero row */}
+      <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
+        <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-052</span>
+          <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
+          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A" }}>Full Review · FSP Scored · Argentine Grass-Fed</span>
+        </div>
+        <div className="layout-hero-split">
+          <div>
+            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+              Enviromedica · Organ Supplement · Liver + Lactoferrin
+            </p>
+            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              Terraferrin — Targeted Iron Protocol,<br />
+              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Lactoferrin + Liver Formula</em>
+            </h2>
+            <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+              Desiccated Argentine grass-fed beef liver combined with bovine lactoferrin — the only organ supplement in this category pairing heme iron with an iron-transport glycoprotein.
+            </p>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <a href="https://amzn.to/4vhPma3" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                Buy on Amazon <ExternalLink size={13} />
+              </a>
+              <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                FSP {composite.toFixed(1)} → How we score
+              </Link>
+            </div>
+          </div>
+          <ReviewScoreBadge rating={editorialScore} size="lg" />
+        </div>
+      </div>
+
+      {/* MetadataStrip */}
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+        <MetadataStrip items={[
+          { label: "Brand", value: "Enviromedica" },
+          { label: "Price", value: "~$44 / 40 servings" },
+          { label: "Serving", value: "3 caps" },
+          { label: "Formula", value: "Liver + Lactoferrin" },
+          { label: "Sourcing", value: "Argentine grass-fed" },
+          { label: "Score", value: "7/10" },
+        ]} />
+      </div>
+
+      {/* Author box */}
+      <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
+        <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+          </div>
+          <div style={{ flex: 1, minWidth: 200 }}>
+            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
+            <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              Fitlab Research Team
+              <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
+            </p>
+            <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              Organ supplement research · Iron bioavailability analysis · Lactoferrin evidence review
+            </p>
+          </div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Research Review</span>
+            <span style={{ padding: "3px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Evidence-Led</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Affiliate notice */}
+      <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
+        <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+          <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
+          <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            Affiliate disclosure: the Amazon link above may earn us a commission at no extra cost to you. Scores and verdicts are editorially independent.{" "}
+            <Link href="/affiliate-disclosure" style={{ color: "#7B3B1A", textDecoration: "none" }}>Read our disclosure →</Link>
+          </p>
+        </div>
+      </div>
+
+      {/* Mobile TOC */}
+      <div className="block lg:hidden" style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 16 }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
+          <MobileTOC items={tocItems} />
+        </div>
+      </div>
+
+      {/* Main content + sidebar */}
+      <div style={{ maxWidth: 1280, margin: "0 auto" }} className="container-pad">
+        <div className="layout-sidebar">
+
+          {/* Desktop TOC */}
           <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
             <TableOfContents items={tocItems} />
           </aside>
 
           {/* Main content */}
           <article style={{ minWidth: 0 }}>
-            <MobileTOC items={tocItems} />
 
-            {/* Hero row */}
-            <div id="verdict" style={{ marginBottom: 40 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>
-                Enviromedica Terraferrin
-              </h2>
-              <MetadataStrip
-                items={[
-                  { label: "Brand", value: "Enviromedica" },
-                  { label: "Price", value: "~$44 / 40 servings" },
-                  { label: "Serving", value: "3 caps" },
-                  { label: "Formula", value: "Liver + Lactoferrin" },
-                  { label: "Sourcing", value: "Argentine grass-fed" },
-                  { label: "Score", value: "7/10" },
-                ]}
-              />
-
-              <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, marginTop: 20, marginBottom: 16, display: "flex", gap: 14, alignItems: "flex-start" }}>
-                <div style={{ width: 36, height: 36, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <span style={{ color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, fontWeight: 700 }}>FR</span>
-                </div>
-                <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 2 }}>Reviewed by</p>
-                  <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 2 }}>Fitlab Research Team</p>
-                  <p style={{ fontSize: 12, color: "#5C5650" }}>Independent supplement review · Evidence-led methodology · No brand affiliation</p>
-                </div>
-              </div>
-
-              <div style={{ padding: "10px 14px", backgroundColor: "#EDE8DF", borderRadius: 8, marginBottom: 24 }}>
-                <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
-                  DISCLOSURE: This review may contain affiliate links. We earn a small commission if you purchase via our links — at no extra cost to you. This does not influence our scores or recommendations. <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Full disclosure →</Link>
+            {/* Quick Verdict */}
+            <section id="verdict" style={{ marginBottom: 56 }}>
+              <div style={{ padding: "24px 28px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Quick Verdict · REV-2026-052</p>
+                <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8 }}>
+                  Terraferrin is the most specialised product in this review — it is not a general organ supplement but a targeted iron-optimisation product. The combination of desiccated liver and lactoferrin is mechanistically sound and the Argentine sourcing with published COA puts Enviromedica above average for transparency. The problem: $1.10/serving for liver-only focus when multi-organ competitors cost $0.31–$0.39. Best suited for women with iron-deficiency concerns, people stacking it alongside a separate multi-organ supplement, or buyers interested in lactoferrin&apos;s immune properties specifically. Not the right choice as your sole organ supplement.
                 </p>
               </div>
-
-              <ReviewScoreBadge rating={editorialScore} size="lg" />
-
-              <div style={{ marginTop: 20, padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>Quick Verdict</p>
-                <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7 }}>
-                  Terraferrin is the most specialised product in this review — it is not a general organ supplement but a targeted iron-optimisation product. The combination of desiccated liver and lactoferrin is mechanistically sound and the Argentine sourcing with published COA puts Enviromedica above average for transparency. The problem: $1.10/serving for liver-only focus when multi-organ competitors cost $0.31–$0.39. Best suited for women with iron-deficiency concerns, people stacking it alongside a separate multi-organ supplement, or buyers interested in lactoferrin's immune properties specifically. Not the right choice as your sole organ supplement.
-                </p>
+              <div className="review-pillar-grid">
+                {rubric.pillars.map((p) => (
+                  <div key={p.pillar} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", borderRight: "1px solid #EDE8DF" }}>
+                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{p.pillar}</p>
+                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{p.score.toFixed(1)} / 10</p>
+                    <p style={{ fontSize: 11, color: "#8A8480" }}>{p.notes.split(".")[0]}.</p>
+                  </div>
+                ))}
               </div>
-            </div>
+            </section>
 
             {/* Score breakdown */}
-            <section id="score-breakdown" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Score Breakdown</h3>
+            <section id="score-breakdown" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
               <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-052" />
+              <p style={{ fontSize: 12, color: "#8A8480", marginTop: 12 }}>
+                FSP v2.1 composite: {composite.toFixed(2)}/10 → editorial score: {editorialScore}/10.
+                Weighting: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%.
+              </p>
             </section>
 
             {/* Flags */}
-            <section id="flags" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Red & Green Flags</h3>
+            <section id="flags" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
               <FlagSystem flags={rubric.flags} />
             </section>
 
             {/* Formula */}
-            <section id="formula" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Formula Analysis</h3>
+            <section id="formula" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Formula Analysis</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Terraferrin contains two active ingredients: desiccated beef liver (providing heme iron, retinol, B12, copper) and bovine lactoferrin (an iron-binding glycoprotein). This is a narrower formula than the 5-organ blends in this category but with a specific functional rationale — iron status support.
               </p>
@@ -315,8 +369,8 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Lactoferrin evidence */}
-            <section id="lactoferrin" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Lactoferrin Evidence</h3>
+            <section id="lactoferrin" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lactoferrin Evidence</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Lactoferrin is the most evidence-supported component of Terraferrin. Key research:
               </p>
@@ -336,22 +390,22 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Sourcing */}
-            <section id="sourcing" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Sourcing & Quality</h3>
+            <section id="sourcing" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Sourcing & Quality</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
-                Enviromedica sources beef liver from Argentine grass-fed cattle. Argentina is one of the world's largest beef exporters, with extensive grassland-based (pampas) cattle systems that support year-round grazing. The COA is available on the Enviromedica website — covering heavy metals (lead, cadmium, arsenic, mercury). This transparency level is above average for the organ supplement category.
+                Enviromedica sources beef liver from Argentine grass-fed cattle. Argentina is one of the world&apos;s largest beef exporters, with extensive grassland-based (pampas) cattle systems that support year-round grazing. The COA is available on the Enviromedica website — covering heavy metals (lead, cadmium, arsenic, mercury). This transparency level is above average for the organ supplement category.
               </p>
             </section>
 
             {/* Claim audit */}
-            <section id="claim-audit" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Claim Audit</h3>
+            <section id="claim-audit" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
               <ClaimAudit items={rubric.claimAudit} />
             </section>
 
             {/* How to take */}
-            <section id="how-to-take" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>How to Take It</h3>
+            <section id="how-to-take" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 12 }}>
                 Take 3 capsules with a meal, preferably one containing fat to support fat-soluble vitamin (retinol) absorption. For iron optimisation, taking Terraferrin on an empty stomach may marginally improve iron absorption, but the retinol content means taking it with food is generally safer.
               </p>
@@ -362,8 +416,8 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Safety */}
-            <section id="safety" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Safety Notes</h3>
+            <section id="safety" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety Notes</h2>
               <div style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: 16, backgroundColor: "#FFF8F0", border: "1px solid #E5C4B8", borderRadius: 8, marginBottom: 16 }}>
                 <AlertTriangle size={18} color="#C4622D" style={{ flexShrink: 0, marginTop: 2 }} />
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
@@ -376,8 +430,8 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Value */}
-            <section id="value" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Price & Value</h3>
+            <section id="value" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
               <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="beef liver + lactoferrin" />
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginTop: 16 }}>
                 The $1.10/serving price is difficult to justify as a standalone organ supplement when multi-organ products offer broader coverage for $0.31–$0.39/serving. As a targeted iron supplement with lactoferrin, the price is more defensible — standalone lactoferrin capsules at clinical doses cost $0.50–$1.00/serving without the liver component. Viewed as lactoferrin + liver in a single capsule, the value equation improves.
@@ -385,8 +439,8 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Comparison */}
-            <section id="comparison" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>vs Standard Organ Blends</h3>
+            <section id="comparison" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs Standard Organ Blends</h2>
               <div className="review-table-wrap">
                 <table style={{ borderCollapse: "collapse", minWidth: 540 }}>
                   <thead>
@@ -418,14 +472,14 @@ export default function EnviromediciaTerraferrinPage() {
             </section>
 
             {/* Pros / Cons */}
-            <section id="pros-cons" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Pros & Cons</h3>
+            <section id="pros-cons" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
               <ProsCons pros={pros} cons={cons} />
             </section>
 
             {/* FAQ */}
-            <section id="faq" style={{ marginBottom: 40 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>FAQ</h3>
+            <section id="faq" style={{ marginBottom: 56 }}>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
               <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                 {faqSchema.mainEntity.map((item, i) => (
                   <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
@@ -444,15 +498,21 @@ export default function EnviromediciaTerraferrinPage() {
                 <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75, marginBottom: 16 }}>
                   Terraferrin is a well-made niche product. The lactoferrin + liver combination is thoughtfully formulated for iron optimisation, the Argentine sourcing is credible, and the published COA is a genuine differentiator. The limitations are clear: narrow scope (liver only), high price for single-organ coverage, and mechanistic rather than RCT-level evidence for the lactoferrin–liver synergy.
                 </p>
-                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>
+                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75, marginBottom: 20 }}>
                   <strong style={{ color: "#F2EBD9" }}>Buy Terraferrin if:</strong> you have iron-deficiency concerns, want lactoferrin alongside your liver supplement, or prefer Argentine sourcing. Use it to complement — not replace — a multi-organ formula.
                 </p>
+                <div style={{ display: "flex", gap: 12, alignItems: "center", paddingTop: 20, borderTop: "1px solid #3D3830", flexWrap: "wrap" }}>
+                  <a href="https://amzn.to/4vhPma3" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    Buy on Amazon <ExternalLink size={13} />
+                  </a>
+                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>FSP Score: {composite.toFixed(1)}/10 → Editorial: {editorialScore}/10</span>
+                </div>
               </div>
             </section>
 
             {/* References */}
             <section style={{ marginBottom: 48 }}>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Research References</h3>
+              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Research References</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {[
                   "Paesano R et al. Bovine lactoferrin for prevention and treatment of iron deficiency and iron deficiency anemia. Biometals, 2010;23(3):411-417.",
