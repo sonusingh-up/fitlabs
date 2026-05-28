@@ -5,12 +5,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "7 Best Beef Organ Supplements 2026 — Tested & Ranked",
+  title: "7 Best Beef Organ Supplements 2026 — Tested & Ranked by Experts",
   description:
     "Best beef organ supplements 2026 — ranked on sourcing, COA transparency, nutrient density, and price per serving. NZ grass-fed picks, women's options, carnivore-approved.",
   alternates: { canonical: "/best/beef-organ-supplements" },
   openGraph: {
-    title: "7 Best Beef Organ Supplements 2026 — Tested & Ranked",
+    title: "7 Best Beef Organ Supplements 2026 — Tested & Ranked by Experts",
     description:
       "We ranked 9 beef organ supplement brands on sourcing transparency, COA availability, nutrient density, and price. Here are the top 7 for 2026.",
     url: "https://fitlabreviews.com/best/beef-organ-supplements",
