@@ -21,6 +21,8 @@ type Review = {
   tags: string[];
   thirdParty: boolean;
   accent: string;
+  image?: string;
+  buyUrl?: string;
 };
 
 const reviews: Review[] = [
@@ -83,11 +85,13 @@ const reviews: Review[] = [
     category: "Organ Supplements",
     figure: "REV-2026-045",
     rating: 9,
-    verdict: "The gold standard: 6-organ blend from 100% NZ grass-fed cattle, freeze-dried at low temperature, no fillers. Highest organ diversity and sourcing transparency in the category.",
+    verdict: "The gold standard: 5-organ blend from 100% NZ grass-fed cattle, freeze-dried at low temperature, no fillers. Highest organ diversity and sourcing transparency in the category.",
     publishedAt: "2026-05-20",
-    tags: ["Grass-Fed", "New Zealand", "6-Organ", "Freeze-Dried"],
+    tags: ["Grass-Fed", "New Zealand", "5-Organ", "Freeze-Dried"],
     thirdParty: false,
     accent: "#8B4513",
+    image: "/products/ancestral-supplements-beefliv.webp",
+    buyUrl: "https://amzn.to/43xRRca",
   },
   {
     slug: "heart-and-soil-beef-organs",
@@ -101,6 +105,8 @@ const reviews: Review[] = [
     tags: ["Regenerative", "US Sourced", "Organ Blend", "Paul Saladino"],
     thirdParty: false,
     accent: "#8B4513",
+    image: "/products/HEART-SOIL.webp",
+    buyUrl: "https://amzn.to/3Q2X5ts",
   },
   {
     slug: "left-coast-performance-beef-organs",
@@ -114,6 +120,8 @@ const reviews: Review[] = [
     tags: ["Best Value", "New Zealand", "5-Organ", "Budget"],
     thirdParty: false,
     accent: "#A0522D",
+    image: "/products/left-coast-performance-beef-organ.webp",
+    buyUrl: "https://amzn.to/4nUmi5H",
   },
   {
     slug: "perfect-supplements-beef-liver",
@@ -127,6 +135,8 @@ const reviews: Review[] = [
     tags: ["Beef Liver", "Uruguay", "Informed Sport", "Single Organ"],
     thirdParty: true,
     accent: "#A0522D",
+    image: "/products/perfect-supplement.webp",
+    buyUrl: "https://amzn.to/4odctAl",
   },
   {
     slug: "force-factor-primal-origins",
@@ -140,6 +150,8 @@ const reviews: Review[] = [
     tags: ["Retail Available", "5-Organ", "Budget-Friendly"],
     thirdParty: false,
     accent: "#6B3A2A",
+    image: "/products/Force-Factor-Primal-Origins.webp",
+    buyUrl: "https://amzn.to/43wF5e3",
   },
   {
     slug: "forest-leaf-beef-organ-complex",
@@ -153,6 +165,8 @@ const reviews: Review[] = [
     tags: ["5-Organ", "Budget", "Amazon Available"],
     thirdParty: false,
     accent: "#6B3A2A",
+    image: "/products/ForestLeaf-Beef-Organ.webp",
+    buyUrl: "https://amzn.to/4dzvZTM",
   },
   {
     slug: "codeage-beef-organs",
@@ -166,6 +180,8 @@ const reviews: Review[] = [
     tags: ["Non-GMO", "5-Organ", "Clean Label"],
     thirdParty: false,
     accent: "#6B3A2A",
+    image: "/products/Codeage.webp",
+    buyUrl: "https://amzn.to/4wUtzqk",
   },
   {
     slug: "enviromedica-terraferrin",
@@ -179,6 +195,8 @@ const reviews: Review[] = [
     tags: ["Lactoferrin", "Iron Absorption", "Argentine", "Unique Formula"],
     thirdParty: false,
     accent: "#8B4513",
+    image: "/products/Enviromedica.webp",
+    buyUrl: "https://amzn.to/4vhPma3",
   },
   {
     slug: "happee-beef-organ-women",
@@ -192,6 +210,8 @@ const reviews: Review[] = [
     tags: ["Women's Formula", "New Zealand", "4-Organ", "Female Health"],
     thirdParty: false,
     accent: "#A0522D",
+    image: "/products/Happee-Grass-Fed-Beef-Organ.webp",
+    buyUrl: "https://amzn.to/4uDGXOc",
   },
 ];
 
@@ -296,17 +316,15 @@ export default function ReviewsHubPage() {
               />
               <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                 {groupReviews.map((review) => (
-                  <Link
+                  <div
                     key={review.slug}
-                    href={`/reviews/${review.slug}`}
-                    className="hub-row-link"
-                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", textDecoration: "none", backgroundColor: "#F8F2E4", alignItems: "stretch" }}
+                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", alignItems: "stretch" }}
                   >
                     {/* Accent bar */}
                     <div style={{ backgroundColor: review.accent }} />
 
-                    {/* Content */}
-                    <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", gap: 8 }}>
+                    {/* Content — clickable area */}
+                    <Link href={`/reviews/${review.slug}`} className="hub-row-link" style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 20px", textDecoration: "none" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{review.figure}</span>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "#8A8480", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4 }}>{review.category}</span>
@@ -324,23 +342,34 @@ export default function ReviewsHubPage() {
                           <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 9, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.07em" }}>{tag}</span>
                         ))}
                       </div>
-                    </div>
+                    </Link>
 
                     {/* Score + CTA */}
-                    <div style={{ padding: "18px 24px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #EDE8DF", minWidth: 120 }}>
+                    <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #EDE8DF", minWidth: 110, gap: 12 }}>
                       <div style={{ textAlign: "right" }}>
+                        {review.image && (
+                          <div style={{ width: 54, height: 66, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8, marginLeft: "auto" }}>
+                            <img src={review.image} alt={review.title} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                          </div>
+                        )}
                         <div style={{ display: "inline-flex", alignItems: "baseline", gap: 2, padding: "6px 12px", backgroundColor: ratingBg(review.rating), border: `1px solid ${ratingColor(review.rating)}30`, borderRadius: 8 }}>
                           <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: ratingColor(review.rating), lineHeight: 1 }}>{review.rating}</span>
                           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: ratingColor(review.rating) }}>/10</span>
                         </div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase", marginTop: 4 }}>FSP Score</p>
                       </div>
-                      <div style={{ textAlign: "right" }}>
-                        <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{review.publishedAt}</p>
-                        <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", display: "block", marginTop: 4 }}>Read Review →</span>
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
+                        {review.buyUrl && (
+                          <a href={review.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "5px 10px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                            Buy ↗
+                          </a>
+                        )}
+                        <Link href={`/reviews/${review.slug}`} style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                          Read →
+                        </Link>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </section>

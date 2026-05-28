@@ -229,6 +229,9 @@ export default function HeartAndSoilReviewPage() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
             </div>
           </div>
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
+            <img src="/products/HEART-SOIL.webp" alt="Heart & Soil Beef Organs" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
+          </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
         </div>
 
@@ -605,7 +608,7 @@ export default function HeartAndSoilReviewPage() {
                     priceUSD="~$35 / 180 caps"
                     priceINR="N/A"
                     tags={["NZ Sourced", "5-Organ", "Best Value"]}
-                    buyUrl="https://amzn.to/beef-organ-link"
+                    buyUrl="https://amzn.to/3Q2X5ts"
                     buyLabel="Check Price"
                     reviewSlug="left-coast-performance-beef-organs"
                     bgFrom="#1E1208"
@@ -620,7 +623,7 @@ export default function HeartAndSoilReviewPage() {
                     priceUSD="~$30 / 180 caps"
                     priceINR="N/A"
                     tags={["USDA Organic", "Brazil Sourced", "Budget Pick"]}
-                    buyUrl="https://amzn.to/beef-organ-link"
+                    buyUrl="https://amzn.to/3Q2X5ts"
                     buyLabel="Check Price"
                     reviewSlug="perfect-supplements-beef-liver"
                     bgFrom="#1E1B18"
@@ -759,12 +762,12 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <div key={i} style={{ padding: "18px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>{faq.name}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.acceptedAnswer.text}</p>
-                    </div>
+                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                      <summary>{faq.name}</summary>
+                      <p className="faq-answer">{faq.acceptedAnswer.text}</p>
+                    </details>
                   ))}
                 </div>
               </section>
@@ -811,7 +814,7 @@ export default function HeartAndSoilReviewPage() {
                       "Institute of Medicine. Dietary Reference Intakes for Vitamin A. National Academies Press, 2001. Tolerable Upper Intake Level for preformed retinol: 10,000 IU/day.",
                       "Informed Sport. Certification and batch testing methodology. informed-sport.com.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
                     ))}
                   </ol>
                 </div>

@@ -531,4 +531,44 @@ html, body {
 @media (max-width: 380px) {
   .review-pillar-grid { grid-template-columns: repeat(2, 1fr); }
 }
+/* ── FAQ accordion (details/summary) ─────────────────────────────────── */
+.faq-item {
+  border-bottom: 1px solid #EDE8DF;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+.faq-item summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1714;
+  font-family: var(--font-dm-sans), sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  user-select: none;
+  line-height: 1.4;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 20px;
+  color: #C4622D;
+  font-weight: 300;
+  flex-shrink: 0;
+  line-height: 1;
+  font-family: var(--font-dm-sans), sans-serif;
+}
+.faq-item[open] summary::after { content: '−'; }
+.faq-item[open] summary { color: #7B3B1A; }
+.faq-answer {
+  padding: 0 22px 18px;
+  font-size: 13px;
+  color: #5C5650;
+  line-height: 1.75;
+}
 /* end review utilities */

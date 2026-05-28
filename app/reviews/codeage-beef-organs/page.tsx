@@ -147,7 +147,7 @@ const reviewSchema = {
       price: "49.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://amzn.to/codeage-beef-organs",
+      url: "https://amzn.to/4wUtzqk",
     },
   },
 };
@@ -250,6 +250,9 @@ export default function CodeageBeefOrgansReview() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
             </div>
           </div>
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
+            <img src="/products/Codeage.webp" alt="Codeage Beef Organs" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
+          </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
         </div>
 
@@ -274,7 +277,7 @@ export default function CodeageBeefOrgansReview() {
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a
-                  href="https://amzn.to/codeage-beef-organs"
+                  href="https://amzn.to/4wUtzqk"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
@@ -642,7 +645,7 @@ export default function CodeageBeefOrgansReview() {
                     priceUSD="~$50 / 240 caps"
                     priceINR="Not on Amazon.in"
                     tags={["Non-GMO Verified", "5-Organ Blend", "4 Caps/Serving"]}
-                    buyUrl="https://amzn.to/codeage-beef-organs"
+                    buyUrl="https://amzn.to/4wUtzqk"
                     buyLabel="Buy on Amazon"
                     reviewSlug="codeage-beef-organs"
                     bgFrom="#1E1208"
@@ -658,7 +661,7 @@ export default function CodeageBeefOrgansReview() {
                     priceUSD="$23–26 / 60 sv"
                     priceINR="Not on Amazon.in"
                     tags={["NZ Sourced", "5-Organ", "$0.39/Serving"]}
-                    buyUrl="https://amzn.to/left-coast-beef-organs"
+                    buyUrl="https://amzn.to/4nUmi5H"
                     buyLabel="Buy on Amazon"
                     reviewSlug="left-coast-performance-beef-organs"
                     bgFrom="#1E1208"
@@ -768,7 +771,7 @@ export default function CodeageBeefOrgansReview() {
                       price: "~$50",
                       notes: "Primary channel. Codeage is an Amazon-native brand with consistent availability. Check that the seller is Codeage directly or Amazon-fulfilled. Subscribe & Save available for approximately 10–15% off.",
                       recommended: true,
-                      url: "https://amzn.to/codeage-beef-organs",
+                      url: "https://amzn.to/4wUtzqk",
                     },
                     {
                       channel: "Codeage website (codeage.com)",
@@ -800,12 +803,12 @@ export default function CodeageBeefOrgansReview() {
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <div key={i} style={{ padding: "18px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>{faq.name}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.acceptedAnswer.text}</p>
-                    </div>
+                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                      <summary>{faq.name}</summary>
+                      <p className="faq-answer">{faq.acceptedAnswer.text}</p>
+                    </details>
                   ))}
                 </div>
               </section>
@@ -836,7 +839,7 @@ export default function CodeageBeefOrgansReview() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
                       <p style={{ fontSize: 12, color: "#8A8480" }}>Non-GMO certified. Sourcing opacity. Mid-tier value.</p>
                     </div>
-                    <a href="https://amzn.to/codeage-beef-organs" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <a href="https://amzn.to/4wUtzqk" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon <ExternalLink size={12} />
                     </a>
                   </div>
@@ -856,7 +859,7 @@ export default function CodeageBeefOrgansReview() {
                       "Rayman MP. Selenium and human health. Lancet. 2012;379(9822):1256–68. Selenium deficiency, kidney as dietary source.",
                       "Prasad AS. Zinc in human health: effect of zinc on immune cells. Mol Med. 2008;14(5–6):353–7. Zinc functions and organ supplement relevance.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
                     ))}
                   </ol>
                 </div>

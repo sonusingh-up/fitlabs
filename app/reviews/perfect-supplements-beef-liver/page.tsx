@@ -143,6 +143,9 @@ export default function PerfectSupplementsReviewPage() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
             </div>
           </div>
+          <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
+            <img src="/products/perfect-supplement.webp" alt="Perfect Supplements Beef Liver" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
+          </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
         </div>
 
@@ -167,7 +170,7 @@ export default function PerfectSupplementsReviewPage() {
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a
-                  href="https://amzn.to/beef-organ-link"
+                  href="https://amzn.to/4odctAl"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
@@ -493,7 +496,7 @@ export default function PerfectSupplementsReviewPage() {
                     priceUSD="~$30 / 180 caps"
                     priceINR="Not on Amazon.in"
                     tags={["USDA Organic", "Brazil Grass-Fed", "No Fillers"]}
-                    buyUrl="https://amzn.to/beef-organ-link"
+                    buyUrl="https://amzn.to/4odctAl"
                     buyLabel="Buy on Amazon"
                     reviewSlug="perfect-supplements-beef-liver"
                     bgFrom="#1E1208"
@@ -521,7 +524,7 @@ export default function PerfectSupplementsReviewPage() {
                     priceUSD="$35 / 180 caps"
                     priceINR="Not on Amazon.in"
                     tags={["NZ Grass-Fed", "5-Organ Blend"]}
-                    buyUrl="https://amzn.to/beef-organ-link"
+                    buyUrl="https://amzn.to/4odctAl"
                     buyLabel="Check Price"
                     bgFrom="#1E1208"
                     bgTo="#120C06"
@@ -534,7 +537,7 @@ export default function PerfectSupplementsReviewPage() {
                     priceUSD="$0.18/serving"
                     priceINR="Not on Amazon.in"
                     tags={["Budget Pick"]}
-                    buyUrl="https://amzn.to/beef-organ-link"
+                    buyUrl="https://amzn.to/4odctAl"
                     buyLabel="Check Price"
                     bgFrom="#1E1B14"
                     bgTo="#141008"
@@ -621,14 +624,14 @@ export default function PerfectSupplementsReviewPage() {
                       price: "~$30",
                       notes: "Primary channel. Prime eligible. Subscribe & Save available. Verify seller is Perfect Supplements or fulfilled by Amazon directly.",
                       recommended: true,
-                      url: "https://amzn.to/beef-organ-link",
+                      url: "https://amzn.to/4odctAl",
                     },
                     {
                       channel: "Perfect Supplements website",
                       price: "~$30",
                       notes: "Direct from brand. Useful if you want to contact them about sourcing documentation or the organic certificate details.",
                       recommended: false,
-                      url: "https://amzn.to/beef-organ-link",
+                      url: "https://amzn.to/4odctAl",
                     },
                   ].map((channel) => (
                     <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F8F2E4", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
@@ -653,12 +656,12 @@ export default function PerfectSupplementsReviewPage() {
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <div key={i} style={{ padding: "18px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>{faq.name}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.acceptedAnswer.text}</p>
-                    </div>
+                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                      <summary>{faq.name}</summary>
+                      <p className="faq-answer">{faq.acceptedAnswer.text}</p>
+                    </details>
                   ))}
                 </div>
               </section>
@@ -686,7 +689,7 @@ export default function PerfectSupplementsReviewPage() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
                       <p style={{ fontSize: 12, color: "#8A8480" }}>Best USDA organic option. Budget-friendly.</p>
                     </div>
-                    <a href="https://amzn.to/beef-organ-link" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <a href="https://amzn.to/4odctAl" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon <ExternalLink size={12} />
                     </a>
                   </div>
@@ -705,7 +708,7 @@ export default function PerfectSupplementsReviewPage() {
                       "Institute of Medicine. Dietary Reference Intakes for Vitamin A (2001). Tolerable Upper Intake Level: 10,000 IU (3,000 mcg RAE)/day for adults.",
                       "Fellows PJ (2009). Food Processing Technology. Freeze-drying process parameters and nutrient retention.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
                     ))}
                   </ol>
                 </div>
