@@ -66,6 +66,7 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
       tag: "Carnivore Community Standard",
       price: "$1.50/serving",
       href: "/reviews/ancestral-supplements-beef-liver",
+      image: "#",
       why: "The original and most trusted brand in the ancestral/carnivore supplement space. Founded by Brian Johnson ('Liver King' co-collaborator), Ancestral Supplements pioneered the modern organ supplement category. NZ grass-fed, batch-traceable sourcing. Published heavy metal COA. The only brand with single-organ options that allow you to customise your nose-to-tail protocol — buy separate beef liver, heart, kidney, spleen, and pancreas products and dose each precisely.",
       tags: ["NZ grass-fed", "Heavy metal COA", "Single-organ options", "Batch-traceable", "Carnivore community trusted"],
     },
@@ -76,6 +77,7 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
       tag: "Best Formulation + Verified Purity",
       price: "$1.83/serving",
       href: "/reviews/heart-and-soil-beef-organs",
+      image: "#",
       why: "Formulated by Dr. Paul Saladino — the physician most associated with the carnivore diet movement. The 5-organ blend is the most complete single-product nose-to-tail supplement available. Informed Sport certified (unique in the category). US regenerative farm sourcing. For carnivore practitioners who want Saladino's specific formulation philosophy and verified purity, this is the top choice.",
       tags: ["Dr. Saladino formulation", "Informed Sport certified", "US Regenerative", "5-organ blend", "Carnivore physician endorsed"],
     },
@@ -86,6 +88,7 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
       tag: "Best Value Nose-to-Tail",
       price: "$0.39/serving",
       href: "/reviews/left-coast-performance-beef-organs",
+      image: "#",
       why: "NZ sourced 5-organ blend at $0.39/serving — the best price-to-sourcing ratio in the category. Popular in the carnivore community precisely because it delivers the full organ spectrum at a price that doesn't require a premium supplement budget. For carnivore practitioners who are already eating significant quantities of red meat and using supplements as a nutritional top-up rather than a primary source, Left Coast is the rational choice.",
       tags: ["NZ sourced", "$0.39/serving", "5-organ blend", "Best value", "Carnivore budget pick"],
     },
@@ -96,6 +99,7 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
       tag: "Best Organic-Certified Single Organ",
       price: "$0.33/serving",
       href: "/reviews/perfect-supplements-beef-liver",
+      image: "#",
       why: "The only USDA Organic certified beef liver supplement reviewed. For carnivore practitioners who specifically prioritise organic certification alongside their meat sourcing standards, Perfect Supplements is the only option. Brazilian Cerrado grass-fed sourcing has a strong track record. Liver-only means maximum retinol and B12 density per serving without organ dilution — appropriate for carnivore practitioners adding heart, kidney, spleen individually.",
       tags: ["USDA Organic certified", "Brazilian Cerrado", "Liver-focused", "$0.33/serving", "Organic carnivore pick"],
     },
@@ -106,6 +110,7 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
       tag: "Best Budget Access Pick",
       price: "$0.18/serving",
       href: "/reviews/force-factor-primal-origins",
+      image: "#",
       why: "At $0.18/serving, Primal Origins makes organ supplementation accessible to carnivore practitioners on a tight budget. Four-organ formula (no spleen). Undisclosed sourcing is a real weakness against carnivore community standards that strongly value traceability. Best used as an entry-level product while establishing the organ supplement habit — then upgrade to Ancestral or Left Coast once the routine is confirmed.",
       tags: ["$0.18/serving", "Budget access", "4 organs", "Widely available", "Entry-level"],
     },
@@ -213,17 +218,24 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#C4622D", fontWeight: 700 }}>{pick.score}</span>
                 </div>
               </div>
-              <div style={{ padding: "18px 20px", backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", marginBottom: 10 }}>{pick.price}</p>
-                <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
-                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 14 }}>
-                  {pick.tags.map((t) => (
-                    <span key={t} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
-                  ))}
+              <div style={{ padding: "18px 20px", backgroundColor: "#F8F2E4", display: "flex", gap: 20, alignItems: "flex-start" }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", marginBottom: 10 }}>{pick.price}</p>
+                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
+                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 14 }}>
+                    {pick.tags.map((t) => (
+                      <span key={t} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
+                    ))}
+                  </div>
+                  <Link href={pick.href} style={{ display: "inline-block", fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600 }}>
+                    Read full review →
+                  </Link>
                 </div>
-                <Link href={pick.href} style={{ display: "inline-block", fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600 }}>
-                  Read full review →
-                </Link>
+                <div style={{ width: 90, flexShrink: 0 }}>
+                  <div style={{ width: 90, height: 110, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                  </div>
+                </div>
               </div>
             </div>
           ))}

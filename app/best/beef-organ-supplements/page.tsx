@@ -38,6 +38,7 @@ const topPicks = [
     servingCost: "$0.50",
     badge: "Editor's Choice",
     badgeColor: "#C4622D",
+    image: "#",
   },
   {
     rank: 2,
@@ -58,6 +59,7 @@ const topPicks = [
     servingCost: "$0.61",
     badge: "Best Premium",
     badgeColor: "#185FA5",
+    image: "#",
   },
   {
     rank: 3,
@@ -78,6 +80,7 @@ const topPicks = [
     servingCost: "$0.39",
     badge: "Best for Women",
     badgeColor: "#0F6E56",
+    image: "#",
   },
   {
     rank: 4,
@@ -98,6 +101,7 @@ const topPicks = [
     servingCost: "$0.33",
     badge: "Best Organic",
     badgeColor: "#3B6D11",
+    image: "#",
   },
   {
     rank: 5,
@@ -118,6 +122,7 @@ const topPicks = [
     servingCost: "$0.18",
     badge: "Best Budget",
     badgeColor: "#854F0B",
+    image: "#",
   },
   {
     rank: 6,
@@ -138,6 +143,7 @@ const topPicks = [
     servingCost: "$0.31",
     badge: "",
     badgeColor: "",
+    image: "#",
   },
   {
     rank: 7,
@@ -158,6 +164,7 @@ const topPicks = [
     servingCost: "$0.47",
     badge: "",
     badgeColor: "",
+    image: "#",
   },
 ];
 
@@ -291,10 +298,17 @@ export default function BestBeefOrganSupplementsPage() {
                 {topPicks.map((pick, i) => (
                   <tr key={pick.slug} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                     <td style={{ padding: "12px 16px", verticalAlign: "top" }}>
-                      <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
-                      {pick.badge && (
-                        <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.05em" }}>{pick.badge}</span>
-                      )}
+                      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                        <div style={{ width: 44, height: 54, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, overflow: "hidden", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                        </div>
+                        <div>
+                          <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
+                          {pick.badge && (
+                            <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.05em" }}>{pick.badge}</span>
+                          )}
+                        </div>
+                      </div>
                     </td>
                     <td style={{ padding: "12px 16px", fontSize: 12, color: "#5C5650", verticalAlign: "top", maxWidth: 160 }}>{pick.organs}</td>
                     <td style={{ padding: "12px 16px", fontSize: 12, color: "#5C5650", verticalAlign: "top", whiteSpace: "nowrap" }}>{pick.sourcing}</td>
@@ -337,6 +351,9 @@ export default function BestBeefOrganSupplementsPage() {
                     </div>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
+                    <div style={{ width: 72, height: 88, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                    </div>
                     <ReviewScoreBadge rating={pick.rating} size="sm" />
                     {pick.badge && (
                       <span style={{ fontSize: 10, padding: "3px 10px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace" }}>{pick.badge}</span>
