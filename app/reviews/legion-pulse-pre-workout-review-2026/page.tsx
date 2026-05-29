@@ -20,12 +20,12 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Legion Pulse Pre-Workout Review (2026) — Rated 9/10",
+  title: "Legion Pulse Pre-Workout Review 2026: Clean Formula or Just More Hype?",
   description:
-    "Legion Pulse review: 8g citrulline malate, 350mg caffeine, 350mg L-theanine, 3.6g CarnoSyn beta-alanine, Labdoor certified. $2.25/serving. FSP 9/10.",
+    "We put Legion Pulse to the test — ingredients, energy, pumps, and side effects all covered. See if this stimulant-based pre-workout is worth your money before buying.",
   alternates: { canonical: "/reviews/legion-pulse-pre-workout-review-2026" },
   openGraph: {
-    title: "Legion Pulse Pre-Workout Review (2026) — Rated 9/10",
+    title: "Legion Pulse Pre-Workout Review 2026: Clean Formula or Just More Hype?",
     description:
       "6 clinically dosed ingredients, zero proprietary blends, Labdoor certified. The 1:1 caffeine-to-theanine ratio is unique — full FSP analysis.",
     url: "https://fitlabreviews.com/reviews/legion-pulse-pre-workout-review-2026",
