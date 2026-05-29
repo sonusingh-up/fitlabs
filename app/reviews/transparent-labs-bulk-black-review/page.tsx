@@ -20,12 +20,12 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "TL BULK Black Pre-Workout Review (2026) — Rated 9/10",
+  title: "Transparent Labs BULK Black Pre-Workout Review: Legit Results or Overhyped?",
   description:
-    "Transparent Labs BULK Black review: 8g citrulline malate, 305mg dual-phase caffeine, 300mg Alpha-GPC, Informed Choice certified. $59 / 30 servings. FSP 9/10.",
+    "Does Transparent Labs BULK Black live up to the hype? Our honest review covers ingredients, pumps, energy, and side effects. Find out if it's right for you.",
   alternates: { canonical: "/reviews/transparent-labs-bulk-black-review" },
   openGraph: {
-    title: "TL BULK Black Pre-Workout Review (2026) — Rated 9/10",
+    title: "Transparent Labs BULK Black Pre-Workout Review: Legit Results or Overhyped?",
     description:
       "16 clinically dosed ingredients, zero proprietary blends, Informed Choice certified. Is this the best high-stim pre-workout of 2026? Full FSP analysis.",
     url: "https://fitlabreviews.com/reviews/transparent-labs-bulk-black-review",
