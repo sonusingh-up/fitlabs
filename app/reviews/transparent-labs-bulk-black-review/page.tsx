@@ -784,7 +784,7 @@ export default function TransparentLabsBulkBlackReview() {
         {/* 7. Mobile TOC */}
         <div
           className="block lg:hidden"
-          style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 20 }}
+          style={{ marginTop: 16 }}
         >
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
@@ -895,28 +895,222 @@ export default function TransparentLabsBulkBlackReview() {
                 </div>
               </section>
 
-              {/* Mobile product image — shown only on mobile, below Quick Verdict */}
+              {/* Mobile product card — shown only on mobile, below Quick Verdict */}
               <div
                 className="block sm:hidden"
-                style={{
-                  margin: "0 0 40px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  padding: "24px 0 8px",
-                  borderBottom: "1px solid #EDE8DF",
-                }}
+                style={{ margin: "0 0 48px" }}
               >
-                <Image
-                  src="/products/tl-bulk-black-preworkout.webp"
-                  alt="Transparent Labs BULK Black Pre-Workout tub"
-                  width={200}
-                  height={260}
+                <div
                   style={{
-                    objectFit: "contain",
-                    filter: "drop-shadow(0 8px 28px rgba(196,98,45,0.18))",
+                    borderRadius: 14,
+                    overflow: "hidden",
+                    border: "1px solid #D4C9B8",
+                    backgroundColor: "#F8F2E4",
                   }}
-                />
+                >
+                  {/* Dark header with product image */}
+                  <div
+                    style={{
+                      background: "linear-gradient(145deg, #1A0A06 0%, #0D0402 100%)",
+                      padding: "28px 24px 0",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: 12,
+                      position: "relative",
+                      minHeight: 220,
+                    }}
+                  >
+                    {/* Grid texture */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        inset: 0,
+                        backgroundImage:
+                          "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)",
+                        backgroundSize: "24px 24px",
+                        borderRadius: "14px 14px 0 0",
+                      }}
+                    />
+                    {/* Cert badge */}
+                    <span
+                      style={{
+                        position: "relative",
+                        zIndex: 1,
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: 5,
+                        padding: "4px 10px",
+                        backgroundColor: "rgba(45,106,79,0.15)",
+                        border: "1px solid rgba(45,106,79,0.35)",
+                        borderRadius: 20,
+                        fontFamily: "var(--font-dm-mono), monospace",
+                        fontSize: 9,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: "#6BBF8A",
+                      }}
+                    >
+                      <ShieldCheck size={10} /> Informed Choice Certified
+                    </span>
+                    {/* Product image */}
+                    <div style={{ position: "relative", zIndex: 1 }}>
+                      <Image
+                        src="/products/tl-bulk-black-preworkout.webp"
+                        alt="Transparent Labs BULK Black Pre-Workout tub"
+                        width={160}
+                        height={200}
+                        style={{
+                          objectFit: "contain",
+                          filter: "drop-shadow(0 12px 32px rgba(196,98,45,0.5))",
+                          display: "block",
+                        }}
+                      />
+                    </div>
+                    {/* Fade to card body */}
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        height: 48,
+                        background: "linear-gradient(transparent, #F8F2E4)",
+                      }}
+                    />
+                  </div>
+
+                  {/* Card body */}
+                  <div style={{ padding: "16px 20px 20px" }}>
+                    {/* Brand + name */}
+                    <p
+                      style={{
+                        fontFamily: "var(--font-dm-mono), monospace",
+                        fontSize: 9,
+                        letterSpacing: "0.18em",
+                        textTransform: "uppercase",
+                        color: "#A89880",
+                        marginBottom: 4,
+                      }}
+                    >
+                      Transparent Labs
+                    </p>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-playfair), Georgia, serif",
+                        fontSize: "1.15rem",
+                        fontWeight: 800,
+                        color: "#1A1714",
+                        letterSpacing: "-0.02em",
+                        lineHeight: 1.15,
+                        marginBottom: 12,
+                      }}
+                    >
+                      BULK Black Pre-Workout
+                    </p>
+
+                    {/* Key stats row */}
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr 1fr",
+                        gap: 8,
+                        marginBottom: 16,
+                        padding: "12px 0",
+                        borderTop: "1px solid #EDE8DF",
+                        borderBottom: "1px solid #EDE8DF",
+                      }}
+                    >
+                      {[
+                        { val: "9/10", label: "FSP Score" },
+                        { val: "305mg", label: "Caffeine" },
+                        { val: "8,000mg", label: "Citrulline" },
+                      ].map((stat) => (
+                        <div key={stat.label} style={{ textAlign: "center" }}>
+                          <p
+                            style={{
+                              fontFamily: "var(--font-playfair), Georgia, serif",
+                              fontSize: "1rem",
+                              fontWeight: 800,
+                              color: "#C4622D",
+                              lineHeight: 1,
+                              marginBottom: 3,
+                            }}
+                          >
+                            {stat.val}
+                          </p>
+                          <p
+                            style={{
+                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontSize: 9,
+                              letterSpacing: "0.08em",
+                              textTransform: "uppercase",
+                              color: "#A89880",
+                            }}
+                          >
+                            {stat.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Price + CTA */}
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                        gap: 10,
+                      }}
+                    >
+                      <div>
+                        <p
+                          style={{
+                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontSize: 9,
+                            letterSpacing: "0.1em",
+                            textTransform: "uppercase",
+                            color: "#A89880",
+                            marginBottom: 2,
+                          }}
+                        >
+                          Price / 30 servings
+                        </p>
+                        <p
+                          style={{
+                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontSize: "1.1rem",
+                            fontWeight: 800,
+                            color: "#1A1714",
+                          }}
+                        >
+                          $59.99
+                        </p>
+                      </div>
+                      <a
+                        href="https://amzn.to/3RPRlnm"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: 6,
+                          padding: "10px 18px",
+                          backgroundColor: "#C4622D",
+                          color: "#F2EBD9",
+                          fontSize: 13,
+                          fontWeight: 700,
+                          borderRadius: 8,
+                          textDecoration: "none",
+                          fontFamily: "var(--font-dm-sans), sans-serif",
+                          flexShrink: 0,
+                        }}
+                      >
+                        Buy on Amazon <ExternalLink size={12} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* ─── § 2. WHAT IS BULK BLACK? ────────────────────────────────────── */}
@@ -1057,7 +1251,7 @@ export default function TransparentLabsBulkBlackReview() {
                   ½ scoop.
                 </p>
                 <div className="review-table-wrap">
-                  <table style={{ borderCollapse: "collapse", minWidth: 480 }}>
+                  <table style={{ borderCollapse: "collapse", minWidth: 480, width: "100%" }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         <th
