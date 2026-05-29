@@ -6,12 +6,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Legion Pulse vs TL BULK Black (2026): Which Wins?",
+  title: "Legion Pulse vs Transparent Labs BULK Black (2026): Which Pre-Workout Wins?",
   description:
-    "Legion Pulse vs Transparent Labs BULK Black: formula, caffeine system, theanine dose, Labdoor vs Informed Choice, and price. One clear winner per use case.",
+    "Legion Pulse or Transparent Labs BULK Black — which pre-workout is actually better? We compare ingredients, energy, pumps, price, and results to help you choose.",
   alternates: { canonical: "/compare/legion-pulse-vs-bulk-black" },
   openGraph: {
-    title: "Legion Pulse vs TL BULK Black (2026): Which Wins?",
+    title: "Legion Pulse vs Transparent Labs BULK Black (2026): Which Pre-Workout Wins?",
     description:
       "Both score 9/10. Both are fully transparent. The differences are specific — caffeine delivery, theanine dose, certification, and $0.25/serving. Here is how to pick.",
     url: "https://fitlabreviews.com/compare/legion-pulse-vs-bulk-black",
