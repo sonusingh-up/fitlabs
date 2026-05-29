@@ -782,7 +782,10 @@ export default function TransparentLabsBulkBlackReview() {
         </div>
 
         {/* 7. Mobile TOC */}
-        <div className="block lg:hidden" style={{ borderBottom: "1px solid #D4C9B8" }}>
+        <div
+          className="block lg:hidden"
+          style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 20 }}
+        >
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
@@ -891,6 +894,30 @@ export default function TransparentLabsBulkBlackReview() {
                   </div>
                 </div>
               </section>
+
+              {/* Mobile product image — shown only on mobile, below Quick Verdict */}
+              <div
+                className="block sm:hidden"
+                style={{
+                  margin: "0 0 40px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "24px 0 8px",
+                  borderBottom: "1px solid #EDE8DF",
+                }}
+              >
+                <Image
+                  src="/products/tl-bulk-black-preworkout.webp"
+                  alt="Transparent Labs BULK Black Pre-Workout tub"
+                  width={200}
+                  height={260}
+                  style={{
+                    objectFit: "contain",
+                    filter: "drop-shadow(0 8px 28px rgba(196,98,45,0.18))",
+                  }}
+                />
+              </div>
 
               {/* ─── § 2. WHAT IS BULK BLACK? ────────────────────────────────────── */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
@@ -1030,7 +1057,7 @@ export default function TransparentLabsBulkBlackReview() {
                   ½ scoop.
                 </p>
                 <div className="review-table-wrap">
-                  <table style={{ borderCollapse: "collapse", minWidth: 520 }}>
+                  <table style={{ borderCollapse: "collapse", minWidth: 480 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         <th
@@ -1042,6 +1069,7 @@ export default function TransparentLabsBulkBlackReview() {
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
                             color: "#A89880",
+                            width: "42%",
                           }}
                         >
                           Ingredient
@@ -1055,6 +1083,7 @@ export default function TransparentLabsBulkBlackReview() {
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
                             color: "#A89880",
+                            width: "28%",
                           }}
                         >
                           Amount / Serving
@@ -1068,6 +1097,7 @@ export default function TransparentLabsBulkBlackReview() {
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
                             color: "#A89880",
+                            width: "30%",
                           }}
                         >
                           Clinical Dose
@@ -1076,22 +1106,22 @@ export default function TransparentLabsBulkBlackReview() {
                     </thead>
                     <tbody>
                       {[
-                        { name: "Citrulline Malate 2:1", amount: "8,000 mg", clinical: "6,000–8,000 mg", status: "✓" },
-                        { name: "Beta-Alanine", amount: "4,000 mg", clinical: "3,200–6,400 mg", status: "✓" },
-                        { name: "Betaine Anhydrous (BetaPure®)", amount: "2,500 mg", clinical: "2,500 mg", status: "✓" },
-                        { name: "L-Tyrosine", amount: "1,000 mg", clinical: "500–2,000 mg", status: "✓" },
-                        { name: "Taurine", amount: "1,300 mg", clinical: "1,000–3,000 mg", status: "✓" },
-                        { name: "AlphaSize® Alpha-GPC 50%", amount: "300 mg", clinical: "200–600 mg", status: "✓" },
-                        { name: "Caffeine Anhydrous", amount: "275 mg", clinical: "3–6 mg/kg", status: "✓" },
-                        { name: "L-Theanine", amount: "200 mg", clinical: "100–200 mg", status: "✓" },
-                        { name: "Infinergy® Di-Caffeine Malate", amount: "30 mg", clinical: "Adjunct", status: "✓" },
-                        { name: "Theobromine", amount: "50 mg", clinical: "Adjunct", status: "✓" },
-                        { name: "AstraGin® (Absorption Matrix)", amount: "50 mg", clinical: "25–100 mg", status: "✓" },
-                        { name: "Boron (as Boron Citrate)", amount: "3 mg", clinical: "3–6 mg", status: "✓" },
-                        { name: "Vitamin D3 (Cholecalciferol)", amount: "75 mcg (3,000 IU)", clinical: "Varies", status: "✓" },
-                        { name: "Vitamin B6 (Pyridoxine HCl)", amount: "5 mg", clinical: "—", status: "—" },
-                        { name: "Vitamin B12 (Methylcobalamin)", amount: "250 mcg", clinical: "—", status: "—" },
-                        { name: "Sodium / Potassium (Electrolytes)", amount: "150 mg / 100 mg", clinical: "—", status: "—" },
+                        { name: "Citrulline Malate 2:1", amount: "8,000 mg", clinical: "6,000–8,000 mg", dosed: true },
+                        { name: "Beta-Alanine", amount: "4,000 mg", clinical: "3,200–6,400 mg", dosed: true },
+                        { name: "Betaine Anhydrous (BetaPure®)", amount: "2,500 mg", clinical: "2,500 mg", dosed: true },
+                        { name: "L-Tyrosine", amount: "1,000 mg", clinical: "500–2,000 mg", dosed: true },
+                        { name: "Taurine", amount: "1,300 mg", clinical: "1,000–3,000 mg", dosed: true },
+                        { name: "AlphaSize® Alpha-GPC 50%", amount: "300 mg", clinical: "200–600 mg", dosed: true },
+                        { name: "Caffeine Anhydrous", amount: "275 mg", clinical: "3–6 mg/kg", dosed: true },
+                        { name: "L-Theanine", amount: "200 mg", clinical: "100–200 mg", dosed: true },
+                        { name: "Infinergy® Di-Caffeine Malate", amount: "30 mg", clinical: "Adjunct", dosed: true },
+                        { name: "Theobromine", amount: "50 mg", clinical: "Adjunct", dosed: true },
+                        { name: "AstraGin® (Absorption Matrix)", amount: "50 mg", clinical: "25–100 mg", dosed: true },
+                        { name: "Boron (as Boron Citrate)", amount: "3 mg", clinical: "3–6 mg", dosed: true },
+                        { name: "Vitamin D3 (Cholecalciferol)", amount: "75 mcg (3,000 IU)", clinical: "Varies", dosed: true },
+                        { name: "Vitamin B6 (Pyridoxine HCl)", amount: "5 mg", clinical: "—", dosed: false },
+                        { name: "Vitamin B12 (Methylcobalamin)", amount: "250 mcg", clinical: "—", dosed: false },
+                        { name: "Sodium / Potassium (Electrolytes)", amount: "150 mg / 100 mg", clinical: "—", dosed: false },
                       ].map((row, i) => (
                         <tr
                           key={row.name}
@@ -1118,20 +1148,40 @@ export default function TransparentLabsBulkBlackReview() {
                               fontWeight: 700,
                               textAlign: "right",
                               fontFamily: "var(--font-dm-mono), monospace",
+                              whiteSpace: "nowrap",
                             }}
                           >
                             {row.amount}
                           </td>
-                          <td
-                            style={{
-                              padding: "11px 16px",
-                              fontSize: 12,
-                              color: row.status === "✓" ? "#2D6A4F" : "#8A8480",
-                              textAlign: "center",
-                              fontFamily: "var(--font-dm-mono), monospace",
-                            }}
-                          >
-                            {row.clinical}
+                          <td style={{ padding: "11px 16px", textAlign: "center" }}>
+                            {row.dosed && row.clinical !== "—" ? (
+                              <span
+                                style={{
+                                  display: "inline-block",
+                                  padding: "2px 9px",
+                                  backgroundColor: "rgba(45,106,79,0.10)",
+                                  border: "1px solid rgba(45,106,79,0.25)",
+                                  borderRadius: 20,
+                                  fontSize: 11,
+                                  color: "#2D6A4F",
+                                  fontFamily: "var(--font-dm-mono), monospace",
+                                  whiteSpace: "nowrap",
+                                  fontWeight: 600,
+                                }}
+                              >
+                                {row.clinical}
+                              </span>
+                            ) : (
+                              <span
+                                style={{
+                                  fontSize: 12,
+                                  color: "#A89880",
+                                  fontFamily: "var(--font-dm-mono), monospace",
+                                }}
+                              >
+                                —
+                              </span>
+                            )}
                           </td>
                         </tr>
                       ))}
