@@ -583,13 +583,13 @@ export default function MyProteinBrandPage() {
                 <span style={{ width: 16, height: 1, backgroundColor: "#2A2A40", display: "inline-block" }} />
                 <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>Silver Tier · BRD-002</span>
               </div>
-              <p style={{ fontSize: 15, color: "#6A6A8A", lineHeight: 1.85, marginBottom: 14 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 Myprotein earns Silver tier on the strength of two things: price and the Informed Sport certification on its core products. Impact Whey Protein and THE Creatine deliver independently verified quality at a price point that no certified competitor has matched. For anyone building a baseline supplement stack on a budget, these two products are the correct defaults.
               </p>
-              <p style={{ fontSize: 15, color: "#6A6A8A", lineHeight: 1.85, marginBottom: 14 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 The honest limitation is scope. The Informed Sport badge covers a subset of the catalogue — the full 200+ product range is not independently certified. Some flavoured variants, bars, and vitamins operate on internal quality controls without independent publication. The THG parent company&apos;s governance record adds supply chain uncertainty that a brand like ON, with NSF-GMP certified facilities and a longer testing track record, does not carry.
               </p>
-              <p style={{ fontSize: 15, color: "#6A6A8A", lineHeight: 1.85, margin: 0 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, margin: 0 }}>
                 Silver tier is not a consolation. For most people, buying certified Impact Whey and THE Creatine from Myprotein is the highest-value decision in the category. The gap to Gold tier reflects the selective certification scope — if Myprotein extended Informed Sport coverage across its core range, the assessment changes.
               </p>
             </div>

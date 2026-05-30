@@ -596,13 +596,13 @@ export default function OptimumNutritionBrandPage() {
                 <span style={{ width: 16, height: 1, backgroundColor: "#1A2840", display: "inline-block" }} />
                 <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,169,106,0.15)", border: "1px solid rgba(212,169,106,0.3)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,169,106,0.8)", textTransform: "uppercase", fontWeight: 700 }}>Gold Tier · BRD-001</span>
               </div>
-              <p style={{ fontSize: 15, color: "#6A8AAA", lineHeight: 1.85, marginBottom: 14 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 Optimum Nutrition is the benchmark against which everything else in sports protein is measured. That status is not marketing — it is the consequence of being independently tested, consistently accurate on label claims, and available at scale across 90 countries for nearly four decades. The Informed Sport certification on Gold Standard Whey is among the most rigorous third-party verification available in the supplement industry.
               </p>
-              <p style={{ fontSize: 15, color: "#6A8AAA", lineHeight: 1.85, marginBottom: 14 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 Gold tier reflects the consistency of the core range: Gold Standard Whey earns it outright. Not every product in the portfolio operates at that standard — Essential Amin.O. Energy uses a proprietary EAA blend with undisclosed doses, Serious Mass relies on maltodextrin as the primary calorie source, and some pre-workout doses fall short of clinical thresholds. These are not disqualifying flaws, but they mean ON&apos;s Gold rating is earned by its flagship protein line, not uniformly across the full portfolio.
               </p>
-              <p style={{ fontSize: 15, color: "#6A8AAA", lineHeight: 1.85, margin: 0 }}>
+              <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, margin: 0 }}>
                 If you are starting out with protein supplements and want a verified, consistent product with a long track record, Gold Standard 100% Whey is the correct default recommendation — not because it is the cheapest or the highest in protein density, but because no other product at its price point combines independent batch testing with this level of documented consistency. That is worth something.
               </p>
             </div>
