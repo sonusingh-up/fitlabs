@@ -682,8 +682,47 @@ export default function TLCreatineHMBReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6 }}>
-                  For pure creatine with a certification, Thorne Creapure (NSF) at $0.60/serving is the benchmark. TL Creatine HMB's premium over Thorne is $1.07/serving — for HMB, D3, BioPerine, and a different certifying body (Informed Sport vs NSF). Prices verified May 2026.
+                  For pure creatine with a certification, Thorne Creapure (NSF) at $0.60/serving is the benchmark. TL Creatine HMB&apos;s premium over Thorne is $1.07/serving — for HMB, D3, BioPerine, and a different certifying body (Informed Sport vs NSF). Prices verified May 2026.
                 </p>
+
+                {/* Competitor product cards */}
+                <div style={{ marginTop: 24 }}>
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 14 }}>Shop Competitors</p>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+                    {([
+                      { name: "Thorne Creatine Creapure", cert: "NSF Certified", price: "$0.60/serve", image: "/products/thorne-creatine-creapure.webp", buyUrl: "https://www.amazon.com/s?k=thorne+creatine+creapure", reviewSlug: null },
+                      { name: "Gorilla Mind Micronized",  cert: "HPLC Tested",   price: "$0.35/serve", image: "/products/GorillaMindreatineMonohydrateMicronizedPowder.webp", buyUrl: "https://amzn.to/3PAiUk1", reviewSlug: "gorilla-mind-creatine-monohydrate" },
+                      { name: "Bulk Supplements Creatine",cert: "cGMP",          price: "$0.12/serve", image: "/products/bulk-supplements-creatine.webp", buyUrl: "https://www.amazon.com/s?k=bulksupplements+creatine+monohydrate", reviewSlug: null },
+                      { name: "ON Micronized Creatine",   cert: "GMP Certified", price: "$0.20/serve", image: "/products/on-micronized-creatine-monohydrate-powder.webp", buyUrl: "https://www.amazon.com/s?k=optimum+nutrition+micronized+creatine", reviewSlug: null },
+                    ] as { name: string; cert: string; price: string; image: string; buyUrl: string; reviewSlug: string | null }[]).map((comp) => (
+                      <div key={comp.name} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                        <div style={{ height: 3, backgroundColor: "#3A5F8B" }} />
+                        <div style={{ padding: "12px 14px", display: "flex", gap: 12, alignItems: "flex-start" }}>
+                          <div style={{ width: 52, height: 66, flexShrink: 0, backgroundColor: "#EDE8DF", borderRadius: 6, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
+                            <img src={comp.image} alt={comp.name} style={{ width: "100%", height: "100%", objectFit: "contain", padding: 4 }} />
+                          </div>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <p style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", marginBottom: 3, lineHeight: 1.3, fontFamily: "var(--font-dm-sans), sans-serif" }}>{comp.name}</p>
+                            <p style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 4, letterSpacing: "0.04em" }}>{comp.cert}</p>
+                            <p style={{ fontSize: 11, fontWeight: 700, color: "#3A5F8B", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 8 }}>{comp.price}</p>
+                            <div style={{ display: "flex", gap: 5 }}>
+                              <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer"
+                                style={{ fontSize: 10, padding: "4px 9px", backgroundColor: "#3A5F8B", color: "#F2EBD9", borderRadius: 4, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600 }}>
+                                Buy →
+                              </a>
+                              {comp.reviewSlug && (
+                                <Link href={`/reviews/${comp.reviewSlug}`}
+                                  style={{ fontSize: 10, padding: "4px 9px", border: "1px solid #D4C9B8", color: "#5C5650", borderRadius: 4, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
+                                  Read →
+                                </Link>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </section>
 
               {/* § 11 Products at a Glance */}
@@ -759,24 +798,17 @@ export default function TLCreatineHMBReview() {
               {/* § 15 Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Where to Buy</h2>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12, marginBottom: 16 }}>
-                  {[
-                    { retailer: "Amazon",                 url: "https://amzn.to/3Qba8ZR",              note: "Prime shipping, competitive pricing", recommended: true  },
-                    { retailer: "transparentlabs.com",    url: "https://www.transparentlabs.com",      note: "Direct — Subscribe & Save 10% off",   recommended: false },
-                    { retailer: "Vitamin Shoppe",         url: "https://www.vitaminshoppe.com",        note: "In-store and online",                 recommended: false },
-                    { retailer: "GNC",                    url: "https://www.gnc.com",                  note: "In-store and online availability",     recommended: false },
-                  ].map((r) => (
-                    <div key={r.retailer} style={{ padding: "14px 16px", backgroundColor: r.recommended ? "#F8F2E4" : "#F2EBD9", border: `1px solid ${r.recommended ? "#3A5F8B" : "#D4C9B8"}`, borderRadius: 8 }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714", margin: 0 }}>{r.retailer}</p>
-                        {r.recommended && <span style={{ fontSize: 9, padding: "2px 7px", backgroundColor: "rgba(58,95,139,0.12)", border: "1px solid rgba(58,95,139,0.3)", borderRadius: 10, color: "#3A5F8B", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em" }}>TOP PICK</span>}
-                      </div>
-                      <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5, marginBottom: 8 }}>{r.note}</p>
-                      <a href={r.url} target="_blank" rel="nofollow noopener noreferrer" style={{ fontSize: 11, color: "#3A5F8B", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>Shop now →</a>
-                    </div>
-                  ))}
+                <div style={{ padding: "24px 28px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
+                  <div>
+                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3A5F8B", marginBottom: 6 }}>Available on Amazon</p>
+                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>$49.99 <span style={{ fontSize: "0.55em", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span></p>
+                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>Prime shipping · Fast delivery · Easy returns. Prices verified May 2026.</p>
+                  </div>
+                  <a href="https://amzn.to/3Qba8ZR" target="_blank" rel="nofollow noopener noreferrer"
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#3A5F8B", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    <ExternalLink size={14} /> Buy on Amazon
+                  </a>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.6 }}>Prices verified May 2026. The 60-serving tub offers better per-serving value at $1.50 vs $1.67 for 30 servings.</p>
               </section>
 
               {/* § 16 FAQ */}
