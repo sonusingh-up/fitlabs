@@ -390,7 +390,7 @@ export default function ArraeToneReview() {
               {/* Product image — hidden on mobile */}
               <div className="hidden sm:flex" style={{ alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                 <div style={{ position: "relative", width: 200, height: 240 }}>
-                  <Image src="/products/arrae-tone-1.webp" alt="Arrae Tone Gummies bottle" fill
+                  <Image src="/products/tone-gummy.webp" alt="Arrae Tone Gummies bottle" fill
                     style={{ objectFit: "contain", filter: "drop-shadow(0 8px 40px rgba(58,95,139,0.5))" }} priority />
                 </div>
               </div>
