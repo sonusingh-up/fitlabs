@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import BmrCalculatorClient from "./BmrCalculatorClient";
 
 export const metadata: Metadata = {
-  title: "BMR Calculator — Find Your Daily Calorie Baseline",
+  title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
   description:
-    "Calculate your Basal Metabolic Rate and Total Daily Energy Expenditure in seconds. Uses the Mifflin-St Jeor equation — the gold standard for accurate BMR estimation.",
+    "Most calculators stop at BMR. This one adds a plateau predictor, NEAT booster, and meal plan — free.",
   alternates: { canonical: "/tools/free/bmr-calculator" },
   openGraph: {
-    title: "BMR Calculator — Find Your Daily Calorie Baseline",
+    title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
     description:
       "Calculate your Basal Metabolic Rate and TDEE using the Mifflin-St Jeor equation. Free, instant, no sign-up required.",
     url: "https://fitlabreviews.com/tools/free/bmr-calculator",
