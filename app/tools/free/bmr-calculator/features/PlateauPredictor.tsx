@@ -29,7 +29,7 @@ export default function PlateauPredictor({ bmr, weightKg, unit, animDelay }: Pro
         </p>
 
         {/* Timeline strip */}
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(5, 1fr)", gap:8, marginBottom:16 }}>
+        <div className="plateau-timeline" style={{ marginBottom:16 }}>
           {weeks.map(w => (
             <div key={w.label} style={{
               background: w.label === "Now" ? "#1A1714" : "#fff",

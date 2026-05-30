@@ -250,7 +250,7 @@ export default function BmrCalculatorClient() {
                     style={{ accentColor:"#C4622D", width:16, height:16, flexShrink:0 }} />
                   <div>
                     <span style={{ fontWeight:600, fontSize:14, color:"#1A1714" }}>{a.label}</span>
-                    <span style={{ fontSize:12, color:"#8A8480", marginLeft:8 }}>{a.desc}</span>
+                    <span className="activity-desc">{a.desc}</span>
                   </div>
                 </label>
               ))}
@@ -290,7 +290,7 @@ export default function BmrCalculatorClient() {
             {/* Goal Targets */}
             <div style={{ background:"#EDE8DF", borderRadius:16, padding:"24px 28px", marginBottom:16, border:"1px solid #D4C9B8", opacity:0, animation:"slideUp 250ms 80ms ease-out forwards" }}>
               <div style={{ fontSize:12, fontWeight:700, color:"#8A8480", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:16 }}>Your Goal Targets</div>
-              <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr 1fr", gap:12 }}>
+              <div className="bmr-goals-grid">
                 {[
                   { label:"Fat Loss",    cal:displayCut, desc:adjCut<minSafe?"Adjusted to safe min":"−500 kcal deficit", color:"#D4A853" },
                   { label:"Maintenance", cal:adjTdee,    desc:"Stay at current weight", color:"#A89880" },

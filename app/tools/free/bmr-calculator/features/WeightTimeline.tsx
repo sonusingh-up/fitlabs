@@ -55,7 +55,7 @@ export default function WeightTimeline({ tdee, weightKg, unit, animDelay }: Prop
         <div style={S.label}>Weight Loss Timeline</div>
         <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:16 }}>When will you reach your goal?</h2>
 
-        <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:14 }}>
+        <div className="timeline-inputs">
           <div>
             <label style={S.label}>Goal Weight ({unit === "imperial" ? "lbs" : "kg"})</label>
             <input type="number" value={goalW} onChange={e => setGoalW(e.target.value)}
@@ -102,7 +102,7 @@ export default function WeightTimeline({ tdee, weightKg, unit, animDelay }: Prop
               </>
             )}
             {/* Milestones */}
-            <div style={{ display:"grid", gridTemplateColumns:"repeat(4, 1fr)", gap:8, marginTop:14 }}>
+            <div className="timeline-milestones">
               {["Start", "4 wks", "8 wks", "12 wks"].map((label, i) => (
                 <div key={label} style={{ background:"rgba(255,255,255,0.07)", borderRadius:8, padding:"8px 6px", textAlign:"center" }}>
                   <div style={{ fontSize:10, color:"#8A8480", marginBottom:3 }}>{label}</div>

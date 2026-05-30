@@ -168,21 +168,20 @@ export default function MealContext({ tdee, animDelay }: Props) {
             const kcal = Math.round(tdee * m.pct);
             const barPct = m.pct * 100;
             return (
-              <div key={m.meal} style={{
-                display:"grid", gridTemplateColumns:"100px 1fr auto",
-                gap:12, padding:"14px 16px", alignItems:"center",
+              <div key={m.meal} className="meal-context-row" style={{
+                padding:"14px 16px",
                 borderBottom: i < region.meals.length - 1 ? "1px solid #EDE8DF" : "none",
                 background: i % 2 === 0 ? "#FDFAF4" : "#fff",
               }}>
-                <div>
+                <div className="meal-meta">
                   <div style={{ fontSize:12, fontWeight:700, color:"#1A1714" }}>{m.meal}</div>
-                  <div style={{ height:5, background:"#EDE8DF", borderRadius:20, marginTop:5, overflow:"hidden" }}>
+                  <div className="meal-bar-container" style={{ height:5, background:"#EDE8DF", borderRadius:20, marginTop:5, overflow:"hidden" }}>
                     <div style={{ width:`${barPct * 2.8}%`, height:"100%", background:"#C4622D", borderRadius:20 }} />
                   </div>
-                  <div style={{ fontSize:10, color:"#8A8480", marginTop:3 }}>~{Math.round(m.pct*100)}%</div>
+                  <div className="meal-pct" style={{ fontSize:10, color:"#8A8480", marginTop:3 }}>~{Math.round(m.pct*100)}%</div>
                 </div>
-                <div style={{ fontSize:12, color:"#5C5650", lineHeight:1.5 }}>{m.foods}</div>
-                <div style={{ fontSize:14, fontWeight:700, color:"#C4622D", fontVariantNumeric:"tabular-nums", whiteSpace:"nowrap", textAlign:"right" }}>
+                <div className="meal-foods" style={{ fontSize:12, color:"#5C5650", lineHeight:1.5 }}>{m.foods}</div>
+                <div className="meal-kcal" style={{ fontSize:14, fontWeight:700, color:"#C4622D", fontVariantNumeric:"tabular-nums", whiteSpace:"nowrap" }}>
                   {kcal.toLocaleString()} kcal
                 </div>
               </div>

@@ -48,7 +48,7 @@ export default function FormulaSelector({ mifflinBmr, weightKg, onUseKatch, anim
             </div>
 
             {/* Side-by-side comparison */}
-            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12, marginBottom:16 }}>
+            <div className="formula-comparison">
               {[
                 { label:"Mifflin-St Jeor", val:mifflinBmr, desc:"General formula", active:!using },
                 { label:"Katch-McArdle",   val:katchBmr,   desc:"Best for muscular builds", active:using },
