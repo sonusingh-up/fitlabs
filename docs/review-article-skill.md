@@ -9,7 +9,7 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep
 You are writing a full product review for **FitLab Reviews** at `/reviews/$ARGUMENTS`.
 
 `$ARGUMENTS` is the product slug (e.g. `transparent-labs-bulk-black-review`, `legion-pulse-pre-workout-review-2026`).
-The user's message contains: product name, brand, category, affiliate URL, product image filename, price, and any notes.
+The user's message contains: product name, brand, category, affiliate URL, product image filename(s), price, and any notes.
 
 ---
 
@@ -17,7 +17,7 @@ The user's message contains: product name, brand, category, affiliate URL, produ
 
 All structural rules are encoded in this skill. Only read these if actually needed:
 
-- `public/products/` — run `ls public/products/` to verify image filenames before writing ProductCards
+- `public/products/` — run `ls public/products/` to verify image filenames before writing ProductCards or competitor cards
 - `lib/types.ts` lines 1–60 — only if you need to verify a type
 
 ---
@@ -103,7 +103,7 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 ```
 
-Note: `Plus` is imported from lucide-react for the FAQ toggle. Only import icons you actually use.
+Note: `Plus` is imported for the FAQ toggle. `ShieldCheck` is used in the mobile product card badge. Only import icons you actually use.
 
 ---
 
@@ -144,8 +144,8 @@ const reviewSchema = {
   name: "<Product> — Fitlabreviews FSP Review",
   reviewBody: "...",
   reviewRating: { "@type": "Rating", ratingValue: editorialScore, bestRating: 10, worstRating: 1 },
-  datePublished: "2026-05-29",
-  dateModified: "2026-05-29",
+  datePublished: "2026-05-30",
+  dateModified: "2026-05-30",
   author: { "@type": "Organization", name: "Fitlab Research Team", url: "https://fitlabreviews.com/authors" },
   itemReviewed: {
     "@type": "Product",
@@ -196,12 +196,12 @@ ProductCard:
   category="Category"
   score={9}                          // optional — shows score ring
   priceUSD="$59.99 / 30 servings"
-  priceINR="₹5,200–₹6,500"          // "N/A" if not available
+  priceINR="N/A"                     // "N/A" unless India pricing is known
   tags={["Tag 1", "Tag 2"]}
-  buyUrl="https://amzn.to/..."
-  buyLabel="Check Price"
+  buyUrl="https://amzn.to/..."       // Amazon affiliate link ONLY
+  buyLabel="Buy on Amazon"
   reviewSlug="product-slug"          // adds Read Review button
-  image="product-image.webp"         // file in /public/products/
+  image="product-image.webp"         // filename only — file must exist in /public/products/
   bgFrom="#1A0A06"
   bgTo="#0D0402"
   accent="#C4622D"
@@ -255,106 +255,69 @@ export default function ProductReview() {
             <span>/</span>
             <Link href="/reviews">Reviews</Link>
             <span>/</span>
-            <Link href="/category/pre-workout">Pre-Workout</Link>  {/* category crumb */}
+            <Link href="/category/creatine">Creatine</Link>  {/* category crumb */}
             <span>/</span>
             <span>Product Name</span>
           </div>
         </div>
 
         {/* 2. Feature Banner — h1 lives here */}
-        <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #bgFrom 0%, #bgTo 100%)", position: "relative", overflow: "hidden" }}>
+        <div style={{ width: "100%", background: "linear-gradient(135deg, #bgFrom 0%, #bgTo 100%)", position: "relative", overflow: "hidden" }}>
           {/* Grid texture overlay */}
-          <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
-          {/* Product image — HIDDEN on mobile */}
-          <div className="hidden sm:flex" style={{ position: "absolute", right: "8%", bottom: 0, width: 200, height: 270, alignItems: "flex-end", justifyContent: "center" }}>
-            <Image src="/products/image.webp" alt="Product Name" width={200} height={270}
-              style={{ objectFit: "contain", objectPosition: "bottom", filter: "drop-shadow(0 8px 40px rgba(X,X,X,0.4))" }} priority />
-          </div>
-          {/* Text */}
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 44, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-XXX · CATEGORY</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
-              Brand Name<br /><em style={{ fontWeight: 400, color: "#accent" }}>Product Name</em>
-            </h1>
-            <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
-              <div style={{ display: "flex", gap: 4 }}>
-                {Array.from({ length: editorialScore }, (_, i) => <Star key={i} size={14} fill="#accent" color="#accent" />)}
-                {Array.from({ length: 10 - editorialScore }, (_, i) => <Star key={i} size={14} fill="none" color="#accent" />)}
+          <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+          <div style={{ maxWidth: 1280, margin: "0 auto", position: "relative", zIndex: 1 }} className="px-page">
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 0 40px", gap: 32 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                {/* Pill row — HIDDEN on mobile */}
+                <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
+                  <span style={{ ..., whiteSpace: "nowrap" }}>REV-2026-XXX</span>
+                  <span style={{ ..., flexShrink: 0 }} />
+                  <span style={{ ..., whiteSpace: "nowrap" }}>Full Review · FSP Scored</span>
+                </div>
+                <h1>Brand<br /><em>Product Name</em></h1>
+                <p>One-paragraph hook...</p>
+                <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                  <a href="AFFILIATE_URL" target="_blank" rel="nofollow noopener noreferrer" ...>
+                    Buy on Amazon <ExternalLink size={13} />
+                  </a>
+                  <Link href="/methodology" ...>FSP {composite.toFixed(1)} → How we score</Link>
+                </div>
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
+              {/* Product image — hidden on mobile */}
+              <div className="hidden sm:flex" style={{ alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <div style={{ position: "relative", width: 200, height: 240 }}>
+                  <Image src="/products/image.webp" alt="Product Name" fill
+                    style={{ objectFit: "contain", filter: "drop-shadow(...)" }} priority />
+                </div>
+              </div>
+              <div style={{ flexShrink: 0 }}>
+                <ReviewScoreBadge rating={editorialScore} size="lg" />
+              </div>
             </div>
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: "linear-gradient(transparent, #F2EBD9)" }} />
         </div>
 
-        {/* 3. Hero Row — h2 here (NOT h1) */}
-        <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
-          {/* Pill row — HIDDEN on mobile — NEVER use inline display:flex */}
-          <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-XXX</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#accent", whiteSpace: "nowrap" }}>Full Review · FSP Scored</span>
-          </div>
-          <div className="layout-hero-split">
-            <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>Brand · Category</p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
-                Product Name<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Worth It in 2026?</em>
-              </h2>
-              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
-                One-paragraph hook. What the product claims, what we actually found.
-                Link to relevant <Link href="/category/pre-workout" style={{ color: "#accent", textDecoration: "none" }}>category page</Link> naturally.
-              </p>
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <a href="AFFILIATE_URL" target="_blank" rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#accent", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-                  Buy on Amazon <ExternalLink size={13} />
-                </a>
-                <Link href="/methodology"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
-                  FSP {composite.toFixed(1)} → How we score
-                </Link>
-              </div>
-            </div>
-            <ReviewScoreBadge rating={editorialScore} size="lg" />
-          </div>
-        </div>
+        {/* 3. Star row + metadata */}
+        ...
 
         {/* 4. MetadataStrip */}
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
           <MetadataStrip items={[
-            { label: "Category", value: "Pre-Workout" },
-            { label: "Serving Size", value: "XX g / 1 scoop" },
-            { label: "Servings / Tub", value: "30" },
-            { label: "Published", value: "May 29, 2026" },
-            { label: "Last Updated", value: "May 29, 2026" },
+            { label: "Brand",    value: "Brand Name"     },
+            { label: "Category", value: "Category"       },
+            { label: "Serving",  value: "1 scoop / day"  },
+            { label: "Price",    value: "$XX.XX / N srv"  },
+            { label: "Per Serve", value: "$X.XX"          },
+            { label: "Published", value: "May 30, 2026"  },
           ]} />
         </div>
 
         {/* 5. Author Box */}
-        <div style={{ maxWidth: 1280, margin: "8px auto 0", padding: "0 24px" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "10px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 24 }}>
-            <div style={{ width: 32, height: 32, borderRadius: "50%", background: "linear-gradient(135deg, #D4C9B8, #accent)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: 15, color: "#F2EBD9", flexShrink: 0 }}>F</div>
-            <div>
-              <p style={{ fontSize: 13, fontWeight: 600, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 1 }}>Fitlab Research Team</p>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>
-                Reviewed by the full team · <Link href="/authors" style={{ color: "#accent", textDecoration: "none" }}>Authors page →</Link>
-              </p>
-            </div>
-          </div>
-        </div>
+        ...
 
         {/* 6. Affiliate Disclosure */}
-        <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              Affiliate disclosure: links on this page may earn a commission. Scores and verdicts are editorially independent.{" "}
-              <Link href="/affiliate-disclosure" style={{ color: "#accent", textDecoration: "none" }}>Read our disclosure →</Link>
-            </p>
-          </div>
-        </div>
+        ...
 
         {/* 7. Mobile TOC — NO border, only marginTop */}
         <div className="block lg:hidden" style={{ marginTop: 16 }}>
@@ -413,14 +376,14 @@ Every review must include a mobile-only product card that shows below the Quick 
     <div style={{ background: "linear-gradient(145deg, #bgFrom 0%, #bgTo 100%)", padding: "28px 24px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, position: "relative", minHeight: 220 }}>
       {/* Grid texture */}
       <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "24px 24px", borderRadius: "14px 14px 0 0" }} />
-      {/* Certification badge */}
+      {/* Certification / key feature badge */}
       <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(accent-rgb,0.15)", border: "1px solid rgba(accent-rgb,0.35)", borderRadius: 20, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#accent" }}>
-        <ShieldCheck size={10} /> Informed Choice Certified
+        <ShieldCheck size={10} /> Key certification or claim
       </span>
       {/* Product image */}
-      <div style={{ position: "relative", zIndex: 1 }}>
-        <Image src="/products/image.webp" alt="Product name" width={160} height={200}
-          style={{ objectFit: "contain", filter: "drop-shadow(0 12px 32px rgba(X,X,X,0.5))", display: "block" }} />
+      <div style={{ position: "relative", zIndex: 1, width: 160, height: 200 }}>
+        <Image src="/products/image.webp" alt="Product name" fill
+          style={{ objectFit: "contain", filter: "drop-shadow(0 12px 32px rgba(X,X,X,0.5))" }} />
       </div>
       {/* Fade */}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F8F2E4)" }} />
@@ -435,8 +398,8 @@ Every review must include a mobile-only product card that shows below the Quick 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
         {[
           { val: `${editorialScore}/10`, label: "FSP Score" },
-          { val: "305mg", label: "Caffeine" },
-          { val: "8,000mg", label: "Citrulline" },
+          { val: "5g",   label: "Creatine" },
+          { val: "100",  label: "Servings" },
         ].map((stat) => (
           <div key={stat.label} style={{ textAlign: "center" }}>
             <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#accent", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
@@ -448,7 +411,7 @@ Every review must include a mobile-only product card that shows below the Quick 
       {/* Price + CTA */}
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
         <div>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / 30 servings</p>
+          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / N servings</p>
           <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$XX.XX</p>
         </div>
         <a href="AFFILIATE_URL" target="_blank" rel="nofollow noopener noreferrer"
@@ -484,7 +447,6 @@ Every review must include a mobile-only product card that shows below the Quick 
           <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.amount}</td>
           <td style={{ padding: "11px 16px", textAlign: "center" }}>
             {row.clinical !== "—" ? (
-              {/* Green pill badge for dosed ingredients */}
               <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: "rgba(45,106,79,0.10)", border: "1px solid rgba(45,106,79,0.25)", borderRadius: 20, fontSize: 11, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
                 {row.clinical}
               </span>
@@ -500,7 +462,7 @@ Every review must include a mobile-only product card that shows below the Quick 
 ```
 
 Key rules:
-- Always `width: "100%"` on the table — prevents the dead space on the right side
+- Always `width: "100%"` on the table — prevents dead space on the right side
 - Always `minWidth` (px) — never `width: "100%"` alone inside an overflow wrapper
 - `whiteSpace: "nowrap"` on the amount column — prevents mid-value wrapping
 - Clinical dose values use green pill badges, not plain coloured text
@@ -508,7 +470,11 @@ Key rules:
 
 ---
 
-## Step 12 — Comparison table (correct pattern)
+## Step 12 — Comparison table + Shop Competitors cards (both required)
+
+The comparison section has two parts: a spec table for data scanning, and a competitor card grid for quick buying.
+
+### Part A — Comparison spec table
 
 ```tsx
 <div className="review-table-wrap">
@@ -516,15 +482,99 @@ Key rules:
     ...
   </table>
 </div>
+<p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6 }}>
+  Footnote. Prices verified May 2026.
+</p>
 ```
 
-The `.review-table-wrap` class (in `globals.css`) adds `overflow-x: auto` and a "swipe to see more →" hint on mobile.
+The `.review-table-wrap` class adds `overflow-x: auto` and a "swipe to see more →" hint on mobile.
+
+### Part B — Shop Competitors card grid (required below the table)
+
+Every comparison section must include a compact product card grid for each competitor. Each card shows: product image, certification label, price/serving, a **Buy →** button (Amazon link), and a **Read →** button (internal review link if we have one).
+
+```tsx
+{/* Competitor product cards */}
+<div style={{ marginTop: 24 }}>
+  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 14 }}>Shop Competitors</p>
+  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+    {([
+      {
+        name: "Competitor Name",
+        cert: "NSF Certified",
+        price: "$0.60/serve",
+        image: "/products/competitor-image.webp",          // must exist in /public/products/
+        buyUrl: "https://amzn.to/...",                      // Amazon link only
+        reviewSlug: "competitor-slug",                      // null if no review yet
+      },
+      // ... more competitors
+    ] as { name: string; cert: string; price: string; image: string; buyUrl: string; reviewSlug: string | null }[]).map((comp) => (
+      <div key={comp.name} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+        <div style={{ height: 3, backgroundColor: "#accent" }} />
+        <div style={{ padding: "12px 14px", display: "flex", gap: 12, alignItems: "flex-start" }}>
+          <div style={{ width: 52, height: 66, flexShrink: 0, backgroundColor: "#EDE8DF", borderRadius: 6, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img src={comp.image} alt={comp.name} style={{ width: "100%", height: "100%", objectFit: "contain", padding: 4 }} />
+          </div>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", marginBottom: 3, lineHeight: 1.3, fontFamily: "var(--font-dm-sans), sans-serif" }}>{comp.name}</p>
+            <p style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 4, letterSpacing: "0.04em" }}>{comp.cert}</p>
+            <p style={{ fontSize: 11, fontWeight: 700, color: "#accent", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 8 }}>{comp.price}</p>
+            <div style={{ display: "flex", gap: 5 }}>
+              <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer"
+                style={{ fontSize: 10, padding: "4px 9px", backgroundColor: "#accent", color: "#F2EBD9", borderRadius: 4, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600 }}>
+                Buy →
+              </a>
+              {comp.reviewSlug && (
+                <Link href={`/reviews/${comp.reviewSlug}`}
+                  style={{ fontSize: 10, padding: "4px 9px", border: "1px solid #D4C9B8", color: "#5C5650", borderRadius: 4, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
+                  Read →
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+```
+
+**Competitor card rules:**
+- Only include competitors for which an image exists in `/public/products/` — verify with `ls public/products/` first
+- `buyUrl` must be an Amazon link (affiliate code or direct Amazon product URL) — never a brand's own website
+- `reviewSlug` — use our slug if we have reviewed it, `null` if not
+- For unaffiliated competitor Amazon links, use `https://www.amazon.com/s?k=product+name` as a fallback search URL
 
 ---
 
-## Step 13 — FAQ section with + / − toggle (required pattern)
+## Step 13 — Where to Buy section (Amazon-only CTA)
 
-**Do not use plain `<details>` without the toggle icon.** Every FAQ must use this pattern:
+**Only show Amazon.** Do not list multiple retailers (GNC, Vitamin Shoppe, direct brand site, Walmart, etc.). Use this single-panel pattern:
+
+```tsx
+<section id="where-to-buy" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+  <div style={{ padding: "24px 28px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
+    <div>
+      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#accent", marginBottom: 6 }}>Available on Amazon</p>
+      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
+        $XX.XX <span style={{ fontSize: "0.55em", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ N servings</span>
+      </p>
+      <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>Prime shipping · Fast delivery · Easy returns. Prices verified May 2026.</p>
+    </div>
+    <a href="AFFILIATE_URL" target="_blank" rel="nofollow noopener noreferrer"
+      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#accent", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+      <ExternalLink size={14} /> Buy on Amazon
+    </a>
+  </div>
+</section>
+```
+
+---
+
+## Step 14 — FAQ section with unique class name + toggle (required pattern)
+
+**Critical: use a unique className per review** to prevent CSS conflicts. Base it on the slug (e.g. `faq-icon-tl-creatine`, `faq-icon-gorilla-mono`). Never reuse `faq-icon` as-is across multiple reviews.
 
 ```tsx
 <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
@@ -539,8 +589,8 @@ The `.review-table-wrap` class (in `globals.css`) adds `overflow-x: auto` and a 
           <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>
             {faq.name}
           </span>
-          {/* Plus icon — becomes minus dash via CSS when open */}
-          <span className="faq-icon" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#accent" }}>
+          {/* Use a unique className derived from the review slug */}
+          <span className="faq-icon-SLUG" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#accent" }}>
             <Plus size={13} strokeWidth={2.5} />
           </span>
         </summary>
@@ -551,15 +601,15 @@ The `.review-table-wrap` class (in `globals.css`) adds `overflow-x: auto` and a 
     ))}
   </div>
 
-  {/* CSS to swap Plus → minus line when open, and hide browser default marker */}
+  {/* CSS — use the same unique class name here */}
   <style>{`
-    details[open] .faq-icon svg { display: none; }
-    details[open] .faq-icon::after {
+    details[open] .faq-icon-SLUG svg { display: none; }
+    details[open] .faq-icon-SLUG::after {
       content: '';
       display: block;
       width: 10px;
       height: 2px;
-      background: #accent;
+      background: #ACCENT_HEX;
       border-radius: 1px;
     }
     details summary::-webkit-details-marker { display: none; }
@@ -568,16 +618,17 @@ The `.review-table-wrap` class (in `globals.css`) adds `overflow-x: auto` and a 
 </section>
 ```
 
-Replace `#accent` in the CSS string with the actual hex value for the product (e.g. `#C4622D` for pre-workout, `#D4A96A` for Legion, `#2D6A4F` for whey).
+Replace `SLUG` with a short kebab-case identifier (e.g. `tl-hmb`, `gorilla-hcl`, `arrae-bloat`).
+Replace `#ACCENT_HEX` with the actual hex value (e.g. `#3A5F8B` for creatine, `#C4622D` for pre-workout).
 
 **FAQ rules:**
 - Minimum 8 questions
 - Questions must exactly mirror `faqSchema.mainEntity` — no duplication of content definition
-- Never use a plain `<details>` without the `.faq-icon` toggle pattern
+- Never use a plain `<details>` without the toggle pattern
 
 ---
 
-## Step 14 — Clickable research references (required pattern)
+## Step 15 — Clickable research references (required pattern)
 
 Every reference must be a clickable DOI link. Never use plain text references:
 
@@ -609,55 +660,60 @@ Every reference must be a clickable DOI link. Never use plain text references:
 
 **Reference rules:**
 - Every reference needs a real DOI URL — never omit
-- Use `doi.org/10.XXXX/...` format for all academic journals
+- Use `doi.org/10.XXXX/...` for academic journals; `clinicaltrials.gov/study/NCTXXXXXXXX` for trials; `pubmed.ncbi.nlm.nih.gov/XXXXXXXX/` for PubMed entries
 - Minimum 8–10 references per review
 - The `doi →` link opens in a new tab
 
 ---
 
-## Step 15 — Internal linking (required throughout)
-
-Internal links make the review part of the site's content graph and improve SEO. Add them naturally — not as a block list at the bottom, but woven into prose where they genuinely help the reader.
+## Step 16 — Internal linking rules
 
 **Required link locations:**
 
 | Location | Link target | Example |
 |---|---|---|
-| Breadcrumb | `/category/<category>` | `<Link href="/category/pre-workout">Pre-Workout</Link>` |
-| Hero paragraph | Category or best-of page | `...in the <Link href="/best/pre-workout">pre-workout category</Link>` |
-| "What Is" section | Ingredient pages | `<Link href="/ingredients/citrulline">citrulline malate</Link>` |
+| Breadcrumb | `/category/<category>` | `<Link href="/category/creatine">Creatine</Link>` |
+| "What Is" section | Ingredient pages | `<Link href="/ingredients/creatine">creatine monohydrate</Link>` |
 | Ingredient breakdown headings | Ingredient page | `<Link href="/ingredients/caffeine">{ing.name} →</Link>` |
-| Comparison table footnote | Related review | `...read our <Link href="/reviews/other-product">BULK Black review</Link>` |
-| Final verdict | Related review + best-of | `...consider <Link href="/reviews/other-product">TL BULK Black</Link>` and `<Link href="/best/creatine">creatine</Link>` |
+| Competitor cards | `/reviews/<slug>` | `reviewSlug: "competitor-slug"` → renders Read → button |
+| Final verdict | Related review | `<Link href="/reviews/other-product">read our review →</Link>` |
 
 **Never link:**
-- Ingredient names in body prose mid-sentence more than once per ingredient (first mention only)
-- Brand names to external sites (affiliate links are separate CTAs)
+- To `/brands/[slug]` pages anywhere in a review — no brand page backlinks
+- Ingredient names in body prose more than once per ingredient (first mention only)
+- Brand names to their own external websites (affiliate CTAs are separate and clearly marked)
 - Made-up internal URLs that don't exist
-
-**Pattern for ingredient heading links:**
-```tsx
-<p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-  {ing.link ? (
-    <Link href={ing.link} style={{ color: "#1A1714", textDecoration: "none" }}>{ing.name} →</Link>
-  ) : ing.name}
-</p>
-```
 
 ---
 
-## Step 16 — Breadcrumb (4-level pattern for reviews)
+## Step 17 — Image rules
+
+- **All images must be local** — use `/products/filename.webp` only. Never use external CDN URLs (R2, Cloudinary, etc.) for product images.
+- **Verify before writing** — run `ls public/products/` and confirm the filename exists before referencing it.
+- **ProductCard `image` prop** — pass the filename only (e.g. `"tl-creatine-hmb.webp"`), not the full path. The component prepends `/products/`.
+- **Feature banner and mobile card** — use the full path `src="/products/filename.webp"`.
+- **Competitor cards** — use `src={comp.image}` where `comp.image` is the full `/products/...` path.
+- **`<Image>` components** — never add `unoptimized` for local images. Only use `unoptimized` if forced to use an external URL (avoid).
+
+---
+
+## Step 18 — Breadcrumb (4-level pattern for reviews)
 
 ```tsx
 <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
-  <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-    <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-    <span style={{ color: "#D4C9B8" }}>/</span>
-    <Link href="/reviews" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Reviews</Link>
-    <span style={{ color: "#D4C9B8" }}>/</span>
-    <Link href="/category/pre-workout" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Pre-Workout</Link>
-    <span style={{ color: "#D4C9B8" }}>/</span>
-    <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Product Short Name</span>
+  <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }} className="px-page">
+    {[
+      { label: "Home",     href: "/" },
+      { label: "Reviews",  href: "/reviews" },
+      { label: "Creatine", href: "/category/creatine" },
+    ].map((c, i, arr) => (
+      <span key={c.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <Link href={c.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{c.label}</Link>
+        {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+      </span>
+    ))}
+    <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
+    <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Product Short Name</span>
   </div>
 </div>
 ```
@@ -666,7 +722,7 @@ Internal links make the review part of the site's content graph and improve SEO.
 
 ---
 
-## Step 17 — Design system tokens
+## Step 19 — Design system tokens
 
 ```
 Background:   #F2EBD9 (page), #F8F2E4 (card), #EDE8DF (muted), #1A1714 (dark panel)
@@ -691,6 +747,7 @@ Fonts (CSS vars):
 | Pre-Workout (premium/gold) | `#D4A96A` gold | `#0A1220` / `#060C18` |
 | Whey / Mass Gainer | `#2D6A4F` green | `#1A2E1E` / `#0F1A11` |
 | Creatine | `#3A5F8B` blue | `#1A1E2E` / `#11131E` |
+| Gut Health / Digestive | `#C4622D` rust | `#1A0F08` / `#2C1A10` |
 | Organ Supplement | `#7B3B1A` deep brown | `#1E1208` / `#120C06` |
 | Weight Loss | `#8B3A2C` dark red | `#1E0E0E` / `#140808` |
 | Multivitamin | `#5C5CBF` indigo | `#1B1A2E` / `#12111E` |
@@ -699,33 +756,34 @@ Fonts (CSS vars):
 
 ---
 
-## Step 18 — Review figure codes
+## Step 20 — Review figure codes
 
 Format: `REV-2026-NNN` (sequential).
 
 Find next number:
 ```bash
-grep -r "REV-2026-" app/reviews/ | grep -oP "REV-2026-\d+" | sort | tail -5
+grep -roh "REV-2026-[0-9]*" app/reviews/ | sort -t'-' -k3 -n | tail -5
 ```
 
-Current highest known: **REV-2026-051** (Legion Pulse, May 2026).
+Current highest known: **REV-2026-058** (Gorilla Mind Creatine Monohydrate, May 2026).
 
 ---
 
-## Step 19 — Content rules (non-negotiable)
+## Step 21 — Content rules (non-negotiable)
 
 - **No AI fluff**: banned — "game-changer", "unlock your potential", "science-backed" (overused), "revolutionary", "supercharge", "take your fitness to the next level"
 - **Citations**: always `Author (Year)` inline — never "studies show" alone
 - **Doses**: state the dose used in the cited trial, not just the label dose
-- **Prices**: USD primary. INR only in "Where to Buy" sub-sections covering India. Always state "prices verified May 2026"
+- **Prices**: USD primary. INR only if specifically relevant (never required). Always state "prices verified May 2026"
 - **Evidence**: specific RCTs or meta-analyses only — not "research suggests"
-- **Voice**: direct. First person where appropriate. No passive constructions.
-- **Counterfeit warnings**: only in the Where to Buy section, never repeated across the review
+- **Voice**: direct. No passive constructions. Call out marketing overreach plainly.
+- **Counterfeit warnings**: only in the Where to Buy section — not repeated elsewhere
 - **Claim audit**: quote the exact marketing claim with quotation marks in the `claim` field
+- **No brand backlinks**: never link to `/brands/[slug]` pages anywhere in a review
 
 ---
 
-## Step 20 — Mobile-responsive rules (critical — violations cause broken layouts)
+## Step 22 — Mobile-responsive rules (critical — violations cause broken layouts)
 
 1. **Feature banner image**: `className="hidden sm:flex"` — NEVER `style={{ display: "flex" }}`
 2. **Hero pill row**: `className="hidden sm:flex"` — NEVER `style={{ display: "flex" }}`
@@ -736,7 +794,7 @@ Current highest known: **REV-2026-051** (Legion Pulse, May 2026).
 
 ---
 
-## Step 21 — Hub page sync
+## Step 23 — Hub page sync
 
 After writing the review:
 
@@ -746,23 +804,26 @@ After writing the review:
   slug: "product-slug",
   title: "Product Name",
   brand: "Brand",
-  category: "Pre-Workout",
+  category: "Creatine",
   figure: "REV-2026-NNN",
-  rating: 9 as ReviewRating,
+  rating: 8 as ReviewRating,
   verdict: "One sentence. Direct. Specific finding.",
-  publishedAt: "2026-05-29",
+  publishedAt: "2026-05-30",
   tags: ["Tag 1", "Tag 2"],
   thirdParty: true,
-  accent: "#C4622D",
-  image: "/products/image.webp",
+  accent: "#3A5F8B",
+  image: "/products/image.webp",   // local path — never external CDN URL
+  buyUrl: "https://amzn.to/...",   // Amazon only
 }
 ```
 
 2. Check `app/page.tsx` — if the review scores 8/10+, add to `featuredReviews` array.
 
+3. Check `app/category/page.tsx` — if this is a new category or the first review in a category, update `reviewCount` for the matching entry.
+
 ---
 
-## Step 22 — Pre-commit checklist
+## Step 24 — Pre-commit checklist
 
 ```bash
 npm run build
@@ -774,11 +835,12 @@ Before committing, verify:
 - [ ] Meta description 140–160 characters
 - [ ] `alternates: { canonical: "/reviews/<slug>" }` set
 - [ ] Both JSON-LD schemas present (Review + FAQPage)
+- [ ] `reviewSchema` has `name` field set
 - [ ] `datePublished` and `dateModified` set to today
 - [ ] `rubric.compositeScore = computeComposite(...)` called after const
 - [ ] All 17+ sections present with correct `id` attributes
-- [ ] Feature banner has `<h1>` — hero row uses `<h2>`
-- [ ] `Star` imported from lucide-react, `Plus` imported for FAQ toggle
+- [ ] Feature banner has `<h1>` with product name
+- [ ] `Star` imported from lucide-react, `Plus` imported for FAQ toggle, `ShieldCheck` for mobile card badge
 - [ ] Sidebar: `className="hidden lg:block"` — NOT `header-desktop-nav`
 - [ ] No `style={{ display: "block" }}` on aside
 - [ ] Article wrapper is `<article style={{ minWidth: 0 }}>` NOT `<main>`
@@ -786,18 +848,25 @@ Before committing, verify:
 - [ ] Mobile product card present between §1 and §2 with `className="block sm:hidden"`
 - [ ] Supplement facts table: `width: "100%"` AND `minWidth` set
 - [ ] Clinical dose column uses green pill badges, not plain coloured text
-- [ ] FAQ uses `<details>` with `.faq-icon` + `<Plus>` + CSS swap pattern
-- [ ] All references use clickable `doi →` links with real DOI URLs
-- [ ] Internal links in breadcrumb, hero, ingredient section, comparison, final verdict
+- [ ] FAQ uses `<details>` with unique `.faq-icon-SLUG` class + `<Plus>` + CSS swap pattern
+- [ ] All references use clickable `doi →` links with real DOI/PubMed/ClinicalTrials URLs
+- [ ] Internal links in breadcrumb, hero, ingredient section, final verdict
+- [ ] No links to `/brands/[slug]` pages anywhere
 - [ ] `<FlagSystem flags={rubric.flags}>` — NOT `green={} red={}`
 - [ ] `<ClaimAudit items={rubric.claimAudit}>` — NOT inline
 - [ ] `<ValueMetricPanel metric={rubric.valueMetric}>` — NOT individual props
 - [ ] `<ReviewScoreBadge rating={editorialScore}>` — NOT `score={}`
-- [ ] ProductCard images verified in `public/products/`
+- [ ] ProductCard `image` prop is a filename (not full path) — file verified in `public/products/`
+- [ ] Competitor cards present in comparison section with real images, Buy → and Read → links
+- [ ] Where to Buy section is Amazon-only single CTA — no multi-retailer grid
+- [ ] All product images use local `/products/` paths — no external CDN URLs
+- [ ] No `unoptimized` on `<Image>` components pointing to local files
+- [ ] FAQ class name is unique per review (e.g. `faq-icon-tl-hmb`)
 - [ ] No unused imports
 - [ ] Build passes with zero TypeScript errors
-- [ ] Hub page (`app/reviews/page.tsx`) updated with new entry
+- [ ] Hub page (`app/reviews/page.tsx`) updated with new entry including local image path
 - [ ] Homepage (`app/page.tsx`) updated if score ≥ 8
+- [ ] `app/category/page.tsx` reviewCount updated if applicable
 
 ---
 
@@ -807,5 +876,6 @@ After creating the file, report:
 1. URL: `/reviews/<slug>`
 2. FSP composite score and editorial score
 3. TypeScript build result
-4. Image file used (or "gradient fallback")
+4. Image file used (verified in `/public/products/`)
 5. Hub page updated: yes/no
+6. Competitor cards: how many, which have Read → links
