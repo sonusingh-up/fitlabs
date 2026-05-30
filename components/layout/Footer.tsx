@@ -21,6 +21,7 @@ const footerLinks = {
   ],
   "Tools": [
     { label: "BMR Calculator", href: "/tools/free/bmr-calculator" },
+    { label: "Macros Calculator", href: "/tools/free/macros-calculator" },
   ],
   "About": [
     { label: "About FitLab", href: "/about" },
