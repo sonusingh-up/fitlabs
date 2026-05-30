@@ -18,6 +18,7 @@ const footerLinks = {
     { label: "Goal Guides", href: "/goals" },
     { label: "Ingredient Library", href: "/ingredients" },
     { label: "Brand Directory", href: "/brands" },
+    { label: "BMR Calculator", href: "/tools/free/bmr-calculator" },
   ],
   "About": [
     { label: "About FitLab", href: "/about" },
