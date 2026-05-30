@@ -216,6 +216,21 @@ const reviews: Review[] = [
     image: "/products/Happee-Grass-Fed-Beef-Organ.webp",
     buyUrl: "https://amzn.to/4uDGXOc",
   },
+  {
+    slug: "arrae-bloat",
+    title: "Arrae Bloat Digestive Capsules",
+    brand: "Arrae",
+    category: "Digestive Enzymes",
+    figure: "REV-2026-054",
+    rating: 7,
+    verdict: "Clean, filler-free organic herb blend. Ginger underdosed, 5 of 6 amounts hidden. Marketing outpaces the evidence.",
+    publishedAt: "2026-05-30",
+    tags: ["Gut Health", "Bloating", "Digestive Enzymes", "Organic", "Women's Health"],
+    thirdParty: false,
+    accent: "#C4622D",
+    image: "https://pub-cfbcca8550f5404f92083870525d6d19.r2.dev/ingredients/Arrae/ArraebloatCapsules.webp",
+    buyUrl: "https://amzn.to/4wZ3tCG",
+  },
 ];
 
 const categoryGroups: { label: string; categories: string[] }[] = [
