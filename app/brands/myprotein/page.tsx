@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ReviewCard from "@/components/ui/ReviewCard";
 import SectionHeading from "@/components/ui/SectionHeading";
-import MyProteinMobileTOC from "@/components/ui/MyProteinMobileTOC";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -249,6 +248,8 @@ export default function MyProteinBrandPage() {
       <style>{`
         .mp-mobile-toc { display: none; }
         @media (max-width: 767px) { .mp-mobile-toc { display: block; } }
+        .mp-mobile-toc summary { list-style: none; }
+        .mp-mobile-toc summary::-webkit-details-marker { display: none; }
 
         .mp-stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); }
         @media (max-width: 900px) {
@@ -375,9 +376,30 @@ export default function MyProteinBrandPage() {
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 
           {/* Mobile TOC */}
-          <div className="mp-mobile-toc" style={{ marginBottom: 8 }}>
-            <MyProteinMobileTOC />
-          </div>
+          <details className="mp-mobile-toc" style={{ marginBottom: 8, border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+            <summary style={{ padding: "13px 16px", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#5C5650" }}>On this page</span>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, color: "#A89880", lineHeight: 1 }}>+</span>
+            </summary>
+            <ul style={{ margin: 0, padding: "6px 0", listStyle: "none", borderTop: "1px solid #D4C9B8" }}>
+              {[
+                { id: "overview", label: "Brand overview" },
+                { id: "verdict",  label: "Quick verdict" },
+                { id: "certs",    label: "Certifications & testing" },
+                { id: "products", label: "Product lineup" },
+                { id: "reviews",  label: "Reviewed products" },
+                { id: "faq",      label: "FAQ" },
+                { id: "stance",   label: "Editorial stance" },
+              ].map((item) => (
+                <li key={item.id}>
+                  <a href={`#${item.id}`} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", fontSize: 13, color: "#5C5650", textDecoration: "none" }}>
+                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.1em", flexShrink: 0 }}>§</span>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
 
           {/* ── § 01 Brand Overview ────────────────────────────────────────── */}
           <section id="overview" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
