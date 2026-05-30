@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ReviewCard from "@/components/ui/ReviewCard";
 import SectionHeading from "@/components/ui/SectionHeading";
+import ArraeMobileTOC from "@/components/ui/ArraeMobileTOC";
+import ArraeFAQ from "@/components/ui/ArraeFAQ";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/brands/arrae" },
 };
 
-// ── Schema ─────────────────────────────────────────────────────────────────
+// ── Schemas ────────────────────────────────────────────────────────────────
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -42,12 +44,12 @@ const breadcrumbSchema = {
 // ── Data ───────────────────────────────────────────────────────────────────
 
 const stats = [
-  { label: "Founded", value: "2020" },
-  { label: "Revenue", value: "$100M+" },
-  { label: "Units Sold", value: "1.6M+" },
-  { label: "Countries", value: "35" },
-  { label: "Retail Locations", value: "2,265+" },
-  { label: "Subscribers", value: "50,000+" },
+  { label: "Founded",          value: "2020"    },
+  { label: "Revenue",          value: "$100M+"  },
+  { label: "Units Sold",       value: "1.6M+"   },
+  { label: "Countries",        value: "35"      },
+  { label: "Retail Locations", value: "2,265+"  },
+  { label: "Subscribers",      value: "50,000+" },
 ];
 
 const certifications = [
@@ -74,7 +76,7 @@ const certifications = [
   {
     name: "Third-Party Batch Testing",
     status: "partial" as const,
-    detail: "Brand reports FTIR identity testing, heavy metal analysis, and microbiological testing per batch. No independent body publishes or verifies these results.",
+    detail: "Brand reports FTIR identity testing, heavy metals, and microbiological testing per batch. No independent body publishes or verifies these results.",
   },
   {
     name: "FDA Record",
@@ -223,7 +225,7 @@ const products = [
   },
 ];
 
-// ── Reviewed products (populates as reviews publish) ───────────────────────
+// Populates as reviews publish
 const publishedReviews: {
   slug: string;
   title: string;
@@ -234,62 +236,148 @@ const publishedReviews: {
   publishedAt: string;
   figNumber: string;
 }[] = [
-  // Reviews added here as they publish:
   // { slug: "arrae-bloat", title: "Arrae Bloat", brand: "Arrae", category: "Digestive Enzymes", rating: X, verdict: "...", publishedAt: "2026-XX-XX", figNumber: "01" },
 ];
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
 const statusStyles = {
-  pass: {
-    dot: "#1A6B3A",
-    bg: "rgba(26,107,58,0.07)",
-    border: "rgba(26,107,58,0.2)",
-    label: "Confirmed",
-    labelColor: "#1A6B3A",
-  },
-  fail: {
-    dot: "#9B2020",
-    bg: "rgba(155,32,32,0.06)",
-    border: "rgba(155,32,32,0.18)",
-    label: "Not certified",
-    labelColor: "#9B2020",
-  },
-  partial: {
-    dot: "#92620A",
-    bg: "rgba(146,98,10,0.07)",
-    border: "rgba(146,98,10,0.2)",
-    label: "Partial — self-reported",
-    labelColor: "#92620A",
-  },
+  pass:    { dot: "#1A6B3A", bg: "rgba(26,107,58,0.07)",   border: "rgba(26,107,58,0.2)",   label: "Confirmed",              labelColor: "#1A6B3A" },
+  fail:    { dot: "#9B2020", bg: "rgba(155,32,32,0.06)",   border: "rgba(155,32,32,0.18)",  label: "Not certified",          labelColor: "#9B2020" },
+  partial: { dot: "#92620A", bg: "rgba(146,98,10,0.07)",   border: "rgba(146,98,10,0.2)",   label: "Partial — self-reported", labelColor: "#92620A" },
 };
+
+// ── Page ───────────────────────────────────────────────────────────────────
 
 export default function ArraeBrandPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+      <style>{`
+        /* ── Mobile TOC: show only on mobile ─────────────────── */
+        .arrae-mobile-toc { display: none; }
+        @media (max-width: 767px) { .arrae-mobile-toc { display: block; } }
+
+        /* ── Stats strip: wrap gracefully on mobile ──────────── */
+        .arrae-stats-grid {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+        }
+        @media (max-width: 900px) {
+          .arrae-stats-grid { grid-template-columns: repeat(3, 1fr); }
+          .arrae-stats-grid > div { border-right: 1px solid #D4C9B8 !important; border-bottom: 1px solid #D4C9B8; }
+          .arrae-stats-grid > div:nth-child(3n) { border-right: none !important; }
+          .arrae-stats-grid > div:nth-last-child(-n+3) { border-bottom: none; }
+        }
+        @media (max-width: 480px) {
+          .arrae-stats-grid { grid-template-columns: repeat(2, 1fr); }
+          .arrae-stats-grid > div { border-right: 1px solid #D4C9B8 !important; border-bottom: 1px solid #D4C9B8; }
+          .arrae-stats-grid > div:nth-child(2n) { border-right: none !important; }
+          .arrae-stats-grid > div:nth-last-child(-n+2) { border-bottom: none; }
+        }
+
+        /* ── Overview: 2-col → 1-col ─────────────────────────── */
+        .arrae-overview-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+          align-items: start;
+        }
+        @media (max-width: 767px) {
+          .arrae-overview-grid { grid-template-columns: 1fr; gap: 24px; }
+        }
+
+        /* ── Key facts: 140px label col → smaller on mobile ──── */
+        .arrae-fact-row {
+          display: grid;
+          grid-template-columns: 140px 1fr;
+          gap: 12px;
+          padding: 12px 16px;
+          background: #F8F2E4;
+          border: 1px solid #D4C9B8;
+          border-radius: 8px;
+        }
+        @media (max-width: 480px) {
+          .arrae-fact-row { grid-template-columns: 1fr; gap: 4px; }
+        }
+
+        /* ── Verdict: 2-col → 1-col ──────────────────────────── */
+        .arrae-verdict-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        @media (max-width: 640px) {
+          .arrae-verdict-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Cert rows: 3-col → stacked on mobile ────────────── */
+        .arrae-cert-row {
+          display: grid;
+          grid-template-columns: 220px 160px 1fr;
+          gap: 16px;
+          align-items: center;
+          padding: 14px 20px;
+          border-radius: 8px;
+        }
+        @media (max-width: 700px) {
+          .arrae-cert-row {
+            grid-template-columns: 1fr;
+            gap: 6px;
+            padding: 14px 16px;
+          }
+        }
+
+        /* ── Evidence grid: 3-col → 2-col → 1-col ───────────── */
+        .arrae-evidence-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+          padding: 20px 24px;
+          background: #F8F2E4;
+          border: 1px solid #D4C9B8;
+          border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+          .arrae-evidence-grid { grid-template-columns: repeat(2, 1fr); padding: 16px; }
+        }
+        @media (max-width: 400px) {
+          .arrae-evidence-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Product grid: auto-fill → 1-col on narrow ───────── */
+        .arrae-product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 14px;
+        }
+        @media (max-width: 360px) {
+          .arrae-product-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Editorial stance: inner padding on mobile ───────── */
+        .arrae-stance-card { padding: 32px 36px; }
+        @media (max-width: 640px) { .arrae-stance-card { padding: 24px 20px; } }
+
+        /* ── Section anchor offset for fixed header ──────────── */
+        .arrae-section-anchor {
+          scroll-margin-top: 72px;
+        }
+      `}</style>
 
       <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
 
-        {/* ── Breadcrumb ──────────────────────────────────────────────── */}
+        {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
         <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }} className="px-page">
             {[
-              { label: "Home", href: "/" },
+              { label: "Home",   href: "/" },
               { label: "Brands", href: "/brands" },
             ].map((crumb, i, arr) => (
               <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link
-                  href={crumb.href}
-                  style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}
-                >
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>
                   {crumb.label}
                 </Link>
                 {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
@@ -300,18 +388,18 @@ export default function ArraeBrandPage() {
           </div>
         </div>
 
-        {/* ── Hero Banner ─────────────────────────────────────────────── */}
+        {/* ── Hero Banner ─────────────────────────────────────────────────── */}
         {/*
-          PLACEHOLDER IMAGE:
-          Replace this gradient banner with an actual brand image.
-          Recommended: 1280×360px brand/product flatlay
+          PLACEHOLDER IMAGE BLOCK
+          Replace gradient with real brand image when ready.
+          Recommended: 1280×360px product flatlay
           Path: /public/brands/arrae-hero.webp
           Usage: background: `url('/brands/arrae-hero.webp') center/cover no-repeat`
         */}
         <div
           style={{
             width: "100%",
-            minHeight: 280,
+            minHeight: 260,
             background: "linear-gradient(135deg, #1A0F08 0%, #2C1A10 40%, #1E120A 100%)",
             position: "relative",
             overflow: "hidden",
@@ -319,115 +407,45 @@ export default function ArraeBrandPage() {
             alignItems: "flex-end",
           }}
         >
-          {/* Subtle grid texture */}
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              backgroundImage:
-                "linear-gradient(rgba(212,169,106,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(212,169,106,0.04) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
+          {/* Grid texture */}
+          <div style={{
+            position: "absolute", inset: 0,
+            backgroundImage: "linear-gradient(rgba(212,169,106,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(212,169,106,0.04) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }} />
 
-          {/* Ghost brand letter */}
-          <span
-            style={{
-              position: "absolute",
-              right: -20,
-              bottom: -30,
-              fontFamily: "var(--font-playfair), Georgia, serif",
-              fontSize: "clamp(8rem, 20vw, 16rem)",
-              fontWeight: 800,
-              color: "rgba(212,169,106,0.04)",
-              lineHeight: 1,
-              userSelect: "none",
-              pointerEvents: "none",
-              letterSpacing: "-0.05em",
-            }}
-          >
-            A
-          </span>
+          {/* Ghost letter */}
+          <span style={{
+            position: "absolute", right: -20, bottom: -30,
+            fontFamily: "var(--font-playfair), Georgia, serif",
+            fontSize: "clamp(6rem, 20vw, 16rem)",
+            fontWeight: 800, color: "rgba(212,169,106,0.04)",
+            lineHeight: 1, userSelect: "none", pointerEvents: "none",
+            letterSpacing: "-0.05em",
+          }}>A</span>
 
-          <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", width: "100%", padding: "48px 24px 40px" }} className="px-page">
-            {/* Figure + type row */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <span
-                style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 9,
-                  letterSpacing: "0.22em",
-                  color: "rgba(212,169,106,0.5)",
-                  textTransform: "uppercase",
-                }}
-              >
-                BRD-009
-              </span>
-              <span style={{ width: 20, height: 1, backgroundColor: "rgba(212,169,106,0.2)", display: "inline-block" }} />
-              <span
-                style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 9,
-                  letterSpacing: "0.22em",
-                  color: "#C4622D",
-                  textTransform: "uppercase",
-                }}
-              >
-                Brand Profile
-              </span>
-              {/* Tier badge */}
-              <span
-                style={{
-                  padding: "3px 10px",
-                  backgroundColor: "rgba(212,201,184,0.15)",
-                  border: "1px solid rgba(212,201,184,0.3)",
-                  borderRadius: 4,
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 9,
-                  letterSpacing: "0.12em",
-                  color: "rgba(212,201,184,0.8)",
-                  textTransform: "uppercase",
-                }}
-              >
+          <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", width: "100%", padding: "40px 24px 36px" }} className="px-page">
+            {/* Figure row */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", color: "rgba(212,169,106,0.5)", textTransform: "uppercase" }}>BRD-009</span>
+              <span style={{ width: 16, height: 1, backgroundColor: "rgba(212,169,106,0.2)", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", color: "#C4622D", textTransform: "uppercase" }}>Brand Profile</span>
+              <span style={{ padding: "3px 10px", backgroundColor: "rgba(212,201,184,0.15)", border: "1px solid rgba(212,201,184,0.3)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(212,201,184,0.8)", textTransform: "uppercase" }}>
                 Silver Tier
               </span>
             </div>
 
-            {/* Brand name */}
-            <h1
-              style={{
-                fontFamily: "var(--font-playfair), Georgia, serif",
-                fontSize: "clamp(2.4rem, 6vw, 4rem)",
-                fontWeight: 800,
-                letterSpacing: "-0.03em",
-                color: "#F2EBD9",
-                lineHeight: 1.0,
-                marginBottom: 12,
-              }}
-            >
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
               Arrae
             </h1>
 
-            {/* One-liner */}
-            <p style={{ fontSize: 15, color: "rgba(242,235,217,0.6)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
+            <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.6)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
               Fast-acting women&apos;s wellness supplements. Clean labels, short formulas, no independent product certification.
             </p>
 
-            {/* Category chips */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
               {["Gut Health", "Sleep", "Stress & Anxiety", "Metabolic Health", "Probiotics", "Body Composition"].map((cat) => (
-                <span
-                  key={cat}
-                  style={{
-                    padding: "4px 12px",
-                    border: "1px solid rgba(212,201,184,0.2)",
-                    borderRadius: 6,
-                    fontSize: 11,
-                    color: "rgba(242,235,217,0.5)",
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    letterSpacing: "0.07em",
-                  }}
-                >
+                <span key={cat} style={{ padding: "4px 10px", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 6, fontSize: 10, color: "rgba(242,235,217,0.5)", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.07em" }}>
                   {cat}
                 </span>
               ))}
@@ -435,63 +453,32 @@ export default function ArraeBrandPage() {
           </div>
         </div>
 
-        {/* ── Stats Strip ─────────────────────────────────────────────── */}
+        {/* ── Stats Strip ─────────────────────────────────────────────────── */}
         <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-          <div
-            style={{
-              maxWidth: 1280,
-              margin: "0 auto",
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))",
-              gap: 0,
-            }}
-            className="px-page"
-          >
+          <div className="arrae-stats-grid px-page" style={{ maxWidth: 1280, margin: "0 auto" }}>
             {stats.map((s, i) => (
-              <div
-                key={s.label}
-                style={{
-                  padding: "20px 24px",
-                  borderRight: i < stats.length - 1 ? "1px solid #D4C9B8" : "none",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 8,
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "#A89880",
-                    marginBottom: 6,
-                  }}
-                >
-                  {s.label}
-                </p>
-                <p
-                  style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
-                    fontSize: "1.5rem",
-                    fontWeight: 800,
-                    color: "#1A1714",
-                    lineHeight: 1,
-                    margin: 0,
-                  }}
-                >
-                  {s.value}
-                </p>
+              <div key={s.label} style={{ padding: "18px 20px", borderRight: i < stats.length - 1 ? "1px solid #D4C9B8" : "none" }}>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 5 }}>{s.label}</p>
+                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* ── Main Content ────────────────────────────────────────────── */}
+        {/* ── Main Content ────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 
-          {/* ── Brand Overview ────────────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── Mobile TOC (hidden on desktop via CSS) ─────────────────────── */}
+          <div className="arrae-mobile-toc" style={{ marginBottom: 8 }}>
+            <ArraeMobileTOC />
+          </div>
+
+          {/* ── § 01 Brand Overview ────────────────────────────────────────── */}
+          <section id="overview" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Background" figure="§ 01" title="Brand" titleItalic="overview" size="sm" />
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "start" }}>
+            <div className="arrae-overview-grid">
+              {/* Prose */}
               <div>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
                   Arrae launched in March 2020, founded by Siff Haider and Nish Samantray — a husband-and-wife team who funded the business with $484K they had saved for their wedding. They ran operations out of a 400-square-foot Toronto apartment, packing orders themselves in the early months.
@@ -505,39 +492,19 @@ export default function ArraeBrandPage() {
               </div>
 
               {/* Key facts sidebar */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
-                  { label: "Headquarters", value: "Los Angeles, CA (founders) · Dayton, NJ (distribution)" },
-                  { label: "Founded", value: "March 2020" },
-                  { label: "Founders", value: "Siff Haider & Nish Samantray" },
-                  { label: "Manufacturing", value: "USA & Canada, cGMP-certified" },
-                  { label: "Target audience", value: "Women 25–45, millennial wellness" },
-                  { label: "Retail presence", value: "GNC, Vitamin Shoppe + 2,265 locations" },
+                  { label: "Headquarters",     value: "Los Angeles, CA (founders) · Dayton, NJ (distribution)" },
+                  { label: "Founded",          value: "March 2020" },
+                  { label: "Founders",         value: "Siff Haider & Nish Samantray" },
+                  { label: "Manufacturing",    value: "USA & Canada, cGMP-certified" },
+                  { label: "Target audience",  value: "Women 25–45, millennial wellness" },
+                  { label: "Retail presence",  value: "GNC, Vitamin Shoppe + 2,265 locations" },
                   { label: "Flagship product", value: "Bloat (2,800+ reviews)" },
-                  { label: "Notable collab", value: "Pamela Anderson for MB-1 45+" },
+                  { label: "Notable collab",   value: "Pamela Anderson for MB-1 45+" },
                 ].map((item) => (
-                  <div
-                    key={item.label}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "140px 1fr",
-                      gap: 12,
-                      padding: "12px 16px",
-                      backgroundColor: "#F8F2E4",
-                      border: "1px solid #D4C9B8",
-                      borderRadius: 8,
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "var(--font-dm-mono), monospace",
-                        fontSize: 10,
-                        letterSpacing: "0.08em",
-                        textTransform: "uppercase",
-                        color: "#8A8480",
-                        margin: 0,
-                      }}
-                    >
+                  <div key={item.label} className="arrae-fact-row">
+                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>
                       {item.label}
                     </p>
                     <p style={{ fontSize: 13, color: "#3C3530", margin: 0, lineHeight: 1.5 }}>{item.value}</p>
@@ -547,55 +514,20 @@ export default function ArraeBrandPage() {
             </div>
           </section>
 
-          {/* ── Verdict Card ─────────────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 02 Quick Verdict ─────────────────────────────────────────── */}
+          <section id="verdict" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Assessment" figure="§ 02" title="Quick" titleItalic="verdict" size="sm" />
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div className="arrae-verdict-grid">
               {/* Green flags */}
-              <div
-                style={{
-                  padding: 24,
-                  backgroundColor: "#F8F2E4",
-                  border: "1px solid #D4C9B8",
-                  borderRadius: 12,
-                }}
-              >
+              <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-                  <span
-                    style={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: "50%",
-                      backgroundColor: "#1A6B3A",
-                      flexShrink: 0,
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
-                      fontSize: 9,
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "#1A6B3A",
-                      margin: 0,
-                    }}
-                  >
-                    What works
-                  </p>
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#1A6B3A", flexShrink: 0 }} />
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", margin: 0 }}>What works</p>
                 </div>
                 <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
                   {greenFlags.map((flag) => (
-                    <li
-                      key={flag}
-                      style={{
-                        fontSize: 13,
-                        color: "#3C3530",
-                        lineHeight: 1.6,
-                        paddingLeft: 16,
-                        borderLeft: "2px solid rgba(26,107,58,0.3)",
-                      }}
-                    >
+                    <li key={flag} style={{ fontSize: 13, color: "#3C3530", lineHeight: 1.6, paddingLeft: 14, borderLeft: "2px solid rgba(26,107,58,0.3)" }}>
                       {flag}
                     </li>
                   ))}
@@ -603,49 +535,14 @@ export default function ArraeBrandPage() {
               </div>
 
               {/* Red flags */}
-              <div
-                style={{
-                  padding: 24,
-                  backgroundColor: "#F8F2E4",
-                  border: "1px solid #D4C9B8",
-                  borderRadius: 12,
-                }}
-              >
+              <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-                  <span
-                    style={{
-                      width: 8,
-                      height: 8,
-                      borderRadius: "50%",
-                      backgroundColor: "#9B2020",
-                      flexShrink: 0,
-                    }}
-                  />
-                  <p
-                    style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
-                      fontSize: 9,
-                      letterSpacing: "0.18em",
-                      textTransform: "uppercase",
-                      color: "#9B2020",
-                      margin: 0,
-                    }}
-                  >
-                    Watch out for
-                  </p>
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#9B2020", flexShrink: 0 }} />
+                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9B2020", margin: 0 }}>Watch out for</p>
                 </div>
                 <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
                   {redFlags.map((flag) => (
-                    <li
-                      key={flag}
-                      style={{
-                        fontSize: 13,
-                        color: "#3C3530",
-                        lineHeight: 1.6,
-                        paddingLeft: 16,
-                        borderLeft: "2px solid rgba(155,32,32,0.25)",
-                      }}
-                    >
+                    <li key={flag} style={{ fontSize: 13, color: "#3C3530", lineHeight: 1.6, paddingLeft: 14, borderLeft: "2px solid rgba(155,32,32,0.25)" }}>
                       {flag}
                     </li>
                   ))}
@@ -654,58 +551,21 @@ export default function ArraeBrandPage() {
             </div>
           </section>
 
-          {/* ── Certifications & Testing ──────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 03 Certifications ────────────────────────────────────────── */}
+          <section id="certs" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Verification" figure="§ 03" title="Certifications &" titleItalic="testing" size="sm" />
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
               {certifications.map((cert) => {
                 const s = statusStyles[cert.status];
                 return (
-                  <div
-                    key={cert.name}
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "220px 140px 1fr",
-                      gap: 16,
-                      alignItems: "center",
-                      padding: "14px 20px",
-                      backgroundColor: s.bg,
-                      border: `1px solid ${s.border}`,
-                      borderRadius: 8,
-                    }}
-                  >
-                    <p
-                      style={{
-                        fontFamily: "var(--font-dm-mono), monospace",
-                        fontSize: 11,
-                        letterSpacing: "0.06em",
-                        color: "#3C3530",
-                        margin: 0,
-                        fontWeight: 500,
-                      }}
-                    >
+                  <div key={cert.name} className="arrae-cert-row" style={{ backgroundColor: s.bg, border: `1px solid ${s.border}` }}>
+                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.06em", color: "#3C3530", margin: 0, fontWeight: 500 }}>
                       {cert.name}
                     </p>
                     <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
-                      <span
-                        style={{
-                          width: 7,
-                          height: 7,
-                          borderRadius: "50%",
-                          backgroundColor: s.dot,
-                          flexShrink: 0,
-                        }}
-                      />
-                      <p
-                        style={{
-                          fontFamily: "var(--font-dm-mono), monospace",
-                          fontSize: 10,
-                          letterSpacing: "0.07em",
-                          color: s.labelColor,
-                          margin: 0,
-                        }}
-                      >
+                      <span style={{ width: 7, height: 7, borderRadius: "50%", backgroundColor: s.dot, flexShrink: 0 }} />
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.07em", color: s.labelColor, margin: 0 }}>
                         {s.label}
                       </p>
                     </div>
@@ -715,39 +575,17 @@ export default function ArraeBrandPage() {
               })}
             </div>
 
-            {/* Testing context note */}
-            <div
-              style={{
-                padding: "16px 20px",
-                backgroundColor: "rgba(146,98,10,0.06)",
-                border: "1px solid rgba(146,98,10,0.2)",
-                borderRadius: 8,
-                display: "flex",
-                gap: 12,
-                alignItems: "flex-start",
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 9,
-                  letterSpacing: "0.18em",
-                  color: "#92620A",
-                  textTransform: "uppercase",
-                  paddingTop: 2,
-                  flexShrink: 0,
-                }}
-              >
-                Note
-              </span>
+            {/* Context note */}
+            <div style={{ padding: "16px 20px", backgroundColor: "rgba(146,98,10,0.06)", border: "1px solid rgba(146,98,10,0.2)", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#92620A", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Note</span>
               <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>
                 Arrae reports FTIR identity testing, heavy metal analysis, and microbiological testing on every batch. These are real and useful processes. However, they are self-reported — no independent certifying body publishes or verifies these results. The distinction matters: batch testing catches contamination and basic identity fraud. It does not independently verify that the label doses of active ingredients are present and accurate, which is what NSF, USP, and similar programs specifically address.
               </p>
             </div>
           </section>
 
-          {/* ── Clinical Evidence Note ────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 04 Clinical Evidence ─────────────────────────────────────── */}
+          <section id="evidence" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Evidence" figure="§ 04" title="On the" titleItalic="clinical claims" size="sm" />
 
             <div style={{ maxWidth: 760 }}>
@@ -757,50 +595,28 @@ export default function ArraeBrandPage() {
               <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
                 A further detail worth noting: the 86% figure specifically reflects the combined Bloat + Calm result (weeks five through eight), not Bloat alone. Bloat-only results were lower. Arrae&apos;s marketing does not always make this distinction clear.
               </p>
-              <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
+              <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 20 }}>
                 A second, more rigorous study is registered on ClinicalTrials.gov (NCT07370740) — a randomised, placebo-controlled design run with KGK Science. It covers Bloat&apos;s effect on postprandial gas and bloating at the 60-minute mark. Results have not been published as of May 2026.
               </p>
 
-              {/* Evidence classification card */}
-              <div
-                style={{
-                  padding: "20px 24px",
-                  backgroundColor: "#F8F2E4",
-                  border: "1px solid #D4C9B8",
-                  borderRadius: 10,
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr 1fr",
-                  gap: 20,
-                }}
-              >
+              <div className="arrae-evidence-grid">
                 {[
-                  { label: "Study design", value: "Single-arm observational", verdict: "weak" as const },
-                  { label: "Sample size", value: "35 women", verdict: "weak" as const },
-                  { label: "Sponsor", value: "Industry (Citrus Labs)", verdict: "partial" as const },
-                  { label: "Control group", value: "None", verdict: "weak" as const },
-                  { label: "Blinding", value: "Open-label", verdict: "weak" as const },
-                  { label: "New RCT pending", value: "NCT07370740", verdict: "pass" as const },
+                  { label: "Study design",      value: "Single-arm observational", verdict: "weak"    as const },
+                  { label: "Sample size",        value: "35 women",                verdict: "weak"    as const },
+                  { label: "Sponsor",            value: "Industry (Citrus Labs)",   verdict: "partial" as const },
+                  { label: "Control group",      value: "None",                    verdict: "weak"    as const },
+                  { label: "Blinding",           value: "Open-label",              verdict: "weak"    as const },
+                  { label: "New RCT pending",    value: "NCT07370740",             verdict: "pass"    as const },
                 ].map((item) => {
                   const verdictMap = {
-                    pass: { color: "#1A6B3A", bg: "rgba(26,107,58,0.07)" },
-                    partial: { color: "#92620A", bg: "rgba(146,98,10,0.07)" },
-                    weak: { color: "#9B2020", bg: "rgba(155,32,32,0.06)" },
+                    pass:    { color: "#1A6B3A", bg: "rgba(26,107,58,0.07)"  },
+                    partial: { color: "#92620A", bg: "rgba(146,98,10,0.07)"  },
+                    weak:    { color: "#9B2020", bg: "rgba(155,32,32,0.06)"  },
                   };
                   const v = verdictMap[item.verdict];
                   return (
                     <div key={item.label} style={{ padding: "12px 14px", backgroundColor: v.bg, borderRadius: 6 }}>
-                      <p
-                        style={{
-                          fontFamily: "var(--font-dm-mono), monospace",
-                          fontSize: 9,
-                          letterSpacing: "0.12em",
-                          textTransform: "uppercase",
-                          color: "#8A8480",
-                          marginBottom: 6,
-                        }}
-                      >
-                        {item.label}
-                      </p>
+                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>{item.label}</p>
                       <p style={{ fontSize: 13, fontWeight: 600, color: v.color, margin: 0 }}>{item.value}</p>
                     </div>
                   );
@@ -809,164 +625,59 @@ export default function ArraeBrandPage() {
             </div>
           </section>
 
-          {/* ── Product Lineup ────────────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 05 Product Lineup ────────────────────────────────────────── */}
+          <section id="products" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Products" figure="§ 05" title="Full" titleItalic="product lineup" size="sm" />
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
+            <div className="arrae-product-grid">
               {products.map((product) => (
-                <div
-                  key={product.slug}
-                  style={{
-                    border: "1px solid #D4C9B8",
-                    borderRadius: 10,
-                    overflow: "hidden",
-                    backgroundColor: "#F8F2E4",
-                    display: "flex",
-                    flexDirection: "column",
-                  }}
-                >
+                <div key={product.slug} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
                   {/*
                     PLACEHOLDER IMAGE BLOCK
-                    Replace this gradient with an <img> tag when product images are ready.
-                    Recommended: 600×240px product shot on white/cream background.
-                    Example: <img src="/products/arrae-bloat.webp" alt="Arrae Bloat capsules" style={{ width:"100%", height:160, objectFit:"cover" }} />
-
-                    Current placeholder path for reference: /products/arrae-{product.slug}.webp
+                    Replace with: <img src={`/products/${product.slug}.webp`} alt={`Arrae ${product.name} supplement`} style={{ width:"100%", height:120, objectFit:"cover" }} />
+                    Recommended image size: 600×240px, white/cream background
                   */}
-                  <div
-                    style={{
-                      height: 120,
-                      background: "linear-gradient(135deg, #2C1A10 0%, #1A0F08 100%)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      position: "relative",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontFamily: "var(--font-playfair), Georgia, serif",
-                        fontSize: "3rem",
-                        fontWeight: 800,
-                        color: "rgba(242,235,217,0.06)",
-                        letterSpacing: "-0.05em",
-                      }}
-                    >
+                  <div style={{ height: 110, background: "linear-gradient(135deg, #2C1A10 0%, #1A0F08 100%)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
+                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(242,235,217,0.05)", letterSpacing: "-0.05em" }}>
                       {product.name[0]}
                     </span>
-                    <span
-                      style={{
-                        position: "absolute",
-                        bottom: 10,
-                        left: 14,
-                        fontFamily: "var(--font-dm-mono), monospace",
-                        fontSize: 9,
-                        letterSpacing: "0.16em",
-                        textTransform: "uppercase",
-                        color: "rgba(212,169,106,0.4)",
-                      }}
-                    >
-                      {/* PLACEHOLDER — replace with actual image */}
+                    <span style={{ position: "absolute", bottom: 8, left: 12, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(212,169,106,0.35)" }}>
                       img placeholder
                     </span>
-                    <span
-                      style={{
-                        position: "absolute",
-                        top: 10,
-                        right: 12,
-                        padding: "3px 10px",
-                        backgroundColor: "rgba(212,169,106,0.1)",
-                        border: "1px solid rgba(212,169,106,0.2)",
-                        borderRadius: 4,
-                        fontFamily: "var(--font-dm-mono), monospace",
-                        fontSize: 9,
-                        letterSpacing: "0.1em",
-                        color: "rgba(212,169,106,0.6)",
-                      }}
-                    >
+                    <span style={{ position: "absolute", top: 8, right: 10, padding: "2px 8px", backgroundColor: "rgba(212,169,106,0.1)", border: "1px solid rgba(212,169,106,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", color: "rgba(212,169,106,0.55)" }}>
                       {product.category}
                     </span>
                   </div>
 
                   {/* Card body */}
-                  <div style={{ padding: "16px 18px 18px", flex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
+                  <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                      <h3
-                        style={{
-                          fontFamily: "var(--font-playfair), Georgia, serif",
-                          fontSize: "1.15rem",
-                          fontWeight: 700,
-                          color: "#1A1714",
-                          margin: 0,
-                          letterSpacing: "-0.02em",
-                        }}
-                      >
+                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>
                         {product.name}
                       </h3>
-                      <div style={{ textAlign: "right", flexShrink: 0 }}>
-                        <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{product.price}</p>
-                        <p
-                          style={{
-                            fontSize: 10,
-                            color: "#8A8480",
-                            fontFamily: "var(--font-dm-mono), monospace",
-                            margin: 0,
-                          }}
-                        >
-                          {product.priceNote}
-                        </p>
+                      <div style={{ textAlign: "right", flexShrink: 0, marginLeft: 8 }}>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", margin: 0 }}>{product.price}</p>
+                        <p style={{ fontSize: 9, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{product.priceNote}</p>
                       </div>
                     </div>
 
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{product.description}</p>
+                    <p style={{ fontSize: 12.5, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{product.description}</p>
 
-                    {/* Key ingredients */}
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
                       {product.keyIngredients.map((ing) => (
-                        <span
-                          key={ing}
-                          style={{
-                            padding: "3px 8px",
-                            backgroundColor: "#EDE8DF",
-                            border: "1px solid #D4C9B8",
-                            borderRadius: 4,
-                            fontSize: 10,
-                            color: "#5C5650",
-                            fontFamily: "var(--font-dm-mono), monospace",
-                            letterSpacing: "0.05em",
-                          }}
-                        >
+                        <span key={ing} style={{ padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
                           {ing}
                         </span>
                       ))}
                     </div>
 
-                    {/* Review link or coming soon */}
-                    <div style={{ marginTop: "auto", paddingTop: 10, borderTop: "1px solid #EDE8DF" }}>
+                    <div style={{ marginTop: "auto", paddingTop: 8, borderTop: "1px solid #EDE8DF" }}>
                       {product.reviewSlug ? (
-                        <Link
-                          href={`/reviews/${product.reviewSlug}`}
-                          style={{
-                            fontSize: 12,
-                            color: "#C4622D",
-                            fontWeight: 600,
-                            textDecoration: "none",
-                            fontFamily: "var(--font-dm-sans), sans-serif",
-                          }}
-                        >
+                        <Link href={`/reviews/${product.reviewSlug}`} style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>
                           Read full review →
                         </Link>
                       ) : (
-                        <span
-                          style={{
-                            fontSize: 11,
-                            color: "#A89880",
-                            fontFamily: "var(--font-dm-mono), monospace",
-                            letterSpacing: "0.06em",
-                          }}
-                        >
+                        <span style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>
                           Review in progress
                         </span>
                       )}
@@ -977,8 +688,8 @@ export default function ArraeBrandPage() {
             </div>
           </section>
 
-          {/* ── Published Reviews ─────────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 06 Published Reviews ─────────────────────────────────────── */}
+          <section id="reviews" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="Reviews" figure="§ 06" title="Reviewed" titleItalic="products" size="sm" />
 
             {publishedReviews.length > 0 ? (
@@ -988,124 +699,36 @@ export default function ArraeBrandPage() {
                 ))}
               </div>
             ) : (
-              /* Empty state — shown until first review publishes */
-              <div
-                style={{
-                  padding: "40px 32px",
-                  border: "1px dashed #D4C9B8",
-                  borderRadius: 10,
-                  textAlign: "center",
-                  backgroundColor: "#F8F2E4",
-                }}
-              >
-                <p
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 9,
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "#A89880",
-                    marginBottom: 10,
-                  }}
-                >
+              <div style={{ padding: "36px 28px", border: "1px dashed #D4C9B8", borderRadius: 10, textAlign: "center", backgroundColor: "#F8F2E4" }}>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>
                   Coming soon
                 </p>
                 <p style={{ fontSize: 14, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>
                   Individual product reviews are in progress. Bloat is first — publishing shortly.
                   <br />
                   Check back or{" "}
-                  <Link href="/reviews" style={{ color: "#C4622D", fontWeight: 600 }}>
-                    browse all reviews
-                  </Link>{" "}
+                  <Link href="/reviews" style={{ color: "#C4622D", fontWeight: 600 }}>browse all reviews</Link>{" "}
                   in the meantime.
                 </p>
               </div>
             )}
           </section>
 
-          {/* ── FAQ ──────────────────────────────────────────────────── */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          {/* ── § 07 FAQ (accordion) ───────────────────────────────────────── */}
+          <section id="faq" className="arrae-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
             <SectionHeading label="FAQ" figure="§ 07" title="Common" titleItalic="questions" size="sm" />
-
-            <div style={{ maxWidth: 760, display: "flex", flexDirection: "column", gap: 16 }}>
-              {[
-                {
-                  q: "Is Arrae independently third-party tested?",
-                  a: "Not in the way that phrase usually implies. Arrae reports batch-level testing for identity (FTIR), heavy metals, and microbiology — which are useful baseline checks. However, the brand holds no NSF, USP, Informed Sport, or BSCG product-level certification. Those programmes independently verify that what is on the label is actually in the capsule at the stated dose. Arrae's testing is internal and not verified by an independent certifying body.",
-                },
-                {
-                  q: "Is the clinical evidence behind Bloat solid?",
-                  a: "It is real evidence, but it has significant limitations. The headline 86% bloating reduction figure comes from a 35-person, open-label, single-arm observational trial conducted by Citrus Labs — an industry sponsor. There was no placebo group and no blinding, meaning participant-reported outcomes are subject to the placebo effect. A second, more rigorous randomised placebo-controlled trial (NCT07370740) is registered but unpublished as of May 2026. That result will be more meaningful.",
-                },
-                {
-                  q: "How does Arrae compare on price?",
-                  a: "Arrae sits at the expensive end of the DTC supplement market. Bloat at $1.47/serving costs considerably more than standalone digestive enzyme products with comparable ingredients. Calm at $2.40–3.67/serving is hard to justify on formula alone — 63mg of magnesium bisglycinate is well below the clinically studied therapeutic range for anxiety (200–400mg in most trials), and the doses of the other three actives are hidden inside a proprietary blend. You are partly paying for the brand, the packaging, and the community.",
-                },
-                {
-                  q: "Who is Arrae actually suitable for?",
-                  a: "People who want short, readable ingredient lists without a long chain of synthetic additives. People who find value in the aesthetic and lifestyle framing — treating supplements more like a skincare routine. People who have tried standard digestive enzyme products and want something with a more targeted herb combination. It is not the right choice for drug-tested athletes (no Informed Sport cert), people who want independent potency verification, or anyone prioritising maximum cost-efficiency.",
-                },
-                {
-                  q: "Is the MB-1 'natural GLP-1 support' claim accurate?",
-                  a: "It is extrapolated rather than proven. IGOB131® (African mango seed extract) has RCT data showing modest effects on body weight and metabolic markers — but the mechanism through which it might influence GLP-1 specifically is based on animal model and in vitro data, not human clinical evidence. Grains of Paradise has some thermogenesis data in humans, but at doses higher than the blend likely delivers. The GLP-1 framing is a marketing angle, not a clinically established effect.",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  style={{
-                    padding: "20px 24px",
-                    backgroundColor: "#F8F2E4",
-                    border: "1px solid #D4C9B8",
-                    borderRadius: 10,
-                  }}
-                >
-                  <p
-                    style={{
-                      fontFamily: "var(--font-playfair), Georgia, serif",
-                      fontSize: "1rem",
-                      fontWeight: 700,
-                      color: "#1A1714",
-                      marginBottom: 10,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
-                    {item.q}
-                  </p>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.a}</p>
-                </div>
-              ))}
-            </div>
+            <ArraeFAQ />
           </section>
 
-          {/* ── Editorial Stance ─────────────────────────────────────── */}
-          <section style={{ marginBottom: 56 }}>
-            <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12, maxWidth: 840 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 9,
-                    letterSpacing: "0.22em",
-                    textTransform: "uppercase",
-                    color: "#5C5650",
-                  }}
-                >
+          {/* ── § 08 Editorial Stance ──────────────────────────────────────── */}
+          <section id="stance" className="arrae-section-anchor" style={{ marginBottom: 56 }}>
+            <div className="arrae-stance-card" style={{ backgroundColor: "#1A1714", borderRadius: 12, maxWidth: 840 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
+                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "#5C5650" }}>
                   Editorial Stance
                 </span>
-                <span style={{ width: 20, height: 1, backgroundColor: "#3C3530", display: "inline-block" }} />
-                <span
-                  style={{
-                    padding: "2px 8px",
-                    backgroundColor: "rgba(212,201,184,0.1)",
-                    border: "1px solid rgba(212,201,184,0.2)",
-                    borderRadius: 4,
-                    fontFamily: "var(--font-dm-mono), monospace",
-                    fontSize: 9,
-                    letterSpacing: "0.1em",
-                    color: "rgba(212,201,184,0.5)",
-                    textTransform: "uppercase",
-                  }}
-                >
+                <span style={{ width: 16, height: 1, backgroundColor: "#3C3530", display: "inline-block" }} />
+                <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>
                   Silver Tier · BRD-009
                 </span>
               </div>
