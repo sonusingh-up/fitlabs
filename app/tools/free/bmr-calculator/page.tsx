@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
   description:
     "Most calculators stop at BMR. This one adds a plateau predictor, NEAT booster, and meal plan — free.",
-  alternates: { canonical: "/tools/free/bmr-calculator" },
+  alternates: { canonical: "https://fitlabreviews.com/tools/free/bmr-calculator" },
   openGraph: {
     title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
     description:
