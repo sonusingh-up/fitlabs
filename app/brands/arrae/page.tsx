@@ -261,24 +261,49 @@ export default function ArraeBrandPage() {
 
         .arrae-section-anchor { scroll-margin-top: 72px; }
 
-        /* Product card image — consistent height, object-fit cover */
-        .arrae-product-img {
+        /* Product card image wrapper — fill mode container */
+        .arrae-product-img-wrap {
+          position: relative;
           width: 100%;
-          height: 140px;
-          object-fit: cover;
-          object-position: center;
-          display: block;
+          aspect-ratio: 4 / 3;
+          background: #F0EAD8;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+        /* next/image fill child — show full image, no crop */
+        .arrae-product-img-wrap img {
+          object-fit: contain !important;
+          object-position: center !important;
+          padding: 12px;
         }
         /* Gradient fallback for products with no image yet */
         .arrae-product-img-placeholder {
           width: 100%;
-          height: 140px;
+          aspect-ratio: 4 / 3;
           background: linear-gradient(135deg, #2C1A10 0%, #1A0F08 100%);
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
           overflow: hidden;
+          flex-shrink: 0;
+        }
+        /* Overview brand image */
+        .arrae-brand-img-wrap {
+          position: relative;
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          background: #1A0F08;
+          border-radius: 10px;
+          overflow: hidden;
+          border: 1px solid #D4C9B8;
+        }
+        .arrae-brand-img-wrap img {
+          object-fit: contain !important;
+          object-position: center !important;
+          padding: 24px;
+          filter: brightness(0) invert(1);
+          opacity: 0.9;
         }
       `}</style>
 
@@ -375,7 +400,19 @@ export default function ArraeBrandPage() {
                   The premise is deliberately narrow: solve one problem per product, make it work fast, and make the packaging good enough to sit on a counter instead of being shoved in a cabinet. Their first product, Bloat, went from zero to $1 million in revenue in nine months. By year five, the brand had crossed nine figures with minimal outside investment and a team of 33.
                 </p>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                {/* Brand feature image */}
+                <div className="arrae-brand-img-wrap">
+                  <Image
+                    src={`${R2}/arraelogo.webp`}
+                    alt="Arrae brand logo"
+                    fill
+                    unoptimized
+                  />
+                </div>
+
+                {/* Key facts */}
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                 {[
                   { label: "Headquarters",     value: "Los Angeles, CA (founders) · Dayton, NJ (distribution)" },
                   { label: "Founded",          value: "March 2020" },
@@ -391,6 +428,7 @@ export default function ArraeBrandPage() {
                     <p style={{ fontSize: 13, color: "#3C3530", margin: 0, lineHeight: 1.5 }}>{item.value}</p>
                   </div>
                 ))}
+                </div>
               </div>
             </div>
           </section>
@@ -493,14 +531,14 @@ export default function ArraeBrandPage() {
 
                   {/* Image or gradient fallback */}
                   {product.image ? (
-                    <Image
-                      src={product.image}
-                      alt={`Arrae ${product.name} supplement`}
-                      width={600}
-                      height={140}
-                      className="arrae-product-img"
-                      unoptimized
-                    />
+                    <div className="arrae-product-img-wrap">
+                      <Image
+                        src={product.image}
+                        alt={`Arrae ${product.name} supplement`}
+                        fill
+                        unoptimized
+                      />
+                    </div>
                   ) : (
                     <div className="arrae-product-img-placeholder">
                       <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(242,235,217,0.05)", letterSpacing: "-0.05em" }}>
