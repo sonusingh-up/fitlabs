@@ -228,15 +228,30 @@ const reviews: Review[] = [
     tags: ["Gut Health", "Bloating", "Digestive Enzymes", "Organic", "Women's Health"],
     thirdParty: false,
     accent: "#C4622D",
-    image: "https://pub-cfbcca8550f5404f92083870525d6d19.r2.dev/ingredients/Arrae/ArraebloatCapsules.webp",
+    image: "/products/Arrae-Bloat.webp",
     buyUrl: "https://amzn.to/4wZ3tCG",
+  },
+  {
+    slug: "arrae-tone-gummies",
+    title: "Arrae Tone Gummies",
+    brand: "Arrae",
+    category: "Creatine",
+    figure: "REV-2026-055",
+    rating: 7,
+    verdict: "5g creatine monohydrate in a vegan gummy with ginger and Slimbiotics postbiotic. Correct dose, full transparency — premium price is the honest trade-off.",
+    publishedAt: "2026-05-30",
+    tags: ["Creatine", "Gummy", "Women's Fitness", "Vegan", "Postbiotic"],
+    thirdParty: false,
+    accent: "#3A5F8B",
+    image: "/products/arrae-tone-1.webp",
+    buyUrl: "https://amzn.to/4u9uAbn",
   },
 ];
 
 const categoryGroups: { label: string; categories: string[] }[] = [
   { label: "Protein & Gainers", categories: ["Protein Powder", "Mass Gainer"] },
   { label: "Performance", categories: ["Creatine", "Pre-Workout", "Amino Acids"] },
-  { label: "Health & Wellness", categories: ["Wellness", "Vitamins", "Adaptogens"] },
+  { label: "Health & Wellness", categories: ["Wellness", "Vitamins", "Adaptogens", "Digestive Enzymes", "Gut Health"] },
   { label: "Body Composition", categories: ["Fat Loss", "Thermogenics"] },
   { label: "Organ Supplements", categories: ["Organ Supplements"] },
 ];

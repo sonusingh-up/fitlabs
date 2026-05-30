@@ -91,8 +91,8 @@ const products = [
     priceNote: "30 caps · ~$1.47/serving",
     description: "The flagship. Six-ingredient enzyme-plus-herb blend: ginger 220mg, dandelion root, lemon balm, peppermint, bromelain, slippery elm — total 1,080mg per serving. Taken after meals.",
     keyIngredients: ["Ginger 220mg", "Bromelain", "Lemon Balm", "Slippery Elm"],
-    reviewSlug: null,
-    image: `${R2}/ArraebloatCapsules.webp`,
+    reviewSlug: "arrae-bloat",
+    image: "/products/Arrae-Bloat.webp",
   },
   {
     slug: "arrae-bloat-xl",
@@ -186,12 +186,12 @@ const products = [
     slug: "arrae-tone",
     name: "Tone",
     category: "Body Composition",
-    price: "~$38",
-    priceNote: "Creatine gummies",
-    description: "Creatine monohydrate 5g per serving, ginger extract 400mg, and Slimbiotics® postbiotic 34mg. One of the few creatine products in gummy form with a postbiotic addition.",
+    price: "$49.99",
+    priceNote: "90 gummies · ~$1.67/serving",
+    description: "Creatine monohydrate 5g per serving, ginger extract 400mg, and Slimbiotics® postbiotic 34mg. Vegan pectin gummies — no mixing required. Available in Mixed Berry, Sour Watermelon, and Sour Green Apple.",
     keyIngredients: ["Creatine Monohydrate 5g", "Ginger 400mg", "Slimbiotics® Postbiotic 34mg"],
-    reviewSlug: null,
-    image: `${R2}/ArraeToneGummies.webp`,
+    reviewSlug: "arrae-tone-gummies",
+    image: "/products/arrae-tone-1.webp",
   },
 ];
 
@@ -205,7 +205,17 @@ const publishedReviews = [
     rating: 7 as ReviewRating,
     verdict: "Clean, filler-free organic herb blend. Ginger underdosed, 5 of 6 amounts hidden. Marketing outpaces the evidence.",
     publishedAt: "2026-05-30",
-    figNumber: "01",
+    figNumber: "54",
+  },
+  {
+    slug: "arrae-tone-gummies",
+    title: "Arrae Tone Gummies",
+    brand: "Arrae",
+    category: "Creatine",
+    rating: 7 as ReviewRating,
+    verdict: "5g creatine monohydrate in a vegan gummy — correct dose, full transparency. Premium price is the real trade-off.",
+    publishedAt: "2026-05-30",
+    figNumber: "55",
   },
 ];
 
