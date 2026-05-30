@@ -454,16 +454,33 @@ export default function AncestralVsHeartAndSoilPage() {
         {/* Category winners */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Category Winners" figure="§ 05" title="Who wins" titleItalic="each round" size="sm" />
-          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
             {categoryWinners.map((item, i) => (
-              <div key={item.category} style={{ display: "grid", gridTemplateColumns: "1fr auto 2fr", borderBottom: i < categoryWinners.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
-                <div style={{ padding: "14px 20px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", letterSpacing: "0.08em", textTransform: "uppercase" }}>{item.category}</div>
-                <div style={{ padding: "14px 20px", borderLeft: "1px solid #EDE8DF", borderRight: "1px solid #EDE8DF" }}>
+              <div
+                key={item.category}
+                style={{ borderBottom: i < categoryWinners.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}
+                className="flex flex-col lg:grid lg:grid-cols-[1fr_auto_2fr] lg:items-center"
+              >
+                {/* Category label */}
+                <div
+                  style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", letterSpacing: "0.08em", textTransform: "uppercase" }}
+                  className="px-4 pt-3 pb-1 lg:px-5 lg:py-[14px]"
+                >
+                  {item.category}
+                </div>
+                {/* Winner badge */}
+                <div className="px-4 pb-2 lg:px-5 lg:py-[14px] lg:border-l lg:border-r lg:border-[#EDE8DF]">
                   <span style={{ padding: "4px 12px", backgroundColor: item.winner === "Tie" ? "#EDE8DF" : "#1A1714", color: item.winner === "Tie" ? "#5C5650" : "#F2EBD9", fontSize: 10, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap", display: "inline-block" }}>
                     {item.winner}
                   </span>
                 </div>
-                <div style={{ padding: "14px 20px", fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>{item.note}</div>
+                {/* Note */}
+                <div
+                  style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}
+                  className="px-4 pb-3 lg:px-5 lg:py-[14px]"
+                >
+                  {item.note}
+                </div>
               </div>
             ))}
           </div>
