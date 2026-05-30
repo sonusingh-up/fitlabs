@@ -494,14 +494,30 @@ export default function CaffeinePage() {
           {/* § 9 — References */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
             <SectionHeading label="Section 09" figure="§ 09" title="References" titleItalic="& Further Reading" size="sm" />
-            <ol style={{ paddingLeft: 20, margin: 0 }}>
-              {references.map((r) => (
-                <li key={r.num} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, marginBottom: 8 }}>
-                  {r.cite}{" "}
-                  <em style={{ color: "#A89880" }}>{r.journal}</em>
-                </li>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {[
+                { num: "1", cite: "Doherty M, Smith PM. (2005). Effects of caffeine ingestion on exercise testing: a meta-analysis.", journal: "Int J Sport Nutr Exerc Metab, 15(2), 196–210.", url: "https://doi.org/10.1123/ijsnem.15.2.196" },
+                { num: "2", cite: "Warren GL, Park ND, Maresca RD, et al. (2010). Effect of caffeine ingestion on muscular strength and endurance: a meta-analysis.", journal: "Med Sci Sports Exerc, 42(7), 1375–87.", url: "https://doi.org/10.1249/MSS.0b013e3181c2a8c3" },
+                { num: "3", cite: "McLellan TM, Caldwell JA, Lieberman HR. (2016). A review of caffeine's effects on cognitive, physical and occupational performance.", journal: "Neurosci Biobehav Rev, 71, 294–312.", url: "https://doi.org/10.1016/j.neubiorev.2016.09.001" },
+                { num: "4", cite: "Grgic J, Grgic I, Pickering C, et al. (2020). Wake up and smell the coffee: caffeine supplementation and exercise performance — an umbrella review of 21 meta-analyses.", journal: "Br J Sports Med, 54(11), 681–688.", url: "https://doi.org/10.1136/bjsports-2019-101714" },
+                { num: "5", cite: "Grgic J, Trexler ET, Lazinica B, Pedisic Z. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis.", journal: "J Int Soc Sports Nutr, 15, 11.", url: "https://doi.org/10.1186/s12970-018-0216-0" },
+                { num: "6", cite: "Costill DL, Dalsky GP, Fink WJ. (1978). Effects of caffeine ingestion on metabolism and exercise performance.", journal: "Med Sci Sports, 10(3), 155–8.", url: "https://pubmed.ncbi.nlm.nih.gov/723503/" },
+                { num: "7", cite: "Graham TE, Hibbert E, Sathasivam P. (1998). Metabolic and exercise endurance effects of coffee and caffeine ingestion.", journal: "J Appl Physiol, 85(3), 883–9.", url: "https://doi.org/10.1152/jappl.1998.85.3.883" },
+                { num: "8", cite: "Maughan RJ, Griffin J. (2003). Caffeine ingestion and fluid balance: a review.", journal: "J Hum Nutr Diet, 16(6), 411–20.", url: "https://doi.org/10.1046/j.1365-277X.2003.00477.x" },
+                { num: "9", cite: "Drake C, Roehrs T, Shambroom J, Roth T. (2013). Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed.", journal: "J Clin Sleep Med, 9(11), 1195–200.", url: "https://doi.org/10.5664/jcsm.3170" },
+                { num: "10", cite: "Goldstein ER, Ziegenfuss T, Kalman D, et al. (2010). International society of sports nutrition position stand: caffeine and performance.", journal: "J Int Soc Sports Nutr, 7(1), 5.", url: "https://doi.org/10.1186/1550-2783-7-5" },
+                { num: "11", cite: "Del Coso J, Muñoz-Fernández VE, Muñoz G, et al. (2012). Effects of a caffeine-containing energy drink on simulated soccer performance.", journal: "PLOS ONE, 7(2), e31380.", url: "https://doi.org/10.1371/journal.pone.0031380" },
+                { num: "12", cite: "Burke LM. (2008). Caffeine and sports performance.", journal: "Appl Physiol Nutr Metab, 33(6), 1319–34.", url: "https://doi.org/10.1139/H08-130" },
+              ].map((r) => (
+                <div key={r.num} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #EDE8DF" }}>
+                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700, flexShrink: 0, minWidth: 20 }}>[{r.num}]</span>
+                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+                    {r.cite}{" "}<em>{r.journal}</em>{" "}
+                    <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.04em" }}>→ View study</a>
+                  </p>
+                </div>
               ))}
-            </ol>
+            </div>
           </section>
 
           {/* § 10 — FAQ */}
