@@ -572,3 +572,9 @@ html, body {
   line-height: 1.75;
 }
 /* end review utilities */
+
+/* ── BMR tool feature stagger animation ──────────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
