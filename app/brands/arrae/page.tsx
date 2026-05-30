@@ -28,7 +28,7 @@ const organizationSchema = {
   ],
   description:
     "Arrae is a US-based direct-to-consumer supplement brand targeting millennial women. Founded in 2020, the brand focuses on fast-acting, single-problem formulas for bloating, anxiety, sleep, and metabolic health.",
-  sameAs: ["https://www.instagram.com/arrae.co"],
+  sameAs: ["https://www.instagram.com/arrae"],
 };
 
 const breadcrumbSchema = {
