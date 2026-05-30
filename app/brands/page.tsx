@@ -113,6 +113,19 @@ const brands = [
     categories: ["Plant Protein", "Probiotics", "Vitamins", "Greens"],
     tier: "silver",
   },
+  {
+    slug: "arrae",
+    name: "Arrae",
+    country: "USA",
+    founded: "2020",
+    figure: "BRD-009",
+    avgScore: 0,       // updates automatically as individual product reviews publish
+    reviewCount: 0,    // update to match published reviews count
+    thirdParty: false,
+    verdict: "Fast-acting women's wellness supplements. Short, readable formulas and clean manufacturing — but no independent product-level certification.",
+    categories: ["Gut Health", "Sleep", "Stress & Anxiety", "Metabolic Health", "Probiotics"],
+    tier: "silver",
+  },
 ];
 
 const tierConfig: Record<string, { label: string; color: string; bg: string; border: string }> = {
