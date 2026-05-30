@@ -196,11 +196,17 @@ const products = [
 ];
 
 // Populates as reviews publish
-const publishedReviews: {
-  slug: string; title: string; brand: string; category: string;
-  rating: ReviewRating; verdict: string; publishedAt: string; figNumber: string;
-}[] = [
-  // { slug: "arrae-bloat", title: "Arrae Bloat", brand: "Arrae", category: "Digestive Enzymes", rating: X, verdict: "...", publishedAt: "2026-XX-XX", figNumber: "01" },
+const publishedReviews = [
+  {
+    slug: "arrae-bloat",
+    title: "Arrae Bloat",
+    brand: "Arrae",
+    category: "Digestive Enzymes",
+    rating: 7 as ReviewRating,
+    verdict: "Clean, filler-free organic herb blend. Ginger underdosed, 5 of 6 amounts hidden. Marketing outpaces the evidence.",
+    publishedAt: "2026-05-30",
+    figNumber: "01",
+  },
 ];
 
 // ── Helpers ────────────────────────────────────────────────────────────────
