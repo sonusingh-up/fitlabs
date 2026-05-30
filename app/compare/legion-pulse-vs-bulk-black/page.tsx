@@ -223,70 +223,99 @@ export default function LegionPulseVsBulkBlackPage() {
       </div>
 
       {/* ── Dark hero banner with both products ─────────────────────────────── */}
-      <div style={{ background: "linear-gradient(145deg, #0A0A14 0%, #050508 100%)", position: "relative", overflow: "hidden", padding: "48px 24px 0" }}>
+      <div style={{ background: "linear-gradient(145deg, #0A0A14 0%, #050508 100%)", position: "relative", overflow: "hidden", padding: "40px 20px 0" }}>
         {/* Grid texture */}
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.025) 1px, transparent 1px)", backgroundSize: "32px 32px", pointerEvents: "none" }} />
 
-        <div style={{ maxWidth: 960, margin: "0 auto", position: "relative" }}>
+        <div style={{ maxWidth: 860, margin: "0 auto", position: "relative" }}>
 
           {/* Figure code */}
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.25)", textAlign: "center", marginBottom: 32 }}>
+          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.25)", textAlign: "center", marginBottom: 28 }}>
             CMP-006 · DIRECT COMPARISON · PRE-WORKOUT · MAY 2026
           </p>
 
-          {/* Two products + VS */}
-          <div style={{ display: "flex", gap: 0, alignItems: "flex-end", justifyContent: "space-between" }}>
+          {/* Mobile: stacked layout — desktop: side-by-side via layout-compare-cards */}
+          <div className="layout-compare-cards" style={{ alignItems: "flex-end" }}>
 
             {/* Left — Legion Pulse */}
-            <div style={{ flex: 1, minWidth: 140, display: "flex", flexDirection: "column", alignItems: "center", gap: 12, paddingBottom: 32 }}>
-              <div style={{ width: 110, height: 140, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-                <img src={pulse.image} alt="Legion Pulse Pre-Workout" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 8px 28px rgba(212,169,106,0.5))" }} />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, paddingBottom: 36 }}>
+              {/* Image — larger on mobile */}
+              <div style={{ width: "clamp(120px, 30vw, 160px)", height: "clamp(150px, 38vw, 200px)", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+                <img
+                  src={pulse.image}
+                  alt="Legion Pulse Pre-Workout"
+                  style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 10px 32px rgba(212,169,106,0.55))" }}
+                />
               </div>
+              {/* Label */}
               <div style={{ textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 4 }}>Legion Athletics</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>Pulse</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#D4A96A", marginTop: 2 }}>9/10 FSP</p>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 5 }}>Legion Athletics</p>
+                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>Pulse</p>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#D4A96A" }}>9/10 FSP</p>
               </div>
-              <div style={{ display: "flex", gap: 6 }}>
-                <a href={pulse.buyUrl} target="_blank" rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "6px 12px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 11, fontWeight: 700, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              {/* Buttons — full-width on mobile */}
+              <div style={{ display: "flex", gap: 8, width: "100%", maxWidth: 220 }}>
+                <a
+                  href={pulse.buyUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                >
                   Buy ↗
                 </a>
-                <Link href={pulse.reviewSlug}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "6px 12px", border: "1px solid rgba(242,235,217,0.15)", color: "#A89880", fontSize: 11, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                <Link
+                  href={pulse.reviewSlug}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                >
                   Review →
                 </Link>
               </div>
             </div>
 
-            {/* VS */}
-            <div style={{ textAlign: "center", padding: "0 20px", paddingBottom: 48, flexShrink: 0 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginBottom: 6 }}>BOTH SCORED</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.12)", lineHeight: 1 }}>vs</p>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginTop: 6 }}>9 / 10 FSP</p>
+            {/* VS — hidden on mobile via compare-vs-hide */}
+            <div className="compare-vs-hide" style={{ textAlign: "center", paddingBottom: 56, flexShrink: 0 }}>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginBottom: 8 }}>BOTH SCORED</p>
+              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.5rem, 5vw, 3.5rem)", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.12)", lineHeight: 1 }}>vs</p>
+              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginTop: 8 }}>9 / 10 FSP</p>
+            </div>
+
+            {/* Mobile-only VS divider — shown between the two products on small screens */}
+            <div className="block md:hidden" style={{ textAlign: "center", padding: "4px 0" }}>
+              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.18)" }}>vs</span>
             </div>
 
             {/* Right — BULK Black */}
-            <div style={{ flex: 1, minWidth: 140, display: "flex", flexDirection: "column", alignItems: "center", gap: 12, paddingBottom: 32 }}>
-              <div style={{ width: 110, height: 140, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
-                <img src={bulkBlack.image} alt="Transparent Labs BULK Black Pre-Workout" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 8px 28px rgba(196,98,45,0.5))" }} />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, paddingBottom: 36 }}>
+              <div style={{ width: "clamp(120px, 30vw, 160px)", height: "clamp(150px, 38vw, 200px)", display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
+                <img
+                  src={bulkBlack.image}
+                  alt="Transparent Labs BULK Black Pre-Workout"
+                  style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 10px 32px rgba(196,98,45,0.55))" }}
+                />
               </div>
               <div style={{ textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 4 }}>Transparent Labs</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>BULK Black</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", marginTop: 2 }}>9/10 FSP</p>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 5 }}>Transparent Labs</p>
+                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>BULK Black</p>
+                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D" }}>9/10 FSP</p>
               </div>
-              <div style={{ display: "flex", gap: 6 }}>
-                <a href={bulkBlack.buyUrl} target="_blank" rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "6px 12px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 11, fontWeight: 700, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              <div style={{ display: "flex", gap: 8, width: "100%", maxWidth: 220 }}>
+                <a
+                  href={bulkBlack.buyUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                >
                   Buy ↗
                 </a>
-                <Link href={bulkBlack.reviewSlug}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "6px 12px", border: "1px solid rgba(242,235,217,0.15)", color: "#A89880", fontSize: 11, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                <Link
+                  href={bulkBlack.reviewSlug}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                >
                   Review →
                 </Link>
               </div>
             </div>
+
           </div>
         </div>
 
