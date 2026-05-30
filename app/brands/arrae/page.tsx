@@ -8,9 +8,9 @@ import ArraeFAQ from "@/components/ui/ArraeFAQ";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Arrae Brand Review — Gut Health & Wellness",
+  title: "Arrae Review (2026): Is It Worth the Price?",
   description:
-    "Arrae brand profile: DTC women's wellness brand founded 2020, $100M+ revenue, cGMP-certified US/Canada manufacturing. No NSF or independent product cert. Bloat is the flagship. Honest assessment of 10 products.",
+    "Arrae earns Silver Tier at FitLab. Clean labels, cGMP manufacturing, no NSF cert, and undisclosed doses in Calm. Evidence-led breakdown of Bloat, MB-1, Calm, and 7 more.",
   alternates: { canonical: "/brands/arrae" },
 };
 
@@ -125,7 +125,7 @@ const products = [
     description: "GABA-led herbal sleep blend without melatonin. Also contains chamomile flower, valerian root, holy basil, and hops extract. Positioned for people who find melatonin causes morning grogginess.",
     keyIngredients: ["GABA", "Valerian Root", "Chamomile", "Holy Basil", "Hops"],
     reviewSlug: null,
-    image: null, // no image in R2 yet — add ArraeSleeep.webp when available
+    image: `${R2}/arrae-sleep.webp`,
   },
   {
     slug: "arrae-magnesium",
@@ -158,7 +158,7 @@ const products = [
     description: "Targets acid reflux and heartburn within one hour. Claims to coat the esophagus and repair the GI tract lining. Full ingredient breakdown not publicly disclosed in detail.",
     keyIngredients: ["Proprietary blend — details pending review"],
     reviewSlug: null,
-    image: null, // no image in R2 yet — add ArraeHeartburn.webp when available
+    image: `${R2}/arrae-Heartburn.webp`,
   },
   {
     slug: "arrae-tribiotic",
