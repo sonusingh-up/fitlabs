@@ -160,7 +160,7 @@ const faqItems = [
   },
   {
     q: "Is Legion Pulse available in India? What about BULK Black?",
-    a: "Both are available on Amazon.in through authorised importers. Legion Pulse costs approximately ₹5,800–₹7,200 per tub and BULK Black ₹5,200–₹6,500, both as of May 2026. The import premium is significant compared to US pricing. Indian consumers comparing these products should also consider that both are far above the price tier of domestic alternatives — the premium pays for clinical dosing, natural ingredients, and third-party certification.",
+    a: "Both are available on Amazon.in through authorised importers at a significant premium over US pricing ($67.50 for Pulse, $59.99 for BULK Black as of May 2026). The import duty and logistics markup means both sit well above the price tier of domestic Indian alternatives — the premium pays for clinical dosing, natural ingredients, and third-party certification that most domestic options do not offer.",
   },
   {
     q: "Which should I choose if I train in the morning vs evening?",
@@ -658,7 +658,6 @@ export default function LegionPulseVsBulkBlackPage() {
                   { scenario: "Per tub (30 servings)", pulse: "~$67.50", bulk: "$59.99", diff: "Pulse +$7.50" },
                   { scenario: "Per half-serving", pulse: "$1.13", bulk: "$1.00", diff: "Pulse +$0.13" },
                   { scenario: "Annual (5×/week, 52 weeks)", pulse: "~$877", bulk: "~$780", diff: "Pulse +~$97/year" },
-                  { scenario: "India (Amazon.in, May 2026)", pulse: "₹5,800–₹7,200", bulk: "₹5,200–₹6,500", diff: "Pulse +~₹600–700" },
                 ].map((row, i) => (
                   <tr key={row.scenario} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                     <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926" }}>{row.scenario}</td>
