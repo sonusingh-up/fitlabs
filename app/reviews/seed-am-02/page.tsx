@@ -254,7 +254,7 @@ const reviewSchema = {
       price: "34.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6",
+      url: "https://amzn.to/3Sd0OoQ",
     },
   },
 };
@@ -333,7 +333,7 @@ export default function SeedAM02Review() {
                   Caffeine-free. Cereboost® ginseng, TeaCrine® theacrine, SoWell™ methyliberine. Gut-brain Co-Biotic postbiotic in an acid-resistant inner capsule. Up to 6 hours of sustained focus without stimulants.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3Sd0OoQ" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
@@ -483,7 +483,7 @@ export default function SeedAM02Review() {
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 30 servings</p>
                         <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>$34.99</p>
                       </div>
-                      <a href="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" target="_blank" rel="nofollow noopener noreferrer"
+                      <a href="https://amzn.to/3Sd0OoQ" target="_blank" rel="nofollow noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
@@ -732,7 +732,7 @@ export default function SeedAM02Review() {
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                  <ProductCard name="AM-02™ Energy + Focus" brand="Seed" category="Nootropic" score={7} priceUSD="$34.99 / 30 servings" priceINR="N/A" tags={["Caffeine-Free", "Cereboost®", "TeaCrine®"]} buyUrl="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" buyLabel="Buy on Amazon" reviewSlug="seed-am-02" image="seed-am-02.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
+                  <ProductCard name="AM-02™ Energy + Focus" brand="Seed" category="Nootropic" score={7} priceUSD="$34.99 / 30 servings" priceINR="N/A" tags={["Caffeine-Free", "Cereboost®", "TeaCrine®"]} buyUrl="https://amzn.to/3Sd0OoQ" buyLabel="Buy on Amazon" reviewSlug="seed-am-02" image="seed-am-02.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="PM-02™ Sleep + Restore" brand="Seed" category="Sleep" score={7} priceUSD="$34.99 / 30 servings" priceINR="N/A" tags={["Biphasic Melatonin", "Ashwagandha"]} buyUrl="https://amzn.to/4eiBPZ1" buyLabel="Buy on Amazon" reviewSlug="seed-pm-02" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "53.6B AFU"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                 </div>
@@ -782,7 +782,7 @@ export default function SeedAM02Review() {
                     <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>$34.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span></p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
-                  <a href="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3Sd0OoQ" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
@@ -828,7 +828,7 @@ export default function SeedAM02Review() {
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     AM-02 scores 7/10 because the ingredient selection is genuinely interesting and the Co-Biotic gut-brain delivery is unique. Cereboost® has a real RCT, TeaCrine® has tolerance data, and the concept of pairing cognitive actives with a gut-brain postbiotic is forward-thinking. The 7 (not an 8 or 9) is because the blend-level opacity makes it impossible to confirm whether you're getting clinical doses of the key actives. If you want a caffeine-free daily nootropic and value the innovation, AM-02 is worth trying — the refund policy covers the risk.
                   </p>
-                  <a href="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3Sd0OoQ" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
