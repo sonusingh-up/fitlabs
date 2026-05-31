@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { headers } from "next/headers";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -142,16 +141,11 @@ const webSiteSchema = {
   inLanguage: "en-US",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const h = await headers();
-  // True when the request comes from the skin subdomain.
-  // Skin pages provide their own SkinHeader + SkinFooter via app/skin/layout.tsx.
-  const isSkin = (h.get("host") ?? "") === "skin.fitlabreviews.com";
-
   return (
     <html
       lang="en"
@@ -192,9 +186,9 @@ export default async function RootLayout({
           color: "#1A1714",
         }}
       >
-        {!isSkin && <Header />}
-        {isSkin ? children : <main className="flex-1">{children}</main>}
-        {!isSkin && <Footer />}
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

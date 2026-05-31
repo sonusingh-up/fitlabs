@@ -67,17 +67,6 @@ const nav = [
     ],
   },
   {
-    label: "Skin Health",
-    href: "/skin",
-    children: [
-      { label: "Skin Overview", href: "/skin" },
-      { label: "Skin Guides", href: "/skin/guides" },
-      { label: "Conditions", href: "/skin/conditions" },
-      { label: "Routines", href: "/skin/routines" },
-      { label: "Skin Ingredients", href: "/skin/ingredients" },
-    ],
-  },
-  {
     label: "Research",
     href: "/research",
     children: [
