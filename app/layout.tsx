@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import ConditionalShell from "@/components/layout/ConditionalShell";
+import { headers } from "next/headers";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -140,11 +142,16 @@ const webSiteSchema = {
   inLanguage: "en-US",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const h = await headers();
+  // True when the request comes from the skin subdomain.
+  // Skin pages provide their own SkinHeader + SkinFooter via app/skin/layout.tsx.
+  const isSkin = (h.get("host") ?? "") === "skin.fitlabreviews.com";
+
   return (
     <html
       lang="en"
@@ -185,7 +192,9 @@ export default function RootLayout({
           color: "#1A1714",
         }}
       >
-        <ConditionalShell>{children}</ConditionalShell>
+        {!isSkin && <Header />}
+        {isSkin ? children : <main className="flex-1">{children}</main>}
+        {!isSkin && <Footer />}
       </body>
     </html>
   );

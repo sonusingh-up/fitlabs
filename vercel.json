@@ -1,16 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "skin.fitlabreviews.com"
-        }
-      ],
-      "destination": "/skin/$1"
-    }
-  ],
   "redirects": [
     {
       "source": "/skin/:path*",
