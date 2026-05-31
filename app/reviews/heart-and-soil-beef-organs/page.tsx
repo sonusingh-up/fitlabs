@@ -142,7 +142,7 @@ const reviewSchema = {
       price: "55.00",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.heartandsoil.co",
+      url: "https://amzn.to/3Q2X5ts",
     },
   },
 };
@@ -256,7 +256,7 @@ export default function HeartAndSoilReviewPage() {
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a
-                  href="https://www.heartandsoil.co"
+                  href="https://amzn.to/3Q2X5ts"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
@@ -577,7 +577,7 @@ export default function HeartAndSoilReviewPage() {
                     priceUSD="$55 / 180 caps"
                     priceINR="N/A"
                     tags={["Informed Sport", "5-Organ Blend", "US Regen."]}
-                    buyUrl="https://www.heartandsoil.co"
+                    buyUrl="https://amzn.to/3Q2X5ts"
                     buyLabel="Check Price"
                     reviewSlug="heart-and-soil-beef-organs"
                     bgFrom="#1E1208"
@@ -730,14 +730,14 @@ export default function HeartAndSoilReviewPage() {
                       price: "$55",
                       notes: "Primary channel. Subscribe &amp; Save available. Bundles and product stacks. Direct brand support for COA requests.",
                       recommended: true,
-                      url: "https://www.heartandsoil.co",
+                      url: "https://amzn.to/3Q2X5ts",
                     },
                     {
                       channel: "Amazon US",
                       price: "$55–60",
                       notes: "Available but often slightly higher than direct. Verify the seller is Heart &amp; Soil directly. Informed Sport certification applies regardless of where you buy — the batch certification travels with the product.",
                       recommended: false,
-                      url: "https://www.heartandsoil.co",
+                      url: "https://amzn.to/3Q2X5ts",
                     },
                   ].map((channel) => (
                     <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F8F2E4", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
@@ -795,7 +795,7 @@ export default function HeartAndSoilReviewPage() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
                       <p style={{ fontSize: 12, color: "#8A8480" }}>Best for athletes. Informed Sport certified. Premium price.</p>
                     </div>
-                    <a href="https://www.heartandsoil.co" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <a href="https://amzn.to/3Q2X5ts" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                       Check Price <ExternalLink size={12} />
                     </a>
                   </div>
