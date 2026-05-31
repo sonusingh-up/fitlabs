@@ -261,7 +261,7 @@ const reviewSchema = {
       price: "39.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7",
+      url: "https://amzn.to/4ecAxQa",
     },
   },
 };
@@ -340,7 +340,7 @@ export default function SeedPDS08Review() {
                   9 pediatric-specific strains. 24.5 billion AFU. 5g dual-phase prebiotic fiber. The first 2-in-1 kids synbiotic with a product-specific double-blind RCT. Ages 3–17.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4ecAxQa" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
@@ -490,7 +490,7 @@ export default function SeedPDS08Review() {
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 30 sachets</p>
                         <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>$39.99</p>
                       </div>
-                      <a href="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" target="_blank" rel="nofollow noopener noreferrer"
+                      <a href="https://amzn.to/4ecAxQa" target="_blank" rel="nofollow noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
@@ -739,7 +739,7 @@ export default function SeedPDS08Review() {
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                  <ProductCard name="PDS-08® Pediatric Synbiotic" brand="Seed" category="Kids" score={8} priceUSD="$39.99 / 30 sachets" priceINR="N/A" tags={["9 Strains", "Ages 3–17", "Pediatric RCT"]} buyUrl="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" buyLabel="Buy on Amazon" reviewSlug="seed-pds-08" image="seed-pds-08.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
+                  <ProductCard name="PDS-08® Pediatric Synbiotic" brand="Seed" category="Kids" score={8} priceUSD="$39.99 / 30 sachets" priceINR="N/A" tags={["9 Strains", "Ages 3–17", "Pediatric RCT"]} buyUrl="https://amzn.to/4ecAxQa" buyLabel="Buy on Amazon" reviewSlug="seed-pds-08" image="seed-pds-08.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Adult Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "Adults"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                   <ProductCard name="DS-01® 14 Day Gut Reset" brand="Seed" category="Gut Reset" score={8} priceUSD="~$29.99 / 14 days" priceINR="N/A" tags={["Post-Antibiotic", "14-day"]} buyUrl="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" buyLabel="Buy on Amazon" reviewSlug="seed-14-day-gut-reset" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                 </div>
@@ -792,7 +792,7 @@ export default function SeedPDS08Review() {
                     </p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
-                  <a href="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4ecAxQa" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
@@ -838,7 +838,7 @@ export default function SeedPDS08Review() {
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     PDS-08's 8/10 rests on a genuine scientific achievement: a product-specific pediatric RCT. No other commercial kids' probiotic can make that claim. Add 9 genomically confirmed pediatric strains, 24.5B AFU, and 5g of appropriate prebiotic fiber, and you have the most evidence-backed children's synbiotic available. If you're investing in your child's gut health and want a product with real clinical backing — not just repurposed adult strains at low doses — PDS-08 is the defensible choice.
                   </p>
-                  <a href="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4ecAxQa" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
