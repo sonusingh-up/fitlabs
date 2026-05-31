@@ -252,7 +252,7 @@ const reviewSchema = {
       price: "39.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.amazon.com/Seed-DM-02-Daily-Multivitamin-Essential/dp/B0FHYNSJ6M",
+      url: "https://amzn.to/3RE5ELW",
     },
   },
 };
@@ -331,7 +331,7 @@ export default function SeedDM02Review() {
                   20 vitamins and minerals at 100% DV. Chelated bioavailable forms. ViaCap delivery with a microbiome-modulating prebiotic inner capsule. The first Co-Biotic multivitamin. 1 capsule per day.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="https://www.amazon.com/Seed-DM-02-Daily-Multivitamin-Essential/dp/B0FHYNSJ6M" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
@@ -661,7 +661,7 @@ export default function SeedDM02Review() {
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                  <ProductCard name="DM-02™ Daily Multivitamin" brand="Seed" category="Multivitamin" score={7} priceUSD="$39.99 / 30 servings" priceINR="N/A" tags={["20 Nutrients", "Chelated", "ViaCap"]} buyUrl="https://www.amazon.com/Seed-DM-02-Daily-Multivitamin-Essential/dp/B0FHYNSJ6M" buyLabel="Buy on Amazon" reviewSlug="seed-dm-02" image="seed-dm-02.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
+                  <ProductCard name="DM-02™ Daily Multivitamin" brand="Seed" category="Multivitamin" score={7} priceUSD="$39.99 / 30 servings" priceINR="N/A" tags={["20 Nutrients", "Chelated", "ViaCap"]} buyUrl="https://amzn.to/3RE5ELW" buyLabel="Buy on Amazon" reviewSlug="seed-dm-02" image="seed-dm-02.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "53.6B AFU"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                   <ProductCard name="AM-02™ Energy + Focus" brand="Seed" category="Nootropic" score={7} priceUSD="$34.99 / 30 servings" priceINR="N/A" tags={["Caffeine-Free", "Cereboost®"]} buyUrl="https://www.amazon.com/Seed-AM-02-Energy-Focus-Caffeine-Free/dp/B0FHYW18X6" buyLabel="Buy on Amazon" reviewSlug="seed-am-02" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                 </div>
@@ -701,7 +701,7 @@ export default function SeedDM02Review() {
                     <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>$39.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span></p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
-                  <a href="https://www.amazon.com/Seed-DM-02-Daily-Multivitamin-Essential/dp/B0FHYNSJ6M" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
@@ -747,7 +747,7 @@ export default function SeedDM02Review() {
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     DM-02 scores 7/10 because the core multivitamin is genuinely well-formulated — chelated forms, 100% DV, one capsule — and the microbiome-modulating ViaCap delivery is unique in the category. The Cellular Energy Complex is the main question mark: interesting ingredients at undisclosed (and likely sub-clinical) doses. If you want the most innovative multivitamin architecture available and value the microbiome integration, DM-02 is the choice. If you want maximum transparency at a lower price, Thorne Basic Nutrients or Pure Encapsulations ONE deliver comparable vitamin/mineral quality without the premium.
                   </p>
-                  <a href="https://www.amazon.com/Seed-DM-02-Daily-Multivitamin-Essential/dp/B0FHYNSJ6M" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
