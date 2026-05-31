@@ -414,7 +414,45 @@ rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);  // ← 
 
 ---
 
-## 15. Build Verification
+## 15. Brand Page Rules
+
+Brand pages live at `app/brands/[brand-name]/page.tsx` — one file per brand, no companion component files.
+
+**Hero banner — no floating product images:**
+- Do NOT add an absolutely-positioned product image inside the hero banner div.
+- The hero contains only: grid texture overlay, ghost letter, and the text/badge block.
+- Product images belong in the § 01 Brand Overview section (inside the overview grid) and in the § 04 Product Lineup cards — not in the hero.
+
+```tsx
+// ❌ WRONG — never add a floating product image to the brand hero
+<div className="hidden sm:block" style={{ position: "absolute", top: 0, right: "5%", bottom: 0, zIndex: 2, display: "flex", alignItems: "flex-end" }}>
+  <Image src="/products/product.webp" ... />
+</div>
+
+// ✅ CORRECT — hero contains only texture, ghost letter, and text block
+<div style={{ width: "100%", minHeight: 260, background: "...", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
+  <div style={{ position: "absolute", inset: 0, /* grid texture */ }} />
+  <span style={{ position: "absolute", /* ghost letter */ }}>AB</span>
+  <div style={{ position: "relative", /* text content */ }}>
+    {/* badges, h1, tagline, category pills */}
+  </div>
+</div>
+```
+
+**Mobile TOC — inline `<details>/<summary>` only:**
+- Never create a separate `*MobileTOC.tsx` component file.
+- Use a native `<details>/<summary>` element directly in `page.tsx`.
+
+**Single file rule:**
+- Each brand page = exactly one `page.tsx`.
+- No `*MobileTOC.tsx`, no `*FAQ.tsx`, no client component extractions.
+- The FAQ section uses `<details>/<summary>` (no `useState` needed).
+
+**Gold standard template:** `app/brands/arrae/page.tsx`
+
+---
+
+## 16. Build Verification
 
 Before every `git push`, run:
 ```bash

@@ -321,17 +321,6 @@ export default function DymatizeBrandPage() {
         <div style={{ width: "100%", minHeight: 260, background: "linear-gradient(135deg, #0E1318 0%, #1A2230 45%, #111820 100%)", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
-          {/* Product image top-right */}
-          <div className="hidden sm:block" style={{ position: "absolute", top: 0, right: "5%", bottom: 0, zIndex: 2, display: "flex", alignItems: "flex-end" }}>
-            <Image
-              src="/products/dymatize-iso100.webp"
-              alt="Dymatize ISO100 Hydrolyzed Whey Protein"
-              width={160}
-              height={200}
-              style={{ objectFit: "contain", objectPosition: "bottom", maxHeight: 220 }}
-              unoptimized
-            />
-          </div>
 
           <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(6rem, 20vw, 16rem)", fontWeight: 800, color: "rgba(255,255,255,0.02)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>DY</span>
 
