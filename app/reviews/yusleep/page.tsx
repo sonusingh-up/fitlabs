@@ -18,7 +18,7 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "YuSleep Review (2026) — Rated 4/10",
+  title: "YuSleep Review 2026: Does It Actually Work?",
   description:
     "YuSleep sleep drops review: good ingredient list but zero dose disclosure, no third-party testing, $2.30/serving. 'Nano-enhanced' claim is unexplained. FSP 4/10.",
   alternates: { canonical: "/reviews/yusleep" },
