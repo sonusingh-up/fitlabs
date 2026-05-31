@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Affiliate Disclosure — Skin Health",
   description:
     "Fitlabreviews Skin may earn commissions on skincare product links. Commissions never influence our ingredient ratings, routine recommendations, or editorial scores.",
-  alternates: { canonical: "/skin/affiliate-disclosure" },
+  alternates: { canonical: "/affiliate-disclosure" },
 };
 
 const sections = [

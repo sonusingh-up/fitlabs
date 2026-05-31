@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Editorial Policy — Skin Health",
   description:
     "How Fitlabreviews Skin researches skincare ingredients, evaluates products, and publishes guides. Our independence guarantee and corrections policy.",
-  alternates: { canonical: "/skin/editorial-policy" },
+  alternates: { canonical: "/editorial-policy" },
 };
 
 const steps = [

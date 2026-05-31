@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Medical Disclaimer — Skin Health",
   description:
     "Fitlabreviews Skin content is educational, not medical or dermatological advice. Consult a licensed dermatologist before changing your skincare routine.",
-  alternates: { canonical: "/skin/medical-disclaimer" },
+  alternates: { canonical: "/medical-disclaimer" },
 };
 
 const sections = [

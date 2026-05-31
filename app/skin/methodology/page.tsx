@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skin Research Methodology",
   description:
     "How Fitlabreviews Skin verifies skincare ingredient claims, assigns evidence levels, and evaluates routines. Sources, limitations, and update cadence.",
-  alternates: { canonical: "/skin/methodology" },
+  alternates: { canonical: "/methodology" },
 };
 
 const evidenceLevels = [

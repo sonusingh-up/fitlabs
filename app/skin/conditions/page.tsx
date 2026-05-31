@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skin Conditions — Causes, Symptoms & Treatments",
   description:
     "Evidence-led profiles of common skin conditions: causes, symptoms, and treatment options explained with reference to published dermatology research.",
-  alternates: { canonical: "/skin/conditions" },
+  alternates: { canonical: "/conditions" },
 };
 
 export default async function SkinConditionsPage() {

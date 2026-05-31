@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: { absolute: "Skin Health — Evidence-Led Skincare · Fitlabreviews" },
   description:
     "Research-grade skincare guides, ingredient analysis, condition profiles, and daily routines. Evidence-led, editorially independent skin health.",
-  alternates: { canonical: "/skin" },
+  alternates: { canonical: "/" },
 };
 
 const evidenceColor: Record<string, string> = {

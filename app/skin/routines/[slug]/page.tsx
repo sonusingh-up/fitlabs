@@ -21,7 +21,7 @@ export async function generateMetadata({
     description:
       routine.metaDescription ||
       `${routine.title}: a ${routine.duration ?? "skincare"} routine with step-by-step instructions for ${routine.skinTypes?.join(", ") ?? "all skin types"}.`,
-    alternates: { canonical: `/skin/routines/${slug}` },
+    alternates: { canonical: `/routines/${slug}` },
   };
 }
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skin Guides — Research-Led Skincare Articles",
   description:
     "Research-led skincare guides covering acne, anti-aging, hydration, SPF, and more. Every guide cites the evidence behind its recommendations.",
-  alternates: { canonical: "/skin/guides" },
+  alternates: { canonical: "/guides" },
 };
 
 const difficultyColor: Record<string, string> = {

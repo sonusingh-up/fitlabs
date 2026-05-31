@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skin Routines — Step-by-Step Protocols by Skin Type",
   description:
     "Step-by-step skincare routines for every skin type. Each protocol is built on ingredient evidence and sequenced for maximum efficacy.",
-  alternates: { canonical: "/skin/routines" },
+  alternates: { canonical: "/routines" },
 };
 
 const skinTypeColor: Record<string, string> = {

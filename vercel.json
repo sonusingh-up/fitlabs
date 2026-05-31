@@ -10,5 +10,18 @@
       ],
       "destination": "/skin/$1"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/skin/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "fitlabreviews.com"
+        }
+      ],
+      "destination": "https://skin.fitlabreviews.com/:path*",
+      "permanent": true
+    }
   ]
 }

@@ -23,7 +23,7 @@ export async function generateMetadata({
     description:
       ing.metaDescription ||
       `${ing.title} skincare ingredient profile: benefits, risks, how to use, and evidence level from published cosmetic science research.`,
-    alternates: { canonical: `/skin/ingredients/${slug}` },
+    alternates: { canonical: `/ingredients/${slug}` },
   };
 }
 
@@ -54,7 +54,7 @@ export default async function SkinIngredientPage({
     publisher: { "@type": "Organization", name: "Fitlabreviews", url: "https://fitlabreviews.com" },
     datePublished: ing.publishedAt ?? "",
     dateModified: ing.publishedAt ?? "",
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://fitlabreviews.com/skin/ingredients/${slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://skin.fitlabreviews.com/ingredients/${slug}` },
   };
 
   return (

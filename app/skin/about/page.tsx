@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "About the Skin Health Section",
   description:
     "About the Fitlabreviews Skin Health section — our mission, what we cover, how we research, and our commitment to evidence-based skincare writing.",
-  alternates: { canonical: "/skin/about" },
+  alternates: { canonical: "/about" },
 };
 
 const sections = [

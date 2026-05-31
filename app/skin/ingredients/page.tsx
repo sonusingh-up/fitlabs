@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Skin Ingredients — Evidence-Rated Ingredient Profiles",
   description:
     "Evidence-rated profiles for common skincare ingredients: retinol, niacinamide, vitamin C, and more. Benefits, risks, and how to use each one.",
-  alternates: { canonical: "/skin/ingredients" },
+  alternates: { canonical: "/ingredients" },
 };
 
 const evidenceColor: Record<string, string> = {

@@ -22,7 +22,7 @@ export async function generateMetadata({
     description:
       condition.metaDescription ||
       `${condition.title}: evidence-based overview of causes, symptoms, and treatment options from published dermatology research.`,
-    alternates: { canonical: `/skin/conditions/${slug}` },
+    alternates: { canonical: `/conditions/${slug}` },
   };
 }
 
@@ -45,7 +45,7 @@ export default async function SkinConditionPage({
     publisher: { "@type": "Organization", name: "Fitlabreviews", url: "https://fitlabreviews.com" },
     datePublished: condition.publishedAt ?? "",
     dateModified: condition.publishedAt ?? "",
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://fitlabreviews.com/skin/conditions/${slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://skin.fitlabreviews.com/conditions/${slug}` },
   };
 
   return (

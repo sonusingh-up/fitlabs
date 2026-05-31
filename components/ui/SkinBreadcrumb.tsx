@@ -9,11 +9,14 @@ export interface SkinBreadcrumbProps {
   items: BreadcrumbItem[];
 }
 
+const SKIN_DOMAIN = "https://skin.fitlabreviews.com";
+const MAIN_DOMAIN = "https://fitlabreviews.com";
+
 export default function SkinBreadcrumb({ items }: SkinBreadcrumbProps) {
-  // Always prepend Home → Skin
+  // "Home" links to the main site; "Skin" links to the skin subdomain root.
   const allItems: BreadcrumbItem[] = [
-    { label: "Home", href: "/" },
-    { label: "Skin", href: "/skin" },
+    { label: "Home", href: `${MAIN_DOMAIN}/` },
+    { label: "Skin", href: "/" },
     ...items,
   ];
 
@@ -24,7 +27,14 @@ export default function SkinBreadcrumb({ items }: SkinBreadcrumbProps) {
       "@type": "ListItem",
       position: i + 1,
       name: item.label,
-      ...(item.href ? { item: `https://fitlabreviews.com${item.href}` } : {}),
+      ...(item.href
+        ? {
+            // Absolute hrefs (Home) are used as-is; relative hrefs get the skin domain.
+            item: item.href.startsWith("http")
+              ? item.href
+              : `${SKIN_DOMAIN}${item.href}`,
+          }
+        : {}),
     })),
   };
 

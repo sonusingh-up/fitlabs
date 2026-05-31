@@ -22,7 +22,7 @@ export async function generateMetadata({
     description:
       guide.metaDescription ||
       `${guide.title}: a ${guide.difficulty ?? ""} skincare guide${guide.timeEstimate ? ` (${guide.timeEstimate})` : ""}. Evidence-led recommendations from Fitlabreviews Skin.`,
-    alternates: { canonical: `/skin/guides/${slug}` },
+    alternates: { canonical: `/guides/${slug}` },
   };
 }
 
@@ -59,7 +59,7 @@ export default async function SkinGuidePage({
     publisher: { "@type": "Organization", name: "Fitlabreviews", url: "https://fitlabreviews.com" },
     datePublished: guide.publishedAt ?? "",
     dateModified: guide.updatedAt ?? guide.publishedAt ?? "",
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://fitlabreviews.com/skin/guides/${slug}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://skin.fitlabreviews.com/guides/${slug}` },
   };
 
   return (

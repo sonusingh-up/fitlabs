@@ -4,6 +4,7 @@ import SkinHeader from "@/components/layout/SkinHeader";
 import SkinFooter from "@/components/layout/SkinFooter";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://skin.fitlabreviews.com"),
   title: {
     default: "Skin Health — Evidence-Led Skincare Guides · Fitlabreviews",
     template: "%s · Fitlabreviews Skin",
