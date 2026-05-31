@@ -21,12 +21,12 @@ import { SEED, seedScoreColor } from "@/lib/seed-tokens";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Seed 14 Day Gut Reset Review (2026) — Rated 8/10",
+  title: "Seed 14-Day Gut Reset Review: Can 2 Weeks Really Reset Your Microbiome?",
   description:
     "Seed 14 Day Gut Reset review: same DS-01 formula (24 strains, 53.6B AFU) in a 28-capsule 14-day intensive pack. Best choice post-antibiotics or gut disruption. FSP 8/10.",
   alternates: { canonical: "/reviews/seed-14-day-gut-reset" },
   openGraph: {
-    title: "Seed 14 Day Gut Reset Review (2026) — DS-01 Formula, Intensive Format",
+    title: "Seed 14-Day Gut Reset Review: Can 2 Weeks Really Reset Your Microbiome?",
     description:
       "The same 24-strain, 53.6B AFU DS-01 formula in a 14-day intensive 28-capsule pack. Designed for post-antibiotic recovery, travel, or seasonal gut resets.",
     url: "https://fitlabreviews.com/reviews/seed-14-day-gut-reset",

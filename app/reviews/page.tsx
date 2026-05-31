@@ -383,7 +383,7 @@ const reviews: Review[] = [
   },
   {
     slug: "seed-14-day-gut-reset",
-    title: "Seed DS-01 14 Day Gut Reset",
+    title: "Seed 14-Day Gut Reset Review: Can 2 Weeks Really Reset Your Microbiome?",
     brand: "Seed",
     category: "Gut Health",
     figure: "REV-2026-066",
@@ -398,7 +398,7 @@ const reviews: Review[] = [
   },
   {
     slug: "seed-ds-01",
-    title: "Seed DS-01 Daily Synbiotic",
+    title: "Seed DS-01® Daily Synbiotic Review: Does This 24-Strain Probiotic Actually Work?",
     brand: "Seed",
     category: "Probiotic / Synbiotic",
     figure: "REV-2026-066",
@@ -413,7 +413,7 @@ const reviews: Review[] = [
   },
   {
     slug: "seed-pds-08",
-    title: "Seed PDS-08 Pediatric Synbiotic",
+    title: "Seed PDS-08™ Review: The Best Probiotic for Kids Ages 3–17?",
     brand: "Seed",
     category: "Pediatric Probiotic",
     figure: "REV-2026-064",
@@ -428,7 +428,7 @@ const reviews: Review[] = [
   },
   {
     slug: "seed-dm-02",
-    title: "Seed DM-02 Daily Multivitamin",
+    title: "Seed DM-02™ Review: Is This the Most Bioavailable Multivitamin on the Market?",
     brand: "Seed",
     category: "Multivitamin",
     figure: "REV-2026-067",
@@ -443,7 +443,7 @@ const reviews: Review[] = [
   },
   {
     slug: "seed-am-02",
-    title: "Seed AM-02 Energy + Focus",
+    title: "Seed AM-02™ Review: A Science-Backed Nootropic for Clean Energy & Focus",
     brand: "Seed",
     category: "Nootropic / Energy Supplement",
     figure: "REV-2026-065",

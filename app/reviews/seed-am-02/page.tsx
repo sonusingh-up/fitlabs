@@ -21,12 +21,12 @@ import { SEED, seedScoreColor } from "@/lib/seed-tokens";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Seed AM-02 Energy + Focus Review (2026) — Rated 7/10",
+  title: "Seed AM-02™ Review: A Science-Backed Nootropic for Clean Energy & Focus",
   description:
     "Seed AM-02 review: caffeine-free nootropic with Cereboost ginseng, TeaCrine, methyliberine. Co-Biotic gut-brain postbiotic. $34.99/30 servings. Partial disclosure. FSP 7/10.",
   alternates: { canonical: "/reviews/seed-am-02" },
   openGraph: {
-    title: "Seed AM-02 Review (2026) — Caffeine-Free Nootropic, Novel Delivery",
+    title: "Seed AM-02™ Review: A Science-Backed Nootropic for Clean Energy & Focus",
     description:
       "AM-02 delivers sustained, caffeine-free energy via Cereboost ginseng, TeaCrine, and methyliberine — plus a gut-brain postbiotic inner capsule. Individual blend doses undisclosed.",
     url: "https://fitlabreviews.com/reviews/seed-am-02",

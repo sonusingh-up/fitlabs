@@ -22,12 +22,12 @@ import { SEED, seedScoreColor, SEED_PRODUCTS } from "@/lib/seed-tokens";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Seed DS-01 Daily Synbiotic Review (2026) — Rated 8/10",
+  title: "Seed DS-01® Daily Synbiotic Review: Does This 24-Strain Probiotic Actually Work?",
   description:
     "Seed DS-01 review: 24 genomically confirmed strains, 53.6B AFU, dual-capsule delivery, $49.99/month. The most scientifically rigorous commercial probiotic. FSP 8/10.",
   alternates: { canonical: "/reviews/seed-ds-01" },
   openGraph: {
-    title: "Seed DS-01 Review (2026) — 24 Strains, Rigorous Science",
+    title: "Seed DS-01® Daily Synbiotic Review: Does This 24-Strain Probiotic Actually Work?",
     description:
       "53.6 billion AFU across 24 genomically confirmed strains. Dual-capsule ViaCap delivery. Four targeted blends. Stability tested. The benchmark in commercial synbiotics.",
     url: "https://fitlabreviews.com/reviews/seed-ds-01",
