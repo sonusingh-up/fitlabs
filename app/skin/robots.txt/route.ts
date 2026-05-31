@@ -4,8 +4,7 @@ import { NextResponse } from "next/server";
 // Middleware rewrites /robots.txt on the skin subdomain → /skin/robots.txt → this handler.
 
 export function GET() {
-  const content = `# skin.fitlabreviews.com — Fitlabreviews Skin Health
-User-agent: *
+  const content = `User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /_next/
@@ -21,6 +20,9 @@ User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: ClaudeBot
@@ -43,9 +45,6 @@ Allow: /
 
 User-agent: YouBot
 Allow: /
-
-# Canonical host for this subdomain
-Host: https://skin.fitlabreviews.com
 
 # Sitemaps
 Sitemap: https://skin.fitlabreviews.com/sitemap.xml

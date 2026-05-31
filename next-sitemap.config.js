@@ -10,9 +10,7 @@ const sanity = createClient({
 const SITE_URL = process.env.SITE_URL || "https://fitlabreviews.com";
 
 const HIGH_PRIORITY_PATHS = [
-  "/", "/reviews", "/blog", "/research", "/goals", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors",
-  // Skin Health section
-  "/skin", "/skin/guides", "/skin/conditions", "/skin/routines", "/skin/ingredients",
+  "/", "/reviews", "/blog", "/research", "/goals", "/compare", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors",
 ];
 
 /** @type {import('next-sitemap').IConfig} */
@@ -22,7 +20,7 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*"],
+  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/llms.txt", "/feed.xml", "/studio", "/studio/*", "/skin", "/skin/*"],
 
   additionalPaths: async (config) => {
     const paths = [];
@@ -32,16 +30,11 @@ module.exports = {
       paths.push(await config.transform(config, p));
     }
 
-    // Dynamic Sanity content — supplements
-    const [reviews, ingredients, brands, skinGuides, skinConditions, skinRoutines, skinIngredients] = await Promise.all([
+    // Dynamic Sanity content — main site only (skin subdomain has its own sitemap)
+    const [reviews, ingredients, brands] = await Promise.all([
       sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
       sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`),
       sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`),
-      // Skin Health content
-      sanity.fetch(`*[_type == "skinGuide" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
-      sanity.fetch(`*[_type == "skinCondition" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
-      sanity.fetch(`*[_type == "skinRoutine" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
-      sanity.fetch(`*[_type == "skinIngredient" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
     ]);
 
     for (const r of reviews) {
@@ -71,50 +64,13 @@ module.exports = {
       });
     }
 
-    // Skin Health — dynamic routes
-    for (const g of skinGuides) {
-      paths.push({
-        loc: `/skin/guides/${g.slug}`,
-        changefreq: "weekly",
-        priority: 0.8,
-        lastmod: (g.updatedAt || g.publishedAt || new Date().toISOString()),
-      });
-    }
-
-    for (const c of skinConditions) {
-      paths.push({
-        loc: `/skin/conditions/${c.slug}`,
-        changefreq: "monthly",
-        priority: 0.7,
-        lastmod: (c.publishedAt || new Date().toISOString()),
-      });
-    }
-
-    for (const r of skinRoutines) {
-      paths.push({
-        loc: `/skin/routines/${r.slug}`,
-        changefreq: "monthly",
-        priority: 0.7,
-        lastmod: (r.publishedAt || new Date().toISOString()),
-      });
-    }
-
-    for (const i of skinIngredients) {
-      paths.push({
-        loc: `/skin/ingredients/${i.slug}`,
-        changefreq: "weekly",
-        priority: 0.8,
-        lastmod: (i.publishedAt || new Date().toISOString()),
-      });
-    }
-
     return paths;
   },
 
   robotsTxtOptions: {
     // Single wildcard block — allow + disallow must be in one policy entry
     policies: [
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"] },
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/", "/studio/", "/skin/"] },
       // AI crawlers — explicitly welcomed for GEO (Generative Engine Optimisation)
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
@@ -133,12 +89,25 @@ module.exports = {
   },
 
   transform: async (config, path) => {
-    const isReview = path.startsWith("/reviews/");
-    const isSkinHub = path === "/skin" || ["/skin/guides", "/skin/conditions", "/skin/routines", "/skin/ingredients"].includes(path);
+    const isReview = path.startsWith("/reviews/") && path !== "/reviews";
+    const isBlogArticle = path.startsWith("/blog/") && path !== "/blog";
+    const isResearchArticle = path.startsWith("/research/") && path !== "/research";
+    const isCompareArticle = path.startsWith("/compare/") && path !== "/compare";
+    const isMonthly = isReview || isBlogArticle || isResearchArticle || isCompareArticle;
+
+    let priority = config.priority;
+    if (HIGH_PRIORITY_PATHS.includes(path)) {
+      priority = 1.0;
+    } else if (isReview) {
+      priority = 0.9;
+    } else if (isBlogArticle || isResearchArticle || isCompareArticle) {
+      priority = 0.8;
+    }
+
     return {
       loc: path,
-      changefreq: isReview ? "monthly" : config.changefreq,
-      priority: HIGH_PRIORITY_PATHS.includes(path) ? (isSkinHub ? 0.9 : 1.0) : isReview ? 0.9 : config.priority,
+      changefreq: isMonthly ? "monthly" : config.changefreq,
+      priority,
       lastmod: new Date().toISOString(),
     };
   },

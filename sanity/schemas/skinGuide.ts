@@ -21,10 +21,9 @@ export const skinGuideSchema = defineType({
     }),
     defineField({
       name: "relatedTopics", title: "Related Topics", type: "array",
+      // Single reference member pointing to multiple types — avoids duplicate-name error
       of: [
-        { type: "reference", to: [{ type: "skinCondition" }] },
-        { type: "reference", to: [{ type: "skinIngredient" }] },
-        { type: "reference", to: [{ type: "skinRoutine" }] },
+        { type: "reference", to: [{ type: "skinCondition" }, { type: "skinIngredient" }, { type: "skinRoutine" }] },
       ],
     }),
     defineField({ name: "author", title: "Author", type: "reference", to: [{ type: "author" }] }),
