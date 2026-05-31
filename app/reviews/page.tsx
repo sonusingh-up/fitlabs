@@ -291,6 +291,21 @@ const reviews: Review[] = [
     image: "/products/arrae-tone-1.webp",
     buyUrl: "https://amzn.to/4u9uAbn",
   },
+  {
+    slug: "yusleep",
+    title: "YuSleep Sleep Drops",
+    brand: "YuSleep",
+    category: "Sleep Supplement",
+    figure: "REV-2026-059",
+    rating: 4,
+    verdict: "Promising ingredient selection — L-theanine, magnesium glycinate, apigenin, 0.9mg melatonin — but 9 of 10 doses are undisclosed. No third-party testing. $2.30/serving.",
+    publishedAt: "2026-05-31",
+    tags: ["Sleep", "Liquid Drops", "Melatonin", "L-Theanine"],
+    thirdParty: false,
+    accent: "#6B4FA0",
+    image: "/products/yusleep.webp",
+    buyUrl: "https://maxwebpromo.com/11204/3795/3/",
+  },
 ];
 
 const categoryGroups: { label: string; categories: string[] }[] = [
