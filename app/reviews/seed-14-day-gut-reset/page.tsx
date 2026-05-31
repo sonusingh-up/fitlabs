@@ -255,7 +255,7 @@ const reviewSchema = {
       price: "29.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD",
+      url: "https://amzn.to/4vkvR0y",
     },
   },
 };
@@ -334,7 +334,7 @@ export default function Seed14DayGutResetReview() {
                   Same formula as DS-01: 24 genomically confirmed strains, 53.6B AFU, non-fermenting MAPP prebiotic. 28 capsules for a 14-day intensive course. No subscription. Available at Target, Sprouts, Amazon.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
@@ -484,7 +484,7 @@ export default function Seed14DayGutResetReview() {
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 14 servings</p>
                         <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>~$29.99</p>
                       </div>
-                      <a href="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" target="_blank" rel="nofollow noopener noreferrer"
+                      <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
@@ -700,7 +700,7 @@ export default function Seed14DayGutResetReview() {
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                  <ProductCard name="DS-01® 14 Day Gut Reset" brand="Seed" category="Gut Reset" score={8} priceUSD="~$29.99 / 14 servings" priceINR="N/A" tags={["Same DS-01 Formula", "No Subscription"]} buyUrl="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" buyLabel="Buy on Amazon" reviewSlug="seed-14-day-gut-reset" image="seed-14-day.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
+                  <ProductCard name="DS-01® 14 Day Gut Reset" brand="Seed" category="Gut Reset" score={8} priceUSD="~$29.99 / 14 servings" priceINR="N/A" tags={["Same DS-01 Formula", "No Subscription"]} buyUrl="https://amzn.to/4vkvR0y" buyLabel="Buy on Amazon" reviewSlug="seed-14-day-gut-reset" image="seed-14-day.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "Subscription"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                   <ProductCard name="PDS-08® Pediatric Synbiotic" brand="Seed" category="Kids" score={8} priceUSD="$39.99 / 30 sachets" priceINR="N/A" tags={["Ages 3–17", "9 Strains"]} buyUrl="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" buyLabel="Buy on Amazon" reviewSlug="seed-pds-08" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                 </div>
@@ -741,7 +741,7 @@ export default function Seed14DayGutResetReview() {
                     <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>~$29.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 14 servings</span></p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Target · Sprouts · Erewhon · seed.com. Prices verified May 2026.</p>
                   </div>
-                  <a href="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
@@ -787,7 +787,7 @@ export default function Seed14DayGutResetReview() {
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     The 14 Day Gut Reset earns its 8/10 by being DS-01 — the most scientifically rigorous commercial synbiotic — in the format you need when your gut is disrupted. Post-antibiotic recovery, travel disruption, or seasonal resets each benefit from a defined intensive course. Available without subscription at Target and Sprouts makes it accessible without commitment. After the 14 days, transitioning to DS-01 for ongoing maintenance is the natural next step.
                   </p>
-                  <a href="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
