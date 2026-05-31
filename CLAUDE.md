@@ -439,6 +439,16 @@ Brand pages live at `app/brands/[brand-name]/page.tsx` — one file per brand, n
 </div>
 ```
 
+**Content quality — non-negotiable on every brand page:**
+- Every sentence must be something a knowledgeable human editor would write, not something a language model defaults to.
+- No AI fluff phrases: "game-changer", "unlock your potential", "revolutionary", "science-backed" (overused), "at the end of the day", "it's worth noting", "in conclusion", "the brand takes pride in", "their commitment to quality", "whether you're a beginner or a pro".
+- No filler openers: never start a paragraph with "When it comes to…", "In today's competitive market…", "As one of the leading…"
+- Every factual claim needs a specific source, number, or verifiable detail — not vague attribution ("studies show", "experts agree").
+- Prices must include a date anchor or "as of [month year]" — never just a bare dollar/rupee figure.
+- Certification claims must name the certifying body, what it covers, and what it does NOT cover.
+- Red flags must be direct and specific — not hedged into meaninglessness. If a brand has a real problem, say what it is.
+- The editorial stance must be a genuine take — a reader should finish it knowing exactly where we stand and why, not feeling like they read marketing copy for or against the brand.
+
 **Mobile TOC — inline `<details>/<summary>` only:**
 - Never create a separate `*MobileTOC.tsx` component file.
 - Use a native `<details>/<summary>` element directly in `page.tsx`.
