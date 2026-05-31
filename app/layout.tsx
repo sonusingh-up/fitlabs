@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import ConditionalShell from "@/components/layout/ConditionalShell";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -186,9 +185,7 @@ export default function RootLayout({
           color: "#1A1714",
         }}
       >
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ConditionalShell>{children}</ConditionalShell>
       </body>
     </html>
   );

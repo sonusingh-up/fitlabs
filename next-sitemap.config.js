@@ -9,7 +9,11 @@ const sanity = createClient({
 
 const SITE_URL = process.env.SITE_URL || "https://fitlabreviews.com";
 
-const HIGH_PRIORITY_PATHS = ["/", "/reviews", "/blog", "/research", "/goals", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors"];
+const HIGH_PRIORITY_PATHS = [
+  "/", "/reviews", "/blog", "/research", "/goals", "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors",
+  // Skin Health section
+  "/skin", "/skin/guides", "/skin/conditions", "/skin/routines", "/skin/ingredients",
+];
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -28,11 +32,16 @@ module.exports = {
       paths.push(await config.transform(config, p));
     }
 
-    // Dynamic Sanity content
-    const [reviews, ingredients, brands] = await Promise.all([
+    // Dynamic Sanity content — supplements
+    const [reviews, ingredients, brands, skinGuides, skinConditions, skinRoutines, skinIngredients] = await Promise.all([
       sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
       sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`),
       sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`),
+      // Skin Health content
+      sanity.fetch(`*[_type == "skinGuide" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
+      sanity.fetch(`*[_type == "skinCondition" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
+      sanity.fetch(`*[_type == "skinRoutine" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
+      sanity.fetch(`*[_type == "skinIngredient" && defined(slug.current)]{ "slug": slug.current, publishedAt }`),
     ]);
 
     for (const r of reviews) {
@@ -62,6 +71,43 @@ module.exports = {
       });
     }
 
+    // Skin Health — dynamic routes
+    for (const g of skinGuides) {
+      paths.push({
+        loc: `/skin/guides/${g.slug}`,
+        changefreq: "weekly",
+        priority: 0.8,
+        lastmod: (g.updatedAt || g.publishedAt || new Date().toISOString()),
+      });
+    }
+
+    for (const c of skinConditions) {
+      paths.push({
+        loc: `/skin/conditions/${c.slug}`,
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: (c.publishedAt || new Date().toISOString()),
+      });
+    }
+
+    for (const r of skinRoutines) {
+      paths.push({
+        loc: `/skin/routines/${r.slug}`,
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: (r.publishedAt || new Date().toISOString()),
+      });
+    }
+
+    for (const i of skinIngredients) {
+      paths.push({
+        loc: `/skin/ingredients/${i.slug}`,
+        changefreq: "weekly",
+        priority: 0.8,
+        lastmod: (i.publishedAt || new Date().toISOString()),
+      });
+    }
+
     return paths;
   },
 
@@ -88,10 +134,11 @@ module.exports = {
 
   transform: async (config, path) => {
     const isReview = path.startsWith("/reviews/");
+    const isSkinHub = path === "/skin" || ["/skin/guides", "/skin/conditions", "/skin/routines", "/skin/ingredients"].includes(path);
     return {
       loc: path,
       changefreq: isReview ? "monthly" : config.changefreq,
-      priority: HIGH_PRIORITY_PATHS.includes(path) ? 1.0 : isReview ? 0.9 : config.priority,
+      priority: HIGH_PRIORITY_PATHS.includes(path) ? (isSkinHub ? 0.9 : 1.0) : isReview ? 0.9 : config.priority,
       lastmod: new Date().toISOString(),
     };
   },
