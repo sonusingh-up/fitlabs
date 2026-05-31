@@ -300,7 +300,7 @@ const reviewSchema = {
       price: "49.99",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
-      url: "https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR",
+      url: "https://amzn.to/4vm1F57",
     },
   },
 };
@@ -382,7 +382,7 @@ export default function SeedDS01Review() {
                   24 genomically confirmed strains. 53.6 billion AFU. Non-fermenting MAPP prebiotic. ViaCap dual-capsule delivery. The most scientifically rigorous commercial synbiotic available.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                  <a href="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vm1F57" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
@@ -537,7 +537,7 @@ export default function SeedDS01Review() {
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 30 servings</p>
                         <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>$49.99</p>
                       </div>
-                      <a href="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" target="_blank" rel="nofollow noopener noreferrer"
+                      <a href="https://amzn.to/4vm1F57" target="_blank" rel="nofollow noopener noreferrer"
                         style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
@@ -823,7 +823,7 @@ export default function SeedDS01Review() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>All Seed products use ViaCap dual-capsule Co-Biotic delivery architecture.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                  <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "53.6B AFU", "MAPP Prebiotic"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" image="seed-ds-01.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
+                  <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "53.6B AFU", "MAPP Prebiotic"]} buyUrl="https://amzn.to/4vm1F57" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" image="seed-ds-01.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="PDS-08® Pediatric Synbiotic" brand="Seed" category="Kids Synbiotic" score={8} priceUSD="$39.99 / 30 sachets" priceINR="N/A" tags={["9 Strains", "Ages 3–17"]} buyUrl="https://www.amazon.com/Seed-PDS-08%C2%AE-Pediatric-Daily-Synbiotic/dp/B0CPTRHQP7" buyLabel="Buy on Amazon" reviewSlug="seed-pds-08" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                   <ProductCard name="DS-01® 14 Day Gut Reset" brand="Seed" category="Gut Reset" score={8} priceUSD="~$29.99 / 14 servings" priceINR="N/A" tags={["Same DS-01 Formula", "28 Capsules"]} buyUrl="https://www.amazon.com/SEED-DS-01%C2%AE-14-Day-Gut-Rescue/dp/B0CPTT5TWD" buyLabel="Buy on Amazon" reviewSlug="seed-14-day-gut-reset" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
                 </div>
@@ -883,7 +883,7 @@ export default function SeedDS01Review() {
                     </p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
-                  <a href="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vm1F57" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
@@ -929,7 +929,7 @@ export default function SeedDS01Review() {
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     DS-01 earns its 8/10 honestly. Genomic confirmation, AFU measurement, non-fermenting prebiotic, and ViaCap delivery represent genuine formulation advances that most probiotic brands don't make. The price is real and the per-strain potency disclosure gap is a legitimate criticism. But if you're investing in a daily synbiotic and want the most evidence-linked formula available, DS-01 is the defensible choice. Publish the per-strain AFU and this becomes a 9.
                   </p>
-                  <a href="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" target="_blank" rel="nofollow noopener noreferrer"
+                  <a href="https://amzn.to/4vm1F57" target="_blank" rel="nofollow noopener noreferrer"
                     style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
