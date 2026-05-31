@@ -623,7 +623,12 @@ export default function SeedDS01Review() {
                           <td style={{ padding: "11px 16px", fontSize: 11, textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", color: SEED.caption }}>{row.cap}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.ok ? SEED.certPass : SEED.certFail, border: `1px solid ${row.ok ? SEED.certPassBorder : SEED.certFailBorder}`, borderRadius: 20, fontSize: 11, color: row.ok ? SEED.certPassText : SEED.certFailText, fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
-                              {row.ok ? "Disclosed ✓" : "Undisclosed"}
+                              {row.ok ? (
+                                <span style={{display:'inline-flex',alignItems:'center',gap:4}}>
+                                  Disclosed
+                                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                                </span>
+                              ) : "Undisclosed"}
                             </span>
                           </td>
                         </tr>
@@ -756,7 +761,12 @@ export default function SeedDS01Review() {
                     { label: "Per-strain potency published", status: false },
                   ].map(item => (
                     <div key={item.label} style={{ padding: "12px 14px", backgroundColor: item.status ? SEED.certPass : SEED.certFail, border: `1px solid ${item.status ? SEED.certPassBorder : SEED.certFailBorder}`, borderRadius: 8, display: "flex", alignItems: "center", gap: 10 }}>
-                      <span style={{ fontSize: 14, color: item.status ? SEED.certPassText : SEED.certFailText }}>{item.status ? "✓" : "✗"}</span>
+                      <span style={{ display: "inline-flex", alignItems: "center", color: item.status ? SEED.certPassText : SEED.certFailText }}>
+                        {item.status
+                          ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={SEED.certPassText} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                          : <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={SEED.certFailText} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                        }
+                      </span>
                       <span style={{ fontSize: 12, color: SEED.body, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
                     </div>
                   ))}
@@ -797,7 +807,7 @@ export default function SeedDS01Review() {
                     </thead>
                     <tbody>
                       {[
-                        { product: "Seed DS-01", strains: "24 (genomic ✓)", potency: "53.6B AFU", pre: "MAPP 400mg", cert: "Genomic + stability", price: "$49.99", hi: true },
+                        { product: "Seed DS-01", strains: "24 (genomic)", potency: "53.6B AFU", pre: "MAPP 400mg", cert: "Genomic + stability", price: "$49.99", hi: true },
                         { product: "Ritual Synbiotic+", strains: "2", potency: "11B CFU", pre: "FOS 1g", cert: "Third-party tested", price: "$39.99", hi: false },
                         { product: "Garden of Life RAW", strains: "34", potency: "100B CFU", pre: "Organic prebiotics", cert: "NSF Certified", price: "$49.99", hi: false },
                         { product: "Culturelle Daily", strains: "1 (LGG)", potency: "10B CFU", pre: "Inulin", cert: "USP Verified", price: "$25.99", hi: false },

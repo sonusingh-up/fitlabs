@@ -580,15 +580,15 @@ export default function PerformanceLabSleepReview() {
                     <tbody>
                       {[
                         { name: "Magnesium (Bisglycinate, Taurate, NutriGenesis®)", amount: "100 mg", clinical: "200–400 mg" },
-                        { name: "CherryPURE® (Montmorency Tart Cherry, 50:1)", amount: "500 mg", clinical: "480–500 mg ✓" },
-                        { name: "L-Tryptophan", amount: "200 mg", clinical: "150–300 mg ✓" },
+                        { name: "CherryPURE® (Montmorency Tart Cherry, 50:1)", amount: "500 mg", clinical: "480–500 mg", clinicalOk: true },
+                        { name: "L-Tryptophan", amount: "200 mg", clinical: "150–300 mg", clinicalOk: true },
                         { name: "Lemon Balm Extract", amount: "200 mg", clinical: "300–600 mg" },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.name}</td>
                           <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: "#2D6A4F" }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
-                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.clinical.includes("✓") ? "rgba(45,106,79,0.10)" : "rgba(139,115,85,0.10)", border: `1px solid ${row.clinical.includes("✓") ? "rgba(45,106,79,0.25)" : "rgba(139,115,85,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.clinical.includes("✓") ? "#2D6A4F" : "#8B7355", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
+                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.clinicalOk ? "rgba(45,106,79,0.10)" : "rgba(139,115,85,0.10)", border: `1px solid ${row.clinicalOk ? "rgba(45,106,79,0.25)" : "rgba(139,115,85,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.clinicalOk ? "#2D6A4F" : "#8B7355", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
                               {row.clinical}
                             </span>
                           </td>
@@ -655,7 +655,12 @@ export default function PerformanceLabSleepReview() {
                     { label: "NSF Certified", status: false },
                   ].map(item => (
                     <div key={item.label} style={{ padding: "14px 16px", backgroundColor: item.status ? "rgba(45,106,79,0.06)" : "rgba(139,58,44,0.06)", border: `1px solid ${item.status ? "rgba(45,106,79,0.2)" : "rgba(139,58,44,0.2)"}`, borderRadius: 8, display: "flex", alignItems: "center", gap: 10 }}>
-                      <span style={{ fontSize: 14, color: item.status ? "#2D6A4F" : "#8B3A2C" }}>{item.status ? "✓" : "✗"}</span>
+                      <span style={{ display: "inline-flex", alignItems: "center" }}>
+                        {item.status
+                          ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                          : <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                        }
+                      </span>
                       <span style={{ fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
                     </div>
                   ))}

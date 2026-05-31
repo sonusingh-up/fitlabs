@@ -558,18 +558,21 @@ export default function LunaSleepReview() {
                     </thead>
                     <tbody>
                       {[
-                        { name: "L-Theanine", amount: "200 mg", clinical: "100–400 mg ✓", ok: true },
+                        { name: "L-Theanine", amount: "200 mg", clinical: "100–400 mg", ok: true },
                         { name: "Valerian Root", amount: "150 mg", clinical: "300–600 mg", ok: false },
                         { name: "Chamomile (Whole Plant Extract)", amount: "150 mg", clinical: "200–400 mg", ok: false },
-                        { name: "Passion Flower (Whole Plant Extract)", amount: "100 mg", clinical: "90–400 mg ✓", ok: true },
+                        { name: "Passion Flower (Whole Plant Extract)", amount: "100 mg", clinical: "90–400 mg", ok: true },
                         { name: "Lemon Balm (Whole Plant Extract)", amount: "100 mg", clinical: "300–600 mg", ok: false },
                         { name: "Hops Flower Extract", amount: "100 mg", clinical: "Low-dose typical", ok: true },
-                        { name: "GABA", amount: "100 mg", clinical: "100–300 mg ✓", ok: true },
-                        { name: "Melatonin", amount: "6 mg ⚠", clinical: "0.5–1 mg (physio)", ok: false },
+                        { name: "GABA", amount: "100 mg", clinical: "100–300 mg", ok: true },
+                        { name: "Melatonin", amount: "6 mg", clinical: "0.5–1 mg (physio)", ok: false },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.name}</td>
-                          <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: row.amount.includes("⚠") ? "#8B3A2C" : "#2D6A4F" }}>{row.amount}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: !row.ok ? "#8B3A2C" : "#2D6A4F" }}>
+                            {row.amount}
+                            {!row.ok && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft: 4, verticalAlign: "middle"}}><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>}
+                          </td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.ok ? "rgba(45,106,79,0.10)" : "rgba(139,115,85,0.10)", border: `1px solid ${row.ok ? "rgba(45,106,79,0.25)" : "rgba(139,115,85,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.ok ? "#2D6A4F" : "#8B7355", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
                               {row.clinical}
@@ -581,7 +584,7 @@ export default function LunaSleepReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                  Other ingredients: Vegetable Cellulose (capsule), Rice Flour. ⚠ 6mg melatonin exceeds physiological range (0.5–1mg).
+                  Other ingredients: Vegetable Cellulose (capsule), Rice Flour.{" "}<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:"inline",verticalAlign:"middle",marginRight:4}}><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>{" "}6mg melatonin exceeds physiological range (0.5–1mg).
                 </p>
               </section>
 
@@ -589,18 +592,21 @@ export default function LunaSleepReview() {
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 {[
-                  { name: "L-Theanine — 200 mg", evidence: "moderate" as EvidenceLevel, verdict: "Clinical dose — the formula's strongest ingredient", body: "Lyon et al. (2011) used 200mg L-theanine and found significant improvements in sleep quality in boys with ADHD. Hidese et al. (2019) confirmed 200–400mg reduces stress and improves sleep quality in adults. At 200mg, Luna hits the clinical target. L-theanine promotes alpha brainwave activity without sedation — it works for sleep onset and quality improvement without causing grogginess." },
-                  { name: "Melatonin — 6 mg ⚠", evidence: "strong" as EvidenceLevel, verdict: "Works but overdosed — concern for long-term daily use", body: "Melatonin at 6mg will reliably cause sleep onset in most users. The problem is the dose. Brzezinski et al. (2005) meta-analysis established 0.5–1mg as the range matching physiological nocturnal levels. At 6mg — 6 to 12 times above physiological range — chronic use suppresses endogenous melatonin production (Nordlund & Lerner, 1977), may disrupt natural circadian signalling, and commonly causes sleep inertia (grogginess on waking). For occasional use, 6mg is broadly safe. For nightly use over months, we'd recommend either halving to 1 capsule or switching to a lower-dose product." },
-                  { name: "Valerian Root — 150 mg", evidence: "moderate" as EvidenceLevel, verdict: "Underdosed — relevant but below RCT threshold", body: "Valerian is the most-studied sleep herb. Leathwood et al. (1982) used 400–900mg aqueous extract and found reduced sleep latency. Bent et al. (2006) systematic review found inconsistent but generally positive results at 300–600mg. Luna's 150mg is below the doses showing consistent benefit, but combined with chamomile and hops may contribute synergistically." },
-                  { name: "Chamomile — 150 mg", evidence: "limited" as EvidenceLevel, verdict: "Traditional sedative — limited high-quality human data", body: "Chamomile (Matricaria recutita) contains apigenin, which binds GABA-A benzodiazepine receptors. Zick et al. (2011) found chamomile extract 270mg improved sleep quality in postpartum women. At 150mg, Luna's dose is below tested ranges. The effect at 150mg is likely anxiolytic and mild — useful as part of the blend, not as a primary driver." },
-                  { name: "Passion Flower — 100 mg", evidence: "limited" as EvidenceLevel, verdict: "Emerging evidence for anxiety reduction — dose is reasonable", body: "Passion flower (Passiflora incarnata) modulates GABA-A receptors. Ngan & Conduit (2011) found 5mg/kg/day passionflower tea improved subjective sleep quality. 100mg extract is in line with typical capsule products. Effect is primarily anxiolytic, reducing pre-sleep rumination rather than acting as a direct sleep inducer." },
-                  { name: "Lemon Balm — 100 mg", evidence: "moderate" as EvidenceLevel, verdict: "Underdosed — 3–6× below most-evidenced doses", body: "Cases et al. (2011) used 600mg for insomnia relief. Kennedy et al. (2004) showed 300mg reduced anxiety significantly. Luna's 100mg is well below these benchmarks. Useful as part of the herbal blend, but not a major contributor at this dose." },
-                  { name: "Hops Flower Extract — 100 mg", evidence: "limited" as EvidenceLevel, verdict: "Traditional sedative — typically combined with valerian in research", body: "Hops (Humulus lupulus) is traditionally combined with valerian for sleep. Schiller et al. (2006) found valerian/hops combination improved sleep quality. Isolated hops data is sparse. The 100mg in Luna is consistent with combination products. Contributes to the formula's sedative profile synergistically." },
-                  { name: "GABA — 100 mg", evidence: "limited" as EvidenceLevel, verdict: "Modest direct CNS effect — may work via gut-brain axis", body: "Oral GABA's CNS penetration is debated. Hepsomali et al. (2020) reviewed human studies and found modest sleep and anxiety benefits at 100–300mg, possibly via the gut-brain axis rather than direct BBB crossing. Pharma-GABA (fermented) may have superior bioavailability. Luna does not specify the GABA form. At 100mg, contribution is real but modest." },
+                  { name: "L-Theanine — 200 mg", warn: false, evidence: "moderate" as EvidenceLevel, verdict: "Clinical dose — the formula's strongest ingredient", body: "Lyon et al. (2011) used 200mg L-theanine and found significant improvements in sleep quality in boys with ADHD. Hidese et al. (2019) confirmed 200–400mg reduces stress and improves sleep quality in adults. At 200mg, Luna hits the clinical target. L-theanine promotes alpha brainwave activity without sedation — it works for sleep onset and quality improvement without causing grogginess." },
+                  { name: "Melatonin — 6 mg", warn: true, evidence: "strong" as EvidenceLevel, verdict: "Works but overdosed — concern for long-term daily use", body: "Melatonin at 6mg will reliably cause sleep onset in most users. The problem is the dose. Brzezinski et al. (2005) meta-analysis established 0.5–1mg as the range matching physiological nocturnal levels. At 6mg — 6 to 12 times above physiological range — chronic use suppresses endogenous melatonin production (Nordlund & Lerner, 1977), may disrupt natural circadian signalling, and commonly causes sleep inertia (grogginess on waking). For occasional use, 6mg is broadly safe. For nightly use over months, we'd recommend either halving to 1 capsule or switching to a lower-dose product." },
+                  { name: "Valerian Root — 150 mg", warn: false, evidence: "moderate" as EvidenceLevel, verdict: "Underdosed — relevant but below RCT threshold", body: "Valerian is the most-studied sleep herb. Leathwood et al. (1982) used 400–900mg aqueous extract and found reduced sleep latency. Bent et al. (2006) systematic review found inconsistent but generally positive results at 300–600mg. Luna's 150mg is below the doses showing consistent benefit, but combined with chamomile and hops may contribute synergistically." },
+                  { name: "Chamomile — 150 mg", warn: false, evidence: "limited" as EvidenceLevel, verdict: "Traditional sedative — limited high-quality human data", body: "Chamomile (Matricaria recutita) contains apigenin, which binds GABA-A benzodiazepine receptors. Zick et al. (2011) found chamomile extract 270mg improved sleep quality in postpartum women. At 150mg, Luna's dose is below tested ranges. The effect at 150mg is likely anxiolytic and mild — useful as part of the blend, not as a primary driver." },
+                  { name: "Passion Flower — 100 mg", warn: false, evidence: "limited" as EvidenceLevel, verdict: "Emerging evidence for anxiety reduction — dose is reasonable", body: "Passion flower (Passiflora incarnata) modulates GABA-A receptors. Ngan & Conduit (2011) found 5mg/kg/day passionflower tea improved subjective sleep quality. 100mg extract is in line with typical capsule products. Effect is primarily anxiolytic, reducing pre-sleep rumination rather than acting as a direct sleep inducer." },
+                  { name: "Lemon Balm — 100 mg", warn: false, evidence: "moderate" as EvidenceLevel, verdict: "Underdosed — 3–6× below most-evidenced doses", body: "Cases et al. (2011) used 600mg for insomnia relief. Kennedy et al. (2004) showed 300mg reduced anxiety significantly. Luna's 100mg is well below these benchmarks. Useful as part of the herbal blend, but not a major contributor at this dose." },
+                  { name: "Hops Flower Extract — 100 mg", warn: false, evidence: "limited" as EvidenceLevel, verdict: "Traditional sedative — typically combined with valerian in research", body: "Hops (Humulus lupulus) is traditionally combined with valerian for sleep. Schiller et al. (2006) found valerian/hops combination improved sleep quality. Isolated hops data is sparse. The 100mg in Luna is consistent with combination products. Contributes to the formula's sedative profile synergistically." },
+                  { name: "GABA — 100 mg", warn: false, evidence: "limited" as EvidenceLevel, verdict: "Modest direct CNS effect — may work via gut-brain axis", body: "Oral GABA's CNS penetration is debated. Hepsomali et al. (2020) reviewed human studies and found modest sleep and anxiety benefits at 100–300mg, possibly via the gut-brain axis rather than direct BBB crossing. Pharma-GABA (fermented) may have superior bioavailability. Luna does not specify the GABA form. At 100mg, contribution is real but modest." },
                 ].map((ing, i) => (
                   <div key={ing.name} style={{ marginBottom: i < 7 ? 16 : 0, padding: "18px 22px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, marginBottom: 8, flexWrap: "wrap" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: ing.name.includes("⚠") ? "#8B3A2C" : "#1A1714", margin: 0 }}>{ing.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: ing.warn ? "#8B3A2C" : "#1A1714", margin: 0, display: "flex", alignItems: "center", gap: 6 }}>
+                        {ing.name}
+                        {ing.warn && <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:"inline",flexShrink:0}}><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>}
+                      </h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3D7A5E", marginBottom: 8 }}>{ing.verdict}</p>
@@ -622,7 +628,12 @@ export default function LunaSleepReview() {
                     { label: "NSF / Informed Choice", status: false, note: "" },
                   ].map(item => (
                     <div key={item.label} style={{ padding: "14px 16px", backgroundColor: item.status ? "rgba(45,106,79,0.06)" : "rgba(139,58,44,0.06)", border: `1px solid ${item.status ? "rgba(45,106,79,0.2)" : "rgba(139,58,44,0.2)"}`, borderRadius: 8, display: "flex", alignItems: "center", gap: 10 }}>
-                      <span style={{ fontSize: 14, color: item.status ? "#2D6A4F" : "#8B3A2C" }}>{item.status ? "✓" : "✗"}</span>
+                      <span style={{ display: "flex", alignItems: "center", color: item.status ? "#2D6A4F" : "#8B3A2C" }}>
+                        {item.status
+                          ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D6A4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                          : <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+                        }
+                      </span>
                       <span style={{ fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>{item.label}{item.note && <span style={{ color: "#A89880" }}> {item.note}</span>}</span>
                     </div>
                   ))}
@@ -664,15 +675,15 @@ export default function LunaSleepReview() {
                     </thead>
                     <tbody>
                       {[
-                        { product: "Luna (Nested Naturals)", mel: "6 mg ⚠", full: "Yes", cert: "Unnamed 3rd party", price: "$0.73", guar: "Lifetime", highlight: true },
-                        { product: "Performance Lab Sleep", mel: "None (natural)", full: "Yes", cert: "Clean Label Project", price: "$1.47", guar: "30-day (1st order)", highlight: false },
-                        { product: "Seed PM-02", mel: "0.5 mg bioid.", full: "Partial", cert: "ISO 17025", price: "$1.17", guar: "30-day", highlight: false },
-                        { product: "YuSleep", mel: "0.9 mg", full: "No (1/10)", cert: "None", price: "$2.30", guar: "60-day", highlight: false },
-                        { product: "OLLY Sleep", mel: "5 mg", full: "Partial", cert: "None listed", price: "$0.50", guar: "Standard", highlight: false },
+                        { product: "Luna (Nested Naturals)", mel: "6 mg", melOk: false, full: "Yes", cert: "Unnamed 3rd party", price: "$0.73", guar: "Lifetime", highlight: true },
+                        { product: "Performance Lab Sleep", mel: "None (natural)", melOk: true, full: "Yes", cert: "Clean Label Project", price: "$1.47", guar: "30-day (1st order)", highlight: false },
+                        { product: "Seed PM-02", mel: "0.5 mg bioid.", melOk: true, full: "Partial", cert: "ISO 17025", price: "$1.17", guar: "30-day", highlight: false },
+                        { product: "YuSleep", mel: "0.9 mg", melOk: true, full: "No (1/10)", cert: "None", price: "$2.30", guar: "60-day", highlight: false },
+                        { product: "OLLY Sleep", mel: "5 mg", melOk: false, full: "Partial", cert: "None listed", price: "$0.50", guar: "Standard", highlight: false },
                       ].map((row, i) => (
                         <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(61,122,94,0.06)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.product}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.mel.includes("⚠") ? "#8B3A2C" : row.mel.includes("None") ? "#2D6A4F" : "#5C5650", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600, whiteSpace: "nowrap" }}>{row.mel}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: !row.melOk ? "#8B3A2C" : row.mel.includes("None") ? "#2D6A4F" : "#5C5650", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600, whiteSpace: "nowrap" }}>{row.mel}</td>
                           <td style={{ padding: "11px 14px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: row.full === "Yes" ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.full === "Yes" ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 10, color: row.full === "Yes" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.full}</span>
                           </td>
