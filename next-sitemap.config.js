@@ -11,45 +11,38 @@ const sanity = createClient({
 
 const SITE_URL = process.env.SITE_URL || "https://fitlabreviews.com";
 
-// Directories to skip when scanning app/ — skin has its own sitemap, studio is CMS
-const SKIP_DIRS = new Set([
-  "skin", "studio", "search", "api", "_next", "node_modules", ".next",
-  "llms.txt", "feed.xml", "robots.txt", "sitemap.xml",
-]);
-
-// Hub paths that get priority 1.0
+// Hub paths — priority 1.0
 const HUB_PATHS = new Set([
   "/", "/reviews", "/blog", "/research", "/goals", "/compare",
   "/category", "/brands", "/ingredients", "/best", "/methodology", "/authors",
 ]);
 
-function discoverStaticPages(appDir) {
-  const found = [];
+// Paths to exclude from the sitemap even if found in the build output
+const EXCLUDE_PREFIXES = ["/skin", "/studio", "/api", "/_next"];
+const EXCLUDE_EXACT = new Set([
+  "/search", "/llms.txt", "/feed.xml", "/robots.txt", "/sitemap.xml",
+  "/privacy", "/terms",
+]);
 
-  function walk(dir, segments) {
-    let entries;
-    try { entries = fs.readdirSync(dir, { withFileTypes: true }); }
-    catch { return; }
-
-    if (entries.some((e) => e.isFile() && e.name.startsWith("page."))) {
-      found.push(segments.length === 0 ? "/" : "/" + segments.join("/"));
-    }
-
-    for (const entry of entries) {
-      if (!entry.isDirectory()) continue;
-      const name = entry.name;
-      if (SKIP_DIRS.has(name)) continue;
-      if (name.startsWith("[")) continue; // dynamic [slug] routes — covered by Sanity fetch
-      if (name.startsWith("(") && name.endsWith(")")) {
-        walk(path.join(dir, name), segments); // route group — no URL segment added
-        continue;
-      }
-      walk(path.join(dir, name), [...segments, name]);
-    }
+/**
+ * Reads .next/prerender-manifest.json — written by Next.js after every build.
+ * Contains every statically pre-rendered route including all generateStaticParams
+ * results (e.g. all 174 /ingredients/[slug] pages, all /reviews/[slug] pages).
+ * Falls back to an empty array if the manifest is missing (shouldn't happen in CI).
+ */
+function discoverPrerenderRoutes() {
+  try {
+    const manifestPath = path.join(process.cwd(), ".next", "prerender-manifest.json");
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
+    return Object.keys(manifest.routes ?? {}).filter((route) => {
+      if (EXCLUDE_EXACT.has(route)) return false;
+      if (EXCLUDE_PREFIXES.some((p) => route.startsWith(p))) return false;
+      return true;
+    });
+  } catch {
+    console.warn("[next-sitemap] Could not read prerender-manifest.json — falling back to Sanity-only paths");
+    return [];
   }
-
-  walk(appDir, []);
-  return found;
 }
 
 /** @type {import('next-sitemap').IConfig} */
@@ -75,43 +68,30 @@ module.exports = {
       paths.push(entry);
     }
 
-    // 1. Scan app/ directory for all static (non-dynamic) pages
-    const appDir = path.join(process.cwd(), "app");
-    const staticPages = discoverStaticPages(appDir);
-    for (const p of staticPages) {
-      push(await config.transform(config, p));
+    // 1. All pre-rendered routes from the build — covers static pages AND
+    //    every generateStaticParams result (ingredients-db, authors, Sanity reviews, etc.)
+    const prerenderRoutes = discoverPrerenderRoutes();
+    for (const route of prerenderRoutes) {
+      push(await config.transform(config, route));
     }
 
-    // 2. Dynamic Sanity content — main site only
+    // 2. Sanity dynamic content — supplements the prerender manifest for any
+    //    Sanity content that uses ISR rather than generateStaticParams,
+    //    and serves as a fallback if the manifest read fails.
     const [reviews, ingredients, brands] = await Promise.all([
-      sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
-      sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`),
-      sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`),
+      sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`).catch(() => []),
+      sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`).catch(() => []),
+      sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`).catch(() => []),
     ]);
 
     for (const r of reviews) {
-      push({
-        loc: `/reviews/${r.slug}`,
-        changefreq: "monthly",
-        priority: 0.9,
-        lastmod: r.updatedAt || r.publishedAt || new Date().toISOString(),
-      });
+      push({ loc: `/reviews/${r.slug}`, changefreq: "monthly", priority: 0.9, lastmod: r.updatedAt || r.publishedAt || new Date().toISOString() });
     }
     for (const i of ingredients) {
-      push({
-        loc: `/ingredients/${i.slug}`,
-        changefreq: "monthly",
-        priority: 0.8,
-        lastmod: new Date().toISOString(),
-      });
+      push({ loc: `/ingredients/${i.slug}`, changefreq: "monthly", priority: 0.8, lastmod: new Date().toISOString() });
     }
     for (const b of brands) {
-      push({
-        loc: `/brands/${b.slug}`,
-        changefreq: "monthly",
-        priority: 0.7,
-        lastmod: new Date().toISOString(),
-      });
+      push({ loc: `/brands/${b.slug}`, changefreq: "monthly", priority: 0.7, lastmod: new Date().toISOString() });
     }
 
     return paths;
