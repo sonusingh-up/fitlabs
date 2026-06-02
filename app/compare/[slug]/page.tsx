@@ -66,7 +66,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
     { category: "Price Per Serving", winner: "Gold Standard", note: "₹91 vs ₹110 — 20% cheaper" },
     { category: "Lactose Tolerance", winner: "ISO100", note: "Virtually zero lactose in isolate form" },
     { category: "Absorption Speed", winner: "ISO100", note: "Hydrolyzed = faster peptide absorption" },
-    { category: "Flavour Range", winner: "Gold Standard", note: "More options widely available in India" },
+    { category: "Flavour Range", winner: "Gold Standard", note: "More options widely available in USA" },
     { category: "Value for Money", winner: "Gold Standard", note: "Comparable quality at lower price" },
   ];
 

@@ -12,7 +12,7 @@ const roundups = [
   {
     slug: "whey-protein",
     title: "Best Whey Protein",
-    subtitle: "in India — 2026",
+    subtitle: "in USA — 2026",
     figure: "RND-001",
     productCount: 14,
     lastUpdated: "May 2026",
@@ -60,7 +60,7 @@ const roundups = [
   {
     slug: "protein-powder-for-beginners",
     title: "Best Protein Powder for Beginners",
-    subtitle: "India — 2026",
+    subtitle: "USA — 2026",
     figure: "RND-004",
     productCount: 8,
     lastUpdated: "May 2026",

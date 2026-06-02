@@ -202,7 +202,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is this available in India?",
+      name: "Is this available in USA?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, through Amazon.in — but pricing is substantially higher due to import duties and shipping. Expect ₹3,800–4,800 per bottle. Verify the seller is fulfilled by Amazon (not a third-party reseller) and check the seal on delivery. This is an expensive imported product and counterfeit risk is real.",
@@ -654,7 +654,7 @@ export default function AncestralBeefLiverReview() {
                         { metric: "Serving size", vals: ["3,000mg / 6 caps", "2,400mg / 4 tabs", "2,000mg / 4 caps", "2,500mg / 5 tabs"] },
                         { metric: "Heavy metal test", vals: ["COA on request", "Limited disclosure", "Claims tested", "No public COA"] },
                         { metric: "Price / 30 sv (USD)", vals: ["$43–47", "$40–45", "$28–34", "$25–30"] },
-                        { metric: "Available in India", vals: ["Amazon.in", "No", "No", "Amazon.in (limited)"] },
+                        { metric: "Available in USA", vals: ["Amazon.in", "No", "No", "Amazon.in (limited)"] },
                         { metric: "Capsule type", vals: ["Bovine gelatin", "Compressed tablet", "Bovine gelatin", "Compressed tablet"] },
                       ].map((row, i) => (
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
@@ -668,7 +668,7 @@ export default function AncestralBeefLiverReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
-                  Prices verified May 2026 on Amazon US. India prices add 15–30% due to import duties. Competitor data based on published label information.
+                  Prices verified May 2026 on Amazon US. USA prices add 15–30% due to import duties. Competitor data based on published label information.
                 </p>
               </section>
 
@@ -753,7 +753,7 @@ export default function AncestralBeefLiverReview() {
                     "Six capsules per serving — high cap burden, especially for supplement-heavy users",
                     "Batch COA requires email request — not accessible at point of purchase",
                     "Expensive vs eating real grass-fed liver from a butcher",
-                    "India pricing inflated by 15–30% due to import duties",
+                    "USA pricing inflated by 15–30% due to import duties",
                     "Not suitable for pregnant women without medical guidance (retinol load)",
                     "3,000mg ≈ only 15–18g fresh liver — below a real food serving",
                   ]}
@@ -857,7 +857,7 @@ export default function AncestralBeefLiverReview() {
                       url: "https://ancestralsupplements.com/products/grass-fed-beef-liver",
                     },
                     {
-                      channel: "Amazon India (Import)",
+                      channel: "Amazon USA (Import)",
                       price: "₹3,800–4,800",
                       notes: "Available but expensive due to import duties. Verify seller is legitimate and the seal is intact on delivery. Check the lot number on the bottom and email support for the COA if concerned.",
                       recommended: false,

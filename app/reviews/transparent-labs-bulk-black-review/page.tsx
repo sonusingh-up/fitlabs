@@ -258,10 +258,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is Transparent Labs BULK Black available in India?",
+      name: "Is Transparent Labs BULK Black available in USA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "BULK Black is available on Amazon.in and through a small number of specialised Indian supplement importers. Pricing in India ranges from ₹5,200–₹6,500 per tub (30 servings) depending on the retailer and import duties, compared to $59.99 in the US. This represents a significant price premium for Indian consumers relative to domestic pre-workouts.",
+        text: "BULK Black is available on Amazon.in and through a small number of specialised American supplement importers. Pricing in USA ranges from ₹5,200–₹6,500 per tub (30 servings) depending on the retailer and import duties, compared to $59.99 in the US. This represents a significant price premium for American consumers relative to domestic pre-workouts.",
       },
     },
     {
@@ -2313,7 +2313,7 @@ export default function TransparentLabsBulkBlackReview() {
                     { option: "Full Scoop (30 servings)", price: "$59.99 ($2.00/serving)", note: "Recommended for experienced users" },
                     { option: "Half Scoop (60 servings)", price: "$59.99 ($1.00/serving)", note: "Best value; ideal for tolerance building" },
                     { option: "TL Website Direct", price: "$59.99 (+ free US shipping)", note: "Subscribe & save available" },
-                    { option: "Amazon (India)", price: "₹5,200–₹6,500 / tub", note: "Prices verified May 2026" },
+                    { option: "Amazon (USA)", price: "₹5,200–₹6,500 / tub", note: "Prices verified May 2026" },
                   ].map((row) => (
                     <div
                       key={row.option}
@@ -2388,7 +2388,7 @@ export default function TransparentLabsBulkBlackReview() {
                       cta: false,
                     },
                     {
-                      channel: "Amazon.in (India)",
+                      channel: "Amazon.in (USA)",
                       verdict: "Use with caution",
                       colour: "#8B7355",
                       bg: "rgba(139,115,85,0.06)",

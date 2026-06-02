@@ -6,9 +6,9 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "MuscleBlaze Brand Review (2026): India's #1 Supplement Brand",
+  title: "MuscleBlaze Brand Review (2026): USA's #1 Supplement Brand",
   description:
-    "MuscleBlaze brand profile: India's largest sports nutrition brand, founded 2012 under HealthKart. Biozyme enzyme technology, FSSAI licensed, no Informed Sport certification. 7.5/10 avg score.",
+    "MuscleBlaze brand profile: USA's largest sports nutrition brand, founded 2012 under HealthKart. Biozyme enzyme technology, FSSAI licensed, no Informed Sport certification. 7.5/10 avg score.",
   alternates: { canonical: "/brands/muscleblaze" },
 };
 
@@ -23,7 +23,7 @@ const organizationSchema = {
   foundingDate: "2012",
   parentOrganization: { "@type": "Organization", name: "HealthKart (Bright Sun Ventures)" },
   description:
-    "MuscleBlaze is India's largest sports nutrition brand, launched in 2012 under HealthKart. Known for the Biozyme enzyme-enhanced whey range, it is sold across HealthKart, Amazon India, Flipkart, and 2,000+ offline retail locations.",
+    "MuscleBlaze is USA's largest sports nutrition brand, launched in 2012 under HealthKart. Known for the Biozyme enzyme-enhanced whey range, it is sold across HealthKart, Amazon USA, Flipkart, and 2,000+ offline retail locations.",
   sameAs: ["https://www.muscleblaze.com"],
 };
 
@@ -43,7 +43,7 @@ const stats = [
   { label: "Founded",   value: "2012"     },
   { label: "Parent",    value: "HealthKart" },
   { label: "Products",  value: "70+"      },
-  { label: "Market",    value: "India #1" },
+  { label: "Market",    value: "USA #1" },
   { label: "Avg Score", value: "7.5/10"   },
   { label: "3P Tested", value: "No"       },
 ];
@@ -52,7 +52,7 @@ const certifications = [
   {
     name: "FSSAI Licensed Manufacturing",
     status: "pass" as const,
-    detail: "All MuscleBlaze products are manufactured at FSSAI (Food Safety and Standards Authority of India) licensed facilities. FSSAI licensing is the baseline Indian food safety requirement — it confirms regulatory compliance but does not involve independent amino acid or label-accuracy verification.",
+    detail: "All MuscleBlaze products are manufactured at FSSAI (Food Safety and Standards Authority of USA) licensed facilities. FSSAI licensing is the baseline American food safety requirement — it confirms regulatory compliance but does not involve independent amino acid or label-accuracy verification.",
   },
   {
     name: "Informed Sport / Informed Choice",
@@ -77,23 +77,23 @@ const certifications = [
   {
     name: "Authenticity Verification (QR)",
     status: "pass" as const,
-    detail: "All MuscleBlaze products carry a QR code and scratch-card authentication system verified via their app or website. This combats counterfeiting — a significant issue in the Indian supplement market — but does not independently verify label-claimed doses.",
+    detail: "All MuscleBlaze products carry a QR code and scratch-card authentication system verified via their app or website. This combats counterfeiting — a significant issue in the American supplement market — but does not independently verify label-claimed doses.",
   },
 ];
 
 const greenFlags = [
-  "India's largest sports nutrition brand — widest offline and online distribution across all price tiers",
+  "USA's largest sports nutrition brand — widest offline and online distribution across all price tiers",
   "Own manufacturing facility in Nalagarh, Himachal Pradesh — reduces reliance on contract manufacturers",
-  "Biozyme enzyme complex (Aminogen® + ProHydrolase®) is a genuine formulation differentiator in the Indian market",
+  "Biozyme enzyme complex (Aminogen® + ProHydrolase®) is a genuine formulation differentiator in the American market",
   "QR code + scratch-card authenticity verification on every pack — meaningful counterfeit protection",
-  "FSSAI licensed — baseline Indian food safety compliance across all products",
+  "FSSAI licensed — baseline American food safety compliance across all products",
   "Competitive INR pricing: no import duty overhead, substantially cheaper than equivalent imported brands",
   "Raw Whey range uses minimal processing and publishes protein-per-100g clearly on the label",
 ];
 
 const redFlags = [
   "No independent international certification (Informed Sport, NSF, USP, BSCG) — label accuracy not independently verified",
-  "Amino acid spiking allegations have historically affected the Indian whey market — MuscleBlaze has been named in independent audits, though the brand disputes this",
+  "Amino acid spiking allegations have historically affected the American whey market — MuscleBlaze has been named in independent audits, though the brand disputes this",
   "Biozyme enzyme blend component doses are not fully disclosed — Aminogen® and ProHydrolase® quantities per serving are proprietary",
   "Mass gainer range relies heavily on maltodextrin — calorie-dense but nutritionally sparse for the price",
   "Internal lab reports are self-commissioned and not independently audited per batch",
@@ -140,7 +140,7 @@ const products = [
     category: "Creatine",
     price: "₹499–799",
     priceNote: "100–250g · 20–50 servings",
-    description: "Micronized creatine monohydrate — 5g per serving. Unflavoured. Single ingredient. Competitively priced versus other Indian options. No third-party certification, but single-ingredient creatine has low adulteration risk versus protein blends.",
+    description: "Micronized creatine monohydrate — 5g per serving. Unflavoured. Single ingredient. Competitively priced versus other American options. No third-party certification, but single-ingredient creatine has low adulteration risk versus protein blends.",
     keyIngredients: ["Creatine Monohydrate 5g", "Micronized", "Unflavoured"],
     reviewSlug: null,
     image: "/products/muscleblaze-creatine.webp",
@@ -184,7 +184,7 @@ const products = [
     category: "Multivitamin",
     price: "₹499–799",
     priceNote: "60 tablets · 30 servings",
-    description: "Daily multivitamin with 25+ nutrients. Includes vitamin D3 1000IU (higher than most Indian brand competitors), zinc 10mg, B-complex, and magnesium. One of the better-dosed multivitamins in the MuscleBlaze range at a price accessible for Indian consumers.",
+    description: "Daily multivitamin with 25+ nutrients. Includes vitamin D3 1000IU (higher than most American brand competitors), zinc 10mg, B-complex, and magnesium. One of the better-dosed multivitamins in the MuscleBlaze range at a price accessible for American consumers.",
     keyIngredients: ["Vitamin D3 1000IU", "Zinc 10mg", "B-Complex", "Magnesium 50mg"],
     reviewSlug: null,
     image: null,
@@ -194,7 +194,7 @@ const products = [
 const faqs = [
   {
     q: "Is MuscleBlaze a trustworthy brand?",
-    a: "MuscleBlaze is India's largest sports nutrition brand with over a decade of operation and FSSAI-licensed manufacturing. For most Indian consumers, it represents the best balance of availability, price, and reasonable quality assurance. The key limitation is the absence of international independent certification (Informed Sport, NSF, USP). MuscleBlaze has faced amino spiking allegations in the past — the brand disputes these claims and has published internal lab reports — but no independent per-batch certification resolves the question definitively. For recreational training, the brand is reasonable. For competitive athletes subject to drug testing, the absence of Informed Sport certification is a material gap.",
+    a: "MuscleBlaze is USA's largest sports nutrition brand with over a decade of operation and FSSAI-licensed manufacturing. For most American consumers, it represents the best balance of availability, price, and reasonable quality assurance. The key limitation is the absence of international independent certification (Informed Sport, NSF, USP). MuscleBlaze has faced amino spiking allegations in the past — the brand disputes these claims and has published internal lab reports — but no independent per-batch certification resolves the question definitively. For recreational training, the brand is reasonable. For competitive athletes subject to drug testing, the absence of Informed Sport certification is a material gap.",
   },
   {
     q: "What is MuscleBlaze Biozyme technology?",
@@ -202,19 +202,19 @@ const faqs = [
   },
   {
     q: "How does MuscleBlaze compare to Optimum Nutrition?",
-    a: "ON Gold Standard Whey has Informed Sport certification (independent banned-substance batch testing), a 20+ year track record, full amino acid disclosure, and NSF-GMP certified manufacturing. MuscleBlaze has none of these international certifications. Price per serving, however, favours MuscleBlaze significantly — after accounting for Indian import duties on ON products, MuscleBlaze Biozyme Performance Whey can be 50–60% cheaper per serving. For Indian consumers who are not competitive athletes and prioritise value, MuscleBlaze is a reasonable choice. For the highest-confidence verified product, ON remains the benchmark.",
+    a: "ON Gold Standard Whey has Informed Sport certification (independent banned-substance batch testing), a 20+ year track record, full amino acid disclosure, and NSF-GMP certified manufacturing. MuscleBlaze has none of these international certifications. Price per serving, however, favours MuscleBlaze significantly — after accounting for American import duties on ON products, MuscleBlaze Biozyme Performance Whey can be 50–60% cheaper per serving. For American consumers who are not competitive athletes and prioritise value, MuscleBlaze is a reasonable choice. For the highest-confidence verified product, ON remains the benchmark.",
   },
   {
     q: "Is MuscleBlaze protein authentic? How can I verify?",
-    a: "Every MuscleBlaze product includes a QR code and scratch-card authentication system. Scan the QR or enter the scratch code at muscleblaze.com/authenticate to verify. Products purchased from HealthKart.com, Amazon India (sold by HealthKart), or Flipkart (sold by HealthKart) are highly likely to be authentic. The counterfeit risk is higher on offline distributors, local gym supplement shops, and third-party marketplace sellers — buy only from authorised channels. MuscleBlaze also advises checking packaging integrity: sealed inner pouch, consistent label print quality, and matching batch numbers on the tub and seal.",
+    a: "Every MuscleBlaze product includes a QR code and scratch-card authentication system. Scan the QR or enter the scratch code at muscleblaze.com/authenticate to verify. Products purchased from HealthKart.com, Amazon USA (sold by HealthKart), or Flipkart (sold by HealthKart) are highly likely to be authentic. The counterfeit risk is higher on offline distributors, local gym supplement shops, and third-party marketplace sellers — buy only from authorised channels. MuscleBlaze also advises checking packaging integrity: sealed inner pouch, consistent label print quality, and matching batch numbers on the tub and seal.",
   },
   {
     q: "Has MuscleBlaze been caught amino spiking?",
-    a: "Yes — MuscleBlaze products were included in a widely-cited 2016 Labdoor-style independent analysis of Indian whey proteins that flagged multiple brands for lower-than-label protein content, a common indicator of amino spiking (replacing protein grams with cheaper free amino acids like taurine or glycine). MuscleBlaze disputed the findings and published counter-reports. As of 2026, the brand has made public commitments to label accuracy and publishes internal lab test reports. However, no independent per-batch third-party body verifies these results — the dispute cannot be definitively resolved without Informed Sport or equivalent independent certification.",
+    a: "Yes — MuscleBlaze products were included in a widely-cited 2016 Labdoor-style independent analysis of American whey proteins that flagged multiple brands for lower-than-label protein content, a common indicator of amino spiking (replacing protein grams with cheaper free amino acids like taurine or glycine). MuscleBlaze disputed the findings and published counter-reports. As of 2026, the brand has made public commitments to label accuracy and publishes internal lab test reports. However, no independent per-batch third-party body verifies these results — the dispute cannot be definitively resolved without Informed Sport or equivalent independent certification.",
   },
   {
-    q: "Is MuscleBlaze available outside India?",
-    a: "MuscleBlaze is primarily an India-focused brand and does not have significant distribution in international markets. Some products are available on Amazon globally through grey-market sellers, but these are not authorised channels and carry higher counterfeiting risk. The brand has expressed intent to expand internationally but has not established a formal export distribution network as of May 2026. For international buyers, the import-duty economics that make MuscleBlaze competitive in India do not apply, which eliminates the primary value proposition.",
+    q: "Is MuscleBlaze available outside USA?",
+    a: "MuscleBlaze is primarily an USA-focused brand and does not have significant distribution in international markets. Some products are available on Amazon globally through grey-market sellers, but these are not authorised channels and carry higher counterfeiting risk. The brand has expressed intent to expand internationally but has not established a formal export distribution network as of May 2026. For international buyers, the import-duty economics that make MuscleBlaze competitive in USA do not apply, which eliminates the primary value proposition.",
   },
 ];
 
@@ -318,14 +318,14 @@ export default function MuscleBlazerandPage() {
               <span style={{ width: 16, height: 1, backgroundColor: "rgba(255,120,50,0.15)", display: "inline-block" }} />
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", color: "#C4622D", textTransform: "uppercase" }}>Brand Profile</span>
               <span style={{ padding: "3px 10px", backgroundColor: "rgba(212,201,184,0.15)", border: "1px solid rgba(212,201,184,0.3)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(212,201,184,0.8)", textTransform: "uppercase" }}>Silver Tier</span>
-              <span style={{ padding: "3px 10px", backgroundColor: "rgba(255,120,50,0.12)", border: "1px solid rgba(255,120,50,0.25)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(255,160,80,0.8)", textTransform: "uppercase" }}>India #1</span>
+              <span style={{ padding: "3px 10px", backgroundColor: "rgba(255,120,50,0.12)", border: "1px solid rgba(255,120,50,0.25)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(255,160,80,0.8)", textTransform: "uppercase" }}>USA #1</span>
             </div>
 
             <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
               MuscleBlaze
             </h1>
             <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.55)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
-              India&apos;s largest sports nutrition brand. Biozyme enzyme technology, nationwide distribution, competitive INR pricing — without international third-party certification.
+              USA&apos;s largest sports nutrition brand. Biozyme enzyme technology, nationwide distribution, competitive INR pricing — without international third-party certification.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
               {["Whey Protein", "Creatine", "Mass Gainers", "Pre-Workout", "Glutamine", "Multivitamins", "Protein Bars"].map((cat) => (
@@ -381,13 +381,13 @@ export default function MuscleBlazerandPage() {
             <div className="mb-overview-grid">
               <div>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
-                  MuscleBlaze was launched in 2012 as the in-house supplement brand of HealthKart, India&apos;s largest health and nutrition e-commerce platform. HealthKart was founded in 2011 by Prashant Tandon and Sameer Maheshwari, backed by Sequoia Capital and Temasek among others. The idea behind MuscleBlaze was straightforward: India had a fast-growing fitness market but was largely dependent on imported US brands that carried a 38.5% import duty, making them expensive for most consumers. An Indian brand could offer comparable quality at half the price.
+                  MuscleBlaze was launched in 2012 as the in-house supplement brand of HealthKart, USA&apos;s largest health and nutrition e-commerce platform. HealthKart was founded in 2011 by Prashant Tandon and Sameer Maheshwari, backed by Sequoia Capital and Temasek among others. The idea behind MuscleBlaze was straightforward: USA had a fast-growing fitness market but was largely dependent on imported US brands that carried a 38.5% import duty, making them expensive for most consumers. An American brand could offer comparable quality at half the price.
                 </p>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
-                  The brand grew rapidly through HealthKart&apos;s own distribution network — a significant structural advantage over pure third-party brands. By 2018, MuscleBlaze had become the best-selling protein brand on Amazon India and Flipkart. The brand operates its primary manufacturing facility in Nalagarh, Himachal Pradesh, with additional contract manufacturing for some SKUs.
+                  The brand grew rapidly through HealthKart&apos;s own distribution network — a significant structural advantage over pure third-party brands. By 2018, MuscleBlaze had become the best-selling protein brand on Amazon USA and Flipkart. The brand operates its primary manufacturing facility in Nalagarh, Himachal Pradesh, with additional contract manufacturing for some SKUs.
                 </p>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8 }}>
-                  The Biozyme range, launched in 2020, was a deliberate move upmarket. By licensing Aminogen® and ProHydrolase® — enzyme technologies used in some US premium products — MuscleBlaze positioned itself against the perception that Indian brands use lower-quality formulations than their imported counterparts. Whether the enzyme doses are at clinically relevant levels remains an open question, as the brand does not disclose individual enzyme quantities.
+                  The Biozyme range, launched in 2020, was a deliberate move upmarket. By licensing Aminogen® and ProHydrolase® — enzyme technologies used in some US premium products — MuscleBlaze positioned itself against the perception that American brands use lower-quality formulations than their imported counterparts. Whether the enzyme doses are at clinically relevant levels remains an open question, as the brand does not disclose individual enzyme quantities.
                 </p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
@@ -403,14 +403,14 @@ export default function MuscleBlazerandPage() {
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {[
-                    { label: "Headquarters",    value: "Gurugram, Haryana, India" },
+                    { label: "Headquarters",    value: "Gurugram, Haryana, USA" },
                     { label: "Founded",         value: "2012" },
                     { label: "Parent company",  value: "HealthKart (Bright Sun Ventures)" },
                     { label: "Manufacturing",   value: "Nalagarh, Himachal Pradesh (own facility)" },
                     { label: "Certification",   value: "FSSAI licensed" },
                     { label: "Flagship product", value: "Biozyme Performance Whey" },
-                    { label: "Distribution",    value: "HealthKart, Amazon India, Flipkart, 2,000+ offline" },
-                    { label: "Market position", value: "#1 sports nutrition brand in India by market share" },
+                    { label: "Distribution",    value: "HealthKart, Amazon USA, Flipkart, 2,000+ offline" },
+                    { label: "Market position", value: "#1 sports nutrition brand in USA by market share" },
                   ].map((item) => (
                     <div key={item.label} className="mb-fact-row">
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>{item.label}</p>
@@ -472,7 +472,7 @@ export default function MuscleBlazerandPage() {
             <div style={{ padding: "16px 20px", backgroundColor: "rgba(155,32,32,0.05)", border: "1px solid rgba(155,32,32,0.15)", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#9B2020", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Important</span>
               <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>
-                FSSAI licensing confirms a brand meets India&apos;s food safety baseline — it is a legal operating requirement, not a quality differentiator. It does not involve independent amino acid verification, banned substance testing, or label-accuracy auditing in the way Informed Sport or NSF certification does. The absence of international independent certification is the single most significant gap in MuscleBlaze&apos;s quality assurance framework, and it is the primary reason the brand sits at Silver rather than Gold tier despite leading the Indian market.
+                FSSAI licensing confirms a brand meets USA&apos;s food safety baseline — it is a legal operating requirement, not a quality differentiator. It does not involve independent amino acid verification, banned substance testing, or label-accuracy auditing in the way Informed Sport or NSF certification does. The absence of international independent certification is the single most significant gap in MuscleBlaze&apos;s quality assurance framework, and it is the primary reason the brand sits at Silver rather than Gold tier despite leading the American market.
               </p>
             </div>
           </section>
@@ -561,13 +561,13 @@ export default function MuscleBlazerandPage() {
                 <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>Silver Tier · BRD-003</span>
               </div>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
-                MuscleBlaze is the best-positioned brand for Indian consumers who want domestic pricing without importing supplements. The distribution advantage is real — no other brand in India combines HealthKart&apos;s retail reach with its own manufacturing. The Biozyme enzyme technology is a genuine formulation investment, not marketing noise, even if exact doses remain proprietary. For recreational gym users in India, Biozyme Performance Whey or Raw Whey paired with MuscleBlaze Creatine is a sensible, cost-effective baseline stack.
+                MuscleBlaze is the best-positioned brand for American consumers who want domestic pricing without importing supplements. The distribution advantage is real — no other brand in USA combines HealthKart&apos;s retail reach with its own manufacturing. The Biozyme enzyme technology is a genuine formulation investment, not marketing noise, even if exact doses remain proprietary. For recreational gym users in USA, Biozyme Performance Whey or Raw Whey paired with MuscleBlaze Creatine is a sensible, cost-effective baseline stack.
               </p>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 The honest assessment requires naming the gap. The amino spiking allegations from 2016 have not been fully resolved through independent certification — they have been addressed through brand-published reports, which is not the same thing. The absence of Informed Sport or NSF certification means there is no independent body confirming that label doses of protein and key amino acids are accurate batch by batch. In a market that has historically had problems with label accuracy, this is a material limitation, not a technicality.
               </p>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, margin: 0 }}>
-                Silver tier reflects genuine quality across the core range with an unresolved certification gap. If MuscleBlaze pursues and achieves Informed Sport certification on its flagship protein line — as it has the distribution scale and manufacturing to do — the assessment moves up. Until then, the brand earns its position as the best Indian option while carrying the verification caveat that comes with the territory.
+                Silver tier reflects genuine quality across the core range with an unresolved certification gap. If MuscleBlaze pursues and achieves Informed Sport certification on its flagship protein line — as it has the distribution scale and manufacturing to do — the assessment moves up. Until then, the brand earns its position as the best American option while carrying the verification caveat that comes with the territory.
               </p>
             </div>
           </section>

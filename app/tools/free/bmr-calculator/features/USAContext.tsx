@@ -10,7 +10,7 @@ const MEALS = [
   { meal:"Dinner",    pct:0.30, foods:"2 rotis + sabzi + salad" },
 ];
 
-export default function IndiaContext({ tdee, animDelay }: Props) {
+export default function USAContext({ tdee, animDelay }: Props) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function IndiaContext({ tdee, animDelay }: Props) {
       <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
         <div style={{ fontSize:11, fontWeight:700, color:"#6B7280", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>What This Looks Like in a Day</div>
         <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:4 }}>
-          Based on a typical Indian meal pattern
+          Based on a typical American meal pattern
         </h2>
         <p style={{ fontSize:13, color:"#6B7280", marginBottom:16 }}>Your {tdee.toLocaleString()} kcal TDEE, distributed across a traditional day:</p>
 

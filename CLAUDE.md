@@ -171,7 +171,7 @@ Before committing any new page or metadata change, verify:
 ## 9. Content Standards
 
 - **No AI fluff**: No phrases like "game-changer", "unlock your potential", "science-backed" (overused), "revolutionary"
-- **Prices — primary currency is USD.** Always show USD first. INR is optional and only included when the section explicitly covers India availability (e.g. a "Buying in India" sub-section). Never require both currencies everywhere. State the price date and use a range, not a single figure.
+- **Prices — primary currency is USD.** Always show USD first. INR is optional and only included when the section explicitly covers USA availability (e.g. a "Buying in USA" sub-section). Never require both currencies everywhere. State the price date and use a range, not a single figure.
 - **Evidence claims**: Reference the specific study (author, year, journal) — not "studies show"
 - **Dosage**: Always state the dose used in the clinical evidence, not just the supplement's dose
 - **Counterfeit warnings**: Mention verification methods (QR code, official store) only in sections that explicitly cover a specific regional market — not on every page.

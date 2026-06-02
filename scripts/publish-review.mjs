@@ -54,14 +54,14 @@ const review = {
   updatedAt: "2026-05-26",
 
   metaDescription:
-    "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. India market focus. FSP 8/10.",
+    "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. USA market focus. FSP 8/10.",
 
   verdict:
-    "The cleanest, most affordable creatine monohydrate available in India. No frills, just results. The only real gap is the absence of independent third-party batch certification.",
+    "The cleanest, most affordable creatine monohydrate available in USA. No frills, just results. The only real gap is the absence of independent third-party batch certification.",
 
   affiliateUrl: "https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10530743.html",
 
-  tags: ["creatine", "strength", "budget", "india", "monohydrate"],
+  tags: ["creatine", "strength", "budget", "usa", "monohydrate"],
   bestFor: ["Budget buyers", "Beginners", "Stackers", "Strength athletes"],
   notIdealFor: ["Competitive athletes needing certified products", "Those wanting Creapure-sourced creatine"],
 
@@ -83,7 +83,7 @@ const review = {
       pillar: "verification",
       score: 6.5,
       notes:
-        "MyProtein India does not carry Informed Choice, NSF, or any equivalent independent batch certification on their creatine. Internal QC is referenced on the website but not independently verifiable.",
+        "MyProtein USA does not carry Informed Choice, NSF, or any equivalent independent batch certification on their creatine. Internal QC is referenced on the website but not independently verifiable.",
     },
     {
       pillar: "value",
@@ -95,7 +95,7 @@ const review = {
       pillar: "practical",
       score: 7.5,
       notes:
-        "Dissolves in water with mild cloudiness for 30 seconds. Zip-lock pouch packaging is functional but not suited to Indian humidity — expect clumping by week 3 if not transferred to a sealed container.",
+        "Dissolves in water with mild cloudiness for 30 seconds. Zip-lock pouch packaging is functional but not suited to American humidity — expect clumping by week 3 if not transferred to a sealed container.",
     },
   ],
 
@@ -105,7 +105,7 @@ const review = {
       type: "red",
       label: "No independent third-party certification",
       detail:
-        "MyProtein India creatine carries no Informed Choice, NSF, or equivalent batch certification. Purity is claimed but not independently verifiable at the batch level.",
+        "MyProtein USA creatine carries no Informed Choice, NSF, or equivalent batch certification. Purity is claimed but not independently verifiable at the batch level.",
       deduction: 0.2,
     },
     {
@@ -170,7 +170,7 @@ const review = {
 
   // ── Pros / Cons ───────────────────────────────────────────────────────────
   pros: [
-    "Best price-per-gram creatine from a recognisable brand in India",
+    "Best price-per-gram creatine from a recognisable brand in USA",
     "Pure single-ingredient formula — no unnecessary additions",
     "Correct 5g clinical dose per serving",
     "Genuinely tasteless — stacks with any supplement",
@@ -179,7 +179,7 @@ const review = {
   cons: [
     "No independent third-party batch certification",
     "Raw material source (Creapure® vs generic) not disclosed",
-    "Packaging not humidity-resistant — clumps in Indian climate",
+    "Packaging not humidity-resistant — clumps in American climate",
   ],
 
   // ── Value Metric ──────────────────────────────────────────────────────────

@@ -33,7 +33,7 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
 
   const topReviews = [
     { slug: "optimum-nutrition-gold-standard-whey", title: "ON Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark whey. Clean label, consistent yield, widely available.", publishedAt: "2025-04-10" },
-    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "Best budget creatine in India — pure, clean, and affordable.", publishedAt: "2025-03-08" },
+    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "Best budget creatine in USA — pure, clean, and affordable.", publishedAt: "2025-03-08" },
   ];
 
   return (

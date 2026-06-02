@@ -102,7 +102,7 @@ export default function Header() {
             VOL. I · 2026 · EVIDENCE-LED SUPPLEMENT RESEARCH
           </span>
           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480" }}>
-            INDIA &amp; GLOBAL EDITION
+            USA &amp; GLOBAL EDITION
           </span>
         </div>
       </div>

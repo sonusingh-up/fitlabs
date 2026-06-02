@@ -194,7 +194,7 @@ Every ingredient page needs **two** schemas at the top of the return statement:
 - **Citations**: always `Author (Year)` inline, full reference in the References section
 - **Doses**: state the dose used *in the cited study*, not just the supplement label dose
 - **No AI fluff**: banned phrases — "game-changer", "unlock your potential", "science-backed" (overused), "revolutionary", "supercharge"
-- **Prices**: USD is the primary currency. Show INR in parentheses only when the section is explicitly about India availability. Always state the price date.
+- **Prices**: USD is the primary currency. Show INR in parentheses only when the section is explicitly about USA availability. Always state the price date.
 - **Evidence claims**: link to specific RCTs or meta-analyses — never "studies show"
 - **Safety**: always note if evidence is from healthy adults; flag known contraindications
 

@@ -86,7 +86,7 @@ const composite = rubric.compositeScore;
 - formula: Protein/active density, ingredient quality, no proprietary blends, amino acid profile
 - transparency: Full label disclosure, no hidden doses, batch info accessible
 - verification: 3rd-party certs (Informed Choice, NSF, heavy metals COA), no recalls
-- value: Cost/serving vs category avg, size options, India vs US pricing gap
+- value: Cost/serving vs category avg, size options, USA vs US pricing gap
 - practical: Mixability, taste, convenience, capsule count, travel-friendliness
 
 ---
@@ -642,9 +642,9 @@ Pick an accent that fits the product, then use it for: hero CTA, accent line, sc
 - **No AI fluff**: banned phrases — "game-changer", "unlock your potential", "science-backed" (overused), "revolutionary", "supercharge", "take your fitness to the next level"
 - **Citations**: always `Author (Year)` inline, never "studies show" alone
 - **Doses**: state the dose used in the cited study, not just the label dose
-- **Prices**: USD is primary. INR optional — only in "Where to Buy India" sub-sections. Always state "prices verified May 2026"
+- **Prices**: USD is primary. INR optional — only in "Where to Buy USA" sub-sections. Always state "prices verified May 2026"
 - **Evidence**: reference specific RCTs or meta-analyses — not vague "research suggests"
-- **India market**: only mention counterfeit warnings in the Where to Buy section, not across the whole review
+- **USA market**: only mention counterfeit warnings in the Where to Buy section, not across the whole review
 - **Vitamin A / organ supplements**: always include a safety section covering the UL (10,000 IU/day)
 - **Voice**: direct. First person where appropriate. No passive "it has been shown that"
 - **Claim audit**: quote the exact marketing claim with quotation marks in the `claim` field

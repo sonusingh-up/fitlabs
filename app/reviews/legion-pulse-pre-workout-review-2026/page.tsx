@@ -81,7 +81,7 @@ const rubric: ScoringRubric = {
       pillar: "value",
       score: 6.5,
       notes:
-        "At approximately $2.25/serving for 30 servings ($67.50), Legion Pulse is the most expensive pre-workout in this comparison group. The cost is higher than BULK Black ($2.00) and significantly above C4 ($1.00). The premium is partially justified by clinically matched doses, CarnoSyn® patented beta-alanine, natural sweetening overhead, and Labdoor testing costs. Half-scoop dosing is available but less practical given the 22.76g scoop size. Availability in India is limited and expensive.",
+        "At approximately $2.25/serving for 30 servings ($67.50), Legion Pulse is the most expensive pre-workout in this comparison group. The cost is higher than BULK Black ($2.00) and significantly above C4 ($1.00). The premium is partially justified by clinically matched doses, CarnoSyn® patented beta-alanine, natural sweetening overhead, and Labdoor testing costs. Half-scoop dosing is available but less practical given the 22.76g scoop size. Availability in USA is limited and expensive.",
     },
     {
       pillar: "practical",
@@ -258,10 +258,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Is Legion Pulse available in India?",
+      name: "Is Legion Pulse available in USA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Legion Pulse is available on Amazon.in through authorised importers at approximately ₹5,800–₹7,200 per tub (30 servings) depending on the retailer and current duties, compared to $67.50 in the US. The premium is significant. Indian consumers who want a comparable formula at lower cost should consider Transparent Labs BULK (Informed Choice, $49.99 US) or, domestically, MusclePharm Assault as a budget option.",
+        text: "Legion Pulse is available on Amazon.in through authorised importers at approximately ₹5,800–₹7,200 per tub (30 servings) depending on the retailer and current duties, compared to $67.50 in the US. The premium is significant. American consumers who want a comparable formula at lower cost should consider Transparent Labs BULK (Informed Choice, $49.99 US) or, domestically, MusclePharm Assault as a budget option.",
       },
     },
     {
@@ -896,7 +896,7 @@ export default function LegionPulseReview() {
                     { option: "Full 2-scoop serving (30 sessions)", price: "~$67.50 ($2.25/serving)", note: "Standard protocol for experienced users" },
                     { option: "Half 1-scoop serving (60 sessions)", price: "~$67.50 ($1.13/serving)", note: "Good value option for caffeine-sensitive users" },
                     { option: "LegionAthletics.com Direct", price: "Subscribe & save available", note: "Loyalty points programme; auto-ship discount" },
-                    { option: "Amazon.in (India)", price: "₹5,800–₹7,200 / tub", note: "Prices verified May 2026. Significant import premium." },
+                    { option: "Amazon.in (USA)", price: "₹5,800–₹7,200 / tub", note: "Prices verified May 2026. Significant import premium." },
                   ].map((row) => (
                     <div key={row.option} style={{ padding: "14px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, minWidth: 0 }}>
                       <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{row.option}</p>
@@ -914,7 +914,7 @@ export default function LegionPulseReview() {
                   {[
                     { channel: "Amazon (affiliate link)", verdict: "Recommended", colour: "#2D6A4F", bg: "rgba(45,106,79,0.06)", border: "rgba(45,106,79,0.2)", detail: "Standard Amazon fulfilment, return policy, and Prime delivery. Link goes directly to the verified Legion Pulse listing.", cta: true },
                     { channel: "LegionAthletics.com Direct", verdict: "Recommended", colour: "#2D6A4F", bg: "rgba(45,106,79,0.06)", border: "rgba(45,106,79,0.2)", detail: "Best for ongoing purchases — subscribe & save, loyalty programme, and direct manufacturer support. Widest flavour selection available here.", cta: false },
-                    { channel: "Amazon.in (India)", verdict: "Use with caution", colour: "#8B7355", bg: "rgba(139,115,85,0.06)", border: "rgba(139,115,85,0.2)", detail: "Available through authorised importers. Verify the seller is an authorised Legion distributor. Prices range ₹5,800–₹7,200. The significant price premium means Indian consumers should compare against domestic alternatives — MusclePharm Assault, or the BULK Black if budget allows imported pre-workouts.", cta: false },
+                    { channel: "Amazon.in (USA)", verdict: "Use with caution", colour: "#8B7355", bg: "rgba(139,115,85,0.06)", border: "rgba(139,115,85,0.2)", detail: "Available through authorised importers. Verify the seller is an authorised Legion distributor. Prices range ₹5,800–₹7,200. The significant price premium means American consumers should compare against domestic alternatives — MusclePharm Assault, or the BULK Black if budget allows imported pre-workouts.", cta: false },
                     { channel: "Unverified third-party sellers", verdict: "Not recommended", colour: "#8B3A2C", bg: "rgba(139,58,44,0.06)", border: "rgba(139,58,44,0.2)", detail: "Labdoor certification covers Legion's own production. Purchase from unverified sellers risks counterfeit product or improper storage conditions. Always buy direct or from a major authorised retailer.", cta: false },
                   ].map((item) => (
                     <div key={item.channel} style={{ padding: "18px 20px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10 }}>

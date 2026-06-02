@@ -858,7 +858,7 @@ export default function DymatizeISO100Review() {
                     "$2.09/serving is 50–65% above the category average for whey isolate",
                     "Sucralose used across most flavours — ISO100 Natural (stevia) exists but limited flavours",
                     "No individual batch certificate download available (must verify via NSF/IC portals by lot number)",
-                    "Not available direct-to-consumer outside the US at the same pricing — substantial markup in India",
+                    "Not available direct-to-consumer outside the US at the same pricing — substantial markup in USA",
                     "Birthday Cake and some sweeter flavours show 2g sugar vs <1g in chocolate variants",
                   ]}
                 />
@@ -929,7 +929,7 @@ export default function DymatizeISO100Review() {
                     { channel: "Amazon US", verdict: "Recommended", color: "#2D6A4F", icon: <CheckCircle size={16} />, detail: "Widest flavour selection, competitive pricing, Subscribe & Save available. Verify the seller is 'Sold by Amazon' or 'Dymatize Nutrition' to avoid third-party resellers.", cta: "Check Price", url: "https://amzn.to/4e73lcN" },
                     { channel: "Dymatize.com", verdict: "Recommended", color: "#2D6A4F", icon: <CheckCircle size={16} />, detail: "Direct from manufacturer. Batch-traceable purchases, no risk of counterfeit. Occasionally has exclusive flavours. Comparable pricing to Amazon.", cta: "Visit Site", url: "https://www.dymatize.com" },
                     { channel: "GNC / Vitamin Shoppe", verdict: "Acceptable", color: "#8B7355", icon: <AlertTriangle size={16} />, detail: "Retail-exclusive flavours occasionally available. In-store prices can be 10–15% higher than online. Check online price match policies.", cta: null, url: "" },
-                    { channel: "Third-Party Resellers (India, eBay)", verdict: "Caution", color: "#8B3A2C", icon: <XCircle size={16} />, detail: "ISO100 is not officially distributed in India. Import-grey market products exist but carry counterfeit risk. If buying in India, verify the NSF/IC lot number before purchase.", cta: null, url: "" },
+                    { channel: "Third-Party Resellers (USA, eBay)", verdict: "Caution", color: "#8B3A2C", icon: <XCircle size={16} />, detail: "ISO100 is not officially distributed in USA. Import-grey market products exist but carry counterfeit risk. If buying in USA, verify the NSF/IC lot number before purchase.", cta: null, url: "" },
                   ].map((ch) => (
                     <div key={ch.channel} style={{ backgroundColor: "#F8F2E4", border: `1px solid ${ch.color === "#8B3A2C" ? "rgba(139,58,44,0.3)" : "#D4C9B8"}`, borderRadius: 10, padding: "18px 20px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>

@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 // Sample reviews per author (in a real CMS this would be fetched)
 const authorReviews: Record<string, Array<{ slug: string; title: string; brand: string; category: string; rating: ReviewRating; verdict: string; publishedAt: string }>> = {
   "fitlab-research-team": [
-    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8, verdict: "Clean, affordable, and third-party tested. The best budget creatine in India.", publishedAt: "2025-03-08" },
-    { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8, verdict: "Best Indian brand — enhanced absorption enzyme blend and solid protein yield.", publishedAt: "2025-03-20" },
+    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8, verdict: "Clean, affordable, and third-party tested. The best budget creatine in USA.", publishedAt: "2025-03-08" },
+    { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8, verdict: "Best American brand — enhanced absorption enzyme blend and solid protein yield.", publishedAt: "2025-03-20" },
     { slug: "musclepharm-assault-pre-workout", title: "MusclePharm Assault", brand: "MusclePharm", category: "Pre-Workout", rating: 7, verdict: "Solid stimulant blend with transparent labelling but under-dosed citrulline.", publishedAt: "2025-03-22" },
   ],
   "pankaj-singh": [

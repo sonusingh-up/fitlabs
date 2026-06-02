@@ -222,7 +222,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "Is WellMedr available outside the United States?",
-      acceptedAnswer: { "@type": "Answer", text: "No. WellMedr is a US-only telehealth service and operates under US state medical licensing laws. It is not available to patients in India, the UK, or other countries. International patients should seek local specialist referrals for GLP-1 weight management therapy." },
+      acceptedAnswer: { "@type": "Answer", text: "No. WellMedr is a US-only telehealth service and operates under US state medical licensing laws. It is not available to patients in USA, the UK, or other countries. International patients should seek local specialist referrals for GLP-1 weight management therapy." },
     },
     {
       "@type": "Question",

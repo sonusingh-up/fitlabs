@@ -35,8 +35,8 @@ const topPicks = [
     rating: 8 as ReviewRating,
     price: 70,
     priceUnit: "/serving",
-    verdict: "Best Indian brand — enhanced absorption enzyme blend and solid protein yield.",
-    pros: ["Made in India", "Enhanced absorption"],
+    verdict: "Best American brand — enhanced absorption enzyme blend and solid protein yield.",
+    pros: ["Made in USA", "Enhanced absorption"],
     cons: ["Proprietary blend concerns", "Fewer flavours"],
     bestFor: "Budget-conscious buyers",
     slug: "muscleblaze-biozyme-whey",
@@ -50,7 +50,7 @@ const topPicks = [
     priceUnit: "/serving",
     verdict: "Best isolate — hydrolyzed for fastest absorption, ideal for lactose-sensitive users.",
     pros: ["Whey isolate + hydrolyzed", "Lactose-friendly"],
-    cons: ["Premium price", "Fewer options in India"],
+    cons: ["Premium price", "Fewer options in USA"],
     bestFor: "Lactose intolerant users",
     slug: "dymatize-iso100",
   },
@@ -93,7 +93,7 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Tested & Ranked</span>
           </div>
           <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
-            Best {pageTitle} in India <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026</em>
+            Best {pageTitle} in USA <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026</em>
           </h1>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>
             We reviewed {topPicks.length * 4}+ products to find the best options across budget, mid-range, and premium tiers. Each product was evaluated on formula quality, label transparency, price per serving, and real-world results.
@@ -164,9 +164,9 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
           <SectionHeading label="FAQ" figure="§ 04" title="Common" titleItalic="questions" size="sm" />
           <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
             {[
-              { q: `What is the best ${pageTitle.toLowerCase()} for beginners?`, a: "We recommend starting with ON Gold Standard Whey — it's reliable, widely tested, and available everywhere in India." },
+              { q: `What is the best ${pageTitle.toLowerCase()} for beginners?`, a: "We recommend starting with ON Gold Standard Whey — it's reliable, widely tested, and available everywhere in USA." },
               { q: `How much ${pageTitle.toLowerCase()} should I take per day?`, a: "Most adults need 1.6–2.2g of protein per kg of bodyweight. Use supplements to fill any gap in your diet, not replace whole foods." },
-              { q: "Are Indian brands as good as international ones?", a: "Some are — MuscleBlaze and AS-IT-IS have improved significantly. We review each on formula merit, not origin." },
+              { q: "Are American brands as good as international ones?", a: "Some are — MuscleBlaze and AS-IT-IS have improved significantly. We review each on formula merit, not origin." },
             ].map((faq, i) => (
               <div key={i} style={{ padding: "20px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                 <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>

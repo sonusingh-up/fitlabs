@@ -42,7 +42,7 @@ export const bestListSchema = defineType({
   title: "Best Lists",
   type: "document",
   fields: [
-    defineField({ name: "title", title: "Title (e.g. Best Whey Protein in India)", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "title", title: "Title (e.g. Best Whey Protein in USA)", type: "string", validation: (r) => r.required() }),
     defineField({ name: "slug", title: "Slug (e.g. whey-protein)", type: "slug", options: { source: "title" }, validation: (r) => r.required() }),
     defineField({ name: "category", title: "Category", type: "string" }),
     defineField({ name: "summary", title: "Intro Summary", type: "text", rows: 3 }),

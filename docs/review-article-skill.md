@@ -196,7 +196,7 @@ ProductCard:
   category="Category"
   score={9}                          // optional — shows score ring
   priceUSD="$59.99 / 30 servings"
-  priceINR="N/A"                     // "N/A" unless India pricing is known
+  priceINR="N/A"                     // "N/A" unless USA pricing is known
   tags={["Tag 1", "Tag 2"]}
   buyUrl="https://amzn.to/..."       // Amazon affiliate link ONLY
   buyLabel="Buy on Amazon"

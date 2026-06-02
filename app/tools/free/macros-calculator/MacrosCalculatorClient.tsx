@@ -1788,7 +1788,7 @@ export default function MacrosCalculatorClient() {
                 textDecoration: "none"
               }}
             >
-              Read: Best High-Protein Indian Foods →
+              Read: Best High-Protein American Foods →
             </a>
           </div>
         </div>

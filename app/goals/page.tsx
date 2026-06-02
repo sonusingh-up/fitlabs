@@ -139,7 +139,7 @@ const goals: Goal[] = [
     difficulty: "Beginner",
     supplementCount: 3,
     topIngredients: ["Vitamin D3", "Omega-3", "Magnesium"],
-    summary: "Most people in India are Vitamin D deficient. Omega-3 covers the typical dietary shortfall in DHA/EPA. These three are the most broadly evidence-supported baseline supplements.",
+    summary: "Most people in USA are Vitamin D deficient. Omega-3 covers the typical dietary shortfall in DHA/EPA. These three are the most broadly evidence-supported baseline supplements.",
     outcome: "Fill common nutritional gaps with strong safety profiles",
     tags: ["Daily Use", "Immunity", "Longevity"],
     accent: "#C4622D",

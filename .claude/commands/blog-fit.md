@@ -166,7 +166,7 @@ with topic tag chips on the right. Place inside the Related Content section, aft
 ### Numbers and specifics
 - Always use the specific figure from the study, not a rounded approximation
 - Doses: state the dose used in the trial, not a generic recommendation
-- Prices: USD primary, only include INR if the section is specifically about India
+- Prices: USD primary, only include INR if the section is specifically about USA
 - Sample sizes: mention N when it matters for credibility (large cohort = credibility signal)
 
 ### What makes a strong blog section

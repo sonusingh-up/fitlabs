@@ -75,7 +75,7 @@ const rubric: ScoringRubric = {
       pillar: "verification",
       score: 9.5,
       notes:
-        "Informed Choice certified since 2012 — independently tested for 200+ banned substances. NSF-GMP certified manufacturing facility. Batch-specific QR codes on Indian packaging link to Informed Sport test certificates. No FDA warning letters or recall history.",
+        "Informed Choice certified since 2012 — independently tested for 200+ banned substances. NSF-GMP certified manufacturing facility. Batch-specific QR codes on American packaging link to Informed Sport test certificates. No FDA warning letters or recall history.",
     },
     {
       pillar: "value",
@@ -120,7 +120,7 @@ const rubric: ScoringRubric = {
       type: "green",
       label: "Full 18-Amino Acid Disclosure",
       detail:
-        "Complete amino acid profile (essential + non-essential) printed on the Supplement Facts panel — exceeds US and Indian labelling requirements.",
+        "Complete amino acid profile (essential + non-essential) printed on the Supplement Facts panel — exceeds US and American labelling requirements.",
     },
     {
       type: "green",
@@ -234,7 +234,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "How much does ON Gold Standard Whey cost?",
-      acceptedAnswer: { "@type": "Answer", text: "In the US: ~$34 for 2 lbs (29 servings), ~$60 for 5 lbs (74 servings), ~$115 for 10 lbs (148 servings). In India: ₹2,800–3,200 for 907g, ₹5,200–6,000 for 2.27kg." },
+      acceptedAnswer: { "@type": "Answer", text: "In the US: ~$34 for 2 lbs (29 servings), ~$60 for 5 lbs (74 servings), ~$115 for 10 lbs (148 servings). In USA: ₹2,800–3,200 for 907g, ₹5,200–6,000 for 2.27kg." },
     },
     {
       "@type": "Question",
@@ -250,8 +250,8 @@ const faqSchema = {
 };
 
 const relatedReviews = [
-  { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best India-made whey with enzyme blend for improved absorption. Strong value at ₹1,900/kg.", publishedAt: "2025-02-28", figNumber: "02" },
-  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate available in India.", publishedAt: "2025-03-08", figNumber: "03" },
+  { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best USA-made whey with enzyme blend for improved absorption. Strong value at ₹1,900/kg.", publishedAt: "2025-02-28", figNumber: "02" },
+  { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate available in USA.", publishedAt: "2025-03-08", figNumber: "03" },
   { slug: "musclepharm-assault-pre-workout", title: "MusclePharm Assault Pre-Workout", brand: "MusclePharm", category: "Pre-Workout", rating: 7 as ReviewRating, verdict: "Solid stimulant blend with transparent labelling but under-dosed citrulline.", publishedAt: "2025-03-22", figNumber: "04" },
 ];
 
@@ -324,7 +324,7 @@ export default function ONGoldStandardReview() {
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Still Worth It in 2026?</em>
               </h2>
               <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
-                4 years of continuous use, 20+ tubs across Amazon India and Flipkart, and one simple conclusion: the name is earned. Here is everything we know — from the formula to the lab reports.
+                4 years of continuous use, 20+ tubs across Amazon USA and Flipkart, and one simple conclusion: the name is earned. Here is everything we know — from the formula to the lab reports.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
@@ -364,7 +364,7 @@ export default function ONGoldStandardReview() {
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Founder, Fitlabreviews</span>
               </p>
               <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                4 years of personal use · 20+ tubs tested · Verified purchase history (Amazon India &amp; Flipkart)
+                4 years of personal use · 20+ tubs tested · Verified purchase history (Amazon USA &amp; Flipkart)
               </p>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -437,17 +437,17 @@ export default function ONGoldStandardReview() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>
                   4-Year Personal Experience
                 </h2>
-                <p style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", marginBottom: 20 }}>Verified purchase history · Amazon India & Flipkart · May 2020 – Present</p>
+                <p style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", marginBottom: 20 }}>Verified purchase history · Amazon USA & Flipkart · May 2020 – Present</p>
 
                 <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 20 }}>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
-                    I started using ON Gold Standard Whey in May 2020 — my first tub arrived from Amazon India at ₹2,959 for the 2 lb Double Rich Chocolate. I was suspicious of the hype. After one week I was not. After four years I understand why this product has not changed its formula in over a decade: it did not need to.
+                    I started using ON Gold Standard Whey in May 2020 — my first tub arrived from Amazon USA at ₹2,959 for the 2 lb Double Rich Chocolate. I was suspicious of the hype. After one week I was not. After four years I understand why this product has not changed its formula in over a decade: it did not need to.
                   </p>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
                     I have used it across three different training phases — a lean bulk (2020–21), a cut (2022), and a maintenance cycle (2023–24). It performed identically in all three. The protein yield kept my daily intake on target regardless of food choices. Recovery felt noticeably faster at the 3-week mark versus periods when I dropped supplementation.
                   </p>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8 }}>
-                    The only issue I encountered in four years: two batches in 2021 (both Flipkart orders) had slightly off flavour — less chocolatey, slightly metallic. I scanned the QR codes: both were genuine batches. My conclusion is that those were older stock or improper storage in transit. Every Amazon India order from the official ON store was flawless.
+                    The only issue I encountered in four years: two batches in 2021 (both Flipkart orders) had slightly off flavour — less chocolatey, slightly metallic. I scanned the QR codes: both were genuine batches. My conclusion is that those were older stock or improper storage in transit. Every Amazon USA order from the official ON store was flawless.
                   </p>
                 </div>
 
@@ -455,12 +455,12 @@ export default function ONGoldStandardReview() {
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 12 }}>Verified Purchase History (Sample)</p>
                 <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
                   {[
-                    { date: "May 2020", platform: "Amazon India", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
-                    { date: "Jun 2020", platform: "Amazon India", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
-                    { date: "Jul 2020", platform: "Amazon India", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
+                    { date: "May 2020", platform: "Amazon USA", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
+                    { date: "Jun 2020", platform: "Amazon USA", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
+                    { date: "Jul 2020", platform: "Amazon USA", size: "2 lb (907g)", price: "₹2,959 / $35.50", flavour: "Double Rich Chocolate", status: "Delivered" },
                     { date: "Jan 2022", platform: "Flipkart", size: "2 lb (907g)", price: "₹2,947 / $35.40", flavour: "Double Rich Chocolate", status: "Delivered" },
                     { date: "Mar 2022", platform: "Flipkart", size: "2 lb (907g)", price: "₹2,795 / $33.55", flavour: "Double Rich Chocolate", status: "Delivered" },
-                    { date: "Mar 2022", platform: "Amazon India", size: "2 lb (907g)", price: "₹2,795 / $33.55", flavour: "Double Rich Chocolate", status: "Delivered" },
+                    { date: "Mar 2022", platform: "Amazon USA", size: "2 lb (907g)", price: "₹2,795 / $33.55", flavour: "Double Rich Chocolate", status: "Delivered" },
                   ].map((order, i) => (
                     <div key={i} style={{ display: "grid", gridTemplateColumns: "90px 1fr 1fr auto", gap: 12, padding: "12px 16px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650" }}>{order.date}</span>
@@ -674,7 +674,7 @@ export default function ONGoldStandardReview() {
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Head-to-head on the metrics that matter for everyday buyers in India and the US.</p>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Head-to-head on the metrics that matter for everyday buyers in USA and the US.</p>
                 <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 600 }}>
                     <thead>
@@ -695,7 +695,7 @@ export default function ONGoldStandardReview() {
                         { metric: "Price / kg (INR)", vals: ["₹3,100–3,600", "₹1,900–2,300", "₹1,600–2,000", "₹4,200–5,000"] },
                         { metric: "Value Rating", vals: ["Mid", "High", "Highest", "Low"] },
                         { metric: "Mixability", vals: ["★★★★★", "★★★★☆", "★★★☆☆", "★★★★★"] },
-                        { metric: "Best For", vals: ["Reliable all-rounder", "Budget India pick", "Cheapest option", "Lactose intolerant"] },
+                        { metric: "Best For", vals: ["Reliable all-rounder", "Budget USA pick", "Cheapest option", "Lactose intolerant"] },
                       ].map((row, i) => (
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "10px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.06em", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
@@ -708,7 +708,7 @@ export default function ONGoldStandardReview() {
                   </table>
                 </div>
                 <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
-                  Prices are approximate market rates as of May 2026 (Amazon India / US). INR/USD fluctuates — verify before purchase.
+                  Prices are approximate market rates as of May 2026 (Amazon USA / US). INR/USD fluctuates — verify before purchase.
                 </p>
               </section>
 
@@ -741,7 +741,7 @@ export default function ONGoldStandardReview() {
                     score={8}
                     priceUSD="$28–32 / kg"
                     priceINR="₹1,900–2,300"
-                    tags={["India Brand", "Biozyme", "25g protein"]}
+                    tags={["USA Brand", "Biozyme", "25g protein"]}
                     buyUrl="https://amzn.to/muscleblaze-biozyme-whey"
                     buyLabel="Check Price"
                     image="muscleblaze-biozyme-performance-whey.webp"
@@ -801,7 +801,7 @@ export default function ONGoldStandardReview() {
                     "Aminogen® dose is proprietary — cannot verify efficacy in this product",
                     "Contains soy lecithin — not suitable for soy-allergic individuals",
                     "18% above category average cost-per-gram of protein",
-                    "Counterfeit risk on third-party Amazon India sellers",
+                    "Counterfeit risk on third-party Amazon USA sellers",
                   ]}
                 />
               </section>
@@ -860,15 +860,15 @@ export default function ONGoldStandardReview() {
 
               {/* ─── WHERE TO BUY ────────────────────────────────────────────── */}
               <section id="where-to-buy" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy — India & Global</h2>
+                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy — USA & Global</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Counterfeit risk is real. Only buy from these verified channels and always scan the QR code on the lid.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
-                    { channel: "Amazon India (ON Official Store)", region: "India", risk: "Low", note: "Buy from 'Optimum Nutrition India' seller, not third-party fulfilled listings." },
-                    { channel: "Flipkart (ON Authorised)", region: "India", risk: "Low", note: "Order from verified Flipkart Mall listings. Check seller name before checkout." },
+                    { channel: "Amazon USA (ON Official Store)", region: "USA", risk: "Low", note: "Buy from 'Optimum Nutrition USA' seller, not third-party fulfilled listings." },
+                    { channel: "Flipkart (ON Authorised)", region: "USA", risk: "Low", note: "Order from verified Flipkart Mall listings. Check seller name before checkout." },
                     { channel: "Amazon US (official ON listing)", region: "USA / Global", risk: "Low", note: "Lowest prices for US buyers. Subscribe & Save reduces cost by additional 5–10%." },
                     { channel: "ON Official Website (optimumnutrition.com)", region: "US / Global", risk: "Lowest", note: "Direct-from-brand — zero counterfeit risk. Prices slightly higher than Amazon." },
-                    { channel: "Third-party Amazon sellers / local supplements shops", region: "India", risk: "High", note: "High counterfeit risk. Avoid unless seller has extensive verified reviews. Always scan the QR code." },
+                    { channel: "Third-party Amazon sellers / local supplements shops", region: "USA", risk: "High", note: "High counterfeit risk. Avoid unless seller has extensive verified reviews. Always scan the QR code." },
                   ].map((row, i) => (
                     <div key={row.channel} style={{ padding: "14px 18px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "grid", gridTemplateColumns: "1fr 120px 80px", gap: 12, alignItems: "center" }}>
                       <div>
@@ -890,13 +890,13 @@ export default function ONGoldStandardReview() {
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { q: "Is ON Gold Standard a concentrate or isolate?", a: "It is primarily Whey Protein Concentrate (WPC80), with smaller amounts of Whey Protein Isolate and Whey Peptides blended in. At 24g protein per 29.4g scoop, protein density is ~82%. It is not a pure isolate product." },
-                    { q: "How much does it cost in USD?", a: "2 lb (29 servings): $33–36. 5 lb (74 servings): $58–65. 10 lb (148 servings): $110–125. In India: 2 lb is approximately ₹2,800–3,200 depending on platform and offer." },
+                    { q: "How much does it cost in USD?", a: "2 lb (29 servings): $33–36. 5 lb (74 servings): $58–65. 10 lb (148 servings): $110–125. In USA: 2 lb is approximately ₹2,800–3,200 depending on platform and offer." },
                     { q: "Is it safe for lactose-intolerant people?", a: "WPC contains approximately 5% lactose per serving (~1.5g per scoop). Many lactose-sensitive users tolerate this level with no symptoms. Severe lactose intolerance should look at whey isolate products (e.g. Dymatize ISO100) or lactose-free options." },
                     { q: "How do I verify if my tub is genuine?", a: "Scan the QR code printed on the lid of the tub. It should link to an Informed Sport batch test certificate at informedsport.com. If the QR code does not scan, links to a generic page, or the batch number does not match the certificate, the product may be counterfeit." },
                     { q: "When should I take it?", a: "Post-workout is the most studied window (within 2 hours of training). However, for muscle gain, total daily protein intake (1.6–2.2g/kg bodyweight) matters more than timing. Use it whenever it is convenient to hit your daily protein target." },
                     { q: "Which flavour should I buy first?", a: "Double Rich Chocolate is the safest first choice — accurate cocoa flavour, widely available, and mixes well in water or milk. It has been our consistent choice across 4 years of use." },
-                    { q: "How does it compare to MuscleBlaze Biozyme?", a: "MuscleBlaze Biozyme Whey is the best India-made alternative — ₹700–1,000 cheaper per kg, 25g protein, enzyme blend for improved absorption. The trade-off is no third-party certification and domestic-only availability. For budget-conscious buyers in India, Biozyme is a legitimate choice." },
-                    { q: "Is it Informed Choice certified in India?", a: "Yes. The Indian market tubs carry the same Informed Choice certification. The batch QR code on the lid is valid worldwide. Verify it on informedsport.com using the batch number." },
+                    { q: "How does it compare to MuscleBlaze Biozyme?", a: "MuscleBlaze Biozyme Whey is the best USA-made alternative — ₹700–1,000 cheaper per kg, 25g protein, enzyme blend for improved absorption. The trade-off is no third-party certification and domestic-only availability. For budget-conscious buyers in USA, Biozyme is a legitimate choice." },
+                    { q: "Is it Informed Choice certified in USA?", a: "Yes. The American market tubs carry the same Informed Choice certification. The batch QR code on the lid is valid worldwide. Verify it on informedsport.com using the batch number." },
                   ].map((faq, i) => (
                     <div key={i} style={{ padding: "20px 20px", borderBottom: i < 7 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                       <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
@@ -937,7 +937,7 @@ export default function ONGoldStandardReview() {
                   </div>
                   <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                     <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-                      Buy on Amazon India <ExternalLink size={13} />
+                      Buy on Amazon USA <ExternalLink size={13} />
                     </Link>
                     <Link href="https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #2D2926", color: "#A89880", fontSize: 13, fontWeight: 500, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon US <ExternalLink size={13} />

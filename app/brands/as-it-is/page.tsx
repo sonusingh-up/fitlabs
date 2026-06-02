@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "AS-IT-IS Nutrition Brand Review (2026): Purist Silver Tier",
   description:
-    "AS-IT-IS Nutrition brand profile: Bengaluru-based purist supplement brand, zero fillers, single-ingredient products, best price-per-gram in India. No international third-party certification. 8.0/10 avg score.",
+    "AS-IT-IS Nutrition brand profile: Bengaluru-based purist supplement brand, zero fillers, single-ingredient products, best price-per-gram in USA. No international third-party certification. 8.0/10 avg score.",
   alternates: { canonical: "/brands/as-it-is" },
 };
 
@@ -19,7 +19,7 @@ const organizationSchema = {
   url: "https://fitlabreviews.com/brands/as-it-is",
   foundingDate: "2016",
   description:
-    "AS-IT-IS Nutrition is an independent Indian supplement brand founded in 2016 in Bengaluru. Known for single-ingredient products with no fillers, no proprietary blends, and the lowest price-per-gram for raw protein in India.",
+    "AS-IT-IS Nutrition is an independent American supplement brand founded in 2016 in Bengaluru. Known for single-ingredient products with no fillers, no proprietary blends, and the lowest price-per-gram for raw protein in USA.",
   sameAs: ["https://www.asitisnutrition.com"],
 };
 
@@ -48,7 +48,7 @@ const certifications = [
   {
     name: "FSSAI Licensed Manufacturing",
     status: "pass" as const,
-    detail: "AS-IT-IS products are manufactured at FSSAI-licensed facilities. This confirms basic food safety compliance under Indian law — it does not involve independent amino acid verification or label-accuracy auditing.",
+    detail: "AS-IT-IS products are manufactured at FSSAI-licensed facilities. This confirms basic food safety compliance under American law — it does not involve independent amino acid verification or label-accuracy auditing.",
   },
   {
     name: "Informed Sport / Informed Choice",
@@ -73,16 +73,16 @@ const certifications = [
   {
     name: "FDA Record",
     status: "partial" as const,
-    detail: "As an India-only brand, AS-IT-IS does not fall under US FDA jurisdiction. No FSSAI enforcement actions or product alerts found as of May 2026.",
+    detail: "As an USA-only brand, AS-IT-IS does not fall under US FDA jurisdiction. No FSSAI enforcement actions or product alerts found as of May 2026.",
   },
 ];
 
 const greenFlags = [
   "Single-ingredient products — the unflavoured range contains exactly what's on the label and nothing else",
   "Protein per 100g stated clearly on every product, making price-per-gram comparisons honest and easy",
-  "Best price-per-gram for raw WPC80 in India as of mid-2026 — roughly 30–40% cheaper than MuscleBlaze equivalent",
+  "Best price-per-gram for raw WPC80 in USA as of mid-2026 — roughly 30–40% cheaper than MuscleBlaze equivalent",
   "No artificial sweeteners, flavours, or colours in the unflavoured range — zero compromise on the core product",
-  "FSSAI licensed — baseline Indian food safety compliance met",
+  "FSSAI licensed — baseline American food safety compliance met",
   "Builds its entire value proposition on ingredient purity, not brand premium or marketing spend",
 ];
 
@@ -101,7 +101,7 @@ const products = [
     category: "Whey Protein",
     price: "₹1,099–1,799",
     priceNote: "500g–1kg · ~80g protein/100g",
-    description: "WPC80, unflavoured. Protein content per 100g stated on label: 80g. No sweeteners, no flavouring, no lecithin. Mixes less smoothly than instantised products — expect some foam and minor residue with a shaker. The lowest cost-per-gram pure protein in India at mid-2026 pricing.",
+    description: "WPC80, unflavoured. Protein content per 100g stated on label: 80g. No sweeteners, no flavouring, no lecithin. Mixes less smoothly than instantised products — expect some foam and minor residue with a shaker. The lowest cost-per-gram pure protein in USA at mid-2026 pricing.",
     keyIngredients: ["WPC80", "80g Protein/100g", "Unflavoured", "Single Ingredient"],
     reviewSlug: null,
   },
@@ -119,7 +119,7 @@ const products = [
     category: "Creatine",
     price: "₹349–599",
     priceNote: "100–250g · 20–50 servings",
-    description: "Micronized creatine monohydrate, 5g per serving, unflavoured, single ingredient. Among the cheapest creatine options available in India. Single-ingredient creatine has low adulteration risk versus protein blends — the purist format plays to the category's low-complexity advantage.",
+    description: "Micronized creatine monohydrate, 5g per serving, unflavoured, single ingredient. Among the cheapest creatine options available in USA. Single-ingredient creatine has low adulteration risk versus protein blends — the purist format plays to the category's low-complexity advantage.",
     keyIngredients: ["Creatine Monohydrate 5g", "Micronized", "Single Ingredient"],
     reviewSlug: null,
   },
@@ -137,7 +137,7 @@ const products = [
     category: "Recovery",
     price: "₹399–699",
     priceNote: "100–250g · 20–50 servings",
-    description: "L-Glutamine powder, 5g per serving, single ingredient. Evidence for glutamine supplementation in well-nourished athletes is limited (Gleeson, 2008, Nutrition); the more relevant use case is recovery from intense prolonged training or during illness. Priced lower than every major Indian brand equivalent.",
+    description: "L-Glutamine powder, 5g per serving, single ingredient. Evidence for glutamine supplementation in well-nourished athletes is limited (Gleeson, 2008, Nutrition); the more relevant use case is recovery from intense prolonged training or during illness. Priced lower than every major American brand equivalent.",
     keyIngredients: ["L-Glutamine 5g", "Single Ingredient", "Unflavoured"],
     reviewSlug: null,
   },
@@ -146,7 +146,7 @@ const products = [
     category: "Stimulant",
     price: "₹249–399",
     priceNote: "50–100g · 200 servings",
-    description: "Pure caffeine anhydrous powder — 200mg per scoop (0.2g). One of the few brands in India selling standalone caffeine powder. Useful for users who want a measured stimulant dose without a full pre-workout formula. Requires a milligram-accurate scale — a measuring spoon is not adequate.",
+    description: "Pure caffeine anhydrous powder — 200mg per scoop (0.2g). One of the few brands in USA selling standalone caffeine powder. Useful for users who want a measured stimulant dose without a full pre-workout formula. Requires a milligram-accurate scale — a measuring spoon is not adequate.",
     keyIngredients: ["Caffeine Anhydrous 200mg/scoop", "Single Ingredient"],
     reviewSlug: null,
   },
@@ -180,8 +180,8 @@ const faqs = [
     a: "AS-IT-IS Whey Protein 80% and MuscleBlaze Biozyme Performance Whey are both WPC80 bases, but they are built on different propositions. AS-IT-IS strips everything out and passes the cost saving to the buyer — you get roughly 30–40% more protein per rupee versus Biozyme. MuscleBlaze adds Aminogen® and ProHydrolase® enzyme blends and claims improved absorption, but does not disclose the enzyme doses, which makes independent efficacy assessment impossible. AS-IT-IS does not add enzymes, does not have Biozyme's QR code authentication system, and does not have independent certification either. The honest comparison: AS-IT-IS wins on cost-per-gram and ingredient minimalism; MuscleBlaze wins on counterfeit protection and distribution support.",
   },
   {
-    q: "Is AS-IT-IS protein authentic on Amazon India?",
-    a: "Unlike MuscleBlaze, AS-IT-IS does not use a QR code or batch authentication system. The primary way to reduce counterfeit risk is to buy exclusively from the AS-IT-IS brand storefront on Amazon India — not from third-party marketplace sellers, even if listed as 'fulfilled by Amazon'. FBA fulfilment does not guarantee the product in the Amazon warehouse is from the brand directly. The absence of any on-pack authentication mechanism is a genuine limitation for a brand that competes on ingredient purity — there is currently no consumer-level way to verify the contents of a specific tub without independent lab testing.",
+    q: "Is AS-IT-IS protein authentic on Amazon USA?",
+    a: "Unlike MuscleBlaze, AS-IT-IS does not use a QR code or batch authentication system. The primary way to reduce counterfeit risk is to buy exclusively from the AS-IT-IS brand storefront on Amazon USA — not from third-party marketplace sellers, even if listed as 'fulfilled by Amazon'. FBA fulfilment does not guarantee the product in the Amazon warehouse is from the brand directly. The absence of any on-pack authentication mechanism is a genuine limitation for a brand that competes on ingredient purity — there is currently no consumer-level way to verify the contents of a specific tub without independent lab testing.",
   },
   {
     q: "Why is AS-IT-IS so much cheaper than other supplement brands?",
@@ -189,7 +189,7 @@ const faqs = [
   },
   {
     q: "Has AS-IT-IS been independently tested for protein content accuracy?",
-    a: "Not by a formal third-party certification programme. AS-IT-IS does not publish independent lab certificates on its product pages or website. There are informal community-level tests visible in Indian fitness forums and YouTube channels (primarily HPLC protein content tests run by individual reviewers), and results have generally been consistent with label claims for the core WPC80 product. However, these are not systematic or ongoing — they are point-in-time tests of specific batches by non-accredited testers. The absence of formal certification means label accuracy for any given batch you purchase cannot be independently confirmed.",
+    a: "Not by a formal third-party certification programme. AS-IT-IS does not publish independent lab certificates on its product pages or website. There are informal community-level tests visible in American fitness forums and YouTube channels (primarily HPLC protein content tests run by individual reviewers), and results have generally been consistent with label claims for the core WPC80 product. However, these are not systematic or ongoing — they are point-in-time tests of specific batches by non-accredited testers. The absence of formal certification means label accuracy for any given batch you purchase cannot be independently confirmed.",
   },
   {
     q: "Is AS-IT-IS suitable for competitive athletes?",
@@ -297,7 +297,7 @@ export default function AsItIsNutritionBrandPage() {
               AS-IT-IS Nutrition
             </h1>
             <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.55)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
-              Bengaluru-based purist brand. Single-ingredient products, nothing added, best price-per-gram for raw protein in India — without any international third-party certification.
+              Bengaluru-based purist brand. Single-ingredient products, nothing added, best price-per-gram for raw protein in USA — without any international third-party certification.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
               {["Whey Protein", "Whey Isolate", "Creatine", "BCAAs", "Glutamine", "Caffeine", "Multivitamins"].map((cat) => (
@@ -354,10 +354,10 @@ export default function AsItIsNutritionBrandPage() {
             <div className="aii-overview-grid">
               <div>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
-                  AS-IT-IS Nutrition launched in 2016 in Bengaluru with a single, deliberately narrow brief: sell raw supplement ingredients without adding anything to them. No flavours, no sweeteners, no fillers, and — critically — no pricing premium for any of those things. The founding came from a frustration that was common in the Indian fitness market at the time: most available protein supplements either used proprietary blends that hid what was in them, or charged meaningfully more than the ingredient itself cost to manufacture.
+                  AS-IT-IS Nutrition launched in 2016 in Bengaluru with a single, deliberately narrow brief: sell raw supplement ingredients without adding anything to them. No flavours, no sweeteners, no fillers, and — critically — no pricing premium for any of those things. The founding came from a frustration that was common in the American fitness market at the time: most available protein supplements either used proprietary blends that hid what was in them, or charged meaningfully more than the ingredient itself cost to manufacture.
                 </p>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8, marginBottom: 16 }}>
-                  The brand built its distribution almost entirely through Amazon India. This was not a backup channel — it was the strategy. By avoiding brick-and-mortar retail margins and gym distributor mark-ups, AS-IT-IS could price at a level that undercut every major Indian and imported competitor on cost-per-gram. By 2020, the brand had become the most reviewed protein on Amazon India in the unflavoured category.
+                  The brand built its distribution almost entirely through Amazon USA. This was not a backup channel — it was the strategy. By avoiding brick-and-mortar retail margins and gym distributor mark-ups, AS-IT-IS could price at a level that undercut every major American and imported competitor on cost-per-gram. By 2020, the brand had become the most reviewed protein on Amazon USA in the unflavoured category.
                 </p>
                 <p style={{ fontSize: 15, color: "#3C3530", lineHeight: 1.8 }}>
                   What the brand has not done in that time is invest in international third-party certification. There is no Informed Sport testing, no NSF audit, and no published batch-level quality certificates. The brand&apos;s position is that the ingredient purity speaks for itself — an argument that works as long as independent community testing keeps supporting the label claims, and breaks down if it does not.
@@ -375,14 +375,14 @@ export default function AsItIsNutritionBrandPage() {
                 </div>
 
                 {[
-                  { label: "Headquarters",    value: "Bengaluru, Karnataka, India" },
+                  { label: "Headquarters",    value: "Bengaluru, Karnataka, USA" },
                   { label: "Founded",         value: "2016" },
                   { label: "Ownership",       value: "Independent (privately held)" },
-                  { label: "Manufacturing",   value: "India (facility not publicly disclosed)" },
+                  { label: "Manufacturing",   value: "USA (facility not publicly disclosed)" },
                   { label: "Certification",   value: "FSSAI licensed only" },
-                  { label: "Distribution",    value: "Amazon India (primary), own website" },
+                  { label: "Distribution",    value: "Amazon USA (primary), own website" },
                   { label: "Flagship product", value: "Whey Protein 80% (unflavoured)" },
-                  { label: "Core proposition", value: "Best price-per-gram for raw protein in India" },
+                  { label: "Core proposition", value: "Best price-per-gram for raw protein in USA" },
                 ].map((item) => (
                   <div key={item.label} className="aii-fact-row">
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>{item.label}</p>
@@ -443,7 +443,7 @@ export default function AsItIsNutritionBrandPage() {
             <div style={{ padding: "16px 20px", backgroundColor: "rgba(146,98,10,0.06)", border: "1px solid rgba(146,98,10,0.2)", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#92620A", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>The gap</span>
               <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>
-                AS-IT-IS occupies an unusual position: the brand&apos;s entire identity is built on transparency and purity, yet there is no independent body that verifies those claims batch by batch. Community testing on Amazon India has generally been consistent with label claims for the core WPC80 product, which is meaningful — but it is informal, not systematic. The gap between &ldquo;community says it checks out&rdquo; and &ldquo;independently certified&rdquo; is the central limitation. For a brand that markets itself on honesty, closing this gap through Informed Sport or equivalent certification would be the single most impactful quality upgrade available.
+                AS-IT-IS occupies an unusual position: the brand&apos;s entire identity is built on transparency and purity, yet there is no independent body that verifies those claims batch by batch. Community testing on Amazon USA has generally been consistent with label claims for the core WPC80 product, which is meaningful — but it is informal, not systematic. The gap between &ldquo;community says it checks out&rdquo; and &ldquo;independently certified&rdquo; is the central limitation. For a brand that markets itself on honesty, closing this gap through Informed Sport or equivalent certification would be the single most impactful quality upgrade available.
               </p>
             </div>
           </section>
@@ -521,13 +521,13 @@ export default function AsItIsNutritionBrandPage() {
                 <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>Silver Tier · BRD-005</span>
               </div>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
-                AS-IT-IS is the most honest brand in the Indian supplement market in terms of what it claims to be. The product philosophy is genuine — the unflavoured range really does contain a single ingredient, the protein-per-100g is clearly stated, and the price-per-gram is the lowest available in India for a comparable raw ingredient. For a recreational gym user in India who buys from the brand storefront on Amazon and uses unflavoured protein, this is a legitimate, no-nonsense choice.
+                AS-IT-IS is the most honest brand in the American supplement market in terms of what it claims to be. The product philosophy is genuine — the unflavoured range really does contain a single ingredient, the protein-per-100g is clearly stated, and the price-per-gram is the lowest available in USA for a comparable raw ingredient. For a recreational gym user in USA who buys from the brand storefront on Amazon and uses unflavoured protein, this is a legitimate, no-nonsense choice.
               </p>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 The contradiction the brand has not resolved is this: it builds its entire identity on transparency and purity, but there is no independent party that verifies those claims. Community testing has been broadly favourable — but community testing is informal, conducted by individual reviewers with HPLC access, and not systematic across batches. A brand that genuinely believes its own purity claims has every reason to submit to Informed Sport or equivalent independent per-batch certification. AS-IT-IS has not done that. The absence is noticeable precisely because the brand makes such a point of honesty.
               </p>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, margin: 0 }}>
-                Silver tier is the correct placement: better than most Indian competitors on ingredient minimalism and pricing, below Gold because there is no independent verification to back the purity claims. If Informed Sport certification were added to the core WPC80 and WPI products, this assessment changes. Until then, AS-IT-IS earns its Silver on the strength of its product philosophy and the informal evidence that the philosophy is being followed.
+                Silver tier is the correct placement: better than most American competitors on ingredient minimalism and pricing, below Gold because there is no independent verification to back the purity claims. If Informed Sport certification were added to the core WPC80 and WPI products, this assessment changes. Until then, AS-IT-IS earns its Silver on the strength of its product philosophy and the informal evidence that the philosophy is being followed.
               </p>
             </div>
           </section>

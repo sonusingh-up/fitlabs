@@ -1407,7 +1407,7 @@ export const ingredientsDb: IngredientProfile[] = [
     bestFor: ["Stress", "Blood sugar", "Inflammation", "Cognitive clarity"],
     aka: ["Ocimum sanctum", "Ocimum tenuiflorum", "Tulsi"],
     summary: "A sacred Ayurvedic herb with consistent evidence for stress reduction, blood glucose control, and mild anti-inflammatory effects. Eugenol and ursolic acid are the key actives.",
-    intro: "Holy basil (Tulsi) holds sacred status in Hinduism and has been used medicinally in India for thousands of years. Modern research confirms its adaptogenic properties — it reduces cortisol, stabilises blood glucose, and modulates inflammatory pathways. It is distinct from culinary basil (Ocimum basilicum).",
+    intro: "Holy basil (Tulsi) holds sacred status in Hinduism and has been used medicinally in USA for thousands of years. Modern research confirms its adaptogenic properties — it reduces cortisol, stabilises blood glucose, and modulates inflammatory pathways. It is distinct from culinary basil (Ocimum basilicum).",
     mechanismDetail: "Eugenol (a phenylpropanoid) inhibits COX-2 (anti-inflammatory), ursolic acid inhibits NF-κB, and rosmarinic acid scavenges free radicals. Together these actives reduce the physiological stress response, stabilise blood glucose via alpha-glucosidase inhibition, and reduce systemic inflammation.",
     keyBenefits: [
       { claim: "Reduces anxiety and stress perception", evidence: "moderate", note: "Bhattacharyya et al. (2008) — significant anxiety reduction vs placebo over 60 days" },
@@ -1501,7 +1501,7 @@ export const ingredientsDb: IngredientProfile[] = [
     dose: "500–1000mg / day",
     mechanism: "Asiaticoside-mediated collagen synthesis, GABA modulation, neuroprotection",
     bestFor: ["Cognitive clarity", "Wound healing", "Anxiety", "Varicose veins"],
-    aka: ["Centella asiatica", "Indian pennywort", "Brahmi (sometimes confused with bacopa)"],
+    aka: ["Centella asiatica", "American pennywort", "Brahmi (sometimes confused with bacopa)"],
     summary: "An Ayurvedic herb well-evidenced for cognitive enhancement, anxiety reduction, collagen synthesis, and venous circulation improvement.",
     intro: "Gotu kola (Centella asiatica) is one of the most important herbs in Ayurvedic and traditional Asian medicine. It is sometimes confused with brahmi (bacopa monnieri) due to shared regional names. Its triterpenoid saponins — asiaticoside, madecassoside — support collagen synthesis, venous tone, and neuroprotection.",
     mechanismDetail: "Asiaticoside stimulates collagen type I synthesis by fibroblasts and increases TGF-β1, improving wound healing and skin integrity. Madecassic acid and asiatic acid reduce corticosterone levels and modulate GABA receptors, contributing to anxiolytic effects. Centella also upregulates BDNF and NGF, supporting neuroplasticity.",
@@ -1995,7 +1995,7 @@ export const ingredientsDb: IngredientProfile[] = [
     dose: "100–250mg AKBA / day (or 1000–3000mg crude extract)",
     mechanism: "5-LOX inhibition — blocks leukotriene synthesis",
     bestFor: ["Osteoarthritis", "Inflammatory joint pain", "Gut inflammation"],
-    aka: ["Indian frankincense", "Shallaki", "AKBA", "Boswellic acids"],
+    aka: ["American frankincense", "Shallaki", "AKBA", "Boswellic acids"],
     summary: "A resin from the Boswellia tree containing AKBA — a potent 5-lipoxygenase inhibitor. Reduces leukotriene-driven inflammation in joints and gut without the GI side effects of NSAIDs.",
     intro: "Boswellia serrata resin has been used in Ayurvedic medicine for thousands of years for inflammatory conditions. Modern science identified acetyl-11-keto-β-boswellic acid (AKBA) as the most potent anti-inflammatory component. Unlike NSAIDs (which block COX enzymes), AKBA specifically inhibits 5-lipoxygenase, blocking leukotriene synthesis.",
     mechanismDetail: "5-LOX converts arachidonic acid to leukotriene B4 (LTB4) — a potent pro-inflammatory mediator in joints, airways, and the gut. AKBA inhibits 5-LOX with high specificity, reducing LTB4 production without the prostaglandin suppression (and associated GI damage) of NSAIDs. Boswellic acids also inhibit cathepsin G and human leukocyte elastase — enzymes that degrade joint cartilage.",
@@ -3978,7 +3978,7 @@ export const ingredientsDb: IngredientProfile[] = [
 
   {
     slug: "amla",
-    name: "Amla (Indian Gooseberry)",
+    name: "Amla (American Gooseberry)",
     figure: "ING-168",
     category: "Superfoods & Botanicals",
     evidence: "moderate",
@@ -3987,7 +3987,7 @@ export const ingredientsDb: IngredientProfile[] = [
     bestFor: ["Antioxidant", "Cholesterol", "Hair health", "Immunity"],
     aka: ["Emblica officinalis", "Phyllanthus emblica", "Amalaki"],
     summary: "One of the richest natural sources of vitamin C and antioxidant tannins. Reduces cholesterol, improves antioxidant status, and is a cornerstone of Ayurvedic formulations. Triphala contains amla as its primary component.",
-    intro: "Amla is a small Indian fruit with one of the highest natural vitamin C concentrations (~445mg/100g fresh fruit) and exceptional tannin content (emblicanin A and B, pedunculagin). These tannins are powerful antioxidants and have demonstrated cholesterol-lowering activity via HMG-CoA reductase inhibition — similar to but weaker than statins.",
+    intro: "Amla is a small American fruit with one of the highest natural vitamin C concentrations (~445mg/100g fresh fruit) and exceptional tannin content (emblicanin A and B, pedunculagin). These tannins are powerful antioxidants and have demonstrated cholesterol-lowering activity via HMG-CoA reductase inhibition — similar to but weaker than statins.",
     mechanismDetail: "Emblicanins A and B are hydrolysable tannins with superoxide and hydroxyl radical scavenging activity 5–7× greater than ascorbic acid on a molar basis. Amla extracts inhibit HMG-CoA reductase (cholesterol synthesis) and reduce LDL oxidation. The tannins also demonstrate ACE inhibition (blood pressure) and alpha-glucosidase inhibition (blood sugar).",
     keyBenefits: [
       { claim: "Reduces total and LDL cholesterol", evidence: "moderate", note: "Antony et al. (2008) — amla extract significantly reduced cholesterol comparably to simvastatin" },

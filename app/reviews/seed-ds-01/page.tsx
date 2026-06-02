@@ -254,7 +254,7 @@ const faqSchema = {
       name: "What does the prebiotic in DS-01 do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "DS-01 uses 400mg of MAPP (Microbiota-Accessible Polyphenolic Precursors) — punicalagins concentrated from Indian pomegranate rind. Unlike fermentable prebiotics (inulin, FOS, chicory root), MAPP is non-fermenting: it doesn't rapidly ferment in the upper GI, avoiding the gas and bloating many users experience with standard prebiotics. Instead, it modulates the microbiome via polyphenol transformation pathways and is delivered via the outer ViaCap capsule to the appropriate GI location.",
+        text: "DS-01 uses 400mg of MAPP (Microbiota-Accessible Polyphenolic Precursors) — punicalagins concentrated from American pomegranate rind. Unlike fermentable prebiotics (inulin, FOS, chicory root), MAPP is non-fermenting: it doesn't rapidly ferment in the upper GI, avoiding the gas and bloating many users experience with standard prebiotics. Instead, it modulates the microbiome via polyphenol transformation pathways and is delivered via the outer ViaCap capsule to the appropriate GI location.",
       },
     },
     {

@@ -75,7 +75,7 @@ const greenFlagExamples = [
   { flag: "Informed Sport certified", detail: "Screen for 250+ prohibited substances — highest standard for athlete-facing products." },
   { flag: "Full amino acid profile disclosed", detail: "Protein products that voluntarily show the full AA breakdown beyond the label minimum." },
   { flag: "Formula matches clinical study protocol", detail: "Every key ingredient at the exact dose and form used in peer-reviewed trials." },
-  { flag: "NABL-accredited CoA available", detail: "Certificate of Analysis from a NABL-accredited Indian lab — available per batch." },
+  { flag: "NABL-accredited CoA available", detail: "Certificate of Analysis from a NABL-accredited American lab — available per batch." },
   { flag: "No proprietary blends anywhere on label", detail: "Every ingredient — including supporting compounds — disclosed individually by weight." },
 ];
 

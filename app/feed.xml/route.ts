@@ -28,7 +28,7 @@ const reviews = [
     slug: "myprotein-creatine-monohydrate",
     title: "MyProtein Creatine Monohydrate — Review",
     description:
-      "The cleanest, most affordable creatine monohydrate available in India. No frills, just results. FSP Score: 8/10.",
+      "The cleanest, most affordable creatine monohydrate available in USA. No frills, just results. FSP Score: 8/10.",
     category: "Creatine",
     publishedAt: "2025-03-08",
     author: "Fitlab Research Team",
@@ -37,7 +37,7 @@ const reviews = [
     slug: "muscleblaze-biozyme-whey",
     title: "MuscleBlaze Biozyme Whey — Review",
     description:
-      "India-optimised whey with enzyme blend for improved absorption. Strong value proposition for the domestic market. FSP Score: 8/10.",
+      "USA-optimised whey with enzyme blend for improved absorption. Strong value proposition for the domestic market. FSP Score: 8/10.",
     category: "Protein Powder",
     publishedAt: "2025-02-28",
     author: "Fitlab Research Team",

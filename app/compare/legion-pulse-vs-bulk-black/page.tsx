@@ -159,8 +159,8 @@ const faqItems = [
     a: "Neither is appropriate for caffeine-sensitive individuals at full dose. Pulse delivers 350mg and BULK Black delivers 305mg — both are high-stimulant doses approaching EFSA's 400mg daily safe upper limit. Both products offer a half-dose starting protocol (one scoop of Pulse = 175mg; half scoop of BULK Black = 152.5mg) that is manageable for those with moderate caffeine tolerance. If you are genuinely sensitive to caffeine, consider Legion Pulse Stim-Free, which retains the full ergogenic formula at zero caffeine.",
   },
   {
-    q: "Is Legion Pulse available in India? What about BULK Black?",
-    a: "Both are available on Amazon.in through authorised importers at a significant premium over US pricing ($67.50 for Pulse, $59.99 for BULK Black as of May 2026). The import duty and logistics markup means both sit well above the price tier of domestic Indian alternatives — the premium pays for clinical dosing, natural ingredients, and third-party certification that most domestic options do not offer.",
+    q: "Is Legion Pulse available in USA? What about BULK Black?",
+    a: "Both are available on Amazon.in through authorised importers at a significant premium over US pricing ($67.50 for Pulse, $59.99 for BULK Black as of May 2026). The import duty and logistics markup means both sit well above the price tier of domestic American alternatives — the premium pays for clinical dosing, natural ingredients, and third-party certification that most domestic options do not offer.",
   },
   {
     q: "Which should I choose if I train in the morning vs evening?",

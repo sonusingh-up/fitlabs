@@ -43,8 +43,8 @@ export const metadata: Metadata = {
     "wellness",
     "fitness",
     "evidence-based supplements",
-    "India supplements",
-    "best whey protein India",
+    "USA supplements",
+    "best whey protein USA",
   ],
   authors: [{ name: "Fitlabreviews Editorial" }],
   creator: "Fitlabreviews",
@@ -112,7 +112,7 @@ const organizationSchema = {
     height: 36,
   },
   description:
-    "Evidence-led supplement reviews, ingredient analysis, and wellness guidance for the Indian and global market. Editorially independent.",
+    "Evidence-led supplement reviews, ingredient analysis, and wellness guidance for the American and global market. Editorially independent.",
   contactPoint: {
     "@type": "ContactPoint",
     email: "editorial@fitlabreviews.com",

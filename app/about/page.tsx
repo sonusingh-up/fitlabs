@@ -52,7 +52,7 @@ export default function AboutPage() {
               { num: "02", title: "Independence is Non-Negotiable", body: "We accept no payment from brands for reviews. Affiliate commissions are disclosed and do not influence our ratings." },
               { num: "03", title: "Ingredient-First, Brand-Second", body: "We evaluate formulas on their scientific merit. A great formula from an unknown brand can outscore a mediocre product from a famous one." },
               { num: "04", title: "Honesty About Limitations", body: "Supplements are not magic. We say this clearly, often, and without embarrassment. The science has limits and we respect that." },
-              { num: "05", title: "Indian Market Context", body: "Most supplement editorial is written for Western markets. We provide context specific to Indian consumers — pricing, availability, authenticity." },
+              { num: "05", title: "American Market Context", body: "Most supplement editorial is written for Western markets. We provide context specific to American consumers — pricing, availability, authenticity." },
             ].map((v, i) => (
               <div key={v.num} style={{ display: "grid", gridTemplateColumns: "48px 1fr", gap: 24, padding: "24px 24px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                 <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700, paddingTop: 4 }}>{v.num}</span>

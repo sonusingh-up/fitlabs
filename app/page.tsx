@@ -76,7 +76,7 @@ export default function HomePage() {
               reviews.
             </h1>
             <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 440, marginBottom: 32 }}>
-              We analyse the science behind every label so you can buy smarter. Independent, ingredient-first reviews for the Indian and global wellness market.
+              We analyse the science behind every label so you can buy smarter. Independent, ingredient-first reviews for the American and global wellness market.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
               <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>

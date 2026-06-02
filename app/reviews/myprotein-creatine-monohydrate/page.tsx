@@ -19,7 +19,7 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 export const metadata: Metadata = {
   title: "MyProtein Creatine Monohydrate Review 2026: Results, Dosage & Honest Verdict",
   description:
-    "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. India market focus. FSP 8/10.",
+    "Honest review of MyProtein Creatine Monohydrate: formula, verification gaps, USD + INR pricing, comparison vs AS-IT-IS and ON Creatine. USA market focus. FSP 8/10.",
   alternates: {
     canonical: "/reviews/myprotein-creatine-monohydrate",
   },
@@ -71,7 +71,7 @@ const rubric: ScoringRubric = {
       pillar: "verification",
       score: 6.5,
       notes:
-        "This is the real gap. MyProtein India does not carry Informed Choice, NSF, or any equivalent independent batch certification on their creatine. Internal QC is referenced on the website but not independently verifiable. No recall history, no adverse event reports — but absence of red flags is not the same as a clean certificate.",
+        "This is the real gap. MyProtein USA does not carry Informed Choice, NSF, or any equivalent independent batch certification on their creatine. Internal QC is referenced on the website but not independently verifiable. No recall history, no adverse event reports — but absence of red flags is not the same as a clean certificate.",
     },
     {
       pillar: "value",
@@ -83,7 +83,7 @@ const rubric: ScoringRubric = {
       pillar: "practical",
       score: 7.5,
       notes:
-        "Dissolves in water — yes, though not instantly clean; expect mild cloudiness for 30 seconds after mixing. Zip-lock pouch packaging is functional but not suited to Indian humidity: expect clumping by week 3 if you do not transfer to a sealed container. Unflavoured and genuinely tasteless.",
+        "Dissolves in water — yes, though not instantly clean; expect mild cloudiness for 30 seconds after mixing. Zip-lock pouch packaging is functional but not suited to American humidity: expect clumping by week 3 if you do not transfer to a sealed container. Unflavoured and genuinely tasteless.",
     },
   ],
   flags: [
@@ -91,7 +91,7 @@ const rubric: ScoringRubric = {
       type: "red",
       label: "No independent third-party certification",
       detail:
-        "MyProtein India creatine carries no Informed Choice, NSF, or equivalent batch certification. Purity is claimed but not independently verifiable at the batch level. This matters more for competitive athletes than general gym-goers.",
+        "MyProtein USA creatine carries no Informed Choice, NSF, or equivalent batch certification. Purity is claimed but not independently verifiable at the batch level. This matters more for competitive athletes than general gym-goers.",
       deduction: 0.2,
     },
     {
@@ -212,7 +212,7 @@ const faqSchema = {
     {
       "@type": "Question",
       name: "Is MyProtein creatine Creapure?",
-      acceptedAnswer: { "@type": "Answer", text: "MyProtein does not specify Creapure® (the German-sourced, independently verified creatine monohydrate) on the India product label. Some MyProtein products sold in the UK/EU carry Creapure branding, but this is not confirmed for the Indian market version." },
+      acceptedAnswer: { "@type": "Answer", text: "MyProtein does not specify Creapure® (the German-sourced, independently verified creatine monohydrate) on the USA product label. Some MyProtein products sold in the UK/EU carry Creapure branding, but this is not confirmed for the American market version." },
     },
     {
       "@type": "Question",
@@ -234,7 +234,7 @@ const faqSchema = {
 
 const relatedReviews = [
   { slug: "optimum-nutrition-gold-standard-whey", title: "ON Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark whey. Informed Choice certified, consistent protein yield across 4 years of testing.", publishedAt: "2025-04-10", figNumber: "01" },
-  { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best India-made whey. Enzyme blend for improved absorption, solid value at ₹1,900/kg.", publishedAt: "2025-02-28", figNumber: "02" },
+  { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best USA-made whey. Enzyme blend for improved absorption, solid value at ₹1,900/kg.", publishedAt: "2025-02-28", figNumber: "02" },
   { slug: "musclepharm-assault-pre-workout", title: "MusclePharm Assault Pre-Workout", brand: "MusclePharm", category: "Pre-Workout", rating: 7 as ReviewRating, verdict: "Solid stimulant stack, transparent label, but citrulline is under-dosed.", publishedAt: "2025-03-22", figNumber: "04" },
 ];
 
@@ -278,7 +278,7 @@ export default function MyproteinCreatineReview() {
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>REV-2025-031</span>
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F" }}>Full Review · FSP Scored · India Market</span>
+            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F" }}>Full Review · FSP Scored · USA Market</span>
           </div>
           <div className="layout-hero-split">
             <div>
@@ -327,12 +327,12 @@ export default function MyproteinCreatineReview() {
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 2 }}>Reviewed By</p>
               <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>
                 <Link href="/authors" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
-                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Formula analysis, literature review, India market pricing</span>
+                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Formula analysis, literature review, USA market pricing</span>
               </p>
             </div>
             <div style={{ display: "flex", gap: 6 }}>
               <span style={{ padding: "2px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>FSP v2.1</span>
-              <span style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace" }}>India Market</span>
+              <span style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace" }}>USA Market</span>
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ export default function MyproteinCreatineReview() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "4px solid #2D6A4F", marginBottom: 16 }}>
                   <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8 }}>
-                    MyProtein Creatine Monohydrate is a single-ingredient product done correctly. The formula is right — 5g of creatine monohydrate, nothing else. The price is right — among the lowest from any recognisable brand in India, especially on sale. The one honest gap is certification: there is no independent lab confirmation that what the label says is actually in the bag. For most gym-goers this will not be a dealbreaker. For competitive athletes who get tested, it should be.
+                    MyProtein Creatine Monohydrate is a single-ingredient product done correctly. The formula is right — 5g of creatine monohydrate, nothing else. The price is right — among the lowest from any recognisable brand in USA, especially on sale. The one honest gap is certification: there is no independent lab confirmation that what the label says is actually in the bag. For most gym-goers this will not be a dealbreaker. For competitive athletes who get tested, it should be.
                   </p>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
@@ -440,7 +440,7 @@ export default function MyproteinCreatineReview() {
                 <div style={{ padding: "14px 18px", backgroundColor: "rgba(196,98,45,0.04)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 8 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#C4622D", marginBottom: 6 }}>On the Creapure question</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
-                    Creapure® is a branded form of creatine monohydrate manufactured by AlzChem in Germany — widely considered the cleanest, most consistently tested source. MyProtein sells some products with Creapure branding in certain markets. For India, the creatine monohydrate label does not specify Creapure or its raw material origin. This does not mean the product is impure, but it means you cannot confirm the source without contacting MyProtein directly.
+                    Creapure® is a branded form of creatine monohydrate manufactured by AlzChem in Germany — widely considered the cleanest, most consistently tested source. MyProtein sells some products with Creapure branding in certain markets. For USA, the creatine monohydrate label does not specify Creapure or its raw material origin. This does not mean the product is impure, but it means you cannot confirm the source without contacting MyProtein directly.
                   </p>
                 </div>
               </section>
@@ -497,7 +497,7 @@ export default function MyproteinCreatineReview() {
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#C4622D" }}>No independent third-party certification</p>
                   </div>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8, marginBottom: 12 }}>
-                    MyProtein India creatine monohydrate is not Informed Choice certified. It does not carry NSF certification. There is no publicly available, independently produced batch certificate you can verify online. MyProtein references internal quality testing on their website, but &ldquo;internal testing&rdquo; means the company is testing its own product — which is different from an independent lab doing it and publishing the result.
+                    MyProtein USA creatine monohydrate is not Informed Choice certified. It does not carry NSF certification. There is no publicly available, independently produced batch certificate you can verify online. MyProtein references internal quality testing on their website, but &ldquo;internal testing&rdquo; means the company is testing its own product — which is different from an independent lab doing it and publishing the result.
                   </p>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8 }}>
                     To be fair: MyProtein is a large, established supplement brand with no significant contamination or adulteration history on their creatine line. The absence of a certificate is not evidence of a problem. But it is an honest gap — one that competitors like ON (Informed Choice certified creatine) have closed, and one that affects the FSP score.
@@ -540,8 +540,8 @@ export default function MyproteinCreatineReview() {
                       body: "The change is subtle and cumulative. You will notice it when you hit a weight you were grinding at last month and it moves cleanly. Or when you complete the same HIIT session and recover faster between rounds. It is not dramatic. It is consistent — which is more useful."
                     },
                     {
-                      title: "The clumping problem in India",
-                      body: "The zip-lock pouch MyProtein uses is adequate for temperate climates. In India — particularly during monsoon months in Mumbai, Chennai, or Kolkata — it is not. Creatine monohydrate absorbs atmospheric moisture and turns from powder to solid brick in 2–3 weeks if you leave it in the original pouch. Transfer it to an airtight glass or plastic container when you open it. This solves the problem entirely. The product is fine — the packaging just needs help in humid conditions."
+                      title: "The clumping problem in USA",
+                      body: "The zip-lock pouch MyProtein uses is adequate for temperate climates. In USA — particularly during monsoon months in Mumbai, Chennai, or Kolkata — it is not. Creatine monohydrate absorbs atmospheric moisture and turns from powder to solid brick in 2–3 weeks if you leave it in the original pouch. Transfer it to an airtight glass or plastic container when you open it. This solves the problem entirely. The product is fine — the packaging just needs help in humid conditions."
                     },
                     {
                       title: "Daily consistency is everything",
@@ -575,7 +575,7 @@ export default function MyproteinCreatineReview() {
                   ))}
                 </div>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
-                  Not micronised in the standard India-market version — so it is slightly coarser than premium micronised creatine products. In practice, this does not matter. The cloudiness people sometimes report is normal and does not indicate undissolved creatine — it settles fully within a minute. Shake and drink immediately; do not let it sit and inspect the glass.
+                  Not micronised in the standard USA-market version — so it is slightly coarser than premium micronised creatine products. In practice, this does not matter. The cloudiness people sometimes report is normal and does not indicate undissolved creatine — it settles fully within a minute. Shake and drink immediately; do not let it sit and inspect the glass.
                 </p>
               </section>
 
@@ -638,7 +638,7 @@ export default function MyproteinCreatineReview() {
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The creatine market in India has a few clear options. Here is where they actually differ.</p>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The creatine market in USA has a few clear options. Here is where they actually differ.</p>
                 <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 560 }}>
                     <thead>
@@ -740,7 +740,7 @@ export default function MyproteinCreatineReview() {
                     score={7}
                     priceUSD="$14–18 / 500g"
                     priceINR="₹1,200–1,500"
-                    tags={["India Brand", "3g serve ⚠", "Tub"]}
+                    tags={["USA Brand", "3g serve ⚠", "Tub"]}
                     buyUrl="https://amzn.to/muscleblaze-creatine"
                     buyLabel="Check Price"
                     image="muscleblaze-creatine.webp"
@@ -765,8 +765,8 @@ export default function MyproteinCreatineReview() {
                     "Good mixability — dissolves in cold or room-temperature water",
                   ]}
                   cons={[
-                    "No independent third-party certification (Informed Choice, NSF) for India market",
-                    "Raw material source (Creapure® or not) is unspecified on the India label",
+                    "No independent third-party certification (Informed Choice, NSF) for USA market",
+                    "Raw material source (Creapure® or not) is unspecified on the USA label",
                     "Zip-lock pouch packaging is vulnerable to humidity — expect clumping in monsoon months",
                     "Not micronised in the standard version — slightly coarser than premium alternatives",
                     "MyProtein's constant sale cycle means full-price purchases are poor value",
@@ -843,10 +843,10 @@ export default function MyproteinCreatineReview() {
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Unlike protein powder, creatine monohydrate counterfeiting is rare. The bigger risk here is paying full price.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
-                    { channel: "MyProtein India website (myprotein.com/in)", verdict: "Best", note: "Deepest discounts during sales. App-exclusive codes often add another 5–10%. Buy the largest size on sale." },
-                    { channel: "Amazon India (MyProtein seller)", verdict: "Good", note: "Convenient with Prime delivery. Prices are usually slightly above MyProtein's own sale prices. Acceptable if you need it fast." },
+                    { channel: "MyProtein USA website (myprotein.com/in)", verdict: "Best", note: "Deepest discounts during sales. App-exclusive codes often add another 5–10%. Buy the largest size on sale." },
+                    { channel: "Amazon USA (MyProtein seller)", verdict: "Good", note: "Convenient with Prime delivery. Prices are usually slightly above MyProtein's own sale prices. Acceptable if you need it fast." },
                     { channel: "Flipkart", verdict: "OK", note: "Stocks MyProtein but sales do not always align. Check price vs MyProtein's own website before purchasing." },
-                    { channel: "GNC India / Local supplement stores", verdict: "Avoid", note: "Typically sold at or above regular price. No benefit over buying direct from MyProtein on sale." },
+                    { channel: "GNC USA / Local supplement stores", verdict: "Avoid", note: "Typically sold at or above regular price. No benefit over buying direct from MyProtein on sale." },
                   ].map((row, i) => (
                     <div key={row.channel} style={{ padding: "14px 18px", borderBottom: i < 3 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "grid", gridTemplateColumns: "1fr 80px", gap: 12, alignItems: "start" }}>
                       <div>
@@ -866,9 +866,9 @@ export default function MyproteinCreatineReview() {
                 <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
-                    { q: "Is MyProtein creatine Creapure?", a: "MyProtein does not specify Creapure® on the India product label. Some MyProtein products in the UK carry Creapure branding — not confirmed for the India version. If Creapure sourcing is important to you, contact MyProtein support directly, or choose a product that explicitly states Creapure on the label." },
+                    { q: "Is MyProtein creatine Creapure?", a: "MyProtein does not specify Creapure® on the USA product label. Some MyProtein products in the UK carry Creapure branding — not confirmed for the USA version. If Creapure sourcing is important to you, contact MyProtein support directly, or choose a product that explicitly states Creapure on the label." },
                     { q: "Should I do a loading phase?", a: "Not necessary. 5g/day without loading reaches full saturation in 3–4 weeks. Loading (20g/day for 5–7 days) gets you there faster — useful if you have an event in 2 weeks. For long-term use, skip the loading phase. It adds no additional benefit once stores are saturated." },
-                    { q: "Why does my creatine turn into a solid block?", a: "Creatine monohydrate is hygroscopic — it absorbs moisture from the air. In India's humidity, especially during monsoon, it clumps or solidifies in the original zip-lock pouch within weeks. The fix is simple: transfer it to an airtight glass jar or container when you open it. The clumped creatine is still effective — break it up and use it. It has not gone bad." },
+                    { q: "Why does my creatine turn into a solid block?", a: "Creatine monohydrate is hygroscopic — it absorbs moisture from the air. In USA's humidity, especially during monsoon, it clumps or solidifies in the original zip-lock pouch within weeks. The fix is simple: transfer it to an airtight glass jar or container when you open it. The clumped creatine is still effective — break it up and use it. It has not gone bad." },
                     { q: "Can I take creatine without working out?", a: "Yes, but your results will be limited. Creatine increases phosphocreatine stores in muscle — those stores are meaningless without the training stimulus that depletes and rebuilds them. You can maintain supplementation on rest days (which is recommended), but starting creatine without a training programme is not a useful investment." },
                     { q: "Is it safe for vegetarians and vegans?", a: "Yes. Creatine monohydrate is synthetically produced — no animal products are involved. Vegetarians and vegans typically have lower baseline muscle creatine stores due to lower dietary creatine from food, so they often see more noticeable benefits from supplementation than meat-eaters." },
                     { q: "Does it cause hair loss?", a: "A widely repeated claim based on one small study (van der Merwe, 2009) showing increased DHT in rugby players after loading. The study has not been replicated. Current evidence does not support a causal link between creatine supplementation and hair loss. If you have a family history of androgenic alopecia and are concerned, discuss it with a dermatologist — but the existing evidence does not warrant avoiding creatine." },

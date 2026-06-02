@@ -313,7 +313,7 @@ const relatedReviews = [
     brand: "MyProtein",
     category: "Creatine",
     rating: 8 as ReviewRating,
-    verdict: "Best budget creatine in India — pure, clean, affordable.",
+    verdict: "Best budget creatine in USA — pure, clean, affordable.",
     publishedAt: "2026-03-08",
     figNumber: "01",
   },

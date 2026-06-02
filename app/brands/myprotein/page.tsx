@@ -216,8 +216,8 @@ const faqs = [
     a: "Price per gram is the key difference: MyProtein Impact Whey typically costs 30–40% less per gram of protein than ON Gold Standard Whey. For protein quality, ON Gold Standard uses a WPC80 + WPI stack with full 18-amino acid disclosure and has a longer independent testing track record (Informed Sport since 2012). Both carry Informed Sport certification on their flagship whey products. If budget is the primary constraint, MyProtein wins clearly. If you want the highest-confidence verified product with the longest testing history, ON has the edge.",
   },
   {
-    q: "Is MyProtein available in India?",
-    a: "Yes — MyProtein ships to India via its dedicated India website (in.myprotein.com) and operates fulfilment through local logistics partners. INR pricing is available. Import duties mean the price advantage over local brands like MuscleBlaze or AS-IT-IS narrows significantly, and delivery times can vary. For customers in India who prioritise price-per-gram with third-party certification, AS-IT-IS remains a stronger local option for creatine and basic whey.",
+    q: "Is MyProtein available in USA?",
+    a: "Yes — MyProtein ships to USA via its dedicated USA website (in.myprotein.com) and operates fulfilment through local logistics partners. INR pricing is available. Import duties mean the price advantage over local brands like MuscleBlaze or AS-IT-IS narrows significantly, and delivery times can vary. For customers in USA who prioritise price-per-gram with third-party certification, AS-IT-IS remains a stronger local option for creatine and basic whey.",
   },
   {
     q: "Is Clear Whey Isolate worth the extra cost?",

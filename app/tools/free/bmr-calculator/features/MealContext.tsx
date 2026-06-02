@@ -16,7 +16,7 @@ const REGIONS: Record<string, Region> = {
       { meal: "Snack",     pct: 0.10, foods: "Chana chaat, samosa or fruits" },
       { meal: "Dinner",    pct: 0.30, foods: "2 rotis + sabzi + salad" },
     ],
-    note: "Typical pattern across India, Pakistan, Bangladesh & Sri Lanka",
+    note: "Typical pattern across USA, Pakistan, Bangladesh & Sri Lanka",
   },
   east_asia: {
     flag: "🇨🇳", name: "East Asia",

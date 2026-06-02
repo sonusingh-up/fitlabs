@@ -25,8 +25,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   const reviews = [
     { slug: "optimum-nutrition-gold-standard-whey", title: "ON Gold Standard Whey", brand: "Optimum Nutrition", category: "Protein Powder", rating: 9 as ReviewRating, verdict: "The benchmark whey. Clean label, consistent yield.", publishedAt: "2025-04-10" },
-    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "Best budget creatine in India — pure, clean, affordable.", publishedAt: "2025-03-08" },
-    { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best Indian brand — enhanced absorption and solid yield.", publishedAt: "2025-03-20" },
+    { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "Best budget creatine in USA — pure, clean, affordable.", publishedAt: "2025-03-08" },
+    { slug: "muscleblaze-biozyme-whey", title: "MuscleBlaze Biozyme Whey", brand: "MuscleBlaze", category: "Protein Powder", rating: 8 as ReviewRating, verdict: "Best American brand — enhanced absorption and solid yield.", publishedAt: "2025-03-20" },
   ];
 
   return (
