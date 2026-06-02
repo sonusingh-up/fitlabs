@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 interface Props { tdee: number; animDelay: number; }
 
 const MEALS = [
-  { meal:"Breakfast", pct:0.25, foods:"2 rotis + dal + chai with milk" },
-  { meal:"Lunch",     pct:0.35, foods:"Rice + sabzi + dal + curd" },
-  { meal:"Snack",     pct:0.10, foods:"Handful of chana or fruits" },
-  { meal:"Dinner",    pct:0.30, foods:"2 rotis + sabzi + salad" },
+  { meal:"Breakfast", pct:0.25, foods:"Eggs, toast, and coffee" },
+  { meal:"Lunch",     pct:0.35, foods:"Sandwich or salad with protein" },
+  { meal:"Snack",     pct:0.10, foods:"Handful of almonds or fruit" },
+  { meal:"Dinner",    pct:0.30, foods:"Chicken, veggies, and potatoes" },
 ];
 
 export default function USAContext({ tdee, animDelay }: Props) {
@@ -16,7 +16,7 @@ export default function USAContext({ tdee, animDelay }: Props) {
   useEffect(() => {
     try {
       const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      if (tz.includes("Calcutta") || tz.includes("Kolkata") || navigator.language.startsWith("en-IN")) {
+      if (tz.includes("America") || navigator.language.startsWith("en-US")) {
         setShow(true);
       }
     } catch {}
