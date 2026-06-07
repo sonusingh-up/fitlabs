@@ -43,6 +43,10 @@ const gridOverlay = {
   pointerEvents: "none" as const,
 };
 
+/* Emil Kowalski: expo-out easing for all transitions */
+const EXPO = "cubic-bezier(0.16, 1, 0.3, 1)";
+const QUART = "cubic-bezier(0.25, 1, 0.5, 1)";
+
 export default function ReviewCard({
   slug,
   title,
@@ -68,7 +72,7 @@ export default function ReviewCard({
           padding: "16px 0",
           borderBottom: "1px solid #EDE8DF",
           textDecoration: "none",
-          transition: "opacity 0.2s",
+          transition: `opacity 150ms ${EXPO}`,
         }}
       >
         <ReviewScoreBadge rating={rating} size="sm" showLabel={false} />
@@ -94,10 +98,20 @@ export default function ReviewCard({
           borderRadius: 12,
           overflow: "hidden",
           textDecoration: "none",
-          transition: "transform 0.25s",
+          /* Emil: GPU-composited, expo-out — separate properties, never `all` */
+          transition: `transform 200ms ${EXPO}, box-shadow 200ms ${QUART}`,
+          willChange: "transform",
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.transform = "translateY(-4px)")}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.transform = "translateY(0)")}
+        onMouseEnter={(e) => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.transform = "translateY(-5px)";
+          el.style.boxShadow = "0 20px 60px -15px rgba(26,23,20,0.4)";
+        }}
+        onMouseLeave={(e) => {
+          const el = e.currentTarget as HTMLElement;
+          el.style.transform = "translateY(0)";
+          el.style.boxShadow = "none";
+        }}
       >
         {/* Image block */}
         <div style={{ height: 180, background: getGradient(category), position: "relative", overflow: "hidden", padding: "20px 24px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
@@ -130,8 +144,10 @@ export default function ReviewCard({
           <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.65, marginBottom: 24 }}>{verdict}</p>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{date}</span>
+            {/* Emil: .arrow-nudge slides 3px right on parent hover — defined in globals.css */}
             <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: "#C4622D", fontWeight: 600 }}>
-              Read Review <ArrowRight size={12} />
+              Read Review{" "}
+              <span className="arrow-nudge"><ArrowRight size={12} /></span>
             </span>
           </div>
         </div>
@@ -149,7 +165,9 @@ export default function ReviewCard({
         borderRadius: 12,
         overflow: "hidden",
         textDecoration: "none",
-        transition: "all 0.25s",
+        /* Emil: name each property — never use `transition: all` */
+        transition: `transform 200ms ${EXPO}, box-shadow 200ms ${QUART}, border-color 200ms ${EXPO}`,
+        willChange: "transform",
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
@@ -203,8 +221,10 @@ export default function ReviewCard({
         )}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 14, borderTop: "1px solid #EDE8DF" }}>
           <span style={{ fontSize: 11, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace" }}>{date}</span>
+          {/* Emil: .arrow-nudge slides 3px right on parent hover */}
           <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: "#1A1714", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-            Read <ArrowRight size={11} />
+            Read{" "}
+            <span className="arrow-nudge"><ArrowRight size={11} /></span>
           </span>
         </div>
       </div>

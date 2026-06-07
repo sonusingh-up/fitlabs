@@ -102,17 +102,10 @@ export default function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                 {links.map((link) => (
                   <li key={link.label}>
+                    {/* Emil: .footer-link handles translateX(2px) + color in globals.css */}
                     <Link
                       href={link.href}
-                      style={{
-                        fontSize: 13,
-                        color: "#5C5650",
-                        fontFamily: "var(--font-dm-sans), sans-serif",
-                        textDecoration: "none",
-                        transition: "color 0.15s",
-                      }}
-                      onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#C4622D")}
-                      onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#5C5650")}
+                      className="footer-link"
                     >
                       {link.label}
                     </Link>

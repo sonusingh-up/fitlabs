@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -187,6 +188,8 @@ export default function RootLayout({
         }}
       >
         <Header />
+        {/* Emil Kowalski: activate .animate-fade-up scroll entrances site-wide */}
+        <ScrollReveal />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

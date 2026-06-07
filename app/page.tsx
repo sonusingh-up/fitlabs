@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, FlaskConical, BookOpen, Target, ShieldCheck } from "lucide-react";
 
@@ -79,10 +79,11 @@ export default function HomePage() {
               We analyse the science behind every label so you can buy smarter. Independent, ingredient-first reviews for the American and global wellness market.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              {/* Emil: .btn-primary has scale(0.97) :active press state */}
+              <Link href="/reviews" className="btn-primary">
                 Browse Reviews <ArrowRight size={14} />
               </Link>
-              <Link href="/editorial-policy" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, fontWeight: 500, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              <Link href="/editorial-policy" className="btn-ghost">
                 Our Methodology
               </Link>
             </div>
@@ -121,14 +122,17 @@ export default function HomePage() {
       {/* FEATURED REVIEWS */}
       <section style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
         <SectionHeading label="Featured Reviews" figure="SEC. 01" title="Latest from" titleItalic="the lab" subtitle="In-depth, evidence-led analysis of the supplements everyone is talking about." />
+        {/* Emil: animate-fade-up + is-visible added by IntersectionObserver in HomeInteractive */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           {featuredReviews.map((review, i) => (
-            <ReviewCard key={review.slug} {...review} variant={i === 0 ? "featured" : "default"} />
+            <div key={review.slug} className="animate-fade-up">
+              <ReviewCard {...review} variant={i === 0 ? "featured" : "default"} />
+            </div>
           ))}
         </div>
         <div style={{ marginTop: 32, textAlign: "center" }}>
-          <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-            All Reviews <ArrowRight size={13} />
+          <Link href="/reviews" className="btn-ghost">
+            All Reviews <span className="arrow-nudge"><ArrowRight size={13} /></span>
           </Link>
         </div>
       </section>
@@ -166,11 +170,15 @@ export default function HomePage() {
             </p>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
-            {ingredients.map((ing) => (<IngredientCard key={ing.slug} {...ing} />))}
+            {ingredients.map((ing) => (
+              <div key={ing.slug} className="animate-fade-up">
+                <IngredientCard {...ing} />
+              </div>
+            ))}
           </div>
           <div style={{ marginTop: 32, textAlign: "center" }}>
             <Link href="/ingredients" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-              Explore Ingredient Library <ArrowRight size={13} />
+              Explore Ingredient Library <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
           </div>
         </div>
@@ -181,8 +189,8 @@ export default function HomePage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "start" }}>
           <div>
             <SectionHeading label="Editorial Standards" figure="SEC. 05" title="How we" titleItalic="research" subtitle="Our review process is built to eliminate bias, not amplify it. Here's what that looks like in practice." />
-            <Link href="/editorial-policy" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-              Read Full Policy <ArrowRight size={13} />
+            <Link href="/editorial-policy" className="btn-primary">
+              Read Full Policy <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
           </div>
           <TrustGrid trustPoints={trustPoints} />
@@ -193,11 +201,11 @@ export default function HomePage() {
       <section style={{ borderTop: "1px solid #D4C9B8", maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
         <SectionHeading label="Blog" figure="SEC. 06" title="From the" titleItalic="blog" subtitle="Research-led articles on nutrition science, longevity, mental health, and fitness lifestyle." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
-          {blogPosts.map((post, i) => (
+          {blogPosts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="hub-card"
+              className="hub-card animate-fade-up"
               style={{ display: "block", borderRadius: 12, overflow: "hidden", border: "1px solid #D4C9B8", textDecoration: "none", backgroundColor: "#F8F2E4" }}
             >
               <div style={{ height: 4, backgroundColor: post.accent }} />
@@ -214,8 +222,8 @@ export default function HomePage() {
           ))}
         </div>
         <div style={{ marginTop: 32, textAlign: "center" }}>
-          <Link href="/blog" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
-            All Articles <ArrowRight size={13} />
+          <Link href="/blog" className="btn-ghost">
+            All Articles <span className="arrow-nudge"><ArrowRight size={13} /></span>
           </Link>
         </div>
       </section>
