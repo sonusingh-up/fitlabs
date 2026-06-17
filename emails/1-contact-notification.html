@@ -37,7 +37,7 @@
 
   <!-- Preheader -->
   <div style="display:none;font-size:1px;color:#F2EBD9;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-    New contact message from {{name}} — {{subject}}
+    New contact message from {{name | "Someone"}} — {{subject | "No subject"}}
   </div>
 
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" class="bg-outer" style="background-color:#F2EBD9;">
@@ -62,7 +62,7 @@
 
       <!-- Label + Subject -->
       <p style="margin:0 0 6px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#C4622D;font-weight:700;">New Contact Message</p>
-      <h1 class="t-dark" style="margin:0 0 28px;font-size:24px;font-weight:800;color:#1A1714;line-height:1.25;letter-spacing:-0.02em;">{{subject}}</h1>
+      <h1 class="t-dark" style="margin:0 0 28px;font-size:24px;font-weight:800;color:#1A1714;line-height:1.25;letter-spacing:-0.02em;">{{subject | "New message"}}</h1>
 
       <!-- Sender Card -->
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
@@ -71,12 +71,12 @@
         <tr>
           <td width="48" valign="top" style="padding-right:16px;">
             <div style="width:48px;height:48px;border-radius:50%;background-color:#1A1714;text-align:center;line-height:48px;">
-              <span style="font-size:18px;font-weight:700;color:#F2EBD9;">{{initial}}</span>
+              <span style="font-size:18px;font-weight:700;color:#F2EBD9;">{{initial | "?"}}</span>
             </div>
           </td>
           <td valign="middle">
-            <p class="t-dark" style="margin:0 0 2px;font-size:16px;font-weight:700;color:#1A1714;">{{name}}</p>
-            <p style="margin:0;font-size:14px;"><a href="mailto:{{email}}" style="color:#C4622D;text-decoration:none;">{{email}}</a></p>
+            <p class="t-dark" style="margin:0 0 2px;font-size:16px;font-weight:700;color:#1A1714;">{{name | "Unknown sender"}}</p>
+            <p style="margin:0;font-size:14px;"><a href="mailto:{{email | "no-reply@fitlabreviews.com"}}" style="color:#C4622D;text-decoration:none;">{{email | "No email provided"}}</a></p>
           </td>
         </tr>
         </table>
@@ -90,13 +90,13 @@
 
       <!-- Message Body -->
       <div class="t-body-dark" style="font-size:15px;color:#3D3A36;line-height:1.75;">
-        {{message}}
+        {{message | "No message content."}}
       </div>
 
       <!-- Reply Button -->
       <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:32px;">
       <tr><td style="border-radius:10px;background-color:#1A1714;">
-        <a href="mailto:{{email}}?subject=Re:%20{{subject}}" style="display:inline-block;padding:14px 32px;color:#F2EBD9;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:0.03em;">Reply to {{first_name}} &rarr;</a>
+        <a href="mailto:{{email | "no-reply@fitlabreviews.com"}}?subject=Re:%20{{subject | "Your message"}}" style="display:inline-block;padding:14px 32px;color:#F2EBD9;font-size:14px;font-weight:700;text-decoration:none;letter-spacing:0.03em;">Reply to {{first_name | "sender"}} &rarr;</a>
       </td></tr>
       </table>
 
@@ -105,7 +105,8 @@
     <!-- FOOTER -->
     <tr><td class="bg-footer pad-h b-dark" style="background-color:#FAFAF7;padding:24px 36px;border-top:1px solid #E8E2D6;border-radius:0 0 16px 16px;">
       <p style="margin:0 0 4px;font-size:13px;"><a href="https://fitlabreviews.com" style="color:#C4622D;text-decoration:none;font-weight:600;">fitlabreviews.com</a></p>
-      <p class="t-muted-dark" style="margin:0;font-size:12px;color:#B0A99F;line-height:1.5;">This is an internal notification from your website contact form.</p>
+      <p class="t-muted-dark" style="margin:0 0 10px;font-size:12px;color:#B0A99F;line-height:1.5;">This is an internal notification from your website contact form.</p>
+      <p style="margin:0;font-size:11px;"><a href="{{{unsubscribe_url | "https://fitlabreviews.com"}}}" style="color:#8A8480;text-decoration:underline;">Unsubscribe</a></p>
     </td></tr>
 
   </table>
