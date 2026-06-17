@@ -10,41 +10,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        parchment: {
-          50: "#FDFAF4",
-          100: "#F8F2E4",
-          200: "#F0E8D0",
-          DEFAULT: "#F2EBD9",
+        background: {
+          DEFAULT: "#FFFFFF",
+          alt: "#F7F7F7",
         },
-        bone: "#EDE8DF",
         ink: {
-          DEFAULT: "#1A1714",
-          soft: "#2D2926",
-          muted: "#5C5650",
-          faint: "#8A8480",
+          DEFAULT: "#2D2D2D",
+          soft: "#525252",
+          muted: "#737373",
+          faint: "#9CA3AF",
         },
-        rust: {
-          light: "#E8896A",
-          DEFAULT: "#C4622D",
-          dark: "#9D4A1F",
-        },
-        amber: {
-          warm: "#D4A853",
-        },
-        sepia: {
-          light: "#C8BA9E",
-          DEFAULT: "#A89880",
-          dark: "#7A6E60",
+        accent: {
+          DEFAULT: "#D50032",
+          hover: "#B00028",
+          light: "rgba(213,0,50,0.06)",
         },
         border: {
-          DEFAULT: "#D4C9B8",
-          strong: "#B8A898",
+          DEFAULT: "#EBEBEB",
+          light: "#F5F5F5",
         },
       },
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-dm-mono)", "monospace"],
       },
       fontSize: {
         "display-xl": ["clamp(3rem, 8vw, 7rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
@@ -57,9 +45,6 @@ const config: Config = {
         "22": "5.5rem",
         "88": "22rem",
         "120": "30rem",
-      },
-      backgroundImage: {
-        "grain": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E\")",
       },
       borderWidth: {
         "0.5": "0.5px",
@@ -79,9 +64,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        "editorial": "0 1px 0 0 rgba(26,23,20,0.08), 0 4px 24px -4px rgba(26,23,20,0.06)",
-        "card": "inset 0 0 0 1px rgba(26,23,20,0.08), 0 2px 16px -4px rgba(26,23,20,0.08)",
-        "card-hover": "inset 0 0 0 1px rgba(196,98,45,0.2), 0 8px 32px -8px rgba(26,23,20,0.12)",
+        "editorial": "0 1px 0 0 rgba(0,0,0,0.04), 0 4px 24px -4px rgba(0,0,0,0.06)",
+        "card": "0 1px 3px rgba(0,0,0,0.04)",
+        "card-hover": "0 8px 30px -8px rgba(0,0,0,0.12)",
       },
     },
   },
