@@ -23,6 +23,7 @@
     "pagefind": "^1.5.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "resend": "^6.12.4",
     "sanity": "^5.26.0",
     "styled-components": "^6.4.2",
     "tailwind-merge": "^3.6.0"
