@@ -13,8 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const author = authors.find((a) => a.slug === slug);
   if (!author) return { title: "Author Not Found" };
   return {
-    title: `${author.name} — Fitlabreviews`,
-    description: `${author.role} at Fitlabreviews. ${author.bio.slice(0, 120)}...`,
+    title: `${author.name} — Reviewer Profile`,
+    description: `${author.role} — read their supplement reviews, credentials, and areas of expertise. ${author.bio.slice(0, 80)}`,
+    alternates: { canonical: `/authors/${slug}` },
   };
 }
 

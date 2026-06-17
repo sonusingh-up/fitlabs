@@ -14,12 +14,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Happee Beef Organs for Women Review (2026): Female Formula",
+  title: "Happee Beef Organs for Women Review (2026)",
   description:
     "Happee beef organ supplement for women review: female-specific organ blend with liver, spleen, uterus. Heme iron, B12, reproductive support. FSP score 7/10.",
   alternates: { canonical: "/reviews/happee-beef-organ-women" },
   openGraph: {
-    title: "Happee Beef Organs for Women Review (2026): Female Formula",
+    title: "Happee Beef Organs for Women Review (2026)",
     description:
       "Happee targets women specifically — adding reproductive organ tissue and higher iron density. Is the female-focused formulation justified by evidence? Full FSP review.",
     url: "https://fitlabreviews.com/reviews/happee-beef-organ-women",

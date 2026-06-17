@@ -6,7 +6,7 @@ import EvidenceBadge from "@/components/ui/EvidenceBadge";
 export const metadata: Metadata = {
   title: "Beef Organ Supplements Safety: Vitamin A, Heavy Metals",
   description:
-    "Complete safety guide for beef organ supplements: vitamin A toxicity risk, heavy metal testing, hemochromatosis contraindications, pregnancy limits. Evidence-based.",
+    "Beef organ supplement safety: vitamin A toxicity risk, heavy metal testing, hemochromatosis contraindications, and pregnancy limits. Evidence-based guide.",
   alternates: { canonical: "/research/beef-organ-supplements-safety" },
 };
 

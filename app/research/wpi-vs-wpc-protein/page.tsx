@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "WPI vs WPC Protein: What the Evidence Shows",
   description:
-    "WPI vs WPC protein: 90%+ vs 70–80% purity, under 1g vs 4–5g lactose, and 35% higher cost — yet matched doses produce identical muscle gains. Evidence-graded.",
+    "WPI vs WPC protein: 90%+ vs 70–80% purity, under 1g vs 4–5g lactose, 35% higher cost — yet matched doses yield identical muscle gains.",
   alternates: { canonical: "/research/wpi-vs-wpc-protein" },
 };
 

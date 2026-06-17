@@ -7,8 +7,9 @@ import type { EvidenceLevel } from "@/lib/types";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return {
-    title: `${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Fitlabreviews Research`,
-    description: `Evidence-based research article on supplement science. Reviewed by our editorial team.`,
+    title: `${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Research Deep-Dive`,
+    description: `Evidence-based research article with trial breakdowns, mechanism analysis, and clinical data. Reviewed and fact-checked by our editorial team.`,
+    alternates: { canonical: `/research/${slug}` },
   };
 }
 

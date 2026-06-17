@@ -18,12 +18,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Gorilla Mind Creatine HCl Review (2026) — CON-CRĒT® + Pepsin",
+  title: "Gorilla Mind Creatine HCl Review (2026) — 7/10",
   description:
-    "Gorilla Mind Creatine HCl: CON-CRĒT® creatine hydrochloride 2.5g + pepsin, 100 servings, $0.80/full dose. Is HCl worth it over monohydrate? Full audit. FSP 7/10.",
+    "Gorilla Mind Creatine HCl: CON-CRET 2.5g + pepsin, 100 servings, $0.80/dose. Is HCl worth it over monohydrate? Full audit. FSP 7/10.",
   alternates: { canonical: "/reviews/gorilla-mind-creatine-hcl" },
   openGraph: {
-    title: "Gorilla Mind Creatine HCl Review (2026) — CON-CRĒT® + Pepsin",
+    title: "Gorilla Mind Creatine HCl Review (2026) — 7/10",
     description:
       "38x more water soluble than monohydrate, dosed at 2.5g per scoop, with pepsin for GI tolerance. For people who genuinely struggle with monohydrate GI effects — this is the best-formulated HCl option on the market.",
     url: "https://fitlabreviews.com/reviews/gorilla-mind-creatine-hcl",

@@ -8,7 +8,7 @@ import type { EvidenceLevel } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Supplement Ingredient Research Index",
   description:
-    "Evidence-based profiles for 175+ supplement ingredients: dosage guidelines, mechanism of action, safety data, and form comparisons — across every major sports nutrition and health category.",
+    "Evidence-based profiles for 175+ supplement ingredients: dosage guidelines, mechanism of action, safety data, and form comparisons across sports nutrition and health.",
   alternates: { canonical: "/ingredients" },
 };
 

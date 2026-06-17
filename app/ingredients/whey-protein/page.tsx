@@ -8,7 +8,7 @@ import type { EvidenceLevel, ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Whey Protein Isolate: Benefits, Dosage & Side Effects",
-  description: "Whey protein isolate is the fastest-absorbing, highest-leucine protein available. Learn the proven MPS benefits, correct dosage (20–40g), WPI vs WPC differences, and safety profile.",
+  description: "Whey protein isolate: fastest-absorbing, highest-leucine protein. Proven MPS benefits, correct dose (20-40 g), WPI vs WPC comparison, and safety.",
   alternates: { canonical: "/ingredients/whey-protein" },
 };
 

@@ -20,12 +20,12 @@ import { SEED, seedScoreColor } from "@/lib/seed-tokens";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Seed DM-02™ Review: Is This the Most Bioavailable Multivitamin on the Market?",
+  title: "Seed DM-02 Multivitamin Review (2026) — 7/10",
   description:
-    "Seed DM-02 review: 20 vitamins/minerals at 100% DV, bioavailable chelated forms, ViaCap microbiome-aware delivery. $1.33/serving. Cellular complex underdosed. FSP 7/10.",
+    "Seed DM-02 review: 20 vitamins at 100% DV, chelated bioavailable forms, ViaCap delivery. $1.33/serving. Cellular complex underdosed. FSP 7/10.",
   alternates: { canonical: "/reviews/seed-dm-02" },
   openGraph: {
-    title: "Seed DM-02™ Review: Is This the Most Bioavailable Multivitamin on the Market?",
+    title: "Seed DM-02 Multivitamin Review (2026) — 7/10",
     description:
       "20 vitamins and minerals at 100% DV in chelated, bioavailable forms. ViaCap dual-capsule delivery with a microbiome-modulating prebiotic inner capsule. The first Co-Biotic multivitamin.",
     url: "https://fitlabreviews.com/reviews/seed-dm-02",

@@ -7,7 +7,7 @@ import type { EvidenceLevel } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Omega-3 (EPA & DHA) — Dosage, Benefits & Best Forms",
-  description: "Omega-3 fatty acids (EPA + DHA) reduce cardiovascular risk, joint inflammation, and muscle soreness. Evidence-based guide: correct dose, fish oil vs krill vs algae, and safety. 2026.",
+  description: "Omega-3 (EPA + DHA) reduce cardiovascular risk, joint inflammation, and soreness. Evidence-based dose guide, fish oil vs krill vs algae, safety.",
   alternates: { canonical: "/ingredients/omega-3" },
 };
 
@@ -351,7 +351,7 @@ export default function Omega3Page() {
               </table>
             </div>
 
-            <h3>Timing & absorption tips</h3>
+            <h2>Timing & absorption tips</h2>
             <p>
               Take omega-3 with the largest meal of the day — fat in food significantly improves absorption of triglyceride-form fish oil. Ethyl ester form shows the greatest absorption improvement with high-fat meals. No specific time of day is superior for efficacy. Splitting the daily dose across two meals can reduce GI discomfort.
             </p>
@@ -396,7 +396,7 @@ export default function Omega3Page() {
               </div>
             ))}
 
-            <h3>Quality matters — check for oxidation</h3>
+            <h2>Quality matters — check for oxidation</h2>
             <p>
               Rancid fish oil may worsen cardiovascular markers rather than improve them. When purchasing: (1) choose IFOS-certified products, (2) look for TOTOX values under 10 on the brand's website, (3) smell the capsules — fresh oil should be nearly odourless, (4) refrigerate after opening. Liquid omega-3 products are more prone to oxidation than capsules.
             </p>
@@ -405,7 +405,7 @@ export default function Omega3Page() {
           {/* § 7 — Who For */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
             <SectionHeading label="Section 07" figure="§ 07" title="Who Should" titleItalic="Take It?" size="sm" />
-            <h3>Good fit</h3>
+            <h2>Good fit</h2>
             {whoFor.map((g) => (
               <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: "3px solid #4A7C59", borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
@@ -419,7 +419,7 @@ export default function Omega3Page() {
               </div>
             ))}
 
-            <h3 style={{ marginTop: 24 }}>Use caution</h3>
+            <h2 style={{ marginTop: 24 }}>Use caution</h2>
             {cautionGroups.map((g) => (
               <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: "3px solid #D4A96A", borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>

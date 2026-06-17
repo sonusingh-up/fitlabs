@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Supplement Brand Directory",
-  description: "Independent brand profiles covering formula quality, label transparency, third-party testing, and overall brand reliability for every major supplement manufacturer.",
+  description: "Independent brand profiles covering formula quality, label transparency, third-party testing, and reliability ratings for every major supplement manufacturer.",
   alternates: { canonical: "/brands" },
 };
 

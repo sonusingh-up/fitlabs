@@ -4,8 +4,8 @@ import BmrCalculatorClient from "./BmrCalculatorClient";
 export const metadata: Metadata = {
   title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
   description:
-    "Most calculators stop at BMR. This one adds a plateau predictor, NEAT booster, and meal plan — free.",
-  alternates: { canonical: "https://fitlabreviews.com/tools/free/bmr-calculator" },
+    "Calculate your Basal Metabolic Rate and TDEE using the Mifflin-St Jeor equation, plus a plateau predictor and NEAT booster — free, instant, no sign-up required.",
+  alternates: { canonical: "/tools/free/bmr-calculator" },
   openGraph: {
     title: "🔥 Free BMR Calculator — Know Your Exact Calorie Target",
     description:

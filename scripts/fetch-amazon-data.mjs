@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * Build-time script: fetches product data from Amazon PA API (Creators API)
+ * Build-time script: fetches product data from Amazon Creators API
  * and writes it to data/amazon-cache.json.
  *
  * Usage:
  *   npm run fetch-amazon
  *
  * Required env vars (in .env.local):
- *   AMAZON_CLIENT_ID       — OAuth2 client ID from Creators API
- *   AMAZON_CLIENT_SECRET   — OAuth2 client secret from Creators API
+ *   AMAZON_CLIENT_ID       — OAuth2 client ID from Creators API (v3.x LWA)
+ *   AMAZON_CLIENT_SECRET   — OAuth2 client secret from Creators API (v3.x LWA)
  *   AMAZON_PARTNER_TAG     — Associates partner tag (e.g. supplementstr-20)
  */
 
@@ -50,7 +50,7 @@ if (!CLIENT_ID || !CLIENT_SECRET) {
   console.error(
     "❌ Missing AMAZON_CLIENT_ID or AMAZON_CLIENT_SECRET.\n" +
     "   Add them to .env.local or set as environment variables.\n" +
-    "   Get them from: https://webservices.amazon.com/paapi5/documentation/register-for-pa-api.html"
+    "   Get them from: https://affiliate-program.amazon.com/creatorsapi"
   );
   process.exit(1);
 }
@@ -82,11 +82,23 @@ function parseAsinsFromCatalog() {
   }));
 }
 
-// ── Amazon PA API via Creators API (OAuth2) ──────────────────────────────
+// ── Amazon Creators API (OAuth2 + Bearer token) ─────────────────────────
+//
+// Creators API v3.x (LWA — Login with Amazon) authentication:
+//   - Token URL: https://api.amazon.com/auth/o2/token  (NA region, v3.1)
+//   - Grant type: client_credentials
+//   - Scope: creatorsapi::default
+//   - Credentials: HTTP Basic auth header (base64 of client_id:client_secret)
+//
+// API endpoint:
+//   - Host: creatorsapi.amazon  (single global host for all marketplaces)
+//   - Path: /catalog/v1/getItems
+//   - Marketplace signalled via x-marketplace header
+//   - Request body uses lowerCamelCase field names
 
 const TOKEN_URL = "https://api.amazon.com/auth/o2/token";
-const PAAPI_HOST = "webservices.amazon.com";
-const PAAPI_ENDPOINT = `https://${PAAPI_HOST}/paapi5/getitems`;
+const CREATORS_API_HOST = "creatorsapi.amazon";
+const CREATORS_API_ENDPOINT = `https://${CREATORS_API_HOST}/catalog/v1/getItems`;
 
 let accessToken = null;
 let tokenExpiresAt = 0;
@@ -96,21 +108,29 @@ async function getToken() {
     return accessToken;
   }
 
-  console.log("🔑 Requesting OAuth2 access token...");
+  console.log("🔑 Requesting OAuth2 access token (Creators API v3.x LWA)...");
+
+  // v3.x LWA requires Basic auth header with base64(client_id:client_secret)
+  const basicAuth = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString("base64");
 
   const res = await fetch(TOKEN_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `Basic ${basicAuth}`,
+    },
     body: new URLSearchParams({
       grant_type: "client_credentials",
-      client_id: CLIENT_ID,
-      client_secret: CLIENT_SECRET,
-      scope: "ProductAdvertisingAPI",
+      scope: "creatorsapi::default",
     }),
   });
 
   if (!res.ok) {
     const body = await res.text();
+    console.error(`Token request failed (${res.status}):`);
+    console.error(`  Response body: ${body}`);
+    console.error(`  Token URL: ${TOKEN_URL}`);
+    console.error(`  Client ID: ${CLIENT_ID.slice(0, 30)}...`);
     throw new Error(`Token request failed (${res.status}): ${body}`);
   }
 
@@ -125,10 +145,11 @@ async function getToken() {
 async function fetchItems(asins) {
   const token = await getToken();
 
+  // Creators API uses lowerCamelCase field names (not PascalCase)
   const payload = {
-    ItemIds: asins,
-    ItemIdType: "ASIN",
-    Resources: [
+    itemIds: asins,
+    itemIdType: "ASIN",
+    resources: [
       "ItemInfo.Title",
       "ItemInfo.ByLineInfo",
       "Offers.Listings.Price",
@@ -136,23 +157,27 @@ async function fetchItems(asins) {
       "Offers.Listings.Availability.Type",
       "Images.Primary.Large",
     ],
-    PartnerTag: PARTNER_TAG,
-    PartnerType: "Associates",
-    Marketplace: "www.amazon.com",
+    partnerTag: PARTNER_TAG,
+    partnerType: "Associates",
   };
 
-  const res = await fetch(PAAPI_ENDPOINT, {
+  const res = await fetch(CREATORS_API_ENDPOINT, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "application/json; charset=utf-8",
+      Accept: "application/json",
       Authorization: `Bearer ${token}`,
-      "x-amz-target": "com.amazon.paapi5.v1.ProductAdvertisingAPIv1.GetItems",
+      "x-marketplace": "www.amazon.com",
     },
     body: JSON.stringify(payload),
   });
 
   if (!res.ok) {
     const body = await res.text();
+    console.error(`GetItems failed (${res.status}):`);
+    console.error(`  Response body: ${body}`);
+    console.error(`  Endpoint: ${CREATORS_API_ENDPOINT}`);
+    console.error(`  ASINs: ${asins.join(", ")}`);
     throw new Error(`GetItems failed (${res.status}): ${body}`);
   }
 
@@ -160,39 +185,44 @@ async function fetchItems(asins) {
 }
 
 function parseItem(item) {
-  const info = item.ItemInfo || {};
-  const title = info.Title?.DisplayValue || "";
-  const brand = info.ByLineInfo?.Brand?.DisplayValue || "";
+  // Creators API returns lowerCamelCase keys
+  const info = item.itemInfo || item.ItemInfo || {};
+  const title = (info.title || info.Title)?.displayValue || (info.title || info.Title)?.DisplayValue || "";
+  const byLine = info.byLineInfo || info.ByLineInfo || {};
+  const brand = (byLine.brand || byLine.Brand)?.displayValue || (byLine.brand || byLine.Brand)?.DisplayValue || "";
 
-  const offers = item.Offers || {};
-  const listing = (offers.Listings || [])[0];
-  const priceObj = listing?.Price;
-  const savingBasis = listing?.SavingBasis;
-  const availability = listing?.Availability?.Type;
+  const offers = item.offers || item.Offers || {};
+  const listings = offers.listings || offers.Listings || [];
+  const listing = listings[0];
+  const priceObj = listing?.price || listing?.Price;
+  const savingBasis = listing?.savingBasis || listing?.SavingBasis;
+  const availability = listing?.availability || listing?.Availability;
 
-  const images = item.Images || {};
-  const imageUrl = images.Primary?.Large?.URL;
+  const images = item.images || item.Images || {};
+  const primary = images.primary || images.Primary || {};
+  const large = primary.large || primary.Large || {};
+  const imageUrl = large.url || large.URL;
 
   return {
-    asin: item.ASIN,
+    asin: item.asin || item.ASIN,
     title,
-    url: item.DetailPageURL,
+    url: item.detailPageURL || item.DetailPageURL,
     imageUrl: imageUrl || undefined,
     price: priceObj
       ? {
-          amount: priceObj.Amount,
-          currency: priceObj.Currency,
-          display: priceObj.DisplayAmount,
+          amount: priceObj.amount || priceObj.Amount,
+          currency: priceObj.currency || priceObj.Currency,
+          display: priceObj.displayAmount || priceObj.DisplayAmount,
         }
       : undefined,
     listPrice: savingBasis
       ? {
-          amount: savingBasis.Amount,
-          currency: savingBasis.Currency,
-          display: savingBasis.DisplayAmount,
+          amount: savingBasis.amount || savingBasis.Amount,
+          currency: savingBasis.currency || savingBasis.Currency,
+          display: savingBasis.displayAmount || savingBasis.DisplayAmount,
         }
       : undefined,
-    availability: availability || undefined,
+    availability: (availability?.type || availability?.Type) || undefined,
     brand: brand || undefined,
     fetchedAt: new Date().toISOString(),
   };
@@ -201,7 +231,7 @@ function parseItem(item) {
 // ── Main ─────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log("\n📦 Amazon PA API — Build-time product data fetcher\n");
+  console.log("\n📦 Amazon Creators API — Build-time product data fetcher\n");
 
   const entries = parseAsinsFromCatalog();
   const uniqueAsins = [...new Set(entries.map((e) => e.asin))];
@@ -210,7 +240,7 @@ async function main() {
   const products = {};
   const errors = [];
 
-  // PA API allows max 10 items per request
+  // Creators API allows max 10 items per request
   for (let i = 0; i < uniqueAsins.length; i += 10) {
     const chunk = uniqueAsins.slice(i, i + 10);
     const chunkNum = Math.floor(i / 10) + 1;
@@ -223,15 +253,20 @@ async function main() {
     try {
       const data = await fetchItems(chunk);
 
-      for (const item of data.ItemsResult?.Items || []) {
+      // Handle both lowerCamelCase and PascalCase response keys
+      const items = data.itemsResult?.items || data.ItemsResult?.Items || [];
+      for (const item of items) {
         const parsed = parseItem(item);
         products[parsed.asin] = parsed;
         console.log(`    ✅ ${parsed.asin} — ${parsed.title.slice(0, 60)}`);
       }
 
       // Log errors for items not found
-      for (const err of data.Errors || []) {
-        console.log(`    ⚠️  ${err.Code}: ${err.Message}`);
+      const errs = data.errors || data.Errors || [];
+      for (const err of errs) {
+        const code = err.code || err.Code;
+        const message = err.message || err.Message;
+        console.log(`    ⚠️  ${code}: ${message}`);
         errors.push(err);
       }
     } catch (err) {
@@ -239,7 +274,7 @@ async function main() {
       errors.push({ batch: chunk, error: err.message });
     }
 
-    // Rate limit: 1 req/sec for PA API
+    // Rate limit: 1 req/sec
     if (i + 10 < uniqueAsins.length) {
       await new Promise((r) => setTimeout(r, 1100));
     }

@@ -41,7 +41,7 @@ const products = [
     grassFedClaim: true,
     approxRetinolPerServing: "~50,000 IU (very high — single-organ liver)",
     slug: "ancestral-supplements-beef-organs",
-    reviewUrl: "/reviews/ancestral-supplements-beef-organs",
+    reviewUrl: "/reviews/ancestral-supplements-beef-liver",
     buyUrl: "https://amzn.to/43xRRca",
     image: "/products/ancestral-supplements-beefliv.webp",
     bestFor: "Sourcing-conscious buyers who want NZ provenance + verifiable COA",
@@ -213,7 +213,7 @@ export default function AncestralVsHeartAndSoilPage() {
               <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                 Buy ↗
               </a>
-              <Link href="/reviews/ancestral-supplements-beef-organs" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#A89880", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              <Link href="/reviews/ancestral-supplements-beef-liver" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#A89880", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                 Review →
               </Link>
             </div>
@@ -544,7 +544,7 @@ export default function AncestralVsHeartAndSoilPage() {
                 <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                   Buy on Amazon <ExternalLink size={11} />
                 </a>
-                <Link href="/reviews/ancestral-supplements-beef-organs" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #3D3830", color: "#8A8480", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                <Link href="/reviews/ancestral-supplements-beef-liver" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #3D3830", color: "#8A8480", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
                   Review →
                 </Link>
               </div>
@@ -612,7 +612,7 @@ export default function AncestralVsHeartAndSoilPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
             {[
               { title: "Best Beef Organ Supplements — Carnivore Diet (2026)", desc: "Full 9-product category roundup with FSP rankings.", href: "/best/beef-organ-supplements-carnivore-diet" },
-              { title: "Ancestral Supplements Review — Full FSP Analysis", desc: "Deep-dive review with COA analysis, nutrient breakdown, and verdict.", href: "/reviews/ancestral-supplements-beef-organs" },
+              { title: "Ancestral Supplements Review — Full FSP Analysis", desc: "Deep-dive review with COA analysis, nutrient breakdown, and verdict.", href: "/reviews/ancestral-supplements-beef-liver" },
               { title: "Heart & Soil Review — Full FSP Analysis", desc: "Detailed review: Informed Sport certification, 5-organ formulation, and value assessment.", href: "/reviews/heart-and-soil-beef-organs" },
               { title: "Organ Supplement Reviews Hub", desc: "All 9 organ supplement reviews ranked by FSP score.", href: "/reviews" },
             ].map((item) => (

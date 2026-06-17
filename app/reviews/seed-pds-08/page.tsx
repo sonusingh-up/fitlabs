@@ -21,12 +21,12 @@ import { SEED, seedScoreColor } from "@/lib/seed-tokens";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Seed PDS-08™ Review: The Best Probiotic for Kids Ages 3–17?",
+  title: "Seed PDS-08 Kids Probiotic Review (2026) — 8/10",
   description:
     "Seed PDS-08 review: 9 pediatric strains, 24.5B AFU, 5g prebiotic fiber, double-blind RCT. The most evidence-backed probiotic for kids ages 3–17. FSP 8/10.",
   alternates: { canonical: "/reviews/seed-pds-08" },
   openGraph: {
-    title: "Seed PDS-08™ Review: The Best Probiotic for Kids Ages 3–17?",
+    title: "Seed PDS-08 Kids Probiotic Review (2026) — 8/10",
     description:
       "9 pediatric-specific probiotic strains, 24.5B AFU, and 5g dual-phase fiber prebiotic. The first 2-in-1 kids synbiotic tested in a double-blind, randomised, placebo-controlled trial.",
     url: "https://fitlabreviews.com/reviews/seed-pds-08",

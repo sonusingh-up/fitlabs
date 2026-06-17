@@ -17,7 +17,7 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Perfect Supplements Beef Liver Review (2026): USDA Organic",
+  title: "Perfect Supplements Beef Liver Review (2026)",
   description:
     "Perfect Supplements Beef Liver review: USDA organic certified, Brazil sourced, liver-only formula, $0.33/serving. The budget organic pick — FSP 8/10.",
   alternates: { canonical: "/reviews/perfect-supplements-beef-liver" },

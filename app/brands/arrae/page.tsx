@@ -24,7 +24,7 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": "https://fitlabreviews.com/brands/arrae#org",
   name: "Arrae",
-  url: "https://fitlabreviews.com",
+  url: "https://fitlabreviews.com/brands/arrae",
   foundingDate: "2020",
   founder: [
     { "@type": "Person", name: "Siffat Haider" },

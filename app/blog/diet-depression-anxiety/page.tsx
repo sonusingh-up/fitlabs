@@ -5,7 +5,7 @@ import MobileTOC from "@/components/ui/MobileTOC";
 
 export const metadata: Metadata = {
   title: "Food as Medicine: Diet's Impact on Depression & Anxiety",
-  description: "How specific dietary patterns, gut microbiome changes, and key nutrients directly affect depression and anxiety risk — with evidence from 10,000+ person trials.",
+  description: "How dietary patterns, gut microbiome changes, and key nutrients affect depression and anxiety risk — evidence from 10,000+ person trials.",
   alternates: { canonical: "/blog/diet-depression-anxiety" },
 };
 

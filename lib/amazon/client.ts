@@ -1,8 +1,24 @@
 import type { AmazonProduct } from "./types";
 
+/**
+ * Amazon Creators API client (v3.x — Login with Amazon OAuth2).
+ *
+ * Authentication:
+ *   - Token URL: https://api.amazon.com/auth/o2/token (NA, v3.1)
+ *   - Grant type: client_credentials
+ *   - Scope: creatorsapi::default
+ *   - Credentials sent via HTTP Basic auth header: base64(client_id:client_secret)
+ *
+ * API:
+ *   - Host: creatorsapi.amazon (single global host)
+ *   - GetItems: POST /catalog/v1/getItems
+ *   - Marketplace via x-marketplace header (not body param)
+ *   - Request body uses lowerCamelCase field names
+ */
+
 const TOKEN_URL = "https://api.amazon.com/auth/o2/token";
-const PAAPI_HOST = "webservices.amazon.com";
-const PAAPI_PATH = "/paapi5/getitems";
+const CREATORS_API_HOST = "creatorsapi.amazon";
+const GETITEMS_PATH = "/catalog/v1/getItems";
 
 let cachedToken: { access_token: string; expires_at: number } | null = null;
 
@@ -20,19 +36,29 @@ async function getAccessToken(): Promise<string> {
     );
   }
 
+  // Creators API v3.x (LWA) requires HTTP Basic auth with base64(client_id:client_secret)
+  const basicAuth = Buffer.from(`${clientId}:${clientSecret}`).toString(
+    "base64"
+  );
+
   const res = await fetch(TOKEN_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `Basic ${basicAuth}`,
+    },
     body: new URLSearchParams({
       grant_type: "client_credentials",
-      client_id: clientId,
-      client_secret: clientSecret,
-      scope: "ProductAdvertisingAPI",
+      scope: "creatorsapi::default",
     }),
   });
 
   if (!res.ok) {
     const body = await res.text();
+    console.error(
+      `[Amazon OAuth] Token request failed (${res.status}):`,
+      body
+    );
     throw new Error(`Amazon OAuth token error (${res.status}): ${body}`);
   }
 
@@ -51,15 +77,16 @@ export async function getItems(
 ): Promise<AmazonProduct[]> {
   if (asins.length === 0) return [];
   if (asins.length > 10) {
-    throw new Error("PA API GetItems supports max 10 ASINs per request");
+    throw new Error("Creators API GetItems supports max 10 ASINs per request");
   }
 
   const token = await getAccessToken();
 
+  // Creators API uses lowerCamelCase field names (not PascalCase)
   const payload = {
-    ItemIds: asins,
-    ItemIdType: "ASIN",
-    Resources: [
+    itemIds: asins,
+    itemIdType: "ASIN",
+    resources: [
       "ItemInfo.Title",
       "ItemInfo.ByLineInfo",
       "Offers.Listings.Price",
@@ -68,73 +95,103 @@ export async function getItems(
       "Images.Primary.Large",
       "BrowseNodeInfo.BrowseNodes.SalesRank",
     ],
-    PartnerTag: partnerTag,
-    PartnerType: "Associates",
-    Marketplace: "www.amazon.com",
+    partnerTag,
+    partnerType: "Associates",
   };
 
-  const res = await fetch(`https://${PAAPI_HOST}${PAAPI_PATH}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-      "x-amz-target":
-        "com.amazon.paapi5.v1.ProductAdvertisingAPIv1.GetItems",
-    },
-    body: JSON.stringify(payload),
-  });
+  const res = await fetch(
+    `https://${CREATORS_API_HOST}${GETITEMS_PATH}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+        "x-marketplace": "www.amazon.com",
+      },
+      body: JSON.stringify(payload),
+    }
+  );
 
   if (!res.ok) {
     const body = await res.text();
-    throw new Error(`PA API GetItems error (${res.status}): ${body}`);
+    console.error(
+      `[Amazon API] GetItems failed (${res.status}):`,
+      body,
+      `\nEndpoint: https://${CREATORS_API_HOST}${GETITEMS_PATH}`,
+      `\nASINs: ${asins.join(", ")}`
+    );
+    throw new Error(`Creators API GetItems error (${res.status}): ${body}`);
   }
 
   const data = await res.json();
   const now = new Date().toISOString();
 
-  return (data.ItemsResult?.Items ?? []).map(
-    (item: Record<string, unknown>): AmazonProduct => {
-      const info = item.ItemInfo as Record<string, unknown> | undefined;
-      const title = info?.Title as Record<string, string> | undefined;
-      const byLine = info?.ByLineInfo as Record<string, unknown> | undefined;
-      const brand = byLine?.Brand as Record<string, string> | undefined;
+  // Handle both lowerCamelCase (Creators API) and PascalCase (legacy) response keys
+  const items =
+    data.itemsResult?.items ?? data.ItemsResult?.Items ?? [];
 
-      const offers = item.Offers as Record<string, unknown> | undefined;
-      const listings = (offers?.Listings as unknown[]) ?? [];
-      const listing = listings[0] as Record<string, unknown> | undefined;
-      const priceObj = listing?.Price as Record<string, unknown> | undefined;
-      const savingBasis = listing?.SavingBasis as
+  return items.map(
+    (item: Record<string, unknown>): AmazonProduct => {
+      const info = (item.itemInfo ?? item.ItemInfo) as
         | Record<string, unknown>
         | undefined;
-      const availability = listing?.Availability as
+      const titleObj = (info?.title ?? info?.Title) as
+        | Record<string, string>
+        | undefined;
+      const byLine = (info?.byLineInfo ?? info?.ByLineInfo) as
+        | Record<string, unknown>
+        | undefined;
+      const brandObj = (byLine?.brand ?? byLine?.Brand) as
         | Record<string, string>
         | undefined;
 
-      const images = item.Images as Record<string, unknown> | undefined;
-      const primary = images?.Primary as Record<string, unknown> | undefined;
-      const large = primary?.Large as Record<string, string> | undefined;
+      const offers = (item.offers ?? item.Offers) as
+        | Record<string, unknown>
+        | undefined;
+      const listings = ((offers?.listings ?? offers?.Listings) as unknown[]) ?? [];
+      const listing = listings[0] as Record<string, unknown> | undefined;
+      const priceObj = (listing?.price ?? listing?.Price) as
+        | Record<string, unknown>
+        | undefined;
+      const savingBasis = (listing?.savingBasis ?? listing?.SavingBasis) as
+        | Record<string, unknown>
+        | undefined;
+      const availability = (listing?.availability ?? listing?.Availability) as
+        | Record<string, string>
+        | undefined;
+
+      const images = (item.images ?? item.Images) as
+        | Record<string, unknown>
+        | undefined;
+      const primary = (images?.primary ?? images?.Primary) as
+        | Record<string, unknown>
+        | undefined;
+      const large = (primary?.large ?? primary?.Large) as
+        | Record<string, string>
+        | undefined;
 
       return {
-        asin: item.ASIN as string,
-        title: title?.DisplayValue ?? "",
-        url: item.DetailPageURL as string,
-        imageUrl: large?.URL,
+        asin: (item.asin ?? item.ASIN) as string,
+        title: titleObj?.displayValue ?? titleObj?.DisplayValue ?? "",
+        url: (item.detailPageURL ?? item.DetailPageURL) as string,
+        imageUrl: large?.url ?? large?.URL,
         price: priceObj
           ? {
-              amount: priceObj.Amount as number,
-              currency: priceObj.Currency as string,
-              display: priceObj.DisplayAmount as string,
+              amount: (priceObj.amount ?? priceObj.Amount) as number,
+              currency: (priceObj.currency ?? priceObj.Currency) as string,
+              display: (priceObj.displayAmount ?? priceObj.DisplayAmount) as string,
             }
           : undefined,
         listPrice: savingBasis
           ? {
-              amount: savingBasis.Amount as number,
-              currency: savingBasis.Currency as string,
-              display: savingBasis.DisplayAmount as string,
+              amount: (savingBasis.amount ?? savingBasis.Amount) as number,
+              currency: (savingBasis.currency ?? savingBasis.Currency) as string,
+              display: (savingBasis.displayAmount ?? savingBasis.DisplayAmount) as string,
             }
           : undefined,
-        availability: availability?.Type,
-        brand: brand?.DisplayValue,
+        availability: availability?.type ?? availability?.Type,
+        brand: brandObj?.displayValue ?? brandObj?.DisplayValue,
         fetchedAt: now,
       };
     }

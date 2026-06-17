@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Affiliate Disclosure",
   description:
-    "How affiliate commissions work on Fitlabreviews, which partners we work with, and why commercial relationships never influence our editorial ratings or recommendations.",
+    "How affiliate commissions work on Fitlabreviews, which partners we use, and why commercial relationships never influence our editorial ratings.",
   alternates: { canonical: "/affiliate-disclosure" },
 };
 

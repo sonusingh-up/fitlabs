@@ -8,7 +8,7 @@ import type { ReviewRating } from "@/lib/types";
 export const metadata: Metadata = {
   title: "MuscleBlaze Brand Review (2026): USA's #1 Supplement Brand",
   description:
-    "MuscleBlaze brand profile: USA's largest sports nutrition brand, founded 2012 under HealthKart. Biozyme enzyme technology, FSSAI licensed, no Informed Sport certification. 7.5/10 avg score.",
+    "MuscleBlaze brand profile: USA's top sports nutrition brand, founded 2012. Biozyme enzyme tech, FSSAI licensed, no Informed Sport cert. 7.5/10 avg.",
   alternates: { canonical: "/brands/muscleblaze" },
 };
 

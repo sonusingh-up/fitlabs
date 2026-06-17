@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Creatine for Brain Health: Cognition & Memory",
   description:
-    "Creatine improves memory and cuts mental fatigue per multiple RCTs, with the biggest gains in vegetarians and adults over 65. Full 12-citation evidence review.",
+    "Creatine improves memory and cuts mental fatigue per multiple RCTs, with the biggest gains in vegetarians and over-65s. 12-citation review.",
   alternates: { canonical: "/research/creatine-brain-health" },
 };
 

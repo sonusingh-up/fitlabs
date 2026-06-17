@@ -18,12 +18,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Gorilla Mind Creatine Monohydrate Review (2026) — Rated 8/10",
+  title: "Gorilla Mind Creatine Mono Review (2026) — 8/10",
   description:
-    "Gorilla Mind Micronized Creatine: 5g per serving, 100 servings, $0.35/serving. HPLC tested. The value case for creatine monohydrate at its cleanest. FSP 8/10.",
+    "Gorilla Mind Creatine: 5g per serving, 100 servings, $0.35/serving. HPLC tested. The strongest value case for monohydrate. FSP 8/10.",
   alternates: { canonical: "/reviews/gorilla-mind-creatine-monohydrate" },
   openGraph: {
-    title: "Gorilla Mind Creatine Monohydrate Review (2026) — Rated 8/10",
+    title: "Gorilla Mind Creatine Mono Review (2026) — 8/10",
     description:
       "100 servings of micronized creatine monohydrate at 5g per serve. HPLC tested, unflavored, single ingredient. The strongest value case in the creatine category.",
     url: "https://fitlabreviews.com/reviews/gorilla-mind-creatine-monohydrate",

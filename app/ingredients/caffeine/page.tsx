@@ -7,7 +7,7 @@ import type { EvidenceLevel } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Caffeine — Dosage, Benefits & Side Effects",
-  description: "Caffeine is the most-studied legal ergogen. Learn the proven dose (3–6mg/kg), endurance and strength benefits, tolerance cycling, and safety profile. Evidence-based guide, 2026.",
+  description: "Caffeine is the most-studied legal ergogenic aid. Proven dose (3-6 mg/kg), endurance and strength gains, tolerance cycling, and safety. 2026 guide.",
   alternates: { canonical: "/ingredients/caffeine" },
 };
 
@@ -300,7 +300,7 @@ export default function CaffeinePage() {
               ))}
             </div>
 
-            <h3>Tolerance and receptor upregulation</h3>
+            <h2>Tolerance and receptor upregulation</h2>
             <p>
               Chronic caffeine exposure causes compensatory upregulation of adenosine receptors — the brain synthesises more receptors to overcome the blockade. This is the molecular basis of tolerance: the same dose produces a diminished effect over time. A 10–14 day caffeine-free washout period returns receptor density to baseline, fully restoring caffeine sensitivity.
             </p>
@@ -360,12 +360,12 @@ export default function CaffeinePage() {
               </table>
             </div>
 
-            <h3>Timing</h3>
+            <h2>Timing</h2>
             <p>
               Peak plasma caffeine occurs approximately 45–60 minutes after oral ingestion. Most research uses a 60-minute pre-exercise window. For endurance events, this aligns caffeine peak with the hardest portions of the effort. Some athletes split the dose — half 60 minutes before, half mid-race for longer events.
             </p>
 
-            <h3>Cycling protocol</h3>
+            <h2>Cycling protocol</h2>
             <p>
               For athletes who want to preserve full ergogenic potency, a common approach is <strong>5–6 weeks of supplementation followed by 1–2 weeks caffeine-free</strong>. This prevents deep tolerance accumulation. If a complete washout is impractical, ensuring at least 2–3 days per week without caffeine can partially maintain sensitivity.
             </p>
@@ -373,7 +373,7 @@ export default function CaffeinePage() {
               The lowest effective dose for cognitive benefits is considerably lower — 40–100mg is effective for attention and reaction time. Athletes using caffeine primarily for focus during technical training may not need performance doses (3–6mg/kg).
             </p>
 
-            <h3>Avoid within 6–8 hours of sleep</h3>
+            <h2>Avoid within 6–8 hours of sleep</h2>
             <p>
               Drake et al. (2013) showed that caffeine consumed 6 hours before bed objectively disrupted sleep quality even when participants felt unaffected. Given caffeine's ~5-hour half-life, a 400mg dose at 2pm still leaves 200mg active at 7pm and 100mg at midnight. Shift training sessions to allow a 6-hour clearance window before intended sleep.
             </p>
@@ -422,7 +422,7 @@ export default function CaffeinePage() {
               </div>
             ))}
 
-            <h3>Known side effects at high doses</h3>
+            <h2>Known side effects at high doses</h2>
             <p>
               At doses above 6mg/kg or in sensitive individuals: anxiety, jitteriness, elevated heart rate, GI distress (particularly on an empty stomach), insomnia, and headache. These are dose-dependent and resolve with dose reduction. Acute toxicity (seizures, cardiac events) requires doses well above 10g — essentially impossible to reach with commercial supplements.
             </p>
@@ -432,7 +432,7 @@ export default function CaffeinePage() {
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
             <SectionHeading label="Section 07" figure="§ 07" title="Who Should" titleItalic="Take It?" size="sm" />
 
-            <h3>Good fit</h3>
+            <h2>Good fit</h2>
             {whoFor.map((g) => (
               <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: "3px solid #4A7C59", borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
@@ -448,7 +448,7 @@ export default function CaffeinePage() {
               </div>
             ))}
 
-            <h3 style={{ marginTop: 24 }}>Use caution / not recommended</h3>
+            <h2 style={{ marginTop: 24 }}>Use caution / not recommended</h2>
             {cautionGroups.map((g) => (
               <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: `3px solid ${g.isContraindication ? "#C4622D" : "#D4A96A"}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>

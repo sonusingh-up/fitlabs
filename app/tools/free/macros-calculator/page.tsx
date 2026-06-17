@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "🔥 Free Macros Calculator — Protein, Carbs, and Fat Targets",
   description:
     "Calculate your exact daily protein, carb, and fat targets based on your goal, diet style, body weight, and training days. Free, instant, and personalized.",
-  alternates: { canonical: "https://fitlabreviews.com/tools/free/macros-calculator" },
+  alternates: { canonical: "/tools/free/macros-calculator" },
   openGraph: {
     title: "🔥 Free Macros Calculator — Protein, Carbs, and Fat Targets",
     description:

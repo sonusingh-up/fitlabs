@@ -4,8 +4,8 @@ import TableOfContents from "@/components/ui/TableOfContents";
 import MobileTOC from "@/components/ui/MobileTOC";
 
 export const metadata: Metadata = {
-  title: "Fitness Travel in 2026: Turn Your Vacation Into a Wellness Retreat",
-  description: "How to maintain training, nutrition, and recovery while travelling in 2026 — hotel gym hacks, supplement carry-on strategy, jet lag protocols, and destination wellness trends.",
+  title: "Fitness Travel 2026: Vacation Wellness Playbook",
+  description: "How to maintain training, nutrition, and recovery while travelling — hotel gym hacks, supplement carry-on strategy, jet lag protocols, and wellness destinations.",
   alternates: { canonical: "/blog/fitness-travel-2026" },
 };
 

@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Fitlabreviews — Our Mission & Team",
+  title: "About Us — Mission, Team & Editorial Process",
   description: "Fitlabreviews is an independent supplement research publication. Learn about our editorial process, values, and the team behind the reviews.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

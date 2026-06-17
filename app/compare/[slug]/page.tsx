@@ -9,8 +9,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const [a, , b] = slug.split("-vs-");
   return {
-    title: `${a?.replace(/-/g, " ")} vs ${b?.replace(/-/g, " ")} — Fitlabreviews Comparison`,
-    description: `Detailed side-by-side comparison including ingredients, dosages, price, and final recommendation.`,
+    title: `${a?.replace(/-/g, " ")} vs ${b?.replace(/-/g, " ")} — Head-to-Head`,
+    description: `Detailed side-by-side comparison with FSP scores, ingredients, dosages, price-per-serve, third-party testing, and final recommendation.`,
+    alternates: { canonical: `/compare/${slug}` },
   };
 }
 

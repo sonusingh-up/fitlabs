@@ -5,7 +5,7 @@ import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Supplement Reviews — Evidence-Rated, Formula-First",
-  description: "Independent supplement reviews rated with the Fitlab Scoring Protocol. Every review covers formula quality, label transparency, third-party verification, and value.",
+  description: "Independent supplement reviews rated via the Fitlab Scoring Protocol. Each covers formula quality, label transparency, third-party testing, and value.",
   alternates: { canonical: "/reviews" },
 };
 
