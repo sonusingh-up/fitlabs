@@ -29,49 +29,46 @@ export default function FeaturedBmrCalc() {
   const inputStyle: React.CSSProperties = {
     width: "100%",
     height: 46,
-    border: "1px solid #EBEBEB",
+    border: "1px solid #d7ddd9",
     borderRadius: 10,
     padding: "0 14px",
-    fontFamily: "var(--font-dm-sans), sans-serif",
     fontSize: 16,
     outline: "none",
-    color: "#2D2D2D",
+    color: "#17211c",
     backgroundColor: "#FFFFFF",
   };
 
   const labelStyle: React.CSSProperties = {
     fontSize: 13,
     fontWeight: 600,
-    color: "#737373",
+    color: "#586259",
     marginBottom: 8,
-    fontFamily: "var(--font-dm-sans), sans-serif",
   };
 
   return (
     <div style={{
-      border: "1px solid #EBEBEB",
+      border: "1px solid #e4e8e5",
       borderRadius: 20,
       overflow: "hidden",
     }} className="featured-calc-grid">
       {/* Form side */}
       <div style={{ padding: "40px 38px" }} className="featured-calc-form">
         <div style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: 11,
-          fontWeight: 700,
-          letterSpacing: "0.10em",
+          fontFamily: "var(--font-jetbrains), monospace",
+          fontSize: 12,
+          letterSpacing: "0.08em",
           textTransform: "uppercase",
-          color: "#D50032",
+          color: "#0f7a5a",
           marginBottom: 8,
         }}>
           Featured · BMR & TDEE
         </div>
         <h2 style={{
-          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontFamily: "var(--font-newsreader), Georgia, serif",
           fontSize: 30,
-          fontWeight: 600,
+          fontWeight: 500,
           margin: "0 0 24px",
-          color: "#2D2D2D",
+          color: "#17211c",
           letterSpacing: "-0.02em",
         }}>
           Find your calorie target
@@ -87,13 +84,12 @@ export default function FeaturedBmrCalc() {
                 flex: 1,
                 padding: "12px 0",
                 borderRadius: 10,
-                fontFamily: "var(--font-dm-sans), sans-serif",
                 fontWeight: 700,
                 fontSize: 15,
                 cursor: "pointer",
-                border: sex === "male" ? "1px solid #D50032" : "1px solid #EBEBEB",
-                background: sex === "male" ? "#D50032" : "#FFFFFF",
-                color: sex === "male" ? "#FFFFFF" : "#2D2D2D",
+                border: sex === "male" ? "1px solid #0f7a5a" : "1px solid #d7ddd9",
+                background: sex === "male" ? "#0f7a5a" : "#FFFFFF",
+                color: sex === "male" ? "#FFFFFF" : "#17211c",
               }}
             >
               Male
@@ -104,13 +100,12 @@ export default function FeaturedBmrCalc() {
                 flex: 1,
                 padding: "12px 0",
                 borderRadius: 10,
-                fontFamily: "var(--font-dm-sans), sans-serif",
                 fontWeight: 700,
                 fontSize: 15,
                 cursor: "pointer",
-                border: sex === "female" ? "1px solid #D50032" : "1px solid #EBEBEB",
-                background: sex === "female" ? "#D50032" : "#FFFFFF",
-                color: sex === "female" ? "#FFFFFF" : "#2D2D2D",
+                border: sex === "female" ? "1px solid #0f7a5a" : "1px solid #d7ddd9",
+                background: sex === "female" ? "#0f7a5a" : "#FFFFFF",
+                color: sex === "female" ? "#FFFFFF" : "#17211c",
               }}
             >
               Female
@@ -171,10 +166,11 @@ export default function FeaturedBmrCalc() {
             style={{
               ...inputStyle,
               appearance: "none",
-              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23737373' stroke-width='1.5'/%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23586259' stroke-width='1.5'/%3E%3C/svg%3E")`,
               backgroundRepeat: "no-repeat",
               backgroundPosition: "right 14px center",
               paddingRight: 36,
+              fontSize: 15,
             }}
           >
             <option value="1.2">Sedentary — little or no exercise</option>
@@ -188,7 +184,7 @@ export default function FeaturedBmrCalc() {
 
       {/* Result side */}
       <div style={{
-        background: "linear-gradient(150deg, #8B0020, #D50032)",
+        background: "linear-gradient(150deg, #0a4f3b, #0f7a5a)",
         color: "#FFFFFF",
         padding: "40px 38px",
         display: "flex",
@@ -196,18 +192,17 @@ export default function FeaturedBmrCalc() {
         justifyContent: "center",
       }} className="featured-calc-result">
         <div style={{
-          fontFamily: "var(--font-dm-sans), sans-serif",
-          fontSize: 11,
-          fontWeight: 700,
-          letterSpacing: "0.10em",
+          fontFamily: "var(--font-jetbrains), monospace",
+          fontSize: 12,
+          letterSpacing: "0.08em",
           textTransform: "uppercase",
-          color: "rgba(255,255,255,0.7)",
+          color: "#a7e3c9",
           marginBottom: 6,
         }}>
           YOUR BMR
         </div>
         <div style={{
-          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontFamily: "var(--font-newsreader), Georgia, serif",
           fontSize: 64,
           lineHeight: 1,
           marginBottom: 4,
@@ -216,7 +211,7 @@ export default function FeaturedBmrCalc() {
           {fmt(bmr)}
           <span style={{ fontSize: 20, opacity: 0.7 }}> kcal</span>
         </div>
-        <div style={{ fontSize: 14, color: "rgba(255,255,255,0.75)", marginBottom: 26 }}>
+        <div style={{ fontSize: 14, color: "#cdeadd", marginBottom: 26 }}>
           Calories burned at complete rest
         </div>
 
@@ -230,7 +225,7 @@ export default function FeaturedBmrCalc() {
             <span style={{ fontSize: 15, opacity: 0.9 }}>Maintenance (TDEE)</span>
             <strong style={{
               fontSize: 24,
-              fontFamily: "var(--font-playfair), Georgia, serif",
+              fontFamily: "var(--font-newsreader), Georgia, serif",
               fontWeight: 500,
             }}>
               {fmt(tdee)}
@@ -251,7 +246,7 @@ export default function FeaturedBmrCalc() {
 
         <div style={{
           fontSize: 11.5,
-          color: "rgba(255,255,255,0.6)",
+          color: "#a7e3c9",
           marginTop: 22,
           lineHeight: 1.5,
         }}>

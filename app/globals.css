@@ -952,6 +952,22 @@ html, body {
   .tools-grid { grid-template-columns: 1fr; }
 }
 
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--duration-base) var(--ease-out-expo),
+    border-color var(--duration-base) var(--ease-out-expo);
+  will-change: transform;
+}
+.tool-card > span:first-child {
+  margin-bottom: auto;
+}
+.tool-card:hover {
+  border-color: #0f7a5a !important;
+  transform: translateY(-4px);
+}
+
 /* ════════════════════════════════════════════════════════════════════════
    ANIMATION SYSTEM
    ════════════════════════════════════════════════════════════════════════ */
