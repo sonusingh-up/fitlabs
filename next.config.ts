@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/reviews/wpi-vs-wpc-protein",
+        destination: "/research/wpi-vs-wpc-protein",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
