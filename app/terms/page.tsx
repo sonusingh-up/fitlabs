@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "The terms governing your use of Fitlabreviews.com — acceptable use, intellectual property, limitation of liability, and governing law.",
+    "The terms governing your use of Fitlabreviews.com — acceptable use, intellectual property, limitation of liability, governing law, and dispute resolution.",
   alternates: { canonical: "/terms" },
 };
 

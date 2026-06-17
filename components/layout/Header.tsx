@@ -143,7 +143,7 @@ export default function Header() {
                     fontFamily: "var(--font-dm-sans), sans-serif",
                     borderRadius: 6,
                     /* Emil: fast color transition, expo-out */
-                    transition: "color 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+                    transition: "color 150ms var(--ease-out-expo)",
                     textDecoration: "none",
                     whiteSpace: "nowrap",
                   }}
@@ -153,7 +153,7 @@ export default function Header() {
                     <span style={{
                       display: "inline-flex",
                       /* Emil: chevron rotates smoothly on open */
-                      transition: "transform 200ms cubic-bezier(0.16, 1, 0.3, 1)",
+                      transition: "transform 200ms var(--ease-out-expo)",
                       transform: openDropdown === item.label ? "rotate(180deg)" : "rotate(0deg)",
                       opacity: 0.5,
                     }}>
@@ -182,7 +182,7 @@ export default function Header() {
                           padding: "8px 14px", fontSize: 13, color: "#2D2926",
                           fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none",
                           /* Emil: fast background + color on hover rows */
-                          transition: "background-color 120ms cubic-bezier(0.16, 1, 0.3, 1), color 120ms cubic-bezier(0.16, 1, 0.3, 1)",
+                          transition: "background-color 120ms var(--ease-out-expo), color 120ms var(--ease-out-expo)",
                           /* Stagger: each child item is slightly offset */
                           animationDelay: `${i * 20}ms`,
                         }}
@@ -211,7 +211,7 @@ export default function Header() {
               style={{
                 color: "#5C5650", display: "flex", alignItems: "center", padding: 6,
                 borderRadius: 6,
-                transition: "color 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+                transition: "color 150ms var(--ease-out-expo), background-color 150ms var(--ease-out-expo)",
               }}
               aria-label="Search"
               onMouseEnter={(e) => {
@@ -241,12 +241,12 @@ export default function Header() {
                 color: "#1A1714", padding: 6, background: "none", border: "none", cursor: "pointer",
                 borderRadius: 6,
                 /* Emil: instant press feedback on the hamburger */
-                transition: "transform 100ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+                transition: "transform 100ms var(--ease-out-expo), background-color 150ms var(--ease-out-expo)",
               }}
               aria-label="Toggle menu"
             >
               {/* Icon swaps with a subtle scale transition */}
-              <span style={{ display: "flex", transition: "transform 200ms cubic-bezier(0.16, 1, 0.3, 1)" }}>
+              <span style={{ display: "flex", transition: "transform 200ms var(--ease-out-expo)" }}>
                 {mobileOpen ? <X size={22} /> : <Menu size={22} />}
               </span>
             </button>
@@ -275,7 +275,7 @@ export default function Header() {
                       display: "block", flex: 1, fontWeight: 600, fontSize: 15,
                       color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif",
                       textDecoration: "none", padding: "12px 0",
-                      transition: "color 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+                      transition: "color 150ms var(--ease-out-expo)",
                     }}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -292,7 +292,7 @@ export default function Header() {
                       {/* Emil: chevron rotates smoothly instead of instantly flipping */}
                       <span style={{
                         display: "inline-flex",
-                        transition: "transform 220ms cubic-bezier(0.16, 1, 0.3, 1)",
+                        transition: "transform 220ms var(--ease-out-expo)",
                         transform: mobileExpanded === item.label ? "rotate(180deg)" : "rotate(0deg)",
                       }}>
                         <ChevronDown size={16} />
@@ -302,7 +302,7 @@ export default function Header() {
                 </div>
                 {item.children && mobileExpanded === item.label && (
                   <div
-                    style={{ paddingLeft: 12, paddingBottom: 8, animation: "fadeUp 200ms cubic-bezier(0.16, 1, 0.3, 1) both" }}
+                    style={{ paddingLeft: 12, paddingBottom: 8, animation: "fadeUp 200ms var(--ease-out-expo) both" }}
                   >
                     {item.children.map((child) => (
                       <Link
@@ -312,7 +312,7 @@ export default function Header() {
                           display: "block", fontSize: 13, color: "#5C5650",
                           fontFamily: "var(--font-dm-sans), sans-serif", padding: "6px 0",
                           textDecoration: "none",
-                          transition: "color 120ms cubic-bezier(0.16, 1, 0.3, 1)",
+                          transition: "color 120ms var(--ease-out-expo)",
                         }}
                         onClick={() => setMobileOpen(false)}
                         onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#C4622D")}

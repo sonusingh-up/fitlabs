@@ -1159,6 +1159,12 @@ html, body {
 .animate-fade-up:nth-child(4) { transition-delay: 180ms; }
 .animate-fade-up:nth-child(5) { transition-delay: 240ms; }
 .animate-fade-up:nth-child(6) { transition-delay: 300ms; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up { opacity: 1; transform: none; transition: none; }
+}
+@media print {
+  .animate-fade-up { opacity: 1; transform: none; }
+}
 
 /* ── Footer link hover ───────────────────────────────────────────────────── */
 .footer-link {

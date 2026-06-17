@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "WPI vs WPC Protein: What the Evidence Shows",
   description:
-    "WPI vs WPC protein: purity is 90%+ vs 70–80%, lactose is under 1g vs 4–5g per serving, and cost is 35% higher. But Morton et al. (2018) meta-analysis of 49 trials shows matched doses produce identical muscle gains. Evidence-graded breakdown.",
+    "WPI vs WPC protein: 90%+ vs 70–80% purity, under 1g vs 4–5g lactose, and 35% higher cost — yet matched doses produce identical muscle gains. Evidence-graded.",
   alternates: { canonical: "/research/wpi-vs-wpc-protein" },
 };
 
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "Does WPC have more bioactive compounds than WPI?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. WPC retains more native whey fractions — immunoglobulins IgG, IgA, IgM and lactoferrin — because it undergoes less aggressive processing. Wong et al. (1997) demonstrated immunomodulatory activity for these fractions. However, the quantities present in a standard 25g serving are far below the doses used in clinical research. Neither type provides clinically meaningful immune support at normal serving sizes.",
+        text: "Yes. WPC retains more native whey fractions — immunoglobulins IgG, IgA, IgM and lactoferrin — because it undergoes less aggressive processing. Wong et al. (1995) demonstrated immunomodulatory activity for these fractions. However, the quantities present in a standard 25g serving are far below the doses used in clinical research. Neither type provides clinically meaningful immune support at normal serving sizes.",
       },
     },
     {
@@ -391,7 +391,7 @@ export default function WPIvsWPCResearch() {
               {
                 num: "01",
                 title: "Immunoglobulins (IgG, IgA, IgM)",
-                body: "Immune-modulating proteins present at higher levels in WPC. Wong et al. (1997) showed immunomodulatory effects in animal models, but effective doses were 20–40g of lactoferrin daily — far beyond what a 25g protein serving provides. Human RCTs using whole whey protein for immune endpoints have produced inconsistent results (Hannan et al., 2020).",
+                body: "Immune-modulating proteins present at higher levels in WPC. Wong et al. (1995) showed immunomodulatory effects in animal models, but effective doses were 20–40g of lactoferrin daily — far beyond what a 25g protein serving provides. Human RCTs using whole whey protein for immune endpoints have produced inconsistent results (Hannan et al., 2020).",
               },
               {
                 num: "02",
@@ -630,7 +630,7 @@ export default function WPIvsWPCResearch() {
                 },
                 {
                   text: "Consumer Reports Investigation. Protein drinks: you don't need the extra protein or the heavy metals our tests found. Consumer Reports. July 2010.",
-                  url: "https://doi.org/10.1093/jn/136.2.533S",
+                  url: "https://www.consumerreports.org/health/protein-drinks/",
                 },
               ].map((ref, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
