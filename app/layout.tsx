@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, DM_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -21,12 +21,6 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const dmMono = DM_Mono({
-  variable: "--font-dm-mono",
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fitlabreviews.com"),
@@ -150,7 +144,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
+      className={`${playfair.variable} ${dmSans.variable} h-full antialiased`}
       style={{ backgroundColor: "#FFFFFF" }}
     >
       <head>
@@ -188,7 +182,7 @@ export default function RootLayout({
         style={{
           fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
           backgroundColor: "#FFFFFF",
-          color: "#111827",
+          color: "#2D2D2D",
         }}
       >
         <Header />
