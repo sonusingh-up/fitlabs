@@ -1,6 +1,42 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "sonusingh.up@yahoo.com";
+const ALLOWED_ORIGIN = "https://fitlabreviews.com";
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MAX_NAME = 100;
+const MAX_SUBJECT = 200;
+const MAX_MESSAGE = 5000;
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX_REQUESTS = 5;
+
+const rateMap = new Map<string, { count: number; resetAt: number }>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateMap.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_MAX_REQUESTS;
+}
+
+function getClientIp(req: NextRequest): string {
+  return (
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip") ||
+    "unknown"
+  );
+}
+
+function checkOrigin(req: NextRequest): boolean {
+  const origin = req.headers.get("origin");
+  if (!origin) return true;
+  return origin === ALLOWED_ORIGIN || origin.startsWith("http://localhost");
+}
+
 function getResend() {
   const key = process.env.RESEND_API_KEY;
   if (!key) throw new Error("RESEND_API_KEY is not set");
@@ -12,7 +48,8 @@ function escapeHtml(str: string) {
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function emailLayout(content: string) {
@@ -169,6 +206,18 @@ function welcomeSubscriberEmail() {
 }
 
 export async function POST(req: NextRequest) {
+  if (!checkOrigin(req)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const ip = getClientIp(req);
+  if (isRateLimited(ip)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const body = await req.json();
     const { type } = body;
@@ -180,11 +229,30 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "All fields are required" }, { status: 400 });
       }
 
-      const safeName = String(name);
-      const safeEmail = String(email);
-      const safeSubject = String(subject);
-      const safeMessage = String(message);
+      const safeName = String(name).slice(0, MAX_NAME);
+      const safeEmail = String(email).slice(0, 254);
+      const safeSubject = String(subject).slice(0, MAX_SUBJECT);
+      const safeMessage = String(message).slice(0, MAX_MESSAGE);
 
+      if (!EMAIL_RE.test(safeEmail)) {
+        return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+      }
+
+      const [notification, confirmation] = await Promise.all([
+        resend.emails.send({
+          from: "Fitlabreviews <onboarding@resend.dev>",
+          to: ADMIN_EMAIL,
+          subject: `Contact: ${safeSubject}`,
+          replyTo: safeEmail,
+          html: contactNotificationEmail(safeName, safeEmail, safeSubject, safeMessage),
+        }),
+        resend.emails.send({
+          from: "Fitlabreviews <onboarding@resend.dev>",
+          to: safeEmail,
+          subject: "We got your message — Fitlabreviews",
+          html: contactConfirmationEmail(safeName),
+        }),
+      ]);
       const notification = await resend.emails.send({
         from: "Fitlabreviews <onboarding@resend.dev>",
         to: "sonusingh.up@yahoo.com",
@@ -194,7 +262,8 @@ export async function POST(req: NextRequest) {
       });
 
       if (notification.error) {
-        return NextResponse.json({ error: notification.error.message }, { status: 500 });
+        console.error("[API/send] Resend error:", notification.error.message);
+        return NextResponse.json({ error: "Email could not be sent" }, { status: 500 });
       }
 
       resend.emails.send({
@@ -213,8 +282,26 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Email is required" }, { status: 400 });
       }
 
-      const safeEmail = String(email);
+      const safeEmail = String(email).slice(0, 254);
 
+      if (!EMAIL_RE.test(safeEmail)) {
+        return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+      }
+
+      const [notification, welcome] = await Promise.all([
+        resend.emails.send({
+          from: "Fitlabreviews <onboarding@resend.dev>",
+          to: ADMIN_EMAIL,
+          subject: "New Newsletter Subscriber",
+          html: subscriberNotificationEmail(safeEmail),
+        }),
+        resend.emails.send({
+          from: "Fitlabreviews <onboarding@resend.dev>",
+          to: safeEmail,
+          subject: "Welcome to Fitlabreviews",
+          html: welcomeSubscriberEmail(),
+        }),
+      ]);
       const notification = await resend.emails.send({
         from: "Fitlabreviews <onboarding@resend.dev>",
         to: "sonusingh.up@yahoo.com",
@@ -223,7 +310,8 @@ export async function POST(req: NextRequest) {
       });
 
       if (notification.error) {
-        return NextResponse.json({ error: notification.error.message }, { status: 500 });
+        console.error("[API/send] Resend error:", notification.error.message);
+        return NextResponse.json({ error: "Email could not be sent" }, { status: 500 });
       }
 
       resend.emails.send({
@@ -237,7 +325,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ error: "Invalid request type" }, { status: 400 });
-  } catch {
+  } catch (err) {
+    console.error("[API/send] Error:", err instanceof Error ? err.message : String(err));
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }
