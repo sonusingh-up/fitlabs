@@ -151,7 +151,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${playfair.variable} ${dmSans.variable} ${dmMono.variable} h-full antialiased`}
-      style={{ backgroundColor: "#F2EBD9" }}
+      style={{ backgroundColor: "#FFFFFF" }}
     >
       <head>
         {/* JSON-LD: Organization + WebSite structured data */}
@@ -187,8 +187,8 @@ export default function RootLayout({
         className="min-h-full flex flex-col"
         style={{
           fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          backgroundColor: "#F2EBD9",
-          color: "#1A1714",
+          backgroundColor: "#FFFFFF",
+          color: "#111827",
         }}
       >
         <Header />

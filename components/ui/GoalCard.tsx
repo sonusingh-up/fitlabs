@@ -14,14 +14,14 @@ interface GoalCardProps {
 }
 
 const goalStyle: Record<string, { bg: string; accent: string }> = {
-  "muscle-gain":  { bg: "linear-gradient(145deg, #2A1F16 0%, #1A1714 100%)", accent: "#C4622D" },
-  "weight-loss":  { bg: "linear-gradient(145deg, #0F1E16 0%, #0A1410 100%)", accent: "#2D6A4F" },
-  "energy-focus": { bg: "linear-gradient(145deg, #1A1408 0%, #140F06 100%)", accent: "#D4A96A" },
-  recovery:       { bg: "linear-gradient(145deg, #0A1220 0%, #070D18 100%)", accent: "#7EB8D4" },
+  "muscle-gain":  { bg: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", accent: "#0E8784" },
+  "weight-loss":  { bg: "linear-gradient(145deg, #064E3B 0%, #022C22 100%)", accent: "#059669" },
+  "energy-focus": { bg: "linear-gradient(145deg, #78350F 0%, #451A03 100%)", accent: "#D97706" },
+  recovery:       { bg: "linear-gradient(145deg, #1E3A5F 0%, #0F172A 100%)", accent: "#3B82F6" },
 };
 
 export default function GoalCard({ slug, label, description, topIngredients, code, image }: GoalCardProps) {
-  const gs = goalStyle[slug] ?? { bg: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)", accent: "#C4622D" };
+  const gs = goalStyle[slug] ?? { bg: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", accent: "#0E8784" };
 
   return (
     <Link
@@ -29,21 +29,22 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
       style={{
         display: "flex",
         flexDirection: "column",
-        borderRadius: 12,
+        borderRadius: 14,
         overflow: "hidden",
-        border: "1px solid #D4C9B8",
+        border: "1px solid #E5E7EB",
         textDecoration: "none",
-        backgroundColor: "#F8F2E4",
+        backgroundColor: "#FFFFFF",
+        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
         transition: "box-shadow 0.25s, transform 0.25s",
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.boxShadow = "0 16px 48px -12px rgba(26,23,20,0.18)";
+        el.style.boxShadow = "0 12px 40px -10px rgba(0,0,0,0.12)";
         el.style.transform = "translateY(-4px)";
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.boxShadow = "none";
+        el.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
         el.style.transform = "translateY(0)";
       }}
     >
@@ -67,10 +68,10 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
         {code && (
           <span style={{
             position: "absolute", top: 12, left: 12,
-            fontFamily: "var(--font-dm-mono), monospace",
-            fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase",
+            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontSize: 9, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase",
             color: "rgba(255,255,255,0.9)",
-            backgroundColor: "rgba(26,23,20,0.45)",
+            backgroundColor: "rgba(17,24,39,0.45)",
             backdropFilter: "blur(4px)",
             padding: "3px 8px", borderRadius: 4,
             zIndex: 2,
@@ -90,24 +91,24 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
         <h3 style={{
           fontFamily: "var(--font-playfair), Georgia, serif",
           fontSize: "1.1rem", fontWeight: 700,
-          color: "#1A1714", letterSpacing: "-0.01em", margin: 0,
+          color: "#111827", letterSpacing: "-0.01em", margin: 0,
         }}>{label}</h3>
 
-        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, flex: 1 }}>{description}</p>
+        <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0, flex: 1 }}>{description}</p>
 
         <div>
           <p style={{
-            fontSize: 9, color: "#8A8480",
-            fontFamily: "var(--font-dm-mono), monospace",
-            letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 7,
+            fontSize: 9, color: "#9CA3AF",
+            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 7,
           }}>Key Ingredients</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
             {topIngredients.slice(0, 3).map((ing) => (
               <span key={ing} style={{
                 padding: "3px 8px",
-                backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8",
-                borderRadius: 4, fontSize: 10, color: "#5C5650",
-                fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em",
+                backgroundColor: "#F3F4F6", border: "1px solid #E5E7EB",
+                borderRadius: 6, fontSize: 10, color: "#6B7280",
+                fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 500, letterSpacing: "0.06em",
               }}>{ing}</span>
             ))}
           </div>
@@ -115,7 +116,7 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
 
         <span style={{
           display: "flex", alignItems: "center", gap: 4,
-          fontSize: 12, color: "#C4622D", fontWeight: 600,
+          fontSize: 12, color: "#0E8784", fontWeight: 600,
           fontFamily: "var(--font-dm-sans), sans-serif",
         }}>
           View Guide <ArrowRight size={11} />

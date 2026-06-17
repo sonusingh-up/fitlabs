@@ -39,9 +39,9 @@ const bestProducts = [
     buyUrl: "https://amzn.to/4e73lcN",
     reviewSlug: "dymatize-iso100-review-2026",
     image: "dymatize-iso100.webp",
-    bgFrom: "#2A1F16",
-    bgTo: "#1A1410",
-    accent: "#C4622D",
+    bgFrom: "#1F2937",
+    bgTo: "#111827",
+    accent: "#0E8784",
   },
   {
     name: "BULK Black Pre-Workout",
@@ -54,9 +54,9 @@ const bestProducts = [
     buyUrl: "https://amzn.to/3RPRlnm",
     reviewSlug: "transparent-labs-bulk-black-review",
     image: "tl-bulk-black-preworkout.webp",
-    bgFrom: "#2A1410",
-    bgTo: "#1A0E0A",
-    accent: "#E5533D",
+    bgFrom: "#1F2937",
+    bgTo: "#111827",
+    accent: "#EF4444",
   },
   {
     name: "Beef Organs Complex",
@@ -69,9 +69,9 @@ const bestProducts = [
     buyUrl: "https://amzn.to/3Q2X5ts",
     reviewSlug: "heart-and-soil-beef-organs",
     image: "HEART-SOIL.webp",
-    bgFrom: "#1E1B16",
-    bgTo: "#141210",
-    accent: "#8B5E3C",
+    bgFrom: "#1F2937",
+    bgTo: "#111827",
+    accent: "#92400E",
   },
   {
     name: "Creatine HMB",
@@ -84,9 +84,9 @@ const bestProducts = [
     buyUrl: "https://amzn.to/3Qba8ZR",
     reviewSlug: "transparent-labs-creatine-hmb",
     image: "tl-creatine-hmb.webp",
-    bgFrom: "#0F1E1C",
-    bgTo: "#0A1614",
-    accent: "#2D6A4F",
+    bgFrom: "#1F2937",
+    bgTo: "#111827",
+    accent: "#059669",
   },
   {
     name: "DS-01 Daily Synbiotic",
@@ -99,9 +99,9 @@ const bestProducts = [
     buyUrl: "https://amzn.to/4vm1F57",
     reviewSlug: "seed-ds-01",
     image: "seed-ds-01.webp",
-    bgFrom: "#101A24",
-    bgTo: "#0A1218",
-    accent: "#3A5F8B",
+    bgFrom: "#1E3A5F",
+    bgTo: "#111827",
+    accent: "#3B82F6",
   },
   {
     name: "Sleep",
@@ -114,18 +114,18 @@ const bestProducts = [
     buyUrl: "https://amzn.to/4x4WZCs",
     reviewSlug: "performance-lab-sleep",
     image: "perlab-sleep.webp",
-    bgFrom: "#1A1624",
-    bgTo: "#12101A",
-    accent: "#6B5B95",
+    bgFrom: "#1F2937",
+    bgTo: "#111827",
+    accent: "#7C3AED",
   },
 ];
 
 const blogPosts = [
-  { slug: "sleep-window-anti-aging", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging", category: "Longevity & Sleep", figure: "BLG-001", readTime: "9 min", date: "May 2026", accent: "#1A6B3A", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
-  { slug: "glp1-benefits-beyond-weight-loss", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss", category: "Pharmacology", figure: "BLG-002", readTime: "13 min", date: "May 2026", accent: "#C4622D", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
-  { slug: "plant-foods-menopause", title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally", category: "Women's Health", figure: "BLG-003", readTime: "12 min", date: "May 2026", accent: "#2D6A4F", badge: "Moderate Evidence", badgeColor: "#92620A" },
-  { slug: "diet-depression-anxiety", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety", category: "Mental Health", figure: "BLG-004", readTime: "14 min", date: "May 2026", accent: "#92620A", badge: "Strong Evidence", badgeColor: "#1A6B3A" },
-  { slug: "fitness-travel-2026", title: "Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat", category: "Training & Lifestyle", figure: "BLG-005", readTime: "11 min", date: "May 2026", accent: "#7EB8D4", badge: "Practical Guide", badgeColor: "#5C5650" },
+  { slug: "sleep-window-anti-aging", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging", category: "Longevity & Sleep", figure: "BLG-001", readTime: "9 min", date: "May 2026", accent: "#059669", badge: "Strong Evidence", badgeColor: "#059669" },
+  { slug: "glp1-benefits-beyond-weight-loss", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Surprising Benefits Beyond Weight Loss", category: "Pharmacology", figure: "BLG-002", readTime: "13 min", date: "May 2026", accent: "#0E8784", badge: "Strong Evidence", badgeColor: "#059669" },
+  { slug: "plant-foods-menopause", title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain Naturally", category: "Women's Health", figure: "BLG-003", readTime: "12 min", date: "May 2026", accent: "#059669", badge: "Moderate Evidence", badgeColor: "#D97706" },
+  { slug: "diet-depression-anxiety", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety", category: "Mental Health", figure: "BLG-004", readTime: "14 min", date: "May 2026", accent: "#D97706", badge: "Strong Evidence", badgeColor: "#059669" },
+  { slug: "fitness-travel-2026", title: "Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat", category: "Training & Lifestyle", figure: "BLG-005", readTime: "11 min", date: "May 2026", accent: "#3B82F6", badge: "Practical Guide", badgeColor: "#6B7280" },
 ];
 
 const ingredients = [
@@ -150,30 +150,29 @@ const trustPoints = [
 
 export default function HomePage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* HERO */}
       <section style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 48 }}>
-          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "#A89880" }}>VOL. I · ISSUE Nº 01</span>
-          <span style={{ width: 40, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "#C4622D" }}>Supplement Research Editorial</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 40 }}>
+          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#9CA3AF", fontWeight: 600 }}>Evidence-Led Reviews</span>
+          <span style={{ width: 32, height: 1, backgroundColor: "#E5E7EB", display: "inline-block" }} />
+          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0E8784", fontWeight: 600 }}>Research-Grade Analysis</span>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "end" }}>
           <div>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1A1714", lineHeight: 0.95, marginBottom: 24 }}>
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#111827", lineHeight: 0.95, marginBottom: 24 }}>
               Evidence-led
               <br />
-              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>supplement</em>
+              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#6B7280" }}>supplement</em>
               <br />
               reviews.
             </h1>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 440, marginBottom: 32 }}>
+            <p style={{ fontSize: 16, color: "#6B7280", lineHeight: 1.7, maxWidth: 440, marginBottom: 32 }}>
               We analyse the science behind every label so you can buy smarter. Independent, ingredient-first reviews for the American and global wellness market.
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              {/* Emil: .btn-primary has scale(0.97) :active press state */}
               <Link href="/reviews" className="btn-primary">
                 Browse Reviews <ArrowRight size={14} />
               </Link>
@@ -183,26 +182,25 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div style={{ borderRadius: 12, overflow: "hidden", maxWidth: 400, border: "1px solid rgba(212,201,184,0.4)" }}>
+          <div style={{ borderRadius: 16, overflow: "hidden", maxWidth: 400, border: "1px solid #E5E7EB", boxShadow: "0 4px 24px -4px rgba(0,0,0,0.06)" }}>
             {/* Dashboard header */}
-            <div style={{ padding: "14px 20px", background: "linear-gradient(145deg, #1E1B18 0%, #141210 100%)", display: "flex", justifyContent: "space-between", alignItems: "center", position: "relative" }}>
-              <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.04) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
-              <span style={{ position: "relative", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)" }}>Research Dashboard</span>
-              <span style={{ position: "relative", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.1em" }}>● LIVE</span>
+            <div style={{ padding: "14px 20px", background: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "rgba(255,255,255,0.5)", fontWeight: 600 }}>Research Dashboard</span>
+              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, color: "#0E8784", letterSpacing: "0.1em", fontWeight: 600 }}>● LIVE</span>
             </div>
-            <div style={{ height: 2, background: "linear-gradient(90deg, #C4622D 0%, transparent 70%)" }} />
+            <div style={{ height: 2, background: "linear-gradient(90deg, #0E8784 0%, transparent 70%)" }} />
             {[
               { label: "Reviews Published", value: "142+", sub: "Across 12 categories" },
               { label: "Ingredients Profiled", value: "87", sub: "With evidence levels" },
               { label: "Avg. Research Hours", value: "18h", sub: "Per review published" },
               { label: "Affiliate Influence", value: "Zero", sub: "Ratings are always independent" },
             ].map((stat, i) => (
-              <div key={stat.label} style={{ padding: "16px 20px", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between", alignItems: "center", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+              <div key={stat.label} style={{ padding: "16px 20px", borderBottom: "1px solid #F3F4F6", display: "flex", justifyContent: "space-between", alignItems: "center", backgroundColor: i % 2 === 0 ? "#F8FAFB" : "#FFFFFF" }}>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>{stat.label}</p>
-                  <p style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{stat.sub}</p>
+                  <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#9CA3AF", marginBottom: 3, fontWeight: 600 }}>{stat.label}</p>
+                  <p style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif" }}>{stat.sub}</p>
                 </div>
-                <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 24, fontWeight: 700, color: "#1A1714" }}>{stat.value}</span>
+                <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 24, fontWeight: 700, color: "#111827" }}>{stat.value}</span>
               </div>
             ))}
           </div>
@@ -210,13 +208,12 @@ export default function HomePage() {
       </section>
 
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
-        <div style={{ borderTop: "1px solid #D4C9B8" }} />
+        <div style={{ borderTop: "1px solid #E5E7EB" }} />
       </div>
 
       {/* FEATURED REVIEWS */}
       <section style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
         <SectionHeading label="Featured Reviews" figure="SEC. 01" title="Latest from" titleItalic="the lab" subtitle="In-depth, evidence-led analysis of the supplements everyone is talking about." />
-        {/* Emil: animate-fade-up + is-visible added by IntersectionObserver in HomeInteractive */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           {featuredReviews.map((review, i) => (
             <div key={review.slug} className="animate-fade-up">
@@ -231,41 +228,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BEST PRODUCTS — EDITOR'S PICKS AWARDS BOARD */}
+      {/* BEST PRODUCTS — EDITOR'S PICKS */}
       <section
         style={{
-          borderTop: "1px solid rgba(196,98,45,0.35)",
-          backgroundColor: "#15120E",
-          backgroundImage:
-            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(196,98,45,0.13), transparent 60%)",
+          borderTop: "1px solid #E5E7EB",
+          backgroundColor: "#111827",
           position: "relative",
           overflow: "hidden",
         }}
         className="pad-section px-page"
       >
-        {/* Grid texture atmosphere */}
-        <div
-          aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(242,235,217,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.025) 1px, transparent 1px)",
-            backgroundSize: "44px 44px",
-            maskImage: "radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%)",
-            WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%)",
-            pointerEvents: "none",
-          }}
-        />
-
         <div style={{ maxWidth: 1280, margin: "0 auto", position: "relative" }}>
-          {/* ── Award masthead ─────────────────────────────────────────── */}
+          {/* Award masthead */}
           <div style={{ textAlign: "center", marginBottom: 52 }}>
-            {/* Award seal */}
             <div style={{ display: "inline-flex", marginBottom: 22 }}>
-              <svg width={62} height={62} viewBox="0 0 62 62" aria-hidden style={{ filter: "drop-shadow(0 4px 14px rgba(196,98,45,0.35))" }}>
-                <circle cx={31} cy={31} r={29} fill="none" stroke="#C4622D" strokeWidth={1} opacity={0.45} />
-                <circle cx={31} cy={31} r={24} fill="none" stroke="#C4622D" strokeWidth={1.5} />
+              <svg width={62} height={62} viewBox="0 0 62 62" aria-hidden style={{ filter: "drop-shadow(0 4px 14px rgba(14,135,132,0.35))" }}>
+                <circle cx={31} cy={31} r={29} fill="none" stroke="#0E8784" strokeWidth={1} opacity={0.45} />
+                <circle cx={31} cy={31} r={24} fill="none" stroke="#0E8784" strokeWidth={1.5} />
                 {Array.from({ length: 24 }).map((_, i) => {
                   const a = (i / 24) * Math.PI * 2;
                   const r1 = 24, r2 = 28.5;
@@ -276,7 +255,7 @@ export default function HomePage() {
                       y1={31 + Math.sin(a) * r1}
                       x2={31 + Math.cos(a) * r2}
                       y2={31 + Math.sin(a) * r2}
-                      stroke="#C4622D"
+                      stroke="#0E8784"
                       strokeWidth={1}
                       opacity={0.5}
                     />
@@ -284,35 +263,34 @@ export default function HomePage() {
                 })}
                 <path
                   d="M31 19l3.1 6.3 6.9 1-5 4.9 1.2 6.9L31 41.7l-6.2 3.3 1.2-6.9-5-4.9 6.9-1z"
-                  fill="#C4622D"
+                  fill="#0E8784"
                 />
               </svg>
             </div>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 16 }}>
-              <span style={{ width: 28, height: 1, backgroundColor: "rgba(196,98,45,0.5)" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase", color: "#C4622D" }}>
+              <span style={{ width: 28, height: 1, backgroundColor: "rgba(14,135,132,0.5)" }} />
+              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0E8784", fontWeight: 600 }}>
                 Fitlab Selects · 2026
               </span>
-              <span style={{ width: 28, height: 1, backgroundColor: "rgba(196,98,45,0.5)" }} />
+              <span style={{ width: 28, height: 1, backgroundColor: "rgba(14,135,132,0.5)" }} />
             </div>
 
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.1rem, 5vw, 3.4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1, margin: 0 }}>
-              The Editor&apos;s <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C4622D" }}>Picks</em>
+            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.1rem, 5vw, 3.4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F9FAFB", lineHeight: 1, margin: 0 }}>
+              The Editor&apos;s <em style={{ fontStyle: "italic", fontWeight: 400, color: "#0E8784" }}>Picks</em>
             </h2>
-            <p style={{ margin: "18px auto 0", maxWidth: 540, fontSize: 15, color: "#9A938A", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ margin: "18px auto 0", maxWidth: 540, fontSize: 15, color: "#9CA3AF", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
               Six supplements that topped our FSP rubric this year — independently tested, fully label-disclosed, ranked by the evidence and nothing else.
             </p>
           </div>
 
-          {/* ── Ranked board ───────────────────────────────────────────── */}
+          {/* Ranked board */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 18 }}>
             {bestProducts.map((product, i) => {
               const rank = i + 1;
               const isPodium = rank <= 3;
               return (
                 <div key={product.reviewSlug} className="animate-fade-up hover-card" style={{ position: "relative", borderRadius: 12 }}>
-                  {/* Rank medallion — top-right, overlapping the card */}
                   <div
                     aria-hidden
                     style={{
@@ -327,15 +305,15 @@ export default function HomePage() {
                       alignItems: "center",
                       justifyContent: "center",
                       background: isPodium
-                        ? "linear-gradient(145deg, #C4622D 0%, #9A4A1E 100%)"
-                        : "linear-gradient(145deg, #2A2520 0%, #1A1612 100%)",
-                      border: isPodium ? "1px solid #DA7B45" : "1px solid #3A332C",
+                        ? "linear-gradient(145deg, #0E8784 0%, #0B6B69 100%)"
+                        : "linear-gradient(145deg, #374151 0%, #1F2937 100%)",
+                      border: isPodium ? "1px solid #14B8A6" : "1px solid #4B5563",
                       boxShadow: isPodium
-                        ? "0 6px 18px -4px rgba(196,98,45,0.55)"
+                        ? "0 6px 18px -4px rgba(14,135,132,0.55)"
                         : "0 6px 16px -6px rgba(0,0,0,0.6)",
                     }}
                   >
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 800, color: isPodium ? "#F2EBD9" : "#A89880", lineHeight: 1 }}>
+                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 800, color: isPodium ? "#FFFFFF" : "#9CA3AF", lineHeight: 1 }}>
                       {rank}
                     </span>
                   </div>
@@ -345,9 +323,9 @@ export default function HomePage() {
             })}
           </div>
 
-          {/* ── Footer rule + CTA ──────────────────────────────────────── */}
+          {/* Footer CTA */}
           <div style={{ marginTop: 44, display: "flex", alignItems: "center", gap: 20 }}>
-            <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(212,201,184,0.2))" }} />
+            <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.1))" }} />
             <Link
               href="/reviews"
               className="hover-border-warm"
@@ -356,8 +334,8 @@ export default function HomePage() {
                 alignItems: "center",
                 gap: 8,
                 padding: "11px 26px",
-                border: "1px solid rgba(212,201,184,0.28)",
-                color: "#C8C0B4",
+                border: "1px solid rgba(255,255,255,0.15)",
+                color: "#D1D5DB",
                 fontSize: 13,
                 fontWeight: 600,
                 borderRadius: 8,
@@ -368,13 +346,13 @@ export default function HomePage() {
             >
               See All Reviewed Products <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
-            <span style={{ flex: 1, height: 1, background: "linear-gradient(270deg, transparent, rgba(212,201,184,0.2))" }} />
+            <span style={{ flex: 1, height: 1, background: "linear-gradient(270deg, transparent, rgba(255,255,255,0.1))" }} />
           </div>
         </div>
       </section>
 
       {/* BEST OF CATEGORIES */}
-      <section style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section px-page">
+      <section style={{ borderTop: "1px solid #E5E7EB", borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }} className="pad-section px-page">
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <SectionHeading label="Best Of" figure="SEC. 03" title="Roundups &" titleItalic="top picks" subtitle="Curated shortlists for when you need a clear recommendation, not a wall of text." />
           <BestOfGrid />
@@ -390,18 +368,18 @@ export default function HomePage() {
       </section>
 
       {/* INGREDIENT RESEARCH */}
-      <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#1A1714" }} className="pad-section px-page">
+      <section style={{ borderTop: "1px solid #E5E7EB", backgroundColor: "#111827" }} className="pad-section px-page">
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ marginBottom: 40 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650" }}>SEC. 05</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#5C5650", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Ingredient Research</span>
+              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6B7280", fontWeight: 600 }}>SEC. 05</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#374151", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0E8784", fontWeight: 600 }}>Ingredient Research</span>
             </div>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05 }}>
-              Know what <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8A8480" }}>you&apos;re taking</em>
+            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.025em", color: "#F9FAFB", lineHeight: 1.05 }}>
+              Know what <em style={{ fontStyle: "italic", fontWeight: 400, color: "#9CA3AF" }}>you&apos;re taking</em>
             </h2>
-            <p style={{ marginTop: 12, fontSize: 15, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ marginTop: 12, fontSize: 15, color: "#6B7280", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
               Deep-dive profiles on the ingredients inside your supplements — what the evidence actually says.
             </p>
           </div>
@@ -413,7 +391,7 @@ export default function HomePage() {
             ))}
           </div>
           <div style={{ marginTop: 32, textAlign: "center" }}>
-            <Link href="/ingredients" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+            <Link href="/ingredients" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(255,255,255,0.15)", color: "#9CA3AF", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
               Explore Ingredient Library <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
           </div>
@@ -434,25 +412,25 @@ export default function HomePage() {
       </section>
 
       {/* LATEST FROM THE BLOG */}
-      <section style={{ borderTop: "1px solid #D4C9B8", maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
+      <section style={{ borderTop: "1px solid #E5E7EB", maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
         <SectionHeading label="Blog" figure="SEC. 07" title="From the" titleItalic="blog" subtitle="Research-led articles on nutrition science, longevity, mental health, and fitness lifestyle." />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
           {blogPosts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
               className="hub-card animate-fade-up"
-              style={{ display: "block", borderRadius: 12, overflow: "hidden", border: "1px solid #D4C9B8", textDecoration: "none", backgroundColor: "#F8F2E4" }}
+              style={{ display: "block", borderRadius: 14, overflow: "hidden", border: "1px solid #E5E7EB", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
             >
               <div style={{ height: 4, backgroundColor: post.accent }} />
-              <div style={{ padding: "16px 18px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ padding: "18px 20px 20px", display: "flex", flexDirection: "column", gap: 10 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{post.figure}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, color: "#8A8480", textTransform: "uppercase" }}>{post.category}</span>
-                  <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", textTransform: "uppercase", color: post.badgeColor, backgroundColor: `${post.badgeColor}14`, border: `1px solid ${post.badgeColor}33` }}>{post.badge}</span>
+                  <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 10, letterSpacing: "0.1em", color: "#9CA3AF", textTransform: "uppercase", fontWeight: 600 }}>{post.figure}</span>
+                  <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 10, padding: "2px 8px", backgroundColor: "#F3F4F6", border: "1px solid #E5E7EB", borderRadius: 6, color: "#6B7280", textTransform: "uppercase", fontWeight: 500 }}>{post.category}</span>
+                  <span style={{ marginLeft: "auto", padding: "2px 8px", borderRadius: 6, fontSize: 10, fontFamily: "var(--font-dm-sans), sans-serif", textTransform: "uppercase", fontWeight: 600, color: post.badgeColor, backgroundColor: `${post.badgeColor}0F`, border: `1px solid ${post.badgeColor}28` }}>{post.badge}</span>
                 </div>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{post.title}</h3>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{post.date} · {post.readTime} read →</span>
+                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#111827", lineHeight: 1.3, margin: 0 }}>{post.title}</h3>
+                <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, color: "#9CA3AF", fontWeight: 500 }}>{post.date} · {post.readTime} read →</span>
               </div>
             </Link>
           ))}

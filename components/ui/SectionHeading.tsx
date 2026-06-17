@@ -38,27 +38,29 @@ export default function SectionHeading({
           {figure && (
             <span
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
-                fontSize: 10,
-                letterSpacing: "0.2em",
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontSize: 11,
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#8A8480",
+                color: "#9CA3AF",
+                fontWeight: 600,
               }}
             >
               {figure}
             </span>
           )}
           {figure && label && (
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
+            <span style={{ width: 24, height: 1, backgroundColor: "#E5E7EB", display: "inline-block" }} />
           )}
           {label && (
             <span
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
-                fontSize: 10,
-                letterSpacing: "0.2em",
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontSize: 11,
+                letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#C4622D",
+                color: "#0E8784",
+                fontWeight: 600,
               }}
             >
               {label}
@@ -72,7 +74,7 @@ export default function SectionHeading({
           fontSize: fontSizes[size],
           fontWeight: 700,
           letterSpacing: "-0.025em",
-          color: "#1A1714",
+          color: "#111827",
           lineHeight: 1.05,
         }}
       >
@@ -84,7 +86,7 @@ export default function SectionHeading({
               style={{
                 fontStyle: "italic",
                 fontWeight: 400,
-                color: "#5C5650",
+                color: "#6B7280",
               }}
             >
               {titleItalic}
@@ -97,7 +99,7 @@ export default function SectionHeading({
           style={{
             marginTop: 12,
             fontSize: 15,
-            color: "#5C5650",
+            color: "#6B7280",
             lineHeight: 1.6,
             maxWidth: align === "center" ? 540 : "none",
             margin: align === "center" ? "12px auto 0" : "12px 0 0",

@@ -18,7 +18,7 @@ export interface ProductCardProps {
   reviewSlug?: string;
   /** filename inside /public/products/ e.g. "on-gold-standard-whey.webp" */
   image?: string;
-  /** hex gradient start e.g. "#1E1B18" */
+  /** hex gradient start e.g. "#1F2937" */
   bgFrom?: string;
   bgTo?: string;
   accent?: string;
@@ -38,21 +38,22 @@ export default function ProductCard({
   buyLabel = "Check Price",
   reviewSlug,
   image,
-  bgFrom = "#1E1B18",
-  bgTo = "#141210",
-  accent = "#C4622D",
+  bgFrom = "#1F2937",
+  bgTo = "#111827",
+  accent = "#0E8784",
   featured = false,
 }: ProductCardProps) {
   return (
     <div
       style={{
-        border: featured ? `1px solid ${accent}55` : "1px solid #D4C9B8",
-        borderRadius: 12,
+        border: featured ? `1px solid ${accent}55` : "1px solid #E5E7EB",
+        borderRadius: 14,
         overflow: "hidden",
-        backgroundColor: "#F8F2E4",
+        backgroundColor: "#FFFFFF",
         display: "flex",
         flexDirection: "column",
         position: "relative",
+        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
       }}
     >
       {featured && (
@@ -65,17 +66,16 @@ export default function ProductCard({
           backgroundColor: accent,
           borderRadius: 4,
           fontSize: 8,
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontWeight: 700,
           letterSpacing: "0.16em",
           textTransform: "uppercase",
-          color: "#F2EBD9",
-          fontWeight: 700,
+          color: "#F9FAFB",
         }}>
           Reviewed
         </div>
       )}
 
-      {/* ── Product image area ───────────────────────────────────────────── */}
       <div style={{
         height: 180,
         background: `linear-gradient(145deg, ${bgFrom} 0%, ${bgTo} 100%)`,
@@ -88,18 +88,16 @@ export default function ProductCard({
         flexDirection: "column",
         gap: 8,
       }}>
-        {/* Grid texture */}
         <div style={{
           position: "absolute",
           inset: 0,
-          backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
           backgroundSize: "24px 24px",
           zIndex: 0,
         }} />
 
         {image ? (
           <>
-            {/* Actual product photo */}
             <Image
               src={`/products/${image}`}
               alt={`${name} by ${brand}`}
@@ -107,12 +105,11 @@ export default function ProductCard({
               style={{ objectFit: "contain", padding: "16px 20px", zIndex: 1 }}
               sizes="(max-width: 768px) 50vw, 280px"
             />
-            {/* Small score ring — bottom-right */}
             {score !== undefined && (
               <div style={{ position: "absolute", bottom: 10, right: 10, zIndex: 3 }}>
                 <svg width={52} height={52} viewBox="0 0 52 52">
-                  <circle cx={26} cy={26} r={22} fill="rgba(20,18,16,0.82)" />
-                  <circle cx={26} cy={26} r={20} fill="none" stroke="rgba(242,235,217,0.08)" strokeWidth={3} />
+                  <circle cx={26} cy={26} r={22} fill="rgba(17,24,39,0.82)" />
+                  <circle cx={26} cy={26} r={20} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={3} />
                   <circle
                     cx={26} cy={26} r={20}
                     fill="none"
@@ -122,7 +119,7 @@ export default function ProductCard({
                     strokeLinecap="round"
                     transform="rotate(-90 26 26)"
                   />
-                  <text x={26} y={31} textAnchor="middle" fill="#F2EBD9" fontSize={15} fontWeight={800} fontFamily="Georgia, serif">
+                  <text x={26} y={31} textAnchor="middle" fill="#F9FAFB" fontSize={15} fontWeight={800} fontFamily="Georgia, serif">
                     {score}
                   </text>
                 </svg>
@@ -131,11 +128,10 @@ export default function ProductCard({
           </>
         ) : (
           <>
-            {/* No image — large centered score ring + stars */}
             {score !== undefined && (
               <div style={{ position: "relative", zIndex: 2 }}>
                 <svg width={72} height={72} viewBox="0 0 72 72">
-                  <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(242,235,217,0.08)" strokeWidth={4} />
+                  <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={4} />
                   <circle
                     cx={36} cy={36} r={30}
                     fill="none"
@@ -145,7 +141,7 @@ export default function ProductCard({
                     strokeLinecap="round"
                     transform="rotate(-90 36 36)"
                   />
-                  <text x={36} y={40} textAnchor="middle" fill="#F2EBD9" fontSize={20} fontWeight={800} fontFamily="Georgia, serif">
+                  <text x={36} y={40} textAnchor="middle" fill="#F9FAFB" fontSize={20} fontWeight={800} fontFamily="Georgia, serif">
                     {score}
                   </text>
                 </svg>
@@ -158,7 +154,7 @@ export default function ProductCard({
                     key={i}
                     size={8}
                     fill={i < score ? accent : "none"}
-                    color={i < score ? accent : "rgba(242,235,217,0.2)"}
+                    color={i < score ? accent : "rgba(255,255,255,0.2)"}
                   />
                 ))}
               </div>
@@ -166,41 +162,37 @@ export default function ProductCard({
           </>
         )}
 
-        {/* Category tag — pinned bottom */}
         <span style={{
           position: "absolute",
           bottom: 8,
           left: image ? 12 : "50%",
           transform: image ? "none" : "translateX(-50%)",
           zIndex: 3,
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-dm-sans), sans-serif",
           fontSize: 8,
+          fontWeight: 600,
           letterSpacing: "0.18em",
           textTransform: "uppercase",
-          color: "rgba(242,235,217,0.38)",
+          color: "rgba(255,255,255,0.38)",
           whiteSpace: "nowrap",
         }}>
           {category}
         </span>
 
-        {/* Bottom fade */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${bgTo})`, zIndex: 2 }} />
       </div>
 
-      {/* ── Accent line ─────────────────────────────────────────────────── */}
       <div style={{ height: 2, backgroundColor: accent, flexShrink: 0 }} />
 
-      {/* ── Card body ───────────────────────────────────────────────────── */}
       <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
-
-        {/* Brand + name */}
         <div>
           <p style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: 9,
+            fontWeight: 600,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#A89880",
+            color: "#9CA3AF",
             marginBottom: 4,
           }}>
             {brand}
@@ -209,7 +201,7 @@ export default function ProductCard({
             fontFamily: "var(--font-playfair), Georgia, serif",
             fontSize: "0.95rem",
             fontWeight: 700,
-            color: "#1A1714",
+            color: "#111827",
             lineHeight: 1.25,
             margin: 0,
           }}>
@@ -217,19 +209,19 @@ export default function ProductCard({
           </p>
         </div>
 
-        {/* Tags */}
         {tags.length > 0 && (
           <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {tags.map((tag) => (
               <span key={tag} style={{
                 padding: "2px 7px",
-                backgroundColor: "#EDE8DF",
-                border: "1px solid #D4C9B8",
-                borderRadius: 4,
+                backgroundColor: "#F3F4F6",
+                border: "1px solid #E5E7EB",
+                borderRadius: 6,
                 fontSize: 9,
-                color: "#5C5650",
-                fontFamily: "var(--font-dm-mono), monospace",
-                letterSpacing: "0.08em",
+                color: "#6B7280",
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontWeight: 500,
+                letterSpacing: "0.06em",
               }}>
                 {tag}
               </span>
@@ -237,26 +229,25 @@ export default function ProductCard({
           </div>
         )}
 
-        {/* Price */}
         <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
           <span style={{
             fontFamily: "var(--font-playfair), Georgia, serif",
             fontSize: "1.1rem",
             fontWeight: 700,
-            color: "#1A1714",
+            color: "#111827",
           }}>
             {priceUSD}
           </span>
           <span style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: 10,
-            color: "#8A8480",
+            fontWeight: 500,
+            color: "#9CA3AF",
           }}>
             {priceINR}
           </span>
         </div>
 
-        {/* CTAs */}
         <div style={{ display: "flex", gap: 8, marginTop: "auto", flexWrap: "wrap" }}>
           <a
             href={buyUrl}
@@ -270,7 +261,7 @@ export default function ProductCard({
               gap: 5,
               padding: "8px 12px",
               backgroundColor: accent,
-              color: "#F2EBD9",
+              color: "#F9FAFB",
               fontSize: 11,
               fontWeight: 700,
               borderRadius: 7,
@@ -291,15 +282,15 @@ export default function ProductCard({
                 justifyContent: "center",
                 gap: 5,
                 padding: "8px 12px",
-                border: "1px solid #D4C9B8",
-                color: "#5C5650",
+                border: "1px solid #E5E7EB",
+                color: "#6B7280",
                 fontSize: 11,
                 fontWeight: 500,
                 borderRadius: 7,
                 fontFamily: "var(--font-dm-sans), sans-serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
-                backgroundColor: "#F2EBD9",
+                backgroundColor: "#FFFFFF",
               }}
             >
               <BookOpen size={10} /> Read Review

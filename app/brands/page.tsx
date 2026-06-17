@@ -131,8 +131,8 @@ const brands = [
 
 const tierConfig: Record<string, { label: string; color: string; bg: string; border: string }> = {
   gold:     { label: "Top Tier",  color: "#92620A", bg: "rgba(212,169,106,0.12)", border: "rgba(212,169,106,0.3)" },
-  silver:   { label: "Solid",     color: "#5C5650", bg: "rgba(212,201,184,0.2)",  border: "rgba(212,201,184,0.5)" },
-  standard: { label: "Standard",  color: "#8A8480", bg: "rgba(242,235,217,0.6)",  border: "#D4C9B8" },
+  silver:   { label: "Solid",     color: "#6B7280", bg: "rgba(212,201,184,0.2)",  border: "rgba(212,201,184,0.5)" },
+  standard: { label: "Standard",  color: "#9CA3AF", bg: "rgba(243,244,246,0.6)",  border: "#E5E7EB" },
 };
 
 const stats = [
@@ -144,14 +144,14 @@ const stats = [
 
 export default function BrandsHubPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Brands</span>
+          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E5E7EB" }}>/</span>
+          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Brands</span>
         </div>
       </div>
 
@@ -178,39 +178,39 @@ export default function BrandsHubPage() {
                   key={brand.slug}
                   href={`/brands/${brand.slug}`}
                   className="hub-card"
-                  style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", textDecoration: "none", backgroundColor: "#F8F2E4" }}
+                  style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
 
                 >
                   {/* Card header */}
-                  <div style={{ padding: "16px 20px", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+                  <div style={{ padding: "16px 20px", borderBottom: "1px solid #F3F4F6", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{brand.figure}</span>
-                        <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", fontWeight: 700, color: tier.color, backgroundColor: tier.bg, border: `1px solid ${tier.border}`, textTransform: "uppercase" }}>{tier.label}</span>
+                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#9CA3AF", textTransform: "uppercase" }}>{brand.figure}</span>
+                        <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, letterSpacing: "0.12em", color: tier.color, backgroundColor: tier.bg, border: `1px solid ${tier.border}`, textTransform: "uppercase" }}>{tier.label}</span>
                         {brand.thirdParty && (
-                          <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", color: "#2D6A4F", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", textTransform: "uppercase" }}>3P Tested</span>
+                          <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", color: "#2D6A4F", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", textTransform: "uppercase" }}>3P Tested</span>
                         )}
                       </div>
-                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.01em" }}>{brand.name}</h2>
-                      <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginTop: 4 }}>{brand.country} · Est. {brand.founded}</p>
+                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#111827", margin: 0, letterSpacing: "-0.01em" }}>{brand.name}</h2>
+                      <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", marginTop: 4 }}>{brand.country} · Est. {brand.founded}</p>
                     </div>
                     <div style={{ textAlign: "right", flexShrink: 0 }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{brand.avgScore}</p>
-                      <p style={{ fontSize: 9, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: 2 }}>avg score</p>
+                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#111827", lineHeight: 1, margin: 0 }}>{brand.avgScore}</p>
+                      <p style={{ fontSize: 9, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 2 }}>avg score</p>
                     </div>
                   </div>
 
                   {/* Card body */}
                   <div style={{ padding: "14px 20px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{brand.verdict}</p>
+                    <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6, margin: 0 }}>{brand.verdict}</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                       {brand.categories.slice(0, 4).map((cat) => (
-                        <span key={cat} style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{cat}</span>
+                        <span key={cat} style={{ padding: "3px 8px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4, fontSize: 10, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{cat}</span>
                       ))}
                     </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #EDE8DF", paddingTop: 12 }}>
-                      <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{brand.reviewCount} products reviewed</p>
-                      <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>View Profile →</span>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #F3F4F6", paddingTop: 12 }}>
+                      <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", margin: 0 }}>{brand.reviewCount} products reviewed</p>
+                      <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>View Profile →</span>
                     </div>
                   </div>
                 </Link>
@@ -220,11 +220,11 @@ export default function BrandsHubPage() {
         </section>
 
         {/* Trust note */}
-        <div style={{ marginTop: 64, padding: "24px 28px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", gap: 16, alignItems: "flex-start" }}>
-          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#A89880", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Note</span>
-          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+        <div style={{ marginTop: 64, padding: "24px 28px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 14, display: "flex", gap: 16, alignItems: "flex-start" }}>
+          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.18em", color: "#9CA3AF", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Note</span>
+          <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.7, margin: 0 }}>
             Brand scores reflect the average of reviewed products, not the brand's full portfolio. A brand scoring 8+ has consistently clean formulas across what we have reviewed — it does not mean every product is excellent.{" "}
-            <Link href="/editorial-policy" style={{ color: "#C4622D", fontWeight: 600 }}>Read our editorial policy →</Link>
+            <Link href="/editorial-policy" style={{ color: "#0E8784", fontWeight: 600 }}>Read our editorial policy →</Link>
           </p>
         </div>
 

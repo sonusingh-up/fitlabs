@@ -98,9 +98,9 @@ const categoryGroups = [
 ];
 
 const evidenceBadgeStyles: Record<string, { color: string; bg: string; border: string; label: string }> = {
-  strong:   { color: "#1A6B3A", bg: "rgba(26,107,58,0.08)",   border: "rgba(26,107,58,0.2)",   label: "Strong Evidence" },
-  moderate: { color: "#92620A", bg: "rgba(146,98,10,0.08)",   border: "rgba(146,98,10,0.2)",   label: "Moderate Evidence" },
-  guide:    { color: "#5C5650", bg: "rgba(92,86,80,0.06)",    border: "rgba(92,86,80,0.15)",   label: "Practical Guide" },
+  strong:   { color: "#059669", bg: "rgba(5,150,105,0.06)",   border: "rgba(5,150,105,0.15)",  label: "Strong Evidence" },
+  moderate: { color: "#D97706", bg: "rgba(217,119,6,0.06)",   border: "rgba(217,119,6,0.15)",  label: "Moderate Evidence" },
+  guide:    { color: "#6B7280", bg: "rgba(107,114,128,0.06)", border: "rgba(107,114,128,0.15)", label: "Practical Guide" },
 };
 
 const featured = posts.filter(p => p.featured);
@@ -108,14 +108,14 @@ const nonFeatured = posts.filter(p => !p.featured);
 
 export default function BlogHubPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Blog</span>
+          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E5E7EB" }}>/</span>
+          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Blog</span>
         </div>
       </div>
 
@@ -136,7 +136,7 @@ export default function BlogHubPage() {
             <a
               key={g.label}
               href={`#${g.label.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              style={{ padding: "5px 14px", border: "1px solid #D4C9B8", borderRadius: 20, fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", textDecoration: "none", backgroundColor: "#F8F2E4" }}
+              style={{ padding: "5px 14px", border: "1px solid #E5E7EB", borderRadius: 20, fontSize: 11, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
             >
               {g.label}
             </a>
@@ -153,25 +153,25 @@ export default function BlogHubPage() {
                   key={post.slug}
                   href={`/blog/${post.slug}`}
                   className="hub-card"
-                  style={{ display: "flex", flexDirection: "column", border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", textDecoration: "none", backgroundColor: "#F8F2E4", position: "relative" }}
+                  style={{ display: "flex", flexDirection: "column", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", position: "relative", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                 >
                   <div style={{ height: 4, backgroundColor: post.accent }} />
                   <div style={{ padding: "22px 24px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{post.figure}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#8A8480", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4 }}>{post.category}</span>
-                      <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}` }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
+                      <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase" }}>{post.figure}</span>
+                      <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4 }}>{post.category}</span>
+                      <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}` }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
                     </div>
-                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{post.title}</h2>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, flex: 1 }}>{post.excerpt}</p>
+                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#111827", margin: 0, lineHeight: 1.3 }}>{post.title}</h2>
+                    <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0, flex: 1 }}>{post.excerpt}</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                       {post.tags.map((tag) => (
-                        <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 9, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.07em" }}>{tag}</span>
+                        <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
                       ))}
                     </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #EDE8DF", paddingTop: 12 }}>
-                      <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{post.publishedAt} · {post.readTime} read</p>
-                      <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Article →</span>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #F3F4F6", paddingTop: 12 }}>
+                      <p style={{ fontSize: 11, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", margin: 0 }}>{post.publishedAt} · {post.readTime} read</p>
+                      <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Article →</span>
                     </div>
                   </div>
                 </Link>
@@ -194,27 +194,27 @@ export default function BlogHubPage() {
                     key={post.slug}
                     href={`/blog/${post.slug}`}
                     className="hub-row-link"
-                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", textDecoration: "none", backgroundColor: "#F8F2E4", alignItems: "stretch" }}
+                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", alignItems: "stretch", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                   >
                     <div style={{ backgroundColor: post.accent }} />
                     <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", gap: 8 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{post.figure}</span>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#8A8480", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4 }}>{post.category}</span>
+                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase" }}>{post.figure}</span>
+                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4 }}>{post.category}</span>
                       </div>
-                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{post.title}</h2>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{post.excerpt}</p>
+                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#111827", margin: 0 }}>{post.title}</h2>
+                      <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6, margin: 0 }}>{post.excerpt}</p>
                       <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
                         {post.tags.map((tag) => (
-                          <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 9, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.07em" }}>{tag}</span>
+                          <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
                         ))}
                       </div>
                     </div>
-                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #EDE8DF", minWidth: 130 }}>
-                      <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}`, whiteSpace: "nowrap" }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
+                    <div style={{ padding: "16px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #F3F4F6", minWidth: 130 }}>
+                      <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: evidenceBadgeStyles[post.evidenceBadge].color, backgroundColor: evidenceBadgeStyles[post.evidenceBadge].bg, border: `1px solid ${evidenceBadgeStyles[post.evidenceBadge].border}`, whiteSpace: "nowrap" }}>{evidenceBadgeStyles[post.evidenceBadge].label}</span>
                       <div style={{ textAlign: "right" }}>
-                        <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{post.publishedAt} · {post.readTime}</p>
-                        <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", display: "block", marginTop: 4 }}>Read →</span>
+                        <p style={{ fontSize: 11, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", margin: 0 }}>{post.publishedAt} · {post.readTime}</p>
+                        <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", display: "block", marginTop: 4 }}>Read →</span>
                       </div>
                     </div>
                   </Link>
@@ -225,13 +225,13 @@ export default function BlogHubPage() {
         })}
 
         {/* Newsletter CTA */}
-        <div style={{ marginTop: 16, padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
+        <div style={{ marginTop: 16, padding: "28px 32px", backgroundColor: "#111827", borderRadius: 14, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 20 }}>
           <div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 8 }}>Stay Updated</p>
-            <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>New articles, every two weeks.</p>
-            <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.6, marginTop: 6 }}>No spam, no affiliate pitches — just evidence-based content when it publishes.</p>
+            <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#6B7280", marginBottom: 8 }}>Stay Updated</p>
+            <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F9FAFB", margin: 0 }}>New articles, every two weeks.</p>
+            <p style={{ fontSize: 13, color: "#9CA3AF", lineHeight: 1.6, marginTop: 6 }}>No spam, no affiliate pitches — just evidence-based content when it publishes.</p>
           </div>
-          <Link href="/contact" style={{ padding: "12px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", borderRadius: 8, fontSize: 13, fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", flexShrink: 0 }}>
+          <Link href="/contact" style={{ padding: "12px 24px", backgroundColor: "#0E8784", color: "#F9FAFB", borderRadius: 8, fontSize: 13, fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", flexShrink: 0 }}>
             Get in touch →
           </Link>
         </div>
