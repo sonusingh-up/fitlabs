@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
+import HubMasthead from "@/components/ui/HubMasthead";
 import { ingredientsDb } from "@/lib/ingredients-db";
 import type { EvidenceLevel } from "@/lib/types";
 
@@ -75,22 +76,17 @@ export default function IngredientsHubPage() {
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
-        <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>INGREDIENT INDEX · {ingredientsDb.length} PROFILES</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Research-Verified</span>
-          </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
-            Ingredient{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Research Index</em>
-          </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 600, marginBottom: 28 }}>
-            {ingredientsDb.length} ingredient profiles across {allCategories.length} categories. Every entry covers mechanism of action, clinically effective dosages, and a full evidence classification. No marketing — only research.
-          </p>
+      <HubMasthead
+        eyebrow={`Ingredient Index · ${ingredientsDb.length} Profiles`}
+        kicker="Research-Verified"
+        title="Ingredient"
+        titleAccent="Research Index"
+        subtitle={`${ingredientsDb.length} ingredient profiles across ${allCategories.length} categories. Every entry covers mechanism of action, clinically effective dosages, and a full evidence classification. No marketing — only research.`}
+      />
 
-          {/* Evidence legend */}
+      {/* Evidence legend — light strip below the masthead */}
+      <div style={{ borderBottom: "1px solid #D4C9B8" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", paddingTop: 28, paddingBottom: 28 }} className="px-page">
           <div className="ing-evidence-legend">
             {evidenceSummary.filter((e) => e.count > 0).map((e) => (
               <div key={e.level} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>

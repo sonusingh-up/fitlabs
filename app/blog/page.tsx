@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
+import HubMasthead from "@/components/ui/HubMasthead";
 
 export const metadata: Metadata = {
   title: "Fitness, Nutrition & Longevity Blog",
@@ -119,22 +120,13 @@ export default function BlogHubPage() {
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 48px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>BLOG · {posts.length} ARTICLES</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>No Fluff · No Sponsorship</span>
-          </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
-            Fitness &{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Nutrition Blog</em>
-          </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620 }}>
-            Practical guides on training, nutrition, and supplements — built on evidence, not hype. Every article skips the filler and gets to what actually changes outcomes.
-          </p>
-        </div>
-      </div>
+      <HubMasthead
+        eyebrow={`Blog · ${posts.length} Articles`}
+        kicker="No Fluff · No Sponsorship"
+        title="Fitness &"
+        titleAccent="Nutrition Blog"
+        subtitle="Practical guides on training, nutrition, and supplements — built on evidence, not hype. Every article skips the filler and gets to what actually changes outcomes."
+      />
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 

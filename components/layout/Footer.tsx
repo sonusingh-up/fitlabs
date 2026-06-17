@@ -47,10 +47,29 @@ export default function Footer() {
           borderBottom: "1px solid #D4C9B8",
           padding: "48px 24px",
           textAlign: "center",
-          backgroundColor: "#1A1714",
+          backgroundColor: "#15120E",
+          backgroundImage: "radial-gradient(ellipse 60% 80% at 50% 0%, rgba(196,98,45,0.14), transparent 62%)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: 480, margin: "0 auto" }}>
+        {/* Rust top accent */}
+        <div aria-hidden style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, transparent, #C4622D 50%, transparent)" }} />
+        {/* Masked grid texture */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage:
+              "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+            maskImage: "radial-gradient(ellipse 70% 90% at 50% 0%, #000 20%, transparent 75%)",
+            WebkitMaskImage: "radial-gradient(ellipse 70% 90% at 50% 0%, #000 20%, transparent 75%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ position: "relative", maxWidth: 480, margin: "0 auto" }}>
           <p
             style={{
               fontFamily: "var(--font-dm-mono), monospace",
