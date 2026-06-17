@@ -253,12 +253,27 @@ export async function POST(req: NextRequest) {
           html: contactConfirmationEmail(safeName),
         }),
       ]);
+      const notification = await resend.emails.send({
+        from: "Fitlabreviews <onboarding@resend.dev>",
+        to: "sonusingh.up@yahoo.com",
+        subject: `Contact: ${safeSubject}`,
+        replyTo: safeEmail,
+        html: contactNotificationEmail(safeName, safeEmail, safeSubject, safeMessage),
+      });
 
       if (notification.error) {
         console.error("[API/send] Resend error:", notification.error.message);
         return NextResponse.json({ error: "Email could not be sent" }, { status: 500 });
       }
-      return NextResponse.json({ success: true, id: notification.data?.id, confirmationSent: !confirmation.error });
+
+      resend.emails.send({
+        from: "Fitlabreviews <onboarding@resend.dev>",
+        to: safeEmail,
+        subject: "We got your message — Fitlabreviews",
+        html: contactConfirmationEmail(safeName),
+      }).catch(() => {});
+
+      return NextResponse.json({ success: true, id: notification.data?.id });
     }
 
     if (type === "newsletter") {
@@ -287,12 +302,26 @@ export async function POST(req: NextRequest) {
           html: welcomeSubscriberEmail(),
         }),
       ]);
+      const notification = await resend.emails.send({
+        from: "Fitlabreviews <onboarding@resend.dev>",
+        to: "sonusingh.up@yahoo.com",
+        subject: "New Newsletter Subscriber",
+        html: subscriberNotificationEmail(safeEmail),
+      });
 
       if (notification.error) {
         console.error("[API/send] Resend error:", notification.error.message);
         return NextResponse.json({ error: "Email could not be sent" }, { status: 500 });
       }
-      return NextResponse.json({ success: true, id: notification.data?.id, welcomeSent: !welcome.error });
+
+      resend.emails.send({
+        from: "Fitlabreviews <onboarding@resend.dev>",
+        to: safeEmail,
+        subject: "Welcome to Fitlabreviews",
+        html: welcomeSubscriberEmail(),
+      }).catch(() => {});
+
+      return NextResponse.json({ success: true, id: notification.data?.id });
     }
 
     return NextResponse.json({ error: "Invalid request type" }, { status: 400 });
