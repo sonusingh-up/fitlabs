@@ -1,7 +1,11 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) throw new Error("RESEND_API_KEY is not set");
+  return new Resend(key);
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,7 +18,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "All fields are required" }, { status: 400 });
       }
 
-      const { data, error } = await resend.emails.send({
+      const { data, error } = await getResend().emails.send({
         from: "Fitlabreviews <onboarding@resend.dev>",
         to: "sonusingh.up@yahoo.com",
         subject: `Contact: ${subject}`,
@@ -34,7 +38,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Email is required" }, { status: 400 });
       }
 
-      const { data, error } = await resend.emails.send({
+      const { data, error } = await getResend().emails.send({
         from: "Fitlabreviews <onboarding@resend.dev>",
         to: "sonusingh.up@yahoo.com",
         subject: "New Newsletter Subscriber",
