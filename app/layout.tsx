@@ -98,7 +98,7 @@ export const metadata: Metadata = {
   // own via `alternates: { canonical: "/its-own-path" }` in its own metadata.
 };
 
-const GA_ID = "G-N23DKB7H8K";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-N23DKB7H8K";
 
 const organizationSchema = {
   "@context": "https://schema.org",
@@ -165,19 +165,23 @@ export default function RootLayout({
         />
         {/* RSS Feed discovery */}
         <link rel="alternate" type="application/rss+xml" title="Fitlabreviews — Latest Reviews" href="/feed.xml" />
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `}
-        </Script>
+        {/* Google Analytics — only render when GA_ID is available */}
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body
         className="min-h-full flex flex-col"

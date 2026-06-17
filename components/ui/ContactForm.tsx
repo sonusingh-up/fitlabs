@@ -33,9 +33,9 @@ export default function ContactForm() {
   return (
     <form style={{ display: "flex", flexDirection: "column", gap: 18 }} onSubmit={handleSubmit}>
       {[
-        { label: "Your Name", name: "name", type: "text", placeholder: "Arjun Sharma" },
-        { label: "Email Address", name: "email", type: "email", placeholder: "arjun@example.com" },
-        { label: "Subject", name: "subject", type: "text", placeholder: "e.g. Correction for creatine review" },
+        { label: "Your Name", name: "name", type: "text", placeholder: "Arjun Sharma", maxLength: 100 },
+        { label: "Email Address", name: "email", type: "email", placeholder: "arjun@example.com", maxLength: 254 },
+        { label: "Subject", name: "subject", type: "text", placeholder: "e.g. Correction for creatine review", maxLength: 200 },
       ].map((field) => (
         <div key={field.name}>
           <label htmlFor={field.name} style={{ display: "block", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>
@@ -46,6 +46,7 @@ export default function ContactForm() {
             name={field.name}
             type={field.type}
             required
+            maxLength={field.maxLength}
             placeholder={field.placeholder}
             style={{
               width: "100%",
@@ -71,6 +72,7 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
+          maxLength={5000}
           placeholder="Your message..."
           style={{
             width: "100%",
