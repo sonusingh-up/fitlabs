@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 import SectionHeading from "@/components/ui/SectionHeading";
 import ReviewCard from "@/components/ui/ReviewCard";
+import ProductCard from "@/components/ui/ProductCard";
 import IngredientCard from "@/components/ui/IngredientCard";
 import GoalCard from "@/components/ui/GoalCard";
 import { BestOfGrid, TrustGrid } from "@/components/sections/HomeInteractive";
@@ -24,6 +25,99 @@ const featuredReviews = [
   { slug: "wellmedr", title: "WellMedr Weight Management", brand: "WellMedr", category: "GLP-1 Program", rating: 9 as ReviewRating, verdict: "Clinician-supervised GLP-1 weight management with comprehensive telehealth support. The strongest evidence-based programme we have reviewed.", publishedAt: "2026-05-15", figNumber: "02", tags: ["glp-1", "weight-loss", "telehealth"] },
   { slug: "myprotein-creatine-monohydrate", title: "MyProtein Creatine Monohydrate", brand: "MyProtein", category: "Creatine", rating: 8 as ReviewRating, verdict: "The cleanest, most affordable creatine monohydrate on the market. No frills, just results.", publishedAt: "2026-03-08", figNumber: "03", tags: ["creatine", "strength", "budget"] },
   { slug: "dymatize-iso100-review-2026", title: "Dymatize ISO100 Hydrolyzed Whey Isolate", brand: "Dymatize", category: "Whey Protein Isolate", rating: 9 as ReviewRating, verdict: "The only hydrolyzed isolate with dual NSF + Informed Choice certification. 25g protein, 2.7g leucine, category-best flavour.", publishedAt: "2026-05-27", figNumber: "04", tags: ["whey-isolate", "hydrolyzed", "nSF", "post-workout"] },
+];
+
+const bestProducts = [
+  {
+    name: "ISO100 Hydrolyzed Whey Isolate",
+    brand: "Dymatize",
+    category: "Whey Protein Isolate",
+    score: 9,
+    priceUSD: "$67–$85",
+    priceINR: "₹5,600–₹7,100",
+    tags: ["NSF Certified", "Hydrolyzed", "25g Protein"],
+    buyUrl: "https://amzn.to/4e73lcN",
+    reviewSlug: "dymatize-iso100-review-2026",
+    image: "dymatize-iso100.webp",
+    bgFrom: "#2A1F16",
+    bgTo: "#1A1410",
+    accent: "#C4622D",
+  },
+  {
+    name: "BULK Black Pre-Workout",
+    brand: "Transparent Labs",
+    category: "Pre-Workout",
+    score: 9,
+    priceUSD: "$49–$55",
+    priceINR: "₹4,100–₹4,600",
+    tags: ["Full Disclosure", "275mg Caffeine"],
+    buyUrl: "https://amzn.to/3RPRlnm",
+    reviewSlug: "transparent-labs-bulk-black-review",
+    image: "tl-bulk-black-preworkout.webp",
+    bgFrom: "#2A1410",
+    bgTo: "#1A0E0A",
+    accent: "#E5533D",
+  },
+  {
+    name: "Beef Organs Complex",
+    brand: "Heart & Soil",
+    category: "Organ Supplement",
+    score: 9,
+    priceUSD: "$52–$58",
+    priceINR: "₹4,300–₹4,800",
+    tags: ["Grass-Fed", "6 Organs", "Desiccated"],
+    buyUrl: "https://amzn.to/3Q2X5ts",
+    reviewSlug: "heart-and-soil-beef-organs",
+    image: "HEART-SOIL.webp",
+    bgFrom: "#1E1B16",
+    bgTo: "#141210",
+    accent: "#8B5E3C",
+  },
+  {
+    name: "Creatine HMB",
+    brand: "Transparent Labs",
+    category: "Creatine",
+    score: 8,
+    priceUSD: "$44–$49",
+    priceINR: "₹3,700–₹4,100",
+    tags: ["Creapure®", "HMB Added", "No Fillers"],
+    buyUrl: "https://amzn.to/3Qba8ZR",
+    reviewSlug: "transparent-labs-creatine-hmb",
+    image: "tl-creatine-hmb.webp",
+    bgFrom: "#0F1E1C",
+    bgTo: "#0A1614",
+    accent: "#2D6A4F",
+  },
+  {
+    name: "DS-01 Daily Synbiotic",
+    brand: "Seed",
+    category: "Probiotic",
+    score: 8,
+    priceUSD: "$49/mo",
+    priceINR: "₹4,100/mo",
+    tags: ["24 Strains", "AFU Tested", "Subscription"],
+    buyUrl: "https://amzn.to/4vm1F57",
+    reviewSlug: "seed-ds-01",
+    image: "seed-ds-01.webp",
+    bgFrom: "#101A24",
+    bgTo: "#0A1218",
+    accent: "#3A5F8B",
+  },
+  {
+    name: "Sleep",
+    brand: "Performance Lab",
+    category: "Sleep Aid",
+    score: 8,
+    priceUSD: "$39–$49",
+    priceINR: "₹3,300–₹4,100",
+    tags: ["Magnesium", "Cherry Extract", "No Melatonin"],
+    buyUrl: "https://amzn.to/4x4WZCs",
+    reviewSlug: "performance-lab-sleep",
+    image: "perlab-sleep.webp",
+    bgFrom: "#1A1624",
+    bgTo: "#12101A",
+    accent: "#6B5B95",
+  },
 ];
 
 const blogPosts = [
@@ -137,17 +231,48 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* BEST PRODUCTS */}
+      <section style={{ borderTop: "1px solid rgba(212,201,184,0.3)", backgroundColor: "#1A1714" }} className="pad-section px-page">
+        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650" }}>SEC. 02</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#5C5650", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Best Products</span>
+            </div>
+            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05 }}>
+              Top-rated <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8A8480" }}>across categories</em>
+            </h2>
+            <p style={{ marginTop: 12, fontSize: 15, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              The highest-scoring supplements from our FSP rubric — each independently tested, fully disclosed, and editorially rated.
+            </p>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
+            {bestProducts.map((product, i) => (
+              <div key={product.reviewSlug} className="animate-fade-up">
+                <ProductCard {...product} featured={i === 0} />
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 32, textAlign: "center" }}>
+            <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              See All Reviewed Products <span className="arrow-nudge"><ArrowRight size={13} /></span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* BEST OF CATEGORIES */}
       <section style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section px-page">
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <SectionHeading label="Best Of" figure="SEC. 02" title="Roundups &" titleItalic="top picks" subtitle="Curated shortlists for when you need a clear recommendation, not a wall of text." />
+          <SectionHeading label="Best Of" figure="SEC. 03" title="Roundups &" titleItalic="top picks" subtitle="Curated shortlists for when you need a clear recommendation, not a wall of text." />
           <BestOfGrid />
         </div>
       </section>
 
       {/* BROWSE BY GOAL */}
       <section style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
-        <SectionHeading label="Browse by Goal" figure="SEC. 03" title="Start with" titleItalic="your objective" subtitle="Your goal determines your stack. Evidence-matched recommendations for every fitness focus." />
+        <SectionHeading label="Browse by Goal" figure="SEC. 04" title="Start with" titleItalic="your objective" subtitle="Your goal determines your stack. Evidence-matched recommendations for every fitness focus." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 16 }}>
           {goals.map((goal) => (<GoalCard key={goal.slug} {...goal} />))}
         </div>
@@ -158,7 +283,7 @@ export default function HomePage() {
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ marginBottom: 40 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650" }}>SEC. 04</span>
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650" }}>SEC. 05</span>
               <span style={{ width: 24, height: 1, backgroundColor: "#5C5650", display: "inline-block" }} />
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Ingredient Research</span>
             </div>
@@ -188,7 +313,7 @@ export default function HomePage() {
       <section style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 48, alignItems: "start" }}>
           <div>
-            <SectionHeading label="Editorial Standards" figure="SEC. 05" title="How we" titleItalic="research" subtitle="Our review process is built to eliminate bias, not amplify it. Here's what that looks like in practice." />
+            <SectionHeading label="Editorial Standards" figure="SEC. 06" title="How we" titleItalic="research" subtitle="Our review process is built to eliminate bias, not amplify it. Here's what that looks like in practice." />
             <Link href="/editorial-policy" className="btn-primary">
               Read Full Policy <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
@@ -199,7 +324,7 @@ export default function HomePage() {
 
       {/* LATEST FROM THE BLOG */}
       <section style={{ borderTop: "1px solid #D4C9B8", maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
-        <SectionHeading label="Blog" figure="SEC. 06" title="From the" titleItalic="blog" subtitle="Research-led articles on nutrition science, longevity, mental health, and fitness lifestyle." />
+        <SectionHeading label="Blog" figure="SEC. 07" title="From the" titleItalic="blog" subtitle="Research-led articles on nutrition science, longevity, mental health, and fitness lifestyle." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
           {blogPosts.map((post) => (
             <Link
