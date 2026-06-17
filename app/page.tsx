@@ -231,33 +231,144 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BEST PRODUCTS */}
-      <section style={{ borderTop: "1px solid rgba(212,201,184,0.3)", backgroundColor: "#1A1714" }} className="pad-section px-page">
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ marginBottom: 40 }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650" }}>SEC. 02</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#5C5650", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Best Products</span>
+      {/* BEST PRODUCTS — EDITOR'S PICKS AWARDS BOARD */}
+      <section
+        style={{
+          borderTop: "1px solid rgba(196,98,45,0.35)",
+          backgroundColor: "#15120E",
+          backgroundImage:
+            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(196,98,45,0.13), transparent 60%)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+        className="pad-section px-page"
+      >
+        {/* Grid texture atmosphere */}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage:
+              "linear-gradient(rgba(242,235,217,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.025) 1px, transparent 1px)",
+            backgroundSize: "44px 44px",
+            maskImage: "radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%)",
+            WebkitMaskImage: "radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div style={{ maxWidth: 1280, margin: "0 auto", position: "relative" }}>
+          {/* ── Award masthead ─────────────────────────────────────────── */}
+          <div style={{ textAlign: "center", marginBottom: 52 }}>
+            {/* Award seal */}
+            <div style={{ display: "inline-flex", marginBottom: 22 }}>
+              <svg width={62} height={62} viewBox="0 0 62 62" aria-hidden style={{ filter: "drop-shadow(0 4px 14px rgba(196,98,45,0.35))" }}>
+                <circle cx={31} cy={31} r={29} fill="none" stroke="#C4622D" strokeWidth={1} opacity={0.45} />
+                <circle cx={31} cy={31} r={24} fill="none" stroke="#C4622D" strokeWidth={1.5} />
+                {Array.from({ length: 24 }).map((_, i) => {
+                  const a = (i / 24) * Math.PI * 2;
+                  const r1 = 24, r2 = 28.5;
+                  return (
+                    <line
+                      key={i}
+                      x1={31 + Math.cos(a) * r1}
+                      y1={31 + Math.sin(a) * r1}
+                      x2={31 + Math.cos(a) * r2}
+                      y2={31 + Math.sin(a) * r2}
+                      stroke="#C4622D"
+                      strokeWidth={1}
+                      opacity={0.5}
+                    />
+                  );
+                })}
+                <path
+                  d="M31 19l3.1 6.3 6.9 1-5 4.9 1.2 6.9L31 41.7l-6.2 3.3 1.2-6.9-5-4.9 6.9-1z"
+                  fill="#C4622D"
+                />
+              </svg>
             </div>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 700, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05 }}>
-              Top-rated <em style={{ fontStyle: "italic", fontWeight: 400, color: "#8A8480" }}>across categories</em>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 16 }}>
+              <span style={{ width: 28, height: 1, backgroundColor: "rgba(196,98,45,0.5)" }} />
+              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.34em", textTransform: "uppercase", color: "#C4622D" }}>
+                Fitlab Selects · 2026
+              </span>
+              <span style={{ width: 28, height: 1, backgroundColor: "rgba(196,98,45,0.5)" }} />
+            </div>
+
+            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.1rem, 5vw, 3.4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1, margin: 0 }}>
+              The Editor&apos;s <em style={{ fontStyle: "italic", fontWeight: 400, color: "#C4622D" }}>Picks</em>
             </h2>
-            <p style={{ marginTop: 12, fontSize: 15, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              The highest-scoring supplements from our FSP rubric — each independently tested, fully disclosed, and editorially rated.
+            <p style={{ margin: "18px auto 0", maxWidth: 540, fontSize: 15, color: "#9A938A", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              Six supplements that topped our FSP rubric this year — independently tested, fully label-disclosed, ranked by the evidence and nothing else.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
-            {bestProducts.map((product, i) => (
-              <div key={product.reviewSlug} className="animate-fade-up">
-                <ProductCard {...product} featured={i === 0} />
-              </div>
-            ))}
+
+          {/* ── Ranked board ───────────────────────────────────────────── */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 18 }}>
+            {bestProducts.map((product, i) => {
+              const rank = i + 1;
+              const isPodium = rank <= 3;
+              return (
+                <div key={product.reviewSlug} className="animate-fade-up hover-card" style={{ position: "relative", borderRadius: 12 }}>
+                  {/* Rank medallion — top-right, overlapping the card */}
+                  <div
+                    aria-hidden
+                    style={{
+                      position: "absolute",
+                      top: -12,
+                      right: -10,
+                      zIndex: 12,
+                      width: 40,
+                      height: 40,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: isPodium
+                        ? "linear-gradient(145deg, #C4622D 0%, #9A4A1E 100%)"
+                        : "linear-gradient(145deg, #2A2520 0%, #1A1612 100%)",
+                      border: isPodium ? "1px solid #DA7B45" : "1px solid #3A332C",
+                      boxShadow: isPodium
+                        ? "0 6px 18px -4px rgba(196,98,45,0.55)"
+                        : "0 6px 16px -6px rgba(0,0,0,0.6)",
+                    }}
+                  >
+                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 800, color: isPodium ? "#F2EBD9" : "#A89880", lineHeight: 1 }}>
+                      {rank}
+                    </span>
+                  </div>
+                  <ProductCard {...product} featured={i === 0} />
+                </div>
+              );
+            })}
           </div>
-          <div style={{ marginTop: 32, textAlign: "center" }}>
-            <Link href="/reviews" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", border: "1px solid rgba(212,201,184,0.3)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+
+          {/* ── Footer rule + CTA ──────────────────────────────────────── */}
+          <div style={{ marginTop: 44, display: "flex", alignItems: "center", gap: 20 }}>
+            <span style={{ flex: 1, height: 1, background: "linear-gradient(90deg, transparent, rgba(212,201,184,0.2))" }} />
+            <Link
+              href="/reviews"
+              className="hover-border-warm"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "11px 26px",
+                border: "1px solid rgba(212,201,184,0.28)",
+                color: "#C8C0B4",
+                fontSize: 13,
+                fontWeight: 600,
+                borderRadius: 8,
+                fontFamily: "var(--font-dm-sans), sans-serif",
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
               See All Reviewed Products <span className="arrow-nudge"><ArrowRight size={13} /></span>
             </Link>
+            <span style={{ flex: 1, height: 1, background: "linear-gradient(270deg, transparent, rgba(212,201,184,0.2))" }} />
           </div>
         </div>
       </section>
