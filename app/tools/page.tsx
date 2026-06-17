@@ -87,39 +87,37 @@ export default function ToolsPage() {
 
       {/* PAGE HEAD */}
       <section style={{
-        background: "linear-gradient(120deg, #FFF0F3, #FFFAFA)",
-        borderBottom: "1px solid #EBEBEB",
+        background: "linear-gradient(120deg, #e7f2ec, #f2f8f4)",
+        borderBottom: "1px solid #e0ebe4",
       }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 32px 48px" }}>
           <div style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
-            fontSize: 11,
-            fontWeight: 700,
+            fontFamily: "var(--font-jetbrains), monospace",
+            fontSize: 12,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
-            color: "#D50032",
+            color: "#0f7a5a",
             marginBottom: 14,
           }}>
             Free · instant · no sign-up
           </div>
           <h1 style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
+            fontFamily: "var(--font-newsreader), Georgia, serif",
             fontSize: "clamp(2.2rem, 5vw, 3.25rem)",
-            fontWeight: 600,
+            fontWeight: 500,
             letterSpacing: "-0.02em",
             margin: "0 0 14px",
             lineHeight: 1.04,
-            color: "#2D2D2D",
+            color: "#17211c",
           }}>
-            Calculators & <em style={{ fontStyle: "italic", color: "#D50032" }}>tools</em>
+            Calculators & <em style={{ fontStyle: "italic", color: "#0f7a5a" }}>tools</em>
           </h1>
           <p style={{
             fontSize: 18,
             lineHeight: 1.6,
-            color: "#525252",
+            color: "#3f4b43",
             margin: 0,
             maxWidth: 600,
-            fontFamily: "var(--font-dm-sans), sans-serif",
           }}>
             Dial in your numbers with research-grade tools — built on the Mifflin-St Jeor equation and validated formulas, not guesswork.
           </p>
@@ -134,14 +132,14 @@ export default function ToolsPage() {
       {/* ALL TOOLS GRID */}
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 32px 88px" }}>
         <h2 style={{
-          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontFamily: "var(--font-newsreader), Georgia, serif",
           fontSize: 28,
-          fontWeight: 600,
+          fontWeight: 500,
           margin: "0 0 24px",
-          color: "#2D2D2D",
+          color: "#17211c",
           letterSpacing: "-0.02em",
         }}>
-          All <em style={{ fontStyle: "italic", color: "#D50032" }}>tools</em>
+          All <em style={{ fontStyle: "italic", color: "#0f7a5a" }}>tools</em>
         </h2>
 
         <div className="tools-grid">
@@ -152,44 +150,39 @@ export default function ToolsPage() {
               <CardTag
                 key={tool.title}
                 href={isLive ? tool.href : undefined as any}
-                className="hub-card"
+                className="tool-card"
                 style={{
                   textDecoration: "none",
                   color: "inherit",
-                  border: "1px solid #EBEBEB",
+                  border: "1px solid #e4e8e5",
                   borderRadius: 14,
                   padding: 22,
-                  display: "flex",
-                  flexDirection: "column",
                   minHeight: 140,
                   cursor: isLive ? "pointer" : "default",
                   opacity: isLive ? 1 : 0.8,
                 }}
               >
                 <span style={{
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  fontSize: 10,
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
+                  fontFamily: "var(--font-jetbrains), monospace",
+                  fontSize: 11,
+                  letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: isLive ? "#D50032" : "#9CA3AF",
-                  marginBottom: "auto",
+                  color: isLive ? "#0f7a5a" : "#8a948c",
                 }}>
                   {isLive ? "LIVE" : "SOON"}
                 </span>
                 <div style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
+                  fontFamily: "var(--font-newsreader), Georgia, serif",
                   fontSize: 21,
-                  fontWeight: 600,
+                  fontWeight: 500,
                   margin: "14px 0 6px",
-                  color: "#2D2D2D",
+                  color: "#17211c",
                 }}>
                   {tool.title}
                 </div>
                 <div style={{
                   fontSize: 13,
-                  color: "#737373",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  color: "#6b7770",
                 }}>
                   {tool.description}
                 </div>
