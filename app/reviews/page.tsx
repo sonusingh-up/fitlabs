@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
+import HubMasthead from "@/components/ui/HubMasthead";
 import type { ReviewRating } from "@/lib/types";
 
 export const metadata: Metadata = {
@@ -499,31 +500,14 @@ export default function ReviewsHubPage() {
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 48px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>REVIEW INDEX · {reviews.length} REVIEWS</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Fitlab Scoring Protocol</span>
-          </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
-            Supplement{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Reviews</em>
-          </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620, marginBottom: 28 }}>
-            Every review is scored on five pillars: formula integrity, label transparency, third-party verification, value efficiency, and practical quality. No affiliate influence on verdicts.
-          </p>
-          {/* Stats */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
-            {stats.map((s) => (
-              <div key={s.label} style={{ padding: "12px 20px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>{s.label}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{s.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <HubMasthead
+        eyebrow={`Review Index · ${reviews.length} Reviews`}
+        kicker="Fitlab Scoring Protocol"
+        title="Supplement"
+        titleAccent="Reviews"
+        subtitle="Every review is scored on five pillars: formula integrity, label transparency, third-party verification, value efficiency, and practical quality. No affiliate influence on verdicts."
+        stats={stats}
+      />
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 

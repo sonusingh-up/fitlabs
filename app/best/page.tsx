@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
+import HubMasthead from "@/components/ui/HubMasthead";
 
 export const metadata: Metadata = {
   title: "Best Supplement Picks — Ranked Roundups",
@@ -209,22 +210,13 @@ export default function BestHubPage() {
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 48px" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>ROUNDUP INDEX · {roundups.length} GUIDES</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Tested & Ranked · 2026</span>
-          </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
-            Best{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Supplement Guides</em>
-          </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620 }}>
-            Every roundup covers 7–15 products, ranked on formula quality, label transparency, price efficiency, and real-world results. Updated when formulas or prices change significantly.
-          </p>
-        </div>
-      </div>
+      <HubMasthead
+        eyebrow={`Roundup Index · ${roundups.length} Guides`}
+        kicker="Tested & Ranked · 2026"
+        title="Best"
+        titleAccent="Supplement Guides"
+        subtitle="Every roundup covers 7–15 products, ranked on formula quality, label transparency, price efficiency, and real-world results. Updated when formulas or prices change significantly."
+      />
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 
