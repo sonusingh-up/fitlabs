@@ -8,8 +8,9 @@ import type { ReviewRating, EvidenceLevel } from "@/lib/types";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return {
-    title: `Best Supplements for ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Fitlabreviews Goal Guide`,
-    description: `Evidence-based supplement guide for your fitness goal. Recommended ingredients, stacks, and product reviews.`,
+    title: `Best Supplements for ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} (2026)`,
+    description: `Evidence-based supplement guide for this fitness goal in 2026. FSP-scored product picks, recommended ingredients, dosages, and stacking strategies.`,
+    alternates: { canonical: `/goals/${slug}` },
   };
 }
 

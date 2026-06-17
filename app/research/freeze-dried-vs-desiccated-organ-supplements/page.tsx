@@ -6,7 +6,7 @@ import EvidenceBadge from "@/components/ui/EvidenceBadge";
 export const metadata: Metadata = {
   title: "Freeze-Dried vs Desiccated Organ Supplements (2026)",
   description:
-    "Freeze-dried vs desiccated beef organs: nutrient retention, enzyme preservation, cost differences, and which processing method produces the better supplement.",
+    "Freeze-dried vs desiccated beef organs compared: nutrient retention, enzyme activity, cost, and which processing method yields the better supplement.",
   alternates: { canonical: "/research/freeze-dried-vs-desiccated-organ-supplements" },
 };
 

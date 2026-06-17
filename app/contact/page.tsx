@@ -4,8 +4,9 @@ import { Mail, MessageSquare, FileText } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Fitlabreviews — Get In Touch",
-  description: "Contact the Fitlabreviews editorial team for review submissions, corrections, media inquiries, or general questions.",
+  title: "Contact Us — Editorial & Media Enquiries",
+  description: "Contact the Fitlabreviews editorial team for review submissions, corrections, media inquiries, or general questions about our supplement research.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

@@ -7,7 +7,7 @@ import type { EvidenceLevel } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Tirzepatide: Mechanism, Benefits & Side Effects",
   description:
-    "Tirzepatide (Zepbound/Mounjaro) is a dual GIP/GLP-1 agonist with the strongest weight-loss evidence of any approved medication. Dosage, clinical trial data, safety profile, and telehealth access explained. Updated 2026.",
+    "Tirzepatide (Zepbound/Mounjaro): dual GIP/GLP-1 agonist with the strongest weight-loss trial data. Dosage, safety, and telehealth access. 2026.",
   alternates: { canonical: "/ingredients/tirzepatide" },
 };
 

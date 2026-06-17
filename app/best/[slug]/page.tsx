@@ -9,8 +9,9 @@ import type { ReviewRating } from "@/lib/types";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return {
-    title: `Best ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} — Fitlabreviews Roundup`,
-    description: `Our research team's top picks with comparison table, ingredient analysis, and who each product is best suited for.`,
+    title: `Best ${slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())} (2026) — Top Picks`,
+    description: `Our research team's top-rated picks for 2026 with FSP scores, comparison table, ingredient analysis, and who each product suits best.`,
+    alternates: { canonical: `/best/${slug}` },
   };
 }
 

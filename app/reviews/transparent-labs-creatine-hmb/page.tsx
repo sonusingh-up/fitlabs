@@ -18,12 +18,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Transparent Labs Creatine HMB Review (2026) — Rated 8/10",
+  title: "TL Creatine HMB Review (2026) — Rated 8/10",
   description:
-    "Transparent Labs Creatine HMB: 5g creatine + 1.5g MyHMB® + Vitamin D3 + BioPerine. Informed Sport certified. Full ingredient audit, claim check, vs plain creatine. FSP 8/10.",
+    "Transparent Labs Creatine HMB: 5g creatine + 1.5g MyHMB® + BioPerine, Informed Sport certified. Full ingredient audit vs plain creatine. FSP 8/10.",
   alternates: { canonical: "/reviews/transparent-labs-creatine-hmb" },
   openGraph: {
-    title: "Transparent Labs Creatine HMB Review (2026) — Rated 8/10",
+    title: "TL Creatine HMB Review (2026) — Rated 8/10",
     description:
       "5g creatine monohydrate + 1.5g clinically dosed HMB + Vitamin D3 + BioPerine. Informed Sport certified and fully disclosed. The most honest premium creatine on the market — if you need HMB.",
     url: "https://fitlabreviews.com/reviews/transparent-labs-creatine-hmb",

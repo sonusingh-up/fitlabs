@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     absolute: "Fitlabreviews — Evidence-Led Supplement Reviews",
   },
   description:
-    "Research-grade supplement reviews, ingredient analysis, and wellness guidance for smarter buying decisions. Evidence-led, editorially independent. No bias.",
+    "Research-grade supplement reviews, ingredient analysis, and wellness guidance. Evidence-led, editorially independent. No sponsors, no bias.",
   alternates: {
     canonical: "/",
   },
@@ -215,7 +215,7 @@ export default function HomePage() {
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, color: "#8A8480", textTransform: "uppercase" }}>{post.category}</span>
                   <span style={{ marginLeft: "auto", padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", textTransform: "uppercase", color: post.badgeColor, backgroundColor: `${post.badgeColor}14`, border: `1px solid ${post.badgeColor}33` }}>{post.badge}</span>
                 </div>
-                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{post.title}</h4>
+                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", lineHeight: 1.3, margin: 0 }}>{post.title}</h3>
                 <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{post.date} · {post.readTime} read →</span>
               </div>
             </Link>

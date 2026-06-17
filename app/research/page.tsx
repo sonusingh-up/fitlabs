@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Supplement Research & Science Articles",
-  description: "Evidence-graded research articles on supplement science, longevity, GLP-1 medications, sleep biology, and clinical trial breakdowns. Every claim is linked to named peer-reviewed studies.",
+  description: "Evidence-graded research on supplement science, longevity, GLP-1 medications, and sleep biology. Every claim linked to named peer-reviewed studies.",
   alternates: { canonical: "/research" },
 };
 

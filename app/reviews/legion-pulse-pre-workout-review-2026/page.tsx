@@ -20,12 +20,12 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 // ─── METADATA ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Legion Pulse Pre-Workout Review 2026: Clean Formula or Just More Hype?",
+  title: "Legion Pulse Pre-Workout Review (2026) — 9/10",
   description:
     "We put Legion Pulse to the test — ingredients, energy, pumps, and side effects all covered. See if this stimulant-based pre-workout is worth your money before buying.",
   alternates: { canonical: "/reviews/legion-pulse-pre-workout-review-2026" },
   openGraph: {
-    title: "Legion Pulse Pre-Workout Review 2026: Clean Formula or Just More Hype?",
+    title: "Legion Pulse Pre-Workout Review (2026) — 9/10",
     description:
       "6 clinically dosed ingredients, zero proprietary blends, Labdoor certified. The 1:1 caffeine-to-theanine ratio is unique — full FSP analysis.",
     url: "https://fitlabreviews.com/reviews/legion-pulse-pre-workout-review-2026",

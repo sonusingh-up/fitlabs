@@ -5,7 +5,7 @@ import MobileTOC from "@/components/ui/MobileTOC";
 
 export const metadata: Metadata = {
   title: "GLP-1 Drugs: 5 Surprising Benefits Beyond Weight Loss",
-  description: "Ozempic and Wegovy are known for weight loss, but cardiovascular protection, kidney defence, addiction modulation, and neuroprotection are where the evidence gets interesting.",
+  description: "Ozempic and Wegovy go beyond weight loss: cardiovascular protection, kidney defence, addiction modulation, and neuroprotection. Trial evidence reviewed.",
   alternates: { canonical: "/blog/glp1-benefits-beyond-weight-loss" },
 };
 

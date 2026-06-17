@@ -14,12 +14,12 @@ import { computeComposite } from "@/lib/scoring";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 export const metadata: Metadata = {
-  title: "Enviromedica Terraferrin Review (2026): Lactoferrin + Organs",
+  title: "Terraferrin Review (2026) — Rated 7/10",
   description:
     "Enviromedica Terraferrin review: lactoferrin + desiccated bovine liver blend. Iron bioavailability, immune support, $1.10/serving. Full FSP analysis — 7/10.",
   alternates: { canonical: "/reviews/enviromedica-terraferrin" },
   openGraph: {
-    title: "Enviromedica Terraferrin Review (2026): Lactoferrin + Organs",
+    title: "Terraferrin Review (2026) — Rated 7/10",
     description:
       "Enviromedica combines lactoferrin with desiccated beef liver for iron optimisation. Is the formulation worth the premium? Our full evidence-based review.",
     url: "https://fitlabreviews.com/reviews/enviromedica-terraferrin",

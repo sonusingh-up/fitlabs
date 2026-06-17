@@ -7,7 +7,7 @@ import type { ReviewRating } from "@/lib/types";
 export const metadata: Metadata = {
   title: "5 Best GLP-1 Telehealth Providers (2026)",
   description:
-    "Best GLP-1 telehealth providers 2026 — WellMedr, Ro Body, Hers, Found & SkinnyRx ranked on price, microdosing, medication choice, and consultation speed.",
+    "Best GLP-1 telehealth providers 2026 — WellMedr, Ro Body, Hers, Found & SkinnyRx ranked on price, microdosing, and consultation speed.",
   alternates: { canonical: "/best/glp-1-telehealth" },
   openGraph: {
     title: "5 Best GLP-1 Telehealth Providers (2026)",

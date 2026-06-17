@@ -20,7 +20,7 @@ import type { ReviewRating, EvidenceLevel, ScoringRubric } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Performance Lab Sleep Review (2026) — Rated 8/10",
   description:
-    "Performance Lab Sleep review: 4-ingredient transparent formula, CherryPURE 500mg, no synthetic melatonin, Clean Label Project certified. $1.47/serving. FSP 8/10.",
+    "Performance Lab Sleep review: 4-ingredient formula, CherryPURE 500mg, no synthetic melatonin, Clean Label certified. $1.47/serving. FSP 8/10.",
   alternates: { canonical: "/reviews/performance-lab-sleep" },
   openGraph: {
     title: "Performance Lab Sleep Review (2026) — Clean Label, Honest Formula",

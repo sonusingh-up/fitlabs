@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Our Research Team & Authors",
-  description: "Meet the research team behind Fitlabreviews. Independent supplement researchers, formula analysts, and evidence-based writers.",
+  description: "Meet the research team behind Fitlabreviews — independent supplement researchers, formula analysts, and evidence-based writers who score every product we review.",
   alternates: { canonical: "/authors" },
 };
 

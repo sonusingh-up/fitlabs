@@ -20,7 +20,7 @@ import { getAffiliateUrl } from "@/lib/amazon";
 export const metadata: Metadata = {
   title: "Heart & Soil Beef Organs Review (2026): Worth $55?",
   description:
-    "Heart & Soil Beef Organs review: Informed Sport certified, Dr. Paul Saladino formulation, US regenerative sourcing, 5-organ blend, $1.83/serving. FSP 9/10.",
+    "Heart & Soil Beef Organs review: Informed Sport certified, 5-organ freeze-dried blend, US regenerative sourcing, $1.83/serving. FSP 9/10.",
   alternates: { canonical: "/reviews/heart-and-soil-beef-organs" },
   openGraph: {
     title: "Heart & Soil Beef Organs Review (2026): Worth $55?",

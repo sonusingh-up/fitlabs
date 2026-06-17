@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = {
   title: "Microdose GLP-1 Telehealth: Does It Work?",
-  description: "Microdosing GLP-1 medications like tirzepatide and semaglutide reduces side effects while preserving weight-loss benefits. Evidence, protocols, and top telehealth providers in 2026.",
+  description: "Microdosing GLP-1 medications like tirzepatide and semaglutide reduces side effects while preserving weight-loss results. Evidence and protocols reviewed.",
   alternates: { canonical: "/research/microdose-glp1" },
 };
 
@@ -12,7 +12,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "Microdose GLP-1 Telehealth: Does It Work?",
-  description: "Microdosing GLP-1 medications like tirzepatide and semaglutide reduces side effects while preserving weight-loss benefits. Evidence, protocols, and top telehealth providers in 2026.",
+  description: "Microdosing GLP-1 medications like tirzepatide and semaglutide reduces side effects while preserving weight-loss results. Evidence and protocols reviewed.",
   articleSection: "Research",
   author: {
     "@type": "Organization",
