@@ -26,7 +26,7 @@ export default function NewsletterForm() {
   return (
     <form className="newsletter-form-row" onSubmit={handleSubmit}>
       {status === "sent" ? (
-        <p style={{ color: "#C4622D", fontSize: 14, margin: 0 }}>Subscribed — thank you!</p>
+        <p style={{ color: "#0E8784", fontSize: 14, margin: 0 }}>Subscribed — thank you!</p>
       ) : (
         <>
           <label htmlFor="newsletter-email" className="sr-only">Email address</label>
@@ -39,10 +39,10 @@ export default function NewsletterForm() {
             style={{
               flex: 1,
               padding: "10px 14px",
-              backgroundColor: "rgba(242,235,217,0.08)",
-              border: "1px solid rgba(212,201,184,0.2)",
+              backgroundColor: "rgba(255,255,255,0.08)",
+              border: "1px solid rgba(255,255,255,0.15)",
               borderRadius: 8,
-              color: "#F2EBD9",
+              color: "#F9FAFB",
               fontSize: 14,
               fontFamily: "var(--font-dm-sans), sans-serif",
               outline: "none",
@@ -53,8 +53,8 @@ export default function NewsletterForm() {
             disabled={status === "sending"}
             style={{
               padding: "10px 20px",
-              backgroundColor: "#C4622D",
-              color: "#F2EBD9",
+              backgroundColor: "#0E8784",
+              color: "#FFFFFF",
               fontSize: 13,
               fontWeight: 600,
               letterSpacing: "0.05em",
@@ -70,7 +70,7 @@ export default function NewsletterForm() {
             {status === "sending" ? "..." : "Subscribe"}
           </button>
           {status === "error" && (
-            <p style={{ color: "#C4622D", fontSize: 13, margin: 0 }}>Failed — try again.</p>
+            <p style={{ color: "#EF4444", fontSize: 13, margin: 0 }}>Failed — try again.</p>
           )}
         </>
       )}

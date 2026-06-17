@@ -40,44 +40,30 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF", marginTop: 80 }}>
+    <footer style={{ borderTop: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", marginTop: 80 }}>
       {/* Newsletter band */}
       <div
         style={{
-          borderBottom: "1px solid #D4C9B8",
-          padding: "48px 24px",
+          borderBottom: "1px solid #E5E7EB",
+          padding: "56px 24px",
           textAlign: "center",
-          backgroundColor: "#15120E",
-          backgroundImage: "radial-gradient(ellipse 60% 80% at 50% 0%, rgba(196,98,45,0.14), transparent 62%)",
+          backgroundColor: "#111827",
           position: "relative",
           overflow: "hidden",
         }}
       >
-        {/* Rust top accent */}
-        <div aria-hidden style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, transparent, #C4622D 50%, transparent)" }} />
-        {/* Masked grid texture */}
-        <div
-          aria-hidden
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-            maskImage: "radial-gradient(ellipse 70% 90% at 50% 0%, #000 20%, transparent 75%)",
-            WebkitMaskImage: "radial-gradient(ellipse 70% 90% at 50% 0%, #000 20%, transparent 75%)",
-            pointerEvents: "none",
-          }}
-        />
+        {/* Teal top accent */}
+        <div aria-hidden style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: "linear-gradient(90deg, transparent, #0E8784 50%, transparent)" }} />
         <div style={{ position: "relative", maxWidth: 480, margin: "0 auto" }}>
           <p
             style={{
-              fontFamily: "var(--font-dm-mono), monospace",
-              fontSize: 10,
-              letterSpacing: "0.2em",
+              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontSize: 11,
+              letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#8A8480",
+              color: "#6B7280",
               marginBottom: 12,
+              fontWeight: 600,
             }}
           >
             The Research Dispatch
@@ -87,14 +73,14 @@ export default function Footer() {
               fontFamily: "var(--font-playfair), Georgia, serif",
               fontSize: "clamp(1.4rem, 3vw, 2rem)",
               fontWeight: 700,
-              color: "#F2EBD9",
+              color: "#F9FAFB",
               marginBottom: 8,
               letterSpacing: "-0.02em",
             }}
           >
             Evidence first. Noise never.
           </h3>
-          <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>
+          <p style={{ fontSize: 14, color: "#9CA3AF", marginBottom: 24, lineHeight: 1.6 }}>
             Weekly supplement research, ingredient deep-dives, and honest product updates — no hype.
           </p>
           <NewsletterForm />
@@ -108,12 +94,13 @@ export default function Footer() {
             <div key={section}>
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
-                  fontSize: 10,
-                  letterSpacing: "0.2em",
+                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontSize: 11,
+                  letterSpacing: "0.12em",
                   textTransform: "uppercase",
-                  color: "#8A8480",
+                  color: "#9CA3AF",
                   marginBottom: 14,
+                  fontWeight: 600,
                 }}
               >
                 {section}
@@ -121,7 +108,6 @@ export default function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                 {links.map((link) => (
                   <li key={link.label}>
-                    {/* Emil: .footer-link handles translateX(2px) + color in globals.css */}
                     <Link
                       href={link.href}
                       className="footer-link"
@@ -138,31 +124,32 @@ export default function Footer() {
         {/* Disclaimer block */}
         <div
           style={{
-            border: "1px dashed #C8BFB0",
-            borderRadius: 10,
+            border: "1px solid #E5E7EB",
+            borderRadius: 12,
             padding: "22px 24px",
             marginBottom: 28,
             display: "flex",
             flexDirection: "column",
             gap: 14,
+            backgroundColor: "#F8FAFB",
           }}
         >
-          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
-            <strong style={{ color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>Not medical advice.</strong>{" "}
+          <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.75, margin: 0 }}>
+            <strong style={{ color: "#111827", fontFamily: "var(--font-dm-sans), sans-serif" }}>Not medical advice.</strong>{" "}
             Content on Fitlabreviews is educational and reflects our reading of published research. Nothing here replaces a licensed physician, dietician, or pharmacist. Consult a qualified professional before starting, stopping, or combining any supplement — especially if you are pregnant, on medication, or managing a chronic condition.{" "}
-            <Link href="/medical-disclaimer" style={{ color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Full disclaimer →</Link>
+            <Link href="/medical-disclaimer" style={{ color: "#0E8784", fontWeight: 600, textDecoration: "none" }}>Full disclaimer →</Link>
           </p>
-          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
-            <strong style={{ color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>Affiliate disclosure.</strong>{" "}
+          <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.75, margin: 0 }}>
+            <strong style={{ color: "#111827", fontFamily: "var(--font-dm-sans), sans-serif" }}>Affiliate disclosure.</strong>{" "}
             Fitlabreviews participates in affiliate programmes. Some product links on this site are affiliate links — if you click and buy, we earn a small commission at no extra cost to you. This never influences our scores, rankings, or recommendations.{" "}
-            <Link href="/affiliate-disclosure" style={{ color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Full disclosure →</Link>
+            <Link href="/affiliate-disclosure" style={{ color: "#0E8784", fontWeight: 600, textDecoration: "none" }}>Full disclosure →</Link>
           </p>
         </div>
 
         {/* Bottom bar */}
         <div
           style={{
-            borderTop: "1px solid #D4C9B8",
+            borderTop: "1px solid #E5E7EB",
             paddingTop: 20,
             display: "flex",
             flexWrap: "wrap",
@@ -180,7 +167,7 @@ export default function Footer() {
               style={{ objectFit: "contain", objectPosition: "left" }}
             />
           </div>
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+          <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif" }}>
             © {new Date().getFullYear()} Fitlabreviews. All reviews are editorially independent.
           </p>
         </div>

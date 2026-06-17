@@ -1,9 +1,11 @@
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
+const hasSanity = !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+
 export const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "placeholder",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2024-01-01",
   useCdn: process.env.NODE_ENV === "production",
 });
@@ -14,6 +16,7 @@ export const urlFor = (source: any) => builder.image(source);
 // ─── REVIEWS ─────────────────────────────────────────────────────────────────
 
 export async function getAllReviewSlugs(): Promise<{ slug: string }[]> {
+  if (!hasSanity) return [];
   return sanityClient.fetch(`*[_type == "review"]{ "slug": slug.current }`);
 }
 

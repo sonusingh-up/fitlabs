@@ -6,22 +6,22 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
 
 export function evidenceColor(level: EvidenceLevel): string {
   const map: Record<EvidenceLevel, string> = {
-    strong: "#2D6A4F",
-    moderate: "#52796F",
-    limited: "#8B7355",
-    emerging: "#C4622D",
-    insufficient: "#6B6059",
+    strong: "#059669",
+    moderate: "#0E8784",
+    limited: "#D97706",
+    emerging: "#3B82F6",
+    insufficient: "#6B7280",
   };
   return map[level];
 }
 
 export function evidenceBg(level: EvidenceLevel): string {
   const map: Record<EvidenceLevel, string> = {
-    strong: "rgba(45,106,79,0.08)",
-    moderate: "rgba(82,121,111,0.08)",
-    limited: "rgba(139,115,85,0.08)",
-    emerging: "rgba(196,98,45,0.08)",
-    insufficient: "rgba(107,96,89,0.08)",
+    strong: "rgba(5,150,105,0.06)",
+    moderate: "rgba(14,135,132,0.06)",
+    limited: "rgba(217,119,6,0.06)",
+    emerging: "rgba(59,130,246,0.06)",
+    insufficient: "rgba(107,114,128,0.06)",
   };
   return map[level];
 }
@@ -37,10 +37,10 @@ export function ratingLabel(rating: ReviewRating): string {
 }
 
 export function ratingColor(rating: ReviewRating): string {
-  if (rating >= 8) return "#2D6A4F";
-  if (rating >= 6) return "#52796F";
-  if (rating >= 5) return "#8B7355";
-  return "#C4622D";
+  if (rating >= 8) return "#059669";
+  if (rating >= 6) return "#0E8784";
+  if (rating >= 5) return "#D97706";
+  return "#EF4444";
 }
 
 export function formatDate(iso: string): string {

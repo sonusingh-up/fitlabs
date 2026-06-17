@@ -48,8 +48,9 @@ export default function ReviewScoreBadge({ rating, size = "md", showLabel = true
       {showLabel && (
         <span
           style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-dm-sans), sans-serif",
             fontSize: s.label,
+            fontWeight: 600,
             letterSpacing: "0.15em",
             textTransform: "uppercase",
             color,
