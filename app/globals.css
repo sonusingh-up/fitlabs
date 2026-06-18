@@ -30,6 +30,7 @@
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
 
     --duration-instant: 100ms;
     --duration-fast: 150ms;
@@ -102,9 +103,15 @@
     box-shadow var(--duration-base) var(--ease-out-quart);
   will-change: transform;
 }
-.hover-card:hover {
-  box-shadow: 0 8px 30px -8px rgba(0,0,0,0.12);
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  .hover-card:hover {
+    box-shadow: 0 8px 30px -8px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+  }
+}
+.hover-card:active {
+  transform: scale(0.98);
+  box-shadow: none;
 }
 .hover-bg {
   transition: background-color var(--duration-fast) var(--ease-out-expo);
@@ -148,8 +155,13 @@
   transition: transform var(--duration-base) var(--ease-out-expo);
   will-change: transform;
 }
-.hover-featured:hover {
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  .hover-featured:hover {
+    transform: translateY(-4px);
+  }
+}
+.hover-featured:active {
+  transform: scale(0.98);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════
@@ -362,9 +374,14 @@
     box-shadow var(--duration-base) var(--ease-out-quart);
   will-change: transform;
 }
-.hub-card:hover {
-  box-shadow: 0 8px 30px -8px rgba(0,0,0,0.12);
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  .hub-card:hover {
+    box-shadow: 0 8px 30px -8px rgba(0,0,0,0.12);
+    transform: translateY(-3px);
+  }
+}
+.hub-card:active {
+  transform: scale(0.98);
 }
 .hub-row-link {
   transition: background-color var(--duration-fast) var(--ease-out-expo);
@@ -412,7 +429,7 @@ html, body {
   gap: 24px;
   padding: 20px 24px;
   text-decoration: none;
-  transition: background-color 0.15s;
+  transition: background-color var(--duration-fast) var(--ease-out-expo);
 }
 @media (max-width: 640px) {
   .ing-row { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
@@ -971,9 +988,14 @@ html, body {
 .tool-card > span:first-child {
   margin-bottom: auto;
 }
-.tool-card:hover {
-  border-color: #0f7a5a !important;
-  transform: translateY(-4px);
+@media (hover: hover) and (pointer: fine) {
+  .tool-card:hover {
+    border-color: #0f7a5a !important;
+    transform: translateY(-4px);
+  }
+}
+.tool-card:active {
+  transform: scale(0.98);
 }
 
 /* ════════════════════════════════════════════════════════════════════════
@@ -1024,7 +1046,7 @@ html, body {
 }
 
 .mobile-drawer {
-  animation: drawerIn var(--duration-slow) var(--ease-out-expo) both;
+  animation: drawerIn var(--duration-slow) var(--ease-drawer) both;
 }
 
 .mobile-nav-item {
@@ -1105,9 +1127,11 @@ html, body {
   display: inline-flex;
   transition: transform var(--duration-base) var(--ease-out-expo);
 }
-*:hover > .arrow-nudge,
-*:hover .arrow-nudge {
-  transform: translateX(3px);
+@media (hover: hover) and (pointer: fine) {
+  *:hover > .arrow-nudge,
+  *:hover .arrow-nudge {
+    transform: translateX(3px);
+  }
 }
 
 /* ── Fade-up entrance ──────────────────────────────────────────────── */
@@ -1130,6 +1154,16 @@ html, body {
 .animate-fade-up:nth-child(6) { transition-delay: 300ms; }
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up { opacity: 1; transform: none; transition: none; }
+  /* card hover transforms */
+  .hover-card:hover, .hub-card:hover, .tool-card:hover,
+  .hover-featured:hover, .picks-card:hover, .search-topic-card:hover { transform: none; }
+  .footer-link:hover { transform: none; }
+  *:hover > .arrow-nudge, *:hover .arrow-nudge { transform: none; }
+  /* overlay / entry animations */
+  .nav-dropdown, .mega-panel, .search-panel { animation: none; }
+  .mobile-drawer, .mobile-nav-item { animation: none; }
+  /* marquee — keep moving but barely */
+  .trust-marquee-track { animation-duration: 60s; }
 }
 @media print {
   .animate-fade-up { opacity: 1; transform: none; }
@@ -1151,7 +1185,11 @@ html, body {
 }
 .footer-link:hover {
   color: #0f7a5a;
-  transform: translateX(2px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer-link:hover {
+    transform: translateX(2px);
+  }
 }
 
 /* ── Skip-to-content link ─────────────────────────────────────────── */
@@ -1508,7 +1546,14 @@ html, body {
 }
 .search-topic-card:hover {
   border-color: #0F7A5A;
-  transform: translateY(-2px);
+}
+@media (hover: hover) and (pointer: fine) {
+  .search-topic-card:hover {
+    transform: translateY(-2px);
+  }
+}
+.search-topic-card:active {
+  transform: scale(0.98);
 }
 
 .search-topic-cat {
@@ -1546,14 +1591,24 @@ html, body {
    HOMEPAGE HOVER UTILITIES
    ══════════════════════════════════════════════════════════════════ */
 
-.hover-featured:hover { transform: translateY(-4px); }
-
 .tool-card-link:hover { border-color: #0F7A5A !important; }
 
 .research-card-link:hover { border-color: #0F7A5A !important; }
 
-.picks-card { transition: box-shadow 180ms ease, transform 180ms ease; }
-.picks-card:hover { box-shadow: 0 8px 28px -6px rgba(10,30,22,0.16); transform: translateY(-3px); }
+.picks-card {
+  transition:
+    box-shadow var(--duration-base) var(--ease-out-quart),
+    transform var(--duration-base) var(--ease-out-expo);
+}
+@media (hover: hover) and (pointer: fine) {
+  .picks-card:hover {
+    box-shadow: 0 8px 28px -6px rgba(10,30,22,0.16);
+    transform: translateY(-3px);
+  }
+}
+.picks-card:active {
+  transform: scale(0.98);
+}
 
 .footer-bottom-link:hover { color: #FFFFFF !important; }
 
