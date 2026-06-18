@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" ry="14" fill="#14a474"></rect>
-  <text x="32" y="43" font-family="&#39;JetBrains Mono&#39;, ui-monospace, &#39;SFMono-Regular&#39;, Menlo, monospace" font-weight="700" font-size="30" letter-spacing="-1" text-anchor="middle" fill="#06120c">FL</text>
-  <rect x="19" y="50" width="26" height="3.2" rx="1.6" fill="#06120c" opacity="0.32"></rect>
-</svg>
