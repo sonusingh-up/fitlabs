@@ -1,15 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
-  <rect width="1200" height="300" fill="#0a1410"></rect>
-
-  
-  <rect x="150" y="95" width="110" height="110" rx="26" ry="26" fill="#14a474"></rect>
-  <text x="205" y="171" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-weight="700" font-size="50" letter-spacing="-2" text-anchor="middle" fill="#06120c">FL</text>
-
-  
-  <text x="290" y="172" font-family="&#39;Newsreader&#39;, Georgia, &#39;Times New Roman&#39;, serif" font-weight="600" font-size="92" letter-spacing="-2" text-anchor="start"><tspan fill="#ffffff">fitlab</tspan><tspan fill="#7fd8b4">reviews</tspan></text>
-
-  
-  <text x="293" y="222" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-weight="500" font-size="20" letter-spacing="6" text-anchor="start" fill="#5f9a83">EVIDENCE-LED</text>
-  <circle cx="555" cy="216" r="4" fill="#c98a1e"></circle>
-  <text x="575" y="222" font-family="&#39;JetBrains Mono&#39;, ui-monospace, Menlo, monospace" font-weight="500" font-size="20" letter-spacing="6" text-anchor="start" fill="#5f9a83">NO BIAS</text>
+  <!-- OG image banner — dark background version -->
+  <rect width="1200" height="300" fill="#101a16"/>
+  <!-- Wordmark using system serif fallback for OG rendering -->
+  <text x="600" y="185" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="128" letter-spacing="-4" text-anchor="middle" fill="#ffffff">fitlabreviews</text>
+  <!-- Tagline -->
+  <text x="600" y="238" font-family="'Courier New', monospace" font-weight="500" font-size="18" letter-spacing="8" text-anchor="middle" fill="#4a7a62" text-transform="uppercase">EVIDENCE-LED · NO BIAS</text>
 </svg>

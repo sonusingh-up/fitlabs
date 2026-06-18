@@ -33,16 +33,16 @@ export default function Footer() {
 
         {/* Brand + newsletter */}
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 20 }}>
+          <div style={{ marginBottom: 20 }}>
             <span style={{
-              width: 30, height: 30, borderRadius: 8,
-              backgroundColor: "#14A474",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "var(--font-jetbrains), monospace",
-              fontWeight: 700, fontSize: 13, color: "#06120C",
-            }}>FL</span>
-            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 22, fontWeight: 600, color: "#17211C" }}>
-              fitlab<em style={{ fontStyle: "normal", color: "#0F7A5A" }}>reviews</em>
+              fontFamily: "var(--font-playfair), Georgia, serif",
+              fontWeight: 900,
+              fontSize: 24,
+              color: "#17211C",
+              letterSpacing: "-0.03em",
+              lineHeight: 1,
+            }}>
+              fitlabreviews
             </span>
           </div>
 

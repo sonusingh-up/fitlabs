@@ -370,14 +370,19 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" aria-label="Fitlabreviews home" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
-            <Image
-              src="/logo-banner.svg"
-              alt="Fitlabreviews"
-              width={148}
-              height={36}
-              priority
-              style={{ objectFit: "contain", objectPosition: "left" }}
-            />
+            <span
+              style={{
+                fontFamily: "var(--font-playfair), Georgia, serif",
+                fontWeight: 900,
+                fontSize: 26,
+                color: "#17211C",
+                letterSpacing: "-0.03em",
+                lineHeight: 1,
+                userSelect: "none",
+              }}
+            >
+              fitlabreviews
+            </span>
           </Link>
 
           {/* Desktop nav */}
