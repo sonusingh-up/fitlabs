@@ -1177,6 +1177,12 @@ html, body {
   outline-offset: -3px;
 }
 
+/* Safe area inset utilities (iOS notch / Dynamic Island support) */
+.pt-safe { padding-top: env(safe-area-inset-top, 0); }
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0); }
+.pl-safe { padding-left: env(safe-area-inset-left, 0); }
+.pr-safe { padding-right: env(safe-area-inset-right, 0); }
+
 /* ── Focus ring ───────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid #0f7a5a;
@@ -1557,7 +1563,7 @@ html, body {
 
 @media (max-width: 1023px) {
   .mega-panel { display: none; }
-  .search-panel { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 70; overflow-y: auto; border-radius: 0; }
+  .search-panel { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 70; overflow-y: auto; border-radius: 0; padding-top: env(safe-area-inset-top, 0); padding-bottom: env(safe-area-inset-bottom, 0); padding-left: env(safe-area-inset-left, 0); padding-right: env(safe-area-inset-right, 0); }
 }
 
 @media (max-width: 640px) {

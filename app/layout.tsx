@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, DM_Sans, Newsreader, JetBrains_Mono, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -43,6 +43,12 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fitlabreviews.com"),
