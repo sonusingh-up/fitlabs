@@ -466,7 +466,7 @@ export default function Header() {
         onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpenMenu(null); }}
         style={{ borderBottom: "1px solid #E9EDE9", backgroundColor: "#fff", position: "relative" }}
       >
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
+        <div className="header-inner" style={{ maxWidth: 1280, margin: "0 auto", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}>
 
           {/* Logo */}
           <Link href="/" aria-label="Fitlabreviews home" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
@@ -474,7 +474,7 @@ export default function Header() {
               style={{
                 fontFamily: "var(--font-playfair), Georgia, serif",
                 fontWeight: 900,
-                fontSize: 26,
+                fontSize: "clamp(20px, 5.5vw, 26px)",
                 color: "#17211C",
                 letterSpacing: "-0.03em",
                 lineHeight: 1,
@@ -556,13 +556,11 @@ export default function Header() {
               <Search size={18} />
             </button>
 
-            <Link
-              href="/reviews"
-              className="header-cta-btn btn-primary"
-              style={{ fontSize: 13 }}
-            >
-              All Reviews
-            </Link>
+            <div className="header-cta-btn" style={{ flexShrink: 0 }}>
+              <Link href="/reviews" className="btn-primary" style={{ fontSize: 13 }}>
+                All Reviews
+              </Link>
+            </div>
 
             <button
               onClick={() => { setMobileOpen((v) => !v); setMobileExpanded(null); }}
@@ -570,7 +568,9 @@ export default function Header() {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               style={{
                 color: "#374151",
-                padding: "12px 10px",
+                padding: "12px",
+                minWidth: 44,
+                minHeight: 44,
                 background: "none",
                 border: "1px solid #D7DDD9",
                 cursor: "pointer",
@@ -757,7 +757,7 @@ export default function Header() {
                 value={mobileQuery}
                 onChange={(e) => setMobileQuery(e.target.value)}
                 onKeyDown={handleMobileSearchKeyDown}
-                style={{ flex: 1, border: "none", background: "none", outline: "none", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15 }}
+                style={{ flex: 1, border: "none", background: "none", outline: "none", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 16 }}
               />
               {mobileQuery && (
                 <button
@@ -781,7 +781,7 @@ export default function Header() {
                       display: "block", flex: 1, fontWeight: 600, fontSize: 15,
                       color: isActive(item.href) ? "#0F7A5A" : "#17211c",
                       fontFamily: "var(--font-dm-sans), sans-serif",
-                      textDecoration: "none", padding: "12px 0",
+                      textDecoration: "none", padding: "14px 0",
                     }}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -810,7 +810,7 @@ export default function Header() {
                       <Link
                         key={lnk.label}
                         href={lnk.href}
-                        style={{ display: "block", fontSize: 13, color: "#586259", padding: "6px 0", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                        style={{ display: "block", fontSize: 13, color: "#586259", padding: "10px 0", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
                         onClick={() => setMobileOpen(false)}
                       >
                         {lnk.label}

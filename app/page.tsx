@@ -248,19 +248,33 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="hp-goal-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 22 }}>
-          {GOAL_CARDS.map((g) => (
+          {GOAL_CARDS.map((g, i) => (
             <Link
               key={g.code}
               href={g.href}
-              style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 16, background: g.bg, display: "flex", flexDirection: "column", minHeight: 300, padding: 26, transition: "transform 200ms var(--ease-out-expo)" }}
-              className="hover-featured"
+              className="hover-featured hp-goal-card"
+              style={{
+                textDecoration: "none", color: "#FFFFFF", borderRadius: 16, background: g.bg,
+                display: "flex", flexDirection: "column", minHeight: 300, padding: 26,
+                position: "relative", overflow: "hidden",
+                transition: "transform 200ms var(--ease-out-expo)",
+                animation: "fadeUp 0.55s cubic-bezier(0.16,1,0.3,1) both",
+                animationDelay: `${i * 85 + 60}ms`,
+              }}
             >
-              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, opacity: 0.7, marginBottom: 14 }}>{g.code}</div>
-              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 26, fontWeight: 500, margin: "0 0 12px", color: "#FFFFFF" }}>{g.title}</h3>
-              <p style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,.75)", margin: "0 0 auto" }}>{g.desc}</p>
+              {/* Arrow affordance */}
+              <div className="hp-goal-arrow" style={{ position: "absolute", top: 20, right: 20, width: 32, height: 32, borderRadius: "50%", background: "rgba(255,255,255,.14)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "background 200ms var(--ease-out-expo), transform 200ms var(--ease-out-expo)" }}>
+                <svg width={13} height={13} viewBox="0 0 13 13" fill="none" aria-hidden="true">
+                  <path d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5" stroke="white" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+
+              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, opacity: 0.65, marginBottom: 14, letterSpacing: "0.08em" }}>{g.code}</div>
+              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 26, fontWeight: 500, margin: "0 0 10px", color: "#FFFFFF", lineHeight: 1.15 }}>{g.title}</h3>
+              <p style={{ fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,.72)", margin: "0 0 auto" }}>{g.desc}</p>
               <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 20 }}>
                 {g.tags.map((t) => (
-                  <span key={t} style={{ fontSize: 11, background: "rgba(255,255,255,.16)", padding: "4px 9px", borderRadius: 6 }}>{t}</span>
+                  <span key={t} style={{ fontSize: 11, background: "rgba(255,255,255,.14)", border: "1px solid rgba(255,255,255,.2)", padding: "4px 10px", borderRadius: 20, letterSpacing: "0.02em" }}>{t}</span>
                 ))}
               </div>
             </Link>

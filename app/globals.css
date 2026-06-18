@@ -396,14 +396,24 @@
   .header-strip { display: none; }
 }
 
+/* Header inner bar — tighter side padding on small phones */
+.header-inner {
+  padding: 0 24px;
+}
+@media (max-width: 480px) {
+  .header-inner {
+    padding: 0 16px;
+  }
+}
+
 .header-desktop-nav { display: none; }
 @media (min-width: 1024px) {
   .header-desktop-nav { display: flex; }
 }
 
-.header-cta-btn { display: none; }
+.header-cta-btn { display: none !important; }
 @media (min-width: 1024px) {
-  .header-cta-btn { display: inline-flex; }
+  .header-cta-btn { display: inline-flex !important; }
 }
 
 .header-hamburger { display: flex; align-items: center; }
@@ -1317,6 +1327,40 @@ html, body {
   .hp-goal-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Goal card animations & interactions ────────────────────────────  */
+.hp-goal-card {
+  position: relative;
+  overflow: hidden;
+}
+.hp-goal-card:active {
+  transform: scale(0.97) !important;
+  transition: transform 100ms var(--ease-out-expo) !important;
+}
+.hp-goal-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 200ms var(--ease-out-expo), transform 200ms var(--ease-out-expo);
+}
+@media (hover: hover) and (pointer: fine) {
+  .hp-goal-card:hover .hp-goal-arrow {
+    background: rgba(255, 255, 255, 0.26);
+    transform: translate(2px, -2px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hp-goal-card { animation: none !important; }
+  .hp-goal-arrow { transition: none; }
+}
+
 /* ── Homepage 3-col article grid ─────────────────────────────────────  */
 .hp-article-grid {
   display: grid;
@@ -1683,10 +1727,26 @@ html, body {
     font-size: 15px !important;
   }
 
-  /* Goal cards: 2-column instead of 4, reduced height */
-  .hp-goal-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
-  .hp-goal-grid a { min-height: 190px !important; padding: 20px !important; }
-  .hp-goal-grid h3 { font-size: 20px !important; }
+  /* Goal cards: horizontal snap-scroll carousel on mobile */
+  .hp-goal-grid {
+    display: flex !important;
+    grid-template-columns: unset !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    scrollbar-width: none !important;
+    gap: 14px !important;
+    padding-bottom: 12px !important;
+  }
+  .hp-goal-grid::-webkit-scrollbar { display: none; }
+  .hp-goal-grid > a {
+    flex: 0 0 78vw !important;
+    max-width: 290px !important;
+    min-height: 240px !important;
+    scroll-snap-align: start !important;
+    padding: 24px !important;
+  }
+  .hp-goal-grid h3 { font-size: 22px !important; }
 
   /* Section headers: stack label + link vertically */
   .hp-section-header {
