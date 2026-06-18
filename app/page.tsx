@@ -136,7 +136,7 @@ export default function HomePage() {
             <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(32px,4vw,46px)", fontWeight: 500, letterSpacing: "-.02em", lineHeight: 1.07, margin: "0 0 16px", textWrap: "balance" as React.CSSProperties["textWrap"] }}>
               The Perfect Sleep Window: Why 6.4&ndash;7.8 Hours Is the Anti-Aging Sweet Spot
             </h1>
-            <p style={{ fontSize: 18, lineHeight: 1.65, color: "#586259", margin: "0 0 18px", maxWidth: 620 }}>
+            <p style={{ fontSize: "clamp(16px, 2.5vw, 18px)", lineHeight: 1.65, color: "#586259", margin: "0 0 18px", maxWidth: 620 }}>
               We read 40+ cohort studies on sleep duration and mortality. The protective range is narrower — and more specific — than the &ldquo;eight hours&rdquo; rule suggests.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#586259" }}>
@@ -195,7 +195,7 @@ export default function HomePage() {
             <div style={{ display: "flex", background: "#FFFFFF", borderRadius: 999, padding: 6, border: "1px solid #CFE2D8", maxWidth: 430 }}>
               <label htmlFor="hp-newsletter-email" className="sr-only">Email address</label>
               <input id="hp-newsletter-email" type="email" placeholder="Enter your email" style={{ flex: 1, border: "none", background: "none", padding: "0 18px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, color: "#17211C", outline: "none" }} />
-              <button type="button" style={{ background: "#0F7A5A", color: "#FFFFFF", border: "none", fontWeight: 700, fontSize: 14, padding: "12px 26px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap" }}>
+              <button type="button" style={{ background: "#0F7A5A", color: "#FFFFFF", border: "none", fontWeight: 700, fontSize: 14, padding: "12px 26px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap", minHeight: 44 }}>
                 Join free
               </button>
             </div>
@@ -355,8 +355,8 @@ export default function HomePage() {
           </h2>
         </div>
 
-        {/* Filter tabs */}
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 40 }}>
+        {/* Filter tabs — horizontal scroll on mobile (Healthline §3) */}
+        <div className="hp-filter-scroll" style={{ marginBottom: 40 }}>
           {["Top Reads", "Fitness", "Nutrition", "Reviews", "Sleep & Recovery"].map((tab, i) => (
             <span
               key={tab}
@@ -365,6 +365,7 @@ export default function HomePage() {
                 background: i === 0 ? "#0F7A5A" : "transparent",
                 color: i === 0 ? "#FFFFFF" : "#3F4B43",
                 border: i === 0 ? "2px solid #0F7A5A" : "2px solid #D7DDD9",
+                whiteSpace: "nowrap",
               }}
             >
               {tab}

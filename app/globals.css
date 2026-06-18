@@ -1290,6 +1290,20 @@ html, body {
   .hp-feature-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Horizontal scroll strip (filter tabs, tag rows) ───────────────── */
+/* Healthline §3: save vertical space with horizontal scroll on mobile   */
+.hp-filter-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  scroll-snap-type: x proximity;
+}
+.hp-filter-scroll::-webkit-scrollbar { display: none; }
+.hp-filter-scroll > * { flex-shrink: 0; }
+
 /* ── Homepage goal cards ─────────────────────────────────────────────  */
 .hp-goal-grid {
   display: grid;
@@ -1683,8 +1697,23 @@ html, body {
   /* Editor's picks: 2-column instead of 4 */
   .hp-picks-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
 
-  /* From the lab: single-column */
-  .hp-lab-grid { grid-template-columns: 1fr !important; }
+  /* From the lab: horizontal scroll carousel (Healthline §3) */
+  .hp-lab-grid {
+    display: flex !important;
+    grid-template-columns: unset !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 8px !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 16px !important;
+  }
+  .hp-lab-grid::-webkit-scrollbar { display: none; }
+  .hp-lab-grid > a {
+    flex: 0 0 78vw !important;
+    max-width: 300px !important;
+    scroll-snap-align: start !important;
+  }
 
   /* Footer: collapse 4-column nav grid to single column */
   .footer-main-grid {
