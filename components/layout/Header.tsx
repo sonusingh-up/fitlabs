@@ -343,6 +343,15 @@ export default function Header() {
     }
   }, [searchOpen]);
 
+  // Scroll lock when any overlay is open
+  useEffect(() => {
+    const isLocked = searchOpen || mobileOpen;
+    if (isLocked) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [searchOpen, mobileOpen]);
+
   // Live search inside the overlay (top 5 quick results)
   const runOverlaySearch = useCallback(async (q: string) => {
     if (!q || q.length < 2) { setOverlayResults([]); return; }
@@ -426,6 +435,7 @@ export default function Header() {
         top: 0,
         zIndex: 50,
         backgroundColor: "#ffffff",
+        paddingTop: "env(safe-area-inset-top, 0)",
         transition: "box-shadow 200ms var(--ease-out-expo)",
         ...(scrolled ? { boxShadow: "0 6px 24px -12px rgba(10,30,22,.22)" } : {}),
       }}
