@@ -27,7 +27,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
     ctx.fillRect(0, 0, W, 4);
 
     // Header
-    ctx.fillStyle = "#6B7280";
+    ctx.fillStyle = "#586259";
     ctx.font = "bold 11px system-ui";
     ctx.letterSpacing = "2px";
     ctx.fillText("FITLAB  ·  EVIDENCE-LED SUPPLEMENT RESEARCH", 32, 36);
@@ -53,7 +53,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
     rows.forEach((r, i) => {
       const y = 130 + i * 42;
       ctx.font = "400 14px system-ui";
-      ctx.fillStyle = "#9CA3AF";
+      ctx.fillStyle = "#6b7770";
       ctx.fillText(r.label, 32, y);
 
       ctx.font = "bold 18px system-ui";
@@ -92,7 +92,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
         border:"1px solid #2D2D2D", marginBottom:12,
       }}>
         <div style={{ height:3, background:"#C4622D", borderRadius:2, marginBottom:16 }} />
-        <p style={{ fontSize:10, color:"#6B7280", letterSpacing:"0.12em", fontWeight:700, marginBottom:16 }}>
+        <p style={{ fontSize:10, color:"#586259", letterSpacing:"0.12em", fontWeight:700, marginBottom:16 }}>
           FITLAB · EVIDENCE-LED SUPPLEMENT RESEARCH
         </p>
         <p style={{ fontSize:16, fontWeight:700, color:"#fff", marginBottom:16 }}>🔥 My Metabolic Profile</p>
@@ -102,7 +102,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
           { label:"My Goal: Fat Loss", val:`${cut.toLocaleString()} kcal/day` },
         ].map((r, i) => (
           <div key={i} style={{ display:"flex", justifyContent:"space-between", padding:"9px 0", borderBottom:"1px solid #2A2A2A" }}>
-            <span style={{ fontSize:13, color:"#9CA3AF" }}>{r.label}</span>
+            <span style={{ fontSize:13, color:"#6b7770" }}>{r.label}</span>
             <span style={{ fontSize:14, fontWeight:700, color:"#C4622D", fontVariantNumeric:"tabular-nums" }}>{r.val}</span>
           </div>
         ))}
@@ -114,7 +114,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
       <button onClick={drawAndDownload} style={{
         width:"100%", padding:"13px 0", borderRadius:10, border:"none",
         background:"#C4622D", color:"#FDFAF4", fontSize:15, fontWeight:700,
-        cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif",
+        cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif",
         boxShadow:"0 4px 16px rgba(196,98,45,0.3)",
       }}>
         ⬇ Download My FitLab Card

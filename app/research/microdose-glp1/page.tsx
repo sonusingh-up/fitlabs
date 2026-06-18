@@ -118,7 +118,7 @@ export default function MicrodoseGlp1Page() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Updated May 2026</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Microdose GLP-1 Telehealth:{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Does It Actually Work?</em>
           </h1>
@@ -139,7 +139,7 @@ export default function MicrodoseGlp1Page() {
               </div>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
@@ -147,12 +147,12 @@ export default function MicrodoseGlp1Page() {
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function MicrodoseGlp1Page() {
           ].map((s) => (
             <div key={s.label} style={{ backgroundColor: "#F8F2E4", padding: "20px 16px" }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.15em", textTransform: "uppercase", margin: "0 0 6px" }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
               <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{s.sub}</p>
             </div>
           ))}
@@ -258,7 +258,7 @@ export default function MicrodoseGlp1Page() {
             ].map((s) => (
               <div key={s.symptom} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, padding: "16px 14px" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 6px" }}>{s.symptom}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.rate}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.rate}</p>
                 <p style={{ fontSize: 11, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
               </div>
             ))}
@@ -441,7 +441,7 @@ export default function MicrodoseGlp1Page() {
           <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "24px 28px", marginBottom: 20 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>Provider</span>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714" }}>WellMedr</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714" }}>WellMedr</span>
               <span style={{ padding: "2px 8px", backgroundColor: "rgba(196,98,45,0.08)", border: "1px solid rgba(196,98,45,0.2)", borderRadius: 4, fontSize: 9, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace" }}>US Only · Rx Required</span>
             </div>
             <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>

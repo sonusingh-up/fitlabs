@@ -280,7 +280,7 @@ export default function WellMedrReview() {
           {/* Text — left/center */}
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, paddingLeft: 0, gap: 12 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-001 · GLP-1 TELEHEALTH · US ONLY</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 480, padding: "0 24px" }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 480, padding: "0 24px" }}>
               WellMedr<br /><em style={{ fontWeight: 400, color: "#A89880" }}>GLP-1 Weight Loss Telehealth</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
@@ -306,7 +306,7 @@ export default function WellMedrReview() {
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
                 WellMedr · GLP-1 Telehealth · US Only
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 WellMedr Review (2026)<br />
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is This GLP-1 Telehealth Worth It?</em>
               </h2>
@@ -324,7 +324,7 @@ export default function WellMedrReview() {
                   href="#"
                   target="_blank"
                   rel="nofollow noopener sponsored"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Get Started at WellMedr <ExternalLink size={13} />
                 </Link>
@@ -353,15 +353,15 @@ export default function WellMedrReview() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 Fitlab Research Team
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>
                 Research-based telehealth analysis · Verified patient review data · Clinical literature review
               </p>
             </div>
@@ -376,14 +376,14 @@ export default function WellMedrReview() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px", display: "flex", flexDirection: "column", gap: 8 }}>
           <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links to WellMedr may earn us a commission at no extra cost to you. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
           </div>
           <div style={{ padding: "8px 14px", backgroundColor: "#F0EAF5", border: "1px solid #C4A8D8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <ShieldCheck size={12} style={{ color: "#6B3FA0", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#5A3480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#5A3480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Medical disclaimer: this article is for informational purposes only and does not constitute medical advice. Consult a licensed healthcare provider before starting any prescription medication.{" "}
               <Link href="/medical-disclaimer" style={{ color: "#6B3FA0", textDecoration: "none" }}>Full disclaimer →</Link>
             </p>
@@ -409,7 +409,7 @@ export default function WellMedrReview() {
 
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "4px solid #C4622D", marginBottom: 16 }}>
                   <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 0 }}>
                     WellMedr is a legitimate GLP-1 telehealth service with a real competitive edge: lower entry pricing than most named competitors, a same-day consult model that reduces access friction, and a microdosing protocol that is genuinely rare in this space. For US patients who have been assessed by a doctor and are looking for a cost-effective way to access tirzepatide or semaglutide without navigating insurance, it is a credible option. The 300+ TrustPilot reviews are a meaningful trust signal in a market full of unvetted newcomers. The caveats are real — FDA compounding restrictions are still evolving, and this is a prescription medication with documented side effects that requires ongoing medical supervision.
@@ -449,7 +449,7 @@ export default function WellMedrReview() {
 
               {/* ─── WHAT IS WELLMEDR ───────────────────────────────────────── */}
               <section id="what-is-wellmedr" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is WellMedr?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is WellMedr?</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 20 }}>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
                     WellMedr is a US-based telemedicine platform focused on GLP-1 receptor agonist therapy for weight management. It connects patients with licensed nurse practitioners and physicians who can prescribe tirzepatide (a dual GIP/GLP-1 agonist) and semaglutide (a GLP-1 agonist) — the two most clinically validated medications for chronic weight management currently available in the US.
@@ -465,7 +465,7 @@ export default function WellMedrReview() {
 
               {/* ─── SCORE BREAKDOWN ────────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
                   Our FSP framework is adapted here for telehealth services: Formula = treatment protocol quality; Transparency = pricing clarity; Verification = credibility signals; Value = cost vs alternatives; Practical = patient experience.
                 </p>
@@ -474,13 +474,13 @@ export default function WellMedrReview() {
 
               {/* ─── FLAGS ──────────────────────────────────────────────────── */}
               <section id="flags" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* ─── HOW IT WORKS ───────────────────────────────────────────── */}
               <section id="how-it-works" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How WellMedr Works</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How WellMedr Works</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { step: "01", title: "Complete the intake form", desc: "Answer a medical questionnaire covering BMI, health history, current medications, and weight loss goals. Takes approximately 5–8 minutes. Required to assess eligibility for GLP-1 therapy." },
@@ -493,7 +493,7 @@ export default function WellMedrReview() {
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D", letterSpacing: "0.06em" }}>{s.step}</span>
                       </div>
                       <div>
-                        <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 6 }}>{s.title}</p>
+                        <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 6 }}>{s.title}</p>
                         <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{s.desc}</p>
                       </div>
                     </div>
@@ -503,7 +503,7 @@ export default function WellMedrReview() {
 
               {/* ─── MEDICATIONS ────────────────────────────────────────────── */}
               <section id="medications" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Medications Offered</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Medications Offered</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>GLP-1 receptor agonists prescribed by WellMedr — clinical evidence summary</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
@@ -523,7 +523,7 @@ export default function WellMedrReview() {
                     <div key={med.name} style={{ padding: "20px 24px", borderBottom: i === 0 ? "1px solid #EDE8DF" : "none", backgroundColor: i === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 8 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#1A1714" }}>{med.name}</span>
+                          <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#1A1714" }}>{med.name}</span>
                           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "2px 7px", borderRadius: 4 }}>{med.type}</span>
                         </div>
                         <EvidenceBadge level={med.level} showIcon={false} />
@@ -532,14 +532,14 @@ export default function WellMedrReview() {
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Note: weight loss percentages above are from clinical trials at maximum titrated doses. Individual results vary significantly based on starting weight, adherence, diet, and activity level. These are not typical patient outcomes for all users.
                 </p>
               </section>
 
               {/* ─── MICRODOSING ────────────────────────────────────────────── */}
               <section id="microdosing" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Microdose GLP-1 Protocol</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Microdose GLP-1 Protocol</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>WellMedr's most distinctive feature — and one of the few providers offering this structured approach.</p>
                 <div style={{ padding: "20px 24px", backgroundColor: "#F0EAF5", border: "1px solid #C4A8D8", borderRadius: 12, marginBottom: 16 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B3FA0", marginBottom: 10 }}>What Microdosing GLP-1 Means</p>
@@ -563,8 +563,8 @@ export default function WellMedrReview() {
                   ].map((row, i) => (
                     <div key={row.metric} style={{ display: "grid", gridTemplateColumns: "160px 1fr 1fr", padding: "10px 18px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.06em" }}>{row.metric}</span>
-                      <span style={{ fontSize: 13, color: "#6B3FA0", fontFamily: "var(--font-dm-sans), sans-serif", paddingRight: 12 }}>{row.micro}</span>
-                      <span style={{ fontSize: 13, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.standard}</span>
+                      <span style={{ fontSize: 13, color: "#6B3FA0", fontFamily: "var(--font-hanken), sans-serif", paddingRight: 12 }}>{row.micro}</span>
+                      <span style={{ fontSize: 13, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.standard}</span>
                     </div>
                   ))}
                 </div>
@@ -572,13 +572,13 @@ export default function WellMedrReview() {
 
               {/* ─── PRICING ────────────────────────────────────────────────── */}
               <section id="pricing" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Pricing & Plans</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Pricing & Plans</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Pricing as of May 2026 · US cash-pay · Subject to change — verify on WellMedr.com</p>
                 <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "2px solid #C4622D", borderRadius: 12, marginBottom: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, marginBottom: 16 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C4622D", marginBottom: 6 }}>Entry Plan — Most Patients Start Here</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>$88<span style={{ fontSize: "1rem", fontWeight: 400, color: "#8A8480" }}>/mo</span></p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>$88<span style={{ fontSize: "1rem", fontWeight: 400, color: "#8A8480" }}>/mo</span></p>
                     </div>
                     <Link
                       href="#"
@@ -615,7 +615,7 @@ export default function WellMedrReview() {
 
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>WellMedr vs Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>WellMedr vs Competitors</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Head-to-head comparison on the metrics US GLP-1 patients care about most — May 2026 data</p>
 
                 {/* Competitor brand cards */}
@@ -642,7 +642,7 @@ export default function WellMedrReview() {
                         )}
                       </div>
                       <div style={{ textAlign: "center" }}>
-                        <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{brand.name}</p>
+                        <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{brand.name}</p>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>{brand.score}</span>
                       </div>
                       <span style={{ padding: "3px 10px", backgroundColor: brand.tagBg, borderRadius: 99, fontSize: 10, color: brand.tagColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", textAlign: "center" }}>{brand.tag}</span>
@@ -674,7 +674,7 @@ export default function WellMedrReview() {
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "10px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.06em", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
                           {row.vals.map((v, j) => (
-                            <td key={j} style={{ padding: "10px 14px", fontSize: 13, color: j === 0 ? "#C4622D" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400 }}>{v}</td>
+                            <td key={j} style={{ padding: "10px 14px", fontSize: 13, color: j === 0 ? "#C4622D" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400 }}>{v}</td>
                           ))}
                         </tr>
                       ))}
@@ -689,7 +689,7 @@ export default function WellMedrReview() {
 
               {/* ─── CLAIM AUDIT ────────────────────────────────────────────── */}
               <section id="claim-audit" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
                   Marketing claims checked against peer-reviewed clinical literature. GLP-1 is a prescription drug category — we hold it to a higher standard of evidence scrutiny.
                 </p>
@@ -698,7 +698,7 @@ export default function WellMedrReview() {
 
               {/* ─── PROS / CONS ────────────────────────────────────────────── */}
               <section id="pros-cons" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
                     "Competitive entry pricing at $88/mo vs industry average of $120–150/mo",
@@ -722,7 +722,7 @@ export default function WellMedrReview() {
 
               {/* ─── SIDE EFFECTS & SAFETY ──────────────────────────────────── */}
               <section id="side-effects" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Side Effects & Safety</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Side Effects & Safety</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
                   GLP-1 medications are prescription drugs with a documented side effect profile. Understand these before enrolling in any GLP-1 telehealth programme.
                 </p>
@@ -741,7 +741,7 @@ export default function WellMedrReview() {
                     ].map((se) => (
                       <div key={se} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <AlertTriangle size={10} style={{ color: "#8B3A2C", flexShrink: 0 }} />
-                        <span style={{ fontSize: 12, color: "#5C2020", fontFamily: "var(--font-dm-sans), sans-serif" }}>{se}</span>
+                        <span style={{ fontSize: 12, color: "#5C2020", fontFamily: "var(--font-hanken), sans-serif" }}>{se}</span>
                       </div>
                     ))}
                   </div>
@@ -761,7 +761,7 @@ export default function WellMedrReview() {
                     ].map((c) => (
                       <div key={c} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <XCircle size={10} style={{ color: "#C4622D", flexShrink: 0 }} />
-                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{c}</span>
+                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{c}</span>
                       </div>
                     ))}
                   </div>
@@ -770,7 +770,7 @@ export default function WellMedrReview() {
 
               {/* ─── WHO IT'S FOR ───────────────────────────────────────────── */}
               <section id="who-its-for" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Who Is WellMedr For?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Who Is WellMedr For?</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12 }}>
                   {[
                     {
@@ -817,7 +817,7 @@ export default function WellMedrReview() {
 
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { q: "How much does WellMedr cost?", a: "WellMedr's entry plan starts at $88/mo for the telehealth service as of May 2026. This is one of the more competitive prices in the GLP-1 telehealth market — Ro Body starts around $145/mo and Hers runs $99–149/mo for compounded semaglutide programs. Note: medication costs are billed separately through your pharmacy." },
@@ -828,7 +828,7 @@ export default function WellMedrReview() {
                     { q: "How does WellMedr compare to Ro Body and Hers?", a: "WellMedr's main advantages are lower entry pricing ($88/mo vs ~$145 for Ro Body), a structured microdosing protocol not offered by most competitors, and same-day consultation availability. Ro Body covers more health conditions and has a larger network. Hers has broader women's health services alongside weight loss. For GLP-1 weight management specifically, WellMedr's pricing and microdosing option are meaningful differentiators." },
                   ].map((item, i, arr) => (
                     <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.q}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.q}</p>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.a}</p>
                     </div>
                   ))}
@@ -837,12 +837,12 @@ export default function WellMedrReview() {
 
               {/* ─── FINAL VERDICT ──────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "2px solid #C4622D", borderRadius: 14, marginBottom: 20 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16, flexWrap: "wrap", marginBottom: 16 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", marginBottom: 6 }}>Fitlabreviews FSP Score</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.5rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>8<span style={{ fontSize: "1.2rem", fontWeight: 400, color: "#8A8480" }}> / 10</span></p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.5rem", fontWeight: 800, color: "#1A1714", lineHeight: 1 }}>8<span style={{ fontSize: "1.2rem", fontWeight: 400, color: "#8A8480" }}> / 10</span></p>
                     </div>
                     <Link
                       href="#"
@@ -861,7 +861,7 @@ export default function WellMedrReview() {
                   </p>
                 </div>
                 <div style={{ padding: "12px 16px", backgroundColor: "#F0EAF5", border: "1px solid #C4A8D8", borderRadius: 8 }}>
-                  <p style={{ fontSize: 12, color: "#5A3480", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.6 }}>
+                  <p style={{ fontSize: 12, color: "#5A3480", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.6 }}>
                     This content is for informational purposes only and does not constitute medical advice. GLP-1 medications are prescription drugs. Consult a licensed healthcare provider before starting any weight management medication.{" "}
                     <Link href="/medical-disclaimer" style={{ color: "#6B3FA0", textDecoration: "none" }}>Full medical disclaimer →</Link>
                   </p>
@@ -879,7 +879,7 @@ export default function WellMedrReview() {
                     { href: "/ingredients/tirzepatide", label: "Tirzepatide: Mechanism, Evidence & Side Effects" },
                     { href: "/research/microdose-glp1", label: "Microdose GLP-1 Explained: What It Is & Who It's For" },
                   ].map((link) => (
-                    <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", color: "#C4622D", fontSize: 13, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", color: "#C4622D", fontSize: 13, fontFamily: "var(--font-hanken), sans-serif" }}>
                       <span style={{ flex: 1 }}>{link.label}</span>
                       <span style={{ fontSize: 11, color: "#A89880" }}>→</span>
                     </Link>

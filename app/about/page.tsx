@@ -26,7 +26,7 @@ export default function AboutPage() {
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>
             ABOUT US · EST. 2024
           </p>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1A1714", lineHeight: 0.95, marginBottom: 24 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#1A1714", lineHeight: 0.95, marginBottom: 24 }}>
             We built the supplement
             <br />
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>editorial we wanted.</em>
@@ -39,7 +39,7 @@ export default function AboutPage() {
         {/* Mission */}
         <div style={{ marginBottom: 64, padding: 32, backgroundColor: "#1A1714", borderRadius: 3 }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 16 }}>Our Mission</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 1.8rem)", fontWeight: 400, fontStyle: "italic", color: "#F2EBD9", lineHeight: 1.4 }}>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.3rem, 3vw, 1.8rem)", fontWeight: 400, fontStyle: "italic", color: "#F2EBD9", lineHeight: 1.4 }}>
             "To give supplement consumers access to the same quality of information that professional athletes and sports scientists have always had — without the paywall, the jargon, or the bias."
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
               <div key={v.num} style={{ display: "grid", gridTemplateColumns: "48px 1fr", gap: 24, padding: "24px 24px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                 <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700, paddingTop: 4 }}>{v.num}</span>
                 <div>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{v.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{v.title}</h3>
                   <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>{v.body}</p>
                 </div>
               </div>
@@ -68,10 +68,10 @@ export default function AboutPage() {
 
         {/* Links */}
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-          <Link href="/editorial-policy" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/editorial-policy" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Editorial Policy <ArrowRight size={13} />
           </Link>
-          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Get in Touch <ArrowRight size={13} />
           </Link>
         </div>

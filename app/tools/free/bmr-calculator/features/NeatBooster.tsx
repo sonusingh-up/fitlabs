@@ -31,13 +31,13 @@ export default function NeatBooster({ baseTdee, onAdjust, animDelay }: Props) {
   return (
     <div style={{ opacity:0, animation:`slideUp 250ms ${animDelay}ms ease-out forwards` }}>
       <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
-        <div style={{ fontSize:11, fontWeight:700, color:"#6B7280", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>
+        <div style={{ fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>
           Refine Your TDEE
         </div>
-        <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:6 }}>
+        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:6 }}>
           Your activity level might be underestimated.
         </h2>
-        <p style={{ fontSize:13, color:"#6B7280", marginBottom:16, lineHeight:1.6 }}>
+        <p style={{ fontSize:13, color:"#586259", marginBottom:16, lineHeight:1.6 }}>
           NEAT (Non-Exercise Activity Thermogenesis) — daily movement outside structured exercise — can add 200–500 kcal to your true daily burn. Select all that apply:
         </p>
 
@@ -49,7 +49,7 @@ export default function NeatBooster({ baseTdee, onAdjust, animDelay }: Props) {
               border: selected.has(i) ? "2px solid #C4622D" : "1px solid #D4C9B8",
               background: selected.has(i) ? "#FDF0E8" : "#fff",
               color: selected.has(i) ? "#C4622D" : "#5C5650",
-              fontFamily:"var(--font-dm-sans),sans-serif",
+              fontFamily:"var(--font-hanken),sans-serif",
               fontSize:13, fontWeight:600, cursor:"pointer", transition:"all 0.15s",
             }}>
               <span>{opt.icon}</span>{opt.label} <span style={{ color:"#8A8480", fontSize:11 }}>(+{opt.kcal})</span>

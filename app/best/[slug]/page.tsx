@@ -93,7 +93,7 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Tested & Ranked</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             Best {pageTitle} in USA <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026</em>
           </h1>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>
@@ -119,14 +119,14 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 4, textTransform: "uppercase" }}>
                     {pick.brand} · ₹{pick.price}{pick.priceUnit}
                   </p>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>
                     {pick.name}
                   </h3>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{pick.verdict}</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
                   <ReviewScoreBadge rating={pick.rating} size="sm" />
-                  <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, textDecoration: "none" }}>
+                  <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, textDecoration: "none" }}>
                     Full Review →
                   </Link>
                 </div>
@@ -153,7 +153,7 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
             ].map((step) => (
               <div key={step.num} style={{ padding: 24, backgroundColor: "#F8F2E4", borderRight: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", color: "#C4622D", marginBottom: 10 }}>{step.num}</p>
-                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{step.title}</h4>
+                <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{step.title}</h4>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{step.desc}</p>
               </div>
             ))}
@@ -170,7 +170,7 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
               { q: "Are American brands as good as international ones?", a: "Some are — MuscleBlaze and AS-IT-IS have improved significantly. We review each on formula merit, not origin." },
             ].map((faq, i) => (
               <div key={i} style={{ padding: "20px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{faq.a}</p>
               </div>
             ))}

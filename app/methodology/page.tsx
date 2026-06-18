@@ -100,7 +100,7 @@ export default function MethodologyPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Scoring Methodology</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 24 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 24 }}>
             The Fitlab Scoring <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Protocol</em>
           </h1>
           <p style={{ fontSize: 16, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -118,7 +118,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 01</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               The Score Formula
             </h2>
           </div>
@@ -143,7 +143,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 02</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               The 5 Pillars
             </h2>
           </div>
@@ -157,7 +157,7 @@ export default function MethodologyPage() {
                   <div className="layout-pillar-header" style={{ backgroundColor: "#1A1714" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#A89880" }}>0{i + 1}</span>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", margin: 0 }}>{meta.label}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", margin: 0 }}>{meta.label}</h3>
                     </div>
                     <span style={{ padding: "4px 12px", backgroundColor: "rgba(196,98,45,0.15)", border: "1px solid rgba(196,98,45,0.3)", borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D" }}>
                       {Math.round(meta.weight * 100)}% of score
@@ -192,7 +192,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 03</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               Red Flag Deductions
             </h2>
           </div>
@@ -206,7 +206,7 @@ export default function MethodologyPage() {
             {redFlagExamples.map((item, i) => (
               <div key={i} style={{ padding: "16px 20px", borderBottom: i < redFlagExamples.length - 1 ? "1px solid rgba(139,58,44,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#FBF5F0" : "#F8EEE8", display: "grid", gridTemplateColumns: "1fr auto", gap: 20, alignItems: "start" }}>
                 <div>
-                  <p style={{ fontSize: 13, fontWeight: 600, color: "#8B3A2C", marginBottom: 5, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.flag}</p>
+                  <p style={{ fontSize: 13, fontWeight: 600, color: "#8B3A2C", marginBottom: 5, fontFamily: "var(--font-hanken), sans-serif" }}>{item.flag}</p>
                   <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5, fontStyle: "italic" }}>{item.example}</p>
                 </div>
                 <span style={{ padding: "3px 10px", backgroundColor: "rgba(139,58,44,0.1)", border: "1px solid rgba(139,58,44,0.2)", borderRadius: 6, fontSize: 11, fontWeight: 700, color: "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" as const }}>{item.deduction}</span>
@@ -222,7 +222,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 04</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               Green Flags
             </h2>
           </div>
@@ -235,7 +235,7 @@ export default function MethodologyPage() {
             </div>
             {greenFlagExamples.map((item, i) => (
               <div key={i} style={{ padding: "16px 20px", borderBottom: i < greenFlagExamples.length - 1 ? "1px solid rgba(45,106,79,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#F2F8F5" : "#EDF5F1" }}>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#2D6A4F", marginBottom: 5, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.flag}</p>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "#2D6A4F", marginBottom: 5, fontFamily: "var(--font-hanken), sans-serif" }}>{item.flag}</p>
                 <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.detail}</p>
               </div>
             ))}
@@ -246,7 +246,7 @@ export default function MethodologyPage() {
         <section id="claim-audit" style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 05</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               How We Audit Claims
             </h2>
           </div>
@@ -272,7 +272,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 06</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               Known Limitations
             </h2>
           </div>
@@ -296,7 +296,7 @@ export default function MethodologyPage() {
         <section style={{ marginBottom: 64 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 07</span>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
               Version History
             </h2>
           </div>
@@ -318,13 +318,13 @@ export default function MethodologyPage() {
         {/* CTA */}
         <div style={{ padding: 28, backgroundColor: "#1A1714", borderRadius: 12, textAlign: "center" as const }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Questions?</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>
             We document our reasoning. You should be able to reproduce our scores.
           </p>
           <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.65, maxWidth: 480, margin: "0 auto 20px" }}>
             If you disagree with a score, open a discussion. We update reviews when new evidence emerges or when we&apos;ve made an error.
           </p>
-          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Contact the editorial team →
           </Link>
         </div>

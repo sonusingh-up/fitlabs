@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Supplement Reviews</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
             Best <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>{categoryName}</em>
           </h1>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620, marginBottom: 24 }}>
@@ -61,9 +61,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             <input
               type="search"
               placeholder="Filter products..."
-              style={{ padding: "10px 16px", border: "1px solid #D4C9B8", borderRadius: 8, fontSize: 13, color: "#2D2926", backgroundColor: "#F8F2E4", fontFamily: "var(--font-dm-sans), sans-serif", outline: "none", minWidth: 220 }}
+              style={{ padding: "10px 16px", border: "1px solid #D4C9B8", borderRadius: 8, fontSize: 13, color: "#2D2926", backgroundColor: "#F8F2E4", fontFamily: "var(--font-hanken), sans-serif", outline: "none", minWidth: 220 }}
             />
-            <Link href={`/best/${slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, textDecoration: "none" }}>
+            <Link href={`/best/${slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, textDecoration: "none" }}>
               See Top Picks →
             </Link>
           </div>
@@ -79,7 +79,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             {keyIngredients.map((ing, i) => (
               <div key={ing.name} style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 16, alignItems: "center", padding: "16px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                 <div>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{ing.name}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{ing.name}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{ing.note}</p>
                 </div>
                 <EvidenceBadge level={ing.evidence} showIcon={false} />

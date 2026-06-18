@@ -6,8 +6,8 @@ interface Props {
 }
 
 const S = {
-  label: { display:"block", fontSize:11, fontWeight:700, color:"#6B7280", letterSpacing:"0.08em", textTransform:"uppercase" as const, marginBottom:6 },
-  input: { width:"100%", padding:"10px 13px", borderRadius:8, border:"1px solid #D4C9B8", background:"#FDFAF4", fontSize:14, color:"#1A1714", fontFamily:"var(--font-dm-sans),sans-serif", boxSizing:"border-box" as const },
+  label: { display:"block", fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase" as const, marginBottom:6 },
+  input: { width:"100%", padding:"10px 13px", borderRadius:8, border:"1px solid #D4C9B8", background:"#FDFAF4", fontSize:14, color:"#1A1714", fontFamily:"var(--font-hanken),sans-serif", boxSizing:"border-box" as const },
   err: { color:"#EF4444", fontSize:12, marginTop:4 },
 };
 
@@ -53,7 +53,7 @@ export default function WeightTimeline({ tdee, weightKg, unit, animDelay }: Prop
     <div style={{ opacity:0, animation:`slideUp 250ms ${animDelay}ms ease-out forwards` }}>
       <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
         <div style={S.label}>Weight Loss Timeline</div>
-        <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:16 }}>When will you reach your goal?</h2>
+        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:16 }}>When will you reach your goal?</h2>
 
         <div className="timeline-inputs">
           <div>
@@ -75,7 +75,7 @@ export default function WeightTimeline({ tdee, weightKg, unit, animDelay }: Prop
         <button onClick={calcTimeline} style={{
           width:"100%", padding:"11px 0", borderRadius:10, border:"none",
           background:"#C4622D", color:"#FDFAF4", fontSize:14, fontWeight:700,
-          cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif", marginBottom: result ? 16 : 0,
+          cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif", marginBottom: result ? 16 : 0,
         }}>Calculate Timeline →</button>
 
         {result && (

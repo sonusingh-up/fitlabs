@@ -145,7 +145,7 @@ export default function BetaAlaninePage() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Endurance · Carnosine Buffering</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
               Beta-Alanine: Benefits,<br />Dosage & the Tingling Explained
             </h1>
             <div style={{ marginBottom: 20 }}>
@@ -170,7 +170,7 @@ export default function BetaAlaninePage() {
               ].map((stat) => (
                 <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{stat.sub}</p>
                 </div>
               ))}
@@ -223,7 +223,7 @@ export default function BetaAlaninePage() {
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{s.step}</span>
                   </div>
                   <div style={{ padding: "16px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ export default function BetaAlaninePage() {
                 { title: "Calcium sensitisation in muscle", detail: "At the pH range achieved during high-intensity exercise, carnosine has been shown to sensitise the contractile apparatus to calcium, partially counteracting the direct inhibitory effect of acidosis on calcium binding. This means muscle maintains greater force capacity at any given pH — not just through buffering, but through direct contractile enhancement (Dutka & Lamb, 2004, Journal of Physiology)." },
               ].map((m) => (
                 <div key={m.title} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", borderLeft: "3px solid #C4622D" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{m.title}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{m.title}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{m.detail}</p>
                 </div>
               ))}
@@ -252,12 +252,12 @@ export default function BetaAlaninePage() {
 
           {/* 3. Benefits */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
               {benefits.map((b, i) => (
                 <div key={i} style={{ padding: "18px 20px", borderBottom: i < benefits.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.claim}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.08em", marginBottom: 4 }}>{b.citation}</p>
@@ -279,10 +279,10 @@ export default function BetaAlaninePage() {
               <div style={{ border: "2px solid #C4622D", borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ padding: "12px 18px", backgroundColor: "#C4622D" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(242,235,217,0.7)", margin: 0 }}>Standard Protocol</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Split Doses</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Split Doses</p>
                 </div>
                 <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2–6.4g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ day</span></p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2–6.4g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ day</span></p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>Split into <strong>0.8–1.6g doses</strong> taken 2–4× per day with meals. Minimises paraesthesia while delivering the full daily carnosine-building dose. Most studied protocol — matches the Harris et al. (2006) methodology.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Research-validated dose range", "Reduces tingling via smaller boluses", "Consistent daily intake drives carnosine"].map(p => (
@@ -294,10 +294,10 @@ export default function BetaAlaninePage() {
               <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ padding: "12px 18px", backgroundColor: "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>Comfort-Optimised</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>SR CarnoSyn Protocol</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>SR CarnoSyn Protocol</p>
                 </div>
                 <div style={{ padding: "16px 18px", backgroundColor: "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>× 2 / day</span></p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>× 2 / day</span></p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>Slow-release (SR) formulation allows <strong>larger single doses</strong> without significant paraesthesia. 2× daily (morning and evening) with food. Slightly more expensive but removes the compliance barrier for paraesthesia-sensitive users.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Minimal tingling — same carnosine outcome", "Fewer daily doses to remember", "Higher cost per gram vs standard"].map((p, i) => (
@@ -339,7 +339,7 @@ export default function BetaAlaninePage() {
               ].map((d) => (
                 <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{d.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 3 }}>{d.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 3 }}>{d.value}</p>
                   <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{d.note}</p>
                 </div>
               ))}
@@ -359,7 +359,7 @@ export default function BetaAlaninePage() {
 
           {/* 5. Supplement Forms */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Beta-Alanine Forms Compared</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Beta-Alanine Forms Compared</h2>
             <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               The market&apos;s main choice is standard vs slow-release. The performance outcome is equivalent — the difference is comfort and compliance.
             </p>
@@ -367,7 +367,7 @@ export default function BetaAlaninePage() {
               {forms.map((form) => (
                 <div key={form.name} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: form.recommended ? "#F8F2E4" : "#EDE8DF" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{form.name}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{form.name}</p>
                     <span style={{ padding: "3px 10px", backgroundColor: form.recommended ? "rgba(45,106,79,0.1)" : "rgba(196,98,45,0.08)", border: `1px solid ${form.recommended ? "rgba(45,106,79,0.2)" : "rgba(196,98,45,0.15)"}`, borderRadius: 6, fontSize: 9, color: form.recommended ? "#2D6A4F" : "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", textTransform: "uppercase" as const, whiteSpace: "nowrap" as const }}>
                       {form.tag}
                     </span>
@@ -434,8 +434,8 @@ export default function BetaAlaninePage() {
             ].map((item) => (
               <div key={item.concern} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 12 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #EDE8DF", flexWrap: "wrap", gap: 8 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.concern}</p>
-                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.concern}</p>
+                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
                 </div>
                 <div style={{ padding: "14px 18px", borderLeft: `3px solid ${item.borderColor}` }}>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, marginBottom: item.caveat ? 10 : 0 }}>{item.body}</p>
@@ -451,7 +451,7 @@ export default function BetaAlaninePage() {
 
           {/* 7. Who Should Take It */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn&apos;t — Take Beta-Alanine</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn&apos;t — Take Beta-Alanine</h2>
             <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               Beta-alanine&apos;s benefit is narrowly defined: it helps athletes whose performance is limited by muscle acidosis in the 1–4 minute glycolytic window. Outside this specific context, the evidence for benefit is weak.
             </p>
@@ -486,7 +486,7 @@ export default function BetaAlaninePage() {
                 },
               ].map((item, i) => (
                 <div key={item.group} style={{ padding: "16px 20px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 8 }}>{item.detail}</p>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                     {item.tags.map(t => (
@@ -517,7 +517,7 @@ export default function BetaAlaninePage() {
                 },
               ].map((item) => (
                 <div key={item.group} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: item.caution ? "rgba(139,115,85,0.05)" : "#F2EBD9", borderLeft: `3px solid ${item.caution ? "#8B7355" : "#D4C9B8"}` }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
                 </div>
               ))}
@@ -573,7 +573,7 @@ export default function BetaAlaninePage() {
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#C4622D" }}>{v.step}</span>
                   </div>
                   <div style={{ padding: "14px 18px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{v.check}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{v.check}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{v.detail}</p>
                   </div>
                 </div>
@@ -583,7 +583,7 @@ export default function BetaAlaninePage() {
 
           {/* 9. References */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
             <p style={{ fontSize: 13, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               All claims in this profile are drawn from peer-reviewed research. Key sources listed below.
             </p>
@@ -620,7 +620,7 @@ export default function BetaAlaninePage() {
 
           {/* 10. FAQ */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
               Frequently Asked Questions
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
@@ -651,7 +651,7 @@ export default function BetaAlaninePage() {
                 },
               ].map((faq, i) => (
                 <div key={i} style={{ padding: "20px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
                 </div>
               ))}

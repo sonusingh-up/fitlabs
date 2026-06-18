@@ -40,7 +40,7 @@ export default function GLP1Article() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Metabolic Health · GLP-1 Science</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 20 }}>
             GLP-1 Drugs Like Ozempic &amp; Wegovy:{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>5 Surprising Benefits Beyond Weight Loss</em>
           </h1>
@@ -58,7 +58,7 @@ export default function GLP1Article() {
               { value: "~50%", label: "reduction in alcohol use disorder relapse (early data)" },
             ].map((s, i) => (
               <div key={i} style={{ padding: "14px 20px", backgroundColor: i === 0 ? "#1A1714" : "#F0E8D5", border: "1px solid #D4C9B8", flex: 1, minWidth: 150 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: i === 0 ? "#C4622D" : "#1A1714", margin: 0 }}>{s.value}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: i === 0 ? "#C4622D" : "#1A1714", margin: 0 }}>{s.value}</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: i === 0 ? "#8A8480" : "#A89880", textTransform: "uppercase", marginTop: 4 }}>{s.label}</p>
               </div>
             ))}
@@ -81,7 +81,7 @@ export default function GLP1Article() {
             </p>
 
             <section id="what-glp1-does" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 What GLP-1 Agonists Actually Do
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -99,7 +99,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="cardiovascular" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 1. Cardiovascular Protection
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -126,7 +126,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="kidney" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 2. Kidney Disease Defence
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -147,7 +147,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="addiction" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 3. Addiction &amp; Reward Pathway Modulation
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -174,7 +174,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="neuroprotection" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 4. Neuroprotection
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -198,7 +198,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="inflammation" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 5. Systemic Inflammation Reduction
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -216,7 +216,7 @@ export default function GLP1Article() {
             </section>
 
             <section id="who-for" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Who These Drugs Are Actually For
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -240,7 +240,7 @@ export default function GLP1Article() {
             <section id="bottom-line" style={{ marginBottom: 48 }}>
               <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12 }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14, lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14, lineHeight: 1.3 }}>
                   GLP-1 agonists are systemic metabolic drugs, not weight loss pills.
                 </h3>
                 <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8, marginBottom: 12 }}>
@@ -289,9 +289,9 @@ export default function GLP1Article() {
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, color: item.ec, padding: "1px 6px", backgroundColor: `${item.ec}12`, border: `1px solid ${item.ec}25`, borderRadius: 3 }}>{item.evidence}</span>
                     </div>
-                    <div><p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p></div>
+                    <div><p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p></div>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Article →</span>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>Read Article →</span>
                   </div>
                 </Link>
               ))}
@@ -309,9 +309,9 @@ export default function GLP1Article() {
                   <div style={{ backgroundColor: item.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
-                    <div><p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p></div>
+                    <div><p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p></div>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>View Profile →</span>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>View Profile →</span>
                   </div>
                 </Link>
               ))}
@@ -330,11 +330,11 @@ export default function GLP1Article() {
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
-                      <div style={{ display: "flex", alignItems: "baseline", gap: 1 }}><span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: item.rating >= 9 ? "#1A6B3A" : "#C4622D", lineHeight: 1 }}>{item.rating}</span><span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>/10</span></div>
+                      <div style={{ display: "flex", alignItems: "baseline", gap: 1 }}><span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: item.rating >= 9 ? "#1A6B3A" : "#C4622D", lineHeight: 1 }}>{item.rating}</span><span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>/10</span></div>
                     </div>
-                    <div><p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.brand}</p></div>
+                    <div><p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p><p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.brand}</p></div>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.verdict}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Review →</span>
+                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>Read Review →</span>
                   </div>
                 </Link>
               ))}
@@ -343,12 +343,12 @@ export default function GLP1Article() {
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10 }}>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>More from Blog</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Practical fitness &amp; nutrition guides — no fluff, no sponsorship.</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Practical fitness &amp; nutrition guides — no fluff, no sponsorship.</p>
             </div>
-            <Link href="/blog" style={{ padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", borderRadius: 8, fontSize: 12, fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", flexShrink: 0 }}>Browse All Articles →</Link>
+            <Link href="/blog" style={{ padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", borderRadius: 8, fontSize: 12, fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", flexShrink: 0 }}>Browse All Articles →</Link>
           </div>
           <div style={{ marginTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <Link href="/blog" style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>← Back to Blog</Link>
+            <Link href="/blog" style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>← Back to Blog</Link>
             <div style={{ display: "flex", gap: 8 }}>
               {["GLP-1", "Ozempic", "Metabolic Health", "Cardiology"].map(t => <span key={t} style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{t}</span>)}
             </div>

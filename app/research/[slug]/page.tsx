@@ -48,7 +48,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Science</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 20 }}>
             The Complete Guide to <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Creatine Loading</em>
           </h1>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
@@ -80,7 +80,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             </section>
 
             <section id="what-is" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 What Is Creatine?
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -92,7 +92,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             </section>
 
             <section id="loading" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Loading Protocol
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -125,7 +125,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             </section>
 
             <section id="evidence" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Research Summary
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -147,7 +147,7 @@ export default async function ResearchPage({ params }: { params: Promise<{ slug:
             <section id="verdict" style={{ marginBottom: 48 }}>
               <div style={{ padding: 28, backgroundColor: "#1A1714", borderRadius: 12 }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Editorial Verdict</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>
                   Buy it. Take 5g daily. Keep it simple.
                 </h3>
                 <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>

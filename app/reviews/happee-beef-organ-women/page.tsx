@@ -211,7 +211,7 @@ export default function HappeeBeefOrganWomenPage() {
         <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-053 · ORGAN SUPPLEMENT</span>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
             Happee Beef Organs<br /><em style={{ fontWeight: 400, color: "#A89880" }}>for Women</em>
           </h1>
           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
@@ -240,7 +240,7 @@ export default function HappeeBeefOrganWomenPage() {
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
               Happee · Organ Supplement · Female-Specific Formula
             </p>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
               Beef Organs for Women — Iron-Dense,<br />
               <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Female-Focused Protocol</em>
             </h2>
@@ -248,7 +248,7 @@ export default function HappeeBeefOrganWomenPage() {
               Liver and spleen — the two highest iron-density organs — combined with kidney and bovine uterus, from NZ grass-fed cattle. Targeted at premenopausal women&apos;s iron and B12 needs.
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <a href="https://amzn.to/4uDGXOc" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+              <a href="https://amzn.to/4uDGXOc" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                 Buy on Amazon <ExternalLink size={13} />
               </a>
               <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -276,15 +276,15 @@ export default function HappeeBeefOrganWomenPage() {
       <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
         <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
           <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
           </div>
           <div style={{ flex: 1, minWidth: 200 }}>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-            <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+            <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
               Fitlab Research Team
               <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
             </p>
-            <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>
               Organ supplement research · NZ sourcing verification · Women&apos;s formula analysis
             </p>
           </div>
@@ -299,7 +299,7 @@ export default function HappeeBeefOrganWomenPage() {
       <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
         <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
           <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-          <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+          <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
             Affiliate disclosure: the Amazon link above may earn us a commission at no extra cost to you. Scores and verdicts are editorially independent.{" "}
             <Link href="/affiliate-disclosure" style={{ color: "#7B3B1A", textDecoration: "none" }}>Read our disclosure →</Link>
           </p>
@@ -337,7 +337,7 @@ export default function HappeeBeefOrganWomenPage() {
                 {rubric.pillars.map((p) => (
                   <div key={p.pillar} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", borderRight: "1px solid #EDE8DF" }}>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{p.pillar}</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{p.score.toFixed(1)} / 10</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{p.score.toFixed(1)} / 10</p>
                     <p style={{ fontSize: 11, color: "#8A8480" }}>{p.notes.split(".")[0]}.</p>
                   </div>
                 ))}
@@ -346,7 +346,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Score breakdown */}
             <section id="score-breakdown" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
               <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-053" />
               <p style={{ fontSize: 12, color: "#8A8480", marginTop: 12 }}>
                 FSP v2.1 composite: {composite.toFixed(2)}/10 → editorial score: {editorialScore}/10.
@@ -356,13 +356,13 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Flags */}
             <section id="flags" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
               <FlagSystem flags={rubric.flags} />
             </section>
 
             {/* Formula */}
             <section id="formula" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Formula Analysis</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Formula Analysis</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Happee&apos;s women&apos;s formula includes four organ tissues: beef liver (retinol, B12, heme iron, copper), beef spleen (highest iron density organ), beef kidney (selenium, riboflavin, B12), and bovine uterus (ancestral &apos;like supports like&apos; rationale).
               </p>
@@ -386,7 +386,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Women-specific nutrients */}
             <section id="women-nutrients" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Nutrients for Women</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Nutrients for Women</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Premenopausal women have distinct micronutrient requirements that differ from general adults:
               </p>
@@ -411,7 +411,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Reproductive organ tissue */}
             <section id="reproductive-organs" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Reproductive Organ Tissue: What the Evidence Says</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Reproductive Organ Tissue: What the Evidence Says</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Bovine uterus is included based on the ancestral &apos;like supports like&apos; principle — the idea that consuming an organ provides nutritional support for the same organ in the consumer. This is a traditional health concept with no clinical RCT evidence base.
               </p>
@@ -428,7 +428,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Sourcing */}
             <section id="sourcing" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Sourcing & Quality</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Sourcing & Quality</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
                 Happee claims New Zealand grass-fed sourcing. NZ cattle are year-round pasture-raised by default — the country&apos;s climate and land system mean grass-finishing is the norm rather than the exception. This makes NZ one of the most credible grass-fed claims globally.
               </p>
@@ -442,13 +442,13 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Claim audit */}
             <section id="claim-audit" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
               <ClaimAudit items={rubric.claimAudit} />
             </section>
 
             {/* How to take */}
             <section id="how-to-take" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 12 }}>Take 4 capsules daily with meals. Splitting the dose (2 with breakfast, 2 with dinner) is often better tolerated. Taking with fat-containing meals improves fat-soluble vitamin absorption.</p>
               <div style={{ padding: 16, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 6 }}>Cycle-aware dosing</p>
@@ -458,7 +458,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Safety */}
             <section id="safety" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety Notes</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety Notes</h2>
               <div style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: 16, backgroundColor: "#FFF8F0", border: "1px solid #E5C4B8", borderRadius: 8, marginBottom: 16 }}>
                 <AlertTriangle size={18} color="#C4622D" style={{ flexShrink: 0, marginTop: 2 }} />
                 <div>
@@ -475,7 +475,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Value */}
             <section id="value" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
               <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="female organ blend" />
               <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginTop: 16 }}>
                 At $0.63/serving, Happee is competitively priced for a female-specific organ supplement. For context, Heart & Soil&apos;s women&apos;s formulas are $1.50–$2.00/serving. If Happee invested in third-party testing, they could justify this price tier more confidently. As it stands, the value is reasonable for healthy premenopausal women without specific risk factors.
@@ -484,7 +484,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Comparison */}
             <section id="comparison" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs Competitors</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs Competitors</h2>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(168px, 1fr))", gap: 12 }}>
                 {[
                   { name: "Happee (Women)", image: "/products/Happee-Grass-Fed-Beef-Organ.webp", score: "7/10", price: "$0.63/serving", spec1: "Iron: Very High", spec2: "Female-specific", buyUrl: "https://amzn.to/4uDGXOc", reviewUrl: "/reviews/happee-beef-organ-women", isCurrent: true },
@@ -510,11 +510,11 @@ export default function HappeeBeefOrganWomenPage() {
                       <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{comp.spec2}</p>
                     </div>
                     <div style={{ padding: "10px 14px", borderTop: "1px solid #EDE8DF", display: "flex", gap: 6 }}>
-                      <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "6px 8px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                      <a href={comp.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "6px 8px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                         Buy ↗
                       </a>
                       {!comp.isCurrent && (
-                        <Link href={comp.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: "#7B3B1A", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", padding: "6px 8px", border: "1px solid #D4C9B8", borderRadius: 5 }}>
+                        <Link href={comp.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: "#7B3B1A", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", padding: "6px 8px", border: "1px solid #D4C9B8", borderRadius: 5 }}>
                           Read →
                         </Link>
                       )}
@@ -526,13 +526,13 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* Pros / Cons */}
             <section id="pros-cons" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
               <ProsCons pros={pros} cons={cons} />
             </section>
 
             {/* FAQ */}
             <section id="faq" style={{ marginBottom: 56 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
               <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                 {faqSchema.mainEntity.map((item, i) => (
                   <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
@@ -547,7 +547,7 @@ export default function HappeeBeefOrganWomenPage() {
             <section id="final" style={{ marginBottom: 48 }}>
               <div style={{ padding: 24, backgroundColor: "#1A1714", borderRadius: 12 }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Final Verdict — REV-2026-053</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Happee Beef Organs for Women: 7/10</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Happee Beef Organs for Women: 7/10</p>
                 <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75, marginBottom: 16 }}>
                   Happee has the right nutritional instinct — the liver + spleen iron density formula is genuinely optimised for premenopausal women in a way that no other product in this review matches. The NZ sourcing is credible. The price is fair. What holds it back from an 8 or 9 is the absence of third-party purity testing — a gap that is especially consequential given the target demographic.
                 </p>
@@ -555,7 +555,7 @@ export default function HappeeBeefOrganWomenPage() {
                   <strong style={{ color: "#F2EBD9" }}>Buy Happee if:</strong> you are a healthy premenopausal woman seeking food-based iron support at a reasonable price with NZ sourcing. <strong style={{ color: "#F2EBD9" }}>Choose Heart & Soil&apos;s women&apos;s formula if:</strong> you need verified purity, are an athlete, or are pregnant / planning pregnancy.
                 </p>
                 <div style={{ display: "flex", gap: 12, alignItems: "center", paddingTop: 20, borderTop: "1px solid #3D3830", flexWrap: "wrap" }}>
-                  <a href="https://amzn.to/4uDGXOc" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                  <a href="https://amzn.to/4uDGXOc" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>FSP Score: {composite.toFixed(1)}/10 → Editorial: {editorialScore}/10</span>
@@ -565,7 +565,7 @@ export default function HappeeBeefOrganWomenPage() {
 
             {/* References */}
             <section style={{ marginBottom: 48 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Research References</h2>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Research References</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {[
                   "Hallberg L et al. The role of vitamin C in iron absorption. Int J Vitam Nutr Res Suppl, 1989.",
@@ -598,7 +598,7 @@ export default function HappeeBeefOrganWomenPage() {
             ].map((item) => (
               <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
                 <div style={{ padding: 16, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D" }}>{item.score}</p>
                 </div>
               </Link>

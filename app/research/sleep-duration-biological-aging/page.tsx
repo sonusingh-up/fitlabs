@@ -112,7 +112,7 @@ export default function SleepDurationAgingPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)" }}>Strong Evidence</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Sleep Duration and Biological Aging:{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Why 6.4–7.8 Hours May Be the Sweet Spot</em>
           </h1>
@@ -134,7 +134,7 @@ export default function SleepDurationAgingPage() {
               </div>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
@@ -142,12 +142,12 @@ export default function SleepDurationAgingPage() {
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function SleepDurationAgingPage() {
           ].map((s) => (
             <div key={s.label} style={{ backgroundColor: "#F8F2E4", padding: "20px 16px" }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.15em", textTransform: "uppercase", margin: "0 0 6px" }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
               <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{s.sub}</p>
             </div>
           ))}
@@ -278,7 +278,7 @@ export default function SleepDurationAgingPage() {
             ].map((s, i) => (
               <div key={s.range} style={{ backgroundColor: i === 2 ? "rgba(26,107,58,0.06)" : "#F8F2E4", border: `1px solid ${i === 2 ? "rgba(26,107,58,0.2)" : "#D4C9B8"}`, borderRadius: 8, padding: "14px 14px" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: i === 2 ? "#1A6B3A" : "#A89880", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
                 <p style={{ fontSize: 11, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
               </div>
             ))}
@@ -348,7 +348,7 @@ export default function SleepDurationAgingPage() {
               },
             ].map((item) => (
               <div key={item.title} style={{ padding: "18px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
                 <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
               </div>
             ))}
@@ -361,7 +361,7 @@ export default function SleepDurationAgingPage() {
 
           <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>7 hours is the most evidence-supported sleep target for longevity.</h3>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>7 hours is the most evidence-supported sleep target for longevity.</h3>
             <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8, margin: 0 }}>
               The evidence from large population studies, telomere research, and sleep physiology converges on a 6.5–7.5 hour window as optimal for biological aging outcomes. The mechanisms are real: growth hormone release, glymphatic clearance, telomere maintenance, and inflammatory regulation all depend on adequate, well-structured sleep. Sleeping under 6 hours is the high-risk end of the curve. Sleeping over 9 hours regularly is associated with its own elevation in aging markers, though reverse causation makes this harder to interpret. Stabilising your sleep schedule, protecting SWS in the first 3 hours, and addressing cortisol and temperature are the highest-leverage interventions.
             </p>

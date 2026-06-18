@@ -91,7 +91,7 @@ export default function CompareHubPage() {
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 16 }}>
             FITLAB INDEPENDENT COMPARISONS · 2026
           </p>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 4.5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05, marginBottom: 16, maxWidth: 640 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 4.5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05, marginBottom: 16, maxWidth: 640 }}>
             Head-to-Head{" "}
             <em style={{ fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.5)" }}>Supplement Comparisons</em>
           </h1>
@@ -134,7 +134,7 @@ export default function CompareHubPage() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", textAlign: "center", lineHeight: 1.3 }}>{prod.name}</p>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{prod.score}</span>
                       {i === 0 && (
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontStyle: "italic", color: "rgba(242,235,217,0.15)", lineHeight: 1, margin: "4px 0" }}>vs</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontStyle: "italic", color: "rgba(242,235,217,0.15)", lineHeight: 1, margin: "4px 0" }}>vs</p>
                       )}
                     </div>
                   ))}
@@ -151,7 +151,7 @@ export default function CompareHubPage() {
 
                   {/* Headline */}
                   <div>
-                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 700, color: "#1A1714", lineHeight: 1.2, marginBottom: 6 }}>
+                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 700, color: "#1A1714", lineHeight: 1.2, marginBottom: 6 }}>
                       {comp.headline}
                     </h2>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{comp.subline}</p>
@@ -177,7 +177,7 @@ export default function CompareHubPage() {
                     </p>
                     <Link
                       href={`/compare/${comp.slug}`}
-                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}
+                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}
                     >
                       Read full comparison →
                     </Link>
@@ -214,7 +214,7 @@ export default function CompareHubPage() {
             ].map((item) => (
               <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
                 <div className="hub-card" style={{ padding: 18, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4", height: "100%" }}>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, lineHeight: 1.3 }}>{item.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, lineHeight: 1.3 }}>{item.title}</h3>
                   <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </Link>

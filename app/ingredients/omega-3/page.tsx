@@ -214,7 +214,7 @@ export default function Omega3Page() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Anti-Inflammation & Antioxidants · Cardiovascular</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
               Omega-3 (EPA & DHA):<br />Benefits, Dosage & Best Forms
             </h1>
             <div style={{ marginBottom: 20 }}><EvidenceBadge level="strong" /></div>
@@ -237,7 +237,7 @@ export default function Omega3Page() {
               ].map((s) => (
                 <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{s.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{s.value}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{s.sub}</p>
                 </div>
               ))}
@@ -287,7 +287,7 @@ export default function Omega3Page() {
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{s.step}</span>
                   </div>
                   <div style={{ padding: "16px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
                   </div>
                 </div>
@@ -303,7 +303,7 @@ export default function Omega3Page() {
               {benefits.map((b, i) => (
                 <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden" }}>
                   <div style={{ padding: "12px 16px", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{b.claim}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
                   <div style={{ padding: "10px 16px" }}>

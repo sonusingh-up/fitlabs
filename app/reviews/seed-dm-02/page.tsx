@@ -323,7 +323,7 @@ export default function SeedDM02Review() {
                   <span style={{ color: SEED.darkBorder, fontSize: 10 }}>·</span>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.darkCaption, whiteSpace: "nowrap" }}>REV-2026-067 · Co-Biotic Multivitamin · FSP Scored</span>
                 </div>
-                <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: SEED.darkText, letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: SEED.darkText, letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   Seed DM-02™<br />
                   <em style={{ fontWeight: 400, color: SEED.darkMuted, fontSize: "0.65em" }}>Daily Multivitamin</em>
                 </h1>
@@ -332,7 +332,7 @@ export default function SeedDM02Review() {
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
                   <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: `1px solid ${SEED.darkBorder}`, color: SEED.darkCaption, fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -377,11 +377,11 @@ export default function SeedDM02Review() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: SEED.darkBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: SEED.green }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: SEED.green }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: SEED.ink, textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: SEED.caption, fontSize: 12 }}> · Independent Editorial</span>
               </p>
@@ -392,7 +392,7 @@ export default function SeedDM02Review() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: SEED.sepia, flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links may earn a commission.{" "}
               <Link href="/affiliate-disclosure" style={{ color: SEED.green, textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -413,18 +413,18 @@ export default function SeedDM02Review() {
 
               {/* § 1 Quick Verdict */}
               <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: "28px 32px", backgroundColor: SEED.darkBg, borderRadius: 14, marginBottom: 28, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 14, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 20 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-067</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>
                         A genuinely novel multivitamin concept — microbiome-aware delivery with chelated forms. The Cellular Energy Complex is a question mark at undisclosed doses.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
-                      <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</div>
+                      <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</div>
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: SEED.darkMuted, letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
@@ -438,7 +438,7 @@ export default function SeedDM02Review() {
                     const weights: Record<string, string> = { formula: "35%", transparency: "25%", verification: "20%", value: "12%", practical: "8%" };
                     return (
                       <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10, textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: seedScoreColor(p.score), lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
+                        <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: seedScoreColor(p.score), lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>{labels[p.pillar]}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: SEED.sepia }}>{weights[p.pillar]} weight</div>
                       </div>
@@ -449,7 +449,7 @@ export default function SeedDM02Review() {
 
               {/* § 2 What Is DM-02 */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Seed DM-02™?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Seed DM-02™?</h2>
                 <p style={{ fontSize: 15, color: SEED.body, lineHeight: 1.75, marginBottom: 16 }}>
                   DM-02 Daily Multivitamin is Seed's entry into the multivitamin category, applying their Co-Biotic (body + microbiome) philosophy to daily nutrient supplementation. It delivers 20 essential vitamins and minerals at 100% Daily Value using bioavailable chelated mineral forms — all in a single ViaCap capsule per day.
                 </p>
@@ -463,8 +463,8 @@ export default function SeedDM02Review() {
 
               {/* § 3 ViaCap */}
               <section id="viacap" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>ViaCap® Architecture</h2>
-                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>How DM-02 delivers vitamins to the body and prebiotic to the microbiome — in one capsule.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>ViaCap® Architecture</h2>
+                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>How DM-02 delivers vitamins to the body and prebiotic to the microbiome — in one capsule.</p>
                 <SeedViaCap
                   outerLabel="Outer Capsule → Systemic Absorption"
                   outerIngredients={[
@@ -485,20 +485,20 @@ export default function SeedDM02Review() {
 
               {/* § 4 Score Breakdown */}
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-067" />
               </section>
 
               {/* § 5 Flags */}
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 6 Supplement Facts */}
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>Serving size: 1 ViaCap · Servings per container: 30</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>Serving size: 1 ViaCap · Servings per container: 30</p>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 480, width: "100%" }}>
                     <thead>
@@ -530,7 +530,7 @@ export default function SeedDM02Review() {
                         { name: "Molybdenum", amount: "—", dv: "100%", form: "Chelated" },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                          <td style={{ padding: "10px 16px", fontSize: 13, color: SEED.body, fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.name}</td>
+                          <td style={{ padding: "10px 16px", fontSize: 13, color: SEED.body, fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
                           <td style={{ padding: "10px 16px", fontSize: 12, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", color: SEED.greenDeep }}>{row.amount}</td>
                           <td style={{ padding: "10px 16px", fontSize: 11, textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", color: SEED.greenDeep, fontWeight: 600 }}>{row.dv}</td>
                           <td style={{ padding: "10px 16px", fontSize: 11, textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", color: row.form === "Chelated" ? SEED.green : SEED.caption }}>{row.form}</td>
@@ -545,14 +545,14 @@ export default function SeedDM02Review() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: SEED.caption, marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: SEED.caption, marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   "—" = exact amount not found in publicly available supplement facts at time of review. All 20 nutrients confirmed at 100% DV.
                 </p>
               </section>
 
               {/* § 7 Ingredient Analysis */}
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Analysis</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Analysis</h2>
                 {[
                   {
                     name: "Chelated Minerals (Zinc, Copper, Manganese, Molybdenum, Chromium)",
@@ -575,18 +575,18 @@ export default function SeedDM02Review() {
                 ].map((ing, i) => (
                   <div key={ing.name} style={{ marginBottom: i < 2 ? 16 : 0, padding: "18px 22px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, marginBottom: 8, flexWrap: "wrap" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: SEED.ink, margin: 0 }}>{ing.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: SEED.ink, margin: 0 }}>{ing.name}</h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>{ing.verdict}</p>
-                    <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ing.body}</p>
+                    <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
                   </div>
                 ))}
               </section>
 
               {/* § 8 Lab */}
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
                   {[
                     { label: "ISO 17025-accredited testing", status: true },
@@ -606,17 +606,17 @@ export default function SeedDM02Review() {
 
               {/* § 9 Claim Audit */}
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 10 How to Take */}
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 12 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 8 }}>Protocol</p>
-                  <p style={{ fontSize: 15, color: SEED.ink, fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>Take 1 capsule daily with food for best absorption.</p>
-                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 15, color: SEED.ink, fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Take 1 capsule daily with food for best absorption.</p>
+                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     Fat-soluble vitamins (A, D, E, K) absorb better with dietary fat. Morning or evening — timing doesn't critically matter for a multivitamin, but consistency does. Do not crush or open the capsule. Can be taken alongside DS-01 or AM-02.
                   </p>
                 </div>
@@ -624,7 +624,7 @@ export default function SeedDM02Review() {
 
               {/* § 11 Comparison */}
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 600, width: "100%" }}>
                     <thead>
@@ -643,8 +643,8 @@ export default function SeedDM02Review() {
                         { product: "Nature Made Multi", nut: "22 nutrients", caps: "1", chel: "No (oxides)", mic: "No", price: "$0.15", hi: false },
                       ].map((row, i) => (
                         <tr key={row.product} style={{ backgroundColor: row.hi ? "rgba(61,139,55,0.06)" : i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.hi ? 700 : 400, color: SEED.ink, fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.product}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: SEED.body, fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.nut}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.hi ? 700 : 400, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif" }}>{row.product}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: SEED.body, fontFamily: "var(--font-hanken), sans-serif" }}>{row.nut}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, fontWeight: 600, color: SEED.body, fontFamily: "var(--font-dm-mono), monospace" }}>{row.caps}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: row.chel === "Yes" ? SEED.greenDeep : SEED.muted, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.chel}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: row.mic.includes("Yes") ? SEED.greenDeep : SEED.muted, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.mic}</td>
@@ -654,12 +654,12 @@ export default function SeedDM02Review() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: SEED.caption, marginTop: 12, fontFamily: "var(--font-dm-sans), sans-serif" }}>Prices verified May 2026. DM-02 is the only multivitamin with integrated microbiome-modulating delivery.</p>
+                <p style={{ fontSize: 13, color: SEED.caption, marginTop: 12, fontFamily: "var(--font-hanken), sans-serif" }}>Prices verified May 2026. DM-02 is the only multivitamin with integrated microbiome-modulating delivery.</p>
               </section>
 
               {/* § 12 Seed Family */}
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                   <ProductCard name="DM-02™ Daily Multivitamin" brand="Seed" category="Multivitamin" score={7} priceUSD="$39.99 / 30 servings" priceINR="N/A" tags={["20 Nutrients", "Chelated", "ViaCap"]} buyUrl="https://amzn.to/3RE5ELW" buyLabel="Buy on Amazon" reviewSlug="seed-dm-02" image="seed-dm-02.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "53.6B AFU"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
@@ -669,7 +669,7 @@ export default function SeedDM02Review() {
 
               {/* § 13 Pros & Cons */}
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={["20 vitamins/minerals at 100% DV — comprehensive, not megadosed", "Chelated mineral forms — superior absorption for zinc, copper, manganese, chromium, molybdenum", "Only 1 capsule/day — simplest protocol in the premium multivitamin category", "ViaCap with microbiome-modulating prebiotic — unique in multivitamins", "Cellular Energy Complex (CoQ10, PQQ, spermidine, K2) — interesting longevity ingredients", "ISO 17025-accredited testing", "Vegan, shelf-stable, available at major retail"]}
                   cons={["$1.33/serving — 50–60% more expensive than comparable quality multivitamins (Thorne, Pure)", "Cellular Energy Complex individual doses undisclosed — likely sub-clinical given one-capsule format", "Microbiome prebiotic at 33mg total — low dose for meaningful selective modulation", "No NSF or USP Verified certification", "No iron included (potential gap for premenopausal women)"]}
@@ -678,9 +678,9 @@ export default function SeedDM02Review() {
 
               {/* § 14 Safety */}
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
                 <div style={{ padding: "16px 20px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     DM-02 has an excellent safety profile. All nutrients are at 100% DV — no megadoses that risk toxicity. No single vitamin exceeds the Upper Tolerable Intake Level. The chelated mineral forms are gentler on the GI tract than oxide/sulfate forms. The microbiome prebiotic at 33mg is unlikely to cause any GI effects. Overall: one of the safest supplement options for daily use. No specific drug interactions at 100% DV dosing.
                   </p>
                 </div>
@@ -688,21 +688,21 @@ export default function SeedDM02Review() {
 
               {/* § 15 Value */}
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="microbiome-modulating prebiotic" />
               </section>
 
               {/* § 16 Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.green, marginBottom: 6 }}>Available on Amazon</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>$39.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span></p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>$39.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span></p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
                   <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
                 </div>
@@ -710,17 +710,17 @@ export default function SeedDM02Review() {
 
               {/* § 17 FAQ */}
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details key={i} style={{ backgroundColor: i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderRadius: 8, border: `1px solid ${SEED.mutedBg}`, overflow: "hidden" }}>
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: SEED.ink, fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
                         <span className="faq-icon-dm02" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: SEED.green }}>
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: SEED.muted, lineHeight: 1.7, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.acceptedAnswer.text}</p>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: SEED.muted, lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
                     </details>
                   ))}
                 </div>
@@ -729,26 +729,26 @@ export default function SeedDM02Review() {
 
               {/* § 18 Final Verdict */}
               <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: "32px 36px", backgroundColor: SEED.darkBg, borderRadius: 16, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 16, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 — REV-2026-067</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</span>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: SEED.darkMuted }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>Conditionally recommended. The best option if you want microbiome-aware delivery in your daily vitamin.</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>Conditionally recommended. The best option if you want microbiome-aware delivery in your daily vitamin.</p>
                     </div>
                   </div>
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     DM-02 scores 7/10 because the core multivitamin is genuinely well-formulated — chelated forms, 100% DV, one capsule — and the microbiome-modulating ViaCap delivery is unique in the category. The Cellular Energy Complex is the main question mark: interesting ingredients at undisclosed (and likely sub-clinical) doses. If you want the most innovative multivitamin architecture available and value the microbiome integration, DM-02 is the choice. If you want maximum transparency at a lower price, Thorne Basic Nutrients or Pure Encapsulations ONE deliver comparable vitamin/mineral quality without the premium.
                   </p>
                   <a href="https://amzn.to/3RE5ELW" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
                 </div>
@@ -756,7 +756,7 @@ export default function SeedDM02Review() {
 
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
@@ -765,7 +765,7 @@ export default function SeedDM02Review() {
                       { text: "Eisenberg T et al. (2009). Induction of autophagy by spermidine promotes longevity. Nature Cell Biology, 11(11):1305–1314.", url: "https://doi.org/10.1038/ncb1975" },
                       { text: "Fortmann SP et al. (2013). Vitamin and mineral supplements in the primary prevention of cardiovascular disease and cancer. Annals of Internal Medicine, 159(12):824–834.", url: "https://doi.org/10.7326/0003-4819-159-12-201312170-00729" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: SEED.muted, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: SEED.muted, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: SEED.green, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
                       </li>
@@ -784,7 +784,7 @@ export default function SeedDM02Review() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.caption, marginBottom: 6 }}>Seed Product Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, letterSpacing: "-0.02em" }}>More from Seed</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, letterSpacing: "-0.02em" }}>More from Seed</h3>
               </div>
               <Link href="/reviews" style={{ fontSize: 12, color: SEED.green, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

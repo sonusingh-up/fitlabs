@@ -489,7 +489,7 @@ export default function TransparentLabsBulkBlackReview() {
             </span>
             <h1
               style={{
-                fontFamily: "var(--font-playfair), Georgia, serif",
+                fontFamily: "var(--font-newsreader), Georgia, serif",
                 fontSize: "clamp(1.6rem, 4vw, 3rem)",
                 fontWeight: 800,
                 color: "#F2EBD9",
@@ -593,7 +593,7 @@ export default function TransparentLabsBulkBlackReview() {
               </p>
               <h2
                 style={{
-                  fontFamily: "var(--font-playfair), Georgia, serif",
+                  fontFamily: "var(--font-newsreader), Georgia, serif",
                   fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)",
                   fontWeight: 800,
                   letterSpacing: "-0.025em",
@@ -644,7 +644,7 @@ export default function TransparentLabsBulkBlackReview() {
                     fontSize: 13,
                     fontWeight: 600,
                     borderRadius: 8,
-                    fontFamily: "var(--font-dm-sans), sans-serif",
+                    fontFamily: "var(--font-hanken), sans-serif",
                     textDecoration: "none",
                   }}
                 >
@@ -724,7 +724,7 @@ export default function TransparentLabsBulkBlackReview() {
                   fontSize: 13,
                   fontWeight: 600,
                   color: "#2D2926",
-                  fontFamily: "var(--font-dm-sans), sans-serif",
+                  fontFamily: "var(--font-hanken), sans-serif",
                   marginBottom: 1,
                 }}
               >
@@ -766,7 +766,7 @@ export default function TransparentLabsBulkBlackReview() {
               style={{
                 fontSize: 11,
                 color: "#8A8480",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-hanken), sans-serif",
               }}
             >
               Affiliate disclosure: links on this page may earn a commission. Scores and verdicts
@@ -827,7 +827,7 @@ export default function TransparentLabsBulkBlackReview() {
                   </p>
                   <h2
                     style={{
-                      fontFamily: "var(--font-playfair), Georgia, serif",
+                      fontFamily: "var(--font-newsreader), Georgia, serif",
                       fontSize: "1.4rem",
                       fontWeight: 700,
                       color: "#F2EBD9",
@@ -880,7 +880,7 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <p
                           style={{
-                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontFamily: "var(--font-newsreader), Georgia, serif",
                             fontSize: "1.5rem",
                             fontWeight: 800,
                             color: "#C4622D",
@@ -997,7 +997,7 @@ export default function TransparentLabsBulkBlackReview() {
                     </p>
                     <p
                       style={{
-                        fontFamily: "var(--font-playfair), Georgia, serif",
+                        fontFamily: "var(--font-newsreader), Georgia, serif",
                         fontSize: "1.15rem",
                         fontWeight: 800,
                         color: "#1A1714",
@@ -1029,7 +1029,7 @@ export default function TransparentLabsBulkBlackReview() {
                         <div key={stat.label} style={{ textAlign: "center" }}>
                           <p
                             style={{
-                              fontFamily: "var(--font-playfair), Georgia, serif",
+                              fontFamily: "var(--font-newsreader), Georgia, serif",
                               fontSize: "1rem",
                               fontWeight: 800,
                               color: "#C4622D",
@@ -1078,7 +1078,7 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <p
                           style={{
-                            fontFamily: "var(--font-playfair), Georgia, serif",
+                            fontFamily: "var(--font-newsreader), Georgia, serif",
                             fontSize: "1.1rem",
                             fontWeight: 800,
                             color: "#1A1714",
@@ -1102,7 +1102,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontWeight: 700,
                           borderRadius: 8,
                           textDecoration: "none",
-                          fontFamily: "var(--font-dm-sans), sans-serif",
+                          fontFamily: "var(--font-hanken), sans-serif",
                           flexShrink: 0,
                         }}
                       >
@@ -1117,7 +1117,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1181,7 +1181,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1218,7 +1218,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1235,7 +1235,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1329,7 +1329,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 16px",
                               fontSize: 13,
                               color: "#2D2926",
-                              fontFamily: "var(--font-dm-sans), sans-serif",
+                              fontFamily: "var(--font-hanken), sans-serif",
                             }}
                           >
                             {row.name}
@@ -1388,7 +1388,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1468,7 +1468,7 @@ export default function TransparentLabsBulkBlackReview() {
                             fontSize: 14,
                             fontWeight: 700,
                             color: "#1A1714",
-                            fontFamily: "var(--font-dm-sans), sans-serif",
+                            fontFamily: "var(--font-hanken), sans-serif",
                           }}
                         >
                           {ing.name}
@@ -1538,7 +1538,7 @@ export default function TransparentLabsBulkBlackReview() {
                             fontSize: 14,
                             fontWeight: 700,
                             color: "#1A1714",
-                            fontFamily: "var(--font-dm-sans), sans-serif",
+                            fontFamily: "var(--font-hanken), sans-serif",
                           }}
                         >
                           {ing.name}
@@ -1608,7 +1608,7 @@ export default function TransparentLabsBulkBlackReview() {
                             fontSize: 14,
                             fontWeight: 700,
                             color: "#1A1714",
-                            fontFamily: "var(--font-dm-sans), sans-serif",
+                            fontFamily: "var(--font-hanken), sans-serif",
                           }}
                         >
                           {ing.name}
@@ -1625,7 +1625,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1742,7 +1742,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1763,7 +1763,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -1891,7 +1891,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2005,7 +2005,7 @@ export default function TransparentLabsBulkBlackReview() {
                               fontSize: 13,
                               fontWeight: row.highlight ? 700 : 400,
                               color: row.highlight ? "#C4622D" : "#2D2926",
-                              fontFamily: "var(--font-dm-sans), sans-serif",
+                              fontFamily: "var(--font-hanken), sans-serif",
                               whiteSpace: "nowrap",
                             }}
                           >
@@ -2089,7 +2089,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2172,7 +2172,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2208,7 +2208,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2287,7 +2287,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2355,7 +2355,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2468,7 +2468,7 @@ export default function TransparentLabsBulkBlackReview() {
                             fontWeight: 600,
                             borderRadius: 6,
                             textDecoration: "none",
-                            fontFamily: "var(--font-dm-sans), sans-serif",
+                            fontFamily: "var(--font-hanken), sans-serif",
                           }}
                         >
                           Buy on Amazon <ExternalLink size={12} />
@@ -2483,7 +2483,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.5rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2510,7 +2510,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontWeight: 600,
                           color: "#1A1714",
                           cursor: "pointer",
-                          fontFamily: "var(--font-dm-sans), sans-serif",
+                          fontFamily: "var(--font-hanken), sans-serif",
                           listStyle: "none",
                           display: "flex",
                           justifyContent: "space-between",
@@ -2526,7 +2526,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontSize: 13,
                           color: "#5C5650",
                           lineHeight: 1.7,
-                          fontFamily: "var(--font-dm-sans), sans-serif",
+                          fontFamily: "var(--font-hanken), sans-serif",
                         }}
                       >
                         {faq.acceptedAnswer.text}
@@ -2569,7 +2569,7 @@ export default function TransparentLabsBulkBlackReview() {
                     <div>
                       <p
                         style={{
-                          fontFamily: "var(--font-playfair), Georgia, serif",
+                          fontFamily: "var(--font-newsreader), Georgia, serif",
                           fontSize: "4rem",
                           fontWeight: 800,
                           color: "#C4622D",
@@ -2592,7 +2592,7 @@ export default function TransparentLabsBulkBlackReview() {
                     <div style={{ flex: 1, minWidth: 240 }}>
                       <h3
                         style={{
-                          fontFamily: "var(--font-playfair), Georgia, serif",
+                          fontFamily: "var(--font-newsreader), Georgia, serif",
                           fontSize: "1.4rem",
                           fontWeight: 700,
                           color: "#F2EBD9",
@@ -2666,7 +2666,7 @@ export default function TransparentLabsBulkBlackReview() {
                         fontWeight: 700,
                         borderRadius: 8,
                         textDecoration: "none",
-                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontFamily: "var(--font-hanken), sans-serif",
                       }}
                     >
                       Buy BULK Black on Amazon <ExternalLink size={14} />
@@ -2697,7 +2697,7 @@ export default function TransparentLabsBulkBlackReview() {
               <section style={{ marginBottom: 56 }}>
                 <h2
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.3rem",
                     fontWeight: 700,
                     color: "#1A1714",
@@ -2734,7 +2734,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontSize: 12,
                           color: "#5C5650",
                           lineHeight: 1.6,
-                          fontFamily: "var(--font-dm-sans), sans-serif",
+                          fontFamily: "var(--font-hanken), sans-serif",
                         }}
                       >
                         {ref}
@@ -2777,7 +2777,7 @@ export default function TransparentLabsBulkBlackReview() {
                 </p>
                 <h3
                   style={{
-                    fontFamily: "var(--font-playfair), Georgia, serif",
+                    fontFamily: "var(--font-newsreader), Georgia, serif",
                     fontSize: "1.3rem",
                     fontWeight: 700,
                     color: "#1A1714",

@@ -105,7 +105,7 @@ export default function SearchPage() {
               {pagefindReady ? "Index Ready" : pagefindMissing ? "Index Building..." : "Loading..."}
             </span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 28 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 28 }}>
             Search{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>the archive.</em>
           </h1>
@@ -120,7 +120,7 @@ export default function SearchPage() {
               placeholder="Search reviews, ingredients, brands..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              style={{ width: "100%", paddingLeft: 48, paddingRight: 16, paddingTop: 16, paddingBottom: 16, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, fontSize: 16, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", outline: "none", boxSizing: "border-box" }}
+              style={{ width: "100%", paddingLeft: 48, paddingRight: 16, paddingTop: 16, paddingBottom: 16, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, fontSize: 16, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", outline: "none", boxSizing: "border-box" }}
               autoFocus
             />
             {query && (
@@ -162,7 +162,7 @@ export default function SearchPage() {
                       style={{ display: "block", padding: "18px 22px", borderBottom: "1px solid #EDE8DF", textDecoration: "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}
                     >
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 16, marginBottom: 6 }}>
-                        <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{title}</h3>
+                        <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{title}</h3>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", flexShrink: 0, paddingTop: 3, letterSpacing: "0.1em" }}>{cleanUrl}</span>
                       </div>
                       {r.excerpt && (
@@ -177,7 +177,7 @@ export default function SearchPage() {
               </div>
             ) : !loading ? (
               <div style={{ padding: "40px 24px", border: "1px solid #D4C9B8", borderRadius: 12, textAlign: "center", backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", color: "#5C5650", marginBottom: 8 }}>No results for &ldquo;{query}&rdquo;</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", color: "#5C5650", marginBottom: 8 }}>No results for &ldquo;{query}&rdquo;</p>
                 <p style={{ fontSize: 13, color: "#8A8480", margin: 0 }}>Try a shorter term, or browse by category below.</p>
               </div>
             ) : null}
@@ -193,7 +193,7 @@ export default function SearchPage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  style={{ padding: "8px 16px", border: "1px solid #D4C9B8", borderRadius: 8, fontSize: 13, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", backgroundColor: "#F8F2E4" }}
+                  style={{ padding: "8px 16px", border: "1px solid #D4C9B8", borderRadius: 8, fontSize: 13, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", backgroundColor: "#F8F2E4" }}
                 >
                   {item.label}
                 </Link>
@@ -210,7 +210,7 @@ export default function SearchPage() {
                 { href: "/methodology", label: "How We Score", sub: "Fitlab Scoring Protocol" },
               ].map((item) => (
                 <Link key={item.href} href={item.href} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 10, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0, marginBottom: 3 }}>{item.label}</p>
+                  <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", margin: 0, marginBottom: 3 }}>{item.label}</p>
                   <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{item.sub}</p>
                 </Link>
               ))}

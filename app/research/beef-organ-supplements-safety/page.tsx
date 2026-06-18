@@ -146,7 +146,7 @@ export default function BeefOrganSafetyPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Safety Research</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Beef Organ Supplement Safety
             <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Vitamin A Toxicity, Heavy Metals & Who Should Avoid Them</em>
           </h1>
@@ -182,7 +182,7 @@ export default function BeefOrganSafetyPage() {
           ].map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", backgroundColor: "#252220", borderRadius: 8 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{s.value}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{s.value}</p>
               <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
             </div>
           ))}
@@ -204,7 +204,7 @@ export default function BeefOrganSafetyPage() {
               <div style={{ padding: "14px 18px", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650" }}>0{i + 1}</span>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#F2EBD9" }}>{risk.title}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#F2EBD9" }}>{risk.title}</p>
                 </div>
                 <EvidenceBadge level={risk.level} />
               </div>
@@ -360,7 +360,7 @@ export default function BeefOrganSafetyPage() {
         {/* Bottom line */}
         <div style={{ padding: 24, backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 48 }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Safe for most adults. Specific risks exist for specific groups.</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Safe for most adults. Specific risks exist for specific groups.</p>
           <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>
             Beef organ supplements are not inherently dangerous, but they are not consequence-free either. The risks — vitamin A accumulation, heavy metals, iron overload — are real and dose-dependent. For the majority of healthy adults without the specific contraindications listed above, daily use of a single COA-verified organ supplement at label doses is safe. The key error is naive stacking: multiple liver products, concurrent vitamin A supplements, and daily whole liver meals can together push retinol above safe thresholds without the user realising it.
           </p>
@@ -371,7 +371,7 @@ export default function BeefOrganSafetyPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
             <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}

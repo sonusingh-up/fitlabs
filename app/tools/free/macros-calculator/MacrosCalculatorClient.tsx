@@ -61,7 +61,7 @@ const iS: React.CSSProperties = {
   background: "#FDFAF4",
   fontSize: 15,
   color: "#1A1714",
-  fontFamily: "var(--font-dm-sans),sans-serif",
+  fontFamily: "var(--font-hanken),sans-serif",
   boxSizing: "border-box",
 };
 
@@ -435,7 +435,7 @@ export default function MacrosCalculatorClient() {
     ctx.fillRect(0, 0, W, 6);
 
     // Header label
-    ctx.fillStyle = "#6B7280";
+    ctx.fillStyle = "#586259";
     ctx.font = "bold 11px system-ui";
     ctx.letterSpacing = "2px";
     ctx.fillText("FITLAB  ·  EVIDENCE-LED SUPPLEMENT RESEARCH", 32, 40);
@@ -452,7 +452,7 @@ export default function MacrosCalculatorClient() {
 
     // Subtitle / Goal context
     ctx.font = "14px system-ui";
-    ctx.fillStyle = "#9CA3AF";
+    ctx.fillStyle = "#6b7770";
     ctx.fillText(`Goal: ${goalLabels[results.goal]}  ·  Diet Style: ${dietLabels[results.dietStyle]}`, 32, 130);
 
     // Macros row grid helper
@@ -468,11 +468,11 @@ export default function MacrosCalculatorClient() {
       // Box
       ctx.fillStyle = "#262626";
       ctx.fillRect(colX, 160, 160, 110);
-      ctx.strokeStyle = "#374151";
+      ctx.strokeStyle = "#1a2d24";
       ctx.strokeRect(colX, 160, 160, 110);
 
       // Label
-      ctx.fillStyle = "#9CA3AF";
+      ctx.fillStyle = "#6b7770";
       ctx.font = "bold 11px system-ui";
       ctx.fillText(m.name, colX + 16, 185);
 
@@ -497,7 +497,7 @@ export default function MacrosCalculatorClient() {
     ctx.beginPath(); ctx.moveTo(32, 340); ctx.lineTo(W - 32, 340); ctx.stroke();
 
     // Footer text
-    ctx.fillStyle = "#6B7280";
+    ctx.fillStyle = "#586259";
     ctx.font = "12px system-ui";
     ctx.fillText("Calculate yours → fitlabreviews.com/tools/free/macros-calculator", 32, 370);
 
@@ -538,7 +538,7 @@ export default function MacrosCalculatorClient() {
         {/* Tool Header */}
         <div className="tool-header" style={{ textAlign: "center", padding: "32px 0 24px" }}>
           <span style={{ display: "inline-block", background: "#1A1714", color: "#F2EBD9", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", padding: "4px 10px", borderRadius: 4, marginBottom: 16 }}>FREE TOOL</span>
-          <h1 style={{ fontFamily: "var(--font-playfair),Georgia,serif", fontSize: "clamp(1.75rem,5vw,2.75rem)", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 12, lineHeight: 1.1 }}>Macros Calculator</h1>
+          <h1 style={{ fontFamily: "var(--font-newsreader),Georgia,serif", fontSize: "clamp(1.75rem,5vw,2.75rem)", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 12, lineHeight: 1.1 }}>Macros Calculator</h1>
           <p style={{ fontSize: 16, color: "#4D4743", maxWidth: 520, margin: "0 auto", lineHeight: 1.6 }}>
             Split your daily calories into exact protein, carbs, and fat targets — matched to your goal, your diet style, and your body.
           </p>
@@ -560,7 +560,7 @@ export default function MacrosCalculatorClient() {
                   borderRadius: 8,
                   border: "none",
                   cursor: "pointer",
-                  fontFamily: "var(--font-dm-sans),sans-serif",
+                  fontFamily: "var(--font-hanken),sans-serif",
                   fontSize: "clamp(11px, 2.8vw, 13px)",
                   fontWeight: 600,
                   whiteSpace: "nowrap",
@@ -623,7 +623,7 @@ export default function MacrosCalculatorClient() {
                     fontWeight: 600,
                     fontSize: 14,
                     transition: "all 0.15s",
-                    fontFamily: "var(--font-dm-sans),sans-serif",
+                    fontFamily: "var(--font-hanken),sans-serif",
                   }}
                 >
                   {g === "male" ? "♂ Male" : "♀ Female"}
@@ -728,7 +728,7 @@ export default function MacrosCalculatorClient() {
                       fontSize: 13,
                       fontWeight: 600,
                       cursor: "pointer",
-                      fontFamily: "var(--font-dm-sans),sans-serif",
+                      fontFamily: "var(--font-hanken),sans-serif",
                       transition: "all 0.15s",
                     }}
                   >
@@ -755,7 +755,7 @@ export default function MacrosCalculatorClient() {
                       borderRadius: 8,
                       border: "none",
                       cursor: "pointer",
-                      fontFamily: "var(--font-dm-sans),sans-serif",
+                      fontFamily: "var(--font-hanken),sans-serif",
                       fontSize: 13,
                       fontWeight: 600,
                       background: isSelected ? "#1A1714" : "transparent",
@@ -799,7 +799,7 @@ export default function MacrosCalculatorClient() {
             fontWeight: 700,
             cursor: "pointer",
             letterSpacing: "0.02em",
-            fontFamily: "var(--font-dm-sans),sans-serif",
+            fontFamily: "var(--font-hanken),sans-serif",
             boxShadow: "0 4px 16px rgba(196,98,45,0.3)",
             marginBottom: 24,
           }}
@@ -813,7 +813,7 @@ export default function MacrosCalculatorClient() {
             {/* CARD 1 — Daily Macro Targets (Dark card) */}
             <div style={{ background: "#1C1C1C", color: "#FFFFFF", borderRadius: 16, padding: "clamp(16px, 4vw, 28px) clamp(16px, 4vw, 28px) clamp(16px, 4vw, 24px)", marginBottom: 20, boxShadow: "0 8px 32px rgba(26,23,20,0.2)", opacity: 0, animation: "slideUp 250ms 0ms ease-out forwards" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 20 }}>
-                <span style={{ fontSize: 12, fontWeight: 700, color: "#9CA3AF", letterSpacing: "0.1em", textTransform: "uppercase" }}>YOUR DAILY MACROS</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color: "#6b7770", letterSpacing: "0.1em", textTransform: "uppercase" }}>YOUR DAILY MACROS</span>
                 <span style={{ fontSize: 12, color: "#E58B58", fontWeight: 600 }}>
                   [{goalLabels[results.goal]} · {dietLabels[results.dietStyle]}]
                 </span>
@@ -848,12 +848,12 @@ export default function MacrosCalculatorClient() {
 
                 return (
                   <div>
-                    <div style={{ display: "flex", height: 20, borderRadius: 10, overflow: "hidden", background: "#374151", marginBottom: 8 }}>
+                    <div style={{ display: "flex", height: 20, borderRadius: 10, overflow: "hidden", background: "#1a2d24", marginBottom: 8 }}>
                       <div style={{ width: `${pPct}%`, background: "#E58B58" }} title={`Protein: ${pPct}%`} />
                       <div style={{ width: `${cPct}%`, background: "#4A7C7A" }} title={`Carbs: ${cPct}%`} />
-                      <div style={{ width: `${fPct}%`, background: "#9CA3AF" }} title={`Fat: ${fPct}%`} />
+                      <div style={{ width: `${fPct}%`, background: "#6b7770" }} title={`Fat: ${fPct}%`} />
                     </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: "#9CA3AF", fontWeight: 500, padding: "0 4px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, color: "#6b7770", fontWeight: 500, padding: "0 4px" }}>
                       <span>Protein {pPct}%</span>
                       <span>Carbs {cPct}%</span>
                       <span>Fat {fPct}%</span>
@@ -933,7 +933,7 @@ export default function MacrosCalculatorClient() {
                           <span style={{ color: "#5C5650" }}>Fat:</span>
                           <strong style={{ fontFamily: "var(--font-dm-mono),monospace", color: "#EF4444" }}>{results.trainingDayFat}g <span style={{ fontSize: 11, fontWeight: "normal" }}>↓ −15%</span></strong>
                         </div>
-                        <div style={{ borderTop: "1px solid #E5E7EB", marginTop: 8, paddingTop: 8, display: "flex", justifyContent: "space-between", fontWeight: 700 }}>
+                        <div style={{ borderTop: "1px solid #e4e8e5", marginTop: 8, paddingTop: 8, display: "flex", justifyContent: "space-between", fontWeight: 700 }}>
                           <span>Total:</span>
                           <span>{results.trainingDayCalories.toLocaleString()} kcal</span>
                         </div>
@@ -1004,7 +1004,7 @@ export default function MacrosCalculatorClient() {
                       borderRadius: 8,
                       border: "none",
                       cursor: "pointer",
-                      fontFamily: "var(--font-dm-sans),sans-serif",
+                      fontFamily: "var(--font-hanken),sans-serif",
                       fontSize: 13,
                       fontWeight: 600,
                       background: mealMode === opt.key ? "#1A1714" : "transparent",
@@ -1615,11 +1615,11 @@ export default function MacrosCalculatorClient() {
               {/* Preview Card */}
               <div style={{ background: "#1C1C1C", borderRadius: 16, padding: "clamp(16px, 4vw, 24px) clamp(16px, 4vw, 28px)", border: "1px solid #2D2D2D", marginBottom: 12 }}>
                 <div style={{ height: 3, background: "#C4622D", borderRadius: 2, marginBottom: 16 }} />
-                <p style={{ fontSize: 10, color: "#9CA3AF", letterSpacing: "0.12em", fontWeight: 700, marginBottom: 16 }}>
+                <p style={{ fontSize: 10, color: "#6b7770", letterSpacing: "0.12em", fontWeight: 700, marginBottom: 16 }}>
                   FITLAB · EVIDENCE-LED SUPPLEMENT RESEARCH
                 </p>
                 <h3 style={{ fontSize: 16, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>💪 My Daily Macro Targets</h3>
-                <p style={{ fontSize: 12, color: "#9CA3AF", marginBottom: 16 }}>
+                <p style={{ fontSize: 12, color: "#6b7770", marginBottom: 16 }}>
                   Goal: {goalLabels[results.goal]} · {dietLabels[results.dietStyle]} Diet
                 </p>
 
@@ -1630,9 +1630,9 @@ export default function MacrosCalculatorClient() {
                     { label: "Fat", val: `${results.fatG}g`, cal: `${results.fatKcal} kcal` },
                   ].map((r, i) => (
                     <div key={i} style={{ display: "flex", flexDirection: "column", padding: "8px 0", borderBottom: "1px solid #2A2A2A" }}>
-                      <span style={{ fontSize: 11, color: "#9CA3AF" }}>{r.label}</span>
+                      <span style={{ fontSize: 11, color: "#6b7770" }}>{r.label}</span>
                       <span style={{ fontSize: 16, fontWeight: 700, color: "#E58B58" }}>{r.val}</span>
-                      <span style={{ fontSize: 11, color: "#9CA3AF" }}>{r.cal}</span>
+                      <span style={{ fontSize: 11, color: "#6b7770" }}>{r.cal}</span>
                     </div>
                   ))}
                 </div>
@@ -1641,7 +1641,7 @@ export default function MacrosCalculatorClient() {
                   Daily Total: {results.calories.toLocaleString()} kcal
                 </div>
 
-                <p style={{ fontSize: 11, color: "#9CA3AF", marginTop: 14, marginBottom: 0 }}>
+                <p style={{ fontSize: 11, color: "#6b7770", marginTop: 14, marginBottom: 0 }}>
                   Calculate yours → fitlabreviews.com/tools/free/macros-calculator
                 </p>
               </div>
@@ -1658,7 +1658,7 @@ export default function MacrosCalculatorClient() {
                   fontSize: 15,
                   fontWeight: 700,
                   cursor: "pointer",
-                  fontFamily: "var(--font-dm-sans),sans-serif",
+                  fontFamily: "var(--font-hanken),sans-serif",
                   boxShadow: "0 4px 16px rgba(196,98,45,0.3)",
                 }}
               >
@@ -1679,7 +1679,7 @@ export default function MacrosCalculatorClient() {
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: "pointer",
-                fontFamily: "var(--font-dm-sans),sans-serif",
+                fontFamily: "var(--font-hanken),sans-serif",
                 marginBottom: 24,
               }}
             >
@@ -1687,7 +1687,7 @@ export default function MacrosCalculatorClient() {
             </button>
 
             {/* NEXT STEP CTA (Dark card) */}
-            <div style={{ background: "linear-gradient(135deg, #1C1C1C 0%, #2A2A2A 100%)", borderRadius: 16, padding: "clamp(20px, 5vw, 28px) clamp(16px, 4vw, 28px) clamp(16px, 4vw, 24px)", marginBottom: 24, border: "1px solid #374151", opacity: 0, animation: "slideUp 250ms 640ms ease-out forwards" }}>
+            <div style={{ background: "linear-gradient(135deg, #1C1C1C 0%, #2A2A2A 100%)", borderRadius: 16, padding: "clamp(20px, 5vw, 28px) clamp(16px, 4vw, 28px) clamp(16px, 4vw, 24px)", marginBottom: 24, border: "1px solid #1a2d24", opacity: 0, animation: "slideUp 250ms 640ms ease-out forwards" }}>
               <div style={{ fontSize: 11, fontWeight: 700, color: "#E58B58", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, display: "flex", alignItems: "center", gap: 6 }}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="9" />
@@ -1697,7 +1697,7 @@ export default function MacrosCalculatorClient() {
                 NEXT STEP
               </div>
               <h3 style={{ fontSize: 16, fontWeight: 700, color: "#FFFFFF", marginBottom: 8 }}>Want a full 7-day meal plan built around these exact macros?</h3>
-              <p style={{ fontSize: 13, color: "#9CA3AF", marginBottom: 16, lineHeight: 1.6 }}>
+              <p style={{ fontSize: 13, color: "#6b7770", marginBottom: 16, lineHeight: 1.6 }}>
                 Our Meal Plan Generator creates breakfast, lunch, dinner, and snacks — matched to your <strong style={{ color: "#FFFFFF" }}>{results.proteinG}g protein</strong> / <strong style={{ color: "#FFFFFF" }}>{results.carbG}g carbs</strong> / <strong style={{ color: "#FFFFFF" }}>{results.fatG}g fat</strong> targets.
               </p>
               <a
@@ -1723,7 +1723,7 @@ export default function MacrosCalculatorClient() {
 
         {/* COMMON QUESTIONS (FAQ Accordion) */}
         <div style={{ marginBottom: 32 }}>
-          <h2 style={{ fontFamily: "var(--font-playfair),Georgia,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Common Questions</h2>
+          <h2 style={{ fontFamily: "var(--font-newsreader),Georgia,serif", fontSize: "1.4rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Common Questions</h2>
           <div style={{ background: "#FDFAF4", border: "1px solid #D4C9B8", borderRadius: 14, overflow: "hidden" }}>
             {[
               {
@@ -1770,7 +1770,7 @@ export default function MacrosCalculatorClient() {
                 fontSize: 13,
                 fontWeight: 600,
                 cursor: "pointer",
-                fontFamily: "var(--font-dm-sans),sans-serif"
+                fontFamily: "var(--font-hanken),sans-serif"
               }}
             >
               📤 Share My Macros

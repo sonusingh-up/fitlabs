@@ -1,9 +1,11 @@
 import { createClient } from "next-sanity";
 import imageUrlBuilder from "@sanity/image-url";
 
+const sanityConfigured = !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+
 export const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "placeholder",
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
   apiVersion: "2024-01-01",
   useCdn: process.env.NODE_ENV === "production",
 });
@@ -14,10 +16,12 @@ export const urlFor = (source: any) => builder.image(source);
 // ─── REVIEWS ─────────────────────────────────────────────────────────────────
 
 export async function getAllReviewSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "review"]{ "slug": slug.current }`);
 }
 
 export async function getReviewBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "review" && slug.current == $slug][0]{
       title, "slug": slug.current, brand, category, editorialScore, verdict,
@@ -31,6 +35,7 @@ export async function getReviewBySlug(slug: string) {
 }
 
 export async function getAllReviews() {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(
     `*[_type == "review"] | order(publishedAt desc){
       title, "slug": slug.current, brand, category, editorialScore,
@@ -42,10 +47,12 @@ export async function getAllReviews() {
 // ─── INGREDIENTS ─────────────────────────────────────────────────────────────
 
 export async function getAllIngredientSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "ingredient"]{ "slug": slug.current }`);
 }
 
 export async function getIngredientBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "ingredient" && slug.current == $slug][0]{
       name, "slug": slug.current, category, summary, evidenceLevel,
@@ -56,6 +63,7 @@ export async function getIngredientBySlug(slug: string) {
 }
 
 export async function getAllIngredients() {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(
     `*[_type == "ingredient"] | order(name asc){
       name, "slug": slug.current, category, summary, evidenceLevel, topBenefit, figNumber
@@ -66,10 +74,12 @@ export async function getAllIngredients() {
 // ─── AUTHORS ─────────────────────────────────────────────────────────────────
 
 export async function getAllAuthorSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "author"]{ "slug": slug.current }`);
 }
 
 export async function getAuthorBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "author" && slug.current == $slug][0]{
       name, "slug": slug.current, role, bio, avatar, credentials, linkedIn
@@ -81,10 +91,12 @@ export async function getAuthorBySlug(slug: string) {
 // ─── BRANDS ──────────────────────────────────────────────────────────────────
 
 export async function getAllBrandSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "brand"]{ "slug": slug.current }`);
 }
 
 export async function getBrandBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "brand" && slug.current == $slug][0]{
       name, "slug": slug.current, country, logo, summary,
@@ -97,10 +109,12 @@ export async function getBrandBySlug(slug: string) {
 // ─── BEST LISTS ───────────────────────────────────────────────────────────────
 
 export async function getAllBestSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "bestList"]{ "slug": slug.current }`);
 }
 
 export async function getBestBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "bestList" && slug.current == $slug][0]{
       title, "slug": slug.current, category, summary, metaDescription,
@@ -114,10 +128,12 @@ export async function getBestBySlug(slug: string) {
 // ─── RESEARCH ────────────────────────────────────────────────────────────────
 
 export async function getAllResearchSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "research"]{ "slug": slug.current }`);
 }
 
 export async function getResearchBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "research" && slug.current == $slug][0]{
       title, "slug": slug.current, summary, metaDescription, body,
@@ -132,10 +148,12 @@ export async function getResearchBySlug(slug: string) {
 // ─── COMPARISONS ─────────────────────────────────────────────────────────────
 
 export async function getAllComparisonSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
   return sanityClient.fetch(`*[_type == "comparison"]{ "slug": slug.current }`);
 }
 
 export async function getComparisonBySlug(slug: string) {
+  if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "comparison" && slug.current == $slug][0]{
       title, "slug": slug.current, summary, metaDescription, verdict,

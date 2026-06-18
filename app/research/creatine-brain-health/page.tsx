@@ -133,7 +133,7 @@ export default function CreatineBrainHealthPage() {
           </div>
 
           {/* H1 */}
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
             Creatine for Brain Health:{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>How a Bodybuilding Supplement Boosts Cognition, Memory & Mental Energy</em>
           </h1>
@@ -158,7 +158,7 @@ export default function CreatineBrainHealthPage() {
               </div>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
@@ -166,12 +166,12 @@ export default function CreatineBrainHealthPage() {
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
 
@@ -191,7 +191,7 @@ export default function CreatineBrainHealthPage() {
               { value: "< 2 min", label: "Time to resynthesize brain PCr", sub: "Creatine–ATP shuttle mechanism" },
             ].map((stat) => (
               <div key={stat.value} style={{ borderLeft: "2px solid #C4622D", paddingLeft: 14 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.55rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.55rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
                 <p style={{ fontSize: 12, color: "rgba(242,235,217,0.7)", lineHeight: 1.4, margin: "0 0 4px" }}>{stat.label}</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
               </div>
@@ -316,7 +316,7 @@ export default function CreatineBrainHealthPage() {
           ].map((card) => (
             <div key={card.title} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
               <div style={{ backgroundColor: "#EDE8DF", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-                <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{card.title}</span>
+                <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{card.title}</span>
                 <a href={`https://pubmed.ncbi.nlm.nih.gov/${card.pmid}/`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.1em" }}>PubMed {card.pmid} ↗</a>
               </div>
               <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
@@ -422,7 +422,7 @@ export default function CreatineBrainHealthPage() {
             ].map((item) => (
               <div key={item.group} style={{ padding: "18px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-                  <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.group}</p>
+                  <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.group}</p>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, color: item.color, letterSpacing: "0.1em", textTransform: "uppercase", backgroundColor: "white", padding: "2px 7px", borderRadius: 3, border: `1px solid ${item.border}`, flexShrink: 0, marginLeft: 8 }}>{item.evidence}</span>
                 </div>
                 <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
@@ -571,7 +571,7 @@ export default function CreatineBrainHealthPage() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
           <div style={{ position: "relative" }}>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
               Creatine is the best-evidenced cognitive supplement for people who start from a deficit — and among the safest compounds studied.
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -597,7 +597,7 @@ export default function CreatineBrainHealthPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {faqSchema.mainEntity.map((item, i) => (
               <details key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", overflow: "hidden" }}>
-                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-hanken), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
                   <span>{item.name}</span>
                   <span style={{ color: "#C4622D", fontSize: 18, flexShrink: 0 }}>+</span>
                 </summary>
@@ -686,7 +686,7 @@ export default function CreatineBrainHealthPage() {
               { href: "/research/glp1-beyond-weight-loss", label: "GLP-1 Beyond Weight Loss", sub: "Cognitive and cardiovascular benefits" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
+                <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
                 <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{link.sub}</p>
               </Link>
             ))}

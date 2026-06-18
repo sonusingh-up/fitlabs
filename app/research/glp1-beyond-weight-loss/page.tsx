@@ -124,7 +124,7 @@ export default function GLP1BeyondWeightLossPage() {
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.12em" }}>May 2026</span>
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
             GLP-1 Medications Beyond Weight Loss:{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Heart, Brain, Blood Pressure & More</em>
           </h1>
@@ -148,7 +148,7 @@ export default function GLP1BeyondWeightLossPage() {
               </div>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
@@ -156,12 +156,12 @@ export default function GLP1BeyondWeightLossPage() {
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
             <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function GLP1BeyondWeightLossPage() {
               { value: "~50%", label: "Alcohol relapse reduction", sub: "Observational, reward modulation" },
             ].map((stat) => (
               <div key={stat.value} style={{ borderLeft: "2px solid #C4622D", paddingLeft: 14 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
                 <p style={{ fontSize: 12, color: "rgba(242,235,217,0.7)", lineHeight: 1.4, margin: "0 0 4px" }}>{stat.label}</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
               </div>
@@ -291,7 +291,7 @@ export default function GLP1BeyondWeightLossPage() {
                 <div key={m.n} style={{ display: "flex", gap: 14 }}>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D", flexShrink: 0, marginTop: 2 }}>{m.n}</span>
                   <div>
-                    <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, fontWeight: 600, color: "#1A1714" }}>{m.mechanism}</span>
+                    <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 14, fontWeight: 600, color: "#1A1714" }}>{m.mechanism}</span>
                     <span style={{ fontSize: 13, color: "#5C5650" }}> — {m.detail}</span>
                   </div>
                 </div>
@@ -328,7 +328,7 @@ export default function GLP1BeyondWeightLossPage() {
           </p>
 
           {/* Depression evidence */}
-          <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Depression</h3>
+          <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Depression</h3>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
             A pre-specified subanalysis of the SELECT trial found that semaglutide produced significantly greater improvements in the SF-36 mental health component score compared to placebo, with effect sizes independent of weight change. In separate datasets, patients starting GLP-1 agonists for diabetes showed lower rates of antidepressant initiation at 12 months vs matched controls (Wium-Andersen et al., 2023, <em>JAMA Network Open</em>).
           </p>
@@ -337,7 +337,7 @@ export default function GLP1BeyondWeightLossPage() {
           </p>
 
           {/* Addiction / alcohol */}
-          <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Alcohol Use and Addiction</h3>
+          <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Alcohol Use and Addiction</h3>
           <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
             Multiple observational studies and anecdotal reports from patients and addiction clinics have noted that GLP-1 agonists dramatically reduce cravings for alcohol, nicotine, and compulsive eating behaviours. Mechanistically, GLP-1 signalling blunts dopamine release in the nucleus accumbens in response to rewarding stimuli — effectively dampening the "wanting" signal that drives cravings.
           </p>
@@ -352,7 +352,7 @@ export default function GLP1BeyondWeightLossPage() {
             ].map((item) => (
               <div key={item.title} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, padding: "14px 16px" }}>
                 <p style={{ fontSize: 20, marginBottom: 8 }}>{item.emoji}</p>
-                <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{item.title}</p>
+                <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{item.title}</p>
                 <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.55, margin: 0 }}>{item.detail}</p>
               </div>
             ))}
@@ -427,7 +427,7 @@ export default function GLP1BeyondWeightLossPage() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
           <div style={{ position: "relative" }}>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
               GLP-1 agonists are becoming one of the most versatile drug classes in medicine
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -453,7 +453,7 @@ export default function GLP1BeyondWeightLossPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {faqSchema.mainEntity.map((item, i) => (
               <details key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", overflow: "hidden" }}>
-                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-hanken), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
                   <span>{item.name}</span>
                   <span style={{ color: "#C4622D", fontSize: 18, flexShrink: 0 }}>+</span>
                 </summary>
@@ -506,7 +506,7 @@ export default function GLP1BeyondWeightLossPage() {
               { href: "/ingredients/tirzepatide", label: "Tirzepatide Ingredient Profile", sub: "Mechanism, trials, and dosing" },
             ].map((link) => (
               <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
+                <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
                 <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{link.sub}</p>
               </Link>
             ))}

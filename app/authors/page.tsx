@@ -64,7 +64,7 @@ export default function AuthorsPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Editorial Independence</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
             The{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Research Team</em>
           </h1>
@@ -93,7 +93,7 @@ export default function AuthorsPage() {
                   {/* Avatar */}
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
                     <div style={{ width: 72, height: 72, borderRadius: "50%", backgroundColor: author.accent, display: "flex", alignItems: "center", justifyContent: "center", border: "3px solid #EDE8DF" }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#F2EBD9" }}>{author.initials}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#F2EBD9" }}>{author.initials}</span>
                     </div>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", color: "#A89880", textTransform: "uppercase" }}>{author.figure}</span>
                   </div>
@@ -102,7 +102,7 @@ export default function AuthorsPage() {
                   <div>
                     <div style={{ marginBottom: 12 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 4 }}>
-                        <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.01em" }}>{author.name}</h2>
+                        <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.01em" }}>{author.name}</h2>
                         {author.linkedin && (
                           <span style={{ padding: "2px 8px", backgroundColor: "rgba(10,102,194,0.08)", border: "1px solid rgba(10,102,194,0.2)", borderRadius: 4, fontSize: 9, color: "#0A66C2", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase" }}>LinkedIn</span>
                         )}
@@ -116,15 +116,15 @@ export default function AuthorsPage() {
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 16, marginBottom: 14 }}>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Reviews</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.reviewCount}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.reviewCount}</p>
                       </div>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Ingredient Profiles</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.ingredientProfiles}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.ingredientProfiles}</p>
                       </div>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>On Fitlab Since</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.since}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{author.since}</p>
                       </div>
                     </div>
 
@@ -135,7 +135,7 @@ export default function AuthorsPage() {
                     </div>
 
                     <div style={{ marginTop: 16, display: "flex", alignItems: "center", gap: 6 }}>
-                      <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>View full profile →</span>
+                      <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>View full profile →</span>
                     </div>
                   </div>
                 </div>

@@ -26,7 +26,7 @@ export default function NewsletterForm() {
   return (
     <form className="newsletter-form-row" onSubmit={handleSubmit}>
       {status === "sent" ? (
-        <p style={{ color: "#0E8784", fontSize: 14, margin: 0 }}>Subscribed — thank you!</p>
+        <p style={{ color: "#0f7a5a", fontSize: 14, margin: 0 }}>Subscribed — thank you!</p>
       ) : (
         <>
           <label htmlFor="newsletter-email" className="sr-only">Email address</label>
@@ -53,7 +53,7 @@ export default function NewsletterForm() {
             disabled={status === "sending"}
             style={{
               padding: "10px 20px",
-              backgroundColor: "#0E8784",
+              backgroundColor: "#0f7a5a",
               color: "#FFFFFF",
               fontSize: 13,
               fontWeight: 600,

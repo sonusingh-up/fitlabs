@@ -292,7 +292,7 @@ export default function ONGoldStandardReview() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 12 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2025-041 · PROTEIN POWDER</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 640, padding: "0 24px" }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 640, padding: "0 24px" }}>
               Optimum Nutrition<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Gold Standard 100% Whey</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
@@ -319,7 +319,7 @@ export default function ONGoldStandardReview() {
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
                 Optimum Nutrition · Protein Powder · Whey Concentrate Blend
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Gold Standard 100% Whey<br />
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is It Still Worth It in 2026?</em>
               </h2>
@@ -327,7 +327,7 @@ export default function ONGoldStandardReview() {
                 4 years of continuous use, 20+ tubs across Amazon USA and Flipkart, and one simple conclusion: the name is earned. Here is everything we know — from the formula to the lab reports.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Check Price on Amazon <ExternalLink size={13} />
                 </Link>
                 <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -355,15 +355,15 @@ export default function ONGoldStandardReview() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>PS</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>PS</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors/pankaj-singh" style={{ color: "#1A1714", textDecoration: "none" }}>Pankaj Singh</Link>
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Founder, Fitlabreviews</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>
                 4 years of personal use · 20+ tubs tested · Verified purchase history (Amazon USA &amp; Flipkart)
               </p>
             </div>
@@ -378,7 +378,7 @@ export default function ONGoldStandardReview() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links below may earn a commission. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -404,7 +404,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "4px solid #C4622D", marginBottom: 16 }}>
                   <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 0 }}>
                     After four years, 20+ tubs, and countless post-workout shakes — ON Gold Standard Whey remains the most dependable protein powder I have used. It is not the cheapest. It is not the highest-protein-per-scoop. But in a market saturated with proprietary blends and fake lab reports, it is the one I kept coming back to. The Informed Choice certification, the consistent protein yield, and the fact that every batch mixed identically make this the benchmark for a reason.
@@ -434,7 +434,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── PERSONAL EXPERIENCE ────────────────────────────────────── */}
               <section id="personal-experience" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>
                   4-Year Personal Experience
                 </h2>
                 <p style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", marginBottom: 20 }}>Verified purchase history · Amazon USA & Flipkart · May 2020 – Present</p>
@@ -465,7 +465,7 @@ export default function ONGoldStandardReview() {
                     <div key={i} style={{ display: "grid", gridTemplateColumns: "90px 1fr 1fr auto", gap: 12, padding: "12px 16px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650" }}>{order.date}</span>
                       <div>
-                        <p style={{ fontSize: 12, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{order.platform} · {order.size}</p>
+                        <p style={{ fontSize: 12, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{order.platform} · {order.size}</p>
                         <p style={{ fontSize: 11, color: "#8A8480" }}>{order.flavour}</p>
                       </div>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#1A1714" }}>{order.price}</span>
@@ -477,19 +477,19 @@ export default function ONGoldStandardReview() {
 
               {/* ─── SCORE BREAKDOWN ────────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2025-041" />
               </section>
 
               {/* ─── FLAGS ──────────────────────────────────────────────────── */}
               <section id="flags" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* ─── NUTRITION LABEL ────────────────────────────────────────── */}
               <section id="nutrition-label" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Nutrition Label Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Nutrition Label Breakdown</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Per 1 scoop (29.4g) · Double Rich Chocolate · US label</p>
                 <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -509,20 +509,20 @@ export default function ONGoldStandardReview() {
                     { nutrient: "— Glutamine & Glutamic Acid", amount: "4.1g", dv: "—", highlight: false },
                   ].map((row, i) => (
                     <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "1fr 80px 60px", padding: "10px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: row.highlight ? "rgba(196,98,45,0.05)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
-                      <span style={{ fontSize: 13, color: row.highlight ? "#C4622D" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: row.highlight ? 700 : 400 }}>{row.nutrient}</span>
+                      <span style={{ fontSize: 13, color: row.highlight ? "#C4622D" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", fontWeight: row.highlight ? 700 : 400 }}>{row.nutrient}</span>
                       <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#1A1714", fontWeight: row.highlight ? 700 : 400, textAlign: "right" }}>{row.amount}</span>
                       <span style={{ fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480", textAlign: "right" }}>{row.dv}</span>
                     </div>
                   ))}
                   <div style={{ padding: "10px 20px", backgroundColor: "#EDE8DF" }}>
-                    <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>* % Daily Values based on a 2,000 calorie diet. Protein density: 81.6% of scoop weight.</p>
+                    <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>* % Daily Values based on a 2,000 calorie diet. Protein density: 81.6% of scoop weight.</p>
                   </div>
                 </div>
               </section>
 
               {/* ─── AMINO ACID PROFILE ─────────────────────────────────────── */}
               <section id="amino-profile" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Complete Amino Acid Profile</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Complete Amino Acid Profile</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Per serving (29.4g scoop) · From whey protein matrix · Label-declared values</p>
                 <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 80px 80px", padding: "10px 20px", backgroundColor: "#1A1714" }}>
@@ -551,25 +551,25 @@ export default function ONGoldStandardReview() {
                     { name: "L-Cysteine", amount: "0.50g", type: "NEAA", key: false },
                   ].map((aa, i) => (
                     <div key={aa.name} style={{ display: "grid", gridTemplateColumns: "1fr 80px 80px", padding: "9px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: aa.key ? "rgba(196,98,45,0.05)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
-                      <span style={{ fontSize: 13, color: aa.key ? "#C4622D" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: aa.key ? 700 : 400 }}>{aa.name}</span>
+                      <span style={{ fontSize: 13, color: aa.key ? "#C4622D" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", fontWeight: aa.key ? 700 : 400 }}>{aa.name}</span>
                       <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#1A1714", fontWeight: aa.key ? 700 : 400 }}>{aa.amount}</span>
                       <span style={{ fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", color: aa.type.includes("BCAA") ? "#C4622D" : aa.type === "EAA" ? "#2D6A4F" : "#8A8480" }}>{aa.type}</span>
                     </div>
                   ))}
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 80px 80px", padding: "12px 20px", backgroundColor: "#EDE8DF", borderTop: "2px solid #D4C9B8" }}>
-                    <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>Total BCAAs</span>
+                    <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>Total BCAAs</span>
                     <span style={{ fontSize: 13, fontWeight: 700, fontFamily: "var(--font-dm-mono), monospace", color: "#C4622D" }}>5.50g</span>
                     <span style={{ fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480" }}>EAA subset</span>
                   </div>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Leucine at 2.5g meets the 2.3g threshold for maximum mTOR activation and muscle protein synthesis in most adults (Churchward-Venne et al., 2012).
                 </p>
               </section>
 
               {/* ─── INGREDIENT BREAKDOWN ───────────────────────────────────── */}
               <section id="ingredients" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Protein matrix ingredients listed in order of weight (as per label)</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
@@ -584,7 +584,7 @@ export default function ONGoldStandardReview() {
                     <div key={ing.name} style={{ padding: "18px 20px", borderBottom: i < 6 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{ing.name}</span>
+                          <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{ing.name}</span>
                           <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "2px 7px", borderRadius: 4 }}>{ing.dosage}</span>
                         </div>
                         <EvidenceBadge level={ing.level} showIcon={false} />
@@ -597,7 +597,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── LAB TEST DATA ──────────────────────────────────────────── */}
               <section id="lab-data" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Test Data & Certifications</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Test Data & Certifications</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Third-party verification data — not self-reported brand claims</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
@@ -625,7 +625,7 @@ export default function ONGoldStandardReview() {
                     {["Anabolic steroids", "Beta-2 agonists", "Peptide hormones", "Stimulants (amphetamines)", "Diuretics", "Cannabinoids", "Glucocorticoids", "Beta-blockers", "Heavy metals (Pb, Cd, As, Hg)", "Melamine / nitrogen spiking markers"].map((item) => (
                       <div key={item} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                         <CheckCircle size={10} style={{ color: "#2D6A4F", flexShrink: 0 }} />
-                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item}</span>
+                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{item}</span>
                       </div>
                     ))}
                   </div>
@@ -638,7 +638,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── CLAIM AUDIT ────────────────────────────────────────────── */}
               <section id="claim-audit" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
                   Every marketing claim on the label and brand website checked against peer-reviewed literature.
                 </p>
@@ -647,7 +647,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── FLAVOUR GUIDE ──────────────────────────────────────────── */}
               <section id="flavours" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Flavour Guide</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Flavour Guide</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Based on 4 years of personal use across 5 flavours — purely subjective, not scored.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
@@ -660,7 +660,7 @@ export default function ONGoldStandardReview() {
                     <div key={fl.flavour} style={{ padding: "14px 20px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "grid", gridTemplateColumns: "1fr auto", gap: 12, alignItems: "center" }}>
                       <div>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
-                          <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{fl.flavour}</span>
+                          <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{fl.flavour}</span>
                           <span style={{ padding: "1px 7px", backgroundColor: "#EDE8DF", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{fl.verdict}</span>
                         </div>
                         <p style={{ fontSize: 12, color: "#5C5650" }}>{fl.notes}</p>
@@ -673,7 +673,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Head-to-head on the metrics that matter for everyday buyers in USA and the US.</p>
                 <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 600 }}>
@@ -700,7 +700,7 @@ export default function ONGoldStandardReview() {
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "10px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.06em", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
                           {row.vals.map((v, j) => (
-                            <td key={j} style={{ padding: "10px 14px", fontSize: 13, color: j === 0 ? "#C4622D" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400, whiteSpace: "nowrap" }}>{v}</td>
+                            <td key={j} style={{ padding: "10px 14px", fontSize: 13, color: j === 0 ? "#C4622D" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400, whiteSpace: "nowrap" }}>{v}</td>
                           ))}
                         </tr>
                       ))}
@@ -714,7 +714,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Quick buy cards for every product in this comparison — prices verified May 2026.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
                   <ProductCard
@@ -783,7 +783,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── PROS / CONS ────────────────────────────────────────────── */}
               <section id="pros-cons" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
                     "Consistent 24g protein yield — confirmed across 20+ batches",
@@ -808,7 +808,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── SAFETY ─────────────────────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
                 <div style={{ padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 20 }}>
                   <AlertTriangle size={13} style={{ color: "#8B7355", marginTop: 2, flexShrink: 0 }} />
                   <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>
@@ -839,7 +839,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── PRICE & VALUE ──────────────────────────────────────────── */}
               <section id="value" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="protein (USD)" />
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: 12, marginTop: 16 }}>
                   {[
@@ -849,7 +849,7 @@ export default function ONGoldStandardReview() {
                   ].map((tier) => (
                     <div key={tier.label} style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", color: "#8A8480", marginBottom: 6 }}>{tier.label} · {tier.servings}</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{tier.usd}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{tier.usd}</p>
                       <p style={{ fontSize: 12, color: "#5C5650", marginBottom: 4 }}>{tier.inr}</p>
                       <p style={{ fontSize: 11, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace" }}>{tier.perServing} / serving</p>
                     </div>
@@ -860,7 +860,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── WHERE TO BUY ────────────────────────────────────────────── */}
               <section id="where-to-buy" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy — USA & Global</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy — USA & Global</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Counterfeit risk is real. Only buy from these verified channels and always scan the QR code on the lid.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
@@ -886,7 +886,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { q: "Is ON Gold Standard a concentrate or isolate?", a: "It is primarily Whey Protein Concentrate (WPC80), with smaller amounts of Whey Protein Isolate and Whey Peptides blended in. At 24g protein per 29.4g scoop, protein density is ~82%. It is not a pure isolate product." },
@@ -899,7 +899,7 @@ export default function ONGoldStandardReview() {
                     { q: "Is it Informed Choice certified in USA?", a: "Yes. The American market tubs carry the same Informed Choice certification. The batch QR code on the lid is valid worldwide. Verify it on informedsport.com using the batch number." },
                   ].map((faq, i) => (
                     <div key={i} style={{ padding: "20px 20px", borderBottom: i < 7 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.a}</p>
                     </div>
                   ))}
@@ -911,7 +911,7 @@ export default function ONGoldStandardReview() {
                 <div style={{ padding: 32, backgroundColor: "#1A1714", borderRadius: 12 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Final Verdict · REV-2025-041</p>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20, gap: 16 }}>
-                    <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.2rem, 3vw, 1.6rem)", fontWeight: 700, color: "#F2EBD9", letterSpacing: "-0.02em", flex: 1 }}>
+                    <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.2rem, 3vw, 1.6rem)", fontWeight: 700, color: "#F2EBD9", letterSpacing: "-0.02em", flex: 1 }}>
                       Still the standard.<br />
                       <em style={{ fontWeight: 400, color: "#8A8480", fontSize: "0.85em" }}>For four very good reasons.</em>
                     </h3>
@@ -931,15 +931,15 @@ export default function ONGoldStandardReview() {
                     ].map((s) => (
                       <div key={s.label} style={{ padding: "10px 16px", backgroundColor: "rgba(242,235,217,0.05)", border: "1px solid #2D2926", borderRadius: 8 }}>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#5C5650", marginBottom: 4 }}>{s.label.toUpperCase()}</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
                       </div>
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                    <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <Link href="https://www.amazon.in/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon USA <ExternalLink size={13} />
                     </Link>
-                    <Link href="https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #2D2926", color: "#A89880", fontSize: 13, fontWeight: 500, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <Link href="https://www.amazon.com/s?k=optimum+nutrition+gold+standard+whey" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #2D2926", color: "#A89880", fontSize: 13, fontWeight: 500, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon US <ExternalLink size={13} />
                     </Link>
                   </div>
@@ -948,7 +948,7 @@ export default function ONGoldStandardReview() {
 
               {/* ─── RESEARCH REFERENCES ────────────────────────────────────── */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
@@ -960,7 +960,7 @@ export default function ONGoldStandardReview() {
                       "Informed Sport Certificate: ON Gold Standard Whey. Accessible via batch QR code at informedsport.com.",
                       "NSF International. GMP Certification Program — Dietary Supplements. nsf.org/food/gmp-certification.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>{ref}</li>
                     ))}
                   </ol>
                 </div>
@@ -976,7 +976,7 @@ export default function ONGoldStandardReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
               <Link href="/category/protein-powder" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All protein reviews →</Link>
             </div>
@@ -992,7 +992,7 @@ export default function ONGoldStandardReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Ingredient Research</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>The science behind the label</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>The science behind the label</h3>
               </div>
               <Link href="/ingredients" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All ingredients →</Link>
             </div>
@@ -1004,7 +1004,7 @@ export default function ONGoldStandardReview() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480" }}>{ing.figNumber} · {ing.category}</p>
                       <EvidenceBadge level={ing.evidenceLevel} showIcon={false} />
                     </div>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{ing.name}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{ing.name}</p>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, marginBottom: 10 }}>{ing.summary}</p>
                     <span style={{ fontSize: 11, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace" }}>Read profile →</span>
                   </div>

@@ -40,11 +40,11 @@ export default function NotFound() {
 
           {/* Big 404 */}
           <div style={{ position: "relative", marginBottom: 32 }}>
-            <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(6rem, 20vw, 14rem)", fontWeight: 800, color: "rgba(26,23,20,0.06)", lineHeight: 1, letterSpacing: "-0.04em", margin: 0, userSelect: "none", pointerEvents: "none" }}>
+            <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(6rem, 20vw, 14rem)", fontWeight: 800, color: "rgba(26,23,20,0.06)", lineHeight: 1, letterSpacing: "-0.04em", margin: 0, userSelect: "none", pointerEvents: "none" }}>
               404
             </p>
             <div style={{ position: "absolute", top: "50%", left: 0, transform: "translateY(-50%)" }}>
-              <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 12 }}>
+              <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 12 }}>
                 Nothing here —{" "}
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>yet.</em>
               </h1>
@@ -56,7 +56,7 @@ export default function NotFound() {
 
           <Link
             href="/"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 22px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, letterSpacing: "0.04em", borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
           >
             ← Back to Home
           </Link>
@@ -77,7 +77,7 @@ export default function NotFound() {
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = i % 2 === 0 ? "#F8F2E4" : "#F2EBD9"; }}
                 >
                   <div>
-                    <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0, marginBottom: 3 }}>{link.label}</p>
+                    <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", margin: 0, marginBottom: 3 }}>{link.label}</p>
                     <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{link.desc}</p>
                   </div>
                   <span style={{ color: "#C4622D", fontSize: 14, flexShrink: 0 }}>→</span>
@@ -98,9 +98,9 @@ export default function NotFound() {
                   onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = "#EDE8DF"; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.backgroundColor = i % 2 === 0 ? "#F8F2E4" : "#F2EBD9"; }}
                 >
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>{r.label}</p>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", margin: 0 }}>{r.label}</p>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 800, color: "#1A1714" }}>{r.score}</span>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 800, color: "#1A1714" }}>{r.score}</span>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480" }}>/10</span>
                     <span style={{ color: "#C4622D", fontSize: 14 }}>→</span>
                   </div>
@@ -110,7 +110,7 @@ export default function NotFound() {
                 href="/reviews"
                 style={{ display: "flex", justifyContent: "center", padding: "14px 20px", backgroundColor: "#EDE8DF", textDecoration: "none" }}
               >
-                <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>View all reviews →</span>
+                <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>View all reviews →</span>
               </Link>
             </div>
 

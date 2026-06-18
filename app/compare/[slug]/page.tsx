@@ -85,7 +85,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
 
         <div style={{ marginBottom: 56, textAlign: "center" }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>DIRECT COMPARISON · 2026</p>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             {products[0].name} <em style={{ fontWeight: 400, fontStyle: "italic", color: "#5C5650" }}>vs</em> {products[1].name}
           </h1>
           <p style={{ fontSize: 15, color: "#5C5650", maxWidth: 540, margin: "0 auto" }}>
@@ -99,7 +99,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             <>
               <div key={p.slug} style={{ padding: 28, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8 }}>{p.brand} · {p.type}</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>{p.name}</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>{p.name}</h3>
                 <div style={{ display: "flex", marginBottom: 12 }}>
                   <ReviewScoreBadge rating={p.rating} size="md" />
                 </div>
@@ -107,7 +107,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
               </div>
               {i === 0 && (
                 <div key="vs" className="compare-vs-hide" style={{ textAlign: "center" }}>
-                  <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 400, fontStyle: "italic", color: "#D4C9B8" }}>vs</span>
+                  <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 400, fontStyle: "italic", color: "#D4C9B8" }}>vs</span>
                 </div>
               )}
             </>
@@ -118,12 +118,12 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Specs" figure="§ 01" title="Side-by-side" titleItalic="breakdown" size="sm" />
           <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
                   <th style={{ padding: "12px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Metric</th>
                   {products.map((p) => (
-                    <th key={p.slug} style={{ padding: "12px 20px", textAlign: "center", fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{p.name}</th>
+                    <th key={p.slug} style={{ padding: "12px 20px", textAlign: "center", fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{p.name}</th>
                   ))}
                 </tr>
               </thead>
@@ -158,7 +158,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
               <div key={item.category} className="layout-winners-row" style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                 <div style={{ padding: "14px 20px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", letterSpacing: "0.08em", textTransform: "uppercase" }}>{item.category}</div>
                 <div className="winners-col-border" style={{ padding: "14px 20px", borderLeft: "1px solid #EDE8DF" }}>
-                  <span style={{ padding: "3px 10px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.winner}</span>
+                  <span style={{ padding: "3px 10px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif" }}>{item.winner}</span>
                 </div>
                 <div className="winners-col-border" style={{ padding: "14px 20px", fontSize: 13, color: "#5C5650", borderLeft: "1px solid #EDE8DF" }}>{item.note}</div>
               </div>
@@ -171,7 +171,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
             <div style={{ padding: 28, backgroundColor: "#1A1714", borderRadius: 12 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Choose If...</p>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>{products[0].name}</h3>
+              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>{products[0].name}</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {["You want a proven, trusted formula", "Budget matters — good value", "You don't have lactose issues", "You want more flavour options"].map((r) => (
                   <li key={r} style={{ fontSize: 13, color: "#8A8480", padding: "4px 0" }}>· {r}</li>
@@ -180,7 +180,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
             </div>
             <div style={{ padding: 28, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>Choose If...</p>
-              <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>{products[1].name}</h3>
+              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>{products[1].name}</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {["You're lactose intolerant", "You're in a cutting phase", "You want the cleanest isolate", "Absorption speed matters"].map((r) => (
                   <li key={r} style={{ fontSize: 13, color: "#5C5650", padding: "4px 0" }}>· {r}</li>

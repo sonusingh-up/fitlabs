@@ -326,7 +326,7 @@ export default function Seed14DayGutResetReview() {
                   <span style={{ color: SEED.darkBorder, fontSize: 10 }}>·</span>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.darkCaption, whiteSpace: "nowrap" }}>REV-2026-066 · Gut Reset · FSP Scored</span>
                 </div>
-                <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: SEED.darkText, letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: SEED.darkText, letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   Seed DS-01®<br />
                   <em style={{ fontWeight: 400, color: SEED.darkMuted, fontSize: "0.65em" }}>14 Day Gut Reset</em>
                 </h1>
@@ -335,7 +335,7 @@ export default function Seed14DayGutResetReview() {
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
                   <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: `1px solid ${SEED.darkBorder}`, color: SEED.darkCaption, fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -380,11 +380,11 @@ export default function Seed14DayGutResetReview() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: SEED.darkBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: SEED.green }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: SEED.green }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: SEED.ink, textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: SEED.caption, fontSize: 12 }}> · Independent Editorial</span>
               </p>
@@ -396,7 +396,7 @@ export default function Seed14DayGutResetReview() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: SEED.sepia, flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links may earn a commission.{" "}
               <Link href="/affiliate-disclosure" style={{ color: SEED.green, textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -421,18 +421,18 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 1 Quick Verdict */}
               <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: "28px 32px", backgroundColor: SEED.darkBg, borderRadius: 14, marginBottom: 28, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 14, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 20 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-066</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>
                         The best-evidenced acute gut recovery product available. DS-01's full formula, no subscription, available at Target.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
-                      <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</div>
+                      <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</div>
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: SEED.darkMuted, letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
@@ -446,7 +446,7 @@ export default function Seed14DayGutResetReview() {
                     const weights: Record<string, string> = { formula: "35%", transparency: "25%", verification: "20%", value: "12%", practical: "8%" };
                     return (
                       <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10, textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: seedScoreColor(p.score), lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
+                        <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: seedScoreColor(p.score), lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>{labels[p.pillar]}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: SEED.sepia }}>{weights[p.pillar]} weight</div>
                       </div>
@@ -470,11 +470,11 @@ export default function Seed14DayGutResetReview() {
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>Seed</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink, marginBottom: 12 }}>DS-01® 14 Day Gut Reset</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink, marginBottom: 12 }}>DS-01® 14 Day Gut Reset</p>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: `1px solid ${SEED.mutedBg}`, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                       {[{ val: `${editorialScore}/10`, label: "FSP Score" }, { val: "53.6B", label: "AFU" }, { val: "14", label: "Days" }].map(stat => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: SEED.green, lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: SEED.green, lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
                           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: SEED.caption }}>{stat.label}</p>
                         </div>
                       ))}
@@ -482,10 +482,10 @@ export default function Seed14DayGutResetReview() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 14 servings</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>~$29.99</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>~$29.99</p>
                       </div>
                       <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
                     </div>
@@ -495,7 +495,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 2 What Is It */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>What Is the Seed 14 Day Gut Reset?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>What Is the Seed 14 Day Gut Reset?</h2>
                 <p style={{ fontSize: 15, color: SEED.body, lineHeight: 1.75, marginBottom: 16 }}>
                   The 14 Day Gut Reset is DS-01 in a single-purchase 14-day format. The formulation is identical: 24 genomically confirmed probiotic strains, 53.6B AFU total, 400mg MAPP non-fermenting prebiotic, ViaCap dual-capsule delivery. The product comes as 28 capsules — 2 per day for 14 days.
                 </p>
@@ -524,8 +524,8 @@ export default function Seed14DayGutResetReview() {
                         ].map((row, i) => (
                           <tr key={row.label} style={{ backgroundColor: i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                             <td style={{ padding: "10px 14px", fontSize: 12, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-dm-mono), monospace" }}>{row.label}</td>
-                            <td style={{ padding: "10px 14px", fontSize: 12, color: SEED.muted, fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.a}</td>
-                            <td style={{ padding: "10px 14px", fontSize: 12, color: SEED.greenDeep, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600 }}>{row.b}</td>
+                            <td style={{ padding: "10px 14px", fontSize: 12, color: SEED.muted, fontFamily: "var(--font-hanken), sans-serif" }}>{row.a}</td>
+                            <td style={{ padding: "10px 14px", fontSize: 12, color: SEED.greenDeep, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600 }}>{row.b}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -536,8 +536,8 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 3 ViaCap */}
               <section id="viacap" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>ViaCap® Delivery Architecture</h2>
-                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>Identical to DS-01 — outer delivers MAPP prebiotic, inner delivers 24 probiotic strains to the colon.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>ViaCap® Delivery Architecture</h2>
+                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>Identical to DS-01 — outer delivers MAPP prebiotic, inner delivers 24 probiotic strains to the colon.</p>
                 <SeedViaCap
                   outerLabel="Outer Capsule → Upper GI"
                   outerIngredients={["MAPP Prebiotic 400mg (punicalagins from pomegranate)", "Non-fermenting — no gas or bloat", "Conditions the microbiome environment"]}
@@ -548,22 +548,22 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 4 Score Breakdown */}
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-066" />
               </section>
 
               {/* § 5 Flags */}
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 6 Supplement Facts */}
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 16, fontFamily: "var(--font-dm-sans), sans-serif" }}>Identical to DS-01 · Serving size: 2 capsules · 14 servings (28 capsules total)</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 16, fontFamily: "var(--font-hanken), sans-serif" }}>Identical to DS-01 · Serving size: 2 capsules · 14 servings (28 capsules total)</p>
                 <div style={{ padding: "16px 20px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     See the <Link href="/reviews/seed-ds-01#supplement-facts" style={{ color: SEED.green, textDecoration: "none" }}>DS-01 review supplement facts →</Link> for the full breakdown. The 14 Day Gut Reset uses the identical formulation: 4 blends (Digestive 38.7B AFU, Micronutrient 7.23B AFU, Cardiovascular 4.21B AFU, Dermatological 3.34B AFU) + 400mg MAPP prebiotic.
                   </p>
                 </div>
@@ -571,8 +571,8 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 7 Strain Profile */}
               <section id="strains" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Strain Profile</h2>
-                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>24 genomically confirmed strains — same as DS-01.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 8, letterSpacing: "-0.02em" }}>Strain Profile</h2>
+                <p style={{ fontSize: 14, color: SEED.caption, marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>24 genomically confirmed strains — same as DS-01.</p>
                 <SeedStrainPanel
                   totalAFU="53.6B AFU"
                   measurementNote="AFU by flow cytometry. Same 24 strains as DS-01 Daily Synbiotic."
@@ -587,7 +587,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 8 Best Use Cases */}
               <section id="use-cases" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Best Use Cases</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Best Use Cases</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
                   {[
                     { icon: "💊", title: "Post-Antibiotic Recovery", desc: "Start the day you begin antibiotics (2hr spacing). Continue for full 14 days after completion. The most clinically supported use case for this format." },
@@ -598,7 +598,7 @@ export default function Seed14DayGutResetReview() {
                     <div key={item.title} style={{ padding: "18px 20px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10 }}>
                       <p style={{ fontSize: 22, marginBottom: 8 }}>{item.icon}</p>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.green, marginBottom: 6 }}>{item.title}</p>
-                      <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.desc}</p>
+                      <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -606,7 +606,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 9 Clinical Research */}
               <section id="research" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Clinical Research</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Clinical Research</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   <SeedResearchCard
                     title="Probiotics for prevention and treatment of antibiotic-associated diarrhoea"
@@ -631,7 +631,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 10 Lab */}
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
                   {[
                     { label: "Genomic confirmation (24 strains)", status: true },
@@ -651,16 +651,16 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 11 Claim Audit */}
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 12 How to Take It */}
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 12 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 8 }}>14-Day Protocol</p>
-                  <p style={{ fontSize: 15, color: SEED.ink, fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>Take 2 capsules daily for 14 consecutive days.</p>
+                  <p style={{ fontSize: 15, color: SEED.ink, fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Take 2 capsules daily for 14 consecutive days.</p>
                   <ul style={{ paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
                     {[
                       "Post-antibiotic: begin on day 1 of the antibiotic course. Space from each antibiotic dose by at least 2 hours. Continue for 14 days after completing the course.",
@@ -669,7 +669,7 @@ export default function Seed14DayGutResetReview() {
                       "Do not open or crush capsules — acid-resistant inner capsule must remain intact.",
                       "Start with 1 capsule/day for the first 2–3 days if you have a sensitive gut.",
                     ].map((tip, i) => (
-                      <li key={i} style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>{tip}</li>
+                      <li key={i} style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>{tip}</li>
                     ))}
                   </ul>
                 </div>
@@ -677,7 +677,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 13 DS-01 vs 14-Day */}
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>DS-01 vs. 14 Day Gut Reset — Which to Choose?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>DS-01 vs. 14 Day Gut Reset — Which to Choose?</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
                   {[
                     { title: "Choose DS-01 if:", icon: "🔄", points: ["You want daily ongoing microbiome support", "Cost efficiency matters — $1.67/serving vs. $2.14", "You're comfortable with a subscription model"], color: SEED.green },
@@ -688,7 +688,7 @@ export default function Seed14DayGutResetReview() {
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: card.color, marginBottom: 12 }}>{card.title}</p>
                       <ul style={{ paddingLeft: 16, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
                         {card.points.map((p, i) => (
-                          <li key={i} style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.5, fontFamily: "var(--font-dm-sans), sans-serif" }}>{p}</li>
+                          <li key={i} style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.5, fontFamily: "var(--font-hanken), sans-serif" }}>{p}</li>
                         ))}
                       </ul>
                     </div>
@@ -698,7 +698,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 14 Seed Family */}
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Seed Product Family</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                   <ProductCard name="DS-01® 14 Day Gut Reset" brand="Seed" category="Gut Reset" score={8} priceUSD="~$29.99 / 14 servings" priceINR="N/A" tags={["Same DS-01 Formula", "No Subscription"]} buyUrl="https://amzn.to/4vkvR0y" buyLabel="Buy on Amazon" reviewSlug="seed-14-day-gut-reset" image="seed-14-day.webp" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} featured={true} />
                   <ProductCard name="DS-01® Daily Synbiotic" brand="Seed" category="Synbiotic" score={8} priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["24 Strains", "Subscription"]} buyUrl="https://www.amazon.com/Seed-DS-01-Daily-Synbiotic-Multi-Strain/dp/B0CMJR4XGR" buyLabel="Buy on Amazon" reviewSlug="seed-ds-01" bgFrom="#0D120A" bgTo="#0A1508" accent={SEED.green} />
@@ -708,7 +708,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 15 Pros & Cons */}
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={["Identical DS-01 formula — 24 strains, 53.6B AFU, MAPP prebiotic, ViaCap delivery", "No subscription required", "Available at Target, Sprouts, Erewhon, Amazon — no direct website needed", "14-day defined course aligns with clinical post-antibiotic recovery windows", "Non-fermenting MAPP prebiotic — no gas or bloating during recovery", "Genomically confirmed strains, stability tested", "Shelf-stable — perfect for travel"]}
                   cons={["$2.14/serving is 28% more expensive per dose than DS-01 subscription", "Per-strain AFU counts undisclosed (same as DS-01)", "14 days may be insufficient for full microbiome recovery from heavy antibiotic courses (may need to follow with DS-01 subscription)"]}
@@ -717,10 +717,10 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 16 Safety */}
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
-                <p style={{ fontSize: 14, color: SEED.muted, marginBottom: 16, fontFamily: "var(--font-dm-sans), sans-serif" }}>Same safety profile as DS-01. See <Link href="/reviews/seed-ds-01#safety" style={{ color: SEED.green }}>DS-01 Safety section →</Link> for full details.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
+                <p style={{ fontSize: 14, color: SEED.muted, marginBottom: 16, fontFamily: "var(--font-hanken), sans-serif" }}>Same safety profile as DS-01. See <Link href="/reviews/seed-ds-01#safety" style={{ color: SEED.green }}>DS-01 Safety section →</Link> for full details.</p>
                 <div style={{ padding: "14px 18px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     Key consideration: If taking concurrently with antibiotics, space each dose by at least 2 hours. Mild initial GI adjustment (gas, loose stools) is common in the first 3–5 days — start with 1 capsule/day for the first 2 days if sensitive. Severely immunocompromised individuals should consult a doctor before any probiotic use.
                   </p>
                 </div>
@@ -728,21 +728,21 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 17 Value */}
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="MAPP prebiotic (non-fermenting)" />
               </section>
 
               {/* § 18 Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.green, marginBottom: 6 }}>Available on Amazon · No Subscription</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>~$29.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 14 servings</span></p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>~$29.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 14 servings</span></p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Target · Sprouts · Erewhon · seed.com. Prices verified May 2026.</p>
                   </div>
                   <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
                 </div>
@@ -750,17 +750,17 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 19 FAQ */}
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details key={i} style={{ backgroundColor: i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderRadius: 8, border: `1px solid ${SEED.mutedBg}`, overflow: "hidden" }}>
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: SEED.ink, fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
                         <span className="faq-icon-14day" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: SEED.green }}>
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: SEED.muted, lineHeight: 1.7, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.acceptedAnswer.text}</p>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: SEED.muted, lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
                     </details>
                   ))}
                 </div>
@@ -769,26 +769,26 @@ export default function Seed14DayGutResetReview() {
 
               {/* § 20 Final Verdict */}
               <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: "32px 36px", backgroundColor: SEED.darkBg, borderRadius: 16, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 16, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 — REV-2026-066</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</span>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: SEED.darkMuted }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>Strongly recommended for post-antibiotic use. The most evidence-backed acute gut recovery product available.</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>Strongly recommended for post-antibiotic use. The most evidence-backed acute gut recovery product available.</p>
                     </div>
                   </div>
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.8, marginBottom: 28 }}>
                     The 14 Day Gut Reset earns its 8/10 by being DS-01 — the most scientifically rigorous commercial synbiotic — in the format you need when your gut is disrupted. Post-antibiotic recovery, travel disruption, or seasonal resets each benefit from a defined intensive course. Available without subscription at Target and Sprouts makes it accessible without commitment. After the 14 days, transitioning to DS-01 for ongoing maintenance is the natural next step.
                   </p>
                   <a href="https://amzn.to/4vkvR0y" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
                 </div>
@@ -796,7 +796,7 @@ export default function Seed14DayGutResetReview() {
 
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
@@ -804,7 +804,7 @@ export default function Seed14DayGutResetReview() {
                       { text: "Palleja A et al. (2018). Recovery of gut microbiota of healthy adults following antibiotic exposure. Nature Microbiology, 3(11):1255–1265.", url: "https://doi.org/10.1038/s41564-018-0257-9" },
                       { text: "Szajewska H, Kołodziej M. (2015). LGG for prevention of AAD in children. Alimentary Pharmacology & Therapeutics, 42(10):1149–1157.", url: "https://doi.org/10.1111/apt.13404" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: SEED.muted, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: SEED.muted, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: SEED.green, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
                       </li>
@@ -823,7 +823,7 @@ export default function Seed14DayGutResetReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.caption, marginBottom: 6 }}>Seed Product Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, letterSpacing: "-0.02em" }}>More from Seed</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, letterSpacing: "-0.02em" }}>More from Seed</h3>
               </div>
               <Link href="/reviews" style={{ fontSize: 12, color: SEED.green, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

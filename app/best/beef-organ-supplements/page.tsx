@@ -272,7 +272,7 @@ export default function BestBeefOrganSupplementsPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>9 Brands Tested</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             7 Best Beef Organ Supplements{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026 Rankings</em>
           </h1>
@@ -293,7 +293,7 @@ export default function BestBeefOrganSupplementsPage() {
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="At a Glance" figure="§ 01" title="All 7 picks" titleItalic="side by side" size="sm" />
           <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-            <table style={{ borderCollapse: "collapse", minWidth: 700, width: "100%", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <table style={{ borderCollapse: "collapse", minWidth: 700, width: "100%", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
                   {["Brand", "Organs", "Sourcing", "Certifications", "Price/Serving", "Score", ""].map((h) => (
@@ -310,7 +310,7 @@ export default function BestBeefOrganSupplementsPage() {
                           <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                         </div>
                         <div>
-                          <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
+                          <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
                           {pick.badge && (
                             <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.05em" }}>{pick.badge}</span>
                           )}
@@ -352,7 +352,7 @@ export default function BestBeefOrganSupplementsPage() {
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 4, textTransform: "uppercase" }}>
                         {pick.brand} · {pick.sourcing} · {pick.price}{pick.priceUnit}
                       </div>
-                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714" }}>
+                      <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714" }}>
                         {pick.name}
                       </h2>
                     </div>
@@ -410,10 +410,10 @@ export default function BestBeefOrganSupplementsPage() {
                     {pick.certifications !== "None" ? `Certification: ${pick.certifications}` : "No third-party certification"}
                   </p>
                   <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                       Buy on Amazon ↗
                     </a>
-                    <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                       Full review →
                     </Link>
                   </div>
@@ -439,7 +439,7 @@ export default function BestBeefOrganSupplementsPage() {
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", color: "#C4622D" }}>{step.num}</p>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", backgroundColor: "#EDE8DF", padding: "2px 8px", borderRadius: 99 }}>{step.weight}</span>
                 </div>
-                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{step.title}</h4>
+                <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{step.title}</h4>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{step.desc}</p>
               </div>
             ))}
@@ -458,7 +458,7 @@ export default function BestBeefOrganSupplementsPage() {
               { organ: "Beef Pancreas", nutrients: "Digestive enzymes, Zinc, B vitamins", why: "Provides pancreatic enzymes (amylase, lipase, protease). Like-supports-like theory — used for digestive support in ancestral health.", link: "/ingredients/beef-pancreas" },
             ].map((item) => (
               <div key={item.organ} style={{ padding: 20, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.organ}</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.organ}</h3>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>Key nutrients: {item.nutrients}</p>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, marginBottom: 10 }}>{item.why}</p>
                 <Link href={item.link} style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Ingredient profile →</Link>
@@ -480,7 +480,7 @@ export default function BestBeefOrganSupplementsPage() {
                 { who: "Those with hypervitaminosis A", why: "If you already take high-dose vitamin A supplements or cod liver oil, adding liver supplements increases toxicity risk. Acute retinol toxicity presents as headache, nausea, and liver damage." },
               ].map((item) => (
                 <div key={item.who} style={{ padding: 16, backgroundColor: "#FFF7F5", borderRadius: 8, border: "1px solid #F5DDD8" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#9B2020", marginBottom: 6 }}>⚠ {item.who}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#9B2020", marginBottom: 6 }}>⚠ {item.who}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.why}</p>
                 </div>
               ))}
@@ -494,7 +494,7 @@ export default function BestBeefOrganSupplementsPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
             {faqItems.map((faq, i) => (
               <div key={i} style={{ padding: "22px 24px", borderBottom: i < faqItems.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                 <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.a}</p>
               </div>
             ))}
@@ -513,7 +513,7 @@ export default function BestBeefOrganSupplementsPage() {
               <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
                 <div style={{ padding: 20, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4", height: "100%" }}>
                   <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: "#EDE8DF", color: "#5C5650", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", marginBottom: 10, display: "inline-block" }}>{item.label}</span>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, marginTop: 4 }}>{item.title}</h3>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, marginTop: 4 }}>{item.title}</h3>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.desc}</p>
                 </div>
               </Link>

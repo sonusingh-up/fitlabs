@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Last Updated June 2026</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 20 }}>
             Privacy{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Policy</em>
           </h1>
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.015em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.015em" }}>
                     {section.title}
                   </h2>
 
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
                     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                       {section.subsections.map((sub) => (
                         <div key={sub.label} style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{sub.label}</p>
+                          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{sub.label}</p>
                           <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{sub.body}</p>
                         </div>
                       ))}
@@ -166,7 +166,7 @@ export default function PrivacyPolicyPage() {
                           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, borderBottom: si < section.services!.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: si % 2 === 0 ? "#F8F2E4" : "#F2EBD9", padding: "14px 20px" }}
                         >
                           <div>
-                            <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{svc.name}</p>
+                            <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{svc.name}</p>
                             <p style={{ fontSize: 12, color: "#8A8480", margin: 0 }}>{svc.purpose}</p>
                           </div>
                           <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
@@ -204,7 +204,7 @@ export default function PrivacyPolicyPage() {
         {/* Contact for data requests */}
         <div style={{ marginTop: 56, padding: "28px 32px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12 }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>Data Requests</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>
             Exercise your privacy rights
           </p>
           <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 20 }}>
@@ -212,7 +212,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <a
             href="mailto:privacy@fitlabreviews.com"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
           >
             privacy@fitlabreviews.com →
           </a>
@@ -221,19 +221,19 @@ export default function PrivacyPolicyPage() {
         {/* CTA Footer */}
         <div style={{ marginTop: 20, padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12 }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Related Policies</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 20 }}>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 20 }}>
             Understand the full picture of how we operate.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Link
               href="/terms"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Terms of Use →
             </Link>
             <Link
               href="/affiliate-disclosure"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Affiliate Disclosure
             </Link>

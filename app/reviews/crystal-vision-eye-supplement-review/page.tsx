@@ -376,7 +376,7 @@ export default function CrystalVisionReview() {
           </div>
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 44, gap: 12 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-052 · EYE HEALTH</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
               MDS Labs
               <br />
               <em style={{ fontWeight: 400, color: "#2D7A9A" }}>Crystal Vision</em>
@@ -402,7 +402,7 @@ export default function CrystalVisionReview() {
           <div className="layout-hero-split">
             <div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>MDS Labs · Eye Health · Vision Support</p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Crystal Vision
                 <br />
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>A Budget Eye Supplement With One Major Formula Gap</em>
@@ -418,7 +418,7 @@ export default function CrystalVisionReview() {
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <a href="https://3c3ef3wlq9gkqmr8uw4jvncyfc.hop.clickbank.net" target="_blank" rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Buy Crystal Vision <ExternalLink size={13} />
                 </a>
                 <Link href="/methodology"
@@ -447,7 +447,7 @@ export default function CrystalVisionReview() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "10px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 24 }}>
             <div style={{ width: 32, height: 32, borderRadius: "50%", background: "linear-gradient(135deg, #D4C9B8, #2D7A9A)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: 15, color: "#F2EBD9", flexShrink: 0 }}>F</div>
             <div>
-              <p style={{ fontSize: 13, fontWeight: 600, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 1 }}>Fitlab Research Team</p>
+              <p style={{ fontSize: 13, fontWeight: 600, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 1 }}>Fitlab Research Team</p>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>
                 Reviewed by the full team ·{" "}
                 <Link href="/authors" style={{ color: "#2D7A9A", textDecoration: "none" }}>Authors page →</Link>
@@ -460,7 +460,7 @@ export default function CrystalVisionReview() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links on this page may earn a commission at no cost to you. Scores are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#2D7A9A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -488,7 +488,7 @@ export default function CrystalVisionReview() {
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>FSP Quick Verdict</p>
-                  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 16, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 16, letterSpacing: "-0.02em" }}>
                     Decent starting point for foundational eye nutrition.{" "}
                     <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>
                       Missing zeaxanthin and dose transparency keep it from competing with serious formulas.
@@ -512,7 +512,7 @@ export default function CrystalVisionReview() {
                     {rubric.pillars.map((p) => (
                       <div key={p.pillar} style={{ padding: "12px 14px", backgroundColor: "rgba(242,235,217,0.04)", borderRadius: 8, border: "1px solid rgba(212,201,184,0.12)", minWidth: 0 }}>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>{p.pillar}</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
                       </div>
                     ))}
                   </div>
@@ -535,11 +535,11 @@ export default function CrystalVisionReview() {
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>MDS Labs</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Crystal Vision</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Crystal Vision</p>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
                       {[{ val: "6/10", label: "FSP Score" }, { val: "Lutein", label: "Lead Active" }, { val: "7 Ing.", label: "Total" }].map((stat) => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
                           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>{stat.label}</p>
                         </div>
                       ))}
@@ -547,10 +547,10 @@ export default function CrystalVisionReview() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / 30 servings</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$28.50</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$28.50</p>
                       </div>
                       <a href="https://3c3ef3wlq9gkqmr8uw4jvncyfc.hop.clickbank.net" target="_blank" rel="nofollow noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
                         Buy Now <ExternalLink size={12} />
                       </a>
                     </div>
@@ -560,7 +560,7 @@ export default function CrystalVisionReview() {
 
               {/* § 2 What Is Crystal Vision? */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Crystal Vision?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Crystal Vision?</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
                   Crystal Vision is a daily eye health supplement from MDS Labs (a Reventek® brand),
                   sold through ClickBank distribution. It is formulated for people dealing with digital
@@ -596,7 +596,7 @@ export default function CrystalVisionReview() {
 
               {/* § 3 Score Breakdown */}
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>FSP v2.1 weights: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%</p>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-052" />
                 <p style={{ fontSize: 13, color: "#8A8480", marginTop: 16, lineHeight: 1.6, padding: "12px 16px", backgroundColor: "#EDE8DF", borderRadius: 8 }}>
@@ -606,13 +606,13 @@ export default function CrystalVisionReview() {
 
               {/* § 4 Flags */}
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red &amp; Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red &amp; Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 5 Supplement Facts */}
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
                 <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>
                   Two capsules (1 serving) per day. 30 servings per bottle. Take with water. No specific
                   timing requirement. Below are the confirmed ingredients. <strong>Note:</strong> exact
@@ -649,7 +649,7 @@ export default function CrystalVisionReview() {
                         { name: "Zeaxanthin", confirmed: "✗ Absent", areds: "2 mg", ev: "Strong" },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 16px", fontSize: 13, color: row.confirmed === "✗ Absent" ? "#8B3A2C" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: row.confirmed === "✗ Absent" ? 600 : 400 }}>{row.name}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, color: row.confirmed === "✗ Absent" ? "#8B3A2C" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", fontWeight: row.confirmed === "✗ Absent" ? 600 : 400 }}>{row.name}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.confirmed.startsWith("✓") ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.confirmed.startsWith("✓") ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.confirmed.startsWith("✓") ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" as const, fontWeight: 600 }}>
                               {row.confirmed}
@@ -666,7 +666,7 @@ export default function CrystalVisionReview() {
 
               {/* § 6 Ingredient Breakdown */}
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 28 }}>
                   Seven ingredients. Here is what each one does, what the clinical evidence actually says,
                   and where the gaps are. For deeper context on any individual ingredient, the{" "}
@@ -720,7 +720,7 @@ export default function CrystalVisionReview() {
                 ].map((ing) => (
                   <div key={ing.name} style={{ marginBottom: 20, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #EDE8DF", borderRadius: 10 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ing.link ? (
                           <Link href={ing.link} style={{ color: "#1A1714", textDecoration: "none" }}>{ing.name} →</Link>
                         ) : ing.name}
@@ -758,7 +758,7 @@ export default function CrystalVisionReview() {
 
               {/* § 7 Lab & Verification */}
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab &amp; Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab &amp; Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginBottom: 24 }}>
                   {[
                     { cert: "GMP Certification", status: "Certified", colour: "#2D6A4F", bg: "rgba(45,106,79,0.06)", border: "rgba(45,106,79,0.2)", detail: "GMP (Good Manufacturing Practices) covers facility hygiene, process controls, and record-keeping. It is the regulatory minimum for US dietary supplement manufacturers. It does not verify ingredient potency, identity, or purity in the finished product." },
@@ -786,14 +786,14 @@ export default function CrystalVisionReview() {
 
               {/* § 8 Claim Audit */}
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Marketing claims from Crystal Vision product pages, assessed against published evidence.</p>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 9 How to Take It */}
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   {[
                     { step: "Daily Protocol", protocol: "2 capsules with water", recommended: true, timing: "With a meal (morning preferred)", notes: "The fat-soluble ingredients — lutein and vitamins E — absorb better when taken with a meal containing dietary fat. Avocado, olive oil, eggs, or nuts alongside breakfast will improve carotenoid bioavailability meaningfully. This is not a minor point: lutein absorption can increase 3–5× when taken with a fat-containing meal versus fasted." },
@@ -820,7 +820,7 @@ export default function CrystalVisionReview() {
 
               {/* § 10 Comparison */}
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>
                   Eye health supplements compared on ingredients, AREDS2 alignment, third-party testing, and price. See the{" "}
                   <Link href="/best/eye-health" style={{ color: "#2D7A9A", textDecoration: "none" }}>best eye health supplements roundup</Link>{" "}
@@ -844,7 +844,7 @@ export default function CrystalVisionReview() {
                         { name: "EyePromise Screen Shield", lutein: "15mg", zeax: "6mg (meso)", bilberry: "✓", cert: "NSF Certified", price: "$1.65", highlight: false },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: row.highlight ? "rgba(45,122,154,0.07)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: row.highlight ? "#2D7A9A" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" as const }}>{row.name}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: row.highlight ? "#2D7A9A" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" as const }}>{row.name}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace" }}>{row.lutein}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: row.zeax.startsWith("✗") ? "#8B3A2C" : "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: row.zeax.startsWith("✗") ? 700 : 400 }}>{row.zeax}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: row.bilberry === "✓" ? "#2D6A4F" : "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{row.bilberry}</td>
@@ -865,7 +865,7 @@ export default function CrystalVisionReview() {
 
               {/* § 11 Products at a Glance */}
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
                   <ProductCard name="Crystal Vision" brand="MDS Labs" category="Eye Health Supplement" score={6} priceUSD="$28.50 / 30 servings" priceINR="N/A" tags={["Lutein", "Bilberry", "Vegan", "GMP"]} buyUrl="https://3c3ef3wlq9gkqmr8uw4jvncyfc.hop.clickbank.net" buyLabel="Buy Now" reviewSlug="crystal-vision-eye-supplement-review" image="crystal-vision.webp" bgFrom="#08181F" bgTo="#040C10" accent="#2D7A9A" featured={true} />
                   <ProductCard name="Pulse Pre-Workout" brand="Legion Athletics" category="Pre-Workout" priceUSD="~$67.50 / 30 servings" priceINR="N/A" tags={["FSP 9/10", "Labdoor", "No Artificial"]} buyUrl="https://amzn.to/4o4r29e" buyLabel="Check Price" reviewSlug="legion-pulse-pre-workout-review-2026" image="legion-pulse-preworkout.webp" bgFrom="#0A1220" bgTo="#060C18" accent="#D4A96A" />
@@ -875,7 +875,7 @@ export default function CrystalVisionReview() {
 
               {/* § 12 Pros & Cons */}
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros &amp; Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros &amp; Cons</h2>
                 <ProsCons
                   pros={[
                     "Lutein is the correct lead ingredient for macular pigment and blue light filtration",
@@ -901,7 +901,7 @@ export default function CrystalVisionReview() {
 
               {/* § 13 Safety */}
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety &amp; Side Effects</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety &amp; Side Effects</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {[
                     { title: "Lutein and Carotenoids", icon: "✓", risk: "low", body: "Lutein is well-tolerated at supplement doses up to 20mg daily. At very high chronic intakes (>20mg/day), carotenodermia — a harmless yellowing of the skin — has been reported but is not a safety concern. At the doses likely present in this formula, no adverse effects are expected." },
@@ -920,7 +920,7 @@ export default function CrystalVisionReview() {
 
               {/* § 14 Value */}
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price &amp; Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price &amp; Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="lutein" />
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, marginTop: 24 }}>
                   {[
@@ -952,7 +952,7 @@ export default function CrystalVisionReview() {
 
               {/* § 15 Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
                     { channel: "Official link (via our affiliate)", verdict: "Recommended", colour: "#2D6A4F", bg: "rgba(45,106,79,0.06)", border: "rgba(45,106,79,0.2)", detail: "The ClickBank-distributed official channel. Purchased direct from the supplier, free shipping indicated. ClickBank provides a standardised purchase and refund process.", cta: true },
@@ -967,7 +967,7 @@ export default function CrystalVisionReview() {
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: item.cta ? 12 : 0 }}>{item.detail}</p>
                       {item.cta && (
                         <a href="https://3c3ef3wlq9gkqmr8uw4jvncyfc.hop.clickbank.net" target="_blank" rel="nofollow noopener noreferrer"
-                          style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                          style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                           Buy Crystal Vision <ExternalLink size={12} />
                         </a>
                       )}
@@ -978,15 +978,15 @@ export default function CrystalVisionReview() {
 
               {/* § 16 FAQ */}
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details key={i} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}>
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" as const }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
                         <span className="faq-icon" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#2D7A9A", fontWeight: 700, fontSize: 14 }}>+</span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.75, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.acceptedAnswer.text}</p>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.75, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
                     </details>
                   ))}
                 </div>
@@ -1004,11 +1004,11 @@ export default function CrystalVisionReview() {
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 16 }}>FINAL VERDICT · REV-2026-052</p>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1 }}>{editorialScore}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2D7A9A", lineHeight: 1 }}>{editorialScore}</p>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "rgba(212,201,184,0.5)" }}>/10 · FSP EDITORIAL</p>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12, lineHeight: 1.2 }}>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12, lineHeight: 1.2 }}>
                         A usable budget option with real gaps.{" "}
                         <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>
                           Right core ingredient, wrong formula depth.
@@ -1037,7 +1037,7 @@ export default function CrystalVisionReview() {
                   </p>
                   <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                     <a href="https://3c3ef3wlq9gkqmr8uw4jvncyfc.hop.clickbank.net" target="_blank" rel="nofollow noopener noreferrer"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", backgroundColor: "#2D7A9A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                       Buy Crystal Vision <ExternalLink size={14} />
                     </a>
                     <Link href="/best/eye-health"
@@ -1050,7 +1050,7 @@ export default function CrystalVisionReview() {
 
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
@@ -1063,7 +1063,7 @@ export default function CrystalVisionReview() {
                       { text: "Johnson EJ. (2014). Role of lutein and zeaxanthin in visual and cognitive function throughout the lifespan. Nutr Rev. 72(9):605–12.", url: "https://doi.org/10.1111/nure.12133" },
                       { text: "Chew EY et al. (2022). Long-term outcomes of adding lutein/zeaxanthin and omega-3 fatty acids to the AREDS supplements on age-related macular degeneration progression. JAMA Ophthalmol. 140(7):692–98.", url: "https://doi.org/10.1001/jamaophthalmol.2022.1640" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer"
                           style={{ color: "#2D7A9A", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" as const }}>
@@ -1085,7 +1085,7 @@ export default function CrystalVisionReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
               <Link href="/reviews" style={{ fontSize: 12, color: "#2D7A9A", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

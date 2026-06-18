@@ -250,7 +250,7 @@ export default function LegionPulseVsBulkBlackPage() {
               {/* Label */}
               <div style={{ textAlign: "center" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 5 }}>Legion Athletics</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>Pulse</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>Pulse</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#D4A96A" }}>9/10 FSP</p>
               </div>
               {/* Buttons — full-width on mobile */}
@@ -259,13 +259,13 @@ export default function LegionPulseVsBulkBlackPage() {
                   href={pulse.buyUrl}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Buy ↗
                 </a>
                 <Link
                   href={pulse.reviewSlug}
-                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Review →
                 </Link>
@@ -275,13 +275,13 @@ export default function LegionPulseVsBulkBlackPage() {
             {/* VS — hidden on mobile via compare-vs-hide */}
             <div className="compare-vs-hide" style={{ textAlign: "center", paddingBottom: 56, flexShrink: 0 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginBottom: 8 }}>BOTH SCORED</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2.5rem, 5vw, 3.5rem)", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.12)", lineHeight: 1 }}>vs</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2.5rem, 5vw, 3.5rem)", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.12)", lineHeight: 1 }}>vs</p>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.3em", textTransform: "uppercase", color: "rgba(242,235,217,0.2)", marginTop: 8 }}>9 / 10 FSP</p>
             </div>
 
             {/* Mobile-only VS divider — shown between the two products on small screens */}
             <div className="block md:hidden" style={{ textAlign: "center", padding: "4px 0" }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.18)" }}>vs</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.18)" }}>vs</span>
             </div>
 
             {/* Right — BULK Black */}
@@ -295,7 +295,7 @@ export default function LegionPulseVsBulkBlackPage() {
               </div>
               <div style={{ textAlign: "center" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 5 }}>Transparent Labs</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>BULK Black</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 17, fontWeight: 700, color: "#F2EBD9", marginBottom: 3 }}>BULK Black</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D" }}>9/10 FSP</p>
               </div>
               <div style={{ display: "flex", gap: 8, width: "100%", maxWidth: 220 }}>
@@ -303,13 +303,13 @@ export default function LegionPulseVsBulkBlackPage() {
                   href={bulkBlack.buyUrl}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Buy ↗
                 </a>
                 <Link
                   href={bulkBlack.reviewSlug}
-                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 4, padding: "10px 14px", border: "1px solid rgba(242,235,217,0.18)", color: "#A89880", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Review →
                 </Link>
@@ -331,7 +331,7 @@ export default function LegionPulseVsBulkBlackPage() {
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>
             FITLAB INDEPENDENT COMPARISON · Prices verified May 2026
           </p>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16, maxWidth: 780 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16, maxWidth: 780 }}>
             Legion Pulse <em style={{ fontWeight: 400, fontStyle: "italic", color: "#5C5650" }}>vs</em> Transparent Labs BULK Black —{" "}
             <em style={{ fontWeight: 400, fontStyle: "italic", color: "#8A8480" }}>Which Should You Buy?</em>
           </h1>
@@ -352,7 +352,7 @@ export default function LegionPulseVsBulkBlackPage() {
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8 }}>
                   {p.brand} · {p.type}
                 </p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>
                   {p.name}
                 </h3>
                 <div style={{ display: "flex", marginBottom: 16 }}>
@@ -365,11 +365,11 @@ export default function LegionPulseVsBulkBlackPage() {
                 </div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   <a href={p.buyUrl} target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "8px 14px", backgroundColor: p.accent, color: p.name === "Legion Pulse" ? "#1A1714" : "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "8px 14px", backgroundColor: p.accent, color: p.name === "Legion Pulse" ? "#1A1714" : "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={11} />
                   </a>
                   <Link href={p.reviewSlug}
-                    style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "8px 14px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 12, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "8px 14px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 12, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Full Review →
                   </Link>
                 </div>
@@ -377,7 +377,7 @@ export default function LegionPulseVsBulkBlackPage() {
 
               {i === 0 && (
                 <div key="vs" className="compare-vs-hide" style={{ textAlign: "center" }}>
-                  <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.5rem", fontWeight: 400, fontStyle: "italic", color: "#D4C9B8" }}>vs</span>
+                  <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.5rem", fontWeight: 400, fontStyle: "italic", color: "#D4C9B8" }}>vs</span>
                 </div>
               )}
             </>
@@ -454,19 +454,19 @@ export default function LegionPulseVsBulkBlackPage() {
           </p>
 
           <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714" }}>
                   <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Ingredient</th>
-                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 700, color: "#D4A96A" }}>Legion Pulse</th>
-                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 700, color: "#C4622D" }}>BULK Black</th>
+                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-newsreader), Georgia, serif", fontWeight: 700, color: "#D4A96A" }}>Legion Pulse</th>
+                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-newsreader), Georgia, serif", fontWeight: 700, color: "#C4622D" }}>BULK Black</th>
                   <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Clinical range</th>
                 </tr>
               </thead>
               <tbody>
                 {ingredientRows.map((row, i) => (
                   <tr key={row.label} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                    <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.label}</td>
+                    <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.label}</td>
                     <td style={{ padding: "11px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-dm-mono), monospace", color: row.winner === "pulse" ? "#2D6A4F" : row.pulse === "—" ? "#C8BEA8" : "#1A1714", fontWeight: row.winner === "pulse" ? 700 : 400 }}>{row.pulse}</td>
                     <td style={{ padding: "11px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-dm-mono), monospace", color: row.winner === "bulk" ? "#2D6A4F" : row.bulk === "—" ? "#C8BEA8" : "#1A1714", fontWeight: row.winner === "bulk" ? 700 : 400 }}>{row.bulk}</td>
                     <td style={{ padding: "11px 16px", fontSize: 11, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace" }}>{row.clinical}</td>
@@ -638,7 +638,7 @@ export default function LegionPulseVsBulkBlackPage() {
             ].map((item) => (
               <div key={item.cert} style={{ padding: "18px 20px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10 }}>
                 <div style={{ marginBottom: 14 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714" }}>{item.cert}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714" }}>{item.cert}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: item.accent }}>Used by {item.product}</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: 14 }}>
@@ -672,12 +672,12 @@ export default function LegionPulseVsBulkBlackPage() {
           <SectionHeading label="Value" figure="§ 06" title="Price per serving" titleItalic="what you actually pay" size="sm" />
 
           <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 20 }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
                   <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Scenario</th>
-                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 700, color: "#D4A96A" }}>Legion Pulse</th>
-                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 700, color: "#C4622D" }}>BULK Black</th>
+                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-newsreader), Georgia, serif", fontWeight: 700, color: "#D4A96A" }}>Legion Pulse</th>
+                  <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 12, fontFamily: "var(--font-newsreader), Georgia, serif", fontWeight: 700, color: "#C4622D" }}>BULK Black</th>
                   <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Difference</th>
                 </tr>
               </thead>
@@ -744,7 +744,7 @@ export default function LegionPulseVsBulkBlackPage() {
               { label: "BULK Black", count: bulkWins, accent: "#C4622D", bg: "rgba(196,98,45,0.08)" },
             ].map((s) => (
               <div key={s.label} style={{ padding: "16px", backgroundColor: s.bg, borderRadius: 10, textAlign: "center" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: s.accent, lineHeight: 1, marginBottom: 4 }}>{s.count}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: s.accent, lineHeight: 1, marginBottom: 4 }}>{s.count}</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880" }}>{s.label}</p>
               </div>
             ))}
@@ -759,10 +759,10 @@ export default function LegionPulseVsBulkBlackPage() {
             {faqItems.map((faq, i) => (
               <details key={i} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}>
                 <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" as const }}>
-                  <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>{faq.q}</span>
+                  <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.q}</span>
                   <span className="faq-icon" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#8B7355", fontWeight: 700, fontSize: 14 }}>+</span>
                 </summary>
-                <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.75, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.a}</p>
+                <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.75, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.a}</p>
               </details>
             ))}
           </div>
@@ -783,7 +783,7 @@ export default function LegionPulseVsBulkBlackPage() {
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 16 }}>
                 CMP-006 · BOTTOM LINE
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 24 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 24 }}>
                 BULK Black wins on breadth and certification.{" "}
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>
                   Pulse wins on theanine depth, natural sourcing, and variety.
@@ -808,11 +808,11 @@ export default function LegionPulseVsBulkBlackPage() {
 
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 <Link href={pulse.reviewSlug}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 12, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 12, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Full Pulse Review →
                 </Link>
                 <Link href={bulkBlack.reviewSlug}
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Full BULK Black Review →
                 </Link>
                 <Link href="/best/pre-workout"
@@ -838,7 +838,7 @@ export default function LegionPulseVsBulkBlackPage() {
                 { text: "Harpaz E et al. (2017). The effect of caffeine on energy balance. J Basic Clin Physiol Pharmacol. 28(1):1–10.", url: "https://doi.org/10.1515/jbcpp-2016-0090" },
                 { text: "Grgic J et al. (2018). Effects of caffeine intake on muscle strength and power: a systematic review and meta-analysis. J Int Soc Sports Nutr. 15:11.", url: "https://doi.org/10.1186/s12970-018-0216-0" },
               ].map((ref, i) => (
-                <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                   {ref.text}{" "}
                   <a href={ref.url} target="_blank" rel="noopener noreferrer"
                     style={{ color: "#C4622D", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11 }}>
@@ -870,7 +870,7 @@ export default function LegionPulseVsBulkBlackPage() {
                 <div style={{ backgroundColor: card.accent }} />
                 <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 5 }}>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880", letterSpacing: "0.1em" }}>{card.cat}</span>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714" }}>{card.title}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714" }}>{card.title}</p>
                   <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>{card.teaser}</p>
                   <span style={{ fontSize: 11, color: card.accent, fontWeight: 600, marginTop: 4 }}>Read →</span>
                 </div>

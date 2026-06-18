@@ -315,7 +315,7 @@ export default function BestGlp1TelehealthPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>5 Platforms Evaluated · US Only</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             5 Best GLP-1 Telehealth Providers{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026 Rankings</em>
           </h1>
@@ -356,7 +356,7 @@ export default function BestGlp1TelehealthPage() {
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="At a Glance" figure="§ 01" title="All 5 picks" titleItalic="side by side" size="sm" />
           <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-            <table style={{ borderCollapse: "collapse", minWidth: 750, width: "100%", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <table style={{ borderCollapse: "collapse", minWidth: 750, width: "100%", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
                 <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714" }}>
                   {["Platform", "Medication", "Microdosing", "Starting Price", "Consult Speed", "Score", ""].map((h) => (
@@ -378,7 +378,7 @@ export default function BestGlp1TelehealthPage() {
                           />
                         </div>
                         <div>
-                          <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
+                          <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
                           {pick.badge && (
                             <span style={{ fontSize: 9, padding: "2px 7px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.05em", whiteSpace: "nowrap" }}>{pick.badge}</span>
                           )}
@@ -438,7 +438,7 @@ export default function BestGlp1TelehealthPage() {
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 4, textTransform: "uppercase" }}>
                         {pick.medication} · From {pick.startingPrice}
                       </div>
-                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>
+                      <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>
                         {pick.name}
                       </h2>
                     </div>
@@ -524,7 +524,7 @@ export default function BestGlp1TelehealthPage() {
                         color: "#F2EBD9",
                         fontSize: 12, fontWeight: 600,
                         borderRadius: 6,
-                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontFamily: "var(--font-hanken), sans-serif",
                         textDecoration: "none",
                         whiteSpace: "nowrap",
                       }}
@@ -532,7 +532,7 @@ export default function BestGlp1TelehealthPage() {
                       {pick.buyLabel}
                     </a>
                     {pick.slug === "wellmedr" && (
-                      <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                      <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                         Full review →
                       </Link>
                     )}
@@ -580,14 +580,14 @@ export default function BestGlp1TelehealthPage() {
               >
                 <div style={{ padding: "14px 18px", backgroundColor: drug.highlight ? "#C4622D" : "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: drug.highlight ? "rgba(255,255,255,0.7)" : "#8A8480", margin: "0 0 4px" }}>{drug.trial} · n={drug.n}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: drug.highlight ? "#fff" : "#1A1714", margin: 0 }}>{drug.drug}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: drug.highlight ? "#fff" : "#1A1714", margin: 0 }}>{drug.drug}</p>
                   <p style={{ fontSize: 11, color: drug.highlight ? "rgba(255,255,255,0.8)" : "#5C5650", margin: "2px 0 0" }}>{drug.brand}</p>
                 </div>
                 <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
                   <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Mean Weight Loss</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: drug.highlight ? "#C4622D" : "#1A1714", margin: 0 }}>{drug.weightLoss}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: drug.highlight ? "#C4622D" : "#1A1714", margin: 0 }}>{drug.weightLoss}</p>
                     </div>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Duration</p>

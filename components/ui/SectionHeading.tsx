@@ -6,6 +6,7 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "left" | "center";
   size?: "sm" | "md" | "lg";
+  dark?: boolean;
 }
 
 export default function SectionHeading({
@@ -16,12 +17,20 @@ export default function SectionHeading({
   subtitle,
   align = "left",
   size = "md",
+  dark = false,
 }: SectionHeadingProps) {
   const fontSizes: Record<string, string> = {
     sm: "clamp(1.25rem, 2.5vw, 1.75rem)",
     md: "clamp(1.75rem, 3.5vw, 2.5rem)",
     lg: "clamp(2rem, 5vw, 3.5rem)",
   };
+
+  const figureColor = dark ? "#4a6b58" : "#6b7770";
+  const dividerColor = dark ? "#1a2d24" : "#e4e8e5";
+  const labelColor = dark ? "#14a474" : "#0f7a5a";
+  const headingColor = dark ? "#e8efe9" : "#17211c";
+  const italicColor = dark ? "#9fb0a7" : "#6b7770";
+  const subtitleColor = dark ? "#9fb0a7" : "#586259";
 
   return (
     <div style={{ textAlign: align, marginBottom: 40 }}>
@@ -38,28 +47,28 @@ export default function SectionHeading({
           {figure && (
             <span
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 11,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#9CA3AF",
-                fontWeight: 600,
+                color: figureColor,
+                fontWeight: 500,
               }}
             >
               {figure}
             </span>
           )}
           {figure && label && (
-            <span style={{ width: 24, height: 1, backgroundColor: "#E5E7EB", display: "inline-block" }} />
+            <span style={{ width: 24, height: 1, backgroundColor: dividerColor, display: "inline-block" }} />
           )}
           {label && (
             <span
               style={{
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 11,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
-                color: "#0E8784",
+                color: labelColor,
                 fontWeight: 600,
               }}
             >
@@ -70,11 +79,11 @@ export default function SectionHeading({
       )}
       <h2
         style={{
-          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontFamily: "var(--font-newsreader), Georgia, serif",
           fontSize: fontSizes[size],
           fontWeight: 700,
           letterSpacing: "-0.025em",
-          color: "#111827",
+          color: headingColor,
           lineHeight: 1.05,
         }}
       >
@@ -86,7 +95,7 @@ export default function SectionHeading({
               style={{
                 fontStyle: "italic",
                 fontWeight: 400,
-                color: "#6B7280",
+                color: italicColor,
               }}
             >
               {titleItalic}
@@ -99,11 +108,11 @@ export default function SectionHeading({
           style={{
             marginTop: 12,
             fontSize: 15,
-            color: "#6B7280",
+            color: subtitleColor,
             lineHeight: 1.6,
             maxWidth: align === "center" ? 540 : "none",
             margin: align === "center" ? "12px auto 0" : "12px 0 0",
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-hanken), sans-serif",
           }}
         >
           {subtitle}

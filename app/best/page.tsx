@@ -24,7 +24,7 @@ const roundups = [
     category: "Protein Powder",
     summary: "We tested 14 whey proteins on protein yield, amino acid spiking tests, mixability, and price-per-gram. The top picks cover every budget tier.",
     tags: ["Muscle Gain", "Recovery", "Most Popular"],
-    accent: "#0E8784",
+    accent: "#0f7a5a",
   },
   {
     slug: "creatine",
@@ -88,7 +88,7 @@ const roundups = [
     category: "Fat Loss",
     summary: "Most fat burners are overpriced caffeine pills. We only rank products with genuinely evidence-backed thermogenic ingredients at effective doses.",
     tags: ["Weight Loss", "Metabolism", "Stimulant-Free Options"],
-    accent: "#0E8784",
+    accent: "#0f7a5a",
   },
   {
     slug: "mass-gainer",
@@ -201,11 +201,11 @@ export default function BestHubPage() {
     <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5", backgroundColor: "#f6f8f6" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#E5E7EB" }}>/</span>
-          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Best Of</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#e4e8e5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Best Of</span>
         </div>
       </div>
 
@@ -223,7 +223,7 @@ export default function BestHubPage() {
         {/* Jump links by category */}
         <div style={{ marginBottom: 40, display: "flex", flexWrap: "wrap", gap: 8 }}>
           {categoryGroups.map((g) => (
-            <a key={g.label} href={`#${g.label.toLowerCase().replace(/\s+/g, "-")}`} style={{ padding: "5px 14px", border: "1px solid #E5E7EB", borderRadius: 20, fontSize: 11, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF" }}>
+            <a key={g.label} href={`#${g.label.toLowerCase().replace(/\s+/g, "-")}`} style={{ padding: "5px 14px", border: "1px solid #e4e8e5", borderRadius: 20, fontSize: 11, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF" }}>
               {g.label}
             </a>
           ))}
@@ -240,7 +240,7 @@ export default function BestHubPage() {
                   <Link
                     key={r.slug}
                     href={`/best/${r.slug}`}
-                    style={{ display: "flex", flexDirection: "column", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+                    style={{ display: "flex", flexDirection: "column", border: "1px solid #e4e8e5", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                     className="hub-card"
                   >
                     {/* Accent header */}
@@ -250,36 +250,36 @@ export default function BestHubPage() {
                     <div style={{ padding: "18px 20px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                         <div>
-                          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", marginBottom: 6 }}>{r.figure} · {r.lastUpdated}</p>
-                          <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#111827", margin: 0, lineHeight: 1.15 }}>{r.title}</h2>
-                          <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", marginTop: 4 }}>{r.subtitle}</p>
+                          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#6b7770", textTransform: "uppercase", marginBottom: 6 }}>{r.figure} · {r.lastUpdated}</p>
+                          <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#17211c", margin: 0, lineHeight: 1.15 }}>{r.title}</h2>
+                          <p style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", marginTop: 4 }}>{r.subtitle}</p>
                         </div>
-                        <span style={{ flexShrink: 0, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", padding: "4px 10px", border: "1px solid #E5E7EB", borderRadius: 4, backgroundColor: "#F8FAFB" }}>{r.productCount} products</span>
+                        <span style={{ flexShrink: 0, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#6b7770", textTransform: "uppercase", padding: "4px 10px", border: "1px solid #e4e8e5", borderRadius: 4, backgroundColor: "#f6f8f6" }}>{r.productCount} products</span>
                       </div>
 
-                      <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0 }}>{r.summary}</p>
+                      <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.65, margin: 0 }}>{r.summary}</p>
 
                       {/* Top pick & budget pick */}
                       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-                        <div style={{ padding: "10px 12px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 8 }}>
-                          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 8, textTransform: "uppercase", color: "#9CA3AF", marginBottom: 4 }}>Top Pick</p>
-                          <p style={{ fontSize: 12, fontWeight: 600, color: "#111827", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.3 }}>{r.topPick}</p>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 800, color: r.accent, margin: 0 }}>{r.topPickScore}/10</p>
+                        <div style={{ padding: "10px 12px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 8 }}>
+                          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 8, textTransform: "uppercase", color: "#6b7770", marginBottom: 4 }}>Top Pick</p>
+                          <p style={{ fontSize: 12, fontWeight: 600, color: "#17211c", margin: 0, fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.3 }}>{r.topPick}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 800, color: r.accent, margin: 0 }}>{r.topPickScore}/10</p>
                         </div>
-                        <div style={{ padding: "10px 12px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 8 }}>
-                          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 8, textTransform: "uppercase", color: "#9CA3AF", marginBottom: 4 }}>Budget Pick</p>
-                          <p style={{ fontSize: 12, fontWeight: 600, color: "#111827", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.3 }}>{r.budgetPick}</p>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 800, color: "#6B7280", margin: 0 }}>{r.budgetScore}/10</p>
+                        <div style={{ padding: "10px 12px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 8 }}>
+                          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 8, textTransform: "uppercase", color: "#6b7770", marginBottom: 4 }}>Budget Pick</p>
+                          <p style={{ fontSize: 12, fontWeight: 600, color: "#17211c", margin: 0, fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.3 }}>{r.budgetPick}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 800, color: "#586259", margin: 0 }}>{r.budgetScore}/10</p>
                         </div>
                       </div>
 
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #F3F4F6", paddingTop: 10 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #eef1ef", paddingTop: 10 }}>
                         <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
                           {r.tags.map((tag) => (
-                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
+                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(15,122,90,0.06)", border: "1px solid rgba(15,122,90,0.15)", borderRadius: 4, fontSize: 9, color: "#0f7a5a", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
                           ))}
                         </div>
-                        <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>Read Guide →</span>
+                        <span style={{ fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>Read Guide →</span>
                       </div>
                     </div>
                   </Link>
@@ -290,12 +290,12 @@ export default function BestHubPage() {
         })}
 
         {/* Methodology note */}
-        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#111827", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#6B7280", marginBottom: 10 }}>How We Build Roundups</p>
-          <p style={{ fontSize: 14, color: "#9CA3AF", lineHeight: 1.75, marginBottom: 12 }}>
+        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#17211c", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>How We Build Roundups</p>
+          <p style={{ fontSize: 14, color: "#6b7770", lineHeight: 1.75, marginBottom: 12 }}>
             Roundups are built from our full review database — every product ranked here has a full individual review. Top picks are determined by composite FSP score, not editorial preference or affiliate value.
           </p>
-          <Link href="/methodology" style={{ fontSize: 13, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/methodology" style={{ fontSize: 13, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Read the Fitlab Scoring Protocol →
           </Link>
         </div>

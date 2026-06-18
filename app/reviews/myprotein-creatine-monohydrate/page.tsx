@@ -265,7 +265,7 @@ export default function MyproteinCreatineReview() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.025) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 10 }}>
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.25)" }}>REV-2025-031 · CREATINE</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.5rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 540, padding: "0 24px" }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.5rem, 4vw, 2.8rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 540, padding: "0 24px" }}>
               MyProtein<br /><em style={{ fontWeight: 400, color: "#6DBF8A" }}>Creatine Monohydrate</em>
             </h1>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "rgba(242,235,217,0.3)", letterSpacing: "0.2em" }}>ONE INGREDIENT · 8 / 10 · FSP v2.1</p>
@@ -285,7 +285,7 @@ export default function MyproteinCreatineReview() {
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
                 MyProtein · Creatine · Unflavoured
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Creatine Monohydrate<br />
                 <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Good product. One real gap.</em>
               </h2>
@@ -293,7 +293,7 @@ export default function MyproteinCreatineReview() {
                 Pure creatine monohydrate at a price most competitors cannot match. The formula is right. The value is right. The one thing missing — independent batch testing — is the honest reason it sits at 8 rather than 9.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <Link href="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852482.html" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                <Link href="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852482.html" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Check Price on MyProtein <ExternalLink size={13} />
                 </Link>
                 <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -321,11 +321,11 @@ export default function MyproteinCreatineReview() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
             <div style={{ width: 40, height: 40, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FT</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FT</span>
             </div>
             <div style={{ flex: 1 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 2 }}>Reviewed By</p>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>
                 <Link href="/authors" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Formula analysis, literature review, USA market pricing</span>
               </p>
@@ -362,7 +362,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "4px solid #2D6A4F", marginBottom: 16 }}>
                   <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8 }}>
                     MyProtein Creatine Monohydrate is a single-ingredient product done correctly. The formula is right — 5g of creatine monohydrate, nothing else. The price is right — among the lowest from any recognisable brand in USA, especially on sale. The one honest gap is certification: there is no independent lab confirmation that what the label says is actually in the bag. For most gym-goers this will not be a dealbreaker. For competitive athletes who get tested, it should be.
@@ -392,7 +392,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── WHAT IS CREATINE ───────────────────────────────────────── */}
               <section id="what-is-creatine" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Creatine — Briefly</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Creatine — Briefly</h2>
                 <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.8, marginBottom: 14 }}>
                   Creatine is a compound your body synthesises from arginine, glycine, and methionine, and also obtains from red meat and fish. About 95% of it lives in your skeletal muscle as phosphocreatine — the fuel your muscles use for the first 10–30 seconds of maximum-effort activity. Heavy compound lifts, sprints, HIIT sets: all driven by the phosphocreatine system.
                 </p>
@@ -406,18 +406,18 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── THE FORMULA ────────────────────────────────────────────── */}
               <section id="the-formula" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>The Formula</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>The Formula</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>There is one ingredient. Here is what matters about it.</p>
 
                 <div style={{ padding: 24, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4", marginBottom: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16, flexWrap: "wrap", gap: 12 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>Active Ingredient</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714" }}>Creatine Monohydrate</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714" }}>Creatine Monohydrate</p>
                     </div>
                     <div style={{ textAlign: "right" }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>Per Serving</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#2D6A4F", lineHeight: 1 }}>5g</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#2D6A4F", lineHeight: 1 }}>5g</p>
                     </div>
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 12 }}>
@@ -447,19 +447,19 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── SCORE BREAKDOWN ────────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2025-031" />
               </section>
 
               {/* ─── FLAGS ──────────────────────────────────────────────────── */}
               <section id="flags" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* ─── NUTRITION LABEL ────────────────────────────────────────── */}
               <section id="nutrition-label" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Nutrition Label</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Nutrition Label</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Per 1 serving (5g) · Unflavoured</p>
                 <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", maxWidth: 480 }}>
                   <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", display: "flex", justifyContent: "space-between" }}>
@@ -488,7 +488,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── TESTING & VERIFICATION ─────────────────────────────────── */}
               <section id="verification" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Testing & Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Testing & Verification</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The most important section in this review. Read it before you decide.</p>
 
                 <div style={{ padding: 20, backgroundColor: "rgba(196,98,45,0.04)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 10, marginBottom: 16 }}>
@@ -527,7 +527,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── REAL-WORLD USE ─────────────────────────────────────────── */}
               <section id="real-world" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Real-World Use</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Real-World Use</h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   {[
@@ -549,7 +549,7 @@ export default function MyproteinCreatineReview() {
                     },
                   ].map((item, i) => (
                     <div key={i} style={{ padding: "18px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
                       <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75 }} dangerouslySetInnerHTML={{ __html: item.body }} />
                     </div>
                   ))}
@@ -558,7 +558,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── MIXABILITY ─────────────────────────────────────────────── */}
               <section id="mixability" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Mixability</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Mixability</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Tested in water, juice, and protein shake at 4°C and room temperature.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 16 }}>
                   {[
@@ -581,14 +581,14 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── CLAIM AUDIT ────────────────────────────────────────────── */}
               <section id="claim-audit" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Brand claims from MyProtein product pages and packaging checked against published research.</p>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* ─── DOSING GUIDE ───────────────────────────────────────────── */}
               <section id="dosing" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Dose It — Correctly</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Dose It — Correctly</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
                     {
@@ -637,7 +637,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The creatine market in USA has a few clear options. Here is where they actually differ.</p>
                 <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8" }}>
                   <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 560 }}>
@@ -665,7 +665,7 @@ export default function MyproteinCreatineReview() {
                         <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
                           <td style={{ padding: "9px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
                           {row.vals.map((v, j) => (
-                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#2D6A4F" : v.includes("⚠") ? "#C4622D" : "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400, whiteSpace: "nowrap" }}>{v}</td>
+                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#2D6A4F" : v.includes("⚠") ? "#C4622D" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 600 : 400, whiteSpace: "nowrap" }}>{v}</td>
                           ))}
                         </tr>
                       ))}
@@ -684,7 +684,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Quick buy cards for every creatine in this comparison — prices verified May 2026.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
                   <ProductCard
@@ -753,7 +753,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── PROS / CONS ────────────────────────────────────────────── */}
               <section id="pros-cons" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
                     "Pure creatine monohydrate — zero fillers, sweeteners, or unnecessary additions",
@@ -776,7 +776,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── SAFETY ─────────────────────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety</h2>
                 <div style={{ padding: "12px 16px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 20 }}>
                   <AlertTriangle size={12} style={{ color: "#8B7355", flexShrink: 0, marginTop: 2 }} />
                   <p style={{ fontSize: 12, color: "#5C5650" }}>Not medical advice. Consult a healthcare professional before supplementing, especially with pre-existing conditions.{" "}
@@ -810,7 +810,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── PRICE & VALUE ──────────────────────────────────────────── */}
               <section id="value" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="creatine (USD)" />
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(170px, 1fr))", gap: 12, marginTop: 16 }}>
@@ -839,7 +839,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── WHERE TO BUY ───────────────────────────────────────────── */}
               <section id="where-to-buy" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Unlike protein powder, creatine monohydrate counterfeiting is rare. The bigger risk here is paying full price.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
@@ -863,7 +863,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Frequently Asked Questions</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { q: "Is MyProtein creatine Creapure?", a: "MyProtein does not specify Creapure® on the USA product label. Some MyProtein products in the UK carry Creapure branding — not confirmed for the USA version. If Creapure sourcing is important to you, contact MyProtein support directly, or choose a product that explicitly states Creapure on the label." },
@@ -875,7 +875,7 @@ export default function MyproteinCreatineReview() {
                     { q: "How long does a 500g bag last?", a: "At 5g/day: 100 days — about 3.3 months. At the loading phase (20g/day for 7 days, then 5g/day): 7 days at 20g uses 140g, leaving 360g for 72 more days — roughly 11 weeks total." },
                   ].map((faq, i) => (
                     <div key={i} style={{ padding: "18px 20px", borderBottom: i < 6 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{faq.a}</p>
                     </div>
                   ))}
@@ -887,7 +887,7 @@ export default function MyproteinCreatineReview() {
                 <div style={{ padding: 32, backgroundColor: "#1A1714", borderRadius: 12 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Final Verdict · REV-2025-031</p>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20, gap: 16 }}>
-                    <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.1rem, 3vw, 1.5rem)", fontWeight: 700, color: "#F2EBD9", letterSpacing: "-0.02em", flex: 1 }}>
+                    <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.1rem, 3vw, 1.5rem)", fontWeight: 700, color: "#F2EBD9", letterSpacing: "-0.02em", flex: 1 }}>
                       The right product.<br />
                       <em style={{ fontWeight: 400, color: "#8A8480", fontSize: "0.85em" }}>One honest reason it is not a 9.</em>
                     </h3>
@@ -907,12 +907,12 @@ export default function MyproteinCreatineReview() {
                     ].map((s) => (
                       <div key={s.label} style={{ padding: "10px 16px", backgroundColor: "rgba(242,235,217,0.05)", border: "1px solid #2D2926", borderRadius: 8 }}>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", color: "#5C5650", marginBottom: 4, textTransform: "uppercase" }}>{s.label}</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: s.color, lineHeight: 1 }}>{s.value}</p>
                       </div>
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                    <Link href="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852482.html" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <Link href="https://www.myprotein.com/sports-nutrition/creatine-monohydrate/10852482.html" target="_blank" rel="nofollow noopener" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       Buy on MyProtein (Wait for Sale) <ExternalLink size={13} />
                     </Link>
                     <Link href="/ingredients/creatine" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #2D2926", color: "#A89880", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>
@@ -924,7 +924,7 @@ export default function MyproteinCreatineReview() {
 
               {/* ─── RESEARCH REFERENCES ────────────────────────────────────── */}
               <section style={{ marginBottom: 24 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 14, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 14, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 18, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 18, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
@@ -951,7 +951,7 @@ export default function MyproteinCreatineReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>What to read next</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>What to read next</h3>
               </div>
               <Link href="/category" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

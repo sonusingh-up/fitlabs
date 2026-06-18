@@ -28,7 +28,7 @@ export function BestOfGrid() {
         <Link
           key={item.href}
           href={item.href}
-          style={{ display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden", border: "1px solid #E5E7EB", textDecoration: "none", transition: "all 0.2s", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+          style={{ display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden", border: "1px solid #e4e8e5", textDecoration: "none", transition: "all 0.2s", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
           onMouseEnter={(e) => {
             const el = e.currentTarget as HTMLElement;
             el.style.boxShadow = "0 12px 36px -8px rgba(0,0,0,0.12)";
@@ -40,13 +40,13 @@ export function BestOfGrid() {
             el.style.transform = "translateY(0)";
           }}
         >
-          <div style={{ height: 52, background: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", position: "relative", overflow: "hidden", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <span style={{ position: "relative", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, fontWeight: 700, color: "#0E8784", letterSpacing: "0.1em" }}>{item.code}</span>
-            <span style={{ position: "relative", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.25)", letterSpacing: "0.15em" }}>{String(i + 1).padStart(2, "0")} / {bestOfItems.length.toString().padStart(2, "0")}</span>
+          <div style={{ height: 52, background: "linear-gradient(145deg, #1F2937 0%, #17211c 100%)", position: "relative", overflow: "hidden", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span style={{ position: "relative", fontFamily: "var(--font-hanken), sans-serif", fontSize: 11, fontWeight: 700, color: "#0f7a5a", letterSpacing: "0.1em" }}>{item.code}</span>
+            <span style={{ position: "relative", fontFamily: "var(--font-hanken), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.25)", letterSpacing: "0.15em" }}>{String(i + 1).padStart(2, "0")} / {bestOfItems.length.toString().padStart(2, "0")}</span>
           </div>
           <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-            <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#111827", lineHeight: 1.3, marginBottom: 8, display: "block" }}>{item.label}</span>
-            <span style={{ fontSize: 11, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.count} →</span>
+            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211c", lineHeight: 1.3, marginBottom: 8, display: "block" }}>{item.label}</span>
+            <span style={{ fontSize: 11, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif" }}>{item.count} →</span>
           </div>
         </Link>
       ))}
@@ -58,14 +58,14 @@ export function TrustGrid({ trustPoints }: { trustPoints: { icon: React.ReactNod
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12 }}>
       {trustPoints.map((point, i) => (
-        <div key={point.title} style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
-          <div style={{ height: 52, background: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", position: "relative", overflow: "hidden", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <span style={{ position: "relative", color: "#0E8784" }}>{point.icon}</span>
-            <span style={{ position: "relative", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.25)", letterSpacing: "0.15em" }}>{String(i + 1).padStart(2, "0")}</span>
+        <div key={point.title} style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #e4e8e5", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
+          <div style={{ height: 52, background: "linear-gradient(145deg, #1F2937 0%, #17211c 100%)", position: "relative", overflow: "hidden", padding: "0 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <span style={{ position: "relative", color: "#0f7a5a" }}>{point.icon}</span>
+            <span style={{ position: "relative", fontFamily: "var(--font-hanken), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.25)", letterSpacing: "0.15em" }}>{String(i + 1).padStart(2, "0")}</span>
           </div>
           <div style={{ padding: "16px 16px 20px" }}>
-            <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#111827", marginBottom: 8 }}>{point.title}</h4>
-            <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6 }}>{point.body}</p>
+            <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211c", marginBottom: 8 }}>{point.title}</h4>
+            <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.6 }}>{point.body}</p>
           </div>
         </div>
       ))}
@@ -80,7 +80,7 @@ export function ArticlesGrid() {
         <Link
           key={article.href}
           href={article.href}
-          style={{ display: "block", borderRadius: 14, overflow: "hidden", border: "1px solid #E5E7EB", textDecoration: "none", transition: "all 0.2s", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+          style={{ display: "block", borderRadius: 14, overflow: "hidden", border: "1px solid #e4e8e5", textDecoration: "none", transition: "all 0.2s", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
           onMouseEnter={(e) => {
             const el = e.currentTarget as HTMLElement;
             el.style.boxShadow = "0 12px 36px -8px rgba(0,0,0,0.12)";
@@ -94,14 +94,14 @@ export function ArticlesGrid() {
         >
           <div style={{ height: 88, background: article.bg, position: "relative", overflow: "hidden", padding: "14px 18px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
             <div style={{ position: "relative", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 9, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0E8784" }}>{article.category}</span>
-              <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.3)", letterSpacing: "0.12em" }}>{article.code}</span>
+              <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 9, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0f7a5a" }}>{article.category}</span>
+              <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.3)", letterSpacing: "0.12em" }}>{article.code}</span>
             </div>
-            <span style={{ position: "relative", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: "0.12em" }}>{String(i + 1).padStart(2, "0")} / {articles.length.toString().padStart(2, "0")}</span>
+            <span style={{ position: "relative", fontFamily: "var(--font-hanken), sans-serif", fontSize: 9, fontWeight: 600, color: "rgba(255,255,255,0.4)", letterSpacing: "0.12em" }}>{String(i + 1).padStart(2, "0")} / {articles.length.toString().padStart(2, "0")}</span>
           </div>
           <div style={{ padding: "16px 18px 18px", display: "flex", flexDirection: "column", gap: 10 }}>
-            <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#111827", lineHeight: 1.3 }}>{article.title}</h4>
-            <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 10, fontWeight: 600, color: "#9CA3AF" }}>{article.date} →</span>
+            <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211c", lineHeight: 1.3 }}>{article.title}</h4>
+            <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 10, fontWeight: 600, color: "#6b7770" }}>{article.date} →</span>
           </div>
         </Link>
       ))}

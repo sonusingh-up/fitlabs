@@ -223,11 +223,11 @@ export default function ResearchHubPage() {
     <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5", backgroundColor: "#f6f8f6" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#E5E7EB" }}>/</span>
-          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Research</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#e4e8e5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Research</span>
         </div>
       </div>
 
@@ -249,7 +249,7 @@ export default function ResearchHubPage() {
             <a
               key={g.label}
               href={`#${g.label.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              style={{ padding: "5px 14px", border: "1px solid #E5E7EB", borderRadius: 20, fontSize: 11, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+              style={{ padding: "5px 14px", border: "1px solid #e4e8e5", borderRadius: 20, fontSize: 11, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
             >
               {g.label}
             </a>
@@ -259,7 +259,7 @@ export default function ResearchHubPage() {
             {(["strong", "moderate", "limited"] as const).map((level) => {
               const cfg = evidenceConfig[level];
               return (
-                <span key={level} style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", color: cfg.color, backgroundColor: cfg.bg, border: `1px solid ${cfg.border}`, textTransform: "uppercase" }}>
+                <span key={level} style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", color: cfg.color, backgroundColor: cfg.bg, border: `1px solid ${cfg.border}`, textTransform: "uppercase" }}>
                   {cfg.label}
                 </span>
               );
@@ -283,7 +283,7 @@ export default function ResearchHubPage() {
                       key={article.slug}
                       href={`/research/${article.slug}`}
                       className="hub-card"
-                      style={{ display: "flex", flexDirection: "column", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+                      style={{ display: "flex", flexDirection: "column", border: "1px solid #e4e8e5", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                     >
                       {/* Accent strip */}
                       <div style={{ height: 4, backgroundColor: article.accent }} />
@@ -291,32 +291,32 @@ export default function ResearchHubPage() {
                       <div style={{ padding: "20px 22px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
                         {/* Meta row */}
                         <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-                          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#9CA3AF", textTransform: "uppercase" }}>{article.figure}</span>
-                          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#9CA3AF", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4 }}>{article.topic}</span>
-                          <span style={{ marginLeft: "auto", padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", color: evCfg.color, backgroundColor: evCfg.bg, border: `1px solid ${evCfg.border}`, textTransform: "uppercase" }}>{evCfg.label}</span>
+                          <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#6b7770", textTransform: "uppercase" }}>{article.figure}</span>
+                          <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#6b7770", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 4 }}>{article.topic}</span>
+                          <span style={{ marginLeft: "auto", padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", color: evCfg.color, backgroundColor: evCfg.bg, border: `1px solid ${evCfg.border}`, textTransform: "uppercase" }}>{evCfg.label}</span>
                         </div>
 
                         {/* Title */}
                         <div>
-                          <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#111827", margin: 0, lineHeight: 1.2 }}>
+                          <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#17211c", margin: 0, lineHeight: 1.2 }}>
                             {article.title}{" "}
-                            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#6B7280" }}>{article.titleItalic}</em>
+                            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>{article.titleItalic}</em>
                           </h2>
                         </div>
 
-                        <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0, flex: 1 }}>{article.summary}</p>
+                        <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.65, margin: 0, flex: 1 }}>{article.summary}</p>
 
                         {/* Tags */}
                         <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                           {article.tags.map((tag) => (
-                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.07em" }}>{tag}</span>
+                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(15,122,90,0.06)", border: "1px solid rgba(15,122,90,0.15)", borderRadius: 4, fontSize: 9, color: "#0f7a5a", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.07em" }}>{tag}</span>
                           ))}
                         </div>
 
                         {/* Footer */}
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #F3F4F6", paddingTop: 12 }}>
-                          <p style={{ fontSize: 11, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", margin: 0 }}>{article.publishedAt} · {article.readTime} read</p>
-                          <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Article →</span>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #eef1ef", paddingTop: 12 }}>
+                          <p style={{ fontSize: 11, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", margin: 0 }}>{article.publishedAt} · {article.readTime} read</p>
+                          <span style={{ fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>Read Article →</span>
                         </div>
                       </div>
                     </Link>
@@ -328,14 +328,14 @@ export default function ResearchHubPage() {
         })}
 
         {/* Editorial note */}
-        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 14, borderLeft: "3px solid #0E8784" }}>
-          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.18em", fontSize: 9, textTransform: "uppercase", color: "#9CA3AF", marginBottom: 8 }}>Evidence Grading System</p>
-          <p style={{ fontSize: 14, color: "#6B7280", lineHeight: 1.75, margin: 0 }}>
+        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 14, borderLeft: "3px solid #0f7a5a" }}>
+          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.18em", fontSize: 9, textTransform: "uppercase", color: "#6b7770", marginBottom: 8 }}>Evidence Grading System</p>
+          <p style={{ fontSize: 14, color: "#586259", lineHeight: 1.75, margin: 0 }}>
             <strong style={{ color: "#1A6B3A" }}>Strong</strong> — multiple RCTs with consistent outcomes.{" "}
             <strong style={{ color: "#92620A" }}>Moderate</strong> — limited RCTs or mixed results.{" "}
             <strong style={{ color: "#8A4020" }}>Limited</strong> — mostly observational or mechanistic data.{" "}
             All claims are referenced to the primary source.{" "}
-            <Link href="/editorial-policy" style={{ color: "#0E8784", fontWeight: 600 }}>Read our editorial policy →</Link>
+            <Link href="/editorial-policy" style={{ color: "#0f7a5a", fontWeight: 600 }}>Read our editorial policy →</Link>
           </p>
         </div>
 

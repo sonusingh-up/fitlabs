@@ -207,7 +207,7 @@ export default function WellmedrVsRoBodyPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Updated May 2026</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             WellMedr vs Ro Body{" "}
             <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>(2026): GLP-1 Telehealth Compared</em>
           </h1>
@@ -223,7 +223,7 @@ export default function WellmedrVsRoBodyPage() {
             ].map((p) => (
               <div key={p.provider} style={{ backgroundColor: "#F8F2E4", border: `2px solid ${p.color}`, borderRadius: 12, padding: "20px 24px", textAlign: "center" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 8px" }}>FSP Score</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.2rem", fontWeight: 800, color: p.color, margin: "0 0 4px", lineHeight: 1 }}>{p.score}<span style={{ fontSize: "1rem", color: "#A89880", fontWeight: 400 }}>/10</span></p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.2rem", fontWeight: 800, color: p.color, margin: "0 0 4px", lineHeight: 1 }}>{p.score}<span style={{ fontSize: "1rem", color: "#A89880", fontWeight: 400 }}>/10</span></p>
                 <p style={{ fontWeight: 700, color: "#1A1714", margin: "0 0 8px" }}>{p.provider}</p>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", margin: 0 }}>{p.wins} categories won</p>
               </div>
@@ -334,7 +334,7 @@ export default function WellmedrVsRoBodyPage() {
             ].map((p) => (
               <div key={p.provider} style={{ border: `1px solid ${p.color}`, borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ padding: "14px 18px", backgroundColor: p.color }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#fff", margin: 0 }}>{p.provider}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#fff", margin: 0 }}>{p.provider}</p>
                 </div>
                 {p.plans.map((plan, i) => (
                   <div key={i} style={{ padding: "12px 18px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
@@ -434,7 +434,7 @@ export default function WellmedrVsRoBodyPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
             <div style={{ backgroundColor: "#F8F2E4", border: "2px solid #C4622D", borderRadius: 12, padding: "24px 24px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>WellMedr</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>WellMedr</p>
                 <span style={{ padding: "2px 8px", backgroundColor: "#C4622D", color: "#fff", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em" }}>OUR TOP PICK</span>
               </div>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, marginBottom: 16 }}>Compounded tirzepatide from $88/mo. Microdosing available. Same-day consultations. US residents only.</p>
@@ -454,7 +454,7 @@ export default function WellmedrVsRoBodyPage() {
             </div>
 
             <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "24px 24px" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Ro Body</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 12 }}>Ro Body</p>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, marginBottom: 16 }}>Compounded semaglutide from $99/mo. Branded Wegovy/Ozempic options. Insurance assistance available. US only.</p>
               <p style={{ fontSize: 12, color: "#8A8480", fontStyle: "italic" }}>
                 Ro Body is not an affiliate partner. We link editorially only. Visit robody.com directly.

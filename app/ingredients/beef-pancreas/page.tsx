@@ -60,7 +60,7 @@ export default function BeefPancreasPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Ingredient Research</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             Beef Pancreas Supplement
             <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.7em", marginTop: 8 }}>Digestive Enzymes, Zinc & the Like-Supports-Like Claim</em>
           </h1>
@@ -72,7 +72,7 @@ export default function BeefPancreasPage() {
           {[{ label: "Pancreatin enzymes", value: "Amylase, Lipase, Protease", sub: "Digestive enzyme complex" }, { label: "Zinc per 100g", value: "2–4mg", sub: "18–36% Daily Value" }, { label: "Thiamine (B1) per 100g", value: "~0.1mg", sub: "9% Daily Value" }, { label: "Niacin (B3) per 100g", value: "~4mg", sub: "25% Daily Value" }, { label: "Protein per 100g", value: "~15g", sub: "Complete amino acids" }, { label: "Fat per 100g", value: "~16g", sub: "Including fat-soluble vitamins" }].map((stat) => (
             <div key={stat.label} style={{ padding: "14px 16px", backgroundColor: "#252220", borderRadius: 8 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 6 }}>{stat.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: stat.value.length > 10 ? 13 : 20, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{stat.value}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: stat.value.length > 10 ? 13 : 20, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{stat.value}</p>
               <p style={{ fontSize: 11, color: "#8A8480" }}>{stat.sub}</p>
             </div>
           ))}
@@ -83,7 +83,7 @@ export default function BeefPancreasPage() {
           {benefits.map((b, i) => (
             <div key={i} style={{ padding: 20, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{b.claim}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{b.claim}</p>
                 <EvidenceBadge level={b.evidence} />
               </div>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.08em", marginBottom: 6 }}>{b.citation}</p>
@@ -96,7 +96,7 @@ export default function BeefPancreasPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
             <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
@@ -107,7 +107,7 @@ export default function BeefPancreasPage() {
           {[{ name: "Beef Liver", desc: "Retinol, B12, heme iron", href: "/ingredients/beef-liver" }, { name: "Beef Heart", desc: "CoQ10, carnitine", href: "/ingredients/beef-heart" }, { name: "Beef Kidney", desc: "Selenium, B2", href: "/ingredients/beef-kidney" }, { name: "Beef Spleen", desc: "Heme iron, immune peptides", href: "/ingredients/beef-spleen" }].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
               <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
                 <p style={{ fontSize: 12, color: "#5C5650" }}>{item.desc}</p>
               </div>
             </Link>

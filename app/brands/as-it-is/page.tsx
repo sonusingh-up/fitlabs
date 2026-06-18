@@ -282,7 +282,7 @@ export default function AsItIsNutritionBrandPage() {
         {/* ── Hero Banner ─────────────────────────────────────────────────── */}
         <div style={{ width: "100%", minHeight: 260, background: "linear-gradient(135deg, #0D1F12 0%, #1A3320 45%, #0F2216 100%)", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(80,200,100,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(80,200,100,0.03) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(6rem, 18vw, 14rem)", fontWeight: 800, color: "rgba(80,200,100,0.03)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>AII</span>
+          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(6rem, 18vw, 14rem)", fontWeight: 800, color: "rgba(80,200,100,0.03)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>AII</span>
 
           <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", width: "100%", padding: "40px 24px 36px", zIndex: 1 }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>
@@ -293,7 +293,7 @@ export default function AsItIsNutritionBrandPage() {
               <span style={{ padding: "3px 10px", backgroundColor: "rgba(80,200,100,0.1)", border: "1px solid rgba(80,200,100,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(100,220,120,0.75)", textTransform: "uppercase" }}>Zero Filler</span>
             </div>
 
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
               AS-IT-IS Nutrition
             </h1>
             <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.55)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
@@ -313,7 +313,7 @@ export default function AsItIsNutritionBrandPage() {
             {stats.map((s, i) => (
               <div key={s.label} style={{ padding: "18px 20px", borderRight: i < stats.length - 1 ? "1px solid #D4C9B8" : "none" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 5 }}>{s.label}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
               </div>
             ))}
           </div>
@@ -369,7 +369,7 @@ export default function AsItIsNutritionBrandPage() {
                 {/* Brand identity visual */}
                 <div style={{ width: "100%", aspectRatio: "16 / 9", background: "linear-gradient(135deg, #0D1F12 0%, #1A3320 100%)", borderRadius: 10, border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <div style={{ textAlign: "center" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 2.8rem)", fontWeight: 800, color: "rgba(242,235,217,0.12)", letterSpacing: "-0.04em", margin: 0, lineHeight: 1 }}>AS-IT-IS</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 2.8rem)", fontWeight: 800, color: "rgba(242,235,217,0.12)", letterSpacing: "-0.04em", margin: 0, lineHeight: 1 }}>AS-IT-IS</p>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "rgba(80,200,100,0.25)", marginTop: 8 }}>Nothing Added. Nothing Hidden.</p>
                   </div>
                 </div>
@@ -455,13 +455,13 @@ export default function AsItIsNutritionBrandPage() {
               {products.map((product) => (
                 <div key={product.name} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
                   <div className="aii-product-placeholder">
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(80,200,100,0.05)", letterSpacing: "-0.05em" }}>{product.name[0]}</span>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(80,200,100,0.05)", letterSpacing: "-0.05em" }}>{product.name[0]}</span>
                     <span style={{ position: "absolute", top: 8, right: 10, padding: "2px 8px", backgroundColor: "rgba(80,200,100,0.07)", border: "1px solid rgba(80,200,100,0.12)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", color: "rgba(100,220,120,0.45)" }}>{product.category}</span>
                   </div>
                   <div style={{ height: 2, background: "linear-gradient(90deg, #C4622D 0%, transparent 70%)", flexShrink: 0 }} />
                   <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>{product.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>{product.name}</h3>
                       <div style={{ textAlign: "right", flexShrink: 0, marginLeft: 8 }}>
                         <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", margin: 0 }}>{product.price}</p>
                         <p style={{ fontSize: 9, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{product.priceNote}</p>
@@ -501,7 +501,7 @@ export default function AsItIsNutritionBrandPage() {
               {faqs.map((faq, i) => (
                 <details key={i} className="aii-faq-item" style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
                   <summary style={{ padding: "16px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", lineHeight: 1.4 }}>{faq.q}</span>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", lineHeight: 1.4 }}>{faq.q}</span>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, color: "#A89880", flexShrink: 0, lineHeight: 1 }}>+</span>
                   </summary>
                   <div style={{ padding: "0 20px 16px", borderTop: "1px solid #EDE8DF" }}>

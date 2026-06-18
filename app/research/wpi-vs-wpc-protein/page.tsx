@@ -136,7 +136,7 @@ export default function WPIvsWPCResearch() {
             </div>
 
             {/* H1 */}
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
               WPI vs WPC Protein:{" "}
               <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>What the Evidence Actually Shows</em>
             </h1>
@@ -161,7 +161,7 @@ export default function WPIvsWPCResearch() {
                 </div>
                 <div>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                  <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Fitlab Research Team
                   </Link>
                 </div>
@@ -169,12 +169,12 @@ export default function WPIvsWPCResearch() {
               <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
               </div>
               <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>June 3, 2026</p>
+                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>June 3, 2026</p>
               </div>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function WPIvsWPCResearch() {
                 { value: "30 min", label: "Earlier peak plasma amino acids for hydrolysed WPI vs WPC", sub: "Tang et al., J Appl Physiol, 2009" },
               ].map((stat) => (
                 <div key={stat.value} style={{ borderLeft: "2px solid #2D6A4F", paddingLeft: 14 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
                   <p style={{ fontSize: 12, color: "rgba(242,235,217,0.7)", lineHeight: 1.4, margin: "0 0 4px" }}>{stat.label}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
                 </div>
@@ -241,7 +241,7 @@ export default function WPIvsWPCResearch() {
                   { label: "Calories per 25g protein", wpc: "120–130 kcal", wpi: "100–110 kcal" },
                 ].map((row, i) => (
                   <div key={row.label} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", padding: "11px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                    <span style={{ fontSize: 12, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.label}</span>
+                    <span style={{ fontSize: 12, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.label}</span>
                     <span style={{ fontSize: 12, color: "#8B7355", fontFamily: "var(--font-dm-mono), monospace" }}>{row.wpc}</span>
                     <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.wpi}</span>
                   </div>
@@ -300,12 +300,12 @@ export default function WPIvsWPCResearch() {
               ].map((item) => (
                 <div key={item.label} style={{ padding: "16px 18px", border: `1px solid ${item.border}`, borderRadius: 8, backgroundColor: item.bg }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: item.color, marginBottom: 6 }}>{item.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>{item.leucine} leucine</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>{item.leucine} leucine</p>
                   <p style={{ fontSize: 12, color: "#5C5650" }}><strong>{item.threshold}</strong> the 2.3g mTOR activation threshold (Norton &amp; Layman, 2006)</p>
                 </div>
               ))}
             </div>
-            <p style={{ fontSize: 14, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.65 }}>
+            <p style={{ fontSize: 14, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.65 }}>
               Both types deliver sufficient leucine at a standard 25g serving to maximally stimulate muscle protein synthesis. The 0.1–0.2g difference between them is below the threshold that produces any detectable difference in anabolic response.
             </p>
           </section>
@@ -326,7 +326,7 @@ export default function WPIvsWPCResearch() {
               ].map((s, i) => (
                 <div key={s.range} style={{ backgroundColor: s.risk === "No issue" ? "rgba(26,107,58,0.06)" : s.risk === "Possible issue" ? "rgba(138,64,32,0.05)" : "rgba(146,98,10,0.05)", border: `1px solid ${s.risk === "No issue" ? "rgba(26,107,58,0.2)" : s.risk === "Possible issue" ? "rgba(138,64,32,0.2)" : "rgba(146,98,10,0.2)"}`, borderRadius: 8, padding: "14px" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: s.risk === "No issue" ? "#1A6B3A" : s.risk === "Possible issue" ? "#8A4020" : "#92620A", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
                   <p style={{ fontSize: 11, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
                 </div>
               ))}
@@ -446,10 +446,10 @@ export default function WPIvsWPCResearch() {
                   { tier: "WPI Hydrolysed (premium)", serve: "$1.80", annual: "~$657/year", note: "Fastest absorption; highest cost" },
                 ].map((row, i) => (
                   <div key={row.tier} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 2fr", padding: "11px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
-                    <span style={{ fontSize: 13, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 500 }}>{row.tier}</span>
+                    <span style={{ fontSize: 13, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 500 }}>{row.tier}</span>
                     <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#5C5650" }}>{row.serve}</span>
                     <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#1A1714", fontWeight: 600 }}>{row.annual}</span>
-                    <span style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.note}</span>
+                    <span style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>{row.note}</span>
                   </div>
                 ))}
               </div>
@@ -538,7 +538,7 @@ export default function WPIvsWPCResearch() {
             <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
             <div style={{ position: "relative" }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
                 WPI and WPC produce identical muscle gains — the real difference is lactose, calories, and cost.
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -556,7 +556,7 @@ export default function WPIvsWPCResearch() {
                 ))}
               </div>
               <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid rgba(242,235,217,0.1)", display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <Link href="/reviews/dymatize-iso100-review-2026" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link href="/reviews/dymatize-iso100-review-2026" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Best WPI: Dymatize ISO100 Review →
                 </Link>
                 <Link href="/reviews/optimum-nutrition-gold-standard-whey" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", border: "1px solid rgba(242,235,217,0.2)", color: "rgba(242,235,217,0.7)", fontSize: 12, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
@@ -572,7 +572,7 @@ export default function WPIvsWPCResearch() {
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {faqSchema.mainEntity.map((item, i) => (
                 <details key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", overflow: "hidden" }}>
-                  <summary style={{ padding: "16px 20px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                  <summary style={{ padding: "16px 20px", fontFamily: "var(--font-hanken), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
                     <span>{item.name}</span>
                     <span style={{ color: "#2D6A4F", fontSize: 18, flexShrink: 0 }}>+</span>
                   </summary>
@@ -655,7 +655,7 @@ export default function WPIvsWPCResearch() {
                 { href: "/research/protein-timing-myth", label: "The Protein Timing Myth", sub: "Schoenfeld et al. on why total daily intake beats the anabolic window." },
               ].map((link) => (
                 <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
+                  <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
                   <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{link.sub}</p>
                 </Link>
               ))}

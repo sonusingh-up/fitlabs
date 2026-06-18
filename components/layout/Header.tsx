@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
 
 const nav = [
@@ -43,18 +42,6 @@ const nav = [
     ],
   },
   {
-    label: "Brands",
-    href: "/brands",
-    children: [
-      { label: "All Brands", href: "/brands" },
-      { label: "Optimum Nutrition", href: "/brands/optimum-nutrition" },
-      { label: "MyProtein", href: "/brands/myprotein" },
-      { label: "MuscleBlaze", href: "/brands/muscleblaze" },
-      { label: "AS-IT-IS Nutrition", href: "/brands/as-it-is" },
-      { label: "NOW Sports", href: "/brands/now-sports" },
-    ],
-  },
-  {
     label: "Goals",
     href: "/goals",
     children: [
@@ -66,6 +53,7 @@ const nav = [
       { label: "Recovery", href: "/goals/recovery" },
     ],
   },
+  { label: "Tools", href: "/tools" },
   {
     label: "Research",
     href: "/research",
@@ -75,16 +63,23 @@ const nav = [
       { label: "Methodology", href: "/methodology" },
     ],
   },
-  {
-    label: "About",
-    href: "/authors",
-    children: [
-      { label: "Our Team", href: "/authors" },
-      { label: "Editorial Policy", href: "/editorial-policy" },
-      { label: "Methodology", href: "/methodology" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
+];
+
+const marqueeItems = [
+  "142+ reviews",
+  "87 ingredients analysed",
+  "18h avg research per review",
+  "Zero affiliate influence",
+  "12 categories covered",
+  "Evidence-led scoring",
+  "Editorially independent",
+  "142+ reviews",
+  "87 ingredients analysed",
+  "18h avg research per review",
+  "Zero affiliate influence",
+  "12 categories covered",
+  "Evidence-led scoring",
+  "Editorially independent",
 ];
 
 export default function Header() {
@@ -93,179 +88,222 @@ export default function Header() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   return (
-    <header style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", position: "sticky", top: 0, zIndex: 50 }}>
+    <header style={{ position: "sticky", top: 0, zIndex: 50 }}>
 
-      {/* Trust credential strip — hidden on mobile */}
-      <div className="header-strip" style={{ borderBottom: "1px solid #F3F4F6", padding: "6px 0", backgroundColor: "#F8FAFB" }}>
+      {/* Utility bar */}
+      <div
+        className="header-strip"
+        style={{ backgroundColor: "#0a1410", padding: "6px 0" }}
+      >
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, color: "#6B7280", fontWeight: 500 }}>
-            Editorially independent · Evidence-led · No sponsored content
+          <span style={{
+            fontFamily: "var(--font-jetbrains), monospace",
+            fontSize: 11, color: "#7fb89a", letterSpacing: "0.06em", textTransform: "uppercase",
+          }}>
+            Editorially Independent · Evidence-Led · No Sponsored Content
           </span>
-          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 11, color: "#9CA3AF" }}>
+          <span style={{
+            fontFamily: "var(--font-jetbrains), monospace",
+            fontSize: 11, color: "#4a6b58", letterSpacing: "0.06em", textTransform: "uppercase",
+          }}>
             USA &amp; Global
           </span>
         </div>
       </div>
 
-      {/* Main nav row */}
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 16px" }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 60 }}>
+      {/* Main nav */}
+      <div style={{ backgroundColor: "#101a16", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 16px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
 
-          {/* Logo */}
-          <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }} aria-label="Fitlabreviews home">
-            <Image
-              src="/logo-banner.svg"
-              alt="Fitlabreviews"
-              width={148}
-              height={36}
-              priority
-              style={{ objectFit: "contain", objectPosition: "left" }}
-            />
-          </Link>
+            {/* Logo */}
+            <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", flexShrink: 0 }} aria-label="Fitlabreviews home">
+              <span style={{
+                width: 34, height: 34, borderRadius: 9, backgroundColor: "#14a474",
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                fontFamily: "var(--font-hanken), sans-serif",
+                fontWeight: 800, fontSize: 15, color: "#06120c", letterSpacing: "-0.02em", flexShrink: 0,
+              }}>FL</span>
+              <span style={{
+                fontFamily: "var(--font-newsreader), Georgia, serif",
+                fontSize: 20, fontWeight: 600, color: "#e8efe9", letterSpacing: "-0.02em",
+              }}>
+                fitlab<span style={{ color: "#7fd8b4" }}>reviews</span>
+              </span>
+            </Link>
 
-          {/* Desktop nav */}
-          <nav className="header-desktop-nav" style={{ alignItems: "center", gap: 2 }}>
-            {nav.map((item) => (
-              <div
-                key={item.label}
-                style={{ position: "relative" }}
-                onMouseEnter={() => item.children && setOpenDropdown(item.label)}
-                onMouseLeave={() => setOpenDropdown(null)}
-              >
-                <Link
-                  href={item.href}
-                  style={{
-                    display: "flex", alignItems: "center", gap: 3,
-                    padding: "6px 10px",
-                    fontSize: 14, fontWeight: 500,
-                    color: openDropdown === item.label ? "#0E8784" : "#374151",
-                    fontFamily: "var(--font-dm-sans), sans-serif",
-                    borderRadius: 6,
-                    transition: "color 150ms var(--ease-out-expo)",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                  }}
+            {/* Desktop nav */}
+            <nav className="header-desktop-nav" style={{ alignItems: "center", gap: 2 }}>
+              {nav.map((item) => (
+                <div
+                  key={item.label}
+                  style={{ position: "relative" }}
+                  onMouseEnter={() => item.children && setOpenDropdown(item.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  {item.label}
-                  {item.children && (
-                    <span style={{
-                      display: "inline-flex",
-                      transition: "transform 200ms var(--ease-out-expo)",
-                      transform: openDropdown === item.label ? "rotate(180deg)" : "rotate(0deg)",
-                      opacity: 0.4,
-                    }}>
-                      <ChevronDown size={12} />
-                    </span>
-                  )}
-                </Link>
-
-                {item.children && openDropdown === item.label && (
-                  <div
-                    className="nav-dropdown"
+                  <Link
+                    href={item.href}
                     style={{
-                      position: "absolute", top: "100%", left: 0, minWidth: 210,
-                      backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB",
-                      boxShadow: "0 12px 40px -8px rgba(0,0,0,0.12)",
-                      borderRadius: 10, padding: "6px 0", zIndex: 100,
+                      display: "flex", alignItems: "center", gap: 3,
+                      padding: "6px 11px",
+                      fontSize: 14, fontWeight: 600,
+                      color: openDropdown === item.label ? "#7fd8b4" : "#c8dcd1",
+                      fontFamily: "var(--font-hanken), sans-serif",
+                      borderRadius: 6,
+                      transition: "color 150ms var(--ease-out-expo)",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
                     }}
                   >
-                    {item.children.map((child, i) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        style={{
-                          display: "flex", alignItems: "center", justifyContent: "space-between",
-                          padding: "9px 16px", fontSize: 13, color: "#374151",
-                          fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none",
-                          transition: "background-color 120ms var(--ease-out-expo), color 120ms var(--ease-out-expo)",
-                          animationDelay: `${i * 20}ms`,
-                        }}
-                        onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLElement).style.backgroundColor = "#F0FDFA";
-                          (e.currentTarget as HTMLElement).style.color = "#0E8784";
-                        }}
-                        onMouseLeave={(e) => {
-                          (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
-                          (e.currentTarget as HTMLElement).style.color = "#374151";
-                        }}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+                    {item.label}
+                    {item.children && (
+                      <span style={{
+                        display: "inline-flex",
+                        transition: "transform 200ms var(--ease-out-expo)",
+                        transform: openDropdown === item.label ? "rotate(180deg)" : "rotate(0deg)",
+                        opacity: 0.5,
+                      }}>
+                        <ChevronDown size={12} />
+                      </span>
+                    )}
+                  </Link>
 
-          {/* Right actions */}
-          <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0 }}>
-            <Link
-              href="/search"
-              style={{
-                color: "#6B7280", display: "flex", alignItems: "center", padding: 6,
-                borderRadius: 6,
-                transition: "color 150ms var(--ease-out-expo), background-color 150ms var(--ease-out-expo)",
-              }}
-              aria-label="Search"
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "#111827";
-                (e.currentTarget as HTMLElement).style.backgroundColor = "#F3F4F6";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.color = "#6B7280";
-                (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
-              }}
-            >
-              <Search size={18} />
-            </Link>
-            <Link
-              href="/reviews"
-              className="header-cta-btn btn-primary"
-              style={{ fontSize: 12 }}
-            >
-              All Reviews
-            </Link>
-            {/* Hamburger — mobile only */}
-            <button
-              onClick={() => { setMobileOpen(!mobileOpen); setMobileExpanded(null); }}
-              className="header-hamburger"
-              style={{
-                color: "#111827", padding: 6, background: "none", border: "none", cursor: "pointer",
-                borderRadius: 6,
-                transition: "transform 100ms var(--ease-out-expo), background-color 150ms var(--ease-out-expo)",
-              }}
-              aria-label="Toggle menu"
-            >
-              <span style={{ display: "flex", transition: "transform 200ms var(--ease-out-expo)" }}>
-                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-              </span>
-            </button>
+                  {item.children && openDropdown === item.label && (
+                    <div
+                      className="nav-dropdown"
+                      style={{
+                        position: "absolute", top: "calc(100% + 4px)", left: 0, minWidth: 200,
+                        backgroundColor: "#1a2d24", border: "1px solid rgba(127,216,180,0.12)",
+                        boxShadow: "0 16px 48px -8px rgba(0,0,0,0.4)",
+                        borderRadius: 10, padding: "6px 0", zIndex: 100,
+                      }}
+                    >
+                      {item.children.map((child, i) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          style={{
+                            display: "block",
+                            padding: "9px 16px", fontSize: 13, color: "#a8c9b8",
+                            fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none",
+                            transition: "background-color 120ms, color 120ms",
+                            animationDelay: `${i * 20}ms`,
+                          }}
+                          onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(20,164,116,0.12)";
+                            (e.currentTarget as HTMLElement).style.color = "#7fd8b4";
+                          }}
+                          onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLElement).style.backgroundColor = "transparent";
+                            (e.currentTarget as HTMLElement).style.color = "#a8c9b8";
+                          }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* Right actions */}
+            <div style={{ display: "flex", alignItems: "center", gap: 6, flexShrink: 0 }}>
+              <Link
+                href="/search"
+                style={{
+                  color: "#7fb89a", display: "flex", alignItems: "center", padding: 7,
+                  borderRadius: 7, backgroundColor: "rgba(255,255,255,0.05)",
+                  transition: "color 150ms, background-color 150ms",
+                }}
+                aria-label="Search"
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.color = "#e8efe9";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.1)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.color = "#7fb89a";
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "rgba(255,255,255,0.05)";
+                }}
+              >
+                <Search size={17} />
+              </Link>
+              <Link
+                href="/newsletter"
+                className="header-cta-btn"
+                style={{
+                  backgroundColor: "#14a474", color: "#06120c",
+                  fontFamily: "var(--font-hanken), sans-serif",
+                  fontSize: 13, fontWeight: 700, letterSpacing: "0.01em",
+                  padding: "8px 18px", borderRadius: 999,
+                  textDecoration: "none", transition: "background-color 150ms, transform 100ms",
+                  display: "inline-flex", alignItems: "center",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "#12b882";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.backgroundColor = "#14a474";
+                }}
+              >
+                Subscribe
+              </Link>
+
+              {/* Hamburger — mobile only */}
+              <button
+                onClick={() => { setMobileOpen(!mobileOpen); setMobileExpanded(null); }}
+                className="header-hamburger"
+                style={{
+                  color: "#c8dcd1", padding: 6, background: "rgba(255,255,255,0.06)", border: "none",
+                  cursor: "pointer", borderRadius: 7,
+                  transition: "transform 100ms, background-color 150ms",
+                }}
+                aria-label="Toggle menu"
+              >
+                {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu drawer */}
+      {/* Trust marquee */}
+      <div style={{ backgroundColor: "#e7f2ec", borderBottom: "1px solid #d2e5db", overflow: "hidden", padding: "7px 0" }}>
+        <div className="trust-marquee-track">
+          {marqueeItems.map((item, i) => (
+            <span key={i} style={{
+              display: "inline-flex", alignItems: "center", gap: 20, paddingRight: 48,
+              fontFamily: "var(--font-jetbrains), monospace",
+              fontSize: 11, color: "#2a6145", fontWeight: 500, letterSpacing: "0.06em",
+              textTransform: "uppercase", whiteSpace: "nowrap",
+            }}>
+              <span style={{ width: 5, height: 5, borderRadius: "50%", backgroundColor: "#0f7a5a", display: "inline-block", flexShrink: 0 }} />
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile drawer */}
       {mobileOpen && (
         <div
           className="mobile-drawer"
-          style={{ borderTop: "1px solid #E5E7EB", backgroundColor: "#FFFFFF", maxHeight: "80vh", overflowY: "auto" }}
+          style={{ backgroundColor: "#101a16", borderTop: "1px solid rgba(255,255,255,0.06)", maxHeight: "80vh", overflowY: "auto" }}
         >
           <div style={{ padding: "8px 16px 24px" }}>
             {nav.map((item) => (
               <div
                 key={item.label}
                 className="mobile-nav-item"
-                style={{ borderBottom: "1px solid #F3F4F6" }}
+                style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <Link
                     href={item.href}
                     style={{
                       display: "block", flex: 1, fontWeight: 600, fontSize: 15,
-                      color: "#111827", fontFamily: "var(--font-dm-sans), sans-serif",
-                      textDecoration: "none", padding: "12px 0",
-                      transition: "color 150ms var(--ease-out-expo)",
+                      color: "#c8dcd1", fontFamily: "var(--font-hanken), sans-serif",
+                      textDecoration: "none", padding: "13px 0",
                     }}
                     onClick={() => setMobileOpen(false)}
                   >
@@ -275,7 +313,8 @@ export default function Header() {
                     <button
                       onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                       style={{
-                        background: "none", border: "none", cursor: "pointer", padding: "12px 4px", color: "#9CA3AF",
+                        background: "none", border: "none", cursor: "pointer",
+                        padding: "13px 4px", color: "#4a6b58",
                         display: "flex", alignItems: "center",
                       }}
                     >
@@ -290,22 +329,20 @@ export default function Header() {
                   )}
                 </div>
                 {item.children && mobileExpanded === item.label && (
-                  <div
-                    style={{ paddingLeft: 12, paddingBottom: 8, animation: "fadeUp 200ms var(--ease-out-expo) both" }}
-                  >
+                  <div style={{ paddingLeft: 12, paddingBottom: 10 }}>
                     {item.children.map((child) => (
                       <Link
                         key={child.label}
                         href={child.href}
                         style={{
-                          display: "block", fontSize: 13, color: "#6B7280",
-                          fontFamily: "var(--font-dm-sans), sans-serif", padding: "6px 0",
+                          display: "block", fontSize: 13, color: "#6b9980",
+                          fontFamily: "var(--font-hanken), sans-serif", padding: "7px 0",
                           textDecoration: "none",
-                          transition: "color 120ms var(--ease-out-expo)",
+                          transition: "color 120ms",
                         }}
                         onClick={() => setMobileOpen(false)}
-                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#0E8784")}
-                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#6B7280")}
+                        onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#7fd8b4")}
+                        onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#6b9980")}
                       >
                         {child.label}
                       </Link>
@@ -316,12 +353,16 @@ export default function Header() {
             ))}
             <div style={{ paddingTop: 16 }}>
               <Link
-                href="/reviews"
-                className="btn-primary"
-                style={{ display: "block", textAlign: "center", borderRadius: 8, fontSize: 13 }}
+                href="/newsletter"
+                style={{
+                  display: "block", textAlign: "center", backgroundColor: "#14a474",
+                  color: "#06120c", fontFamily: "var(--font-hanken), sans-serif",
+                  fontWeight: 700, fontSize: 13, padding: "12px 24px", borderRadius: 999,
+                  textDecoration: "none",
+                }}
                 onClick={() => setMobileOpen(false)}
               >
-                Browse All Reviews →
+                Subscribe to Research Dispatch
               </Link>
             </div>
           </div>

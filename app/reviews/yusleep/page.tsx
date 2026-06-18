@@ -390,7 +390,7 @@ export default function YuSleepReview() {
                   <span style={{ width: 24, height: 1, backgroundColor: "rgba(242,235,217,0.15)", display: "inline-block", flexShrink: 0 }} />
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B4FA0", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Sleep Supplement</span>
                 </div>
-                <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   YuSleep<br />
                   <em style={{ fontWeight: 400, color: "#A89880", fontSize: "0.65em" }}>Does It Actually Work?</em>
                 </h1>
@@ -399,7 +399,7 @@ export default function YuSleepReview() {
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   <a href="https://maxwebpromo.com/11204/3795/3/" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Check Price <ExternalLink size={13} />
                   </a>
                   <Link href="/methodology"
@@ -456,11 +456,11 @@ export default function YuSleepReview() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Independent Editorial</span>
               </p>
@@ -476,7 +476,7 @@ export default function YuSleepReview() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links below may earn a commission. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -504,19 +504,19 @@ export default function YuSleepReview() {
 
               {/* § 1 — Quick Verdict */}
               <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
 
                 {/* Dark verdict panel */}
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 14, marginBottom: 28 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B4FA0", marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-059</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4, marginBottom: 0 }}>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4, marginBottom: 0 }}>
                         Good ingredients on paper. Zero transparency on doses. At $2.30 a night, that's a problem.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
-                      <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1 }}>{editorialScore}</div>
+                      <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1 }}>{editorialScore}</div>
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
@@ -545,7 +545,7 @@ export default function YuSleepReview() {
                     const color = p.score >= 7 ? "#2D6A4F" : p.score >= 5 ? "#8B7355" : "#8B3A2C";
                     return (
                       <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
+                        <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>{labels[p.pillar]}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>{weights[p.pillar]} weight</div>
                       </div>
@@ -570,7 +570,7 @@ export default function YuSleepReview() {
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>YuSleep</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Nano-Enhanced Sleep Drops</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Nano-Enhanced Sleep Drops</p>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
                       {[
                         { val: `${editorialScore}/10`, label: "FSP Score" },
@@ -578,7 +578,7 @@ export default function YuSleepReview() {
                         { val: "10", label: "Ingredients" },
                       ].map((stat) => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
                           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>{stat.label}</p>
                         </div>
                       ))}
@@ -586,10 +586,10 @@ export default function YuSleepReview() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>From / 30 servings</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$69.00</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$69.00</p>
                       </div>
                       <a href="https://maxwebpromo.com/11204/3795/3/" target="_blank" rel="nofollow noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
                         Check Price <ExternalLink size={12} />
                       </a>
                     </div>
@@ -599,7 +599,7 @@ export default function YuSleepReview() {
 
               {/* § 2 — What Is YuSleep? */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is YuSleep?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is YuSleep?</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 16 }}>
                   YuSleep is a liquid sleep supplement sold as "nano-enhanced sleep drops." You take two droppers 30 minutes before bed. The formula contains ten ingredients including <Link href="/ingredients/melatonin" style={{ color: "#6B4FA0", textDecoration: "none" }}>melatonin</Link> (0.9 mg — the only dose disclosed), <Link href="/ingredients/l-theanine" style={{ color: "#6B4FA0", textDecoration: "none" }}>L-theanine</Link>, magnesium glycinate, apigenin, 5-HTP, lemon balm extract, GABA, red tart cherry extract, and vitamins B6 and B2.
                 </p>
@@ -620,29 +620,29 @@ export default function YuSleepReview() {
 
               {/* § 3 — Score Breakdown */}
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-059" />
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 16, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 16, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                   FSP v2.1 composite score: <strong style={{ color: "#1A1714" }}>{composite.toFixed(1)}</strong> / 10 (weighted pillars minus red flag deductions). Editorial score: <strong style={{ color: "#1A1714" }}>{editorialScore}</strong> / 10. Scores are set independently — composite reflects the algorithmic weighting, editorial reflects our overall assessment.
                 </p>
               </section>
 
               {/* § 4 — Flags */}
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 5 — Supplement Facts */}
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Serving size: 2 droppers (approx. 1 ml). Based on publicly available information as of May 2026.
                 </p>
 
                 <div style={{ padding: "14px 18px", backgroundColor: "#FFF5F5", border: "1px solid #F5BFBF", borderRadius: 8, marginBottom: 20, display: "flex", gap: 10, alignItems: "flex-start" }}>
                   <AlertTriangle size={14} style={{ color: "#8B3A2C", flexShrink: 0, marginTop: 2 }} />
-                  <p style={{ fontSize: 13, color: "#8B3A2C", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#8B3A2C", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     <strong>YuSleep does not publish a supplement facts panel on their website.</strong> The only disclosed dose is melatonin (0.9 mg). All other ingredient amounts are unknown. The table below reflects what is and is not disclosed — not inferred estimates.
                   </p>
                 </div>
@@ -670,7 +670,7 @@ export default function YuSleepReview() {
                         { name: "Vitamin B2 (Riboflavin)", amount: "Undisclosed", clinical: "1.1–1.3 mg (RDA)" },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.name}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
                           <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: row.amount === "0.9 mg" ? "#2D6A4F" : "#8B3A2C" }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
                             {row.clinical !== "—" ? (
@@ -686,15 +686,15 @@ export default function YuSleepReview() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Clinical ranges based on published human trials. "Undisclosed" = not found on product page or label as of May 2026.
                 </p>
               </section>
 
               {/* § 6 — Ingredient Breakdown */}
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Each ingredient is assessed on evidence quality and typical clinical dose — not on YuSleep's formula specifically, since doses are undisclosed.
                 </p>
 
@@ -756,21 +756,21 @@ export default function YuSleepReview() {
                 ].map((ing, i) => (
                   <div key={ing.name} style={{ marginBottom: i < 8 ? 28 : 0, padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, marginBottom: 10, flexWrap: "wrap" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{ing.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{ing.name}</h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B4FA0", marginBottom: 8 }}>{ing.verdict}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ing.body}</p>
+                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
                   </div>
                 ))}
               </section>
 
               {/* § 7 — Lab & Verification */}
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: "#FFF5F5", border: "1px solid #F5BFBF", borderRadius: 12, marginBottom: 20 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8B3A2C", marginBottom: 10 }}>No Third-Party Verification Found</p>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     As of May 2026, YuSleep holds no NSF Certified for Sport, Informed Choice, Informed Sport, USP Verified, or BSCG certification. No certificate of analysis (COA) for heavy metals, microbials, or ingredient identity is published or linked on their website. The brand cites 20 PubMed references on their page — but citing external research is different from having your actual product independently tested.
                   </p>
                 </div>
@@ -798,17 +798,17 @@ export default function YuSleepReview() {
 
               {/* § 8 — Claim Audit */}
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 9 — How to Take It */}
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 16 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Brand Protocol</p>
-                  <p style={{ fontSize: 15, color: "#1A1714", fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>Take 2 droppers, 30 minutes before bed.</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 15, color: "#1A1714", fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Take 2 droppers, 30 minutes before bed.</p>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     The brand does not specify whether to take it sublingually (under the tongue), mixed into water, or swallowed directly. This matters for absorption — sublingual delivery bypasses first-pass digestion and may be relevant to the "nano-enhanced" claim. No guidance is given.
                   </p>
                 </div>
@@ -822,7 +822,7 @@ export default function YuSleepReview() {
                       "5-HTP: take with or without food, 30–60 min before bed. Avoid combining with antidepressants.",
                       "GABA + Lemon Balm: best taken on an empty stomach or with light carbohydrates for CNS effect.",
                     ].map((tip, i) => (
-                      <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>{tip}</li>
+                      <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>{tip}</li>
                     ))}
                   </ul>
                 </div>
@@ -830,7 +830,7 @@ export default function YuSleepReview() {
 
               {/* § 10 — vs. Competitors */}
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
 
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 620, width: "100%" }}>
@@ -850,9 +850,9 @@ export default function YuSleepReview() {
                         { product: "OLLY Sleep", form: "Gummies", actives: "Melatonin 5mg, L-Theanine 100mg, Botanicals", doses: "Partial", cert: "None listed", price: "$0.50", highlight: false },
                       ].map((row, i) => (
                         <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(107,79,160,0.06)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.product}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.form}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.actives}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.product}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.form}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 11, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.actives}</td>
                           <td style={{ padding: "11px 14px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: row.doses.startsWith("Yes") ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.doses.startsWith("Yes") ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 10, color: row.doses.startsWith("Yes") ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600, whiteSpace: "nowrap" }}>
                               {row.doses}
@@ -865,13 +865,13 @@ export default function YuSleepReview() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Prices verified May 2026 at best available single-purchase price. YuSleep's discounted 2-month pack price used ($138 ÷ 60 servings).
                 </p>
 
                 <div style={{ marginTop: 20, padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Takeaway</p>
-                  <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     Every main competitor publishes full or partial dose information. Performance Lab Sleep is the closest premium alternative with transparent dosing and Informed Sport certification at $1.40/serving — still expensive but justifiably so. Luna offers a transparent, well-dosed capsule at $0.50/serving. YuSleep's liquid format is a genuine differentiator, but at 4–5× the per-serving cost of transparent alternatives and with no disclosed doses, the premium is unjustifiable on current evidence.
                   </p>
                 </div>
@@ -879,7 +879,7 @@ export default function YuSleepReview() {
 
               {/* § 11 — Products at a Glance */}
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                   <ProductCard
                     name="YuSleep Sleep Drops"
@@ -929,7 +929,7 @@ export default function YuSleepReview() {
 
               {/* § 12 — Pros & Cons */}
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
                     "Melatonin dosed at 0.9 mg — physiological, not pharmacological",
@@ -954,8 +954,8 @@ export default function YuSleepReview() {
 
               {/* § 13 — Safety & Side Effects */}
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
-                <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 20, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
+                <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>
                   At typical clinical doses, most of YuSleep's ingredients are well-tolerated. The undisclosed doses introduce uncertainty — both about efficacy and about safety in sensitive populations.
                 </p>
 
@@ -990,9 +990,9 @@ export default function YuSleepReview() {
                     <div key={item.label} style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: `1px solid ${item.severity === "high" ? "#F5BFBF" : item.severity === "moderate" ? "rgba(139,115,85,0.3)" : "#D4C9B8"}`, borderRadius: 10 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                         <span style={{ padding: "2px 8px", backgroundColor: item.severity === "high" ? "#8B3A2C" : item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EBD9" }}>{item.severity} risk</span>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.label}</span>
+                        <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{item.label}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.detail}</p>
+                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.detail}</p>
                     </div>
                   ))}
                 </div>
@@ -1000,7 +1000,7 @@ export default function YuSleepReview() {
 
               {/* § 14 — Price & Value */}
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="disclosed active (melatonin 0.9 mg)" />
 
                 <div style={{ marginTop: 24 }}>
@@ -1021,17 +1021,17 @@ export default function YuSleepReview() {
                           { pack: "6-Month (6 bottles)", total: "$294", perBottle: "$49.00", perServe: "$1.63", savings: "Save $300 (50% off)" },
                         ].map((row, i) => (
                           <tr key={row.pack} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                            <td style={{ padding: "11px 14px", fontSize: 13, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.pack}</td>
+                            <td style={{ padding: "11px 14px", fontSize: 13, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.pack}</td>
                             <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.total}</td>
                             <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.perBottle}</td>
                             <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.perServe}</td>
-                            <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.savings}</td>
+                            <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.savings}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
-                  <p style={{ fontSize: 13, color: "#8A8480", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#8A8480", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                     Original (single-bottle) price not listed on website at time of review. Multi-pack discounts are shown as savings off the "original" price, which may be an artificially high anchor.
                   </p>
                 </div>
@@ -1039,22 +1039,22 @@ export default function YuSleepReview() {
 
               {/* § 15 — Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B4FA0", marginBottom: 6 }}>Official Channel</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
                       From $49.00 <span style={{ fontSize: "0.55em", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ bottle (6-month pack)</span>
                     </p>
                     <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>60-day money-back guarantee · Ships within 24 hours · Prices verified May 2026.</p>
                   </div>
                   <a href="https://maxwebpromo.com/11204/3795/3/" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Check Price
                   </a>
                 </div>
                 <div style={{ marginTop: 16, padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     <strong style={{ color: "#1A1714" }}>Retailer note:</strong> YuSleep appears to be sold exclusively through its own website and affiliate channels. It is not currently listed on Amazon, and no physical retail distribution was found. Purchasing exclusively through one channel means no independent price comparison and no platform-based buyer protection (such as Amazon A-to-Z guarantee). Retain your order email and payment record if you intend to use the 60-day return policy.
                   </p>
                 </div>
@@ -1062,7 +1062,7 @@ export default function YuSleepReview() {
 
               {/* § 16 — FAQ */}
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details
@@ -1070,14 +1070,14 @@ export default function YuSleepReview() {
                       style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}
                     >
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>
                           {faq.name}
                         </span>
                         <span className="faq-icon-yusleep" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#6B4FA0" }}>
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {faq.acceptedAnswer.text}
                       </p>
                     </details>
@@ -1100,18 +1100,18 @@ export default function YuSleepReview() {
 
               {/* § 17 — Final Verdict */}
               <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 16 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B4FA0", marginBottom: 8 }}>FSP v2.1 Final Score</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1 }}>{editorialScore}</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#6B4FA0", lineHeight: 1 }}>{editorialScore}</span>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#A89880" }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4, marginBottom: 0 }}>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4, marginBottom: 0 }}>
                         Interesting idea. Not enough transparency to recommend.
                       </p>
                     </div>
@@ -1126,7 +1126,7 @@ export default function YuSleepReview() {
                     If YuSleep published a full supplement facts panel and secured a third-party certification, this review would look significantly different. Until then, we recommend choosing a fully transparent alternative. See <Link href="/reviews/transparent-labs-creatine-hmb" style={{ color: "#9B7FD0", textDecoration: "none" }}>our reviews →</Link> for products that do both.
                   </p>
                   <a href="https://maxwebpromo.com/11204/3795/3/" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#6B4FA0", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Check Current Price <ExternalLink size={14} />
                   </a>
                 </div>
@@ -1134,7 +1134,7 @@ export default function YuSleepReview() {
 
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
@@ -1151,7 +1151,7 @@ export default function YuSleepReview() {
                       { text: "Pigeon WR et al. (2010). Effects of a tart cherry juice beverage on the sleep of older adults with insomnia: a pilot study. Journal of Medicinal Food, 13(3):579–583.", url: "https://doi.org/10.1089/jmf.2009.0096" },
                       { text: "Clayton PT. (2010). B6-responsive disorders: a model of vitamin dependency. Journal of Inherited Metabolic Disease, 29(2–3):317–326.", url: "https://doi.org/10.1007/s10545-005-0243-2" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer"
                           style={{ color: "#6B4FA0", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>
@@ -1173,7 +1173,7 @@ export default function YuSleepReview() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
               <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

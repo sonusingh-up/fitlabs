@@ -358,7 +358,7 @@ export default function SeedPM02Review() {
                   <span style={{ width: 24, height: 1, backgroundColor: "rgba(242,235,217,0.15)", display: "inline-block", flexShrink: 0 }} />
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2A8A8A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Co-Biotic Sleep</span>
                 </div>
-                <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   Seed<br />
                   <em style={{ fontWeight: 400, color: "#A89880", fontSize: "0.65em" }}>PM-02 Sleep + Restore</em>
                 </h1>
@@ -367,7 +367,7 @@ export default function SeedPM02Review() {
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   <a href="https://amzn.to/4eiBPZ1" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
                   <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid rgba(242,235,217,0.15)", color: "rgba(242,235,217,0.5)", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
@@ -414,11 +414,11 @@ export default function SeedPM02Review() {
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
               <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Independent Editorial</span>
               </p>
@@ -432,7 +432,7 @@ export default function SeedPM02Review() {
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
           <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
             <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links may earn a commission. Scores are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -457,17 +457,17 @@ export default function SeedPM02Review() {
 
               {/* § 1 Quick Verdict */}
               <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 14, marginBottom: 28 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 20 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2A8A8A", marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-062</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>
                         The most innovative sleep supplement in the category. Biphasic 500mcg melatonin nails the dose. Disclosure gaps on ashwagandha and blends hold it to a 7.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
-                      <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1 }}>{editorialScore}</div>
+                      <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1 }}>{editorialScore}</div>
                       <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
@@ -482,7 +482,7 @@ export default function SeedPM02Review() {
                     const color = p.score >= 7 ? "#2D6A4F" : p.score >= 5 ? "#8B7355" : "#8B3A2C";
                     return (
                       <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, textAlign: "center" }}>
-                        <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
+                        <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>{labels[p.pillar]}</div>
                         <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>{weights[p.pillar]} weight</div>
                       </div>
@@ -506,11 +506,11 @@ export default function SeedPM02Review() {
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Seed</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>PM-02 Sleep + Restore</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>PM-02 Sleep + Restore</p>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
                       {[{ val: `${editorialScore}/10`, label: "FSP Score" }, { val: "500mcg", label: "Melatonin" }, { val: "Biphasic", label: "Release" }].map(stat => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
-                          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
+                          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
                           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>{stat.label}</p>
                         </div>
                       ))}
@@ -518,10 +518,10 @@ export default function SeedPM02Review() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
                         <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / 30 servings</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$34.99</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$34.99</p>
                       </div>
                       <a href="https://amzn.to/4eiBPZ1" target="_blank" rel="nofollow noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
                     </div>
@@ -531,7 +531,7 @@ export default function SeedPM02Review() {
 
               {/* § 2 What Is PM-02 */}
               <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Seed PM-02?</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Seed PM-02?</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 16 }}>
                   PM-02 Sleep + Restore is Seed's entry into targeted sleep supplementation, launching in late 2025 as part of their Co-Biotics product line. Seed is primarily known for DS-01® — one of the best-validated commercial probiotics, with multiple published RCTs. PM-02 brings that scientific seriousness to sleep.
                 </p>
@@ -545,23 +545,23 @@ export default function SeedPM02Review() {
 
               {/* § 3 Score Breakdown */}
               <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-062" />
               </section>
 
               {/* § 4 Flags */}
               <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 5 Supplement Facts */}
               <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 16, fontFamily: "var(--font-dm-sans), sans-serif" }}>Serving size: 2 capsules · Servings per container: 30</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 16, fontFamily: "var(--font-hanken), sans-serif" }}>Serving size: 2 capsules · Servings per container: 30</p>
                 <div style={{ padding: "12px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 16, display: "flex", gap: 12, alignItems: "flex-start" }}>
                   <ShieldCheck size={14} style={{ color: "#2A8A8A", flexShrink: 0, marginTop: 2 }} />
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     <strong style={{ color: "#1A1714" }}>Dual-capsule architecture:</strong> Outer capsule (body-facing) releases actives systemically. Inner capsule (acid-resistant, chlorophyllin coating) releases postbiotics and prebiotics in the lower GI.
                   </p>
                 </div>
@@ -588,7 +588,7 @@ export default function SeedPM02Review() {
                         { name: "Prebiotics (Wasabi + Quercetin)", cap: "Inner", amount: "Undisclosed", ok: false },
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.name}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
                           <td style={{ padding: "11px 16px", fontSize: 11, textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480" }}>{row.cap}</td>
                           <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: row.ok ? "#2D6A4F" : "#8B7355" }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
@@ -605,7 +605,7 @@ export default function SeedPM02Review() {
 
               {/* § 6 Ingredient Breakdown */}
               <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 {[
                   { name: "Biphasic Melatonin — 500 mcg", evidence: "strong" as EvidenceLevel, verdict: "Best melatonin dose in any commercial sleep supplement", body: "500mcg sits squarely within the 0.5–1mg range identified by Brzezinski et al. (2005) as producing physiological nocturnal blood levels. The biphasic release — rapid onset for sleep latency, extended for maintenance — is a meaningful pharmacokinetic improvement over standard immediate-release melatonin. Lewy et al. (1998) demonstrated low-dose melatonin's circadian phase-shifting ability; PM-02's approach respects the mechanism rather than overriding it with a pharmacological dose." },
                   { name: "Shoden® Ashwagandha — Dose Undisclosed", evidence: "moderate" as EvidenceLevel, verdict: "Premium extract with direct sleep RCT — but dose unknown", body: "Shoden is standardised to 35% withanolide glycosides, versus 5% in KSM-66 and 10% in Sensoril. Deshpande et al. (2020) conducted a randomised, double-blind, placebo-controlled trial using 120mg Shoden daily for 6 weeks and found significant improvement in sleep onset latency (−40.9%), sleep efficiency (+8%), total sleep time (+13%), and morning cortisol reduction. This is the most relevant ashwagandha data for a sleep application. Without knowing if PM-02 uses 120mg, the primary evidence claim for ashwagandha cannot be confirmed." },
@@ -616,18 +616,18 @@ export default function SeedPM02Review() {
                 ].map((ing, i) => (
                   <div key={ing.name} style={{ marginBottom: i < 5 ? 16 : 0, padding: "18px 22px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, marginBottom: 8, flexWrap: "wrap" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{ing.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{ing.name}</h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2A8A8A", marginBottom: 8 }}>{ing.verdict}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ing.body}</p>
+                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
                   </div>
                 ))}
               </section>
 
               {/* § 7 Lab */}
               <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 16 }}>
                   {[
                     { label: "ISO 17025 Accredited Testing", status: true },
@@ -644,7 +644,7 @@ export default function SeedPM02Review() {
                   ))}
                 </div>
                 <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     ISO 17025 is the international standard for testing laboratory competence — it covers calibration, testing methodology, uncertainty measurement, and quality management. It is a meaningful accreditation. Seed does not specify whether testing covers identity verification, potency, contaminants, or all three. For consumers, this is a credible but incompletely described testing claim.
                   </p>
                 </div>
@@ -652,17 +652,17 @@ export default function SeedPM02Review() {
 
               {/* § 8 Claim Audit */}
               <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 9 How to Take */}
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 16 }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>Brand Protocol</p>
-                  <p style={{ fontSize: 15, color: "#1A1714", fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>Take 2 capsules daily, ideally on an empty stomach.</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 15, color: "#1A1714", fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Take 2 capsules daily, ideally on an empty stomach.</p>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     The empty stomach recommendation is important for both capsule layers: the outer capsule actives (ashwagandha, melatonin) absorb better without food competition; the inner acid-resistant capsule needs to transit through the stomach intact, which is less reliable if food has slowed gastric motility.
                   </p>
                 </div>
@@ -670,7 +670,7 @@ export default function SeedPM02Review() {
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Practical notes</p>
                   <ul style={{ paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                     {["Take 30–45 minutes before target sleep time. At 500mcg, melatonin onset is subtle — don't expect the sedation common with 5–6mg products.", "Ashwagandha effects on cortisol and sleep quality are cumulative. Consistent daily use for 2–4 weeks is needed for full benefit (Deshpande et al., 2020 used 6 weeks).", "The postbiotic inner capsule benefits the gut microbiome — effects on the gut-brain axis may take longer to manifest than the acute melatonin effect.", "Do not crush or open the capsules — the dual architecture depends on both shells remaining intact."].map((tip, i) => (
-                      <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>{tip}</li>
+                      <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>{tip}</li>
                     ))}
                   </ul>
                 </div>
@@ -678,7 +678,7 @@ export default function SeedPM02Review() {
 
               {/* § 10 Comparison */}
               <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 640, width: "100%" }}>
                     <thead>
@@ -697,25 +697,25 @@ export default function SeedPM02Review() {
                         { product: "OLLY Sleep", mel: "5mg", ash: "—", full: "Partial", test: "None listed", price: "$0.50", highlight: false },
                       ].map((row, i) => (
                         <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(42,138,138,0.06)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.product}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.product}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: row.mel.includes("⚠") ? "#8B3A2C" : row.mel.includes("✓") ? "#2D6A4F" : "#5C5650", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>{row.mel}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.ash}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.ash}</td>
                           <td style={{ padding: "11px 14px", textAlign: "center" }}>
                             <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: row.full === "Yes" ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.full === "Yes" ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 10, color: row.full === "Yes" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.full}</span>
                           </td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.test}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.test}</td>
                           <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: row.highlight ? "#2A8A8A" : "#1A1714", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.price}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, fontFamily: "var(--font-dm-sans), sans-serif" }}>Prices verified May 2026.</p>
+                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, fontFamily: "var(--font-hanken), sans-serif" }}>Prices verified May 2026.</p>
               </section>
 
               {/* § 11 Products */}
               <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                   <ProductCard name="PM-02 Sleep + Restore" brand="Seed" category="Sleep" score={7} priceUSD="$34.99 / 30 servings" priceINR="N/A" tags={["Biphasic Melatonin 500mcg", "Shoden Ashwagandha"]} buyUrl="https://amzn.to/4eiBPZ1" buyLabel="Buy on Amazon" reviewSlug="seed-pm-02" image="Sleep-PM-02.webp" bgFrom="#071A1A" bgTo="#040E0E" accent="#2A8A8A" featured={true} />
                   <ProductCard name="Performance Lab Sleep" brand="Performance Lab" category="Sleep" score={8} priceUSD="$44.00 / 30 servings" priceINR="N/A" tags={["Clean Label Project", "Full Label"]} buyUrl="https://amzn.to/4x4WZCs" buyLabel="Buy on Amazon" reviewSlug="performance-lab-sleep" bgFrom="#091828" bgTo="#050E18" accent="#3A6FA8" />
@@ -725,7 +725,7 @@ export default function SeedPM02Review() {
 
               {/* § 12 Pros & Cons */}
               <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={["500mcg biphasic melatonin — most physiologically accurate dose in any commercial sleep supplement", "Shoden® ashwagandha — highest-potency standardised extract with direct sleep RCT (Deshpande et al., 2020)", "Dual-capsule Co-Biotic delivery targeting both body and gut microbiome — genuine innovation", "ISO 17025-accredited third-party testing", "Broad retail availability: Target, Sprouts, Amazon, seed.com", "Shelf-stable vegan formula", "B vitamins included as melatonin synthesis cofactors", "$1.17/serving — reasonable for innovation level"]}
                   cons={["Shoden ashwagandha dose undisclosed — the product's primary active ingredient amount is unknown", "Cellular Renewal Complex (12mg total) almost certainly cannot contain clinical doses of both spermidine and pterostilbene", "Gut-Brain Postbiotic (200mg) individual GABA and L. brevis amounts undisclosed", "PQQ dose undisclosed", "No Informed Sport or Clean Label Project certification", "Contaminant testing scope not specified"]}
@@ -734,7 +734,7 @@ export default function SeedPM02Review() {
 
               {/* § 13 Safety */}
               <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
                     { label: "Ashwagandha + Thyroid Medications", severity: "moderate", detail: "Ashwagandha may stimulate thyroid hormone production. Users taking levothyroxine or other thyroid medications should consult a doctor — ashwagandha can alter thyroid hormone levels in ways that may require medication adjustment." },
@@ -746,9 +746,9 @@ export default function SeedPM02Review() {
                     <div key={item.label} style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: `1px solid ${item.severity === "moderate" ? "rgba(139,115,85,0.3)" : "#D4C9B8"}`, borderRadius: 10 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                         <span style={{ padding: "2px 8px", backgroundColor: item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EBD9" }}>{item.severity} risk</span>
-                        <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.label}</span>
+                        <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{item.label}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.detail}</p>
+                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.detail}</p>
                     </div>
                   ))}
                 </div>
@@ -756,10 +756,10 @@ export default function SeedPM02Review() {
 
               {/* § 14 Value */}
               <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="melatonin (only fully disclosed active)" />
                 <div style={{ marginTop: 20, padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     <strong style={{ color: "#1A1714" }}>Note on value metric:</strong> The value metric above uses melatonin as the only fully-specified active since the ashwagandha, spermidine, and pterostilbene doses are undisclosed. This understates PM-02's value proposition — Shoden ashwagandha is an expensive, premium extract and the dual-capsule architecture has real manufacturing cost. At $1.17/serving, PM-02 is reasonably priced for its innovation level if the undisclosed doses are at clinical levels. Prices verified May 2026.
                   </p>
                 </div>
@@ -767,17 +767,17 @@ export default function SeedPM02Review() {
 
               {/* § 15 Where to Buy */}
               <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2A8A8A", marginBottom: 6 }}>Available on Amazon</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
                       $34.99 <span style={{ fontSize: "0.55em", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span>
                     </p>
                     <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>Also at Target · Sprouts · seed.com. Prices verified May 2026.</p>
                   </div>
                   <a href="https://amzn.to/4eiBPZ1" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
                 </div>
@@ -785,17 +785,17 @@ export default function SeedPM02Review() {
 
               {/* § 16 FAQ */}
               <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details key={i} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}>
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" }}>
-                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
+                        <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
                         <span className="faq-icon-seed-pm02" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#2A8A8A" }}>
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.acceptedAnswer.text}</p>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
                     </details>
                   ))}
                 </div>
@@ -804,25 +804,25 @@ export default function SeedPM02Review() {
 
               {/* § 17 Final Verdict */}
               <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 16 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2A8A8A", marginBottom: 8 }}>FSP v2.1 — REV-2026-062</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1 }}>{editorialScore}</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2A8A8A", lineHeight: 1 }}>{editorialScore}</span>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#A89880" }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>Recommended for innovation seekers. Disclose the ashwagandha dose and this becomes a 9.</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>Recommended for innovation seekers. Disclose the ashwagandha dose and this becomes a 9.</p>
                     </div>
                   </div>
                   <p style={{ fontSize: 14, color: "rgba(242,235,217,0.7)", lineHeight: 1.8, marginBottom: 28 }}>
                     Seed PM-02 is the most forward-thinking sleep supplement in this review group. The biphasic 500mcg melatonin is exactly right. Shoden ashwagandha is the most credible cortisol/sleep ingredient available. The Co-Biotic dual delivery is a genuine architectural innovation. ISO 17025 testing is credible. If Seed disclosed the ashwagandha dose, the Cellular Renewal Complex individual amounts, and the GABA/postbiotic breakdown, this would score 8–9/10. The opaque blends — particularly hiding the dose of the product's headline ingredient — prevent full recommendation. Buy it knowing the innovation is real; hope the doses match the RCTs.
                   </p>
                   <a href="https://amzn.to/4eiBPZ1" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#2A8A8A", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
                 </div>
@@ -830,7 +830,7 @@ export default function SeedPM02Review() {
 
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
                 <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
@@ -844,7 +844,7 @@ export default function SeedPM02Review() {
                       { text: "Clayton PT. (2010). B6-responsive disorders: a model of vitamin dependency. Journal of Inherited Metabolic Disease, 29(2–3):317–326.", url: "https://doi.org/10.1007/s10545-005-0243-2" },
                       { text: "Ferracioli-Oda E, Qawasmi A, Bloch MH. (2013). Meta-analysis: melatonin for the treatment of primary sleep disorders. PLOS ONE, 8(5):e63773.", url: "https://doi.org/10.1371/journal.pone.0063773" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#2A8A8A", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
                       </li>
@@ -863,7 +863,7 @@ export default function SeedPM02Review() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>More sleep supplement reviews</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>More sleep supplement reviews</h3>
               </div>
               <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>

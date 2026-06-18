@@ -469,13 +469,13 @@ const categoryGroups: { label: string; categories: string[] }[] = [
 
 const ratingColor = (r: ReviewRating): string => {
   if (r >= 9) return "#1A6B3A";
-  if (r >= 7) return "#0E8784";
+  if (r >= 7) return "#0f7a5a";
   return "#8A4020";
 };
 
 const ratingBg = (r: ReviewRating): string => {
   if (r >= 9) return "rgba(26,107,58,0.08)";
-  if (r >= 7) return "rgba(14,135,132,0.08)";
+  if (r >= 7) return "rgba(15,122,90,0.08)";
   return "rgba(138,64,32,0.08)";
 };
 
@@ -491,11 +491,11 @@ export default function ReviewsHubPage() {
     <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5", backgroundColor: "#f6f8f6" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#E5E7EB" }}>/</span>
-          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Reviews</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#e4e8e5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Reviews</span>
         </div>
       </div>
 
@@ -517,12 +517,12 @@ export default function ReviewsHubPage() {
             <a
               key={g.label}
               href={`#${g.label.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "and")}`}
-              style={{ padding: "5px 14px", border: "1px solid #E5E7EB", borderRadius: 20, fontSize: 11, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF" }}
+              style={{ padding: "5px 14px", border: "1px solid #e4e8e5", borderRadius: 20, fontSize: 11, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "#FFFFFF" }}
             >
               {g.label}
             </a>
           ))}
-          <Link href="/category" style={{ padding: "5px 14px", border: "1px solid rgba(14,135,132,0.3)", borderRadius: 20, fontSize: 11, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "rgba(14,135,132,0.04)" }}>
+          <Link href="/category" style={{ padding: "5px 14px", border: "1px solid rgba(15,122,90,0.3)", borderRadius: 20, fontSize: 11, color: "#0f7a5a", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none", backgroundColor: "rgba(15,122,90,0.04)" }}>
             Browse by Category →
           </Link>
         </div>
@@ -545,7 +545,7 @@ export default function ReviewsHubPage() {
                 {groupReviews.map((review) => (
                   <div
                     key={review.slug}
-                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)", alignItems: "stretch" }}
+                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #e4e8e5", borderRadius: 14, overflow: "hidden", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)", alignItems: "stretch" }}
                   >
                     {/* Accent bar */}
                     <div style={{ backgroundColor: review.accent }} />
@@ -553,45 +553,45 @@ export default function ReviewsHubPage() {
                     {/* Content — clickable area */}
                     <Link href={`/reviews/${review.slug}`} className="hub-row-link" style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 20px", textDecoration: "none" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#9CA3AF", textTransform: "uppercase" }}>{review.figure}</span>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#9CA3AF", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4 }}>{review.category}</span>
+                        <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#6b7770", textTransform: "uppercase" }}>{review.figure}</span>
+                        <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#6b7770", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 4 }}>{review.category}</span>
                         {review.thirdParty && (
-                          <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.1em", color: "#2D6A4F", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", textTransform: "uppercase" }}>3P Tested</span>
+                          <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.1em", color: "#2D6A4F", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", textTransform: "uppercase" }}>3P Tested</span>
                         )}
                       </div>
                       <div>
-                        <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#111827", margin: 0, letterSpacing: "-0.01em" }}>{review.title}</h2>
-                        <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", marginTop: 2 }}>{review.brand}</p>
+                        <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211c", margin: 0, letterSpacing: "-0.01em" }}>{review.title}</h2>
+                        <p style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", marginTop: 2 }}>{review.brand}</p>
                       </div>
-                      <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6, margin: 0 }}>{review.verdict}</p>
+                      <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.6, margin: 0 }}>{review.verdict}</p>
                       <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
                         {review.tags.map((tag) => (
-                          <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.07em" }}>{tag}</span>
+                          <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(15,122,90,0.06)", border: "1px solid rgba(15,122,90,0.15)", borderRadius: 4, fontSize: 9, color: "#0f7a5a", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.07em" }}>{tag}</span>
                         ))}
                       </div>
                     </Link>
 
                     {/* Score + CTA */}
-                    <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #F3F4F6", minWidth: 110, gap: 12 }}>
+                    <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #eef1ef", minWidth: 110, gap: 12 }}>
                       <div style={{ textAlign: "right" }}>
                         {review.image && (
-                          <div style={{ width: 54, height: 66, backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 8, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8, marginLeft: "auto" }}>
+                          <div style={{ width: 54, height: 66, backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 8, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 8, marginLeft: "auto" }}>
                             <img src={review.image} alt={review.title} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                           </div>
                         )}
                         <div style={{ display: "inline-flex", alignItems: "baseline", gap: 2, padding: "6px 12px", backgroundColor: ratingBg(review.rating), border: `1px solid ${ratingColor(review.rating)}30`, borderRadius: 8 }}>
-                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: ratingColor(review.rating), lineHeight: 1 }}>{review.rating}</span>
-                          <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: ratingColor(review.rating) }}>/10</span>
+                          <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: ratingColor(review.rating), lineHeight: 1 }}>{review.rating}</span>
+                          <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: ratingColor(review.rating) }}>/10</span>
                         </div>
-                        <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 8, letterSpacing: "0.15em", color: "#9CA3AF", textTransform: "uppercase", marginTop: 4 }}>FSP Score</p>
+                        <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 8, letterSpacing: "0.15em", color: "#6b7770", textTransform: "uppercase", marginTop: 4 }}>FSP Score</p>
                       </div>
                       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
                         {review.buyUrl && (
-                          <a href={review.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "5px 10px", backgroundColor: "#0E8784", color: "#F9FAFB", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                          <a href={review.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "5px 10px", backgroundColor: "#0f7a5a", color: "#F9FAFB", fontSize: 10, fontWeight: 600, borderRadius: 5, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                             Buy ↗
                           </a>
                         )}
-                        <Link href={`/reviews/${review.slug}`} style={{ fontSize: 11, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                        <Link href={`/reviews/${review.slug}`} style={{ fontSize: 11, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                           Read →
                         </Link>
                       </div>
@@ -619,23 +619,23 @@ export default function ReviewsHubPage() {
                     key={review.slug}
                     href={`/reviews/${review.slug}`}
                     className="hub-row-link"
-                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)", alignItems: "stretch" }}
+                    style={{ display: "grid", gridTemplateColumns: "4px 1fr auto", border: "1px solid #e4e8e5", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)", alignItems: "stretch" }}
                   >
                     <div style={{ backgroundColor: review.accent }} />
                     <div style={{ padding: "18px 20px", display: "flex", flexDirection: "column", gap: 8 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#9CA3AF", textTransform: "uppercase" }}>{review.figure}</span>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#9CA3AF", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4 }}>{review.category}</span>
+                        <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.15em", color: "#6b7770", textTransform: "uppercase" }}>{review.figure}</span>
+                        <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.12em", color: "#6b7770", textTransform: "uppercase", padding: "2px 7px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 4 }}>{review.category}</span>
                       </div>
-                      <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#111827", margin: 0 }}>{review.title}</h2>
-                      <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6, margin: 0 }}>{review.verdict}</p>
+                      <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211c", margin: 0 }}>{review.title}</h2>
+                      <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.6, margin: 0 }}>{review.verdict}</p>
                     </div>
-                    <div style={{ padding: "18px 24px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #F3F4F6", minWidth: 120 }}>
+                    <div style={{ padding: "18px 24px", display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between", borderLeft: "1px solid #eef1ef", minWidth: 120 }}>
                       <div style={{ display: "inline-flex", alignItems: "baseline", gap: 2, padding: "6px 12px", backgroundColor: ratingBg(review.rating), border: `1px solid ${ratingColor(review.rating)}30`, borderRadius: 8 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: ratingColor(review.rating), lineHeight: 1 }}>{review.rating}</span>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: ratingColor(review.rating) }}>/10</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: ratingColor(review.rating), lineHeight: 1 }}>{review.rating}</span>
+                        <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: ratingColor(review.rating) }}>/10</span>
                       </div>
-                      <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}>Read Review →</span>
+                      <span style={{ fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>Read Review →</span>
                     </div>
                   </Link>
                 ))}
@@ -645,12 +645,12 @@ export default function ReviewsHubPage() {
         })()}
 
         {/* Scoring methodology note */}
-        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#111827", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7280", marginBottom: 10 }}>How We Score</p>
-          <p style={{ fontSize: 14, color: "#9CA3AF", lineHeight: 1.75, marginBottom: 12 }}>
+        <div style={{ marginTop: 16, padding: "24px 28px", backgroundColor: "#17211c", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>How We Score</p>
+          <p style={{ fontSize: 14, color: "#6b7770", lineHeight: 1.75, marginBottom: 12 }}>
             Every product is rated on the Fitlab Scoring Protocol (FSP): formula integrity (30%), label transparency (20%), third-party verification (20%), value efficiency (15%), and practical quality (15%). No score is influenced by affiliate revenue or brand relationships.
           </p>
-          <Link href="/methodology" style={{ fontSize: 13, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+          <Link href="/methodology" style={{ fontSize: 13, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Read the full scoring methodology →
           </Link>
         </div>

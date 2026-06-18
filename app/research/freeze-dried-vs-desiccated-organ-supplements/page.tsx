@@ -107,7 +107,7 @@ export default function FreezeDriedVsDesiccatedPage() {
             <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Technical Review</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Freeze-Dried vs Desiccated Organ Supplements
             <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Which Processing Method Actually Preserves More Nutrients?</em>
           </h1>
@@ -152,7 +152,7 @@ export default function FreezeDriedVsDesiccatedPage() {
           ].map((method) => (
             <div key={method.method} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
               <div style={{ padding: "14px 18px", backgroundColor: "#1A1714" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>{method.method}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>{method.method}</p>
               </div>
               <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4" }}>
                 <div style={{ marginBottom: 14 }}>
@@ -231,7 +231,7 @@ export default function FreezeDriedVsDesiccatedPage() {
             <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                 <EvidenceBadge level="strong" />
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q1: Does freeze-drying preserve enzyme structural integrity?</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q1: Does freeze-drying preserve enzyme structural integrity?</p>
               </div>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
                 Yes — lyophilisation is widely used in pharmaceutical and biotechnology industries specifically because it preserves enzyme structure better than alternatives. Pancreatic enzyme preparations used in research are routinely freeze-dried. Freeze-dried pancreatin retains significantly more enzymatic activity than heat-desiccated equivalents (Damodaran, 1988 — J Food Science).
@@ -240,7 +240,7 @@ export default function FreezeDriedVsDesiccatedPage() {
             <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                 <EvidenceBadge level="limited" />
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q2: Do those enzymes survive digestion and work in the small intestine?</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q2: Do those enzymes survive digestion and work in the small intestine?</p>
               </div>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
                 This is where the evidence is weak. Gastric acid (pH 1.5–3.5) and pepsin begin degrading proteins — including digestive enzymes — in the stomach. Medical pancreatic enzyme replacement therapy (PERT) for exocrine pancreatic insufficiency uses <em>enteric-coated</em> microspheres specifically to bypass gastric acid and deliver enzymes intact to the duodenum. Uncoated, non-pharmaceutical pancreatin capsules from food supplements are not proven to deliver meaningful enzyme activity to the small intestine. The nutritional content (zinc, B vitamins) from pancreatic tissue is delivered regardless of enzyme survival.
@@ -309,7 +309,7 @@ export default function FreezeDriedVsDesiccatedPage() {
         {/* Bottom line */}
         <div style={{ padding: 24, backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 48 }}>
           <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Temperature matters more than the method label.</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Temperature matters more than the method label.</p>
           <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>
             For the nutrients that define most organ supplement purchase decisions — B12, retinol, heme iron, zinc, selenium — the practical difference between freeze-drying and well-documented low-temperature desiccation is marginal. The meaningful distinction is between any cold-process method vs. high-temperature desiccation (above 60°C). For enzyme-containing products (beef pancreas), freeze-drying preserves significantly more activity. Ask any brand without clear processing disclosure to provide their temperature documentation — this is a basic quality question that transparent companies should be able to answer immediately.
           </p>
@@ -320,7 +320,7 @@ export default function FreezeDriedVsDesiccatedPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
             <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
               <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}

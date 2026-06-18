@@ -23,7 +23,7 @@ const tocItems = [
 
 export default function FitnessTravelPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh", fontFamily: "var(--font-hanken), sans-serif" }}>
 
       {/* Hero */}
       <div style={{ backgroundColor: "#1A1714", color: "#F2EBD9", padding: "48px 24px 56px" }}>
@@ -45,7 +45,7 @@ export default function FitnessTravelPage() {
             <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "#C4622D", textTransform: "uppercase" }}>Training &amp; Lifestyle</span>
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", marginBottom: 16, lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", marginBottom: 16, lineHeight: 1.2 }}>
             Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat
           </h1>
           <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#A89880", marginBottom: 28, lineHeight: 1.6 }}>
@@ -69,7 +69,7 @@ export default function FitnessTravelPage() {
               { value: "~10%", label: "Strength loss after 2 weeks of detraining in trained individuals (Neufer, 1989 Sports Medicine)" },
             ].map((stat) => (
               <div key={stat.value} style={{ padding: "18px 20px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 10 }}>
-                <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#C4622D", marginBottom: 6 }}>{stat.value}</div>
+                <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#C4622D", marginBottom: 6 }}>{stat.value}</div>
                 <div style={{ fontSize: 12, color: "#8A8480", lineHeight: 1.6 }}>{stat.label}</div>
               </div>
             ))}
@@ -101,7 +101,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 1: Why Fitness Travel Is Booming */}
             <section id="why-fitness-travel" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Why Fitness Travel Is Booming in 2026
               </h2>
 
@@ -121,7 +121,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 2: Training on the Road */}
             <section id="training-on-the-road" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Training Without Your Gym
               </h2>
 
@@ -137,8 +137,8 @@ export default function FitnessTravelPage() {
                 ].map((item) => (
                   <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
-                      <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
                     <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
@@ -152,7 +152,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 3: Hotel Gym Strategy */}
             <section id="hotel-gym-strategy" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Getting the Most from Hotel Gyms
               </h2>
 
@@ -195,7 +195,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 4: Nutrition */}
             <section id="nutrition-while-travelling" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Nutrition &amp; Eating Well on the Road
               </h2>
 
@@ -223,8 +223,8 @@ export default function FitnessTravelPage() {
                 ].map((item) => (
                   <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
-                      <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
                     <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
@@ -234,7 +234,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 5: Supplements */}
             <section id="supplements-carry-on" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Supplements: What to Pack
               </h2>
 
@@ -253,7 +253,7 @@ export default function FitnessTravelPage() {
                 ].map((item) => (
                   <div key={item.rank} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#C4622D" }}>#{item.rank}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#C4622D" }}>#{item.rank}</span>
                       <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>{item.name}</span>
                     </div>
                     <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", marginBottom: 6 }}>{item.dose}</div>
@@ -270,7 +270,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 6: Jet Lag Protocol */}
             <section id="jet-lag-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 The Jet Lag Recovery Protocol
               </h2>
 
@@ -287,8 +287,8 @@ export default function FitnessTravelPage() {
                 ].map((item) => (
                   <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
-                      <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
                     <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
@@ -298,7 +298,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 7: Wellness Destinations */}
             <section id="wellness-destinations-2026" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Top Wellness Destinations 2026
               </h2>
 
@@ -344,7 +344,7 @@ export default function FitnessTravelPage() {
                     <div style={{ padding: "16px 18px" }}>
                       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginBottom: 8 }}>
                         <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", textTransform: "uppercase" }}>{item.region}</span>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714" }}>{item.destination}</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714" }}>{item.destination}</span>
                         <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: "rgba(196,98,45,0.1)", color: "#C4622D", border: "1px solid rgba(196,98,45,0.2)" }}>{item.tag}</span>
                       </div>
                       <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{item.description}</p>
@@ -356,7 +356,7 @@ export default function FitnessTravelPage() {
 
             {/* Section 8: Planning Framework */}
             <section id="planning-framework" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Pre-Trip Planning Framework
               </h2>
 
@@ -373,7 +373,7 @@ export default function FitnessTravelPage() {
                 ].map((item) => (
                   <div key={item.step} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                     <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700, marginBottom: 4, textTransform: "uppercase" }}>{item.step}</div>
-                    <div style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</div>
+                    <div style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</div>
                     <ul style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
                       {item.items.map((i) => <li key={i}>{i}</li>)}
                     </ul>
@@ -389,13 +389,13 @@ export default function FitnessTravelPage() {
 
             {/* Bottom Line */}
             <section id="bottom-line" style={{ marginBottom: 48 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Bottom Line
               </h2>
 
               <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 32 }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>Two sessions per week, protein hit, morning light — that is the entire maintenance protocol.</h3>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>Two sessions per week, protein hit, morning light — that is the entire maintenance protocol.</h3>
                 <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8 }}>The research on detraining shows that a trained individual needs far less stimulus than they think to preserve fitness over a 2-week holiday. Frequency — not volume, not intensity — is the primary variable. The supplementary infrastructure (jet lag protocol, smart nutrition, quality sleep) reduces the recovery cost of the trip so that training sessions are actually productive rather than survival events. A well-planned fitness trip should feel different from a training week at home — that difference is the point, not a problem to be optimised away.</p>
               </div>
 
@@ -445,7 +445,7 @@ export default function FitnessTravelPage() {
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
                     <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: card.accent === "#1A6B3A" ? "rgba(26,107,58,0.1)" : "rgba(146,98,10,0.1)", color: card.accent, border: `1px solid ${card.accent}33`, alignSelf: "flex-start" }}>{card.badge}</span>
                     <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Article →</span>
@@ -470,7 +470,7 @@ export default function FitnessTravelPage() {
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
                     <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>View Ingredient →</span>
                   </div>
@@ -493,7 +493,7 @@ export default function FitnessTravelPage() {
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
                     <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700 }}>FSP {card.score}/10</span>
                     <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Review →</span>
@@ -508,7 +508,7 @@ export default function FitnessTravelPage() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
               <div>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 8 }}>More from the Blog</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Practical guides on training, nutrition, and evidence-based supplementation</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Practical guides on training, nutrition, and evidence-based supplementation</p>
               </div>
               <Link href="/blog" style={{ padding: "12px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", textDecoration: "none", borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
                 Browse All Articles →

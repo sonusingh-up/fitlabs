@@ -310,7 +310,7 @@ export default function MuscleBlazerandPage() {
         {/* ── Hero Banner ─────────────────────────────────────────────────── */}
         <div style={{ width: "100%", minHeight: 260, background: "linear-gradient(135deg, #1A0505 0%, #3D0C0C 45%, #220808 100%)", position: "relative", overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,80,0,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,80,0,0.03) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
-          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(6rem, 20vw, 16rem)", fontWeight: 800, color: "rgba(255,80,0,0.03)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>MB</span>
+          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(6rem, 20vw, 16rem)", fontWeight: 800, color: "rgba(255,80,0,0.03)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>MB</span>
 
           <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", width: "100%", padding: "40px 24px 36px", zIndex: 1 }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>
@@ -321,7 +321,7 @@ export default function MuscleBlazerandPage() {
               <span style={{ padding: "3px 10px", backgroundColor: "rgba(255,120,50,0.12)", border: "1px solid rgba(255,120,50,0.25)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(255,160,80,0.8)", textTransform: "uppercase" }}>USA #1</span>
             </div>
 
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
               MuscleBlaze
             </h1>
             <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.55)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
@@ -341,7 +341,7 @@ export default function MuscleBlazerandPage() {
             {stats.map((s, i) => (
               <div key={s.label} style={{ padding: "18px 20px", borderRight: i < stats.length - 1 ? "1px solid #D4C9B8" : "none" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 5 }}>{s.label}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
               </div>
             ))}
           </div>
@@ -489,7 +489,7 @@ export default function MuscleBlazerandPage() {
                     </div>
                   ) : (
                     <div className="mb-product-img-placeholder">
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(255,80,0,0.05)", letterSpacing: "-0.05em" }}>{product.name[0]}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(255,80,0,0.05)", letterSpacing: "-0.05em" }}>{product.name[0]}</span>
                       <span style={{ position: "absolute", top: 8, right: 10, padding: "2px 8px", backgroundColor: "rgba(255,80,0,0.08)", border: "1px solid rgba(255,80,0,0.15)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", color: "rgba(255,160,80,0.5)" }}>{product.category}</span>
                       <span style={{ position: "absolute", bottom: 7, left: 12, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,80,0,0.25)" }}>Image coming</span>
                     </div>
@@ -497,7 +497,7 @@ export default function MuscleBlazerandPage() {
                   <div style={{ height: 2, background: "linear-gradient(90deg, #C4622D 0%, transparent 70%)", flexShrink: 0 }} />
                   <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>{product.name}</h3>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>{product.name}</h3>
                       <div style={{ textAlign: "right", flexShrink: 0, marginLeft: 8 }}>
                         <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", margin: 0 }}>{product.price}</p>
                         <p style={{ fontSize: 9, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{product.priceNote}</p>
@@ -541,7 +541,7 @@ export default function MuscleBlazerandPage() {
               {faqs.map((faq, i) => (
                 <details key={i} className="mb-faq-item" style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
                   <summary style={{ padding: "16px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", lineHeight: 1.4 }}>{faq.q}</span>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", lineHeight: 1.4 }}>{faq.q}</span>
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, color: "#A89880", flexShrink: 0, lineHeight: 1 }}>+</span>
                   </summary>
                   <div style={{ padding: "0 20px 16px", borderTop: "1px solid #EDE8DF" }}>

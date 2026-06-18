@@ -133,10 +133,10 @@ export default function MealContext({ tdee, animDelay }: Props) {
         {/* Header row */}
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", flexWrap:"wrap", gap:12, marginBottom:16 }}>
           <div>
-            <div style={{ fontSize:11, fontWeight:700, color:"#6B7280", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>
+            <div style={{ fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>
               What This Looks Like in a Day
             </div>
-            <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:0 }}>
+            <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:0 }}>
               {region.flag} {region.name} meal pattern
             </h2>
           </div>
@@ -148,7 +148,7 @@ export default function MealContext({ tdee, animDelay }: Props) {
             style={{
               padding:"8px 12px", borderRadius:8, border:"1px solid #D4C9B8",
               background:"#FDFAF4", color:"#1A1714", fontSize:13, fontWeight:500,
-              fontFamily:"var(--font-dm-sans),sans-serif", cursor:"pointer",
+              fontFamily:"var(--font-hanken),sans-serif", cursor:"pointer",
               flexShrink:0,
             }}
           >
@@ -158,7 +158,7 @@ export default function MealContext({ tdee, animDelay }: Props) {
           </select>
         </div>
 
-        <p style={{ fontSize:13, color:"#6B7280", marginBottom:16 }}>
+        <p style={{ fontSize:13, color:"#586259", marginBottom:16 }}>
           Your <strong>{tdee.toLocaleString()} kcal</strong> TDEE distributed across a typical {region.name} day:
         </p>
 

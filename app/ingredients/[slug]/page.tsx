@@ -125,7 +125,7 @@ export default async function IngredientPage({
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>{ing.category}</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
               {ing.name}
             </h1>
             {ing.aka && ing.aka.length > 0 && (
@@ -153,7 +153,7 @@ export default async function IngredientPage({
               ].map((s) => (
                 <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{s.sub}</p>
                 </div>
               ))}
@@ -221,7 +221,7 @@ export default async function IngredientPage({
             <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 20 }}>
               <div style={{ display: "flex", gap: 16, alignItems: "baseline", marginBottom: 8, flexWrap: "wrap" }}>
                 <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>Effective Dose</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#C4622D", margin: 0 }}>{ing.dose}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#C4622D", margin: 0 }}>{ing.dose}</p>
               </div>
             </div>
             <p>{ing.dosageNotes}</p>

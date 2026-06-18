@@ -151,7 +151,7 @@ export default function WheyProteinPage() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Muscle Protein Synthesis · Recovery</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
               Whey Protein Isolate: Benefits,<br />Dosage & Side Effects
             </h1>
             <div style={{ marginBottom: 20 }}>
@@ -176,7 +176,7 @@ export default function WheyProteinPage() {
               ].map((stat) => (
                 <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{stat.sub}</p>
                 </div>
               ))}
@@ -229,7 +229,7 @@ export default function WheyProteinPage() {
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{s.step}</span>
                   </div>
                   <div style={{ padding: "16px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ export default function WheyProteinPage() {
                 { title: "Satellite cell activation", detail: "Essential amino acids from whey, particularly leucine, stimulate satellite cell (muscle stem cell) proliferation and differentiation — the same secondary mechanism seen with creatine. This effect may be more pronounced post-exercise when satellite cell activity is already elevated (Churchward-Venne et al., 2012, AJCN)." },
               ].map((m) => (
                 <div key={m.title} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", borderLeft: "3px solid #C4622D" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{m.title}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{m.title}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{m.detail}</p>
                 </div>
               ))}
@@ -258,12 +258,12 @@ export default function WheyProteinPage() {
 
           {/* 3. Benefits */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
               {benefits.map((b, i) => (
                 <div key={i} style={{ padding: "18px 20px", borderBottom: i < benefits.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.claim}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.08em", marginBottom: 4 }}>{b.citation}</p>
@@ -285,10 +285,10 @@ export default function WheyProteinPage() {
               <div style={{ border: "2px solid #C4622D", borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ padding: "12px 18px", backgroundColor: "#C4622D" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(242,235,217,0.7)", margin: 0 }}>Primary Target</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Total Daily Protein</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Total Daily Protein</p>
                 </div>
                 <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>1.6–2.2g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ kg / day</span></p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>1.6–2.2g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ kg / day</span></p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>The research-supported range for athletes in resistance training (Morton et al., 2018). Spread across 3–4 meals for maximal MPS stimulation throughout the day.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Most important variable for muscle gain", "Distribute evenly across meals", "Use whey to bridge gaps in food intake"].map(p => (
@@ -300,10 +300,10 @@ export default function WheyProteinPage() {
               <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
                 <div style={{ padding: "12px 18px", backgroundColor: "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>Per Serving</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Individual Dose</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Individual Dose</p>
                 </div>
                 <div style={{ padding: "16px 18px", backgroundColor: "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>20–40g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ serving</span></p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>20–40g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ serving</span></p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>For a 75kg athlete, 0.25–0.40g/kg = <strong>19–30g protein</strong> per meal to maximise MPS. 40g is the ceiling for acute MPS stimulation — larger doses are oxidised rather than used for muscle building.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Leucine threshold: ~0.05g/kg per meal", "~20g sufficient for most under 80kg", "40g ceiling — more is not better acutely"].map((p, i) => (
@@ -324,7 +324,7 @@ export default function WheyProteinPage() {
               ].map((d) => (
                 <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{d.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 3 }}>{d.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 3 }}>{d.value}</p>
                   <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{d.note}</p>
                 </div>
               ))}
@@ -344,7 +344,7 @@ export default function WheyProteinPage() {
 
           {/* 5. Supplement Forms */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Whey Protein Forms Compared</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Whey Protein Forms Compared</h2>
             <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               The market offers multiple protein types, each with different protein density, digestion speed, and cost profiles.
             </p>
@@ -352,7 +352,7 @@ export default function WheyProteinPage() {
               {forms.map((form) => (
                 <div key={form.name} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: form.recommended ? "#F8F2E4" : "#EDE8DF" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{form.name}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{form.name}</p>
                     <span style={{ padding: "3px 10px", backgroundColor: form.recommended ? "rgba(45,106,79,0.1)" : "rgba(196,98,45,0.08)", border: `1px solid ${form.recommended ? "rgba(45,106,79,0.2)" : "rgba(196,98,45,0.15)"}`, borderRadius: 6, fontSize: 9, color: form.recommended ? "#2D6A4F" : "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", textTransform: "uppercase" as const, whiteSpace: "nowrap" as const }}>
                       {form.tag}
                     </span>
@@ -428,8 +428,8 @@ export default function WheyProteinPage() {
             ].map((item) => (
               <div key={item.concern} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 12 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #EDE8DF", flexWrap: "wrap", gap: 8 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.concern}</p>
-                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.concern}</p>
+                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
                 </div>
                 <div style={{ padding: "14px 18px", borderLeft: `3px solid ${item.borderColor}` }}>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, marginBottom: item.caveat ? 10 : 0 }}>{item.body}</p>
@@ -445,7 +445,7 @@ export default function WheyProteinPage() {
 
           {/* 7. Who Should Take Whey Protein */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn't — Take Whey Protein</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn't — Take Whey Protein</h2>
             <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               Whey protein is a protein source, not a drug. Its benefit is directly proportional to the gap between your dietary protein intake and your daily target — the larger the gap, the more valuable supplementation becomes.
             </p>
@@ -480,7 +480,7 @@ export default function WheyProteinPage() {
                 },
               ].map((item, i) => (
                 <div key={item.group} style={{ padding: "16px 20px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 8 }}>{item.detail}</p>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                     {item.tags.map(t => (
@@ -511,7 +511,7 @@ export default function WheyProteinPage() {
                 },
               ].map((item) => (
                 <div key={item.group} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: item.caution ? "rgba(139,115,85,0.05)" : "#F2EBD9", borderLeft: `3px solid ${item.caution ? "#8B7355" : "#D4C9B8"}` }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
                 </div>
               ))}
@@ -565,7 +565,7 @@ export default function WheyProteinPage() {
               ].map((b) => (
                 <div key={b.name} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.name}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.name}</p>
                     <span style={{ padding: "2px 8px", backgroundColor: `${b.badgeColor}12`, border: `1px solid ${b.badgeColor}30`, borderRadius: 4, fontSize: 9, color: b.badgeColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase" as const, whiteSpace: "nowrap" as const }}>{b.badge}</span>
                   </div>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{b.detail}</p>
@@ -586,7 +586,7 @@ export default function WheyProteinPage() {
                     <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#C4622D" }}>{v.step}</span>
                   </div>
                   <div style={{ padding: "14px 18px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{v.check}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{v.check}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{v.detail}</p>
                   </div>
                 </div>
@@ -596,7 +596,7 @@ export default function WheyProteinPage() {
 
           {/* 9. References */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
             <p style={{ fontSize: 13, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
               All claims in this profile are drawn from peer-reviewed research. Key sources are listed below.
             </p>
@@ -635,7 +635,7 @@ export default function WheyProteinPage() {
 
           {/* 10. FAQ */}
           <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
               Frequently Asked Questions
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
@@ -666,7 +666,7 @@ export default function WheyProteinPage() {
                 },
               ].map((faq, i) => (
                 <div key={i} style={{ padding: "20px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
                 </div>
               ))}

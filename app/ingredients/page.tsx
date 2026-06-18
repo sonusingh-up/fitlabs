@@ -67,11 +67,11 @@ export default function IngredientsHubPage() {
     <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5", backgroundColor: "#f6f8f6" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", gap: 8, padding: "12px 24px", alignItems: "center" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#E5E7EB" }}>/</span>
-          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Ingredients</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#e4e8e5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Ingredients</span>
         </div>
       </div>
 
@@ -85,15 +85,15 @@ export default function IngredientsHubPage() {
       />
 
       {/* Evidence legend — light strip below the masthead */}
-      <div style={{ borderBottom: "1px solid #E5E7EB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", paddingTop: 28, paddingBottom: 28 }} className="px-page">
           <div className="ing-evidence-legend">
             {evidenceSummary.filter((e) => e.count > 0).map((e) => (
-              <div key={e.level} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", border: "1px solid #E5E7EB", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
+              <div key={e.level} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", border: "1px solid #e4e8e5", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
                 <EvidenceBadge level={e.level} showIcon={false} />
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", margin: 0 }}>{e.count} ingredients</p>
-                  <p style={{ fontSize: 11, color: "#6B7280", margin: 0 }}>{e.desc}</p>
+                  <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#6b7770", textTransform: "uppercase", margin: 0 }}>{e.count} ingredients</p>
+                  <p style={{ fontSize: 11, color: "#586259", margin: 0 }}>{e.desc}</p>
                 </div>
               </div>
             ))}
@@ -111,14 +111,14 @@ export default function IngredientsHubPage() {
               href={`#cat-${i}`}
               style={{
                 padding: "5px 14px",
-                border: "1px solid #E5E7EB",
+                border: "1px solid #e4e8e5",
                 borderRadius: 20,
                 fontSize: 11,
-                color: "#6B7280",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                color: "#586259",
+                fontFamily: "var(--font-hanken), sans-serif",
                 fontWeight: 600,
                 letterSpacing: "0.12em",
-                backgroundColor: "#F8FAFB",
+                backgroundColor: "#f6f8f6",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
               }}
@@ -141,30 +141,30 @@ export default function IngredientsHubPage() {
                 size="sm"
               />
 
-              <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E5E7EB", borderRadius: 12, overflow: "hidden" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #e4e8e5", borderRadius: 12, overflow: "hidden" }}>
                 {catIngredients.map((ing, i) => (
                   <Link
                     key={ing.slug}
                     href={`/ingredients/${ing.slug}`}
                     className="ing-row hub-row-link"
                     style={{
-                      borderBottom: i < catIngredients.length - 1 ? "1px solid #F3F4F6" : "none",
-                      backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#F8FAFB",
+                      borderBottom: i < catIngredients.length - 1 ? "1px solid #eef1ef" : "none",
+                      backgroundColor: i % 2 === 0 ? "#FFFFFF" : "#f6f8f6",
                     }}
                   >
                     <div className="ing-row-inner">
                       <div className="ing-figure-col">
-                        <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.15em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", margin: 0, marginBottom: 4 }}>{ing.figure}</p>
-                        <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: "#0E8784", margin: 0 }}>{ing.dose}</p>
+                        <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.15em", fontSize: 9, color: "#6b7770", textTransform: "uppercase", margin: 0, marginBottom: 4 }}>{ing.figure}</p>
+                        <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: "#0f7a5a", margin: 0 }}>{ing.dose}</p>
                       </div>
                       <div>
                         <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, flexWrap: "wrap" }}>
-                          <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#111827", margin: 0 }}>{ing.name}</h2>
+                          <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#17211c", margin: 0 }}>{ing.name}</h2>
                         </div>
-                        <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.55, margin: 0 }}>{ing.summary}</p>
+                        <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.55, margin: 0 }}>{ing.summary}</p>
                         <div style={{ display: "flex", gap: 6, marginTop: 8, flexWrap: "wrap" }}>
                           {ing.bestFor.map((tag) => (
-                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(14,135,132,0.06)", border: "1px solid rgba(14,135,132,0.15)", borderRadius: 4, fontSize: 9, color: "#0E8784", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
+                            <span key={tag} style={{ padding: "2px 7px", backgroundColor: "rgba(15,122,90,0.06)", border: "1px solid rgba(15,122,90,0.15)", borderRadius: 4, fontSize: 9, color: "#0f7a5a", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>{tag}</span>
                           ))}
                         </div>
                       </div>
@@ -172,25 +172,25 @@ export default function IngredientsHubPage() {
 
                     <div className="ing-badge-col">
                       <EvidenceBadge level={ing.evidence} showIcon={false} />
-                      <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" }}>Read Profile →</span>
+                      <span style={{ fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>Read Profile →</span>
                     </div>
                   </Link>
                 ))}
               </div>
 
               <div style={{ marginTop: 12, textAlign: "right" }}>
-                <a href="#" style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: "#9CA3AF", textDecoration: "none" }}>↑ Back to top</a>
+                <a href="#" style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 10, color: "#6b7770", textDecoration: "none" }}>↑ Back to top</a>
               </div>
             </section>
           );
         })}
 
         {/* Disclaimer */}
-        <div style={{ marginTop: 48, padding: "20px 24px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 12, borderLeft: "3px solid #0E8784" }}>
-          <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.18em", fontSize: 9, textTransform: "uppercase", color: "#9CA3AF", marginBottom: 6 }}>Medical Disclaimer</p>
-          <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.7, margin: 0 }}>
+        <div style={{ marginTop: 48, padding: "20px 24px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 12, borderLeft: "3px solid #0f7a5a" }}>
+          <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.18em", fontSize: 9, textTransform: "uppercase", color: "#6b7770", marginBottom: 6 }}>Medical Disclaimer</p>
+          <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.7, margin: 0 }}>
             Ingredient profiles are for informational purposes only and do not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation, especially if you have pre-existing conditions or take medications.{" "}
-            <Link href="/medical-disclaimer" style={{ color: "#0E8784", fontWeight: 600 }}>Full disclaimer →</Link>
+            <Link href="/medical-disclaimer" style={{ color: "#0f7a5a", fontWeight: 600 }}>Full disclaimer →</Link>
           </p>
         </div>
 

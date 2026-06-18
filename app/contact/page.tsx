@@ -26,7 +26,7 @@ export default function ContactPage() {
           {/* Left */}
           <div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>CONTACT</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 20 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 20 }}>
               Get in <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>touch.</em>
             </h1>
             <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 40, maxWidth: 380 }}>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>{contact.label}</p>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#C4622D", marginBottom: 2 }}>{contact.value}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#C4622D", marginBottom: 2 }}>{contact.value}</p>
                     <p style={{ fontSize: 12, color: "#8A8480" }}>{contact.desc}</p>
                   </div>
                 </div>

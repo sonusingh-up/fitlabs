@@ -180,7 +180,7 @@ export default function TirzepatidePage() {
               <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Medication Research Profile · Prescription Only</span>
             </div>
             <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Weight Management · GIP/GLP-1 Dual Agonist</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
               Tirzepatide: Mechanism,<br />Benefits & Side Effects
             </h1>
             <div style={{ marginBottom: 20 }}>
@@ -205,7 +205,7 @@ export default function TirzepatidePage() {
               ].map((stat) => (
                 <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
                   <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{stat.sub}</p>
                 </div>
               ))}
@@ -241,7 +241,7 @@ export default function TirzepatidePage() {
                   { brand: "Mounjaro", indication: "Type 2 diabetes (glycaemic control)", approved: "May 2022", dose: "2.5–15mg/week" },
                 ].map((b) => (
                   <div key={b.brand} style={{ padding: "12px 16px", border: "1px solid #D4C9B8", borderRadius: 6, backgroundColor: "#F2EBD9" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{b.brand}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{b.brand}</p>
                     <p style={{ fontSize: 12, color: "#5C5650", marginBottom: 2 }}>{b.indication}</p>
                     <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>FDA approved: {b.approved} · {b.dose}</p>
                   </div>
@@ -271,7 +271,7 @@ export default function TirzepatidePage() {
                 <div key={s.step} style={{ padding: "20px 24px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "flex", gap: 20 }}>
                   <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{s.step}</div>
                   <div>
-                    <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14 }}>{s.title}</p>
+                    <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{s.title}</p>
                     <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{s.body}</p>
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default function TirzepatidePage() {
               {benefits.map((b) => (
                 <div key={b.claim} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
                   <div style={{ padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, flexWrap: "wrap" }}>
-                    <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14, fontFamily: "var(--font-dm-sans), sans-serif" }}>{b.claim}</p>
+                    <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14, fontFamily: "var(--font-hanken), sans-serif" }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
                   <div style={{ padding: "12px 18px", backgroundColor: "#F2EBD9" }}>
@@ -379,7 +379,7 @@ export default function TirzepatidePage() {
                       {form.recommended
                         ? <CheckCircle size={14} style={{ color: "#2D6A4F", flexShrink: 0 }} />
                         : <AlertTriangle size={14} style={{ color: "#854F0B", flexShrink: 0 }} />}
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714" }}>{form.name}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714" }}>{form.name}</span>
                     </div>
                     <span style={{ padding: "2px 9px", backgroundColor: form.tagBg, borderRadius: 4, fontSize: 10, color: form.tagColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{form.tag}</span>
                   </div>
@@ -414,7 +414,7 @@ export default function TirzepatidePage() {
                 { effect: "Pancreatitis", tir: "<1% (rare)", pla: "<1%", context: "Rare but documented. Contraindicated in patients with history of pancreatitis. Seek immediate care for persistent severe abdominal pain." },
               ].map((row, i) => (
                 <div key={row.effect} style={{ display: "grid", gridTemplateColumns: "1fr 100px 100px 1fr", padding: "11px 20px", borderBottom: i < 6 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.effect}</span>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.effect}</span>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{row.tir}</span>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8A8480" }}>{row.pla}</span>
                   <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.55 }}>{row.context}</p>
@@ -426,7 +426,7 @@ export default function TirzepatidePage() {
             </p>
 
             {/* Myth/reality cards */}
-            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Common Misconceptions</h3>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Common Misconceptions</h3>
             {[
               {
                 myth: "Tirzepatide causes thyroid cancer in humans",
@@ -447,7 +447,7 @@ export default function TirzepatidePage() {
               <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
                 <div style={{ padding: "10px 16px", backgroundColor: "rgba(196,98,45,0.06)", borderBottom: "1px solid #D4C9B8" }}>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.12em", textTransform: "uppercase" }}>Myth</span>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", margin: "4px 0 0", fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.myth}</p>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", margin: "4px 0 0", fontFamily: "var(--font-hanken), sans-serif" }}>{item.myth}</p>
                 </div>
                 <div style={{ padding: "12px 16px" }}>
                   <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#4A7C59", letterSpacing: "0.12em", textTransform: "uppercase" }}>Reality</span>
@@ -471,7 +471,7 @@ export default function TirzepatidePage() {
                 ].map((c) => (
                   <div key={c} style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
                     <XCircle size={11} style={{ color: "#C4622D", flexShrink: 0, marginTop: 1 }} />
-                    <span style={{ fontSize: 12, color: "#5C2020", fontFamily: "var(--font-dm-sans), sans-serif" }}>{c}</span>
+                    <span style={{ fontSize: 12, color: "#5C2020", fontFamily: "var(--font-hanken), sans-serif" }}>{c}</span>
                   </div>
                 ))}
               </div>
@@ -515,7 +515,7 @@ export default function TirzepatidePage() {
                 {col.items.map((item) => (
                   <div key={item.group} style={{ border: "1px solid #D4C9B8", borderLeft: `3px solid ${col.borderColor}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8, backgroundColor: "#F8F2E4" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 4, gap: 12 }}>
-                      <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14 }}>{item.group}</p>
+                      <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{item.group}</p>
                       <span style={{ padding: "2px 8px", backgroundColor: col.tagBg, border: `1px solid ${col.borderColor}30`, borderRadius: 4, fontSize: 9, color: col.tagColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{col.tagText}</span>
                     </div>
                     <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.6 }}>{item.detail}</p>
@@ -547,7 +547,7 @@ export default function TirzepatidePage() {
                     { route: "Compounded (via telehealth)", cost: "$150–350/mo + service fee", notes: "WellMedr service from $88/mo + pharmacy cost. Availability varies by state", ins: "Not covered" },
                   ].map((row, i) => (
                     <tr key={row.route} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                      <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.route}</td>
+                      <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.route}</td>
                       <td style={{ padding: "11px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{row.cost}</td>
                       <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650" }}>{row.notes}</td>
                       <td style={{ padding: "11px 14px", fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{row.ins}</td>
@@ -577,7 +577,7 @@ export default function TirzepatidePage() {
                 "Drucker DJ. (2022). GLP-1 physiology informs the pharmacotherapy of obesity. *Molecular Metabolism*, 57, 101351. doi:10.1016/j.molmet.2021.101351",
                 "Coskun T, Urva S, Roell WC, et al. (2022). LY3298176, a novel dual GIP and GLP-1 receptor agonist for the treatment of type 2 diabetes mellitus. *Molecular Metabolism*, 18, 3–14. doi:10.1016/j.molmet.2018.09.009",
               ].map((ref, i) => (
-                <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>
                   {ref.split("*").map((part, j) =>
                     j % 2 === 1
                       ? <em key={j}>{part}</em>
@@ -602,7 +602,7 @@ export default function TirzepatidePage() {
                 { q: "Can I get tirzepatide online without an in-person doctor visit?", a: "Yes — US-based telehealth platforms (such as WellMedr) can prescribe tirzepatide following a virtual consultation with a licensed provider. A valid prescription is still required. Compounded tirzepatide availability varies by state and is subject to FDA compounding regulations — confirm current status with the provider before enrolling." },
               ].map((item, i, arr) => (
                 <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.q}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.q}</p>
                   <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.a}</p>
                 </div>
               ))}
@@ -620,7 +620,7 @@ export default function TirzepatidePage() {
                 { href: "/compare/wellmedr-vs-ro-body", label: "WellMedr vs Ro Body — Head-to-Head Comparison" },
                 { href: "/goals/weight-loss", label: "Weight Loss Supplement Guide — Fitlabreviews" },
               ].map((link) => (
-                <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", color: "#C4622D", fontSize: 13, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", color: "#C4622D", fontSize: 13, fontFamily: "var(--font-hanken), sans-serif" }}>
                   <span style={{ flex: 1 }}>{link.label}</span>
                   <span style={{ fontSize: 11, color: "#A89880" }}>→</span>
                 </Link>

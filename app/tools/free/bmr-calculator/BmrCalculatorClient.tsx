@@ -39,7 +39,7 @@ function calcBMR(g: Gender, wKg: number, hCm: number, age: number) {
 const iS: React.CSSProperties = {
   width:"100%", padding:"11px 14px", borderRadius:8, border:"1px solid #D4C9B8",
   background:"#FDFAF4", fontSize:15, color:"#1A1714",
-  fontFamily:"var(--font-dm-sans),sans-serif", boxSizing:"border-box",
+  fontFamily:"var(--font-hanken),sans-serif", boxSizing:"border-box",
 };
 const lS: React.CSSProperties = {
   display:"block", fontSize:12, fontWeight:600, color:"#5C5650",
@@ -131,7 +131,7 @@ export default function BmrCalculatorClient() {
         {/* Header */}
         <div style={{ marginBottom:32, textAlign:"center" }}>
           <span style={{ display:"inline-block", background:"#1A1714", color:"#F2EBD9", fontSize:10, fontWeight:700, letterSpacing:"0.12em", padding:"4px 10px", borderRadius:4, marginBottom:16 }}>FREE TOOL</span>
-          <h1 style={{ fontFamily:"var(--font-playfair),Georgia,serif", fontSize:"clamp(1.75rem,5vw,2.75rem)", fontWeight:800, color:"#1A1714", letterSpacing:"-0.02em", marginBottom:12, lineHeight:1.1 }}>BMR Calculator</h1>
+          <h1 style={{ fontFamily:"var(--font-newsreader),Georgia,serif", fontSize:"clamp(1.75rem,5vw,2.75rem)", fontWeight:800, color:"#1A1714", letterSpacing:"-0.02em", marginBottom:12, lineHeight:1.1 }}>BMR Calculator</h1>
           <p style={{ fontSize:16, color:"#5C5650", maxWidth:520, margin:"0 auto", lineHeight:1.6 }}>
             Find your Basal Metabolic Rate — the exact number of calories your body burns at rest — then dial in your daily target.
           </p>
@@ -143,7 +143,7 @@ export default function BmrCalculatorClient() {
             {(["imperial","metric"] as Unit[]).map(u => (
               <button key={u} onClick={() => setUnit(u)} style={{
                 padding:"8px 20px", borderRadius:8, border:"none", cursor:"pointer",
-                fontFamily:"var(--font-dm-sans),sans-serif", fontSize:13, fontWeight:600,
+                fontFamily:"var(--font-hanken),sans-serif", fontSize:13, fontWeight:600,
                 background: unit===u ? "#1A1714" : "transparent",
                 color: unit===u ? "#F2EBD9" : "#5C5650", transition:"all 0.15s",
               }}>{u === "imperial" ? "Imperial (lbs/ft)" : "Metric (kg/cm)"}</button>
@@ -166,7 +166,7 @@ export default function BmrCalculatorClient() {
                   background: inputs.gender===g ? "#FDF0E8" : "#FDFAF4",
                   color: inputs.gender===g ? "#C4622D" : "#5C5650",
                   fontWeight:600, fontSize:14, transition:"all 0.15s",
-                  fontFamily:"var(--font-dm-sans),sans-serif",
+                  fontFamily:"var(--font-hanken),sans-serif",
                 }}>{g==="male" ? "♂ Male" : "♀ Female"}</button>
               ))}
             </div>
@@ -263,7 +263,7 @@ export default function BmrCalculatorClient() {
           width:"100%", padding:"15px 0", borderRadius:10, border:"none",
           background:"#C4622D", color:"#FDFAF4", fontSize:16, fontWeight:700,
           cursor:"pointer", letterSpacing:"0.02em",
-          fontFamily:"var(--font-dm-sans),sans-serif",
+          fontFamily:"var(--font-hanken),sans-serif",
           boxShadow:"0 4px 16px rgba(196,98,45,0.3)", marginBottom:24,
         }}>Calculate My BMR →</button>
 
@@ -330,7 +330,7 @@ export default function BmrCalculatorClient() {
             </details>
 
             {/* Reset */}
-            <button onClick={reset} style={{ width:"100%", padding:"12px 0", borderRadius:10, border:"1px solid #D4C9B8", background:"transparent", color:"#5C5650", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif", marginBottom:24 }}>
+            <button onClick={reset} style={{ width:"100%", padding:"12px 0", borderRadius:10, border:"1px solid #D4C9B8", background:"transparent", color:"#5C5650", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif", marginBottom:24 }}>
               ↺ Start Over
             </button>
 
@@ -349,7 +349,7 @@ export default function BmrCalculatorClient() {
                 <button onClick={() => {
                   if (navigator.share) navigator.share({ title:"My BMR Result", text:`BMR: ${activeBmr} | TDEE: ${adjTdee} kcal/day`, url:window.location.href });
                   else navigator.clipboard.writeText(`BMR: ${activeBmr} | TDEE: ${adjTdee} kcal/day — ${window.location.href}`);
-                }} style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #D4C9B8", background:"#EDE8DF", color:"#1A1714", fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif" }}>
+                }} style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #D4C9B8", background:"#EDE8DF", color:"#1A1714", fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif" }}>
                   📤 Share My Result
                 </button>
                 <a href="/ingredients/creatine" style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #C4622D", color:"#C4622D", fontSize:13, fontWeight:600, display:"inline-block", textDecoration:"none" }}>
@@ -362,7 +362,7 @@ export default function BmrCalculatorClient() {
 
         {/* FAQ */}
         <div style={{ marginBottom:32 }}>
-          <h2 style={{ fontFamily:"var(--font-playfair),Georgia,serif", fontSize:"1.4rem", fontWeight:700, color:"#1A1714", marginBottom:16 }}>Common Questions</h2>
+          <h2 style={{ fontFamily:"var(--font-newsreader),Georgia,serif", fontSize:"1.4rem", fontWeight:700, color:"#1A1714", marginBottom:16 }}>Common Questions</h2>
           <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:14, overflow:"hidden" }}>
             {[
               { q:"What does BMR actually measure?", a:"BMR is the number of calories your body burns to keep you alive at complete rest — breathing, pumping blood, regulating temperature, and maintaining cell function. It doesn't include any activity." },
