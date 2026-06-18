@@ -42,7 +42,7 @@ export default function MealDistribution({ goalCals, animDelay }: Props) {
               <div key={label} style={{ display:"grid", gridTemplateColumns:"140px 1fr 70px", gap:12, alignItems:"center" }}>
                 <span style={{ fontSize:13, fontWeight:600, color:"#17211C" }}>{label}</span>
                 <div style={{ background:"#F2F8F4", borderRadius:20, height:8, overflow:"hidden" }}>
-                  <div style={{ width:`${pct}%`, height:"100%", background:"#0F7A5A", borderRadius:20, transition:"width 0.3s" }} />
+                  <div style={{ width:"100%", height:"100%", background:"#0F7A5A", borderRadius:20, transform:`scaleX(${pct/100})`, transformOrigin:"left", transition:"transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)" }} />
                 </div>
                 <span style={{ fontSize:13, fontWeight:700, color:"#17211C", textAlign:"right", fontVariantNumeric:"tabular-nums" }}>
                   {kcal.toLocaleString()} kcal
