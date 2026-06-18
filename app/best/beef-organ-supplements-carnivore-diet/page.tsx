@@ -130,18 +130,18 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
   ];
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/best" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Best</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Beef Organs — Carnivore Diet</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/best" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Best</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Beef Organs — Carnivore Diet</span>
         </div>
       </div>
 
@@ -150,18 +150,18 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>Roundup · 2026</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Carnivore Protocol</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>Roundup · 2026</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>Carnivore Protocol</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             Best Beef Organ Supplements for the Carnivore Diet
-            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Nose-to-Tail Nutrition for Meat-Based Eating — 2026 Rankings</em>
+            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#3F4B43", fontSize: "0.65em", marginTop: 10 }}>Nose-to-Tail Nutrition for Meat-Based Eating — 2026 Rankings</em>
           </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             The carnivore diet's nutritional completeness depends critically on organ consumption. A muscle-meat-only diet is high in complete protein, zinc, B12, and heme iron — but substantially deficient in CoQ10, vitamin A (retinol), folate, and optimal selenium levels relative to the nose-to-tail model that evolutionary biology suggests. Organ supplements close this gap when whole organs are impractical.
           </p>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75 }}>
             This guide ranks the best beef organ supplements specifically for carnivore diet practitioners — prioritising sourcing transparency, organ variety, and alignment with carnivore community quality standards.
           </p>
         </div>
@@ -176,9 +176,9 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
             { label: "Budget Pick", value: "Force Factor", sub: "7/10 · $0.18/serving" },
           ].map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", backgroundColor: "#252220", borderRadius: 8 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{s.value}</p>
-              <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 4 }}>{s.label}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#FFFFFF", marginBottom: 2 }}>{s.value}</p>
+              <p style={{ fontSize: 11, color: "#6B7770" }}>{s.sub}</p>
             </div>
           ))}
         </div>
@@ -191,16 +191,16 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
               <thead>
                 <tr style={{ backgroundColor: "#1A1714" }}>
                   {["Organ", "Key Nutrients", "Why Important on Carnivore"].map((h) => (
-                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.08em" }}>{h}</th>
+                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#FFFFFF", letterSpacing: "0.08em" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {organNutrients.map((row, i) => (
-                  <tr key={row.organ} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={row.organ} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "12px 14px", fontSize: 13, fontWeight: 700, color: "#1A1714", whiteSpace: "nowrap" }}>{row.organ}</td>
-                    <td style={{ padding: "12px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{row.nutrients}</td>
-                    <td style={{ padding: "12px 14px", fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{row.carnivoreRole}</td>
+                    <td style={{ padding: "12px 14px", fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{row.nutrients}</td>
+                    <td style={{ padding: "12px 14px", fontSize: 13, color: "#3F4B43", lineHeight: 1.5 }}>{row.carnivoreRole}</td>
                   </tr>
                 ))}
               </tbody>
@@ -212,37 +212,37 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
         <SectionHeading label="Rankings" figure="§ 02" title="Top picks for" titleItalic="carnivore diet" size="sm" />
         <div style={{ display: "flex", flexDirection: "column", gap: 24, marginBottom: 48 }}>
           {picks.map((pick) => (
-            <div key={pick.rank} style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+            <div key={pick.rank} style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
               <div style={{ padding: "16px 20px", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700 }}>#{pick.rank}</span>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#F2EBD9" }}>{pick.name}</p>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700 }}>#{pick.rank}</span>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#FFFFFF" }}>{pick.name}</p>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", backgroundColor: "#252220", padding: "3px 8px", borderRadius: 4 }}>{pick.tag}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#C4622D", fontWeight: 700 }}>{pick.score}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", backgroundColor: "#252220", padding: "3px 8px", borderRadius: 4 }}>{pick.tag}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, color: "#0F7A5A", fontWeight: 700 }}>{pick.score}</span>
                 </div>
               </div>
-              <div style={{ padding: "18px 20px", backgroundColor: "#F8F2E4", display: "flex", gap: 20, alignItems: "flex-start" }}>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F6F8F6", display: "flex", gap: 20, alignItems: "flex-start" }}>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", marginBottom: 10 }}>{pick.price}</p>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43", marginBottom: 10 }}>{pick.price}</p>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 14 }}>
                     {pick.tags.map((t) => (
-                      <span key={t} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
+                      <span key={t} style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#3F4B43", backgroundColor: "#F2F8F4", padding: "3px 8px", borderRadius: 4 }}>{t}</span>
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                       Buy on Amazon ↗
                     </a>
-                    <Link href={pick.href} style={{ fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600, whiteSpace: "nowrap" }}>
+                    <Link href={pick.href} style={{ fontSize: 13, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", fontWeight: 600, whiteSpace: "nowrap" }}>
                       Full review →
                     </Link>
                   </div>
                 </div>
                 <div style={{ width: 90, flexShrink: 0 }}>
-                  <div style={{ width: 90, height: 110, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ width: 90, height: 110, backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                   </div>
                 </div>
@@ -276,14 +276,14 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
               rec: "Force Factor Primal Origins at $0.18/serving for daily use. Eat fresh liver from grocery stores ($3–6/lb) 1–2x/week to complement. This hybrid approach delivers better nutrition than capsules alone at significantly lower total cost.",
             },
           ].map((item) => (
-            <div key={item.protocol} style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "grid", gridTemplateColumns: "1fr 2fr", gap: 16 }}>
+            <div key={item.protocol} style={{ padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "grid", gridTemplateColumns: "1fr 2fr", gap: 16 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Protocol</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Protocol</p>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.protocol}</p>
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Recommendation</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.rec}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Recommendation</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{item.rec}</p>
               </div>
             </div>
           ))}
@@ -291,11 +291,11 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
 
         {/* FAQ */}
         <SectionHeading label="FAQ" figure="§ 04" title="Common" titleItalic="questions" size="sm" />
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
+            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
         </div>
@@ -311,9 +311,9 @@ export default function BestBeefOrganSupplementsCarnivorePage() {
             { name: "Beef Liver Ingredient Profile", desc: "The most nutrient-dense food", href: "/ingredients/beef-liver" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
-                <p style={{ fontSize: 12, color: "#5C5650" }}>{item.desc}</p>
+              <div style={{ padding: 16, border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43" }}>{item.desc}</p>
               </div>
             </Link>
           ))}

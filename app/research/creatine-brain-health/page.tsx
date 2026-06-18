@@ -100,7 +100,7 @@ const faqSchema = {
 
 export default function CreatineBrainHealthPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
@@ -111,67 +111,67 @@ export default function CreatineBrainHealthPage() {
       />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/research" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Research</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Creatine & Brain Health</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/research" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Research</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Creatine & Brain Health</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "48px 24px 40px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "48px 24px 40px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
 
           {/* Evidence badge + meta line */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20, alignItems: "center" }}>
-            <span style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.12em" }}>ART-010 · Brain & Cognitive Health · 14 min read</span>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.12em" }}>May 2026</span>
+            <span style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.12em" }}>ART-010 · Brain & Cognitive Health · 14 min read</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.12em" }}>May 2026</span>
           </div>
 
           {/* H1 */}
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
             Creatine for Brain Health:{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>How a Bodybuilding Supplement Boosts Cognition, Memory & Mental Energy</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>How a Bodybuilding Supplement Boosts Cognition, Memory & Mental Energy</em>
           </h1>
 
           {/* Lead paragraph */}
-          <p style={{ fontSize: 17, color: "#5C5650", lineHeight: 1.75, marginBottom: 28 }}>
+          <p style={{ fontSize: 17, color: "#3F4B43", lineHeight: 1.75, marginBottom: 28 }}>
             Creatine is best known for adding reps to your bench press — but a growing body of RCTs shows it also meaningfully improves working memory, reduces mental fatigue, and supports cognitive performance under stress. The mechanism is straightforward: your brain runs on ATP, and phosphocreatine is the fastest way to regenerate it. The groups with the most to gain — vegetarians and adults over 65 — are also the least likely to have adequate brain creatine stores.
           </p>
 
           {/* Tags */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 20 }}>
             {["Creatine", "Cognitive Health", "Working Memory", "Mental Fatigue", "Neuroprotection", "Vegetarian Nutrition"].map((tag) => (
-              <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 10, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{tag}</span>
+              <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 10, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em" }}>{tag}</span>
             ))}
           </div>
 
           {/* Author bar */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #D4C9B8" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #E4E8E5" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#C4622D", letterSpacing: "0.04em" }}>FLR</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, fontWeight: 700, color: "#0F7A5A", letterSpacing: "0.04em" }}>FLR</span>
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Written by</p>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
             </div>
-            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Evidence Standard</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
-            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Last Updated</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
 
@@ -179,9 +179,9 @@ export default function CreatineBrainHealthPage() {
       </div>
 
       {/* Key stats dark panel */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714", padding: "32px 24px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#1A1714", padding: "32px 24px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 20 }}>Key Findings at a Glance</p>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 20 }}>Key Findings at a Glance</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 20 }}>
             {[
               { value: "g = 0.34", label: "Memory effect size across 10 RCTs", sub: "Prokopidis et al., Nutr Rev 2023" },
@@ -190,10 +190,10 @@ export default function CreatineBrainHealthPage() {
               { value: "~0 g/day", label: "Dietary creatine from plant-based diet", sub: "Why vegetarians benefit most" },
               { value: "< 2 min", label: "Time to resynthesize brain PCr", sub: "Creatine–ATP shuttle mechanism" },
             ].map((stat) => (
-              <div key={stat.value} style={{ borderLeft: "2px solid #C4622D", paddingLeft: 14 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.55rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
+              <div key={stat.value} style={{ borderLeft: "2px solid #0F7A5A", paddingLeft: 14 }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.55rem", fontWeight: 800, color: "#FFFFFF", margin: "0 0 4px" }}>{stat.value}</p>
                 <p style={{ fontSize: 12, color: "rgba(242,235,217,0.7)", lineHeight: 1.4, margin: "0 0 4px" }}>{stat.label}</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
               </div>
             ))}
           </div>
@@ -201,10 +201,10 @@ export default function CreatineBrainHealthPage() {
       </div>
 
       {/* Quick Answer */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "28px 24px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "28px 24px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <div style={{ borderLeft: "3px solid #1A6B3A", backgroundColor: "rgba(26,107,58,0.04)", padding: "16px 18px", borderRadius: "0 8px 8px 0" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
             <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7, margin: 0 }}>
               Yes — creatine supplementation has been shown to improve working memory and reduce mental fatigue in multiple double-blind RCTs. A 2023 meta-analysis pooling 10 trials found a significant effect size of g = 0.34 for memory outcomes in healthy adults, rising to g = 0.54 in those over 65. The mechanism is well understood: creatine replenishes the brain&apos;s phosphocreatine pool, maintaining ATP during cognitively demanding tasks. Evidence is strongest for vegetarians, older adults, and sleep-deprived individuals.
             </p>
@@ -218,10 +218,10 @@ export default function CreatineBrainHealthPage() {
         {/* § 01 — What is brain creatine? */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 01" figure="§" title="What Is" titleItalic="Brain Creatine?" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             The human brain accounts for roughly 2% of body weight but consumes approximately 20% of total resting energy — almost entirely as ATP. Unlike skeletal muscle, the brain cannot significantly increase blood glucose delivery on short notice. It relies instead on a local rapid-recharge mechanism: the phosphocreatine (PCr) shuttle.
           </p>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 24 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 24 }}>
             When a neuron fires, it hydrolyses ATP to ADP. The creatine kinase enzyme immediately transfers a phosphate group from PCr back to ADP, regenerating ATP within milliseconds — before slower metabolic pathways (glycolysis, oxidative phosphorylation) can respond. This makes PCr the brain&apos;s emergency power reserve during bursts of high cognitive demand (Rae & Bröer, Neurochemistry International, 2015).
           </p>
 
@@ -236,13 +236,13 @@ export default function CreatineBrainHealthPage() {
               { site: "Astrocytes", effect: "Energy buffering for surrounding neurons" },
               { site: "Mitochondria", effect: "PCr synthesised here via creatine kinase isozymes" },
             ].map((r) => (
-              <div key={r.site} style={{ padding: "10px 12px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 6 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#C4622D", marginBottom: 4, textTransform: "uppercase" }}>{r.site}</p>
-                <p style={{ fontSize: 11, color: "#5C5650", lineHeight: 1.5, margin: 0 }}>{r.effect}</p>
+              <div key={r.site} style={{ padding: "10px 12px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 6 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#0F7A5A", marginBottom: 4, textTransform: "uppercase" }}>{r.site}</p>
+                <p style={{ fontSize: 11, color: "#3F4B43", lineHeight: 1.5, margin: 0 }}>{r.effect}</p>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
             Brain creatine is synthesised endogenously in small amounts and absorbed from the diet — primarily from red meat and fish. Vegetarians and vegans rely entirely on endogenous synthesis, which produces approximately 1g/day — roughly half what mixed-diet omnivores obtain through food (Roschel et al., Nutrients, 2021). This dietary gap is the single most important predictor of who benefits most from supplementation.
           </p>
         </section>
@@ -250,17 +250,17 @@ export default function CreatineBrainHealthPage() {
         {/* § 02 — Landmark RCT */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 02" figure="§" title="The Landmark" titleItalic="Cognition Trial" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 24 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 24 }}>
             The study that established creatine&apos;s cognitive credentials was a double-blind, placebo-controlled crossover RCT by Rae, Digney, McEwan, and Bates, published in Proceedings of the Royal Society B in 2003. It remains the most cited creatine–cognition RCT two decades later.
           </p>
 
           {/* Trial card */}
-          <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+          <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
             <div style={{ backgroundColor: "#1A1714", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", letterSpacing: "0.12em", fontWeight: 700 }}>RAE ET AL. · 2003</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>PROC R SOC LOND B · DOUBLE-BLIND CROSSOVER RCT</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", letterSpacing: "0.12em", fontWeight: 700 }}>RAE ET AL. · 2003</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>PROC R SOC LOND B · DOUBLE-BLIND CROSSOVER RCT</span>
             </div>
-            <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+            <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
               {[
                 { label: "Population", value: "45 healthy adults (mixed omnivores & vegetarians)" },
                 { label: "Intervention", value: "Creatine monohydrate 5 g/day for 6 weeks" },
@@ -270,14 +270,14 @@ export default function CreatineBrainHealthPage() {
                 { label: "Key Finding", value: "Effect driven largely by vegetarian subgroup; omnivores showed smaller non-sig trend" },
               ].map((d) => (
                 <div key={d.label}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>{d.label}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>{d.label}</p>
                   <p style={{ fontSize: 13, color: "#1A1714", lineHeight: 1.5, margin: 0 }}>{d.value}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
             The crossover design controls for individual differences in baseline intelligence, making the result more reliable. The finding that vegetarians drove the largest gains directly supports the PCr-depletion hypothesis: those with the most to gain from extra dietary creatine showed the biggest cognitive improvements.
           </p>
         </section>
@@ -285,7 +285,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 03 — Meta-analysis */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 03" figure="§" title="Meta-Analysis:" titleItalic="What 10 RCTs Show Together" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 24 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 24 }}>
             Individual trials can be underpowered or biased. The most rigorous way to assess the totality of evidence is via systematic meta-analysis. Two independent groups have now done this for creatine and memory — and both reach the same conclusion.
           </p>
 
@@ -314,15 +314,15 @@ export default function CreatineBrainHealthPage() {
               ],
             },
           ].map((card) => (
-            <div key={card.title} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
-              <div style={{ backgroundColor: "#EDE8DF", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
-                <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{card.title}</span>
-                <a href={`https://pubmed.ncbi.nlm.nih.gov/${card.pmid}/`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.1em" }}>PubMed {card.pmid} ↗</a>
+            <div key={card.title} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 16 }}>
+              <div style={{ backgroundColor: "#F2F8F4", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+                <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{card.title}</span>
+                <a href={`https://pubmed.ncbi.nlm.nih.gov/${card.pmid}/`} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", letterSpacing: "0.1em" }}>PubMed {card.pmid} ↗</a>
               </div>
-              <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+              <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
                 {card.details.map((d) => (
                   <div key={d.label}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>{d.label}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>{d.label}</p>
                     <p style={{ fontSize: 13, color: "#1A1714", lineHeight: 1.5, margin: 0 }}>{d.value}</p>
                   </div>
                 ))}
@@ -330,7 +330,7 @@ export default function CreatineBrainHealthPage() {
             </div>
           ))}
 
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginTop: 8 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginTop: 8 }}>
             A standardised effect size of g = 0.34 is considered a small-to-moderate effect in cognitive psychology. For context, this is comparable to the memory improvement seen with aerobic exercise interventions or omega-3 supplementation in healthy adults. An effect size of g = 0.54 in older adults is notably larger — equivalent to roughly a year of cognitive aging reversed.
           </p>
         </section>
@@ -338,7 +338,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 04 — Mental fatigue & stress */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 04" figure="§" title="Mental Fatigue" titleItalic="& Cognitive Stress" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             The clearest signal in creatine cognition research is not baseline improvement in rested, well-nourished young adults — it is the reduction in cognitive decline under metabolic stress: prolonged mental effort, sleep deprivation, and hypoxia.
           </p>
 
@@ -360,19 +360,19 @@ export default function CreatineBrainHealthPage() {
                 body: "The meta-analysis by McMorris and colleagues identified sleep deprivation as a condition in which creatine supplementation most reliably improves cognitive performance — consistent with the hypothesis that creatine benefits are largest when the brain's normal energy supply is compromised. This has particular relevance for shift workers, medical trainees, and athletes in multi-day competition.",
               },
             ].map((item) => (
-              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
+              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div style={{ borderLeft: "3px solid #1A6B3A", backgroundColor: "rgba(26,107,58,0.04)", padding: "14px 18px", borderRadius: "0 8px 8px 0" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 6 }}>Clinical Interpretation</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 6 }}>Clinical Interpretation</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>
               The pattern across these studies is consistent: creatine does not dramatically sharpen the cognition of a fully rested, well-fed young adult — but it does reliably protect performance when the brain is under energy stress. The practical takeaway is that creatine&apos;s cognitive benefit is most meaningful for anyone regularly operating in cognitively demanding, energy-compromised states.
             </p>
           </div>
@@ -381,7 +381,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 05 — Who benefits most */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 05" figure="§" title="Who Benefits" titleItalic="Most?" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             Not everyone responds equally to creatine supplementation. Three populations consistently show the largest cognitive gains across trials:
           </p>
 
@@ -422,15 +422,15 @@ export default function CreatineBrainHealthPage() {
             ].map((item) => (
               <div key={item.group} style={{ padding: "18px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-                  <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.group}</p>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, color: item.color, letterSpacing: "0.1em", textTransform: "uppercase", backgroundColor: "white", padding: "2px 7px", borderRadius: 3, border: `1px solid ${item.border}`, flexShrink: 0, marginLeft: 8 }}>{item.evidence}</span>
+                  <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.group}</p>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, color: item.color, letterSpacing: "0.1em", textTransform: "uppercase", backgroundColor: "white", padding: "2px 7px", borderRadius: 3, border: `1px solid ${item.border}`, flexShrink: 0, marginLeft: 8 }}>{item.evidence}</span>
                 </div>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
               </div>
             ))}
           </div>
 
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
             Young, rested omnivores eating 100g+ of red meat daily already maintain near-maximal brain creatine saturation. For them, the Avgerinos et al. (2018) systematic review found effects were non-significant at p = 0.06 — a trend, not a reliable improvement. Managing expectations by dietary and age status is important when evaluating whether creatine is worth adding.
           </p>
         </section>
@@ -438,47 +438,47 @@ export default function CreatineBrainHealthPage() {
         {/* § 06 — Dosing */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 06" figure="§" title="Dosing for" titleItalic="Brain Health" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             Dosing for cognitive outcomes differs slightly from athletic performance protocols. Key differences: brain creatine saturation is achieved more slowly than muscle saturation, and loading phases (20g/day for 5–7 days) are optional rather than necessary.
           </p>
 
           {/* Dose table */}
-          <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+          <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
             <div style={{ backgroundColor: "#1A1714", padding: "10px 20px" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.14em", textTransform: "uppercase" }}>Dosing Comparison — Brain Outcomes</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", letterSpacing: "0.14em", textTransform: "uppercase" }}>Dosing Comparison — Brain Outcomes</span>
             </div>
-            <div style={{ backgroundColor: "#F8F2E4" }}>
+            <div style={{ backgroundColor: "#F6F8F6" }}>
               {[
                 { protocol: "Maintenance (3–5 g/day)", onset: "3–4 weeks to full brain saturation", used_in: "Most 4–6 week RCTs; Forbes et al. recommendation", notes: "Preferred for long-term use. No GI load. Practical." },
                 { protocol: "Loading (20 g/day, 4×5g, 5–7 days)", onset: "5–7 days to full saturation", used_in: "Rae et al. 2003; Turner et al. 2015", notes: "Useful when faster cognitive benefit is needed. Mild GI discomfort in some individuals." },
                 { protocol: "High-dose vegetarian (5–10 g/day)", onset: "2–3 weeks", used_in: "Benton & Donohoe 2011", notes: "May be appropriate for vegetarians with high cognitive demands; no additional safety concerns established." },
               ].map((row, i) => (
-                <div key={row.protocol} style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.4fr", gap: 12, padding: "14px 20px", borderTop: i === 0 ? "none" : "1px solid #EDE8DF", alignItems: "start" }}>
+                <div key={row.protocol} style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1.4fr", gap: 12, padding: "14px 20px", borderTop: i === 0 ? "none" : "1px solid #F2F8F4", alignItems: "start" }}>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Protocol</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Protocol</p>
                     <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", margin: 0 }}>{row.protocol}</p>
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Brain Saturation</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", margin: 0 }}>{row.onset}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Brain Saturation</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", margin: 0 }}>{row.onset}</p>
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Used In</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", margin: 0 }}>{row.used_in}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Used In</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", margin: 0 }}>{row.used_in}</p>
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Notes</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", margin: 0 }}>{row.notes}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Notes</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", margin: 0 }}>{row.notes}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 12 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginBottom: 12 }}>
             <strong style={{ color: "#1A1714" }}>Timing:</strong> There is no strong evidence that timing creatine consumption relative to meals or cognitive tasks matters for brain outcomes, unlike muscle outcomes where pre- or post-workout timing has modest support. Creatine monohydrate is equally effective taken at any time of day.
           </p>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
             <strong style={{ color: "#1A1714" }}>Form:</strong> Creatine monohydrate remains the most studied form for both athletic and cognitive outcomes. No published RCT has demonstrated that creatine HCl, buffered creatine, or creatine ethyl ester produces superior brain creatine loading compared to monohydrate (Forbes et al., 2022).
           </p>
         </section>
@@ -486,7 +486,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 07 — Emerging areas */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 07" figure="§" title="Emerging Areas:" titleItalic="Mood, Depression & Neuroprotection" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             Beyond cognition, creatine is being investigated for mental health and neuroprotective applications. The evidence base here is less mature than for memory — most findings are mechanistic or based on small trials — but the signals are consistent enough to justify monitoring.
           </p>
 
@@ -508,19 +508,19 @@ export default function CreatineBrainHealthPage() {
                 body: "Mechanistic studies suggest creatine may slow mitochondrial dysfunction and neuronal energy failure in Parkinson's and Huntington's disease. However, the large NINDS-funded TREND-HD trial (2015) found no benefit of creatine 10g/day in early Huntington's disease over 18 months. Smaller Parkinson's studies showed mixed results. Current evidence does not support creatine as a treatment for neurodegenerative conditions.",
               },
             ].map((item) => (
-              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
+              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div style={{ borderLeft: "3px solid #92620A", backgroundColor: "rgba(146,98,10,0.04)", padding: "14px 18px", borderRadius: "0 8px 8px 0" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Moderate for mood / Limited for neurodegeneration</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Moderate for mood / Limited for neurodegeneration</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>
               The mood and neuroprotection data are mechanistically compelling but lack the large, replicated RCTs available for memory and fatigue outcomes. These are research areas to watch — not current clinical indications.
             </p>
           </div>
@@ -529,7 +529,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 08 — Safety */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 08" figure="§" title="Safety &" titleItalic="Common Myths" size="md" />
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
             Creatine monohydrate has been continuously studied since the 1990s. Several persistent myths have been thoroughly investigated and refuted.
           </p>
 
@@ -552,14 +552,14 @@ export default function CreatineBrainHealthPage() {
                 reality: "Creatine is not a steroid, hormone, or controlled substance. It is a naturally occurring compound found in food and synthesised endogenously. It is not banned by WADA, the IOC, or any major sporting federation. It is approved for over-the-counter sale globally.",
               },
             ].map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
-                <div style={{ backgroundColor: "#EDE8DF", padding: "10px 16px", display: "flex", gap: 10, alignItems: "center" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#8A4020", textTransform: "uppercase" }}>Myth</span>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
+                <div style={{ backgroundColor: "#F2F8F4", padding: "10px 16px", display: "flex", gap: 10, alignItems: "center" }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#8A4020", textTransform: "uppercase" }}>Myth</span>
                   <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", margin: 0 }}>{item.myth}</p>
                 </div>
-                <div style={{ padding: "12px 16px", borderTop: "1px solid #D4C9B8" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", color: "#1A6B3A", textTransform: "uppercase", marginBottom: 6 }}>Reality</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{item.reality}</p>
+                <div style={{ padding: "12px 16px", borderTop: "1px solid #E4E8E5" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.12em", color: "#1A6B3A", textTransform: "uppercase", marginBottom: 6 }}>Reality</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{item.reality}</p>
                 </div>
               </div>
             ))}
@@ -570,8 +570,8 @@ export default function CreatineBrainHealthPage() {
         <section style={{ marginBottom: 56, backgroundColor: "#1A1714", borderRadius: 12, padding: "36px 36px 32px", overflow: "hidden", position: "relative" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
           <div style={{ position: "relative" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 20 }}>
               Creatine is the best-evidenced cognitive supplement for people who start from a deficit — and among the safest compounds studied.
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -583,7 +583,7 @@ export default function CreatineBrainHealthPage() {
                 "Practical dose: 3–5g/day of creatine monohydrate, no loading required for brain benefits, taken at any time. Vegetarians and adults over 65 are likely to see the most meaningful improvements.",
               ].map((point, i) => (
                 <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", flexShrink: 0, marginTop: 3 }}>→</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", flexShrink: 0, marginTop: 3 }}>→</span>
                   <p style={{ fontSize: 14, color: "rgba(242,235,217,0.8)", lineHeight: 1.65, margin: 0 }}>{point}</p>
                 </div>
               ))}
@@ -596,13 +596,13 @@ export default function CreatineBrainHealthPage() {
           <SectionHeading label="§ 09" figure="§" title="Frequently" titleItalic="Asked Questions" size="md" />
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {faqSchema.mainEntity.map((item, i) => (
-              <details key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", overflow: "hidden" }}>
-                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+              <details key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6", overflow: "hidden" }}>
+                <summary style={{ padding: "16px 20px", fontFamily: "var(--font-hanken), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
                   <span>{item.name}</span>
-                  <span style={{ color: "#C4622D", fontSize: 18, flexShrink: 0 }}>+</span>
+                  <span style={{ color: "#0F7A5A", fontSize: 18, flexShrink: 0 }}>+</span>
                 </summary>
-                <div style={{ padding: "0 20px 16px", borderTop: "1px solid #EDE8DF" }}>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: "14px 0 0" }}>{item.acceptedAnswer.text}</p>
+                <div style={{ padding: "0 20px 16px", borderTop: "1px solid #F2F8F4" }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: "14px 0 0" }}>{item.acceptedAnswer.text}</p>
                 </div>
               </details>
             ))}
@@ -612,7 +612,7 @@ export default function CreatineBrainHealthPage() {
         {/* § 10 — Clinical References */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="§ 10" figure="§" title="Clinical" titleItalic="References" size="md" />
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
+          <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               {
@@ -665,10 +665,10 @@ export default function CreatineBrainHealthPage() {
               },
             ].map((ref, i) => (
               <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", flexShrink: 0, marginTop: 3 }}>{String(i + 1).padStart(2, "0")}</span>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", flexShrink: 0, marginTop: 3 }}>{String(i + 1).padStart(2, "0")}</span>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
                   {ref.text}{" "}
-                  <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
+                  <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
                 </p>
               </div>
             ))}
@@ -677,7 +677,7 @@ export default function CreatineBrainHealthPage() {
 
         {/* Related content */}
         <section>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>Related Reading</p>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 16 }}>Related Reading</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
             {[
               { href: "/research/sleep-duration-biological-aging", label: "Sleep & Biological Aging", sub: "How 6.4–7.8 hrs links to slower aging" },
@@ -685,9 +685,9 @@ export default function CreatineBrainHealthPage() {
               { href: "/blog/plant-foods-menopause", label: "Plant-Forward Eating Guide", sub: "Nutrition strategies including creatine gap" },
               { href: "/research/glp1-beyond-weight-loss", label: "GLP-1 Beyond Weight Loss", sub: "Cognitive and cardiovascular benefits" },
             ].map((link) => (
-              <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
-                <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{link.sub}</p>
+              <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, textDecoration: "none", backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
+                <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>{link.sub}</p>
               </Link>
             ))}
           </div>

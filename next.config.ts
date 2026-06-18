@@ -16,7 +16,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https://pub-cfbcca8550f5404f92083870525d6d19.r2.dev https://www.google-analytics.com https://m.media-amazon.com",
       "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com",

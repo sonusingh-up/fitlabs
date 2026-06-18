@@ -283,10 +283,10 @@ export default function DymatizeISO100Review() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* ── Breadcrumb ─────────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             {[
               { label: "Home", href: "/" },
@@ -294,12 +294,12 @@ export default function DymatizeISO100Review() {
               { label: "Protein Powder", href: "/category/protein-powder" },
             ].map((crumb, i, arr) => (
               <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
-                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>}
               </span>
             ))}
-            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Dymatize ISO100</span>
+            <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Dymatize ISO100</span>
           </div>
         </div>
 
@@ -319,41 +319,41 @@ export default function DymatizeISO100Review() {
           </div>
           {/* Text */}
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>
               REV-2026-045 · WHEY PROTEIN ISOLATE
             </span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
               Dymatize<br />
-              <em style={{ fontWeight: 400, color: "#A89880" }}>ISO100 Hydrolyzed Whey Isolate</em>
+              <em style={{ fontWeight: 400, color: "#586259" }}>ISO100 Hydrolyzed Whey Isolate</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
               <div style={{ display: "flex", gap: 4 }}>
                 {[1,2,3,4,5,6,7,8,9].map((s) => <Star key={s} size={14} fill="#2D6A4F" color="#2D6A4F" />)}
                 {[10].map((s) => <Star key={s} size={14} fill="none" color="#2D6A4F" />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>9 / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>9 / 10 · FSP v2.1</span>
             </div>
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #FFFFFF)" }} />
         </div>
 
         {/* ── Hero Row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-045</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Dual Certified</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>REV-2026-045</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#2D6A4F", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Dual Certified</span>
           </div>
           <div className="layout-hero-split">
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>
                 Dymatize · Whey Protein Isolate · Hydrolyzed
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 ISO100 Hydrolyzed Whey<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>The Purest Isolate Worth Its Price Tag?</em>
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43", fontSize: "0.7em" }}>The Purest Isolate Worth Its Price Tag?</em>
               </h2>
-              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
                 Dymatize ISO100 is the only hydrolyzed whey isolate that simultaneously holds both NSF Certified for Sport and Informed Choice certification. It delivers 25g protein, 2.7g leucine, and near-zero fat and carbs per serving. The question is not whether the formula is excellent — it clearly is — but whether the 50–65% price premium over comparable isolates is worth it for your training context.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -361,13 +361,13 @@ export default function DymatizeISO100Review() {
                   href="https://amzn.to/4e73lcN"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#2D6A4F", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Check Price on Amazon <ExternalLink size={13} />
                 </a>
                 <Link
                   href="/methodology"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #E4E8E5", color: "#6B7770", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}
                 >
                   FSP {rubric.compositeScore.toFixed(1)} → How we score
                 </Link>
@@ -391,38 +391,38 @@ export default function DymatizeISO100Review() {
 
         {/* ── Author Box ─────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A2E1E", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#FFFFFF" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Written & Reviewed By</p>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors/fitlab-research-team" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
-                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Evidence-Led Supplement Analysis</span>
+                <span style={{ fontWeight: 400, color: "#6B7770", fontSize: 12 }}> · Evidence-Led Supplement Analysis</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650" }}>Multiple tubs tested across flavours · NSF & Informed Choice verified · Amino acid profile cross-checked</p>
+              <p style={{ fontSize: 12, color: "#3F4B43" }}>Multiple tubs tested across flavours · NSF & Informed Choice verified · Amino acid profile cross-checked</p>
             </div>
             <div style={{ display: "flex", gap: 8 }}>
-              <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Verified Purchase</span>
-              <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace" }}>Lab Checked</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Verified Purchase</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace" }}>Lab Checked</span>
             </div>
           </div>
         </div>
 
         {/* ── Affiliate Disclosure ───────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links in this review may earn a commission at no cost to you. Scores and verdicts are editorially independent.{" "}
-              <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
+              <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
           </div>
         </div>
 
         {/* ── Mobile TOC ─────────────────────────────────────────────────────── */}
-        <div className="block lg:hidden" style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 16 }}>
+        <div className="block lg:hidden" style={{ borderTop: "1px solid #E4E8E5", borderBottom: "1px solid #E4E8E5", marginTop: 16 }}>
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
@@ -433,7 +433,7 @@ export default function DymatizeISO100Review() {
           <div className="layout-sidebar">
 
             {/* Desktop TOC */}
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
@@ -442,21 +442,21 @@ export default function DymatizeISO100Review() {
               {/* ── 1. Quick Verdict ─────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ backgroundColor: "#1A1714", borderRadius: 12, padding: "32px 28px", marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.5)", marginBottom: 12 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.5)", marginBottom: 12 }}>
                     QUICK VERDICT · REV-2026-045
                   </p>
-                  <p style={{ fontSize: 16, color: "#D4C9B8", lineHeight: 1.75, marginBottom: 24 }}>
+                  <p style={{ fontSize: 16, color: "#E4E8E5", lineHeight: 1.75, marginBottom: 24 }}>
                     ISO100 is the best-formulated hydrolyzed whey isolate available in 2026. The dual NSF + Informed Choice certification is genuinely rare, the formula is clean, and the leucine content (2.7g) exceeds the MPS threshold identified in peer-reviewed literature. Gourmet Chocolate sets the flavour benchmark for the entire category.
                   </p>
-                  <p style={{ fontSize: 16, color: "#D4C9B8", lineHeight: 1.75, marginBottom: 24 }}>
+                  <p style={{ fontSize: 16, color: "#E4E8E5", lineHeight: 1.75, marginBottom: 24 }}>
                     The single legitimate criticism is price. At $2.09/serving, ISO100 costs 50–65% more than comparable isolates. If you compete at a tested level (WADA/NSF) or have documented lactose sensitivity requiring the purest isolate possible, the premium is rational. For the majority of recreational lifters, ON Gold Standard at $1.30–1.40/serving delivers 92–94% of the practical benefit at a fraction of the cost.
                   </p>
                   {/* 5-pillar quick grid */}
                   <div className="review-pillar-grid">
                     {rubric.pillars.map((p) => (
                       <div key={p.pillar} style={{ backgroundColor: "rgba(242,235,217,0.04)", border: "1px solid rgba(212,201,184,0.12)", borderRadius: 8, padding: "12px 14px" }}>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 6 }}>{p.pillar}</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: p.score >= 8.5 ? "#2D6A4F" : p.score >= 7 ? "#A89880" : "#8B3A2C", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 6 }}>{p.pillar}</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: p.score >= 8.5 ? "#2D6A4F" : p.score >= 7 ? "#586259" : "#8B3A2C", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
                       </div>
                     ))}
                   </div>
@@ -465,7 +465,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 2. What Is ISO100? ───────────────────────────────────────── */}
               <section id="what-is" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   What Is Dymatize ISO100?
                 </h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -486,9 +486,9 @@ export default function DymatizeISO100Review() {
                     { label: "Fat/Serve", value: "0.5g" },
                     { label: "Carbs/Serve", value: "2g" },
                   ].map((stat) => (
-                    <div key={stat.label} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, padding: "14px 16px" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>{stat.label}</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714" }}>{stat.value}</p>
+                    <div key={stat.label} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, padding: "14px 16px" }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{stat.label}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714" }}>{stat.value}</p>
                     </div>
                   ))}
                 </div>
@@ -496,18 +496,18 @@ export default function DymatizeISO100Review() {
 
               {/* ── 3. Score Breakdown ───────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   FSP Score Breakdown
                 </h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-045" />
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, fontFamily: "var(--font-dm-sans), sans-serif", lineHeight: 1.6 }}>
+                <p style={{ fontSize: 13, color: "#6B7770", marginTop: 12, fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.6 }}>
                   Composite score of {rubric.compositeScore.toFixed(2)} reflects weighted FSP v2.1 calculation (Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%) minus red-flag deductions. Editorial score of {editorialScore}/10 accounts for holistic assessment — the formula and certification quality warrant a slight editorial lift above the composite.
                 </p>
               </section>
 
               {/* ── 4. Flags ─────────────────────────────────────────────────── */}
               <section id="flags" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Red & Green Flags
                 </h2>
                 <FlagSystem flags={rubric.flags} />
@@ -515,12 +515,12 @@ export default function DymatizeISO100Review() {
 
               {/* ── 5. Supplement Facts ──────────────────────────────────────── */}
               <section id="nutrition-label" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Supplement Facts (Gourmet Chocolate — 3 lb)
                 </h2>
-                <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
-                  <div style={{ padding: "16px 20px", borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.08em", color: "#1A1714", fontWeight: 700 }}>Serving Size: 1 Scoop (29.4g) · Servings Per Container: 43</p>
+                <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
+                  <div style={{ padding: "16px 20px", borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.08em", color: "#1A1714", fontWeight: 700 }}>Serving Size: 1 Scoop (29.4g) · Servings Per Container: 43</p>
                   </div>
                   <div style={{ padding: "4px 0" }}>
                     {[
@@ -538,21 +538,21 @@ export default function DymatizeISO100Review() {
                       { nutrient: "Iron", amount: "0.4mg", dv: "2%" },
                       { nutrient: "Phosphorus", amount: "200mg", dv: "16%" },
                     ].map((row, i) => (
-                      <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "8px 20px", borderBottom: i < 12 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "transparent" : "rgba(242,235,217,0.3)" }}>
-                        <span style={{ fontSize: 13, color: row.nutrient.startsWith("  ") ? "#5C5650" : "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: row.nutrient.startsWith("  ") ? 400 : 600 }}>{row.nutrient}</span>
-                        <span style={{ fontSize: 13, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{row.amount}{row.dv ? ` · ${row.dv} DV` : ""}</span>
+                      <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "8px 20px", borderBottom: i < 12 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "transparent" : "rgba(242,235,217,0.3)" }}>
+                        <span style={{ fontSize: 13, color: row.nutrient.startsWith("  ") ? "#3F4B43" : "#1A1714", fontFamily: "var(--font-hanken), sans-serif", fontWeight: row.nutrient.startsWith("  ") ? 400 : 600 }}>{row.nutrient}</span>
+                        <span style={{ fontSize: 13, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{row.amount}{row.dv ? ` · ${row.dv} DV` : ""}</span>
                       </div>
                     ))}
                   </div>
-                  <div style={{ padding: "12px 20px", borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", letterSpacing: "0.04em" }}>Protein source: Hydrolyzed Whey Protein Isolate, Whey Protein Isolate. Sweetener: Sucralose. *Data verified May 2026 from manufacturer label (3 lb Gourmet Chocolate).</p>
+                  <div style={{ padding: "12px 20px", borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770", letterSpacing: "0.04em" }}>Protein source: Hydrolyzed Whey Protein Isolate, Whey Protein Isolate. Sweetener: Sucralose. *Data verified May 2026 from manufacturer label (3 lb Gourmet Chocolate).</p>
                   </div>
                 </div>
 
                 {/* Amino Acid profile */}
-                <div style={{ marginTop: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
-                  <div style={{ padding: "14px 20px", borderBottom: "1px solid #D4C9B8" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A1714" }}>Amino Acid Profile per Serving (label-declared)</p>
+                <div style={{ marginTop: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
+                  <div style={{ padding: "14px 20px", borderBottom: "1px solid #E4E8E5" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A1714" }}>Amino Acid Profile per Serving (label-declared)</p>
                   </div>
                   <div style={{ padding: "12px 20px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 8 }}>
                     {[
@@ -567,9 +567,9 @@ export default function DymatizeISO100Review() {
                       { aa: "Tryptophan", amount: "0.4g", highlight: false },
                       { aa: "Total EAAs", amount: "~11.9g", highlight: true },
                     ].map((row) => (
-                      <div key={row.aa} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #EDE8DF" }}>
-                        <span style={{ fontSize: 12, color: row.highlight ? "#1A1714" : "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: row.highlight ? 600 : 400 }}>{row.aa}</span>
-                        <span style={{ fontSize: 12, color: row.highlight ? "#2D6A4F" : "#5C5650", fontFamily: "var(--font-dm-mono), monospace", fontWeight: row.highlight ? 700 : 400 }}>{row.amount}</span>
+                      <div key={row.aa} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid #F2F8F4" }}>
+                        <span style={{ fontSize: 12, color: row.highlight ? "#1A1714" : "#3F4B43", fontFamily: "var(--font-hanken), sans-serif", fontWeight: row.highlight ? 600 : 400 }}>{row.aa}</span>
+                        <span style={{ fontSize: 12, color: row.highlight ? "#2D6A4F" : "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", fontWeight: row.highlight ? 700 : 400 }}>{row.amount}</span>
                       </div>
                     ))}
                   </div>
@@ -578,7 +578,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 6. Protein Breakdown ─────────────────────────────────────── */}
               <section id="ingredients" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Protein Source Breakdown
                 </h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 24 }}>
@@ -586,11 +586,11 @@ export default function DymatizeISO100Review() {
                 </p>
 
                 {/* Hydrolyzed WPI */}
-                <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "20px 24px", marginBottom: 16 }}>
+                <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, padding: "20px 24px", marginBottom: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12, marginBottom: 12 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>PRIMARY SOURCE</p>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-playfair), Georgia, serif" }}>Hydrolyzed Whey Protein Isolate</h3>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 4 }}>PRIMARY SOURCE</p>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Hydrolyzed Whey Protein Isolate</h3>
                     </div>
                     <EvidenceBadge level="strong" />
                   </div>
@@ -600,11 +600,11 @@ export default function DymatizeISO100Review() {
                 </div>
 
                 {/* WPI */}
-                <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "20px 24px", marginBottom: 16 }}>
+                <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, padding: "20px 24px", marginBottom: 16 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 12, marginBottom: 12 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>SECONDARY SOURCE</p>
-                      <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-playfair), Georgia, serif" }}>Whey Protein Isolate (WPI)</h3>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 4 }}>SECONDARY SOURCE</p>
+                      <h3 style={{ fontSize: 16, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Whey Protein Isolate (WPI)</h3>
                     </div>
                     <EvidenceBadge level="strong" />
                   </div>
@@ -617,7 +617,7 @@ export default function DymatizeISO100Review() {
                 <div style={{ backgroundColor: "rgba(45,106,79,0.06)", border: "1px solid rgba(45,106,79,0.25)", borderRadius: 10, padding: "16px 20px", display: "flex", gap: 14, alignItems: "flex-start" }}>
                   <CheckCircle size={18} style={{ color: "#2D6A4F", flexShrink: 0, marginTop: 2 }} />
                   <div>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 4 }}>Leucine threshold met: 2.7g per serving</p>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 4 }}>Leucine threshold met: 2.7g per serving</p>
                     <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
                       Churchward-Venne et al. (2012, J Physiol) established that approximately 2.5g leucine per meal is required to maximally activate mTORC1 and drive muscle protein synthesis signalling in trained young adults. ISO100&apos;s 2.7g per scoop clears this threshold comfortably, even accounting for absorption variance.
                     </p>
@@ -627,7 +627,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 7. Lab & Certification ───────────────────────────────────── */}
               <section id="lab-data" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Lab & Certification Data
                 </h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 24 }}>
@@ -635,40 +635,40 @@ export default function DymatizeISO100Review() {
                 </p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16, marginBottom: 24 }}>
                   {/* Informed Choice */}
-                  <div style={{ backgroundColor: "#F8F2E4", border: "2px solid rgba(45,106,79,0.3)", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ backgroundColor: "#F6F8F6", border: "2px solid rgba(45,106,79,0.3)", borderRadius: 12, padding: "20px 22px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
                       <ShieldCheck size={20} style={{ color: "#2D6A4F" }} />
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2D6A4F" }}>Informed Choice</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2D6A4F" }}>Informed Choice</p>
                     </div>
                     <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
                       Every batch tested against the current WADA prohibited substances list before release. Certificates verifiable at informedchoice.org. Active since 2015 for ISO100.
                     </p>
                   </div>
                   {/* NSF */}
-                  <div style={{ backgroundColor: "#F8F2E4", border: "2px solid rgba(45,106,79,0.3)", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ backgroundColor: "#F6F8F6", border: "2px solid rgba(45,106,79,0.3)", borderRadius: 12, padding: "20px 22px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
                       <ShieldCheck size={20} style={{ color: "#2D6A4F" }} />
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2D6A4F" }}>NSF Certified for Sport</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#2D6A4F" }}>NSF Certified for Sport</p>
                     </div>
                     <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
                       Tests for 270+ banned substances plus label accuracy (protein content within ±5% of declaration) and manufacturing facility audits. Required by USOC and NFL.
                     </p>
                   </div>
                   {/* cGMP */}
-                  <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, padding: "20px 22px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                      <CheckCircle size={20} style={{ color: "#5C5650" }} />
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650" }}>FDA cGMP Facility</p>
+                      <CheckCircle size={20} style={{ color: "#3F4B43" }} />
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43" }}>FDA cGMP Facility</p>
                     </div>
                     <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
                       Manufactured in the United States at an FDA-registered, cGMP-inspected facility. No FDA warning letters or Class II/III recalls on record as of May 2026.
                     </p>
                   </div>
                   {/* No heavy metals flag */}
-                  <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, padding: "20px 22px" }}>
+                  <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, padding: "20px 22px" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-                      <CheckCircle size={20} style={{ color: "#5C5650" }} />
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650" }}>Heavy Metal Screening</p>
+                      <CheckCircle size={20} style={{ color: "#3F4B43" }} />
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43" }}>Heavy Metal Screening</p>
                     </div>
                     <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
                       NSF testing includes lead, cadmium, arsenic, and mercury screening. No ISO100 batch has exceeded California Prop 65 limits across publicly available NSF test data.
@@ -677,14 +677,14 @@ export default function DymatizeISO100Review() {
                 </div>
                 <div style={{ backgroundColor: "rgba(45,106,79,0.05)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 8, padding: "14px 18px" }}>
                   <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.7 }}>
-                    <strong>Verification note:</strong> You can verify ISO100&apos;s current certification status at <code style={{ fontSize: 12, backgroundColor: "#EDE8DF", padding: "1px 5px", borderRadius: 3 }}>sport.nsf.org/certified</code> and <code style={{ fontSize: 12, backgroundColor: "#EDE8DF", padding: "1px 5px", borderRadius: 3 }}>informed-sport.com/product-search</code>. Always check the specific batch/lot you purchase — certification covers batches individually, not the product line in perpetuity.
+                    <strong>Verification note:</strong> You can verify ISO100&apos;s current certification status at <code style={{ fontSize: 12, backgroundColor: "#F2F8F4", padding: "1px 5px", borderRadius: 3 }}>sport.nsf.org/certified</code> and <code style={{ fontSize: 12, backgroundColor: "#F2F8F4", padding: "1px 5px", borderRadius: 3 }}>informed-sport.com/product-search</code>. Always check the specific batch/lot you purchase — certification covers batches individually, not the product line in perpetuity.
                   </p>
                 </div>
               </section>
 
               {/* ── 8. Claim Audit ───────────────────────────────────────────── */}
               <section id="claim-audit" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Claim Audit
                 </h2>
                 <ClaimAudit items={rubric.claimAudit} />
@@ -692,7 +692,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 9. Flavour Guide ─────────────────────────────────────────── */}
               <section id="flavours" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Flavour Guide
                 </h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -707,32 +707,32 @@ export default function DymatizeISO100Review() {
                     { name: "Strawberry", rating: "7.5/10", tag: "Light", tagColor: "#8B7355", notes: "Clean, not overpowering. Best for smoothie use, can be thin in water alone." },
                     { name: "Cocoa Pebbles", rating: "8.5/10", tag: "Cereal", tagColor: "#8B7355", notes: "Second Pebbles collab. Chocolate cereal-milk profile. More approachable than Fruity Pebbles for chocolate lovers." },
                   ].map((f) => (
-                    <div key={f.name} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, padding: "16px 18px" }}>
+                    <div key={f.name} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, padding: "16px 18px" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
-                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{f.name}</p>
-                        <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", backgroundColor: f.tagColor }}>{f.tag}</span>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{f.name}</p>
+                        <span style={{ padding: "2px 7px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "#FFFFFF", backgroundColor: f.tagColor }}>{f.tag}</span>
                       </div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, fontWeight: 700, color: "#2D6A4F", marginBottom: 6 }}>{f.rating}</p>
-                      <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>{f.notes}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, fontWeight: 700, color: "#2D6A4F", marginBottom: 6 }}>{f.rating}</p>
+                      <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>{f.notes}</p>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 14, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 14, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Ratings based on blind taste testing in water (8 oz / one scoop). Scores may vary with milk. ISO100 Natural (stevia-sweetened) available in Vanilla Bean — rated 7.5/10 for taste, 10/10 for clean label.
                 </p>
               </section>
 
               {/* ── 10. vs. Competitors ──────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   ISO100 vs. Competitors
                 </h2>
                 <div className="review-table-wrap">
-                  <table style={{ borderCollapse: "collapse", fontSize: 13, fontFamily: "var(--font-dm-sans), sans-serif", minWidth: 620 }}>
+                  <table style={{ borderCollapse: "collapse", fontSize: 13, fontFamily: "var(--font-hanken), sans-serif", minWidth: 620 }}>
                     <thead>
-                      <tr style={{ backgroundColor: "#1A1714", color: "#F2EBD9" }}>
+                      <tr style={{ backgroundColor: "#1A1714", color: "#FFFFFF" }}>
                         {["Product", "Protein Type", "Protein/Serve", "Leucine", "3rd-Party Cert", "Price/Serving", "FSP"].map((h) => (
-                          <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>{h}</th>
+                          <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -744,9 +744,9 @@ export default function DymatizeISO100Review() {
                         { product: "MyProtein Impact Isolate", type: "WPI", protein: "23g", leucine: "~2.2g", cert: "Informed Sport ✓", price: "$0.95", fsp: "7/10", highlight: false },
                         { product: "Thorne Whey Protein", type: "WPI", protein: "21g", leucine: "~2.0g", cert: "NSF ✓", price: "$2.40", fsp: "7/10", highlight: false },
                       ].map((row, i) => (
-                        <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(45,106,79,0.06)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #D4C9B8" }}>
+                        <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(45,106,79,0.06)" : i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #E4E8E5" }}>
                           <td style={{ padding: "10px 14px", fontWeight: row.highlight ? 700 : 400, color: row.highlight ? "#1A1714" : "#2D2926" }}>{row.product}</td>
-                          <td style={{ padding: "10px 14px", color: "#5C5650" }}>{row.type}</td>
+                          <td style={{ padding: "10px 14px", color: "#3F4B43" }}>{row.type}</td>
                           <td style={{ padding: "10px 14px", color: "#1A1714", fontWeight: 600 }}>{row.protein}</td>
                           <td style={{ padding: "10px 14px", color: "#2D2926" }}>{row.leucine}</td>
                           <td style={{ padding: "10px 14px", color: row.cert.includes("✓✓") ? "#2D6A4F" : row.cert.includes("✓") ? "#2D6A4F" : "#8B3A2C", fontWeight: 600 }}>{row.cert}</td>
@@ -757,11 +757,11 @@ export default function DymatizeISO100Review() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Prices verified May 2026 (Amazon US, 3 lb or equivalent). IC = Informed Choice. FSP scores reflect our internal review ratings.
                 </p>
-                <div style={{ marginTop: 20, padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>The honest trade-off</p>
+                <div style={{ marginTop: 20, padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
+                  <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>The honest trade-off</p>
                   <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.75 }}>
                     ISO100 vs ON Gold Standard is the core comparison most buyers face. ISO100 provides 1g more protein per serving, uses only isolate (no concentrate filler), adds the hydrolyzed fraction, and adds NSF certification to match Gold Standard&apos;s Informed Choice. The cost difference is $0.71/serving — over 40 servings that is $28.40 more per container. If you are a tested athlete, the dual certification is non-negotiable and ISO100 wins clearly. If you are a recreational lifter not subject to drug testing, ON Gold Standard delivers equivalent practical results at 34% lower cost.
                   </p>
@@ -770,7 +770,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 11. Products at a Glance ─────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Products at a Glance
                 </h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
@@ -840,7 +840,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 12. Pros & Cons ──────────────────────────────────────────── */}
               <section id="pros-cons" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Pros & Cons
                 </h2>
                 <ProsCons
@@ -866,7 +866,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 13. Safety & Side Effects ────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Safety & Side Effects
                 </h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -879,16 +879,16 @@ export default function DymatizeISO100Review() {
                     { label: "Sucralose Concern", verdict: "Minimal at Label Dose", color: "#8B7355", detail: "Sucralose content per serving is well below levels associated with gut microbiome disruption in rodent studies (Schiffman et al., 2015). Human data at supplement doses is inconclusive — if this concerns you, ISO100 Natural (stevia) resolves the issue." },
                     { label: "Allergen Disclosure", verdict: "Contains: Milk, Soy (may vary by flavour)", color: "#8B7355", detail: "Manufactured on equipment that processes soy and tree nuts. Peanut, gluten, egg: not in the product but facility processes these allergens. Always check the current label for your specific flavour/lot." },
                   ].map((item) => (
-                    <div key={item.label} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, padding: "16px 18px" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>{item.label}</p>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: item.color, marginBottom: 8, fontFamily: "var(--font-dm-sans), sans-serif" }}>{item.verdict}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{item.detail}</p>
+                    <div key={item.label} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, padding: "16px 18px" }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{item.label}</p>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: item.color, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>{item.verdict}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{item.detail}</p>
                     </div>
                   ))}
                 </div>
-                <div style={{ padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", gap: 10, alignItems: "flex-start" }}>
+                <div style={{ padding: "14px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, display: "flex", gap: 10, alignItems: "flex-start" }}>
                   <AlertTriangle size={14} style={{ color: "#8B7355", flexShrink: 0, marginTop: 1 }} />
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
                     <strong>Drug interactions:</strong> Whey protein may modestly affect levodopa absorption. If you are on prescription medications with narrow therapeutic windows, discuss high-protein supplement use with your prescribing physician before starting.
                   </p>
                 </div>
@@ -896,7 +896,7 @@ export default function DymatizeISO100Review() {
 
               {/* ── 14. Price & Value ────────────────────────────────────────── */}
               <section id="value" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Price & Value
                 </h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="protein" />
@@ -906,22 +906,22 @@ export default function DymatizeISO100Review() {
                     { size: "3 lb (43 servings)", price: "$90–95", pps: "$2.09–2.21", tag: "Best Value" },
                     { size: "5 lb (71 servings)", price: "$130–140", pps: "$1.83–1.97", tag: "Bulk" },
                   ].map((sz) => (
-                    <div key={sz.size} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, padding: "16px 18px" }}>
-                      <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 10 }}>{sz.tag}</span>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 4 }}>{sz.size}</p>
-                      <p style={{ fontSize: 15, fontWeight: 700, color: "#2D6A4F", fontFamily: "var(--font-playfair), Georgia, serif", marginBottom: 2 }}>{sz.price}</p>
-                      <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{sz.pps} / serving</p>
+                    <div key={sz.size} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, padding: "16px 18px" }}>
+                      <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 10 }}>{sz.tag}</span>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 4 }}>{sz.size}</p>
+                      <p style={{ fontSize: 15, fontWeight: 700, color: "#2D6A4F", fontFamily: "var(--font-newsreader), Georgia, serif", marginBottom: 2 }}>{sz.price}</p>
+                      <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>{sz.pps} / serving</p>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Prices verified May 2026 (Amazon US). Sale prices (Subscribe & Save, Prime deals) can reduce cost-per-serving to $1.75–1.90 on the 5 lb size.
                 </p>
               </section>
 
               {/* ── 15. Where to Buy ─────────────────────────────────────────── */}
               <section id="where-to-buy" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Where to Buy
                 </h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
@@ -931,15 +931,15 @@ export default function DymatizeISO100Review() {
                     { channel: "GNC / Vitamin Shoppe", verdict: "Acceptable", color: "#8B7355", icon: <AlertTriangle size={16} />, detail: "Retail-exclusive flavours occasionally available. In-store prices can be 10–15% higher than online. Check online price match policies.", cta: null, url: "" },
                     { channel: "Third-Party Resellers (USA, eBay)", verdict: "Caution", color: "#8B3A2C", icon: <XCircle size={16} />, detail: "ISO100 is not officially distributed in USA. Import-grey market products exist but carry counterfeit risk. If buying in USA, verify the NSF/IC lot number before purchase.", cta: null, url: "" },
                   ].map((ch) => (
-                    <div key={ch.channel} style={{ backgroundColor: "#F8F2E4", border: `1px solid ${ch.color === "#8B3A2C" ? "rgba(139,58,44,0.3)" : "#D4C9B8"}`, borderRadius: 10, padding: "18px 20px" }}>
+                    <div key={ch.channel} style={{ backgroundColor: "#F6F8F6", border: `1px solid ${ch.color === "#8B3A2C" ? "rgba(139,58,44,0.3)" : "#E4E8E5"}`, borderRadius: 10, padding: "18px 20px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
                         <span style={{ color: ch.color }}>{ch.icon}</span>
-                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{ch.channel}</p>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{ch.channel}</p>
                       </div>
-                      <span style={{ display: "inline-block", padding: "2px 8px", borderRadius: 4, fontSize: 10, color: "#F2EBD9", backgroundColor: ch.color, fontFamily: "var(--font-dm-mono), monospace", marginBottom: 10 }}>{ch.verdict}</span>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: ch.cta ? 12 : 0 }}>{ch.detail}</p>
+                      <span style={{ display: "inline-block", padding: "2px 8px", borderRadius: 4, fontSize: 10, color: "#FFFFFF", backgroundColor: ch.color, fontFamily: "var(--font-jetbrains), monospace", marginBottom: 10 }}>{ch.verdict}</span>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: ch.cta ? 12 : 0 }}>{ch.detail}</p>
                       {ch.cta && ch.url && (
-                        <a href={ch.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                        <a href={ch.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                           {ch.cta} <ExternalLink size={11} />
                         </a>
                       )}
@@ -950,14 +950,14 @@ export default function DymatizeISO100Review() {
 
               {/* ── 16. FAQ ──────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Frequently Asked Questions
                 </h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <div key={i} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden" }}>
-                      <div style={{ padding: "16px 20px", borderBottom: "1px solid #EDE8DF" }}>
-                        <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{faq.name}</p>
+                    <div key={i} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden" }}>
+                      <div style={{ padding: "16px 20px", borderBottom: "1px solid #F2F8F4" }}>
+                        <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{faq.name}</p>
                       </div>
                       <div style={{ padding: "14px 20px" }}>
                         <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.75 }}>{faq.acceptedAnswer.text}</p>
@@ -970,31 +970,31 @@ export default function DymatizeISO100Review() {
               {/* ── 17. Final Verdict ────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
                 <div style={{ backgroundColor: "#1A1714", borderRadius: 12, padding: "36px 32px" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 16 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 16 }}>
                     FINAL VERDICT · REV-2026-045
                   </p>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2D6A4F", lineHeight: 1 }}>{editorialScore}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "rgba(212,201,184,0.5)" }}>/10 · FSP EDITORIAL</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#2D6A4F", lineHeight: 1 }}>{editorialScore}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", color: "rgba(212,201,184,0.5)" }}>/10 · FSP EDITORIAL</p>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12, lineHeight: 1.2 }}>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 12, lineHeight: 1.2 }}>
                         The best-certified hydrolyzed isolate available. Justified for tested athletes; a luxury for recreational lifters.
                       </h3>
                     </div>
                   </div>
-                  <p style={{ fontSize: 15, color: "#D4C9B8", lineHeight: 1.8, marginBottom: 16 }}>
+                  <p style={{ fontSize: 15, color: "#E4E8E5", lineHeight: 1.8, marginBottom: 16 }}>
                     Dymatize ISO100 earns a 9/10 on the strength of an exceptional formula, the industry&apos;s most rigorous dual certification, and a flavour system that genuinely outperforms every competitor we have tested in this category. The 2.7g leucine per serving, hydrolyzed protein fraction, and near-zero fat-and-carb profile make it the technically superior choice for post-workout use.
                   </p>
-                  <p style={{ fontSize: 15, color: "#D4C9B8", lineHeight: 1.8, marginBottom: 28 }}>
+                  <p style={{ fontSize: 15, color: "#E4E8E5", lineHeight: 1.8, marginBottom: 28 }}>
                     The value score (6.0/10) is the honest limit of this review. The $0.70/serving premium over ON Gold Standard is real and recurring — over a year of daily use that is an additional $255/year. The practical muscle-building benefit over Gold Standard for an untested recreational lifter is negligible. Buy ISO100 if you are a competitive or tested athlete, have documented lactose sensitivity, or simply demand the highest-certified product available without compromise. Buy Gold Standard if you want 92% of the result at 65% of the cost.
                   </p>
                   <a
                     href="https://amzn.to/4e73lcN"
                     target="_blank"
                     rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 14, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", backgroundColor: "#2D6A4F", color: "#FFFFFF", fontSize: 14, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                   >
                     Check Current Price on Amazon <ExternalLink size={14} />
                   </a>
@@ -1003,10 +1003,10 @@ export default function DymatizeISO100Review() {
 
               {/* ── Research References ──────────────────────────────────────── */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                   Research References
                 </h2>
-                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
                       "Tang JE et al. (2009). Ingestion of whey hydrolysate, casein, or soy protein isolate: effects on mixed muscle protein synthesis at rest and following resistance exercise in young men. J Appl Physiol, 107(3): 987–992.",
@@ -1017,7 +1017,7 @@ export default function DymatizeISO100Review() {
                       "Moore DR et al. (2009). Ingested protein dose response of muscle and albumin protein synthesis after resistance exercise in young men. Am J Clin Nutr, 89(1): 161–168.",
                       "Schiffman SS & Rother KI (2013). Sucralose, a synthetic organochlorine sweetener: overview of biological issues. J Toxicol Environ Health B Crit Rev, 16(7): 399–451.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}</li>
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>{ref}</li>
                     ))}
                   </ol>
                 </div>
@@ -1028,14 +1028,14 @@ export default function DymatizeISO100Review() {
         </div>
 
         {/* ── Related Reviews — outside container-pad ────────────────────────── */}
-        <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+        <section style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="pad-section-sm px-page">
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Related Reviews</p>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
-              <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+              <Link href="/reviews" style={{ fontSize: 12, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
               {relatedReviews.map((r) => <ReviewCard key={r.slug} {...r} />)}

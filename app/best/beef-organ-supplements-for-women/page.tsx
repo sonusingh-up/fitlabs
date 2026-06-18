@@ -127,18 +127,18 @@ export default function BestBeefOrganSupplementsWomenPage() {
   ];
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/best" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Best</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Beef Organs for Women</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/best" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Best</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Beef Organs for Women</span>
         </div>
       </div>
 
@@ -147,23 +147,23 @@ export default function BestBeefOrganSupplementsWomenPage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>Roundup · 2026</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Evidence-Led Rankings</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>Roundup · 2026</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>Evidence-Led Rankings</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             Best Beef Organ Supplements for Women
-            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Iron, Folate, B12 & Female-Specific Formulas — 2026 Rankings</em>
+            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#3F4B43", fontSize: "0.65em", marginTop: 10 }}>Iron, Folate, B12 & Female-Specific Formulas — 2026 Rankings</em>
           </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             Women have different micronutrient priorities than the general population: higher iron requirements (18mg vs 8mg RDA for premenopausal women), greater folate needs during reproductive years, and higher rates of thyroid disorders requiring selenium support. Organ supplements can meaningfully address these gaps — but the right formula depends on your specific goals and health status.
           </p>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 12 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 12 }}>
             This guide covers the five best beef organ supplements for women in 2026, ranked by heme iron density, retinol safety profile, third-party testing, and female-relevant nutrient composition. All products were evaluated using the Fitlab Scoring Protocol (FSP).
           </p>
           <div style={{ padding: 16, backgroundColor: "#FFF8F0", border: "1px solid #E5C4B8", borderRadius: 8, borderLeft: "3px solid #9B2020" }}>
             <p style={{ fontSize: 13, fontWeight: 600, color: "#9B2020", marginBottom: 6 }}>Safety note: Pregnancy</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>Beef liver contains high levels of preformed vitamin A (retinol). Excess retinol in the first trimester is associated with teratogenic risk. Pregnant women and those actively trying to conceive should not use liver-containing supplements without explicit physician guidance. This applies to all products in this roundup.</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>Beef liver contains high levels of preformed vitamin A (retinol). Excess retinol in the first trimester is associated with teratogenic risk. Pregnant women and those actively trying to conceive should not use liver-containing supplements without explicit physician guidance. This applies to all products in this roundup.</p>
           </div>
         </div>
 
@@ -177,9 +177,9 @@ export default function BestBeefOrganSupplementsWomenPage() {
             { label: "Best Iron+Lactoferrin", value: "Terraferrin", sub: "7/10 · Disclosed doses" },
           ].map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", backgroundColor: "#252220", borderRadius: 8 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{s.value}</p>
-              <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 4 }}>{s.label}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF", marginBottom: 2 }}>{s.value}</p>
+              <p style={{ fontSize: 11, color: "#6B7770" }}>{s.sub}</p>
             </div>
           ))}
         </div>
@@ -187,7 +187,7 @@ export default function BestBeefOrganSupplementsWomenPage() {
         {/* Why organ supplements for women */}
         <SectionHeading label="Context" figure="§ 01" title="Why women need" titleItalic="different organ nutrients" size="sm" />
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 20 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20 }}>
             The case for organ supplements is stronger for premenopausal women than for any other demographic — because the micronutrient gap is larger and more specific.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -209,9 +209,9 @@ export default function BestBeefOrganSupplementsWomenPage() {
                 body: "Beef liver is the most concentrated natural source of preformed vitamin A (retinol) — 16,899µg per 100g. Retinol is essential for reproductive health, immune function, and skin integrity. However, it is also teratogenic in excess. The tolerable upper limit is 3,000µg RAE/day, with more conservative recommendations during pregnancy. Supplemental liver use during pregnancy requires physician oversight.",
               },
             ].map((item) => (
-              <div key={item.title} style={{ padding: 18, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.body}</p>
+              <div key={item.title} style={{ padding: 18, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.body}</p>
               </div>
             ))}
           </div>
@@ -221,44 +221,44 @@ export default function BestBeefOrganSupplementsWomenPage() {
         <SectionHeading label="Rankings" figure="§ 02" title="Our top picks" titleItalic="for women" size="sm" />
         <div style={{ display: "flex", flexDirection: "column", gap: 24, marginBottom: 48 }}>
           {picks.map((pick) => (
-            <div key={pick.rank} style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+            <div key={pick.rank} style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
               {/* Card header */}
               <div style={{ padding: "16px 20px", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700 }}>#{pick.rank}</span>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#F2EBD9" }}>{pick.name}</p>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700 }}>#{pick.rank}</span>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#FFFFFF" }}>{pick.name}</p>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", backgroundColor: "#252220", padding: "3px 8px", borderRadius: 4 }}>{pick.tag}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, color: "#C4622D", fontWeight: 700 }}>{pick.score}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", backgroundColor: "#252220", padding: "3px 8px", borderRadius: 4 }}>{pick.tag}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, color: "#0F7A5A", fontWeight: 700 }}>{pick.score}</span>
                 </div>
               </div>
               {/* Card body */}
-              <div style={{ padding: "18px 20px", backgroundColor: "#F8F2E4", display: "flex", gap: 20, alignItems: "flex-start" }}>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F6F8F6", display: "flex", gap: 20, alignItems: "flex-start" }}>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 12, flexWrap: "wrap" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>{pick.price}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>{pick.price}</span>
                   </div>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 14 }}>{pick.why}</p>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 12 }}>
                     {pick.nutrients.map((n) => (
-                      <span key={n} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "3px 8px", borderRadius: 4 }}>{n}</span>
+                      <span key={n} style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#3F4B43", backgroundColor: "#F2F8F4", padding: "3px 8px", borderRadius: 4 }}>{n}</span>
                     ))}
                   </div>
                   {pick.caution && (
-                    <p style={{ fontSize: 12, color: "#8A8480", fontStyle: "italic", marginBottom: 14 }}>⚠ {pick.caution}</p>
+                    <p style={{ fontSize: 12, color: "#6B7770", fontStyle: "italic", marginBottom: 14 }}>⚠ {pick.caution}</p>
                   )}
                   <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
-                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                    <a href={pick.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "7px 14px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 12, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                       Buy on Amazon ↗
                     </a>
-                    <Link href={pick.href} style={{ fontSize: 13, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", fontWeight: 600, whiteSpace: "nowrap" }}>
+                    <Link href={pick.href} style={{ fontSize: 13, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", fontWeight: 600, whiteSpace: "nowrap" }}>
                       Full review →
                     </Link>
                   </div>
                 </div>
                 <div style={{ width: 90, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-                  <div style={{ width: 90, height: 110, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ width: 90, height: 110, backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <img src={pick.image} alt={pick.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                   </div>
                 </div>
@@ -292,14 +292,14 @@ export default function BestBeefOrganSupplementsWomenPage() {
               rec: "Terraferrin — the lactoferrin + liver combination has the strongest clinical rationale for iron bioavailability support. Stack with a kidney-containing product for thyroid nutrients.",
             },
           ].map((item) => (
-            <div key={item.goal} style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+            <div key={item.goal} style={{ padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Goal</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Goal</p>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.goal}</p>
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Recommendation</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.rec}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Recommendation</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{item.rec}</p>
               </div>
             </div>
           ))}
@@ -307,11 +307,11 @@ export default function BestBeefOrganSupplementsWomenPage() {
 
         {/* FAQ */}
         <SectionHeading label="FAQ" figure="§ 04" title="Common" titleItalic="questions" size="sm" />
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
+            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
         </div>
@@ -326,9 +326,9 @@ export default function BestBeefOrganSupplementsWomenPage() {
             { name: "Beef Liver Ingredient Profile", desc: "Retinol, B12, iron evidence", href: "/ingredients/beef-liver" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
-                <p style={{ fontSize: 12, color: "#5C5650" }}>{item.desc}</p>
+              <div style={{ padding: 16, border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43" }}>{item.desc}</p>
               </div>
             </Link>
           ))}

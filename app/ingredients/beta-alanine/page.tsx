@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -123,35 +123,35 @@ export default function BetaAlaninePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/ingredients" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Ingredients</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Beta-Alanine</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/ingredients" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Ingredients</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Beta-Alanine</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 900, margin: "0 auto" }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>ING-003</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>ING-003</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Endurance · Carnosine Buffering</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 8, textTransform: "uppercase" }}>Endurance · Carnosine Buffering</p>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
               Beta-Alanine: Benefits,<br />Dosage & the Tingling Explained
             </h1>
             <div style={{ marginBottom: 20 }}>
               <EvidenceBadge level="moderate" />
             </div>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
               Beta-alanine is the only supplement that directly raises muscle carnosine — the body's primary intramuscular acid buffer. Consistent evidence across 15+ RCTs confirms it delays fatigue in high-intensity efforts lasting 1–4 minutes. The tingling is real, harmless, and manageable. Who benefits and who doesn&apos;t is more nuanced than most products suggest.
             </p>
           </div>
@@ -168,25 +168,25 @@ export default function BetaAlaninePage() {
                 { label: "Evidence Level", value: "Moderate", sub: "15+ RCTs, consistent effect" },
                 { label: "Best For", value: "1–4 min efforts", sub: "HIIT · sprints · combat sports" },
               ].map((stat) => (
-                <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{stat.sub}</p>
+                <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{stat.label}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#17211C", marginBottom: 2 }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{stat.sub}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Medical disclaimer */}
-          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
+          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
             <AlertTriangle size={14} style={{ color: "#8B7355", flexShrink: 0, marginTop: 2 }} />
-            <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>
+            <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>
               This profile is for informational purposes only and does not constitute medical advice. Consult a healthcare professional before starting supplementation, especially if you have cardiac conditions, take medications, or are pregnant.
             </p>
           </div>
 
           {/* 1. What Is Beta-Alanine? */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>What Is Beta-Alanine?</h2>
             <p>
               Beta-alanine is a non-essential, non-proteinogenic amino acid — meaning it is not one of the 20 standard amino acids used to build proteins in the human body. It is produced endogenously in the liver and is also found in dietary sources: most abundantly in animal muscle tissue (chicken breast, beef, pork, fish). Vegetarians and vegans have consistently lower muscle carnosine levels due to minimal dietary beta-alanine intake.
@@ -200,16 +200,16 @@ export default function BetaAlaninePage() {
           </section>
 
           {/* 2. How It Works */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>How Beta-Alanine Works: The Science</h2>
             <p>
               Beta-alanine&apos;s mechanism is rooted in <strong>intramuscular pH buffering</strong> — the management of hydrogen ion (H+) accumulation that causes the burning sensation and force loss during high-intensity exercise.
             </p>
 
             {/* Step-by-step carnosine buffering pathway */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
-              <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", borderBottom: "1px solid #2D2926" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>The Carnosine Buffering Pathway — Step by Step</p>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
+              <div style={{ padding: "12px 20px", backgroundColor: "#17211C", borderBottom: "1px solid #2D2926" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", margin: 0 }}>The Carnosine Buffering Pathway — Step by Step</p>
               </div>
               {[
                 { step: "01", title: "Beta-alanine is absorbed and transported into muscle", body: "Oral beta-alanine is absorbed in the small intestine and transported into skeletal muscle cells via the taurine transporter (TauT) — a sodium-dependent, proton-coupled transporter. Inside the muscle, it combines with histidine (always in adequate supply) via the enzyme carnosine synthase to produce carnosine. This synthesis is slow and steady — not immediate." },
@@ -218,13 +218,13 @@ export default function BetaAlaninePage() {
                 { step: "04", title: "Carnosine captures and neutralises H+ ions", body: "Carnosine is a dipeptide with a pKa of ~6.83 — ideally positioned to act as a buffer in the physiological pH range encountered during intense exercise. Its imidazole side chain (from histidine) accepts free H+ ions, physically removing them from the intracellular environment and reducing the acidic burden on muscle. Carnosine contributes approximately 7–10% of total intramuscular buffering capacity — a meaningful portion." },
                 { step: "05", title: "Fatigue is delayed, more reps and time-to-exhaustion improve", body: "By maintaining a higher intramuscular pH for longer, carnosine allows muscle to sustain force production through a greater fraction of the high-intensity effort before acidosis limits contraction. In practice: more reps before failure at high loads, improved sprint performance in the 1–4 minute window, and less fatigue accumulation across repeated bouts. The effect is not acute — it reflects weeks of accumulated carnosine elevation." },
               ].map((s, i) => (
-                <div key={s.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 18, borderRight: "1px solid #EDE8DF" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{s.step}</span>
+                <div key={s.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderBottom: i < 4 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 18, borderRight: "1px solid #F2F8F4" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#0F7A5A" }}>{s.step}</span>
                   </div>
                   <div style={{ padding: "16px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{s.title}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
                   </div>
                 </div>
               ))}
@@ -242,33 +242,33 @@ export default function BetaAlaninePage() {
                 { title: "Heavy metal chelation", detail: "Carnosine chelates (binds and neutralises) heavy metal ions including copper and zinc at concentrations found in muscle. This may protect contractile proteins from metal-catalysed oxidative damage during exercise, though the magnitude of benefit in trained humans is not quantified (Hipkiss et al., 2001, Biochemistry/Moscow)." },
                 { title: "Calcium sensitisation in muscle", detail: "At the pH range achieved during high-intensity exercise, carnosine has been shown to sensitise the contractile apparatus to calcium, partially counteracting the direct inhibitory effect of acidosis on calcium binding. This means muscle maintains greater force capacity at any given pH — not just through buffering, but through direct contractile enhancement (Dutka & Lamb, 2004, Journal of Physiology)." },
               ].map((m) => (
-                <div key={m.title} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", borderLeft: "3px solid #C4622D" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{m.title}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{m.detail}</p>
+                <div key={m.title} style={{ padding: "14px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6", borderLeft: "3px solid #0F7A5A" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{m.title}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{m.detail}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* 3. Benefits */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>Proven Benefits & Evidence</h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
               {benefits.map((b, i) => (
-                <div key={i} style={{ padding: "18px 20px", borderBottom: i < benefits.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                <div key={i} style={{ padding: "18px 20px", borderBottom: i < benefits.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{b.claim}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0 }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.08em", marginBottom: 4 }}>{b.citation}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{b.notes}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", letterSpacing: "0.08em", marginBottom: 4 }}>{b.citation}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{b.notes}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* 4. Dosage */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Dosage Guide: How Much Beta-Alanine to Take</h2>
             <p>
               Beta-alanine dosing is about achieving a cumulative daily total — not timing a single pre-workout dose. The paraesthesia (tingling) it causes is dose-rate-dependent, so the standard strategy is to split the daily target across multiple smaller servings.
@@ -276,14 +276,14 @@ export default function BetaAlaninePage() {
 
             {/* Dose protocol comparison */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 24 }} className="layout-compare-simple">
-              <div style={{ border: "2px solid #C4622D", borderRadius: 12, overflow: "hidden" }}>
-                <div style={{ padding: "12px 18px", backgroundColor: "#C4622D" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(242,235,217,0.7)", margin: 0 }}>Standard Protocol</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Split Doses</p>
+              <div style={{ border: "2px solid #0F7A5A", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ padding: "12px 18px", backgroundColor: "#0F7A5A" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "rgba(242,235,217,0.7)", margin: 0 }}>Standard Protocol</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>Split Doses</p>
                 </div>
-                <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2–6.4g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>/ day</span></p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>Split into <strong>0.8–1.6g doses</strong> taken 2–4× per day with meals. Minimises paraesthesia while delivering the full daily carnosine-building dose. Most studied protocol — matches the Harris et al. (2006) methodology.</p>
+                <div style={{ padding: "16px 18px", backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#17211C", marginBottom: 4 }}>3.2–6.4g <span style={{ fontSize: "0.9rem", color: "#6B7770", fontWeight: 400 }}>/ day</span></p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: 12 }}>Split into <strong>0.8–1.6g doses</strong> taken 2–4× per day with meals. Minimises paraesthesia while delivering the full daily carnosine-building dose. Most studied protocol — matches the Harris et al. (2006) methodology.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Research-validated dose range", "Reduces tingling via smaller boluses", "Consistent daily intake drives carnosine"].map(p => (
                       <p key={p} style={{ fontSize: 12, color: "#2D6A4F", margin: 0 }}>✓ {p}</p>
@@ -291,14 +291,14 @@ export default function BetaAlaninePage() {
                   </div>
                 </div>
               </div>
-              <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
-                <div style={{ padding: "12px 18px", backgroundColor: "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>Comfort-Optimised</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>SR CarnoSyn Protocol</p>
+              <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ padding: "12px 18px", backgroundColor: "#F2F8F4", borderBottom: "1px solid #E4E8E5" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>Comfort-Optimised</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#17211C", margin: 0 }}>SR CarnoSyn Protocol</p>
                 </div>
-                <div style={{ padding: "16px 18px", backgroundColor: "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>3.2g <span style={{ fontSize: "0.9rem", color: "#8A8480", fontWeight: 400 }}>× 2 / day</span></p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 12 }}>Slow-release (SR) formulation allows <strong>larger single doses</strong> without significant paraesthesia. 2× daily (morning and evening) with food. Slightly more expensive but removes the compliance barrier for paraesthesia-sensitive users.</p>
+                <div style={{ padding: "16px 18px", backgroundColor: "#FFFFFF" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#17211C", marginBottom: 4 }}>3.2g <span style={{ fontSize: "0.9rem", color: "#6B7770", fontWeight: 400 }}>× 2 / day</span></p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: 12 }}>Slow-release (SR) formulation allows <strong>larger single doses</strong> without significant paraesthesia. 2× daily (morning and evening) with food. Slightly more expensive but removes the compliance barrier for paraesthesia-sensitive users.</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {["Minimal tingling — same carnosine outcome", "Fewer daily doses to remember", "Higher cost per gram vs standard"].map((p, i) => (
                       <p key={p} style={{ fontSize: 12, color: i < 2 ? "#2D6A4F" : "#8B7355", margin: 0 }}>{i < 2 ? "✓" : "·"} {p}</p>
@@ -309,9 +309,9 @@ export default function BetaAlaninePage() {
             </div>
 
             {/* Carnosine loading timeline */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
-              <div style={{ padding: "10px 18px", backgroundColor: "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>Muscle Carnosine Increase Timeline (3.2–6.4g/day)</p>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+              <div style={{ padding: "10px 18px", backgroundColor: "#F2F8F4", borderBottom: "1px solid #E4E8E5" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>Muscle Carnosine Increase Timeline (3.2–6.4g/day)</p>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0 }}>
                 {[
@@ -320,10 +320,10 @@ export default function BetaAlaninePage() {
                   { time: "Week 8", increase: "~40–60%", note: "Significant buffering" },
                   { time: "Week 10–12", increase: "~60–80%", note: "Near plateau" },
                 ].map((t, i) => (
-                  <div key={t.time} style={{ padding: "14px 12px", borderRight: i < 3 ? "1px solid #EDE8DF" : "none", backgroundColor: i === 3 ? "#F8F2E4" : "#F2EBD9" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#C4622D", marginBottom: 6 }}>{t.time}</p>
+                  <div key={t.time} style={{ padding: "14px 12px", borderRight: i < 3 ? "1px solid #F2F8F4" : "none", backgroundColor: i === 3 ? "#F6F8F6" : "#FFFFFF" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#0F7A5A", marginBottom: 6 }}>{t.time}</p>
                     <p style={{ fontSize: 13, fontWeight: 700, color: "#2D6A4F", marginBottom: 2 }}>{t.increase}</p>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 4 }}>{t.note}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#6B7770", marginTop: 4 }}>{t.note}</p>
                   </div>
                 ))}
               </div>
@@ -337,10 +337,10 @@ export default function BetaAlaninePage() {
                 { label: "Single Serving Max", value: "0.8–1.6g", note: "Above this, paraesthesia intensifies" },
                 { label: "Time to Effect", value: "4–12 weeks", note: "Performance gains emerge gradually" },
               ].map((d) => (
-                <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{d.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", marginBottom: 3 }}>{d.value}</p>
-                  <p style={{ fontSize: 11, color: "#5C5650", margin: 0 }}>{d.note}</p>
+                <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{d.label}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#17211C", marginBottom: 3 }}>{d.value}</p>
+                  <p style={{ fontSize: 11, color: "#3F4B43", margin: 0 }}>{d.note}</p>
                 </div>
               ))}
             </div>
@@ -350,36 +350,36 @@ export default function BetaAlaninePage() {
               No. Beta-alanine has no acute performance mechanism — it works by slowly saturating muscle carnosine over weeks. There is no &quot;anabolic window&quot; or pre-workout advantage. Take doses consistently throughout the day with meals to reduce paraesthesia and improve GI tolerance. Many people include it in a pre-workout blend for convenience, but this timing choice is irrelevant to its efficacy.
             </p>
 
-            <div style={{ padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, borderLeft: "3px solid #C4622D" }}>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>
+            <div style={{ padding: "14px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, borderLeft: "3px solid #0F7A5A" }}>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>
                 <strong>Carnosine retention after stopping:</strong> Muscle carnosine declines slowly after supplementation is stopped — approximately 2–4 weeks before returning to baseline. This means short breaks (holidays, deload weeks) do not undo months of carnosine loading. For competitive athletes, continuous supplementation through a training block is the standard approach.
               </p>
             </div>
           </section>
 
           {/* 5. Supplement Forms */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Beta-Alanine Forms Compared</h2>
-            <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 8, letterSpacing: "-0.02em" }}>Beta-Alanine Forms Compared</h2>
+            <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20, lineHeight: 1.6 }}>
               The market&apos;s main choice is standard vs slow-release. The performance outcome is equivalent — the difference is comfort and compliance.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {forms.map((form) => (
-                <div key={form.name} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: form.recommended ? "#F8F2E4" : "#EDE8DF" }}>
+                <div key={form.name} style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: form.recommended ? "#F6F8F6" : "#F2F8F4" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6, flexWrap: "wrap" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{form.name}</p>
-                    <span style={{ padding: "3px 10px", backgroundColor: form.recommended ? "rgba(45,106,79,0.1)" : "rgba(196,98,45,0.08)", border: `1px solid ${form.recommended ? "rgba(45,106,79,0.2)" : "rgba(196,98,45,0.15)"}`, borderRadius: 6, fontSize: 9, color: form.recommended ? "#2D6A4F" : "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", textTransform: "uppercase" as const, whiteSpace: "nowrap" as const }}>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0 }}>{form.name}</p>
+                    <span style={{ padding: "3px 10px", backgroundColor: form.recommended ? "rgba(45,106,79,0.1)" : "rgba(196,98,45,0.08)", border: `1px solid ${form.recommended ? "rgba(45,106,79,0.2)" : "rgba(196,98,45,0.15)"}`, borderRadius: 6, fontSize: 9, color: form.recommended ? "#2D6A4F" : "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", textTransform: "uppercase" as const, whiteSpace: "nowrap" as const }}>
                       {form.tag}
                     </span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.55, margin: 0 }}>{form.verdict}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.55, margin: 0 }}>{form.verdict}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* 6. Safety & Side Effects */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Safety Profile & Side Effects</h2>
             <p>
               Beta-alanine has an excellent safety profile. The International Society of Sports Nutrition&apos;s 2015 position stand (Hobson et al.) concluded it is safe at research doses (3.2–6.4g/day), and no serious adverse effects have been reported in controlled trials. The conversation about safety almost always begins and ends with paraesthesia.
@@ -432,15 +432,15 @@ export default function BetaAlaninePage() {
                 caveat: null,
               },
             ].map((item) => (
-              <div key={item.concern} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 12 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #EDE8DF", flexWrap: "wrap", gap: 8 }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.concern}</p>
-                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-dm-sans), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
+              <div key={item.concern} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 12 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 18px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #F2F8F4", flexWrap: "wrap", gap: 8 }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0 }}>{item.concern}</p>
+                  <span style={{ padding: "3px 10px", backgroundColor: item.verdictBg, border: `1px solid ${item.verdictColor}30`, borderRadius: 6, fontSize: 11, fontWeight: 600, color: item.verdictColor, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" as const }}>{item.verdict}</span>
                 </div>
                 <div style={{ padding: "14px 18px", borderLeft: `3px solid ${item.borderColor}` }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, marginBottom: item.caveat ? 10 : 0 }}>{item.body}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0, marginBottom: item.caveat ? 10 : 0 }}>{item.body}</p>
                   {item.caveat && (
-                    <p style={{ fontSize: 12, color: "#8B7355", lineHeight: 1.6, margin: 0, paddingTop: 8, borderTop: "1px solid #EDE8DF" }}>
+                    <p style={{ fontSize: 12, color: "#8B7355", lineHeight: 1.6, margin: 0, paddingTop: 8, borderTop: "1px solid #F2F8F4" }}>
                       <strong>Note:</strong> {item.caveat}
                     </p>
                   )}
@@ -450,14 +450,14 @@ export default function BetaAlaninePage() {
           </section>
 
           {/* 7. Who Should Take It */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn&apos;t — Take Beta-Alanine</h2>
-            <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 8, letterSpacing: "-0.02em" }}>Who Should — and Shouldn&apos;t — Take Beta-Alanine</h2>
+            <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20, lineHeight: 1.6 }}>
               Beta-alanine&apos;s benefit is narrowly defined: it helps athletes whose performance is limited by muscle acidosis in the 1–4 minute glycolytic window. Outside this specific context, the evidence for benefit is weak.
             </p>
 
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2D6A4F", marginBottom: 10 }}>Clear performance benefit expected</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 20 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2D6A4F", marginBottom: 10 }}>Clear performance benefit expected</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 20 }}>
               {[
                 {
                   group: "Middle-distance runners & swimmers",
@@ -485,19 +485,19 @@ export default function BetaAlaninePage() {
                   tags: ["Vegetarian", "Vegan", "Plant-based"],
                 },
               ].map((item, i) => (
-                <div key={item.group} style={{ padding: "16px 20px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 8 }}>{item.detail}</p>
+                <div key={item.group} style={{ padding: "16px 20px", borderBottom: i < 4 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: 8 }}>{item.detail}</p>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                     {item.tags.map(t => (
-                      <span key={t} style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.07)", border: "1px solid rgba(45,106,79,0.15)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace" }}>{t}</span>
+                      <span key={t} style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.07)", border: "1px solid rgba(45,106,79,0.15)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace" }}>{t}</span>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
 
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B7355", marginBottom: 10 }}>Minimal benefit or not appropriate</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B7355", marginBottom: 10 }}>Minimal benefit or not appropriate</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {[
                 {
@@ -516,27 +516,27 @@ export default function BetaAlaninePage() {
                   caution: true,
                 },
               ].map((item) => (
-                <div key={item.group} style={{ padding: "14px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: item.caution ? "rgba(139,115,85,0.05)" : "#F2EBD9", borderLeft: `3px solid ${item.caution ? "#8B7355" : "#D4C9B8"}` }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.group}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
+                <div key={item.group} style={{ padding: "14px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: item.caution ? "rgba(139,115,85,0.05)" : "#FFFFFF", borderLeft: `3px solid ${item.caution ? "#8B7355" : "#E4E8E5"}` }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{item.group}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.detail}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* 8. Pricing */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Pricing & Where to Buy</h2>
             <p>
               Beta-alanine is one of the most affordable performance supplements when purchased as a standalone powder. Most of the market premium comes from branded (CarnoSyn) or slow-release formulations. The performance outcome is equivalent — the SR form only reduces paraesthesia.
             </p>
 
             <h3>Price benchmarks (USD, May 2026)</h3>
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", backgroundColor: "#1A1714" }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", backgroundColor: "#17211C" }}>
                 {["Brand / Product", "Form", "Size", "Price (USD)", "Per 3.2g dose"].map((h, i) => (
                   <div key={h} style={{ padding: "10px 12px", borderRight: i < 4 ? "1px solid #2D2926" : "none" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>{h}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", margin: 0 }}>{h}</p>
                   </div>
                 ))}
               </div>
@@ -547,34 +547,34 @@ export default function BetaAlaninePage() {
                 { brand: "Natural Stacks SR CarnoSyn", form: "Slow-release capsules", size: "120 caps (48g)", price: "$30–$40", perDose: "~$2.00–$2.65" },
                 { brand: "Swolverine Beta-Alanine", form: "CarnoSyn powder", size: "250g", price: "$28–$38", perDose: "~$0.36–$0.49" },
               ].map((row, i) => (
-                <div key={row.brand} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", borderTop: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                <div key={row.brand} style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr 1fr 1fr 1fr", borderTop: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                   {[row.brand, row.form, row.size, row.price, row.perDose].map((cell, j) => (
-                    <div key={j} style={{ padding: "12px 12px", borderRight: j < 4 ? "1px solid #EDE8DF" : "none" }}>
-                      <p style={{ fontSize: 13, color: j === 0 ? "#1A1714" : "#5C5650", fontWeight: j === 0 ? 600 : 400, margin: 0 }}>{cell}</p>
+                    <div key={j} style={{ padding: "12px 12px", borderRight: j < 4 ? "1px solid #F2F8F4" : "none" }}>
+                      <p style={{ fontSize: 13, color: j === 0 ? "#17211C" : "#3F4B43", fontWeight: j === 0 ? 600 : 400, margin: 0 }}>{cell}</p>
                     </div>
                   ))}
                 </div>
               ))}
-              <div style={{ padding: "10px 14px", backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8" }}>
-                <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>Prices from major US retailers (Amazon, official brand stores), May 2026. Generic beta-alanine powder is the best value — same efficacy as branded CarnoSyn at a fraction of the cost. SR CarnoSyn capsules carry a significant premium for the paraesthesia-reduction benefit.</p>
+              <div style={{ padding: "10px 14px", backgroundColor: "#F2F8F4", borderTop: "1px solid #E4E8E5" }}>
+                <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>Prices from major US retailers (Amazon, official brand stores), May 2026. Generic beta-alanine powder is the best value — same efficacy as branded CarnoSyn at a fraction of the cost. SR CarnoSyn capsules carry a significant premium for the paraesthesia-reduction benefit.</p>
               </div>
             </div>
 
             <h3>What to look for on the label</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden" }}>
               {[
                 { step: "01", check: "Verify the ingredient is listed as beta-alanine (not carnosine)", detail: "Some cheaper blends list \"carnosine\" or \"carnosine precursor\" ambiguously. You want beta-alanine specifically, at a declared dose. Carnosine supplementation is not the equivalent and is less effective at raising muscle carnosine levels." },
                 { step: "02", check: "Check the dose per serving against the daily target", detail: "Many pre-workout blends contain 1.6–2g beta-alanine per scoop — enough to cause tingling but below the minimum effective daily dose of 3.2g. If it is in a pre-workout you only take once daily, the dose is likely insufficient for meaningful carnosine accumulation without additional supplementation." },
                 { step: "03", check: "Look for CarnoSyn certification if buying branded", detail: "CarnoSyn is the patented form used in the majority of published RCTs. It carries quality assurance beyond generic beta-alanine — relevant for competitive athletes in tested sports who need Informed Sport/NSF batch-testing alongside their protein." },
                 { step: "04", check: "Avoid products with artificial dyes in capsules", detail: "Some beta-alanine capsule products use artificial colouring that can cause GI sensitivity in susceptible individuals. For capsule forms, look for vegetarian capsules with minimal excipients. For powder, unflavoured beta-alanine has no additives at all." },
               ].map((v, i) => (
-                <div key={v.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderTop: i > 0 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 16, borderRight: "1px solid #EDE8DF" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#C4622D" }}>{v.step}</span>
+                <div key={v.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderTop: i > 0 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 16, borderRight: "1px solid #F2F8F4" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#0F7A5A" }}>{v.step}</span>
                   </div>
                   <div style={{ padding: "14px 18px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{v.check}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{v.detail}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{v.check}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{v.detail}</p>
                   </div>
                 </div>
               ))}
@@ -582,12 +582,12 @@ export default function BetaAlaninePage() {
           </section>
 
           {/* 9. References */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
-            <p style={{ fontSize: 13, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 8, letterSpacing: "-0.02em" }}>References</h2>
+            <p style={{ fontSize: 13, color: "#6B7770", marginBottom: 20, lineHeight: 1.6 }}>
               All claims in this profile are drawn from peer-reviewed research. Key sources listed below.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden" }}>
               {[
                 { num: "1", cite: "Harris, R.C., Tallon, M.J., Dunnett, M., et al. (2006). The absorption of orally supplied beta-alanine and its effect on muscle carnosine synthesis in human vastus lateralis.", journal: "Amino Acids, 30(3), 279–289." },
                 { num: "2", cite: "Hobson, R.M., Saunders, B., Ball, G., Harris, R.C., & Sale, C. (2012). Effects of beta-alanine supplementation on exercise performance: a meta-analysis.", journal: "Amino Acids, 43(1), 25–37." },
@@ -604,13 +604,13 @@ export default function BetaAlaninePage() {
                 { num: "13", cite: "Derave, W., Özdemir, M.S., Harris, R.C., et al. (2007). Beta-alanine supplementation augments muscle carnosine content and attenuates fatigue during repeated isokinetic contraction bouts in trained sprinters.", journal: "Journal of Applied Physiology, 103(5), 1736–1743." },
                 { num: "14", cite: "Artioli, G.G., Gualano, B., Smith, A., Stout, J., & Lancha, A.H. Jr. (2010). Role of beta-alanine supplementation on muscle carnosine and exercise performance.", journal: "Medicine & Science in Sports & Exercise, 42(6), 1162–1173." },
               ].map((ref, i) => (
-                <div key={ref.num} style={{ display: "grid", gridTemplateColumns: "32px 1fr", borderTop: i > 0 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 14, borderRight: "1px solid #EDE8DF" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>{ref.num}</span>
+                <div key={ref.num} style={{ display: "grid", gridTemplateColumns: "32px 1fr", borderTop: i > 0 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 14, borderRight: "1px solid #F2F8F4" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259" }}>{ref.num}</span>
                   </div>
                   <div style={{ padding: "12px 16px" }}>
                     <p style={{ fontSize: 12, color: "#2D2926", lineHeight: 1.65, margin: 0 }}>
-                      {ref.cite} <em style={{ color: "#8A8480" }}>{ref.journal}</em>
+                      {ref.cite} <em style={{ color: "#6B7770" }}>{ref.journal}</em>
                     </p>
                   </div>
                 </div>
@@ -619,11 +619,11 @@ export default function BetaAlaninePage() {
           </section>
 
           {/* 10. FAQ */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
-            <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
               Frequently Asked Questions
             </h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
               {[
                 {
                   q: "Why does beta-alanine make you tingle?",
@@ -650,9 +650,9 @@ export default function BetaAlaninePage() {
                   a: "Yes. They target completely different energy systems — creatine replenishes the ATP-PCr system (0–10 second efforts) and beta-alanine buffers acidosis in the glycolytic system (1–4 minute efforts). No negative interactions exist. Athletes doing HIIT, circuit training, or multi-modal sport benefit from both simultaneously.",
                 },
               ].map((faq, i) => (
-                <div key={i} style={{ padding: "20px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+                <div key={i} style={{ padding: "20px", borderBottom: i < 5 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 8 }}>Q. {faq.q}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -661,9 +661,9 @@ export default function BetaAlaninePage() {
           {/* 11. Related Reviews */}
           <section>
             <SectionHeading label="Products" figure="§ REL" title="Products containing" titleItalic="beta-alanine" size="sm" />
-            <div style={{ padding: "20px 24px", border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
-              <p style={{ fontSize: 13, color: "#8A8480", margin: 0 }}>
-                Full beta-alanine product reviews are in progress. Beta-alanine appears in our reviewed pre-workout and endurance supplement products — see the <Link href="/ingredients" style={{ color: "#C4622D", fontWeight: 600 }}>Ingredients index</Link> and <Link href="/best" style={{ color: "#C4622D", fontWeight: 600 }}>Best Of</Link> pages for product recommendations containing beta-alanine.
+            <div style={{ padding: "20px 24px", border: "1px solid #E4E8E5", borderRadius: 12, backgroundColor: "#F6F8F6" }}>
+              <p style={{ fontSize: 13, color: "#6B7770", margin: 0 }}>
+                Full beta-alanine product reviews are in progress. Beta-alanine appears in our reviewed pre-workout and endurance supplement products — see the <Link href="/ingredients" style={{ color: "#0F7A5A", fontWeight: 600 }}>Ingredients index</Link> and <Link href="/best" style={{ color: "#0F7A5A", fontWeight: 600 }}>Best Of</Link> pages for product recommendations containing beta-alanine.
               </p>
             </div>
           </section>

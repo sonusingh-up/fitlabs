@@ -89,65 +89,65 @@ const faqSchema = {
 
 export default function SleepDurationAgingPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", gap: 8, padding: "12px 24px", flexWrap: "wrap" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/research" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Research</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Sleep & Biological Aging</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/research" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Research</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Sleep & Biological Aging</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+      <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
         <div style={{ maxWidth: 800, margin: "0 auto" }} className="px-page">
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>RESEARCH · LONGEVITY & SLEEP</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)" }}>Strong Evidence</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>RESEARCH · LONGEVITY & SLEEP</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)" }}>Strong Evidence</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Sleep Duration and Biological Aging:{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Why 6.4–7.8 Hours May Be the Sweet Spot</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>Why 6.4–7.8 Hours May Be the Sweet Spot</em>
           </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, maxWidth: 680, marginBottom: 24 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, maxWidth: 680, marginBottom: 24 }}>
             We know sleep matters. But the research on <em>how much</em> sleep affects how quickly you age at the cellular level is more specific — and more surprising — than most people realise. Here is what the data actually say.
           </p>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
             {["Sleep", "Longevity", "Telomeres", "Biological Aging", "Sleep Science"].map((tag) => (
-              <span key={tag} style={{ padding: "3px 10px", backgroundColor: "rgba(196,98,45,0.07)", border: "1px solid rgba(196,98,45,0.18)", borderRadius: 20, fontSize: 10, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>{tag}</span>
+              <span key={tag} style={{ padding: "3px 10px", backgroundColor: "rgba(196,98,45,0.07)", border: "1px solid rgba(196,98,45,0.18)", borderRadius: 20, fontSize: 10, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>{tag}</span>
             ))}
           </div>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#A89880" }}>Updated May 2026 · 11 min read · ART-007</p>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#586259" }}>Updated May 2026 · 11 min read · ART-007</p>
 
           {/* Author bar */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, marginTop: 18, borderTop: "1px solid #D4C9B8" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, marginTop: 18, borderTop: "1px solid #E4E8E5" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#C4622D", letterSpacing: "0.04em" }}>FLR</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, fontWeight: 700, color: "#0F7A5A", letterSpacing: "0.04em" }}>FLR</span>
               </div>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
-                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Written by</p>
+                <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Fitlab Research Team
                 </Link>
               </div>
             </div>
-            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>Peer-reviewed citations only</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Evidence Standard</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
             </div>
-            <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+            <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-dm-sans), sans-serif" }}>May 27, 2026</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Last Updated</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>May 27, 2026</p>
             </div>
           </div>
         </div>
@@ -156,24 +156,24 @@ export default function SleepDurationAgingPage() {
       <div style={{ maxWidth: 800, margin: "0 auto" }} className="pad-section-sm px-page">
 
         {/* Key numbers panel */}
-        <div className="ing-stats-grid" style={{ marginBottom: 40, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+        <div className="ing-stats-grid" style={{ marginBottom: 40, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
           {[
             { label: "Optimal Sleep Window", value: "6.4–7.8 hrs", sub: "Lowest mortality risk (Kripke 2002)" },
             { label: "GH Released in Sleep", value: "70–80%", sub: "Of daily growth hormone pulse" },
             { label: "Glymphatic Clearance", value: "~10×", sub: "More active in sleep vs awake" },
             { label: "Telomere Impact", value: "<6 hrs", sub: "Measurably shorter telomeres" },
           ].map((s) => (
-            <div key={s.label} style={{ backgroundColor: "#F8F2E4", padding: "20px 16px" }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.15em", textTransform: "uppercase", margin: "0 0 6px" }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
-              <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{s.sub}</p>
+            <div key={s.label} style={{ backgroundColor: "#F6F8F6", padding: "20px 16px" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.15em", textTransform: "uppercase", margin: "0 0 6px" }}>{s.label}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.value}</p>
+              <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>{s.sub}</p>
             </div>
           ))}
         </div>
 
         {/* Quick answer */}
-        <div style={{ padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #1A6B3A", borderRadius: 8, marginBottom: 40 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
+        <div style={{ padding: "20px 24px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #1A6B3A", borderRadius: 8, marginBottom: 40 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
           <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, margin: 0 }}>
             Sleeping 6.4–7.8 hours per night is consistently associated with the slowest biological aging across multiple large studies. Both too little sleep (under 6 hours) and too much sleep (over 9 hours) are independently linked to shorter telomeres, higher inflammation, reduced growth hormone, and increased all-cause mortality — even after controlling for lifestyle and health status.
           </p>
@@ -183,26 +183,26 @@ export default function SleepDurationAgingPage() {
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="The Research" figure="§ 01" title="What the Data Say About" titleItalic="Sleep and Longevity" size="sm" />
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             The most widely cited study on sleep duration and mortality tracked <strong style={{ color: "#1A1714" }}>1.1 million adults</strong> over six years. Published in the Archives of General Psychiatry, Kripke et al. (2002) found that people sleeping 7 hours had the lowest all-cause mortality. The risk curve was U-shaped: mortality climbed steeply in people sleeping under 5 hours and rose more gradually — but still significantly — in people sleeping over 8 hours.
           </p>
 
-          <div style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 20 }}>
-            <div style={{ padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <div style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", marginBottom: 20 }}>
+            <div style={{ padding: "12px 18px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
               <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14 }}>Kripke et al. (2002) — 1.1 Million Participants</p>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>Archives of General Psychiatry</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>Archives of General Psychiatry</span>
             </div>
             <div style={{ padding: "14px 18px" }}>
               <p style={{ fontSize: 14, color: "#2D2926", margin: "0 0 8px", lineHeight: 1.65 }}><strong>Finding:</strong> People sleeping 6.5 hours had ~12% lower mortality than those sleeping 5 hours. Those sleeping 8.5 hours had ~15% higher mortality than the 7-hour group. The 7-hour group had the lowest mortality of all sleep duration categories tested.</p>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.6, borderLeft: "2px solid #1A6B3A", paddingLeft: 12 }}>This was an observational study — it cannot prove that changing your sleep duration changes your mortality risk. But the consistency of the U-curve across subgroups made it one of the most influential studies in sleep medicine.</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.6, borderLeft: "2px solid #1A6B3A", paddingLeft: 12 }}>This was an observational study — it cannot prove that changing your sleep duration changes your mortality risk. But the consistency of the U-curve across subgroups made it one of the most influential studies in sleep medicine.</p>
             </div>
           </div>
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             A 2010 meta-analysis by Cappuccio et al. (Sleep Medicine Reviews) pooled data from 16 studies involving over 1.3 million participants and confirmed the pattern: short sleep (≤5–6 hours) was associated with a <strong style={{ color: "#1A1714" }}>12% higher risk of death</strong> from all causes, while long sleep (≥9 hours) carried a <strong style={{ color: "#1A1714" }}>30% higher risk</strong>.
           </p>
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75 }}>
             More recent work has pushed beyond mortality into direct biological aging markers — telomere length, inflammatory proteins, and hormonal profiles. These studies help explain <em>why</em> the mortality association exists.
           </p>
         </section>
@@ -211,7 +211,7 @@ export default function SleepDurationAgingPage() {
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="Mechanisms" figure="§ 02" title="What Happens in Your Body" titleItalic="While You Sleep" size="sm" />
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 24 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 24 }}>
             Sleep is not passive recovery. It is an active biological state where several of the body's primary anti-aging processes run at full capacity. Understanding these mechanisms makes the importance of sleep duration concrete rather than abstract.
           </p>
 
@@ -242,11 +242,11 @@ export default function SleepDurationAgingPage() {
               body: "Cortisol, the primary stress hormone, follows a circadian rhythm that requires adequate sleep for its evening nadir to occur. People sleeping fewer than 6 hours show blunted cortisol suppression overnight and elevated morning cortisol relative to well-rested controls (Epel et al., 2013, Proceedings of the National Academy of Sciences). Chronically elevated cortisol accelerates telomere shortening, promotes visceral fat accumulation, and suppresses immune function — creating a convergent aging pathway.",
             },
           ].map((item) => (
-            <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 10 }}>
-              <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
+            <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, marginBottom: 10 }}>
+              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
               <div>
                 <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.title}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
               </div>
             </div>
           ))}
@@ -256,15 +256,15 @@ export default function SleepDurationAgingPage() {
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="The U-Curve" figure="§ 03" title="Why Too Much Sleep" titleItalic="Is Also a Problem" size="sm" />
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             The finding that long sleep is associated with higher mortality is counterintuitive to most people. A few points of context matter here.
           </p>
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             First, much of the elevated mortality in long sleepers is driven by reverse causation: people sleep more because they are already ill, depressed, or have undiagnosed conditions that both increase sleep need and drive poor health outcomes. When researchers restrict analysis to people reporting no major health conditions, the association weakens — but does not disappear.
           </p>
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 20 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20 }}>
             What remains after adjustment is likely explained by two mechanisms: circadian disruption (spending too much time in bed fragments sleep architecture and shifts the body's natural light–dark cycle) and meta-inflammation (Irwin et al., 2016, Biological Psychiatry found that long sleepers had consistently higher IL-6 and TNF-α than 7-hour sleepers, even in the absence of illness).
           </p>
 
@@ -276,14 +276,14 @@ export default function SleepDurationAgingPage() {
               { range: "8–9 hrs", risk: "Mild risk", detail: "Modest elevation; may reflect recovery need" },
               { range: "> 9 hrs", risk: "High risk", detail: "~30% excess mortality; circadian disruption likely" },
             ].map((s, i) => (
-              <div key={s.range} style={{ backgroundColor: i === 2 ? "rgba(26,107,58,0.06)" : "#F8F2E4", border: `1px solid ${i === 2 ? "rgba(26,107,58,0.2)" : "#D4C9B8"}`, borderRadius: 8, padding: "14px 14px" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: i === 2 ? "#1A6B3A" : "#A89880", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
-                <p style={{ fontSize: 11, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
+              <div key={s.range} style={{ backgroundColor: i === 2 ? "rgba(26,107,58,0.06)" : "#F6F8F6", border: `1px solid ${i === 2 ? "rgba(26,107,58,0.2)" : "#E4E8E5"}`, borderRadius: 8, padding: "14px 14px" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: i === 2 ? "#1A6B3A" : "#586259", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
+                <p style={{ fontSize: 11, color: "#3F4B43", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
+          <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>
             Risk categories based on Kripke (2002) and Cappuccio (2010). Optimal range reflects lowest all-cause mortality in observational data.
           </p>
         </section>
@@ -292,7 +292,7 @@ export default function SleepDurationAgingPage() {
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="Signs" figure="§ 04" title="Signs Your Sleep Habits" titleItalic="May Be Aging You Faster" size="sm" />
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 20 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20 }}>
             Biological aging is not directly measurable without lab tests, but several proxy indicators are associated with the sleep-related pathways described above.
           </p>
 
@@ -304,9 +304,9 @@ export default function SleepDurationAgingPage() {
               { sign: "Increased susceptibility to colds or infections", link: "Short sleep suppresses natural killer cell activity. Prather et al. (2015, Sleep) found people sleeping under 6 hours were 4.2× more likely to develop a cold when exposed to rhinovirus than those sleeping 7+ hours." },
               { sign: "Weight gain despite stable diet", link: "Sleep restriction raises ghrelin (hunger hormone) and lowers leptin (satiety hormone). Spiegel et al. (2004, Annals of Internal Medicine) showed this effect after just two nights of sleep restriction to 4 hours." },
             ].map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8, padding: "14px 18px" }}>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8, padding: "14px 18px" }}>
                 <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.sign}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{item.link}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.65 }}>{item.link}</p>
               </div>
             ))}
           </div>
@@ -316,7 +316,7 @@ export default function SleepDurationAgingPage() {
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="Practical" figure="§ 05" title="How to Hit the" titleItalic="7-Hour Window" size="sm" />
 
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 20 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20 }}>
             Duration alone is not the complete picture — sleep architecture (the balance of SWS, REM, and light sleep) matters too. But for most people, the most impactful change is simply increasing total sleep time to 7–8 hours and stabilising their sleep schedule. These evidence-based practices have the strongest support for achieving that.
           </p>
 
@@ -347,9 +347,9 @@ export default function SleepDurationAgingPage() {
                 body: "Magnesium is a co-factor in GABA receptor function and melatonin synthesis. An RCT of 248 adults (Tarleton et al., 2017, PLOS ONE) found 248mg elemental magnesium improved sleep quality scores and reduced cortisol. Glycinate is the most bioavailable form with the fewest GI side effects.",
               },
             ].map((item) => (
-              <div key={item.title} style={{ padding: "18px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+              <div key={item.title} style={{ padding: "18px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
               </div>
             ))}
           </div>
@@ -360,9 +360,9 @@ export default function SleepDurationAgingPage() {
           <SectionHeading label="Verdict" figure="§ 06" title="The" titleItalic="Bottom Line" size="sm" />
 
           <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>7 hours is the most evidence-supported sleep target for longevity.</h3>
-            <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8, margin: 0 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 14 }}>7 hours is the most evidence-supported sleep target for longevity.</h3>
+            <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.8, margin: 0 }}>
               The evidence from large population studies, telomere research, and sleep physiology converges on a 6.5–7.5 hour window as optimal for biological aging outcomes. The mechanisms are real: growth hormone release, glymphatic clearance, telomere maintenance, and inflammatory regulation all depend on adequate, well-structured sleep. Sleeping under 6 hours is the high-risk end of the curve. Sleeping over 9 hours regularly is associated with its own elevation in aging markers, though reverse causation makes this harder to interpret. Stabilising your sleep schedule, protecting SWS in the first 3 hours, and addressing cortisol and temperature are the highest-leverage interventions.
             </p>
           </div>
@@ -371,7 +371,7 @@ export default function SleepDurationAgingPage() {
         {/* FAQ */}
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="FAQ" figure="§ 07" title="Frequently Asked" titleItalic="Questions" size="sm" />
-          <div style={{ display: "flex", flexDirection: "column", border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "flex", flexDirection: "column", border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {[
               { q: "How many hours of sleep do you need to slow aging?", a: "6.4–7.8 hours is the range associated with the lowest biological aging markers. The 7-hour group shows the lowest all-cause mortality in the landmark Kripke (2002) study of 1.1 million adults." },
               { q: "Does sleep affect telomere length?", a: "Yes. People sleeping under 6 hours per night have measurably shorter telomeres than those sleeping 7–8 hours, even after adjusting for age, BMI, and lifestyle (Xiao et al., 2022, Aging journal)." },
@@ -380,9 +380,9 @@ export default function SleepDurationAgingPage() {
               { q: "What is the glymphatic system and why does sleep matter for it?", a: "It's the brain's waste-clearance network. It operates ~10× faster during sleep, flushing amyloid-beta and tau proteins. Even one night of deprivation measurably increases amyloid accumulation (Shokri-Kojori et al., 2018, PNAS)." },
               { q: "Can you make up for lost sleep on weekends?", a: "Partially, for metabolic markers. Not for telomere length or chronic inflammatory damage. Catch-up sleep does not reverse accumulated long-term aging effects from chronic short sleep." },
             ].map((item, i, arr) => (
-              <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+              <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                 <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 8, fontSize: 15 }}>{item.q}</p>
-                <p style={{ fontSize: 14, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{item.a}</p>
+                <p style={{ fontSize: 14, color: "#3F4B43", margin: 0, lineHeight: 1.65 }}>{item.a}</p>
               </div>
             ))}
           </div>
@@ -391,7 +391,7 @@ export default function SleepDurationAgingPage() {
         {/* References */}
         <section style={{ marginBottom: 48 }}>
           <SectionHeading label="References" figure="§ 08" title="Clinical" titleItalic="References" size="sm" />
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
+          <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 14 }}>All citations link to the primary source on PubMed or publisher DOI.</p>
           <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
             {[
               { text: "Kripke DF, Garfinkel L, Wingard DL, Klauber MR, Marler MR. Mortality associated with sleep duration and insomnia. Arch Gen Psychiatry. 2002;59(2):131–136.", url: "https://pubmed.ncbi.nlm.nih.gov/11825133/" },
@@ -408,24 +408,24 @@ export default function SleepDurationAgingPage() {
               { text: "Gooley JJ, Chamberlain K, Smith KA, et al. Exposure to room light before bedtime suppresses melatonin onset and shortens melatonin duration in humans. J Clin Endocrinol Metab. 2011;96(3):E463–E472.", url: "https://pubmed.ncbi.nlm.nih.gov/20944099/" },
               { text: "Zhdanova IV, Wurtman RJ, Lynch HJ, et al. Sleep-inducing effects of low doses of melatonin ingested in the evening. Clin Pharmacol Ther. 1995;57(5):552–558.", url: "https://pubmed.ncbi.nlm.nih.gov/7768073/" },
             ].map((ref, i) => (
-              <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+              <li key={i} style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                 {ref.text}{" "}
-                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
               </li>
             ))}
           </ol>
         </section>
 
         {/* Related content */}
-        <div style={{ padding: "24px 28px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Related Articles</p>
+        <div style={{ padding: "24px 28px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Related Articles</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {[
               { href: "/blog/sleep-window-anti-aging", label: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging" },
               { href: "/ingredients/magnesium", label: "Magnesium Glycinate: Evidence for Sleep Quality and Anxiety Reduction" },
               { href: "/blog/diet-depression-anxiety", label: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety" },
             ].map((link) => (
-              <Link key={link.href} href={link.href} style={{ fontSize: 14, color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>
+              <Link key={link.href} href={link.href} style={{ fontSize: 14, color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>
                 {link.label} →
               </Link>
             ))}

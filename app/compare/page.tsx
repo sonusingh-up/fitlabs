@@ -13,7 +13,7 @@ const comparisons = [
   {
     slug: "ancestral-supplements-vs-heart-and-soil",
     category: "Organ Supplements",
-    categoryColor: "#8B4513",
+    categoryColor: "#0A4F3B",
     headline: "Ancestral Supplements vs Heart & Soil",
     subline: "Sourcing transparency vs Informed Sport certification — which organ brand is right for you?",
     products: [
@@ -27,7 +27,7 @@ const comparisons = [
   {
     slug: "legion-pulse-vs-bulk-black",
     category: "Pre-Workout",
-    categoryColor: "#D4A96A",
+    categoryColor: "#0F7A5A",
     headline: "Legion Pulse vs Transparent Labs BULK Black",
     subline: "350mg theanine focus stack vs dual-phase caffeine and Informed Choice cert — $0.25/serving apart.",
     products: [
@@ -41,7 +41,7 @@ const comparisons = [
   {
     slug: "wellmedr-vs-ro-body",
     category: "GLP-1 Telehealth",
-    categoryColor: "#185FA5",
+    categoryColor: "#3A7D9B",
     headline: "WellMedr vs Ro Body",
     subline: "Same-day tirzepatide microdosing vs established semaglutide platform — GLP-1 telehealth compared.",
     products: [
@@ -72,34 +72,34 @@ export default function CompareHubPage() {
   };
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <Link href="/" style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Home</Link>
-          <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-          <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Compare</span>
+          <Link href="/" style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Home</Link>
+          <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+          <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Compare</span>
         </div>
       </div>
 
       {/* Hero banner */}
-      <div style={{ width: "100%", background: "linear-gradient(145deg, #1E1208 0%, #120C06 100%)", position: "relative", overflow: "hidden", minHeight: 220 }}>
-        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
+      <div style={{ width: "100%", background: "linear-gradient(145deg, #0D1810 0%, #0A4F3B 100%)", position: "relative", overflow: "hidden", minHeight: 220 }}>
+        <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.35)", marginBottom: 16 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 16 }}>
             FITLAB INDEPENDENT COMPARISONS · 2026
           </p>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 4.5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", lineHeight: 1.05, marginBottom: 16, maxWidth: 640 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 4.5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#FFFFFF", lineHeight: 1.05, marginBottom: 16, maxWidth: 640 }}>
             Head-to-Head{" "}
-            <em style={{ fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.5)" }}>Supplement Comparisons</em>
+            <em style={{ fontWeight: 400, fontStyle: "italic", color: "rgba(255,255,255,0.5)" }}>Supplement Comparisons</em>
           </h1>
-          <p style={{ fontSize: 15, color: "rgba(242,235,217,0.55)", maxWidth: 560, lineHeight: 1.75 }}>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", maxWidth: 560, lineHeight: 1.75 }}>
             Every comparison is independently FSP-scored. We map the real decision forks — not generic spec tables — so you can pick the right product for your exact goal.
           </p>
         </div>
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 56, background: "linear-gradient(transparent, #F2EBD9)" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 56, background: "linear-gradient(transparent, #FFFFFF)" }} />
       </div>
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
@@ -109,13 +109,13 @@ export default function CompareHubPage() {
           {comparisons.map((comp) => (
             <div
               key={comp.slug}
-              style={{ border: "1px solid #D4C9B8", borderRadius: 16, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+              style={{ border: "1px solid #E4E8E5", borderRadius: 16, overflow: "hidden", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
             >
               {/* Card top row */}
               <div className="flex flex-col sm:flex-row sm:items-stretch">
 
                 {/* Products panel */}
-                <div style={{ backgroundColor: "#1A1714", flexShrink: 0 }} className="sm:w-56 lg:w-64 flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-6 p-5 sm:p-6">
+                <div style={{ backgroundColor: "#0D1810", flexShrink: 0 }} className="sm:w-56 lg:w-64 flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-6 p-5 sm:p-6">
                   {comp.products.map((prod, i) => (
                     <div key={prod.name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
                       {prod.image ? (
@@ -127,14 +127,14 @@ export default function CompareHubPage() {
                           />
                         </div>
                       ) : (
-                        <div style={{ width: 60, height: 72, backgroundColor: "#2D2520", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 18, color: "#5C5650" }}>?</span>
+                        <div style={{ width: 60, height: 72, backgroundColor: "#0A4F3B", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 18, color: "#586259" }}>?</span>
                         </div>
                       )}
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", textAlign: "center", lineHeight: 1.3 }}>{prod.name}</p>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{prod.score}</span>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", textAlign: "center", lineHeight: 1.3 }}>{prod.name}</p>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#0F7A5A" }}>{prod.score}</span>
                       {i === 0 && (
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontStyle: "italic", color: "rgba(242,235,217,0.15)", lineHeight: 1, margin: "4px 0" }}>vs</p>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontStyle: "italic", color: "rgba(255,255,255,0.15)", lineHeight: 1, margin: "4px 0" }}>vs</p>
                       )}
                     </div>
                   ))}
@@ -144,40 +144,40 @@ export default function CompareHubPage() {
                 <div style={{ padding: "24px 28px", flex: 1, display: "flex", flexDirection: "column", gap: 14, minWidth: 0 }}>
                   {/* Category pill */}
                   <div>
-                    <span style={{ display: "inline-block", padding: "3px 10px", borderRadius: 20, border: `1px solid ${comp.categoryColor}`, color: comp.categoryColor, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 600 }}>
+                    <span style={{ display: "inline-block", padding: "3px 10px", borderRadius: 20, border: `1px solid ${comp.categoryColor}`, color: comp.categoryColor, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 600 }}>
                       {comp.category}
                     </span>
                   </div>
 
                   {/* Headline */}
                   <div>
-                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 700, color: "#1A1714", lineHeight: 1.2, marginBottom: 6 }}>
+                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 700, color: "#17211C", lineHeight: 1.2, marginBottom: 6 }}>
                       {comp.headline}
                     </h2>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{comp.subline}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{comp.subline}</p>
                   </div>
 
                   {/* Key finding */}
-                  <div style={{ padding: "12px 14px", backgroundColor: "#EDE8DF", borderRadius: 8, borderLeft: "3px solid #C4622D" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 5 }}>Key Finding</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65 }}>{comp.keyFinding}</p>
+                  <div style={{ padding: "12px 14px", backgroundColor: "#F6F8F6", borderRadius: 8, borderLeft: "3px solid #0F7A5A" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", marginBottom: 5 }}>Key Finding</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.65 }}>{comp.keyFinding}</p>
                   </div>
 
                   {/* Tags + verdict row */}
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
                     {comp.tags.map((tag) => (
-                      <span key={tag} style={{ padding: "3px 9px", backgroundColor: "#EDE8DF", borderRadius: 5, fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480" }}>{tag}</span>
+                      <span key={tag} style={{ padding: "3px 9px", backgroundColor: "#F6F8F6", borderRadius: 5, fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", border: "1px solid #E4E8E5" }}>{tag}</span>
                     ))}
                   </div>
 
                   {/* Verdict + CTA */}
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12, marginTop: "auto", paddingTop: 4 }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", color: "#5C5650" }}>
-                      <span style={{ color: "#A89880" }}>VERDICT: </span>{comp.verdict}
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", color: "#3F4B43" }}>
+                      <span style={{ color: "#6B7770" }}>VERDICT: </span>{comp.verdict}
                     </p>
                     <Link
                       href={`/compare/${comp.slug}`}
-                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}
+                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}
                     >
                       Read full comparison →
                     </Link>
@@ -193,10 +193,10 @@ export default function CompareHubPage() {
           <SectionHeading label="Methodology" figure="§" title="How we run" titleItalic="comparisons" size="sm" />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
             {howWeCompare.map((step) => (
-              <div key={step.step} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 22, fontWeight: 700, color: "#EDE8DF", letterSpacing: "-0.02em", marginBottom: 10, lineHeight: 1 }}>{step.step}</p>
-                <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{step.label}</p>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>{step.desc}</p>
+              <div key={step.step} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 14, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 22, fontWeight: 700, color: "#E4E8E5", letterSpacing: "-0.02em", marginBottom: 10, lineHeight: 1 }}>{step.step}</p>
+                <p style={{ fontSize: 13, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{step.label}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -213,9 +213,9 @@ export default function CompareHubPage() {
               { title: "FSP Scoring Methodology", desc: "How the Fitlab Scoring Protocol works — pillars, weights, and editorial standards.", href: "/methodology" },
             ].map((item) => (
               <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-                <div className="hub-card" style={{ padding: 18, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4", height: "100%" }}>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, lineHeight: 1.3 }}>{item.title}</h3>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.desc}</p>
+                <div className="hub-card" style={{ padding: 18, border: "1px solid #E4E8E5", borderRadius: 14, backgroundColor: "#FFFFFF", height: "100%", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#17211C", marginBottom: 6, lineHeight: 1.3 }}>{item.title}</h3>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </Link>
             ))}

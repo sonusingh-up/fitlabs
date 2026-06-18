@@ -17,25 +17,25 @@ export default function MobileTOC({ items }: { items: TocItem[] }) {
   };
 
   return (
-    <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+    <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
       <button
         onClick={() => setOpen(!open)}
         style={{
           width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
-          padding: "12px 16px", backgroundColor: "#EDE8DF", border: "none", cursor: "pointer",
+          padding: "12px 16px", backgroundColor: "#F2F8F4", border: "none", cursor: "pointer",
         }}
       >
-        <span style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "#5C5650", fontWeight: 600 }}>
-          <List size={13} style={{ color: "#A89880" }} />
+        <span style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3F4B43", fontWeight: 600 }}>
+          <List size={13} style={{ color: "#586259" }} />
           Table of Contents
         </span>
         <ChevronDown
           size={14}
-          style={{ color: "#8A8480", transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}
+          style={{ color: "#6B7770", transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}
         />
       </button>
       {open && (
-        <div style={{ backgroundColor: "#F8F2E4", padding: "8px 0" }}>
+        <div style={{ backgroundColor: "#F6F8F6", padding: "8px 0" }}>
           {items.map((item, i) => (
             <button
               key={item.id}
@@ -46,7 +46,7 @@ export default function MobileTOC({ items }: { items: TocItem[] }) {
                 textAlign: "left",
               }}
             >
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", minWidth: 18 }}>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", minWidth: 18 }}>
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span style={{ fontSize: 13, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>

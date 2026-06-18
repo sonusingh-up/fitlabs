@@ -46,11 +46,11 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
     >
       <p
         style={{
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-jetbrains), monospace",
           fontSize: 9,
           letterSpacing: "0.22em",
           textTransform: "uppercase",
-          color: "#A89880",
+          color: "#586259",
           marginBottom: 16,
           paddingLeft: 14,
         }}
@@ -69,9 +69,9 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
                 padding: "7px 14px",
                 fontSize: 12.5,
                 fontFamily: "var(--font-dm-sans), sans-serif",
-                color: active === item.id ? "#C4622D" : "#5C5650",
+                color: active === item.id ? "#0F7A5A" : "#3F4B43",
                 fontWeight: active === item.id ? 600 : 400,
-                borderLeft: `2px solid ${active === item.id ? "#C4622D" : "transparent"}`,
+                borderLeft: `2px solid ${active === item.id ? "#0F7A5A" : "transparent"}`,
                 textDecoration: "none",
                 transition: "all 0.15s",
                 lineHeight: 1.3,
@@ -83,9 +83,9 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
             >
               <span
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 9,
-                  color: active === item.id ? "#C4622D" : "#A89880",
+                  color: active === item.id ? "#0F7A5A" : "#586259",
                   minWidth: 16,
                   textAlign: "right",
                 }}

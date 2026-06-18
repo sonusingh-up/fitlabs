@@ -39,14 +39,14 @@ export default function ProductCard({
   reviewSlug,
   image,
   bgFrom = "#1F2937",
-  bgTo = "#111827",
-  accent = "#0E8784",
+  bgTo = "#17211c",
+  accent = "#0f7a5a",
   featured = false,
 }: ProductCardProps) {
   return (
     <div
       style={{
-        border: featured ? `1px solid ${accent}55` : "1px solid #E5E7EB",
+        border: featured ? `1px solid ${accent}55` : "1px solid #e4e8e5",
         borderRadius: 14,
         overflow: "hidden",
         backgroundColor: "#FFFFFF",
@@ -66,7 +66,7 @@ export default function ProductCard({
           backgroundColor: accent,
           borderRadius: 4,
           fontSize: 8,
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontFamily: "var(--font-hanken), sans-serif",
           fontWeight: 700,
           letterSpacing: "0.16em",
           textTransform: "uppercase",
@@ -168,7 +168,7 @@ export default function ProductCard({
           left: image ? 12 : "50%",
           transform: image ? "none" : "translateX(-50%)",
           zIndex: 3,
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontFamily: "var(--font-hanken), sans-serif",
           fontSize: 8,
           fontWeight: 600,
           letterSpacing: "0.18em",
@@ -187,21 +187,21 @@ export default function ProductCard({
       <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
         <div>
           <p style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-hanken), sans-serif",
             fontSize: 9,
             fontWeight: 600,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#9CA3AF",
+            color: "#6b7770",
             marginBottom: 4,
           }}>
             {brand}
           </p>
           <p style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
+            fontFamily: "var(--font-newsreader), Georgia, serif",
             fontSize: "0.95rem",
             fontWeight: 700,
-            color: "#111827",
+            color: "#17211c",
             lineHeight: 1.25,
             margin: 0,
           }}>
@@ -214,12 +214,12 @@ export default function ProductCard({
             {tags.map((tag) => (
               <span key={tag} style={{
                 padding: "2px 7px",
-                backgroundColor: "#F3F4F6",
-                border: "1px solid #E5E7EB",
+                backgroundColor: "#eef1ef",
+                border: "1px solid #e4e8e5",
                 borderRadius: 6,
                 fontSize: 9,
-                color: "#6B7280",
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                color: "#586259",
+                fontFamily: "var(--font-hanken), sans-serif",
                 fontWeight: 500,
                 letterSpacing: "0.06em",
               }}>
@@ -231,18 +231,18 @@ export default function ProductCard({
 
         <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
           <span style={{
-            fontFamily: "var(--font-playfair), Georgia, serif",
+            fontFamily: "var(--font-newsreader), Georgia, serif",
             fontSize: "1.1rem",
             fontWeight: 700,
-            color: "#111827",
+            color: "#17211c",
           }}>
             {priceUSD}
           </span>
           <span style={{
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-hanken), sans-serif",
             fontSize: 10,
             fontWeight: 500,
-            color: "#9CA3AF",
+            color: "#6b7770",
           }}>
             {priceINR}
           </span>
@@ -265,7 +265,7 @@ export default function ProductCard({
               fontSize: 11,
               fontWeight: 700,
               borderRadius: 7,
-              fontFamily: "var(--font-dm-sans), sans-serif",
+              fontFamily: "var(--font-hanken), sans-serif",
               textDecoration: "none",
               whiteSpace: "nowrap",
             }}
@@ -282,12 +282,12 @@ export default function ProductCard({
                 justifyContent: "center",
                 gap: 5,
                 padding: "8px 12px",
-                border: "1px solid #E5E7EB",
-                color: "#6B7280",
+                border: "1px solid #e4e8e5",
+                color: "#586259",
                 fontSize: 11,
                 fontWeight: 500,
                 borderRadius: 7,
-                fontFamily: "var(--font-dm-sans), sans-serif",
+                fontFamily: "var(--font-hanken), sans-serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
                 backgroundColor: "#FFFFFF",

@@ -34,11 +34,11 @@ export async function generateMetadata({
 
 // ── Evidence colours ──────────────────────────────────────────────────────────
 const evidenceColour: Record<EvidenceLevel, string> = {
-  strong: "#4A7C59",
-  moderate: "#C4622D",
-  limited: "#D4A96A",
-  emerging: "#4A6C8C",
-  insufficient: "#8A8480",
+  strong: "#0F7A5A",
+  moderate: "#0A4F3B",
+  limited: "#586259",
+  emerging: "#3F4B43",
+  insufficient: "#6B7770",
 };
 
 // ── Page ──────────────────────────────────────────────────────────────────────
@@ -103,40 +103,40 @@ export default async function IngredientPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/ingredients" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Ingredients</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{ing.name}</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/ingredients" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Ingredients</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{ing.name}</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 900, margin: "0 auto" }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>{ing.figure}</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#6B7770", textTransform: "uppercase" }}>{ing.figure}</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>{ing.category}</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 8, textTransform: "uppercase" }}>{ing.category}</p>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
               {ing.name}
             </h1>
             {ing.aka && ing.aka.length > 0 && (
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", marginBottom: 12, letterSpacing: "0.08em" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770", marginBottom: 12, letterSpacing: "0.08em" }}>
                 Also known as: {ing.aka.join(" · ")}
               </p>
             )}
             <div style={{ marginBottom: 20 }}>
               <EvidenceBadge level={ing.evidence} />
             </div>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>{ing.summary}</p>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>{ing.summary}</p>
           </div>
         </div>
 
@@ -151,52 +151,52 @@ export default async function IngredientPage({
                 { label: "Mechanism", value: ing.mechanism, sub: "primary action" },
                 { label: "Best For", value: ing.bestFor[0], sub: ing.bestFor.slice(1).join(", ") || "—" },
               ].map((s) => (
-                <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{s.sub}</p>
+                <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{s.label}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{s.sub}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Medical disclaimer */}
-          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
-            <AlertTriangle size={14} style={{ color: "#8B7355", flexShrink: 0, marginTop: 2 }} />
-            <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>
+          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, display: "flex", gap: 12, alignItems: "flex-start" }}>
+            <AlertTriangle size={14} style={{ color: "#6B7770", flexShrink: 0, marginTop: 2 }} />
+            <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>
               This profile is for informational purposes only and does not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation, especially if you have pre-existing conditions or take medications.
             </p>
           </div>
 
           {/* § 1 What is it */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>What Is {ing.name}?</h2>
             <p>{ing.intro}</p>
           </section>
 
           {/* § 2 How it works */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>How It Works: The Science</h2>
             <p style={{ marginBottom: 20 }}>{ing.mechanismDetail}</p>
-            <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, borderLeft: "3px solid #C4622D" }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C4622D", marginBottom: 6 }}>Primary Mechanism</p>
-              <p style={{ fontSize: 13, color: "#2D2926", margin: 0, fontWeight: 600 }}>{ing.mechanism}</p>
+            <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, borderLeft: "3px solid #0F7A5A" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>Primary Mechanism</p>
+              <p style={{ fontSize: 13, color: "#17211C", margin: 0, fontWeight: 600 }}>{ing.mechanism}</p>
             </div>
           </section>
 
           {/* § 3 Evidence-Based Benefits */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Evidence-Based Benefits</h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {ing.keyBenefits.map((b, i) => (
-                <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden" }}>
-                  <div style={{ padding: "12px 16px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-                    <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14, lineHeight: 1.4 }}>{b.claim}</p>
+                <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
+                  <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+                    <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14, lineHeight: 1.4 }}>{b.claim}</p>
                     <span style={{
                       padding: "2px 8px",
                       borderRadius: 4,
                       fontSize: 9,
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       letterSpacing: "0.08em",
                       whiteSpace: "nowrap",
                       flexShrink: 0,
@@ -208,7 +208,7 @@ export default async function IngredientPage({
                     </span>
                   </div>
                   <div style={{ padding: "10px 16px" }}>
-                    <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.6, fontFamily: "var(--font-dm-mono), monospace" }}>{b.note}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>{b.note}</p>
                   </div>
                 </div>
               ))}
@@ -216,50 +216,50 @@ export default async function IngredientPage({
           </section>
 
           {/* § 4 Dosage Guide */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Dosage Guide</h2>
-            <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 20 }}>
+            <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, marginBottom: 20 }}>
               <div style={{ display: "flex", gap: 16, alignItems: "baseline", marginBottom: 8, flexWrap: "wrap" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>Effective Dose</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#C4622D", margin: 0 }}>{ing.dose}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>Effective Dose</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#0F7A5A", margin: 0 }}>{ing.dose}</p>
               </div>
             </div>
             <p>{ing.dosageNotes}</p>
           </section>
 
           {/* § 5 Safety */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Safety Profile & Side Effects</h2>
             <p>{ing.safetyNotes}</p>
           </section>
 
           {/* § 6 Who it's for */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Who Should (and Shouldn&apos;t) Take It</h2>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <div style={{ flex: "1 1 280px", border: "1px solid #D4C9B8", borderLeft: "3px solid #4A7C59", borderRadius: 8, padding: "16px 18px" }}>
+              <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 14, padding: "16px 18px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                  <CheckCircle2 size={14} color="#4A7C59" />
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#4A7C59" }}>Best for</span>
+                  <CheckCircle2 size={14} color="#0F7A5A" />
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0F7A5A" }}>Best for</span>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {ing.bestFor.map((tag) => (
-                    <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(74,124,89,0.08)", border: "1px solid rgba(74,124,89,0.2)", borderRadius: 4, fontSize: 11, color: "#4A7C59", fontFamily: "var(--font-dm-mono), monospace" }}>{tag}</span>
+                    <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(15,122,90,0.08)", border: "1px solid rgba(15,122,90,0.2)", borderRadius: 4, fontSize: 11, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace" }}>{tag}</span>
                   ))}
                 </div>
               </div>
-              <div style={{ flex: "1 1 280px", border: "1px solid #D4C9B8", borderLeft: "3px solid #8A8480", borderRadius: 8, padding: "16px 18px" }}>
+              <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #6B7770", borderRadius: 14, padding: "16px 18px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                  <XCircle size={14} color="#8A8480" />
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480" }}>Who it's for</span>
+                  <XCircle size={14} color="#6B7770" />
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770" }}>Who it's for</span>
                 </div>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{ing.whoFor}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{ing.whoFor}</p>
               </div>
             </div>
           </section>
 
           {/* § 7 FAQ */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Frequently Asked Questions</h2>
             {[
               { q: `What is the recommended dose of ${ing.name}?`, a: ing.dosageNotes },
@@ -267,12 +267,12 @@ export default async function IngredientPage({
               { q: `How does ${ing.name} work?`, a: ing.mechanismDetail },
               { q: `Who should take ${ing.name}?`, a: ing.whoFor },
             ].map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 8 }}>
-                <div style={{ padding: "12px 16px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #D4C9B8" }}>
-                  <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14 }}>{item.q}</p>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden", marginBottom: 8 }}>
+                <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5" }}>
+                  <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{item.q}</p>
                 </div>
                 <div style={{ padding: "12px 16px" }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.a}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.a}</p>
                 </div>
               </div>
             ))}
@@ -281,7 +281,7 @@ export default async function IngredientPage({
           {/* Related */}
           {ing.relatedSlugs && ing.relatedSlugs.length > 0 && (
             <section style={{ marginBottom: 48 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>Related Ingredients</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 16 }}>Related Ingredients</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                 {ing.relatedSlugs.map((relSlug) => {
                   const rel = ingredientsDb.find((i) => i.slug === relSlug);
@@ -291,11 +291,11 @@ export default async function IngredientPage({
                       href={`/ingredients/${relSlug}`}
                       style={{
                         padding: "8px 16px",
-                        border: "1px solid #D4C9B8",
-                        borderRadius: 6,
-                        backgroundColor: "#F8F2E4",
+                        border: "1px solid #E4E8E5",
+                        borderRadius: 14,
+                        backgroundColor: "#F6F8F6",
                         fontSize: 13,
-                        color: "#1A1714",
+                        color: "#17211C",
                         fontWeight: 600,
                         textDecoration: "none",
                       }}
@@ -309,11 +309,11 @@ export default async function IngredientPage({
           )}
 
           {/* Disclaimer */}
-          <div style={{ padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "3px solid #D4A96A" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>Medical Disclaimer</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+          <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, borderLeft: "3px solid #586259" }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>Medical Disclaimer</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
               Ingredient profiles are for informational purposes only and do not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation, especially if you have pre-existing conditions or take medications.{" "}
-              <Link href="/medical-disclaimer" style={{ color: "#C4622D", fontWeight: 600 }}>Full disclaimer →</Link>
+              <Link href="/medical-disclaimer" style={{ color: "#0F7A5A", fontWeight: 600 }}>Full disclaimer →</Link>
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans, Newsreader, JetBrains_Mono, Hanken_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
@@ -18,6 +18,13 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -159,8 +166,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${dmSans.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
-      style={{ backgroundColor: "#FFFFFF" }}
+      className={`${playfair.variable} ${dmSans.variable} ${hankenGrotesk.variable} ${newsreader.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      style={{ backgroundColor: "#ffffff" }}
     >
       <head>
         {/* JSON-LD: Organization + WebSite structured data */}
@@ -195,15 +202,16 @@ export default function RootLayout({
       <body
         className="min-h-full flex flex-col"
         style={{
-          fontFamily: "var(--font-dm-sans), system-ui, sans-serif",
-          backgroundColor: "#FFFFFF",
-          color: "#2D2D2D",
+          fontFamily: "var(--font-hanken), var(--font-hanken), system-ui, sans-serif",
+          backgroundColor: "#ffffff",
+          color: "#17211c",
         }}
       >
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
         {/* Emil Kowalski: activate .animate-fade-up scroll entrances site-wide */}
         <ScrollReveal />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

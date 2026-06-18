@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import WeightTimeline  from "./features/WeightTimeline";
 import PlateauPredictor from "./features/PlateauPredictor";
@@ -37,12 +37,12 @@ function calcBMR(g: Gender, wKg: number, hCm: number, age: number) {
 }
 
 const iS: React.CSSProperties = {
-  width:"100%", padding:"11px 14px", borderRadius:8, border:"1px solid #D4C9B8",
-  background:"#FDFAF4", fontSize:15, color:"#1A1714",
-  fontFamily:"var(--font-dm-sans),sans-serif", boxSizing:"border-box",
+  width:"100%", padding:"11px 14px", borderRadius:8, border:"1px solid #E4E8E5",
+  background:"#FDFAF4", fontSize:15, color:"#17211C",
+  fontFamily:"var(--font-hanken),sans-serif", boxSizing:"border-box",
 };
 const lS: React.CSSProperties = {
-  display:"block", fontSize:12, fontWeight:600, color:"#5C5650",
+  display:"block", fontSize:12, fontWeight:600, color:"#3F4B43",
   marginBottom:6, letterSpacing:"0.06em", textTransform:"uppercase",
 };
 
@@ -117,43 +117,43 @@ export default function BmrCalculatorClient() {
   const displayCut = adjCut < minSafe ? minSafe : adjCut;
 
   return (
-    <div style={{ background:"#F2EBD9", minHeight:"100vh" }}>
+    <div style={{ background:"#FFFFFF", minHeight:"100vh" }}>
       {/* Breadcrumb */}
-      <div style={{ borderBottom:"1px solid #D4C9B8", backgroundColor:"#EDE8DF" }} className="breadcrumb-pad">
-        <div style={{ maxWidth:760, margin:"0 auto", display:"flex", alignItems:"center", gap:8, fontSize:12, color:"#8A8480" }}>
-          <a href="/" style={{ color:"#8A8480" }}>Home</a><span>›</span>
-          <a href="/tools/free" style={{ color:"#8A8480" }}>Free Tools</a><span>›</span>
-          <span style={{ color:"#1A1714" }}>BMR Calculator</span>
+      <div style={{ borderBottom:"1px solid #E4E8E5", backgroundColor:"#F2F8F4" }} className="breadcrumb-pad">
+        <div style={{ maxWidth:760, margin:"0 auto", display:"flex", alignItems:"center", gap:8, fontSize:12, color:"#6B7770" }}>
+          <a href="/" style={{ color:"#6B7770" }}>Home</a><span>›</span>
+          <a href="/tools/free" style={{ color:"#6B7770" }}>Free Tools</a><span>›</span>
+          <span style={{ color:"#17211C" }}>BMR Calculator</span>
         </div>
       </div>
 
       <div style={{ maxWidth:760, margin:"0 auto" }} className="container-pad">
         {/* Header */}
         <div style={{ marginBottom:32, textAlign:"center" }}>
-          <span style={{ display:"inline-block", background:"#1A1714", color:"#F2EBD9", fontSize:10, fontWeight:700, letterSpacing:"0.12em", padding:"4px 10px", borderRadius:4, marginBottom:16 }}>FREE TOOL</span>
-          <h1 style={{ fontFamily:"var(--font-playfair),Georgia,serif", fontSize:"clamp(1.75rem,5vw,2.75rem)", fontWeight:800, color:"#1A1714", letterSpacing:"-0.02em", marginBottom:12, lineHeight:1.1 }}>BMR Calculator</h1>
-          <p style={{ fontSize:16, color:"#5C5650", maxWidth:520, margin:"0 auto", lineHeight:1.6 }}>
+          <span style={{ display:"inline-block", background:"#17211C", color:"#FFFFFF", fontSize:10, fontWeight:700, letterSpacing:"0.12em", padding:"4px 10px", borderRadius:4, marginBottom:16 }}>FREE TOOL</span>
+          <h1 style={{ fontFamily:"var(--font-newsreader),Georgia,serif", fontSize:"clamp(1.75rem,5vw,2.75rem)", fontWeight:800, color:"#17211C", letterSpacing:"-0.02em", marginBottom:12, lineHeight:1.1 }}>BMR Calculator</h1>
+          <p style={{ fontSize:16, color:"#3F4B43", maxWidth:520, margin:"0 auto", lineHeight:1.6 }}>
             Find your Basal Metabolic Rate — the exact number of calories your body burns at rest — then dial in your daily target.
           </p>
         </div>
 
         {/* Unit Toggle */}
         <div style={{ display:"flex", justifyContent:"center", marginBottom:28 }}>
-          <div style={{ display:"flex", background:"#EDE8DF", borderRadius:10, padding:4, gap:4 }}>
+          <div style={{ display:"flex", background:"#F2F8F4", borderRadius:10, padding:4, gap:4 }}>
             {(["imperial","metric"] as Unit[]).map(u => (
               <button key={u} onClick={() => setUnit(u)} style={{
                 padding:"8px 20px", borderRadius:8, border:"none", cursor:"pointer",
-                fontFamily:"var(--font-dm-sans),sans-serif", fontSize:13, fontWeight:600,
-                background: unit===u ? "#1A1714" : "transparent",
-                color: unit===u ? "#F2EBD9" : "#5C5650", transition:"all 0.15s",
+                fontFamily:"var(--font-hanken),sans-serif", fontSize:13, fontWeight:600,
+                background: unit===u ? "#17211C" : "transparent",
+                color: unit===u ? "#FFFFFF" : "#3F4B43", transition:"all 0.15s",
               }}>{u === "imperial" ? "Imperial (lbs/ft)" : "Metric (kg/cm)"}</button>
             ))}
           </div>
         </div>
 
         {/* Input Card */}
-        <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"28px 28px 24px", marginBottom:20, boxShadow:"0 4px 24px rgba(26,23,20,0.06)" }}>
-          <h2 style={{ fontSize:13, fontWeight:700, letterSpacing:"0.08em", color:"#8A8480", marginBottom:22, textTransform:"uppercase" }}>Your Details</h2>
+        <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:16, padding:"28px 28px 24px", marginBottom:20, boxShadow:"0 4px 24px rgba(26,23,20,0.06)" }}>
+          <h2 style={{ fontSize:13, fontWeight:700, letterSpacing:"0.08em", color:"#6B7770", marginBottom:22, textTransform:"uppercase" }}>Your Details</h2>
 
           {/* Gender */}
           <div style={{ marginBottom:20 }}>
@@ -162,11 +162,11 @@ export default function BmrCalculatorClient() {
               {(["male","female"] as Gender[]).map(g => (
                 <button key={g} onClick={() => set("gender",g)} style={{
                   flex:1, padding:"10px 0", borderRadius:8, cursor:"pointer",
-                  border: inputs.gender===g ? "2px solid #C4622D" : "1px solid #D4C9B8",
+                  border: inputs.gender===g ? "2px solid #0F7A5A" : "1px solid #E4E8E5",
                   background: inputs.gender===g ? "#FDF0E8" : "#FDFAF4",
-                  color: inputs.gender===g ? "#C4622D" : "#5C5650",
+                  color: inputs.gender===g ? "#0F7A5A" : "#3F4B43",
                   fontWeight:600, fontSize:14, transition:"all 0.15s",
-                  fontFamily:"var(--font-dm-sans),sans-serif",
+                  fontFamily:"var(--font-hanken),sans-serif",
                 }}>{g==="male" ? "♂ Male" : "♀ Female"}</button>
               ))}
             </div>
@@ -177,8 +177,8 @@ export default function BmrCalculatorClient() {
             <label style={lS}>Age (years)</label>
             <input type="number" min={15} max={100} placeholder="e.g. 32"
               value={inputs.age} onChange={e => set("age",e.target.value)}
-              style={{ ...iS, borderColor:errors.age?"#C4622D":"#D4C9B8", maxWidth:200 }} />
-            {errors.age && <p style={{ color:"#C4622D", fontSize:12, marginTop:4 }}>{errors.age}</p>}
+              style={{ ...iS, borderColor:errors.age?"#0F7A5A":"#E4E8E5", maxWidth:200 }} />
+            {errors.age && <p style={{ color:"#0F7A5A", fontSize:12, marginTop:4 }}>{errors.age}</p>}
           </div>
 
           {/* Weight */}
@@ -188,16 +188,16 @@ export default function BmrCalculatorClient() {
                 <label style={lS}>Weight (lbs)</label>
                 <input type="number" min={50} max={700} placeholder="e.g. 175 lbs"
                   value={inputs.weightLbs} onChange={e => set("weightLbs",e.target.value)}
-                  style={{ ...iS, borderColor:errors.weightLbs?"#C4622D":"#D4C9B8", maxWidth:200 }} />
-                {errors.weightLbs && <p style={{ color:"#C4622D", fontSize:12, marginTop:4 }}>{errors.weightLbs}</p>}
+                  style={{ ...iS, borderColor:errors.weightLbs?"#0F7A5A":"#E4E8E5", maxWidth:200 }} />
+                {errors.weightLbs && <p style={{ color:"#0F7A5A", fontSize:12, marginTop:4 }}>{errors.weightLbs}</p>}
               </>
             ) : (
               <>
                 <label style={lS}>Weight (kg)</label>
                 <input type="number" min={20} max={320} placeholder="e.g. 80 kg"
                   value={inputs.weightKg} onChange={e => set("weightKg",e.target.value)}
-                  style={{ ...iS, borderColor:errors.weightKg?"#C4622D":"#D4C9B8", maxWidth:200 }} />
-                {errors.weightKg && <p style={{ color:"#C4622D", fontSize:12, marginTop:4 }}>{errors.weightKg}</p>}
+                  style={{ ...iS, borderColor:errors.weightKg?"#0F7A5A":"#E4E8E5", maxWidth:200 }} />
+                {errors.weightKg && <p style={{ color:"#0F7A5A", fontSize:12, marginTop:4 }}>{errors.weightKg}</p>}
               </>
             )}
           </div>
@@ -211,15 +211,15 @@ export default function BmrCalculatorClient() {
                   <div>
                     <input type="number" min={3} max={8} placeholder="ft"
                       value={inputs.heightFt} onChange={e => set("heightFt",e.target.value)}
-                      style={{ ...iS, borderColor:errors.heightFt?"#C4622D":"#D4C9B8", maxWidth:110 }} />
-                    <span style={{ fontSize:12, color:"#8A8480", display:"block", marginTop:3 }}>feet</span>
-                    {errors.heightFt && <p style={{ color:"#C4622D", fontSize:12, marginTop:2 }}>{errors.heightFt}</p>}
+                      style={{ ...iS, borderColor:errors.heightFt?"#0F7A5A":"#E4E8E5", maxWidth:110 }} />
+                    <span style={{ fontSize:12, color:"#6B7770", display:"block", marginTop:3 }}>feet</span>
+                    {errors.heightFt && <p style={{ color:"#0F7A5A", fontSize:12, marginTop:2 }}>{errors.heightFt}</p>}
                   </div>
                   <div>
                     <input type="number" min={0} max={11} placeholder="in"
                       value={inputs.heightIn} onChange={e => set("heightIn",e.target.value)}
                       style={{ ...iS, maxWidth:110 }} />
-                    <span style={{ fontSize:12, color:"#8A8480", display:"block", marginTop:3 }}>inches</span>
+                    <span style={{ fontSize:12, color:"#6B7770", display:"block", marginTop:3 }}>inches</span>
                   </div>
                 </div>
               </>
@@ -228,8 +228,8 @@ export default function BmrCalculatorClient() {
                 <label style={lS}>Height (cm)</label>
                 <input type="number" min={90} max={250} placeholder="e.g. 175 cm"
                   value={inputs.heightCm} onChange={e => set("heightCm",e.target.value)}
-                  style={{ ...iS, borderColor:errors.heightCm?"#C4622D":"#D4C9B8", maxWidth:200 }} />
-                {errors.heightCm && <p style={{ color:"#C4622D", fontSize:12, marginTop:4 }}>{errors.heightCm}</p>}
+                  style={{ ...iS, borderColor:errors.heightCm?"#0F7A5A":"#E4E8E5", maxWidth:200 }} />
+                {errors.heightCm && <p style={{ color:"#0F7A5A", fontSize:12, marginTop:4 }}>{errors.heightCm}</p>}
               </>
             )}
           </div>
@@ -242,14 +242,14 @@ export default function BmrCalculatorClient() {
                 <label key={a.value} style={{
                   display:"flex", alignItems:"center", gap:12, padding:"10px 14px",
                   borderRadius:8, cursor:"pointer", transition:"all 0.15s",
-                  border: inputs.activity===a.value ? "1.5px solid #C4622D" : "1px solid #D4C9B8",
+                  border: inputs.activity===a.value ? "1.5px solid #0F7A5A" : "1px solid #E4E8E5",
                   background: inputs.activity===a.value ? "#FDF0E8" : "#FDFAF4",
                 }}>
                   <input type="radio" name="activity" value={a.value}
                     checked={inputs.activity===a.value} onChange={() => set("activity",a.value)}
-                    style={{ accentColor:"#C4622D", width:16, height:16, flexShrink:0 }} />
+                    style={{ accentColor:"#0F7A5A", width:16, height:16, flexShrink:0 }} />
                   <div>
-                    <span style={{ fontWeight:600, fontSize:14, color:"#1A1714" }}>{a.label}</span>
+                    <span style={{ fontWeight:600, fontSize:14, color:"#17211C" }}>{a.label}</span>
                     <span className="activity-desc">{a.desc}</span>
                   </div>
                 </label>
@@ -261,9 +261,9 @@ export default function BmrCalculatorClient() {
         {/* Calculate Button */}
         <button onClick={calculate} style={{
           width:"100%", padding:"15px 0", borderRadius:10, border:"none",
-          background:"#C4622D", color:"#FDFAF4", fontSize:16, fontWeight:700,
+          background:"#0F7A5A", color:"#FDFAF4", fontSize:16, fontWeight:700,
           cursor:"pointer", letterSpacing:"0.02em",
-          fontFamily:"var(--font-dm-sans),sans-serif",
+          fontFamily:"var(--font-hanken),sans-serif",
           boxShadow:"0 4px 16px rgba(196,98,45,0.3)", marginBottom:24,
         }}>Calculate My BMR →</button>
 
@@ -271,35 +271,35 @@ export default function BmrCalculatorClient() {
         {results && (
           <div>
             {/* Primary BMR + TDEE — always uses live adjTdee */}
-            <div style={{ background:"#1A1714", borderRadius:16, padding:"28px 28px 24px", marginBottom:16, boxShadow:"0 8px 32px rgba(26,23,20,0.2)", opacity:0, animation:"slideUp 250ms 0ms ease-out forwards" }}>
-              <div style={{ fontSize:12, fontWeight:700, color:"#8A8480", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:20 }}>Your Results</div>
+            <div style={{ background:"#17211C", borderRadius:16, padding:"28px 28px 24px", marginBottom:16, boxShadow:"0 8px 32px rgba(26,23,20,0.2)", opacity:0, animation:"slideUp 250ms 0ms ease-out forwards" }}>
+              <div style={{ fontSize:12, fontWeight:700, color:"#6B7770", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:20 }}>Your Results</div>
               <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:20 }}>
                 <div>
-                  <div style={{ fontSize:12, color:"#8A8480", marginBottom:4 }}>BMR (at rest)</div>
-                  <div style={{ fontSize:"clamp(2rem,6vw,2.75rem)", fontWeight:800, color:"#F2EBD9", fontVariantNumeric:"tabular-nums", lineHeight:1, fontFamily:"var(--font-dm-mono),monospace" }}>{activeBmr.toLocaleString()}</div>
-                  <div style={{ fontSize:13, color:"#5C5650", marginTop:4 }}>calories / day</div>
+                  <div style={{ fontSize:12, color:"#6B7770", marginBottom:4 }}>BMR (at rest)</div>
+                  <div style={{ fontSize:"clamp(2rem,6vw,2.75rem)", fontWeight:800, color:"#FFFFFF", fontVariantNumeric:"tabular-nums", lineHeight:1, fontFamily:"var(--font-jetbrains),monospace" }}>{activeBmr.toLocaleString()}</div>
+                  <div style={{ fontSize:13, color:"#3F4B43", marginTop:4 }}>calories / day</div>
                 </div>
                 <div>
-                  <div style={{ fontSize:12, color:"#8A8480", marginBottom:4 }}>TDEE ({results.activityLabel}{neatBonus>0?" + NEAT":""})</div>
-                  <div style={{ fontSize:"clamp(2rem,6vw,2.75rem)", fontWeight:800, color:"#C4622D", fontVariantNumeric:"tabular-nums", lineHeight:1, fontFamily:"var(--font-dm-mono),monospace" }}>{adjTdee.toLocaleString()}</div>
-                  <div style={{ fontSize:13, color:"#5C5650", marginTop:4 }}>calories / day</div>
+                  <div style={{ fontSize:12, color:"#6B7770", marginBottom:4 }}>TDEE ({results.activityLabel}{neatBonus>0?" + NEAT":""})</div>
+                  <div style={{ fontSize:"clamp(2rem,6vw,2.75rem)", fontWeight:800, color:"#0F7A5A", fontVariantNumeric:"tabular-nums", lineHeight:1, fontFamily:"var(--font-jetbrains),monospace" }}>{adjTdee.toLocaleString()}</div>
+                  <div style={{ fontSize:13, color:"#3F4B43", marginTop:4 }}>calories / day</div>
                 </div>
               </div>
             </div>
 
             {/* Goal Targets */}
-            <div style={{ background:"#EDE8DF", borderRadius:16, padding:"24px 28px", marginBottom:16, border:"1px solid #D4C9B8", opacity:0, animation:"slideUp 250ms 80ms ease-out forwards" }}>
-              <div style={{ fontSize:12, fontWeight:700, color:"#8A8480", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:16 }}>Your Goal Targets</div>
+            <div style={{ background:"#F2F8F4", borderRadius:16, padding:"24px 28px", marginBottom:16, border:"1px solid #E4E8E5", opacity:0, animation:"slideUp 250ms 80ms ease-out forwards" }}>
+              <div style={{ fontSize:12, fontWeight:700, color:"#6B7770", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:16 }}>Your Goal Targets</div>
               <div className="bmr-goals-grid">
                 {[
                   { label:"Fat Loss",    cal:displayCut, desc:adjCut<minSafe?"Adjusted to safe min":"−500 kcal deficit", color:"#D4A853" },
-                  { label:"Maintenance", cal:adjTdee,    desc:"Stay at current weight", color:"#A89880" },
+                  { label:"Maintenance", cal:adjTdee,    desc:"Stay at current weight", color:"#586259" },
                   { label:"Muscle Gain", cal:adjBulk,    desc:"+300 kcal surplus", color:"#5C8A6E" },
                 ].map(g => (
-                  <div key={g.label} style={{ background:"#FDFAF4", borderRadius:10, padding:"14px 12px", border:"1px solid #D4C9B8", textAlign:"center" }}>
+                  <div key={g.label} style={{ background:"#FDFAF4", borderRadius:10, padding:"14px 12px", border:"1px solid #E4E8E5", textAlign:"center" }}>
                     <div style={{ fontSize:11, fontWeight:700, color:g.color, letterSpacing:"0.06em", textTransform:"uppercase", marginBottom:6 }}>{g.label}</div>
-                    <div style={{ fontSize:"1.4rem", fontWeight:800, color:"#1A1714", fontVariantNumeric:"tabular-nums", fontFamily:"var(--font-dm-mono),monospace" }}>{g.cal.toLocaleString()}</div>
-                    <div style={{ fontSize:11, color:"#8A8480", marginTop:3 }}>{g.desc}</div>
+                    <div style={{ fontSize:"1.4rem", fontWeight:800, color:"#17211C", fontVariantNumeric:"tabular-nums", fontFamily:"var(--font-jetbrains),monospace" }}>{g.cal.toLocaleString()}</div>
+                    <div style={{ fontSize:11, color:"#6B7770", marginTop:3 }}>{g.desc}</div>
                   </div>
                 ))}
               </div>
@@ -317,42 +317,42 @@ export default function BmrCalculatorClient() {
 
             {/* Methodology */}
             <details style={{ marginBottom:16 }}>
-              <summary style={{ cursor:"pointer", padding:"14px 18px", background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:10, fontSize:13, fontWeight:600, color:"#5C5650", listStyle:"none", display:"flex", justifyContent:"space-between" }}>
-                <span>📐 How we calculated this</span><span style={{ color:"#C4622D" }}>+</span>
+              <summary style={{ cursor:"pointer", padding:"14px 18px", background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:10, fontSize:13, fontWeight:600, color:"#3F4B43", listStyle:"none", display:"flex", justifyContent:"space-between" }}>
+                <span>📐 How we calculated this</span><span style={{ color:"#0F7A5A" }}>+</span>
               </summary>
-              <div style={{ padding:"16px 18px", background:"#FDFAF4", border:"1px solid #D4C9B8", borderTop:"none", borderRadius:"0 0 10px 10px", fontSize:13, color:"#5C5650", lineHeight:1.7 }}>
+              <div style={{ padding:"16px 18px", background:"#FDFAF4", border:"1px solid #E4E8E5", borderTop:"none", borderRadius:"0 0 10px 10px", fontSize:13, color:"#3F4B43", lineHeight:1.7 }}>
                 <p style={{ marginBottom:8 }}><strong>Formula:</strong> Mifflin-St Jeor equation (1990) — the most validated BMR formula for the general population.</p>
-                <p style={{ marginBottom:8, fontFamily:"var(--font-dm-mono),monospace", fontSize:12, background:"#EDE8DF", padding:"8px 12px", borderRadius:6 }}>
-                  Men: BMR = 10W + 6.25H − 5A + 5<br />Women: BMR = 10W + 6.25H − 5A − 161<br /><span style={{ color:"#8A8480" }}>W=kg, H=cm, A=age</span>
+                <p style={{ marginBottom:8, fontFamily:"var(--font-jetbrains),monospace", fontSize:12, background:"#F2F8F4", padding:"8px 12px", borderRadius:6 }}>
+                  Men: BMR = 10W + 6.25H − 5A + 5<br />Women: BMR = 10W + 6.25H − 5A − 161<br /><span style={{ color:"#6B7770" }}>W=kg, H=cm, A=age</span>
                 </p>
                 <p>TDEE = BMR × activity multiplier. Accuracy: ±10% for most adults.</p>
               </div>
             </details>
 
             {/* Reset */}
-            <button onClick={reset} style={{ width:"100%", padding:"12px 0", borderRadius:10, border:"1px solid #D4C9B8", background:"transparent", color:"#5C5650", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif", marginBottom:24 }}>
+            <button onClick={reset} style={{ width:"100%", padding:"12px 0", borderRadius:10, border:"1px solid #E4E8E5", background:"transparent", color:"#3F4B43", fontSize:14, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif", marginBottom:24 }}>
               ↺ Start Over
             </button>
 
             {/* Upsell */}
             <div style={{ background:"linear-gradient(135deg,#1A1714 0%,#2D2926 100%)", borderRadius:14, padding:"20px 24px", marginBottom:24, border:"1px solid #3D3530" }}>
-              <div style={{ fontSize:11, fontWeight:700, color:"#C4622D", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:8 }}>🔓 Next Step</div>
-              <p style={{ fontSize:15, color:"#F2EBD9", fontWeight:600, marginBottom:4 }}>Want a full macro breakdown built around your {adjTdee.toLocaleString()} kcal target?</p>
-              <p style={{ fontSize:13, color:"#8A8480", marginBottom:14 }}>Our Macros Calculator splits your calories into exact protein, carbs, and fat targets for your goal.</p>
-              <a href="/tools/free/macros-calculator" style={{ display:"inline-block", background:"#C4622D", color:"#FDFAF4", padding:"10px 20px", borderRadius:8, fontSize:13, fontWeight:700, textDecoration:"none" }}>Calculate My Macros →</a>
+              <div style={{ fontSize:11, fontWeight:700, color:"#0F7A5A", letterSpacing:"0.1em", textTransform:"uppercase", marginBottom:8 }}>🔓 Next Step</div>
+              <p style={{ fontSize:15, color:"#FFFFFF", fontWeight:600, marginBottom:4 }}>Want a full macro breakdown built around your {adjTdee.toLocaleString()} kcal target?</p>
+              <p style={{ fontSize:13, color:"#6B7770", marginBottom:14 }}>Our Macros Calculator splits your calories into exact protein, carbs, and fat targets for your goal.</p>
+              <a href="/tools/free/macros-calculator" style={{ display:"inline-block", background:"#0F7A5A", color:"#FDFAF4", padding:"10px 20px", borderRadius:8, fontSize:13, fontWeight:700, textDecoration:"none" }}>Calculate My Macros →</a>
             </div>
 
             {/* Next Steps */}
-            <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:14, padding:"20px 24px", marginBottom:24, textAlign:"center" }}>
-              <p style={{ fontSize:14, color:"#5C5650", marginBottom:12, fontWeight:600 }}>Found this helpful?</p>
+            <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:14, padding:"20px 24px", marginBottom:24, textAlign:"center" }}>
+              <p style={{ fontSize:14, color:"#3F4B43", marginBottom:12, fontWeight:600 }}>Found this helpful?</p>
               <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
                 <button onClick={() => {
                   if (navigator.share) navigator.share({ title:"My BMR Result", text:`BMR: ${activeBmr} | TDEE: ${adjTdee} kcal/day`, url:window.location.href });
                   else navigator.clipboard.writeText(`BMR: ${activeBmr} | TDEE: ${adjTdee} kcal/day — ${window.location.href}`);
-                }} style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #D4C9B8", background:"#EDE8DF", color:"#1A1714", fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-dm-sans),sans-serif" }}>
+                }} style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #E4E8E5", background:"#F2F8F4", color:"#17211C", fontSize:13, fontWeight:600, cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif" }}>
                   📤 Share My Result
                 </button>
-                <a href="/ingredients/creatine" style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #C4622D", color:"#C4622D", fontSize:13, fontWeight:600, display:"inline-block", textDecoration:"none" }}>
+                <a href="/ingredients/creatine" style={{ padding:"9px 18px", borderRadius:8, border:"1px solid #0F7A5A", color:"#0F7A5A", fontSize:13, fontWeight:600, display:"inline-block", textDecoration:"none" }}>
                   Read: Creatine for Body Composition →
                 </a>
               </div>
@@ -362,8 +362,8 @@ export default function BmrCalculatorClient() {
 
         {/* FAQ */}
         <div style={{ marginBottom:32 }}>
-          <h2 style={{ fontFamily:"var(--font-playfair),Georgia,serif", fontSize:"1.4rem", fontWeight:700, color:"#1A1714", marginBottom:16 }}>Common Questions</h2>
-          <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:14, overflow:"hidden" }}>
+          <h2 style={{ fontFamily:"var(--font-newsreader),Georgia,serif", fontSize:"1.4rem", fontWeight:700, color:"#17211C", marginBottom:16 }}>Common Questions</h2>
+          <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:14, overflow:"hidden" }}>
             {[
               { q:"What does BMR actually measure?", a:"BMR is the number of calories your body burns to keep you alive at complete rest — breathing, pumping blood, regulating temperature, and maintaining cell function. It doesn't include any activity." },
               { q:"Why is Mifflin-St Jeor more accurate than Harris-Benedict?", a:"A 2005 meta-analysis (Frankenfield et al., Journal of the American Dietetic Association) found Mifflin-St Jeor predicted measured RMR within 10% for 82% of participants, outperforming the 1919 Harris-Benedict equations." },
@@ -379,7 +379,7 @@ export default function BmrCalculatorClient() {
         </div>
 
         {/* Disclaimer */}
-        <p style={{ fontSize:12, color:"#8A8480", lineHeight:1.7, borderTop:"1px solid #D4C9B8", paddingTop:20, textAlign:"center" }}>
+        <p style={{ fontSize:12, color:"#6B7770", lineHeight:1.7, borderTop:"1px solid #E4E8E5", paddingTop:20, textAlign:"center" }}>
           ⚕️ This tool provides general wellness information only and is not a substitute for medical advice. Consult a healthcare professional before making changes to your diet, exercise, or supplement routine.
         </p>
       </div>

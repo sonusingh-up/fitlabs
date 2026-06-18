@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
@@ -20,7 +20,7 @@ const categories = [
     description: "The most important supplement for muscle protein synthesis. We evaluate protein yield accuracy, amino acid profiles, and label honesty.",
     topIngredients: ["Whey Isolate", "Casein", "Pea Protein"],
     keyConsiderations: ["Protein yield per 100g", "Amino spiking risk", "Digestive enzymes"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Muscle Gain", "Recovery", "Weight Loss"],
   },
   {
@@ -59,7 +59,7 @@ const categories = [
     description: "High-calorie supplements for hardgainers. We check calorie sources — quality carbs vs cheap sugars — and protein-per-rupee ratios.",
     topIngredients: ["Whey Protein", "Complex Carbs", "Creatine", "MCT Oil"],
     keyConsiderations: ["Sugar content", "Protein quality", "Calorie density"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Bulking", "Hardgainers", "Weight Gain"],
   },
   {
@@ -137,7 +137,7 @@ const categories = [
     description: "Digestive enzymes, postbiotics, and herb-based gut supplements. We evaluate ingredient doses against clinical evidence and flag proprietary blends that hide key amounts.",
     topIngredients: ["Bromelain", "Ginger Extract", "Peppermint Leaf"],
     keyConsiderations: ["Proprietary blend transparency", "Dose vs clinical trials", "Third-party certification"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Bloating", "Digestive Comfort", "IBS Support"],
   },
   {
@@ -167,11 +167,11 @@ export default function CategoryHubPage() {
     <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #E5E7EB", backgroundColor: "#F8FAFB" }}>
+      <div style={{ borderBottom: "1px solid #e4e8e5", backgroundColor: "#f6f8f6" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#E5E7EB" }}>/</span>
-          <span style={{ fontSize: 12, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Categories</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#e4e8e5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em" }}>Categories</span>
         </div>
       </div>
 
@@ -195,7 +195,7 @@ export default function CategoryHubPage() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                style={{ display: "flex", flexDirection: "column", border: "1px solid #E5E7EB", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
+                style={{ display: "flex", flexDirection: "column", border: "1px solid #e4e8e5", borderRadius: 14, overflow: "hidden", textDecoration: "none", backgroundColor: "#FFFFFF", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}
                 className="hub-card"
               >
                 {/* Accent bar */}
@@ -207,36 +207,36 @@ export default function CategoryHubPage() {
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                       <span style={{ fontSize: "1.5rem" }}>{cat.icon}</span>
                       <div>
-                        <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", textTransform: "uppercase", margin: 0, marginBottom: 3 }}>{cat.figure}</p>
-                        <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#111827", margin: 0, letterSpacing: "-0.01em" }}>{cat.name}</h2>
+                        <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#6b7770", textTransform: "uppercase", margin: 0, marginBottom: 3 }}>{cat.figure}</p>
+                        <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#17211c", margin: 0, letterSpacing: "-0.01em" }}>{cat.name}</h2>
                       </div>
                     </div>
-                    <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#9CA3AF", padding: "4px 10px", border: "1px solid #E5E7EB", borderRadius: 4, backgroundColor: "#F8FAFB", flexShrink: 0 }}>
+                    <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, color: "#6b7770", padding: "4px 10px", border: "1px solid #e4e8e5", borderRadius: 4, backgroundColor: "#f6f8f6", flexShrink: 0 }}>
                       {cat.reviewCount} reviews
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0 }}>{cat.description}</p>
+                  <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.65, margin: 0 }}>{cat.description}</p>
 
                   {/* Key ingredients */}
                   <div>
-                    <p style={{ fontSize: 9, color: "#9CA3AF", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Key Ingredients</p>
+                    <p style={{ fontSize: 9, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6 }}>Key Ingredients</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                       {cat.topIngredients.slice(0, 3).map((ing) => (
-                        <span key={ing} style={{ padding: "3px 8px", backgroundColor: "#F8FAFB", border: "1px solid #E5E7EB", borderRadius: 4, fontSize: 10, color: "#6B7280", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.06em" }}>{ing}</span>
+                        <span key={ing} style={{ padding: "3px 8px", backgroundColor: "#f6f8f6", border: "1px solid #e4e8e5", borderRadius: 4, fontSize: 10, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.06em" }}>{ing}</span>
                       ))}
                     </div>
                   </div>
 
                   {/* Best for & CTA */}
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #F3F4F6", paddingTop: 10, marginTop: "auto" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #eef1ef", paddingTop: 10, marginTop: "auto" }}>
                     <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
                       {cat.bestFor.slice(0, 2).map((tag) => (
-                        <span key={tag} style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, color: cat.accent, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.07em", backgroundColor: `${cat.accent}0F`, border: `1px solid ${cat.accent}28` }}>{tag}</span>
+                        <span key={tag} style={{ padding: "2px 7px", borderRadius: 4, fontSize: 9, color: cat.accent, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.07em", backgroundColor: `${cat.accent}0F`, border: `1px solid ${cat.accent}28` }}>{tag}</span>
                       ))}
                     </div>
-                    <span style={{ fontSize: 12, color: "#0E8784", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", flexShrink: 0 }}>Browse →</span>
+                    <span style={{ fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>Browse →</span>
                   </div>
                 </div>
               </Link>
@@ -246,15 +246,15 @@ export default function CategoryHubPage() {
 
         {/* Bottom CTA */}
         <div style={{ marginTop: 64, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
-          <Link href="/best" style={{ padding: "24px 28px", backgroundColor: "#111827", borderRadius: 14, textDecoration: "none", display: "block" }}>
-            <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#6B7280", marginBottom: 8 }}>Shortcut</p>
-            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F9FAFB", marginBottom: 8 }}>View Best-Of Guides →</h3>
-            <p style={{ fontSize: 13, color: "#9CA3AF", lineHeight: 1.6, margin: 0 }}>Top picks per category, ranked and compared head-to-head.</p>
+          <Link href="/best" style={{ padding: "24px 28px", backgroundColor: "#17211c", borderRadius: 14, textDecoration: "none", display: "block" }}>
+            <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Shortcut</p>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F9FAFB", marginBottom: 8 }}>View Best-Of Guides →</h3>
+            <p style={{ fontSize: 13, color: "#6b7770", lineHeight: 1.6, margin: 0 }}>Top picks per category, ranked and compared head-to-head.</p>
           </Link>
-          <Link href="/ingredients" style={{ padding: "24px 28px", backgroundColor: "#FFFFFF", border: "1px solid #E5E7EB", borderRadius: 14, textDecoration: "none", display: "block", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
-            <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#9CA3AF", marginBottom: 8 }}>Deep Dive</p>
-            <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#111827", marginBottom: 8 }}>Browse Ingredients →</h3>
-            <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.6, margin: 0 }}>Evidence profiles for every major sports nutrition ingredient.</p>
+          <Link href="/ingredients" style={{ padding: "24px 28px", backgroundColor: "#FFFFFF", border: "1px solid #e4e8e5", borderRadius: 14, textDecoration: "none", display: "block", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
+            <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, letterSpacing: "0.12em", fontSize: 9, textTransform: "uppercase", color: "#6b7770", marginBottom: 8 }}>Deep Dive</p>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211c", marginBottom: 8 }}>Browse Ingredients →</h3>
+            <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.6, margin: 0 }}>Evidence profiles for every major sports nutrition ingredient.</p>
           </Link>
         </div>
 

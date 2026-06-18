@@ -83,18 +83,18 @@ const faqSchema = {
 
 export default function FreezeDriedVsDesiccatedPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/research" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Research</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Freeze-Dried vs Desiccated</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/research" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Research</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Freeze-Dried vs Desiccated</span>
         </div>
       </div>
 
@@ -103,31 +103,31 @@ export default function FreezeDriedVsDesiccatedPage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>ART-012</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Technical Review</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>ART-012</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>Technical Review</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Freeze-Dried vs Desiccated Organ Supplements
-            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Which Processing Method Actually Preserves More Nutrients?</em>
+            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#3F4B43", fontSize: "0.65em", marginTop: 10 }}>Which Processing Method Actually Preserves More Nutrients?</em>
           </h1>
 
           {/* Author bar */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20, padding: "10px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20, padding: "10px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
             <div style={{ width: 30, height: 30, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700 }}>FR</span>
+              <span style={{ color: "#FFFFFF", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700 }}>FR</span>
             </div>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
               <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>Fitlab Research Team</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>Published May 2026</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>10 min read</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>Published May 2026</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>10 min read</span>
             </div>
           </div>
         </div>
 
         {/* Quick answer */}
-        <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>Quick Answer</p>
+        <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, marginBottom: 48 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>Quick Answer</p>
           <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.75 }}>
             Freeze-drying (lyophilisation) preserves heat-sensitive nutrients better than heat-based desiccation. For most stable nutrients — retinol, B12, heme iron, zinc, selenium — the practical difference between freeze-drying and well-executed low-temperature desiccation (below 45°C) is small. The processing temperature matters more than the method label. Brands using undisclosed temperature desiccation are the concern — 'desiccated' without temperature documentation can mean heat-damaged products.
           </p>
@@ -150,25 +150,25 @@ export default function FreezeDriedVsDesiccatedPage() {
               disadvantages: ["High temperature = protein denaturation, enzyme inactivation", "B1, B5, C lost significantly above 60°C", "Shorter shelf life than freeze-dried"],
             },
           ].map((method) => (
-            <div key={method.method} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
+            <div key={method.method} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden" }}>
               <div style={{ padding: "14px 18px", backgroundColor: "#1A1714" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>{method.method}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>{method.method}</p>
               </div>
-              <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4" }}>
+              <div style={{ padding: "14px 18px", backgroundColor: "#F6F8F6" }}>
                 <div style={{ marginBottom: 14 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 6 }}>Process Steps</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#586259", textTransform: "uppercase", marginBottom: 6 }}>Process Steps</p>
                   {method.steps.map((s) => (
-                    <p key={s} style={{ fontSize: 12, color: "#5C5650", marginBottom: 4 }}>→ {s}</p>
+                    <p key={s} style={{ fontSize: 12, color: "#3F4B43", marginBottom: 4 }}>→ {s}</p>
                   ))}
                 </div>
                 <div style={{ marginBottom: 10 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 6 }}>Advantages</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#586259", textTransform: "uppercase", marginBottom: 6 }}>Advantages</p>
                   {method.advantages.map((a) => (
                     <p key={a} style={{ fontSize: 12, color: "#1A5C25", marginBottom: 4 }}>✓ {a}</p>
                   ))}
                 </div>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 6 }}>Disadvantages</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#586259", textTransform: "uppercase", marginBottom: 6 }}>Disadvantages</p>
                   {method.disadvantages.map((d) => (
                     <p key={d} style={{ fontSize: 12, color: "#9B2020", marginBottom: 4 }}>✗ {d}</p>
                   ))}
@@ -181,7 +181,7 @@ export default function FreezeDriedVsDesiccatedPage() {
         {/* Nutrient retention */}
         <SectionHeading label="Nutrient Data" figure="§ 02" title="Nutrient retention" titleItalic="by processing method" size="sm" />
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             Not all nutrients are equally affected by processing temperature. Fat-soluble vitamins and minerals are relatively heat-stable. Water-soluble B vitamins and bioactive proteins (enzymes, CoQ10) are most temperature-sensitive.
           </p>
           <div className="review-table-wrap">
@@ -189,7 +189,7 @@ export default function FreezeDriedVsDesiccatedPage() {
               <thead>
                 <tr style={{ backgroundColor: "#1A1714" }}>
                   {["Nutrient", "Heat Sensitivity", "Freeze-Dried Retention", "Low-Temp Dessic. (<45°C)", "High-Temp Dessic. (>60°C)"].map((h) => (
-                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.06em" }}>{h}</th>
+                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "#FFFFFF", letterSpacing: "0.06em" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -205,18 +205,18 @@ export default function FreezeDriedVsDesiccatedPage() {
                   ["CoQ10", "Moderate–High", "85–95%", "75–90%", "50–70%"],
                   ["Pancreatic enzymes", "High", "60–80%*", "40–60%*", "5–20%*"],
                 ].map(([nutrient, heat, fd, lt, ht], i) => (
-                  <tr key={nutrient} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={nutrient} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "10px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{nutrient}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 12, color: "#8A8480" }}>{heat}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 12, color: "#6B7770" }}>{heat}</td>
                     <td style={{ padding: "10px 14px", fontSize: 13, color: "#1A5C25", fontWeight: 600 }}>{fd}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{lt}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#3F4B43" }}>{lt}</td>
                     <td style={{ padding: "10px 14px", fontSize: 13, color: "#9B2020" }}>{ht}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: 12, color: "#8A8480", marginTop: 8, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 12, color: "#6B7770", marginTop: 8, lineHeight: 1.6 }}>
             * Enzyme structural retention — biological activity post-digestion is separate. Ranges based on food science literature; organ supplement-specific data is limited.
           </p>
         </div>
@@ -224,31 +224,31 @@ export default function FreezeDriedVsDesiccatedPage() {
         {/* The enzyme question */}
         <SectionHeading label="Enzymes" figure="§ 03" title="Do organ supplement" titleItalic="enzymes actually work?" size="sm" />
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             Beef pancreas is included in organ supplements partly for its pancreatin content (amylase, lipase, protease). This raises two distinct questions:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 20 }}>
-            <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
+            <div style={{ padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                 <EvidenceBadge level="strong" />
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q1: Does freeze-drying preserve enzyme structural integrity?</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q1: Does freeze-drying preserve enzyme structural integrity?</p>
               </div>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
                 Yes — lyophilisation is widely used in pharmaceutical and biotechnology industries specifically because it preserves enzyme structure better than alternatives. Pancreatic enzyme preparations used in research are routinely freeze-dried. Freeze-dried pancreatin retains significantly more enzymatic activity than heat-desiccated equivalents (Damodaran, 1988 — J Food Science).
               </p>
             </div>
-            <div style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
+            <div style={{ padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
                 <EvidenceBadge level="limited" />
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q2: Do those enzymes survive digestion and work in the small intestine?</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>Q2: Do those enzymes survive digestion and work in the small intestine?</p>
               </div>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
                 This is where the evidence is weak. Gastric acid (pH 1.5–3.5) and pepsin begin degrading proteins — including digestive enzymes — in the stomach. Medical pancreatic enzyme replacement therapy (PERT) for exocrine pancreatic insufficiency uses <em>enteric-coated</em> microspheres specifically to bypass gastric acid and deliver enzymes intact to the duodenum. Uncoated, non-pharmaceutical pancreatin capsules from food supplements are not proven to deliver meaningful enzyme activity to the small intestine. The nutritional content (zinc, B vitamins) from pancreatic tissue is delivered regardless of enzyme survival.
               </p>
             </div>
           </div>
-          <div style={{ padding: 16, backgroundColor: "#EDE8DF", borderRadius: 8 }}>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+          <div style={{ padding: 16, backgroundColor: "#F2F8F4", borderRadius: 8 }}>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
               <strong>Practical implication:</strong> Freeze-drying beef pancreas preserves more enzyme structure than desiccation — but this primarily matters if the enzymes survive digestion and reach the small intestine active. The case for pancreas in organ supplements rests more securely on its zinc, B vitamins, and general tissue micronutrient content than on enzyme activity.
             </p>
           </div>
@@ -263,10 +263,10 @@ export default function FreezeDriedVsDesiccatedPage() {
             { label: "'Desiccated' without temperature disclosure", verdict: "Caution", detail: "Cannot assess nutrient retention without temperature data. Request COA and processing temperature documentation from the manufacturer." },
             { label: "No processing method information", verdict: "Avoid", detail: "For premium-priced supplements, absence of processing method disclosure is a transparency failure. This is basic product information that all quality brands should provide." },
           ].map((item) => (
-            <div key={item.label} style={{ padding: "12px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, display: "grid", gridTemplateColumns: "180px 80px 1fr", gap: 12, alignItems: "center" }}>
+            <div key={item.label} style={{ padding: "12px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, display: "grid", gridTemplateColumns: "180px 80px 1fr", gap: 12, alignItems: "center" }}>
               <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.label}</p>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: item.verdict === "Best" ? "#1A5C25" : item.verdict === "Acceptable" ? "#5C5650" : "#9B2020", fontWeight: 600 }}>{item.verdict}</span>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.detail}</p>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: item.verdict === "Best" ? "#1A5C25" : item.verdict === "Acceptable" ? "#3F4B43" : "#9B2020", fontWeight: 600 }}>{item.verdict}</span>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{item.detail}</p>
             </div>
           ))}
         </div>
@@ -279,7 +279,7 @@ export default function FreezeDriedVsDesiccatedPage() {
               <thead>
                 <tr style={{ backgroundColor: "#1A1714" }}>
                   {["Brand", "Method", "Temperature", "Score"].map((h) => (
-                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.08em" }}>{h}</th>
+                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#FFFFFF", letterSpacing: "0.08em" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -294,11 +294,11 @@ export default function FreezeDriedVsDesiccatedPage() {
                   ["Codeage", "Not disclosed", "Unknown", "7/10"],
                   ["Enviromedica Terraferrin", "Desiccated", "Low-temp (claimed)", "7/10"],
                 ].map(([brand, method, temp, score], i) => (
-                  <tr key={brand} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={brand} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "10px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{brand}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 13, color: method === "Freeze-dried" ? "#1A5C25" : method === "Desiccated" ? "#5C5650" : "#9B2020" }}>{method}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 12, fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480" }}>{temp}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{score}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 13, color: method === "Freeze-dried" ? "#1A5C25" : method === "Desiccated" ? "#3F4B43" : "#9B2020" }}>{method}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 12, fontFamily: "var(--font-jetbrains), monospace", color: "#6B7770" }}>{temp}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#3F4B43" }}>{score}</td>
                   </tr>
                 ))}
               </tbody>
@@ -308,20 +308,20 @@ export default function FreezeDriedVsDesiccatedPage() {
 
         {/* Bottom line */}
         <div style={{ padding: 24, backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Temperature matters more than the method label.</p>
-          <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 12 }}>Temperature matters more than the method label.</p>
+          <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.75 }}>
             For the nutrients that define most organ supplement purchase decisions — B12, retinol, heme iron, zinc, selenium — the practical difference between freeze-drying and well-documented low-temperature desiccation is marginal. The meaningful distinction is between any cold-process method vs. high-temperature desiccation (above 60°C). For enzyme-containing products (beef pancreas), freeze-drying preserves significantly more activity. Ask any brand without clear processing disclosure to provide their temperature documentation — this is a basic quality question that transparent companies should be able to answer immediately.
           </p>
         </div>
 
         {/* FAQ */}
         <SectionHeading label="FAQ" figure="§ 06" title="Common" titleItalic="questions" size="sm" />
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
+            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
         </div>
@@ -337,14 +337,14 @@ export default function FreezeDriedVsDesiccatedPage() {
             { num: 5, text: "Shukla S et al. Lyophilisation of proteins: a review on formulation and process considerations. Pharm Dev Technol, 2010;15(4):359–387." },
             { num: 6, text: "USDA FoodData Central. Beef liver nutrient composition — retinol, B12, heme iron across processing states.", url: "https://fdc.nal.usda.gov/" },
           ].map((ref) => (
-            <div key={ref.num} style={{ display: "flex", gap: 12, padding: "8px 12px", backgroundColor: "#F8F2E4", borderRadius: 6 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", flexShrink: 0, minWidth: 20 }}>[{ref.num}]</span>
-              <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>
+            <div key={ref.num} style={{ display: "flex", gap: 12, padding: "8px 12px", backgroundColor: "#F6F8F6", borderRadius: 6 }}>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", flexShrink: 0, minWidth: 20 }}>[{ref.num}]</span>
+              <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>
                 {ref.text}
                 {ref.url && (
                   <>
                     {" "}
-                    <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a>
+                    <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace" }}>↗</a>
                   </>
                 )}
               </p>
@@ -361,7 +361,7 @@ export default function FreezeDriedVsDesiccatedPage() {
             { name: "Beef Pancreas Ingredient Profile", href: "/ingredients/beef-pancreas" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div style={{ padding: 14, border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+              <div style={{ padding: 14, border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.name}</p>
               </div>
             </Link>

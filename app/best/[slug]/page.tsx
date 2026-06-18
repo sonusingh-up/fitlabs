@@ -73,14 +73,14 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
   }));
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Header */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Best {pageTitle}</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Best {pageTitle}</span>
         </div>
       </div>
 
@@ -89,17 +89,17 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
         {/* Hero */}
         <div style={{ marginBottom: 56, maxWidth: 720 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>ROUNDUP · 2026</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Tested & Ranked</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259" }}>ROUNDUP · 2026</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A" }}>Tested & Ranked</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
-            Best {pageTitle} in USA <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026</em>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
+            Best {pageTitle} in USA <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>— 2026</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, marginBottom: 16 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.7, marginBottom: 16 }}>
             We reviewed {topPicks.length * 4}+ products to find the best options across budget, mid-range, and premium tiers. Each product was evaluated on formula quality, label transparency, price per serving, and real-world results.
           </p>
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
+          <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>
             Last updated: May 2026 · {topPicks.length * 4}+ products reviewed · Independently tested
           </p>
         </div>
@@ -109,24 +109,24 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
           <SectionHeading label="Quick Picks" figure="§ 01" title="Our top" titleItalic="selections" size="sm" />
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {topPicks.map((pick) => (
-              <div key={pick.slug} className="layout-picks-row" style={{ padding: 24, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: pick.rank === 1 ? "#1A1714" : "#EDE8DF", borderRadius: 8 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, fontWeight: 700, color: pick.rank === 1 ? "#F2EBD9" : "#5C5650" }}>
+              <div key={pick.slug} className="layout-picks-row" style={{ padding: 24, border: "1px solid #E4E8E5", borderRadius: 12, backgroundColor: "#F6F8F6" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: pick.rank === 1 ? "#17211C" : "#F2F8F4", borderRadius: 8 }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, fontWeight: 700, color: pick.rank === 1 ? "#FFFFFF" : "#3F4B43" }}>
                     #{pick.rank}
                   </span>
                 </div>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 4, textTransform: "uppercase" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 4, textTransform: "uppercase" }}>
                     {pick.brand} · ₹{pick.price}{pick.priceUnit}
                   </p>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", marginBottom: 4 }}>
                     {pick.name}
                   </h3>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{pick.verdict}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.5 }}>{pick.verdict}</p>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 10, alignItems: "flex-end" }}>
                   <ReviewScoreBadge rating={pick.rating} size="sm" />
-                  <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, textDecoration: "none" }}>
+                  <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#0F7A5A", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, textDecoration: "none" }}>
                     Full Review →
                   </Link>
                 </div>
@@ -144,17 +144,17 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
         {/* How we selected */}
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="Methodology" figure="§ 03" title="How we" titleItalic="selected" size="sm" />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {[
               { num: "01", title: "Formula Analysis", desc: "We checked every ingredient against the research literature for efficacy at stated doses." },
               { num: "02", title: "Label Transparency", desc: "Products with proprietary blends lose points. Full disclosure is a requirement for top rankings." },
               { num: "03", title: "Third-Party Testing", desc: "We prioritize NSF, Informed Sport, or equivalent certifications where available." },
               { num: "04", title: "Price Per Gram", desc: "Protein per rupee matters. We calculate cost efficiency across serving sizes." },
             ].map((step) => (
-              <div key={step.num} style={{ padding: 24, backgroundColor: "#F8F2E4", borderRight: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.2em", color: "#C4622D", marginBottom: 10 }}>{step.num}</p>
-                <h4 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{step.title}</h4>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{step.desc}</p>
+              <div key={step.num} style={{ padding: 24, backgroundColor: "#F6F8F6", borderRight: "1px solid #F2F8F4", borderBottom: "1px solid #F2F8F4" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.2em", color: "#0F7A5A", marginBottom: 10 }}>{step.num}</p>
+                <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 8 }}>{step.title}</h4>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{step.desc}</p>
               </div>
             ))}
           </div>
@@ -163,15 +163,15 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
         {/* FAQ */}
         <section>
           <SectionHeading label="FAQ" figure="§ 04" title="Common" titleItalic="questions" size="sm" />
-          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {[
               { q: `What is the best ${pageTitle.toLowerCase()} for beginners?`, a: "We recommend starting with ON Gold Standard Whey — it's reliable, widely tested, and available everywhere in USA." },
               { q: `How much ${pageTitle.toLowerCase()} should I take per day?`, a: "Most adults need 1.6–2.2g of protein per kg of bodyweight. Use supplements to fill any gap in your diet, not replace whole foods." },
               { q: "Are American brands as good as international ones?", a: "Some are — MuscleBlaze and AS-IT-IS have improved significantly. We review each on formula merit, not origin." },
             ].map((faq, i) => (
-              <div key={i} style={{ padding: "20px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {faq.q}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{faq.a}</p>
+              <div key={i} style={{ padding: "20px 20px", borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 8 }}>Q. {faq.q}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{faq.a}</p>
               </div>
             ))}
           </div>

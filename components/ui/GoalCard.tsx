@@ -14,14 +14,14 @@ interface GoalCardProps {
 }
 
 const goalStyle: Record<string, { bg: string; accent: string }> = {
-  "muscle-gain":  { bg: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", accent: "#0E8784" },
+  "muscle-gain":  { bg: "linear-gradient(145deg, #1F2937 0%, #17211c 100%)", accent: "#0f7a5a" },
   "weight-loss":  { bg: "linear-gradient(145deg, #064E3B 0%, #022C22 100%)", accent: "#059669" },
   "energy-focus": { bg: "linear-gradient(145deg, #78350F 0%, #451A03 100%)", accent: "#D97706" },
   recovery:       { bg: "linear-gradient(145deg, #1E3A5F 0%, #0F172A 100%)", accent: "#3B82F6" },
 };
 
 export default function GoalCard({ slug, label, description, topIngredients, code, image }: GoalCardProps) {
-  const gs = goalStyle[slug] ?? { bg: "linear-gradient(145deg, #1F2937 0%, #111827 100%)", accent: "#0E8784" };
+  const gs = goalStyle[slug] ?? { bg: "linear-gradient(145deg, #1F2937 0%, #17211c 100%)", accent: "#0f7a5a" };
 
   return (
     <Link
@@ -31,7 +31,7 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
         flexDirection: "column",
         borderRadius: 14,
         overflow: "hidden",
-        border: "1px solid #E5E7EB",
+        border: "1px solid #e4e8e5",
         textDecoration: "none",
         backgroundColor: "#FFFFFF",
         boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
@@ -68,7 +68,7 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
         {code && (
           <span style={{
             position: "absolute", top: 12, left: 12,
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontFamily: "var(--font-hanken), sans-serif",
             fontSize: 9, fontWeight: 600, letterSpacing: "0.18em", textTransform: "uppercase",
             color: "rgba(255,255,255,0.9)",
             backgroundColor: "rgba(17,24,39,0.45)",
@@ -89,26 +89,26 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
 
         {/* Label */}
         <h3 style={{
-          fontFamily: "var(--font-playfair), Georgia, serif",
+          fontFamily: "var(--font-newsreader), Georgia, serif",
           fontSize: "1.1rem", fontWeight: 700,
-          color: "#111827", letterSpacing: "-0.01em", margin: 0,
+          color: "#17211c", letterSpacing: "-0.01em", margin: 0,
         }}>{label}</h3>
 
-        <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, margin: 0, flex: 1 }}>{description}</p>
+        <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.65, margin: 0, flex: 1 }}>{description}</p>
 
         <div>
           <p style={{
-            fontSize: 9, color: "#9CA3AF",
-            fontFamily: "var(--font-dm-sans), sans-serif",
+            fontSize: 9, color: "#6b7770",
+            fontFamily: "var(--font-hanken), sans-serif",
             fontWeight: 600, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: 7,
           }}>Key Ingredients</p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
             {topIngredients.slice(0, 3).map((ing) => (
               <span key={ing} style={{
                 padding: "3px 8px",
-                backgroundColor: "#F3F4F6", border: "1px solid #E5E7EB",
-                borderRadius: 6, fontSize: 10, color: "#6B7280",
-                fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 500, letterSpacing: "0.06em",
+                backgroundColor: "#eef1ef", border: "1px solid #e4e8e5",
+                borderRadius: 6, fontSize: 10, color: "#586259",
+                fontFamily: "var(--font-hanken), sans-serif", fontWeight: 500, letterSpacing: "0.06em",
               }}>{ing}</span>
             ))}
           </div>
@@ -116,8 +116,8 @@ export default function GoalCard({ slug, label, description, topIngredients, cod
 
         <span style={{
           display: "flex", alignItems: "center", gap: 4,
-          fontSize: 12, color: "#0E8784", fontWeight: 600,
-          fontFamily: "var(--font-dm-sans), sans-serif",
+          fontSize: 12, color: "#0f7a5a", fontWeight: 600,
+          fontFamily: "var(--font-hanken), sans-serif",
         }}>
           View Guide <ArrowRight size={11} />
         </span>

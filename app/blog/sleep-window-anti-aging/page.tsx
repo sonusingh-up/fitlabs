@@ -21,37 +21,37 @@ const tocItems = [
 
 export default function SleepWindowArticle() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/blog" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Blog</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Sleep Window & Anti-Aging</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/blog" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Blog</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Sleep Window & Anti-Aging</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+      <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>BLG-001</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Longevity · Sleep Science</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>BLG-001</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Longevity · Sleep Science</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 20 }}>
             The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>for Anti-Aging</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>for Anti-Aging</em>
           </h1>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", marginBottom: 24 }}>
-            <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>May 2026</span>
-            <span style={{ color: "#D4C9B8" }}>·</span>
-            <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>11 min read</span>
-            <span style={{ color: "#D4C9B8" }}>·</span>
-            <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", fontWeight: 700, color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
+            <span style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>May 2026</span>
+            <span style={{ color: "#E4E8E5" }}>·</span>
+            <span style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>11 min read</span>
+            <span style={{ color: "#E4E8E5" }}>·</span>
+            <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", fontWeight: 700, color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
           </div>
           {/* Key stat callout */}
           <div style={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
@@ -60,9 +60,9 @@ export default function SleepWindowArticle() {
               { value: "~30%", label: "higher mortality with >9h sleep" },
               { value: "7h", label: "mortality nadir in most cohort studies" },
             ].map((stat, i) => (
-              <div key={i} style={{ padding: "14px 20px", backgroundColor: i === 0 ? "#1A1714" : "#F0E8D5", border: "1px solid #D4C9B8", flex: 1, minWidth: 140 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: i === 0 ? "#C4622D" : "#1A1714", margin: 0 }}>{stat.value}</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: i === 0 ? "#8A8480" : "#A89880", textTransform: "uppercase", marginTop: 4 }}>{stat.label}</p>
+              <div key={i} style={{ padding: "14px 20px", backgroundColor: i === 0 ? "#1A1714" : "#F0E8D5", border: "1px solid #E4E8E5", flex: 1, minWidth: 140 }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: i === 0 ? "#0F7A5A" : "#1A1714", margin: 0 }}>{stat.value}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", color: i === 0 ? "#6B7770" : "#586259", textTransform: "uppercase", marginTop: 4 }}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -74,7 +74,7 @@ export default function SleepWindowArticle() {
         <div className="layout-sidebar">
 
           {/* TOC */}
-          <aside className="hidden lg:block" style={{ borderRight: "1px solid #D4C9B8" }}>
+          <aside className="hidden lg:block" style={{ borderRight: "1px solid #E4E8E5" }}>
             <TableOfContents items={tocItems} />
           </aside>
 
@@ -92,8 +92,8 @@ export default function SleepWindowArticle() {
             </p>
 
             {/* Section 1 */}
-            <section id="where-range-comes-from" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="where-range-comes-from" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Where 6.4–7.8 Hours Actually Comes From
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -122,23 +122,23 @@ export default function SleepWindowArticle() {
                     finding: "In 72,000 women from the NHS study, both ≤5h and ≥9h sleep groups showed significantly elevated coronary heart disease risk compared to the 8h reference group — but the 6–7h group was not significantly different from 8h.",
                   },
                 ].map((ref) => (
-                  <div key={ref.study} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                  <div key={ref.study} style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714", flexShrink: 0 }}>{ref.study}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— {ref.journal}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714", flexShrink: 0 }}>{ref.study}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— {ref.journal}</span>
                     </div>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{ref.finding}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{ref.finding}</p>
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75 }}>
+              <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75 }}>
                 None of these studies were designed to identify an exact floor and ceiling — the 6.4–7.8 range reflects the zone where mortality risk, cardiovascular outcomes, and metabolic markers consistently converge at their lowest across multiple independent cohorts. It is not a prescription; it is a pattern.
               </p>
             </section>
 
             {/* Section 2 */}
-            <section id="why-more-isnt-better" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="why-more-isnt-better" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Why More Sleep Isn&apos;t Better
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -150,17 +150,17 @@ export default function SleepWindowArticle() {
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
                 A 2019 meta-analysis by Jike et al. in <em>Sleep Medicine Reviews</em> (14 cohort studies, over 1.7 million participants) found that even after adjusting for comorbidities, sleeping &gt;9 hours was independently associated with a 46% higher all-cause mortality risk. The excess sleep itself — not only the underlying illness — appears to be a contributing variable.
               </p>
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Mechanistic hypothesis</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Mechanistic hypothesis</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
                   Excess time in bed without proportional deep sleep increases light, fragmented sleep — which is metabolically and cognitively inferior to consolidated shorter sleep. Spending 9 hours in bed achieving only 6 hours of quality sleep may be worse than spending 7 hours in bed with 6.5 hours of quality sleep.
                 </p>
               </div>
             </section>
 
             {/* Section 3 */}
-            <section id="what-happens" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="what-happens" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 What Actually Happens in Those Hours
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -173,62 +173,62 @@ export default function SleepWindowArticle() {
                   { stage: "REM Sleep", role: "Emotional memory processing, synaptic pruning, and amygdala recalibration. Disruption correlates with anxiety, impaired emotional regulation, and cardiovascular risk." },
                   { stage: "Glymphatic Clearance", role: "The brain&apos;s waste clearance system (glymphatic system) is nearly 10× more active during sleep than waking (Xie et al., 2013, Science). Amyloid-β and tau clearance depend on this window." },
                 ].map((item) => (
-                  <div key={item.stage} style={{ padding: "16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#1A1714", marginBottom: 6, letterSpacing: "0.04em" }}>{item.stage}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.role}</p>
+                  <div key={item.stage} style={{ padding: "16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#1A1714", marginBottom: 6, letterSpacing: "0.04em" }}>{item.stage}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.role}</p>
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75 }}>
+              <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75 }}>
                 The critical point: slow-wave sleep (SWS) is front-loaded. The most restorative stage occurs disproportionately in the first half of the night. REM dominates the second half. This is why cutting sleep from 7.5h to 5h does not cost you 33% of each stage — it disproportionately eliminates the REM-heavy final cycles.
               </p>
             </section>
 
             {/* Section 4 */}
-            <section id="anti-aging-mechanisms" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="anti-aging-mechanisms" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 The Anti-Aging Mechanisms
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
                 The longevity signal from optimal sleep isn&apos;t just epidemiological correlation. There are at least four well-characterised mechanistic pathways linking sleep duration to biological aging rate:
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                <div style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>01</span>
-                    <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Telomere Length Preservation</h3>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>01</span>
+                    <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Telomere Length Preservation</h3>
                   </div>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>
                     Telomere length — the protective caps on chromosomes that shorten with each cell division — is a direct biomarker of biological aging. Epel et al. (2013, <em>Journal of Aging Research</em>) found that sleep duration of 6–7 hours was associated with longer telomeres in postmenopausal women compared to those sleeping &lt;6 or &gt;7 hours. Short sleep elevates cortisol chronically, and cortisol accelerates telomere attrition via oxidative stress pathways.
                   </p>
                 </div>
 
-                <div style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>02</span>
-                    <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Inflammatory Suppression</h3>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>02</span>
+                    <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Inflammatory Suppression</h3>
                   </div>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>
                     Chronic low-grade inflammation — &ldquo;inflammaging&rdquo; — is a primary driver of age-related disease. Sleep restriction studies consistently show elevated IL-6, TNF-α, and CRP after even one week of sleeping under 6 hours per night (Mullington et al., 2009, <em>Progress in Cardiovascular Diseases</em>). These inflammatory markers return to baseline with recovery sleep, but habitual restriction maintains chronically elevated levels.
                   </p>
                 </div>
 
-                <div style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>03</span>
-                    <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Growth Hormone Pulse Integrity</h3>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>03</span>
+                    <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Growth Hormone Pulse Integrity</h3>
                   </div>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>
                     The largest single daily pulse of growth hormone in adults occurs during the first slow-wave sleep cycle, typically 60–90 minutes after sleep onset (Van Cauter et al., 2000, <em>JAMA</em>). GH drives tissue repair, fat oxidation, lean mass preservation, and immune function. Delaying sleep onset, fragmenting sleep, or consistently under-sleeping blunts this pulse. Its decline is one of the most consistent features of biological aging — and it is substantially modifiable through sleep architecture.
                   </p>
                 </div>
 
-                <div style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>04</span>
-                    <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Glymphatic Amyloid Clearance</h3>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>04</span>
+                    <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Glymphatic Amyloid Clearance</h3>
                   </div>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>
                     Xie et al. (2013, <em>Science</em>) demonstrated that the interstitial space of the brain expands by ~60% during sleep, allowing cerebrospinal fluid to flush metabolic waste — including amyloid-β and tau proteins implicated in neurodegeneration. This glymphatic flush is near-absent during waking. Chronic sleep restriction in mice accelerated amyloid plaque accumulation; in humans, a single night of sleep deprivation measurably increases cerebrospinal amyloid-β levels (Lucey et al., 2017, <em>Brain</em>).
                   </p>
                 </div>
@@ -236,8 +236,8 @@ export default function SleepWindowArticle() {
             </section>
 
             {/* Section 5 */}
-            <section id="quality-vs-quantity" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="quality-vs-quantity" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Quality vs. Quantity: Which Matters More?
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -247,24 +247,24 @@ export default function SleepWindowArticle() {
                 Practically, quality is determined by three things: sleep continuity (minimal awakenings), sufficient slow-wave sleep architecture, and alignment with circadian timing. A fragmented 8-hour night routinely underperforms a consolidated 6.5-hour night on all biomarkers.
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                <div style={{ padding: "16px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A4020", marginBottom: 8 }}>Destroys Sleep Quality</p>
+                <div style={{ padding: "16px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A4020", marginBottom: 8 }}>Destroys Sleep Quality</p>
                   {["Alcohol within 3h of bed — suppresses REM", "Blue light after 9pm — delays melatonin onset by ~90 min", "Inconsistent sleep timing — disrupts circadian anchoring", "Room temperature above 19°C — impairs SWS depth"].map(item => (
-                    <p key={item} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: "0 0 6px", paddingLeft: 10, borderLeft: "2px solid #C4622D" }}>{item}</p>
+                    <p key={item} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: "0 0 6px", paddingLeft: 10, borderLeft: "2px solid #0F7A5A" }}>{item}</p>
                   ))}
                 </div>
-                <div style={{ padding: "16px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Improves Sleep Quality</p>
+                <div style={{ padding: "16px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Improves Sleep Quality</p>
                   {["Consistent wake time — the most powerful circadian anchor", "18–19°C room temperature — optimal for SWS induction", "Magnesium glycinate 200–400mg — modest sleep latency reduction (Abbasi et al., 2012)", "Exercise — increases SWS duration, reduces sleep latency"].map(item => (
-                    <p key={item} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: "0 0 6px", paddingLeft: 10, borderLeft: "2px solid #1A6B3A" }}>{item}</p>
+                    <p key={item} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: "0 0 6px", paddingLeft: 10, borderLeft: "2px solid #1A6B3A" }}>{item}</p>
                   ))}
                 </div>
               </div>
             </section>
 
             {/* Section 6 */}
-            <section id="practical-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
+            <section id="practical-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>
                 Practical Protocol
               </h2>
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 20 }}>
@@ -278,11 +278,11 @@ export default function SleepWindowArticle() {
                   { priority: "04", action: "No alcohol within 3 hours of sleep", rationale: "Alcohol reliably suppresses REM in the first half of the night, even at low doses (1–2 units). The 'sedative' effect is real; the sleep quality is not." },
                   { priority: "05", action: "Morning light within 30 minutes of waking", rationale: "Outdoor light exposure on the retina sets circadian phase. It determines when melatonin rises that evening. This is more powerful than any supplement." },
                 ].map((step) => (
-                  <div key={step.priority} style={{ display: "grid", gridTemplateColumns: "44px 1fr", gap: 16, padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#D4C9B8", alignSelf: "start", paddingTop: 2 }}>{step.priority}</span>
+                  <div key={step.priority} style={{ display: "grid", gridTemplateColumns: "44px 1fr", gap: 16, padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#E4E8E5", alignSelf: "start", paddingTop: 2 }}>{step.priority}</span>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{step.action}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{step.rationale}</p>
+                      <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{step.action}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{step.rationale}</p>
                     </div>
                   </div>
                 ))}
@@ -292,21 +292,21 @@ export default function SleepWindowArticle() {
             {/* Bottom line */}
             <section id="bottom-line" style={{ marginBottom: 48 }}>
               <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14, lineHeight: 1.3 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 14, lineHeight: 1.3 }}>
                   Aim for 7 hours of consolidated sleep. The ceiling matters as much as the floor.
                 </h3>
-                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8, marginBottom: 16 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.8, marginBottom: 16 }}>
                   The preponderance of evidence from large cohort studies places the longevity-optimal sleep window between 6.4 and 7.8 hours. Sleeping significantly below 6 hours chronically is harmful — but so is spending 9+ hours in bed with fragmented, low-quality sleep. The four mechanisms that explain this — telomere integrity, inflammatory suppression, GH pulsatility, and glymphatic clearance — all operate optimally in a 7-hour window of consolidated, architecturally intact sleep.
                 </p>
-                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.8 }}>
                   The most effective intervention available: a fixed wake time, a dark cool room, and zero alcohol in the three hours before bed. No supplement replaces those three.
                 </p>
               </div>
 
               {/* References */}
-              <div style={{ marginTop: 32, padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>Key References</p>
+              <div style={{ marginTop: 32, padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Key References</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
                   {[
                     "Kripke DF et al. Mortality associated with sleep duration and insomnia. Arch Gen Psychiatry. 2002;59(2):131–136.",
@@ -319,7 +319,7 @@ export default function SleepWindowArticle() {
                     "Epel ES et al. Sleep quality predicts telomere length in older women. Psychoneuroendocrinology. 2013.",
                     "Abbasi B et al. The effect of magnesium supplementation on primary insomnia in elderly. J Res Med Sci. 2012.",
                   ].map((ref) => (
-                    <p key={ref} style={{ fontSize: 11, color: "#8A8480", lineHeight: 1.6, fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{ref}</p>
+                    <p key={ref} style={{ fontSize: 11, color: "#6B7770", lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace", margin: 0 }}>{ref}</p>
                   ))}
                 </div>
               </div>
@@ -329,16 +329,16 @@ export default function SleepWindowArticle() {
         </div>
 
         {/* ── Related Content ─────────────────────────────────────────── */}
-        <section style={{ marginTop: 72, paddingTop: 48, borderTop: "2px solid #D4C9B8" }}>
+        <section style={{ marginTop: 72, paddingTop: 48, borderTop: "2px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 32 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>Related Content</span>
-            <span style={{ flex: 1, height: 1, backgroundColor: "#D4C9B8" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Sleep · Recovery · Longevity</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>Related Content</span>
+            <span style={{ flex: 1, height: 1, backgroundColor: "#E4E8E5" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Sleep · Recovery · Longevity</span>
           </div>
 
           {/* Research Articles */}
           <div style={{ marginBottom: 40 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Research Articles</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Research Articles</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
               {[
                 {
@@ -367,7 +367,7 @@ export default function SleepWindowArticle() {
                   title: "The Protein Timing Myth",
                   sub: "vs. reality",
                   teaser: "Total daily protein intake outweighs precise timing for muscle protein synthesis in trained individuals.",
-                  accent: "#C4622D",
+                  accent: "#0F7A5A",
                   evidence: "Strong",
                   evidenceColor: "#1A6B3A",
                 },
@@ -376,20 +376,20 @@ export default function SleepWindowArticle() {
                   key={item.href}
                   href={item.href}
                   className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}
                 >
                   <div style={{ backgroundColor: item.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: item.evidenceColor, padding: "1px 6px", backgroundColor: `${item.evidenceColor}12`, border: `1px solid ${item.evidenceColor}25`, borderRadius: 3 }}>{item.evidence}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#586259" }}>{item.label}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.1em", textTransform: "uppercase", color: item.evidenceColor, padding: "1px 6px", backgroundColor: `${item.evidenceColor}12`, border: `1px solid ${item.evidenceColor}25`, borderRadius: 3 }}>{item.evidence}</span>
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#6B7770", marginTop: 2 }}>{item.sub}</p>
                     </div>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>Read Article →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", marginTop: 2 }}>Read Article →</span>
                   </div>
                 </Link>
               ))}
@@ -398,7 +398,7 @@ export default function SleepWindowArticle() {
 
           {/* Related Ingredients */}
           <div style={{ marginBottom: 40 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Related Ingredients</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Related Ingredients</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12 }}>
               {[
                 {
@@ -431,24 +431,24 @@ export default function SleepWindowArticle() {
                   title: "Beta-Alanine",
                   sub: "Carnosine precursor",
                   teaser: "Evidence on post-exercise recovery and its interaction with sleep quality in trained athletes.",
-                  accent: "#C4622D",
+                  accent: "#0F7A5A",
                 },
               ].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}
                 >
                   <div style={{ backgroundColor: item.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#586259" }}>{item.label}</span>
                     <div>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.sub}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#6B7770", marginTop: 2 }}>{item.sub}</p>
                     </div>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>View Profile →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{item.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", marginTop: 2 }}>View Profile →</span>
                   </div>
                 </Link>
               ))}
@@ -457,7 +457,7 @@ export default function SleepWindowArticle() {
 
           {/* Reviews */}
           <div style={{ marginBottom: 40 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Product Reviews</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Product Reviews</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
               {[
                 {
@@ -476,7 +476,7 @@ export default function SleepWindowArticle() {
                   brand: "Optimum Nutrition",
                   verdict: "The benchmark whey — Informed Choice certified, consistent protein yield, clean label.",
                   rating: 9,
-                  accent: "#C4622D",
+                  accent: "#0F7A5A",
                 },
                 {
                   href: "/reviews/myprotein-creatine-monohydrate",
@@ -492,23 +492,23 @@ export default function SleepWindowArticle() {
                   key={item.href}
                   href={item.href}
                   className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}
                 >
                   <div style={{ backgroundColor: item.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880" }}>{item.label}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#586259" }}>{item.label}</span>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 1 }}>
-                        <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: item.rating >= 9 ? "#1A6B3A" : "#C4622D", lineHeight: 1 }}>{item.rating}</span>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>/10</span>
+                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: item.rating >= 9 ? "#1A6B3A" : "#0F7A5A", lineHeight: 1 }}>{item.rating}</span>
+                        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259" }}>/10</span>
                       </div>
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{item.brand}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.2 }}>{item.title}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#6B7770", marginTop: 2 }}>{item.brand}</p>
                     </div>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.verdict}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", marginTop: 2 }}>Read Review →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{item.verdict}</p>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", marginTop: 2 }}>Read Review →</span>
                   </div>
                 </Link>
               ))}
@@ -516,25 +516,25 @@ export default function SleepWindowArticle() {
           </div>
 
           {/* More from Blog */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12, padding: "20px 24px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 10 }}>
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>More from Blog</p>
-              <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Practical fitness &amp; nutrition guides — no fluff, no sponsorship.</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>More from Blog</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>Practical fitness &amp; nutrition guides — no fluff, no sponsorship.</p>
             </div>
-            <Link href="/blog" style={{ padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", borderRadius: 8, fontSize: 12, fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", flexShrink: 0, letterSpacing: "0.04em" }}>
+            <Link href="/blog" style={{ padding: "10px 20px", backgroundColor: "#1A1714", color: "#FFFFFF", borderRadius: 8, fontSize: 12, fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", flexShrink: 0, letterSpacing: "0.04em" }}>
               Browse All Articles →
             </Link>
           </div>
 
           {/* Back nav + tags */}
           <div style={{ marginTop: 32, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <Link href="/blog" style={{ fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+            <Link href="/blog" style={{ fontSize: 13, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
               ← Back to Blog
             </Link>
             <div style={{ display: "flex", gap: 8 }}>
-              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Sleep</span>
-              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Longevity</span>
-              <span style={{ padding: "3px 9px", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Anti-Aging</span>
+              <span style={{ padding: "3px 9px", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Sleep</span>
+              <span style={{ padding: "3px 9px", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Longevity</span>
+              <span style={{ padding: "3px 9px", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Anti-Aging</span>
             </div>
           </div>
         </section>

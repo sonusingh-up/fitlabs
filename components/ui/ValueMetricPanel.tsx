@@ -17,43 +17,43 @@ export default function ValueMetricPanel({ metric, activeIngredientLabel = "prim
   const direction = benchmarkDiff > 0 ? "cheaper" : "more expensive";
 
   return (
-    <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+    <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
 
       {/* Header */}
-      <div className="layout-value-header" style={{ padding: "12px 20px", backgroundColor: "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
-        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>
+      <div className="layout-value-header" style={{ padding: "12px 20px", backgroundColor: "#F2F8F4", borderBottom: "1px solid #E4E8E5" }}>
+        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259" }}>
           Value Efficiency Analysis
         </span>
-        <span style={{ padding: "3px 10px", backgroundColor: efficiencyMeta.bg, border: `1px solid ${efficiencyMeta.color}33`, borderRadius: 6, fontSize: 10, fontWeight: 700, color: efficiencyMeta.color, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em" }}>
+        <span style={{ padding: "3px 10px", backgroundColor: efficiencyMeta.bg, border: `1px solid ${efficiencyMeta.color}33`, borderRadius: 6, fontSize: 10, fontWeight: 700, color: efficiencyMeta.color, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em" }}>
           {efficiencyMeta.label}
         </span>
       </div>
 
       <div style={{ padding: "20px", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 12 }}>
-        <div style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F2EBD9" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Price / Serving</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", lineHeight: 1 }}>₹{metric.pricePerServing}</p>
+        <div style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Price / Serving</p>
+          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#17211C", lineHeight: 1 }}>₹{metric.pricePerServing}</p>
         </div>
 
-        <div style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F2EBD9" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{activeIngredientLabel} / serving</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", lineHeight: 1 }}>{metric.primaryActiveGrams}g</p>
+        <div style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{activeIngredientLabel} / serving</p>
+          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#17211C", lineHeight: 1 }}>{metric.primaryActiveGrams}g</p>
         </div>
 
-        <div style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F2EBD9" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>₹ per gram active</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", lineHeight: 1 }}>₹{metric.pricePerGramActive.toFixed(1)}</p>
+        <div style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>₹ per gram active</p>
+          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#17211C", lineHeight: 1 }}>₹{metric.pricePerGramActive.toFixed(1)}</p>
         </div>
 
-        <div style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F2EBD9" }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Category Avg</p>
-          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#1A1714", lineHeight: 1 }}>₹{metric.categoryAvgPricePerGram.toFixed(1)}</p>
+        <div style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#FFFFFF" }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Category Avg</p>
+          <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#17211C", lineHeight: 1 }}>₹{metric.categoryAvgPricePerGram.toFixed(1)}</p>
         </div>
       </div>
 
-      <div style={{ padding: "12px 20px", borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
-        <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>
-          <strong style={{ color: "#1A1714" }}>₹{metric.pricePerGramActive.toFixed(1)}/g</strong> vs category average of <strong style={{ color: "#1A1714" }}>₹{metric.categoryAvgPricePerGram.toFixed(1)}/g</strong>
+      <div style={{ padding: "12px 20px", borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
+        <p style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-dm-sans), sans-serif", margin: 0 }}>
+          <strong style={{ color: "#17211C" }}>₹{metric.pricePerGramActive.toFixed(1)}/g</strong> vs category average of <strong style={{ color: "#17211C" }}>₹{metric.categoryAvgPricePerGram.toFixed(1)}/g</strong>
           {benchmarkDiff !== 0 && ` — ${betterBy}% ${direction} per gram of ${activeIngredientLabel}.`}
         </p>
       </div>

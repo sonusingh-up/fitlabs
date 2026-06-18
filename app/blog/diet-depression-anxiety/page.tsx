@@ -23,40 +23,40 @@ const tocItems = [
 
 export default function DietDepressionAnxietyPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+    <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh", fontFamily: "var(--font-hanken), sans-serif" }}>
 
       {/* Hero */}
-      <div style={{ backgroundColor: "#1A1714", color: "#F2EBD9", padding: "48px 24px 56px" }}>
+      <div style={{ backgroundColor: "#1A1714", color: "#FFFFFF", padding: "48px 24px 56px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Breadcrumb */}
-          <nav style={{ fontSize: 12, color: "#5C5650", marginBottom: 20, fontFamily: "var(--font-dm-mono), monospace" }}>
-            <Link href="/" style={{ color: "#A89880", textDecoration: "none" }}>Home</Link>
+          <nav style={{ fontSize: 12, color: "#3F4B43", marginBottom: 20, fontFamily: "var(--font-jetbrains), monospace" }}>
+            <Link href="/" style={{ color: "#586259", textDecoration: "none" }}>Home</Link>
             <span style={{ margin: "0 8px" }}>·</span>
-            <Link href="/blog" style={{ color: "#A89880", textDecoration: "none" }}>Blog</Link>
+            <Link href="/blog" style={{ color: "#586259", textDecoration: "none" }}>Blog</Link>
             <span style={{ margin: "0 8px" }}>·</span>
-            <span style={{ color: "#5C5650" }}>Food as Medicine</span>
+            <span style={{ color: "#3F4B43" }}>Food as Medicine</span>
           </nav>
 
           {/* Figure code + category */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", letterSpacing: "0.15em" }}>BLG-004</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#3F4B43", letterSpacing: "0.15em" }}>BLG-004</span>
             <span style={{ width: 1, height: 14, backgroundColor: "#3A3530" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "#C4622D", textTransform: "uppercase" }}>Nutrition &amp; Mental Health</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", color: "#0F7A5A", textTransform: "uppercase" }}>Nutrition &amp; Mental Health</span>
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", marginBottom: 16, lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Food as Medicine: How Your Diet Directly Impacts Depression &amp; Anxiety
           </h1>
-          <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#A89880", marginBottom: 28, lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#586259", marginBottom: 28, lineHeight: 1.6 }}>
             The gut-brain axis is not a metaphor — it is a bidirectional signalling highway with real, measurable effects on mood and mental health.
           </p>
 
           {/* Meta row */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", marginBottom: 36 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>May 26, 2026</span>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>14 min read</span>
-            <span style={{ padding: "4px 10px", borderRadius: 4, fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: "rgba(26,107,58,0.15)", color: "#1A6B3A", border: "1px solid rgba(26,107,58,0.25)" }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>May 26, 2026</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>14 min read</span>
+            <span style={{ padding: "4px 10px", borderRadius: 4, fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", backgroundColor: "rgba(26,107,58,0.15)", color: "#1A6B3A", border: "1px solid rgba(26,107,58,0.25)" }}>
               STRONG EVIDENCE
             </span>
           </div>
@@ -69,8 +69,8 @@ export default function DietDepressionAnxietyPage() {
               { value: "90%", label: "Of serotonin is produced in the gut, not the brain" },
             ].map((stat) => (
               <div key={stat.value} style={{ padding: "18px 20px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 10 }}>
-                <div style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#C4622D", marginBottom: 6 }}>{stat.value}</div>
-                <div style={{ fontSize: 12, color: "#8A8480", lineHeight: 1.6 }}>{stat.label}</div>
+                <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#0F7A5A", marginBottom: 6 }}>{stat.value}</div>
+                <div style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.6 }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function DietDepressionAnxietyPage() {
         <div className="layout-sidebar">
 
           {/* Sidebar TOC */}
-          <aside className="hidden lg:block" style={{ borderRight: "1px solid #D4C9B8" }}>
+          <aside className="hidden lg:block" style={{ borderRight: "1px solid #E4E8E5" }}>
             <TableOfContents items={tocItems} />
           </aside>
 
@@ -100,8 +100,8 @@ export default function DietDepressionAnxietyPage() {
             </p>
 
             {/* Section 1: Gut-Brain Axis */}
-            <section id="gut-brain-axis" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="gut-brain-axis" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 The Gut-Brain Axis: More Than a Metaphor
               </h2>
 
@@ -109,9 +109,9 @@ export default function DietDepressionAnxietyPage() {
                 The gut-brain axis comprises three interconnected highways: the vagus nerve (carrying signals bidirectionally between gut and brainstem), the hypothalamic-pituitary-adrenal (HPA) axis (mediating stress responses), and the enteric nervous system itself. All three are sensitive to the composition of the gut microbiome, which is directly shaped by diet.
               </p>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8, marginBottom: 20 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Key Anatomy</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>The enteric nervous system contains 200–500 million neurons (Furness, 2006, Nature Reviews Neuroscience), more than the spinal cord. It communicates with the brain via the vagus nerve and indirectly via gut-derived neurotransmitters, short-chain fatty acids, and inflammatory cytokines that cross the blood-brain barrier.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8, marginBottom: 20 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Key Anatomy</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>The enteric nervous system contains 200–500 million neurons (Furness, 2006, Nature Reviews Neuroscience), more than the spinal cord. It communicates with the brain via the vagus nerve and indirectly via gut-derived neurotransmitters, short-chain fatty acids, and inflammatory cytokines that cross the blood-brain barrier.</p>
               </div>
 
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -124,8 +124,8 @@ export default function DietDepressionAnxietyPage() {
             </section>
 
             {/* Section 2: Mediterranean Diet */}
-            <section id="mediterranean-diet" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="mediterranean-diet" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Mediterranean Diet &amp; Major Depressive Disorder
               </h2>
 
@@ -134,19 +134,19 @@ export default function DietDepressionAnxietyPage() {
               </p>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Psaltopoulou et al. (2013)</span>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— Annals of Epidemiology</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Psaltopoulou et al. (2013)</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— Annals of Epidemiology</span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Meta-analysis of 22 studies (N = 61,905). Each 2-point increase in Mediterranean diet score was associated with a 32% reduction in depression risk (OR 0.68, 95% CI 0.54–0.85).</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Meta-analysis of 22 studies (N = 61,905). Each 2-point increase in Mediterranean diet score was associated with a 32% reduction in depression risk (OR 0.68, 95% CI 0.54–0.85).</p>
                 </div>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Sanchez-Villegas et al. (2009)</span>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— Archives of General Psychiatry</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Sanchez-Villegas et al. (2009)</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— Archives of General Psychiatry</span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Prospective cohort of 10,094 Spanish university graduates. High adherence to Mediterranean diet was associated with a 30% lower incidence of depression over 4.4 years.</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Prospective cohort of 10,094 Spanish university graduates. High adherence to Mediterranean diet was associated with a 30% lower incidence of depression over 4.4 years.</p>
                 </div>
               </div>
 
@@ -160,8 +160,8 @@ export default function DietDepressionAnxietyPage() {
             </section>
 
             {/* Section 3: Omega-3s */}
-            <section id="omega-3-mechanisms" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="omega-3-mechanisms" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Omega-3s &amp; Neuroinflammation
               </h2>
 
@@ -175,25 +175,25 @@ export default function DietDepressionAnxietyPage() {
                   { num: "02", title: "DHA Supports Neuroplasticity", text: "DHA constitutes ~20% of brain grey matter phospholipid content. It is required for BDNF synthesis and synaptic plasticity. Low DHA is associated with reduced hippocampal volume, a neuroimaging finding in MDD (Sublette et al., 2011, Journal of Clinical Psychiatry)." },
                   { num: "03", title: "Meta-analytic Support", text: "Mocking et al. (2016, Translational Psychiatry) meta-analysed 13 RCTs (N = 1,233). EPA supplementation (mean dose 1.4g/day EPA) produced a significant antidepressant effect (SMD -0.398, p = 0.001). DHA alone did not reach significance, suggesting EPA is the active isomer." },
                 ].map((item) => (
-                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
-                      <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>{item.num}</span>
+                      <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
                 ))}
               </div>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Evidence Limit</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Most omega-3 RCTs used supplementation on top of standard antidepressants, not as monotherapy. The effect size as a standalone treatment in non-medicated patients is not established. These findings are most applicable to adjunctive use.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Evidence Limit</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Most omega-3 RCTs used supplementation on top of standard antidepressants, not as monotherapy. The effect size as a standalone treatment in non-medicated patients is not established. These findings are most applicable to adjunctive use.</p>
               </div>
             </section>
 
             {/* Section 4: Gut Microbiome */}
-            <section id="gut-microbiome" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="gut-microbiome" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Gut Microbiome &amp; Mood: The Psychobiome
               </h2>
 
@@ -205,12 +205,12 @@ export default function DietDepressionAnxietyPage() {
                 Three microbiome-mediated mechanisms are well-characterised. First, short-chain fatty acid (SCFA) production: fermentation of dietary fibre by <em>Bifidobacterium</em> and <em>Lactobacillus</em> species produces butyrate, propionate, and acetate, which maintain intestinal barrier integrity and reduce systemic LPS translocation (a driver of neuroinflammation). Second, tryptophan metabolism: gut bacteria regulate how tryptophan is partitioned between serotonin synthesis and the kynurenine pathway — the latter producing quinolinic acid, a neurotoxic compound elevated in depression (Schwarcz et al., 2012, Nature Reviews Neuroscience). Third, GABA production: certain <em>Lactobacillus</em> species synthesise GABA directly; Bravo et al. (2011, PNAS) demonstrated that vagotomy abolishes the anxiolytic effect of <em>L. rhamnosus</em> in mice, confirming the vagal pathway.
               </p>
 
-              <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", marginBottom: 20 }}>
+              <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6", marginBottom: 20 }}>
                 <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Valles-Colomer et al. (2019)</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— Nature Microbiology</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Valles-Colomer et al. (2019)</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— Nature Microbiology</span>
                 </div>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>In the Flemish Gut Flora Project (N = 1,054), <em>Coprococcus</em> and <em>Dialister</em> species were consistently depleted in individuals with depression, even after correcting for antidepressant use. Both genera are butyrate-producing. Positive mental health was associated with higher butyrate-producing bacterial capacity.</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>In the Flemish Gut Flora Project (N = 1,054), <em>Coprococcus</em> and <em>Dialister</em> species were consistently depleted in individuals with depression, even after correcting for antidepressant use. Both genera are butyrate-producing. Positive mental health was associated with higher butyrate-producing bacterial capacity.</p>
               </div>
 
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8 }}>
@@ -219,8 +219,8 @@ export default function DietDepressionAnxietyPage() {
             </section>
 
             {/* Section 5: Sugar & Ultra-Processed */}
-            <section id="sugar-ultra-processed" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="sugar-ultra-processed" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Sugar &amp; Ultra-Processed Foods: The Inflammatory Diet
               </h2>
 
@@ -229,19 +229,19 @@ export default function DietDepressionAnxietyPage() {
               </p>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Akbaraly et al. (2009)</span>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— British Journal of Psychiatry</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Akbaraly et al. (2009)</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— British Journal of Psychiatry</span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Whitehall II cohort (N = 3,486). A "processed food" dietary pattern at baseline was associated with 58% higher odds of depression at 5-year follow-up (OR 1.58), even after adjusting for socioeconomic status and physical activity.</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Whitehall II cohort (N = 3,486). A "processed food" dietary pattern at baseline was associated with 58% higher odds of depression at 5-year follow-up (OR 1.58), even after adjusting for socioeconomic status and physical activity.</p>
                 </div>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Knüppel et al. (2017)</span>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>— Scientific Reports</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>Knüppel et al. (2017)</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>— Scientific Reports</span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>UK Biobank analysis (N = 23,245). Men consuming &gt;67g/day of sugar had a 23% higher risk of common mental disorders at 5-year follow-up. The pattern was not significant in women after adjustment — an important sex difference to note.</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>UK Biobank analysis (N = 23,245). Men consuming &gt;67g/day of sugar had a 23% higher risk of common mental disorders at 5-year follow-up. The pattern was not significant in women after adjustment — an important sex difference to note.</p>
                 </div>
               </div>
 
@@ -255,8 +255,8 @@ export default function DietDepressionAnxietyPage() {
             </section>
 
             {/* Section 6: Key Nutrients */}
-            <section id="key-nutrients" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="key-nutrients" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Deficiencies That Drive Symptoms
               </h2>
 
@@ -287,20 +287,20 @@ export default function DietDepressionAnxietyPage() {
                     text: "Vitamin D receptors are expressed throughout limbic and cortical brain regions. A Cochrane-adjacent systematic review (Shaffer et al., 2014, Psychological Medicine, N = 18,353) found an OR of 1.31 for depression in vitamin D-deficient individuals. However, the VITAL trial (Okereke et al., 2020, JAMA) — 2,000 IU/day vitamin D3 for 5 years in 18,353 adults — found no significant reduction in depression incidence, suggesting supplementation does not reverse the association in replete adults."
                   },
                 ].map((item) => (
-                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
-                      <h3 style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>{item.num}</span>
+                      <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             {/* Section 7: SMILES Trial */}
-            <section id="smiles-trial" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="smiles-trial" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Can Diet Treat Depression? The SMILES Trial
               </h2>
 
@@ -308,9 +308,9 @@ export default function DietDepressionAnxietyPage() {
                 The Supporting the Modification of lifestyle In Lowered Emotional States (SMILES) trial — Jacka et al. (2017, BMC Medicine) — is the landmark RCT in nutritional psychiatry. It recruited 67 adults with a DSM-IV major depressive episode, all consuming a poor diet at baseline, and randomised them to either 7 individual dietary consultations promoting a modified Mediterranean diet, or 7 sessions of social support (matching for therapist contact time).
               </p>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8, marginBottom: 24 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Primary Outcome</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>At 12 weeks, 32.3% of the dietary intervention group achieved remission (MADRS score ≤10) compared with 8.0% of the social support group (OR 4.1, 95% CI 1.1–15.7, NNT = 4.1). The dietary group also showed significantly greater reduction in MADRS total score (-11.0 vs -4.7, p = 0.002).</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8, marginBottom: 24 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Primary Outcome</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>At 12 weeks, 32.3% of the dietary intervention group achieved remission (MADRS score ≤10) compared with 8.0% of the social support group (OR 4.1, 95% CI 1.1–15.7, NNT = 4.1). The dietary group also showed significantly greater reduction in MADRS total score (-11.0 vs -4.7, p = 0.002).</p>
               </div>
 
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
@@ -327,8 +327,8 @@ export default function DietDepressionAnxietyPage() {
             </section>
 
             {/* Section 8: Practical Protocol */}
-            <section id="practical-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+            <section id="practical-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 A Practical Dietary Protocol
               </h2>
 
@@ -347,36 +347,36 @@ export default function DietDepressionAnxietyPage() {
                   { label: "Olive oil", target: "3 tbsp/day", note: "Primary cooking and dressing fat" },
                   { label: "Nuts/seeds", target: "1 oz/day", note: "Unsalted — walnuts highest ALA content" },
                 ].map((item) => (
-                  <div key={item.label} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                    <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#C4622D", marginBottom: 4, textTransform: "uppercase" }}>{item.label}</div>
+                  <div key={item.label} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                    <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#0F7A5A", marginBottom: 4, textTransform: "uppercase" }}>{item.label}</div>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{item.target}</div>
-                    <div style={{ fontSize: 12, color: "#5C5650" }}>{item.note}</div>
+                    <div style={{ fontSize: 12, color: "#3F4B43" }}>{item.note}</div>
                   </div>
                 ))}
               </div>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Reduction Targets</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>The SMILES protocol also specified reductions: refined grains to ≤1 serving/day, red meat to ≤3 servings/week, sweets/sugary drinks to ≤3 servings/week, and fried and fast foods to ≤1 serving/week. Both the additions and the reductions matter.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Reduction Targets</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>The SMILES protocol also specified reductions: refined grains to ≤1 serving/day, red meat to ≤3 servings/week, sweets/sugary drinks to ≤3 servings/week, and fried and fast foods to ≤1 serving/week. Both the additions and the reductions matter.</p>
               </div>
             </section>
 
             {/* Bottom Line */}
             <section id="bottom-line" style={{ marginBottom: 48 }}>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Bottom Line
               </h2>
 
               <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 32 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-                <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>Diet is a legitimate adjunct for depression — not a replacement for care.</h3>
-                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8 }}>The evidence base for dietary improvement — particularly a Mediterranean-style pattern — as an adjunct to standard depression treatment is now robust enough to warrant clinical discussion. The SMILES trial showed a remission rate of 32% vs 8% at 12 weeks with dietary counselling. The mechanisms are plausible and partially confirmed: reduced neuroinflammation, improved gut microbiome function, and correction of specific deficiencies (magnesium, folate, zinc, omega-3s). What diet cannot do: replace antidepressants for severe MDD, work as reliably as pharmacotherapy in the acute phase, or overcome structural contributors like trauma, poverty, or social isolation.</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 14 }}>Diet is a legitimate adjunct for depression — not a replacement for care.</h3>
+                <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.8 }}>The evidence base for dietary improvement — particularly a Mediterranean-style pattern — as an adjunct to standard depression treatment is now robust enough to warrant clinical discussion. The SMILES trial showed a remission rate of 32% vs 8% at 12 weeks with dietary counselling. The mechanisms are plausible and partially confirmed: reduced neuroinflammation, improved gut microbiome function, and correction of specific deficiencies (magnesium, folate, zinc, omega-3s). What diet cannot do: replace antidepressants for severe MDD, work as reliably as pharmacotherapy in the acute phase, or overcome structural contributors like trauma, poverty, or social isolation.</p>
               </div>
 
               {/* References */}
-              <div style={{ padding: "24px 26px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>References</p>
-                <ol style={{ fontSize: 12, color: "#5C5650", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
+              <div style={{ padding: "24px 26px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 16 }}>References</p>
+                <ol style={{ fontSize: 12, color: "#3F4B43", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
                   <li>Jacka F, et al. A randomised controlled trial of dietary improvement for adults with major depression. BMC Medicine. 2017;15:23.</li>
                   <li>Psaltopoulou T, et al. Olive oil intake and all-cause mortality — also depression. Ann Epidemiol. 2013;23(11):718–724.</li>
                   <li>Sanchez-Villegas A, et al. Association of the Mediterranean dietary pattern with the incidence of depression. Arch Gen Psychiatry. 2009;66(10):1090–1098.</li>
@@ -396,18 +396,18 @@ export default function DietDepressionAnxietyPage() {
         </div>
 
         {/* Related Content — full width */}
-        <div style={{ marginTop: 64, paddingTop: 48, borderTop: "1px solid #D4C9B8" }}>
+        <div style={{ marginTop: 64, paddingTop: 48, borderTop: "1px solid #E4E8E5" }}>
 
           {/* Section header */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 48 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>Related Content</span>
-            <span style={{ flex: 1, height: 1, backgroundColor: "#D4C9B8" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", textTransform: "uppercase" }}>Nutrition · Mental Health · Gut Health</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>Related Content</span>
+            <span style={{ flex: 1, height: 1, backgroundColor: "#E4E8E5" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", textTransform: "uppercase" }}>Nutrition · Mental Health · Gut Health</span>
           </div>
 
           {/* Research Articles */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Research Articles</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Research Articles</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
               {[
                 { href: "/research/omega-3-brain-health", accent: "#1A6B3A", badge: "Strong Evidence", label: "Ingredient Science", title: "Omega-3 Fatty Acids & Brain Health", teaser: "EPA and DHA mechanisms in neuroinflammation and cognitive function." },
@@ -415,14 +415,14 @@ export default function DietDepressionAnxietyPage() {
                 { href: "/research/gut-microbiome-mood", accent: "#1A6B3A", badge: "Strong Evidence", label: "Gut-Brain Axis", title: "Gut Microbiome & Psychological Wellbeing", teaser: "How fibre intake and microbiome diversity correlate with depression risk." },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: card.accent === "#1A6B3A" ? "rgba(26,107,58,0.1)" : "rgba(146,98,10,0.1)", color: card.accent, border: `1px solid ${card.accent}33`, alignSelf: "flex-start" }}>{card.badge}</span>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Article →</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", backgroundColor: card.accent === "#1A6B3A" ? "rgba(26,107,58,0.1)" : "rgba(146,98,10,0.1)", color: card.accent, border: `1px solid ${card.accent}33`, alignSelf: "flex-start" }}>{card.badge}</span>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>Read Article →</span>
                   </div>
                 </Link>
               ))}
@@ -431,22 +431,22 @@ export default function DietDepressionAnxietyPage() {
 
           {/* Related Ingredients */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Related Ingredients</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Related Ingredients</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 16 }}>
               {[
-                { href: "/ingredients/ashwagandha", accent: "#C4622D", label: "Adaptogen", title: "Ashwagandha", teaser: "KSM-66 evidence for cortisol reduction and anxiety relief." },
+                { href: "/ingredients/ashwagandha", accent: "#0F7A5A", label: "Adaptogen", title: "Ashwagandha", teaser: "KSM-66 evidence for cortisol reduction and anxiety relief." },
                 { href: "/ingredients/magnesium", accent: "#1A6B3A", label: "Mineral", title: "Magnesium Glycinate", teaser: "Most bioavailable form for stress and sleep support." },
                 { href: "/ingredients/l-theanine", accent: "#92620A", label: "Amino Acid", title: "L-Theanine", teaser: "Alpha-wave modulation and anxiety reduction without sedation." },
                 { href: "/ingredients/omega-3", accent: "#1A6B3A", label: "Essential Fatty Acid", title: "Omega-3 (EPA/DHA)", teaser: "EPA's role in reducing neuroinflammation and depressive symptoms." },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>View Ingredient →</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>View Ingredient →</span>
                   </div>
                 </Link>
               ))}
@@ -455,22 +455,22 @@ export default function DietDepressionAnxietyPage() {
 
           {/* Product Reviews */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Product Reviews</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Product Reviews</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
               {[
-                { href: "/reviews/wellmedr", accent: "#C4622D", label: "GLP-1 Program", title: "WellMedr Weight Management", teaser: "Clinician-supervised programme with comprehensive metabolic support.", score: "9.2" },
+                { href: "/reviews/wellmedr", accent: "#0F7A5A", label: "GLP-1 Program", title: "WellMedr Weight Management", teaser: "Clinician-supervised programme with comprehensive metabolic support.", score: "9.2" },
                 { href: "/reviews/ritual-essential-for-women", accent: "#1A6B3A", label: "Multivitamin", title: "Ritual Essential for Women", teaser: "Folate, B12, magnesium, and omega-3 in a single daily capsule.", score: "8.8" },
                 { href: "/reviews/garden-of-life-omega-3", accent: "#92620A", label: "Omega-3", title: "Garden of Life Omega-3", teaser: "Certified algal EPA+DHA with third-party purity testing.", score: "8.6" },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700 }}>FSP {card.score}/10</span>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Review →</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700 }}>FSP {card.score}/10</span>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>Read Review →</span>
                   </div>
                 </Link>
               ))}
@@ -481,10 +481,10 @@ export default function DietDepressionAnxietyPage() {
           <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 32 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 8 }}>More from the Blog</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Evidence-led articles on nutrition, supplements, and mental wellness</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 8 }}>More from the Blog</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>Evidence-led articles on nutrition, supplements, and mental wellness</p>
               </div>
-              <Link href="/blog" style={{ padding: "12px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", textDecoration: "none", borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+              <Link href="/blog" style={{ padding: "12px 24px", backgroundColor: "#0F7A5A", color: "#FFFFFF", textDecoration: "none", borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
                 Browse All Articles →
               </Link>
             </div>
@@ -492,10 +492,10 @@ export default function DietDepressionAnxietyPage() {
 
           {/* Back to Blog + topic tags */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <Link href="/blog" style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#A89880", textDecoration: "none" }}>← Back to Blog</Link>
+            <Link href="/blog" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#586259", textDecoration: "none" }}>← Back to Blog</Link>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {["Nutrition", "Mental Health", "Gut Health", "Depression", "Omega-3"].map((tag) => (
-                <span key={tag} style={{ padding: "4px 10px", border: "1px solid #D4C9B8", borderRadius: 20, fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#A89880" }}>{tag}</span>
+                <span key={tag} style={{ padding: "4px 10px", border: "1px solid #E4E8E5", borderRadius: 20, fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#586259" }}>{tag}</span>
               ))}
             </div>
           </div>

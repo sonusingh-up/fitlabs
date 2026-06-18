@@ -213,10 +213,10 @@ export default function CodeageBeefOrgansReview() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* ── Breadcrumb ─────────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             {[
               { label: "Home", href: "/" },
@@ -224,12 +224,12 @@ export default function CodeageBeefOrgansReview() {
               { label: "Organ Supplements", href: "/category/organ-supplements" },
             ].map((crumb, i, arr) => (
               <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
-                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>}
               </span>
             ))}
-            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Codeage Beef Organs</span>
+            <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Codeage Beef Organs</span>
           </div>
         </div>
 
@@ -238,41 +238,41 @@ export default function CodeageBeefOrgansReview() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
           {/* Text — center */}
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-051 · ORGAN SUPPLEMENT</span>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
-              Codeage<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Beef Organs</em>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-051 · ORGAN SUPPLEMENT</span>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+              Codeage<br /><em style={{ fontWeight: 400, color: "#586259" }}>Beef Organs</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
               <div style={{ display: "flex", gap: 4 }}>
                 {Array.from({ length: editorialScore }, (_, i) => <Star key={i} size={14} fill="#7B3B1A" color="#7B3B1A" />)}
                 {Array.from({ length: 10 - editorialScore }, (_, i) => <Star key={i} size={14} fill="none" color="#7B3B1A" />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
             </div>
           </div>
           <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
             <img src="/products/Codeage.webp" alt="Codeage Beef Organs" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #FFFFFF)" }} />
         </div>
 
         {/* ── Hero row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-051</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A" }}>Full Review · FSP Scored · Non-GMO Verified Organ Blend</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>REV-2026-051</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A" }}>Full Review · FSP Scored · Non-GMO Verified Organ Blend</span>
           </div>
           <div className="layout-hero-split">
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>
                 Codeage · Organ Supplement · 5-Organ Blend
               </p>
-              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Beef Organs — Non-GMO Certified,<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>But Sourcing Stays Hidden</em>
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43", fontSize: "0.7em" }}>But Sourcing Stays Hidden</em>
               </h2>
-              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
                 Codeage brings Non-GMO Project Verified to the organ supplement space — a legitimate third-party certification. But at $0.83/serving with no sourcing country disclosed and no heavy metal COA, the premium is hard to justify against transparent competitors.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -280,11 +280,11 @@ export default function CodeageBeefOrgansReview() {
                   href="https://amzn.to/4wUtzqk"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Buy on Amazon <ExternalLink size={13} />
                 </a>
-                <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #E4E8E5", color: "#6B7770", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                   FSP {rubric.compositeScore.toFixed(1)} → How we score
                 </Link>
               </div>
@@ -307,32 +307,32 @@ export default function CodeageBeefOrgansReview() {
 
         {/* ── Author box ─────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#FFFFFF" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
-              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 2 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Written & Reviewed By</p>
+              <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 Fitlab Research Team
-                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
+                <span style={{ fontWeight: 400, color: "#6B7770", fontSize: 12 }}> · Fitlabreviews Editorial</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+              <p style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>
                 Organ supplement research · Supply chain transparency analysis · USDA FDC nutrient data
               </p>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Research Review</span>
-              <span style={{ padding: "3px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Evidence-Led</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Research Review</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Evidence-Led</span>
             </div>
           </div>
         </div>
 
         {/* ── Affiliate notice ───────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-sans), sans-serif" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: the Amazon link above may earn us a commission at no extra cost to you. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#7B3B1A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -340,7 +340,7 @@ export default function CodeageBeefOrgansReview() {
         </div>
 
         {/* Mobile TOC */}
-        <div className="block lg:hidden" style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 16 }}>
+        <div className="block lg:hidden" style={{ borderTop: "1px solid #E4E8E5", borderBottom: "1px solid #E4E8E5", marginTop: 16 }}>
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
@@ -351,7 +351,7 @@ export default function CodeageBeefOrgansReview() {
           <div className="layout-sidebar">
 
             {/* Desktop TOC */}
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
@@ -361,7 +361,7 @@ export default function CodeageBeefOrgansReview() {
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "24px 28px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Quick Verdict · REV-2026-051</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Quick Verdict · REV-2026-051</p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
                     Codeage Beef Organs is a mid-tier option in a competitive category. The Non-GMO Project Verified certification is legitimate, the 5-organ blend covers the right tissues, and 4 capsules is a genuine usability improvement over the 6-capsule competitors. The formula design is sound.
                   </p>
@@ -378,10 +378,10 @@ export default function CodeageBeefOrgansReview() {
                     { label: "Value", value: "6.5 / 10", sub: "$0.83 hard to justify" },
                     { label: "Practical", value: "8.0 / 10", sub: "4 caps, easy to split" },
                   ].map((s) => (
-                    <div key={s.label} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", border: "1px solid #EDE8DF", borderRadius: 8 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{s.value}</p>
-                      <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
+                    <div key={s.label} style={{ padding: "16px 18px", backgroundColor: "#F6F8F6", border: "1px solid #F2F8F4", borderRadius: 8 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{s.label}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#7B3B1A", marginBottom: 4 }}>{s.value}</p>
+                      <p style={{ fontSize: 11, color: "#6B7770" }}>{s.sub}</p>
                     </div>
                   ))}
                 </div>
@@ -389,7 +389,7 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── NON-GMO IN CONTEXT ─────────────────────────────────────── */}
               <section id="why-nongmo" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Non-GMO Verified — What It Actually Means</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Non-GMO Verified — What It Actually Means</h2>
 
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
                   Non-GMO Project Verified is a legitimate third-party certification from the Non-GMO Project, a US non-profit. It requires supply chain audits and product testing to confirm the absence of genetically modified organisms in the ingredients. For an organ supplement, this primarily means the cattle were not fed genetically modified grains — a meaningful distinction for buyers concerned about GMO exposure.
@@ -399,9 +399,9 @@ export default function CodeageBeefOrgansReview() {
                   Codeage is one of the few organ supplement brands to obtain this certification. The butterfly seal on the label is batch-verifiable at nongmoproject.org. That&apos;s a genuine differentiator. The reason it earns a 7 rather than a 9 is not the certification itself — it is what the certification does not cover: sourcing country, heavy metal testing, or organ potency.
                 </p>
 
-                <div style={{ padding: "18px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF", borderLeft: "3px solid #7B3B1A" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>The certification gap</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                <div style={{ padding: "18px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F2F8F4", borderLeft: "3px solid #7B3B1A" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>The certification gap</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                     Non-GMO Verified tells you the cattle were not fed GMO feed. It does not tell you where the cattle were raised, whether they were grass-finished or grain-finished at slaughter, or whether the organs have been tested for lead, cadmium, or arsenic. For those questions, you need country of origin disclosure and a heavy metal COA — neither of which Codeage provides publicly.
                   </p>
                 </div>
@@ -409,9 +409,9 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── SCORE BREAKDOWN ────────────────────────────────────────── */}
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FSP Score Breakdown</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FSP Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-051" />
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 12 }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 12 }}>
                   FSP v2.1 composite: {composite.toFixed(2)}/10 → editorial score: {editorialScore}/10.
                   Weighting: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%.
                 </p>
@@ -419,26 +419,26 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── FLAGS ──────────────────────────────────────────────────── */}
               <section id="flags" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* ─── SUPPLEMENT FACTS ───────────────────────────────────────── */}
               <section id="supplement-facts" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
 
-                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   <div style={{ padding: "16px 20px", backgroundColor: "#1A1714", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>Supplement Facts</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", color: "#A89880" }}>Serving size: 4 capsules · Servings per container: 60</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 4 }}>Supplement Facts</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", color: "#586259" }}>Serving size: 4 capsules · Servings per container: 60</p>
                     </div>
                   </div>
 
-                  <div style={{ padding: "0 20px", backgroundColor: "#F8F2E4" }}>
-                    <div style={{ padding: "12px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
-                      <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>Proprietary Blend (Beef Organs)</span>
-                      <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-dm-mono), monospace" }}>3,000mg</span>
+                  <div style={{ padding: "0 20px", backgroundColor: "#F6F8F6" }}>
+                    <div style={{ padding: "12px 0", borderBottom: "1px solid #F2F8F4", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>Proprietary Blend (Beef Organs)</span>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-jetbrains), monospace" }}>3,000mg</span>
                     </div>
                     {[
                       ["Beef Liver", "Included"],
@@ -447,20 +447,20 @@ export default function CodeageBeefOrgansReview() {
                       ["Beef Spleen", "Included"],
                       ["Beef Pancreas", "Included"],
                     ].map(([organ, status], i, arr) => (
-                      <div key={organ} style={{ padding: "8px 0 8px 16px", borderBottom: i < arr.length - 1 ? "1px solid #EDE8DF" : "none", display: "flex", justifyContent: "space-between" }}>
-                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>{organ}</span>
-                        <span style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{status} (dose undisclosed)</span>
+                      <div key={organ} style={{ padding: "8px 0 8px 16px", borderBottom: i < arr.length - 1 ? "1px solid #F2F8F4" : "none", display: "flex", justifyContent: "space-between" }}>
+                        <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>{organ}</span>
+                        <span style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>{status} (dose undisclosed)</span>
                       </div>
                     ))}
-                    <div style={{ padding: "8px 0", borderTop: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
-                      <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-sans), sans-serif" }}>Other ingredients</span>
-                      <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 700 }}>Bovine gelatin (capsule)</span>
+                    <div style={{ padding: "8px 0", borderTop: "1px solid #F2F8F4", display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>Other ingredients</span>
+                      <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 700 }}>Bovine gelatin (capsule)</span>
                     </div>
                   </div>
 
-                  <div style={{ padding: "12px 20px", backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8" }}>
-                    <p style={{ fontSize: 11, color: "#8A8480", lineHeight: 1.6 }}>
-                      <strong style={{ color: "#5C5650" }}>Proprietary blend limitation:</strong> Individual organ doses are not disclosed. This means you cannot calculate your retinol intake from the liver fraction specifically. For safety-conscious buyers — particularly those tracking Vitamin A from multiple sources — this is a material transparency gap.
+                  <div style={{ padding: "12px 20px", backgroundColor: "#F2F8F4", borderTop: "1px solid #E4E8E5" }}>
+                    <p style={{ fontSize: 11, color: "#6B7770", lineHeight: 1.6 }}>
+                      <strong style={{ color: "#3F4B43" }}>Proprietary blend limitation:</strong> Individual organ doses are not disclosed. This means you cannot calculate your retinol intake from the liver fraction specifically. For safety-conscious buyers — particularly those tracking Vitamin A from multiple sources — this is a material transparency gap.
                     </p>
                   </div>
                 </div>
@@ -468,10 +468,10 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── KEY NUTRIENTS ──────────────────────────────────────────── */}
               <section id="nutrients" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Key Nutrients — What the 5-Organ Blend Provides</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Estimated values for a 5-organ blend at 3,000mg total. Based on USDA FDC organ composition data — exact organ doses not disclosed by Codeage.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Key Nutrients — What the 5-Organ Blend Provides</h2>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>Estimated values for a 5-organ blend at 3,000mg total. Based on USDA FDC organ composition data — exact organ doses not disclosed by Codeage.</p>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { nutrient: "Retinol (Vitamin A)", source: "Beef liver", evidence: "strong" as EvidenceLevel, note: "The dominant nutrient concern in any liver-containing product. Without knowing the liver fraction dose, exact intake cannot be calculated. Estimated range: 400–1,800 mcg RAE depending on blend ratio." },
                     { nutrient: "Vitamin B12", source: "Liver, kidney", evidence: "strong" as EvidenceLevel, note: "Liver and kidney are the richest dietary B12 sources. A multi-organ blend at 3g delivers a meaningful B12 contribution, though less than a pure liver supplement." },
@@ -481,26 +481,26 @@ export default function CodeageBeefOrgansReview() {
                     { nutrient: "Digestive Enzymes", source: "Beef pancreas", evidence: "moderate" as EvidenceLevel, note: "Pancreas contributes amylase, lipase, and protease — the same enzymes used in pancreatic enzyme replacement therapy. Whether supplemental doses in 3g of mixed organ meat provide clinically meaningful enzyme activity is unproven." },
                     { nutrient: "Zinc", source: "Multiple organs", evidence: "strong" as EvidenceLevel, note: "Multiple organ tissues contribute zinc. Heart, kidney, and liver all provide meaningful zinc concentrations. Relevant for immune function, testosterone synthesis, and wound healing." },
                   ].map((row, i) => (
-                    <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "160px 1fr", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: i < 6 ? "1px solid #EDE8DF" : "none" }}>
-                      <div style={{ padding: "14px 16px", borderRight: "1px solid #EDE8DF" }}>
-                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 4 }}>{row.nutrient}</p>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>Source: {row.source}</p>
+                    <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "160px 1fr", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: i < 6 ? "1px solid #F2F8F4" : "none" }}>
+                      <div style={{ padding: "14px 16px", borderRight: "1px solid #F2F8F4" }}>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 4 }}>{row.nutrient}</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>Source: {row.source}</p>
                         <div style={{ marginTop: 6 }}>
                           <EvidenceBadge level={row.evidence} showIcon={false} />
                         </div>
                       </div>
                       <div style={{ padding: "14px 16px" }}>
-                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{row.note}</p>
+                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{row.note}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#8A8480", marginTop: 8 }}>Estimates based on USDA FDC organ composition data. Actual values vary by batch and organ dose ratio. Codeage does not disclose individual organ weights.</p>
+                <p style={{ fontSize: 11, color: "#6B7770", marginTop: 8 }}>Estimates based on USDA FDC organ composition data. Actual values vary by batch and organ dose ratio. Codeage does not disclose individual organ weights.</p>
               </section>
 
               {/* ─── SOURCING & CERTIFICATIONS ──────────────────────────────── */}
               <section id="sourcing" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Sourcing & Certifications</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Sourcing & Certifications</h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {[
@@ -517,9 +517,9 @@ export default function CodeageBeefOrgansReview() {
                       body: "Non-GMO certification does not verify: country of origin, grass-finishing practices, antibiotic or hormone use, heavy metal contamination levels, or organ potency. For buyers who specifically want Non-GMO Verified, Codeage delivers. For buyers who want full supply chain transparency, the certification scope is too narrow at this price point.",
                     },
                   ].map((item) => (
-                    <div key={item.title} style={{ padding: "18px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 8 }}>{item.title}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.body}</p>
+                    <div key={item.title} style={{ padding: "18px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 8 }}>{item.title}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.body}</p>
                     </div>
                   ))}
                 </div>
@@ -527,8 +527,8 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── LAB & VERIFICATION ─────────────────────────────────────── */}
               <section id="lab-data" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Data & Verification</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>For organ supplements, heavy metal testing is the critical verification requirement. Liver and kidney concentrate environmental contaminants — published COA data is a basic safety expectation.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Data & Verification</h2>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>For organ supplements, heavy metal testing is the critical verification requirement. Liver and kidney concentrate environmental contaminants — published COA data is a basic safety expectation.</p>
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
@@ -537,21 +537,21 @@ export default function CodeageBeefOrgansReview() {
                     { test: "Cadmium (Cd)", status: "Not published", result: "No COA available", icon: "✗", color: "#8B3A2C", bg: "#F5E8E8" },
                     { test: "Arsenic (As)", status: "Not published", result: "No COA available", icon: "✗", color: "#8B3A2C", bg: "#F5E8E8" },
                     { test: "Gluten-Free", status: "Self-declared", result: "No third-party cert", icon: "~", color: "#8B7355", bg: "#F5EEE5" },
-                    { test: "Informed Sport", status: "N/A", result: "Not certified", icon: "○", color: "#8A8480", bg: "#EDE8DF" },
+                    { test: "Informed Sport", status: "N/A", result: "Not certified", icon: "○", color: "#6B7770", bg: "#F2F8F4" },
                   ].map((cert) => (
                     <div key={cert.test} style={{ padding: "16px", border: `1px solid ${cert.color}33`, borderRadius: 10, backgroundColor: cert.bg }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                        <span style={{ width: 20, height: 20, borderRadius: "50%", backgroundColor: cert.bg, border: `1px solid ${cert.color}44`, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: cert.color, fontFamily: "var(--font-dm-mono), monospace" }}>{cert.icon}</span>
-                        <span style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{cert.test}</span>
+                        <span style={{ width: 20, height: 20, borderRadius: "50%", backgroundColor: cert.bg, border: `1px solid ${cert.color}44`, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: cert.color, fontFamily: "var(--font-jetbrains), monospace" }}>{cert.icon}</span>
+                        <span style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{cert.test}</span>
                       </div>
-                      <p style={{ fontSize: 11, color: cert.color, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", marginBottom: 4, fontWeight: 700 }}>{cert.status}</p>
-                      <p style={{ fontSize: 11, color: "#5C5650" }}>{cert.result}</p>
+                      <p style={{ fontSize: 11, color: cert.color, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em", marginBottom: 4, fontWeight: 700 }}>{cert.status}</p>
+                      <p style={{ fontSize: 11, color: "#3F4B43" }}>{cert.result}</p>
                     </div>
                   ))}
                 </div>
 
-                <div style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF" }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                <div style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F2F8F4" }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                     <strong>Comparison:</strong> Ancestral Supplements provides heavy metal COA on request (lead, cadmium, arsenic, mercury). Heart & Soil lists Informed Sport certification. Codeage&apos;s only third-party verification is Non-GMO Project — which does not test for heavy metals. For organ supplements where liver and kidney concentrate environmental contaminants, this gap is the most significant safety concern in the review.
                   </p>
                 </div>
@@ -559,13 +559,13 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── CLAIM AUDIT ────────────────────────────────────────────── */}
               <section id="claim-audit" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Marketing Claim Audit</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Marketing Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* ─── HOW TO TAKE IT ─────────────────────────────────────────── */}
               <section id="how-to-take" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
@@ -586,9 +586,9 @@ export default function CodeageBeefOrgansReview() {
                       a: "Because individual organ doses are not disclosed, you cannot calculate exact retinol intake from this product. If you also take a multivitamin with Vitamin A, eat liver or fortified foods regularly, or take cod liver oil, track your total retinol intake from all sources against the 3,000 mcg RAE/day tolerable upper limit.",
                     },
                   ].map((item, i) => (
-                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 6 }}>{item.q}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.a}</p>
+                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 6 }}>{item.q}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.a}</p>
                     </div>
                   ))}
                 </div>
@@ -596,14 +596,14 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Codeage competes directly with Left Coast Performance on the multi-organ value tier and with Ancestral Supplements and Heart & Soil on the premium tier. At $0.83/serving it falls uncomfortably between both.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>Codeage competes directly with Left Coast Performance on the multi-organ value tier and with Ancestral Supplements and Heart & Soil on the premium tier. At $0.83/serving it falls uncomfortably between both.</p>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         {["Brand", "Price/Serving", "Organs", "Sourcing", "Certification", "Score"].map((h, i) => (
-                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 0 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
+                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 0 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 5 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -615,27 +615,27 @@ export default function CodeageBeefOrgansReview() {
                         { brand: "Ancestral Supplements", price: "$1.50", organs: "1 (liver)", sourcing: "NZ traceable", cert: "Heavy metal COA", score: "8/10", current: false },
                         { brand: "Heart & Soil", price: "$1.83", organs: "5+", sourcing: "US Regenerative", cert: "Informed Sport", score: "9/10", current: false },
                       ].map((row, i) => (
-                        <tr key={row.brand} style={{ backgroundColor: row.current ? "#FFF8F5" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: row.current ? "#7B3B1A" : "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: "1px solid #EDE8DF", fontWeight: row.current ? 700 : 400, whiteSpace: "nowrap" }}>{row.brand}</td>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.price}</td>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: "1px solid #EDE8DF" }}>{row.organs}</td>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: "1px solid #EDE8DF" }}>{row.sourcing}</td>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif", borderRight: "1px solid #EDE8DF" }}>{row.cert}</td>
-                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-sans), sans-serif" }}>{row.score}</td>
+                        <tr key={row.brand} style={{ backgroundColor: row.current ? "#FFF8F5" : i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: row.current ? "#7B3B1A" : "#1A1714", fontFamily: "var(--font-hanken), sans-serif", borderRight: "1px solid #F2F8F4", fontWeight: row.current ? 700 : 400, whiteSpace: "nowrap" }}>{row.brand}</td>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: "1px solid #F2F8F4", whiteSpace: "nowrap" }}>{row.price}</td>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: "1px solid #F2F8F4" }}>{row.organs}</td>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: "1px solid #F2F8F4" }}>{row.sourcing}</td>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: "1px solid #F2F8F4" }}>{row.cert}</td>
+                          <td style={{ padding: "9px 14px", fontSize: 12, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.score}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10 }}>
                   Prices verified May 2026 on Amazon US. Competitor data based on published label and website information.
                 </p>
               </section>
 
               {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Buy cards for the main organ supplements in this comparison — prices verified May 2026.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>Buy cards for the main organ supplements in this comparison — prices verified May 2026.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
                   <ProductCard
                     name="Beef Organs"
@@ -689,7 +689,7 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── PROS / CONS ────────────────────────────────────────────── */}
               <section id="pros-cons" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={[
                     "Non-GMO Project Verified — legitimate third-party certification, batch-traceable",
@@ -708,8 +708,8 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── SAFETY NOTES ───────────────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Safety Notes</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The proprietary blend makes safety tracking harder for Codeage than for single-ingredient or fully disclosed multi-organ supplements.</p>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Safety Notes</h2>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>The proprietary blend makes safety tracking harder for Codeage than for single-ingredient or fully disclosed multi-organ supplements.</p>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
@@ -730,9 +730,9 @@ export default function CodeageBeefOrgansReview() {
                       body: "Multi-organ blends with spleen and liver provide meaningful heme iron. Individuals with hemochromatosis or elevated ferritin should avoid regular organ supplement use or consult a physician. For healthy adults, dietary iron from organ supplements is safe within normal ranges.",
                     },
                   ].map((item, i) => (
-                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif", marginBottom: 6 }}>{item.title}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.body}</p>
+                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 6 }}>{item.title}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.body}</p>
                     </div>
                   ))}
                 </div>
@@ -740,7 +740,7 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── PRICE & VALUE ──────────────────────────────────────────── */}
               <section id="value" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="mixed organ blend" />
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: 12, marginTop: 20 }}>
@@ -750,19 +750,19 @@ export default function CodeageBeefOrgansReview() {
                     { size: "vs Left Coast", usd: "$0.83 vs $0.39", note: "More than 2× per serving" },
                     { size: "vs Ancestral", usd: "$0.83 vs $1.50", note: "Mid-tier with less transparency" },
                   ].map((p) => (
-                    <div key={p.size} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{p.size}</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{p.usd}</p>
-                      <p style={{ fontSize: 11, color: "#8A8480" }}>{p.note}</p>
+                    <div key={p.size} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{p.size}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{p.usd}</p>
+                      <p style={{ fontSize: 11, color: "#6B7770" }}>{p.note}</p>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Prices verified May 2026 on Amazon US. Subscribe & Save availability varies — check current discount at time of purchase.</p>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10 }}>Prices verified May 2026 on Amazon US. Subscribe & Save availability varies — check current discount at time of purchase.</p>
               </section>
 
               {/* ─── WHERE TO BUY ───────────────────────────────────────────── */}
               <section id="where-to-buy" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
@@ -781,17 +781,17 @@ export default function CodeageBeefOrgansReview() {
                       url: "https://www.codeage.com",
                     },
                   ].map((channel) => (
-                    <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F8F2E4", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+                    <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#E4E8E5"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F6F8F6", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
                       <div style={{ flex: 1, minWidth: 200 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                          <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-sans), sans-serif" }}>{channel.channel}</p>
-                          {channel.recommended && <span style={{ padding: "1px 7px", backgroundColor: "#2D6A4F", borderRadius: 4, fontSize: 8, color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>Recommended</span>}
+                          <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{channel.channel}</p>
+                          {channel.recommended && <span style={{ padding: "1px 7px", backgroundColor: "#2D6A4F", borderRadius: 4, fontSize: 8, color: "#FFFFFF", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>Recommended</span>}
                         </div>
-                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{channel.notes}</p>
+                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{channel.notes}</p>
                       </div>
                       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8, flexShrink: 0 }}>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714" }}>{channel.price}</p>
-                        <a href={channel.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "6px 12px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                        <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714" }}>{channel.price}</p>
+                        <a href={channel.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "6px 12px", backgroundColor: "#1A1714", color: "#FFFFFF", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                           Shop Now <ExternalLink size={10} />
                         </a>
                       </div>
@@ -802,10 +802,10 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
+                <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                       <summary>{faq.name}</summary>
                       <p className="faq-answer">{faq.acceptedAnswer.text}</p>
                     </details>
@@ -816,10 +816,10 @@ export default function CodeageBeefOrgansReview() {
               {/* ─── FINAL VERDICT ──────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 16 }}>Final Verdict · REV-2026-051</p>
-                  <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 16 }}>Final Verdict · REV-2026-051</p>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Competent formula. Questionable value.{" "}
-                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>Transparency doesn&apos;t match the price.</em>
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>Transparency doesn&apos;t match the price.</em>
                   </h2>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
                     Codeage Beef Organs is a competent product held back by sourcing opacity at a price that invites direct comparison to superior alternatives. The Non-GMO Verified certification is genuine, the 4-capsule serving is the category&apos;s lowest pill burden, and the 5-organ formula covers the right tissues. The product does what it says.
@@ -832,14 +832,14 @@ export default function CodeageBeefOrgansReview() {
                   </p>
                   <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#7B3B1A", lineHeight: 1 }}>{editorialScore}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#5C5650" }}>/10</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#7B3B1A", lineHeight: 1 }}>{editorialScore}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, color: "#3F4B43" }}>/10</span>
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
-                      <p style={{ fontSize: 12, color: "#8A8480" }}>Non-GMO certified. Sourcing opacity. Mid-tier value.</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3F4B43" }}>FSP Editorial Score</p>
+                      <p style={{ fontSize: 12, color: "#6B7770" }}>Non-GMO certified. Sourcing opacity. Mid-tier value.</p>
                     </div>
-                    <a href="https://amzn.to/4wUtzqk" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", textDecoration: "none" }}>
+                    <a href="https://amzn.to/4wUtzqk" target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       Buy on Amazon <ExternalLink size={12} />
                     </a>
                   </div>
@@ -848,8 +848,8 @@ export default function CodeageBeefOrgansReview() {
 
               {/* ─── RESEARCH REFERENCES ────────────────────────────────────── */}
               <section style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
-                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
+                <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
                       "USDA FoodData Central — Beef organ composition data (liver, heart, kidney, spleen, pancreas). fdc.nal.usda.gov. Nutrient data used as basis for per-serving estimates.",
@@ -859,7 +859,7 @@ export default function CodeageBeefOrgansReview() {
                       "Rayman MP. Selenium and human health. Lancet. 2012;379(9822):1256–68. Selenium deficiency, kidney as dietary source.",
                       "Prasad AS. Zinc in human health: effect of zinc on immune cells. Mol Med. 2008;14(5–6):353–7. Zinc functions and organ supplement relevance.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-dm-sans), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-jetbrains), monospace" }}>↗</a></li>
                     ))}
                   </ol>
                 </div>
@@ -871,14 +871,14 @@ export default function CodeageBeefOrgansReview() {
 
         {/* ── Related Reviews ────────────────────────────────────────────────── */}
         {relatedReviews.length > 0 && (
-          <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+          <section style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="pad-section-sm px-page">
             <div style={{ maxWidth: 1280, margin: "0 auto" }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
-                  <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>Better Value & Better Transparency</h3>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Related Reviews</p>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>Better Value & Better Transparency</h3>
                 </div>
-                <Link href="/reviews" style={{ fontSize: 12, color: "#7B3B1A", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+                <Link href="/reviews" style={{ fontSize: 12, color: "#7B3B1A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                 {relatedReviews.map((r) => (

@@ -39,10 +39,10 @@ export default function ArraeFAQ() {
           <div
             key={i}
             style={{
-              border: `1px solid ${isOpen ? "#C4C0B4" : "#D4C9B8"}`,
+              border: `1px solid ${isOpen ? "#C4C0B4" : "#E4E8E5"}`,
               borderRadius: 10,
               overflow: "hidden",
-              backgroundColor: "#F8F2E4",
+              backgroundColor: "#F6F8F6",
               transition: "border-color 0.15s",
             }}
           >
@@ -61,7 +61,7 @@ export default function ArraeFAQ() {
                 border: "none",
                 cursor: "pointer",
                 textAlign: "left",
-                borderBottom: isOpen ? "1px solid #EDE8DF" : "none",
+                borderBottom: isOpen ? "1px solid #F2F8F4" : "none",
               }}
             >
               <span
@@ -69,7 +69,7 @@ export default function ArraeFAQ() {
                   fontFamily: "var(--font-playfair), Georgia, serif",
                   fontSize: "0.975rem",
                   fontWeight: 700,
-                  color: "#1A1714",
+                  color: "#17211C",
                   lineHeight: 1.4,
                   letterSpacing: "-0.01em",
                 }}
@@ -85,12 +85,12 @@ export default function ArraeFAQ() {
                   width: 22,
                   height: 22,
                   borderRadius: "50%",
-                  border: "1px solid #D4C9B8",
+                  border: "1px solid #E4E8E5",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   marginTop: 2,
-                  backgroundColor: isOpen ? "#1A1714" : "#EDE8DF",
+                  backgroundColor: isOpen ? "#17211C" : "#F2F8F4",
                   transition: "background 0.15s, border-color 0.15s",
                 }}
               >
@@ -106,7 +106,7 @@ export default function ArraeFAQ() {
                 >
                   <path
                     d="M5 1V9M1 5H9"
-                    stroke={isOpen ? "#F2EBD9" : "#5C5650"}
+                    stroke={isOpen ? "#FFFFFF" : "#3F4B43"}
                     strokeWidth="1.4"
                     strokeLinecap="round"
                   />
@@ -120,7 +120,7 @@ export default function ArraeFAQ() {
                 <p
                   style={{
                     fontSize: 14,
-                    color: "#5C5650",
+                    color: "#3F4B43",
                     lineHeight: 1.78,
                     margin: 0,
                   }}

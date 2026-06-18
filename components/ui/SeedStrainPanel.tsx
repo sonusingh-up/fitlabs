@@ -61,7 +61,7 @@ export default function SeedStrainPanel({
         <div>
           <p
             style={{
-              fontFamily: "var(--font-dm-mono), monospace",
+              fontFamily: "var(--font-jetbrains), monospace",
               fontSize: 9,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
@@ -110,7 +110,7 @@ export default function SeedStrainPanel({
             </p>
             <p
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 9,
                 letterSpacing: "0.12em",
                 textTransform: "uppercase",
@@ -157,7 +157,7 @@ export default function SeedStrainPanel({
             >
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 9,
                   letterSpacing: "0.12em",
                   textTransform: "uppercase",
@@ -171,7 +171,7 @@ export default function SeedStrainPanel({
               </p>
               <span
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 9,
                   color: SEED.darkCaption,
                   whiteSpace: "nowrap",

@@ -21,10 +21,10 @@ export default function ArraeMobileTOC() {
       aria-label="Page sections"
       style={{
         margin: "0 0 8px",
-        border: "1px solid #D4C9B8",
+        border: "1px solid #E4E8E5",
         borderRadius: 10,
         overflow: "hidden",
-        backgroundColor: "#F8F2E4",
+        backgroundColor: "#F6F8F6",
       }}
     >
       {/* Toggle button */}
@@ -40,16 +40,16 @@ export default function ArraeMobileTOC() {
           background: "none",
           border: "none",
           cursor: "pointer",
-          borderBottom: open ? "1px solid #D4C9B8" : "none",
+          borderBottom: open ? "1px solid #E4E8E5" : "none",
         }}
       >
         <span
           style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-jetbrains), monospace",
             fontSize: 10,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#5C5650",
+            color: "#3F4B43",
           }}
         >
           On this page
@@ -68,7 +68,7 @@ export default function ArraeMobileTOC() {
         >
           <path
             d="M2.5 5L7 9.5L11.5 5"
-            stroke="#8A8480"
+            stroke="#6B7770"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -90,29 +90,29 @@ export default function ArraeMobileTOC() {
                   gap: 10,
                   padding: "10px 16px",
                   fontSize: 13,
-                  color: "#5C5650",
+                  color: "#3F4B43",
                   textDecoration: "none",
                   borderLeft: "2px solid transparent",
                   transition: "color 0.12s, border-color 0.12s, background 0.12s",
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.color = "#C4622D";
-                  el.style.borderLeftColor = "#C4622D";
-                  el.style.backgroundColor = "#EDE8DF";
+                  el.style.color = "#0F7A5A";
+                  el.style.borderLeftColor = "#0F7A5A";
+                  el.style.backgroundColor = "#F2F8F4";
                 }}
                 onMouseLeave={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.color = "#5C5650";
+                  el.style.color = "#3F4B43";
                   el.style.borderLeftColor = "transparent";
                   el.style.backgroundColor = "transparent";
                 }}
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
+                    fontFamily: "var(--font-jetbrains), monospace",
                     fontSize: 9,
-                    color: "#A89880",
+                    color: "#586259",
                     letterSpacing: "0.1em",
                     flexShrink: 0,
                   }}

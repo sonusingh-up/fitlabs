@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 
 interface Props { tdee: number; animDelay: number; }
@@ -128,15 +128,15 @@ export default function MealContext({ tdee, animDelay }: Props) {
 
   return (
     <div style={{ opacity:0, animation:`slideUp 250ms ${animDelay}ms ease-out forwards` }}>
-      <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
+      <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
 
         {/* Header row */}
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", flexWrap:"wrap", gap:12, marginBottom:16 }}>
           <div>
-            <div style={{ fontSize:11, fontWeight:700, color:"#6B7280", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>
+            <div style={{ fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:4 }}>
               What This Looks Like in a Day
             </div>
-            <h2 style={{ fontFamily:"var(--font-playfair),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:0 }}>
+            <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#17211C", marginBottom:0 }}>
               {region.flag} {region.name} meal pattern
             </h2>
           </div>
@@ -146,9 +146,9 @@ export default function MealContext({ tdee, animDelay }: Props) {
             value={regionKey}
             onChange={e => setRegionKey(e.target.value)}
             style={{
-              padding:"8px 12px", borderRadius:8, border:"1px solid #D4C9B8",
-              background:"#FDFAF4", color:"#1A1714", fontSize:13, fontWeight:500,
-              fontFamily:"var(--font-dm-sans),sans-serif", cursor:"pointer",
+              padding:"8px 12px", borderRadius:8, border:"1px solid #E4E8E5",
+              background:"#FDFAF4", color:"#17211C", fontSize:13, fontWeight:500,
+              fontFamily:"var(--font-hanken),sans-serif", cursor:"pointer",
               flexShrink:0,
             }}
           >
@@ -158,30 +158,30 @@ export default function MealContext({ tdee, animDelay }: Props) {
           </select>
         </div>
 
-        <p style={{ fontSize:13, color:"#6B7280", marginBottom:16 }}>
+        <p style={{ fontSize:13, color:"#586259", marginBottom:16 }}>
           Your <strong>{tdee.toLocaleString()} kcal</strong> TDEE distributed across a typical {region.name} day:
         </p>
 
         {/* Meal rows */}
-        <div style={{ border:"1px solid #D4C9B8", borderRadius:12, overflow:"hidden", marginBottom:14 }}>
+        <div style={{ border:"1px solid #E4E8E5", borderRadius:12, overflow:"hidden", marginBottom:14 }}>
           {region.meals.map((m, i) => {
             const kcal = Math.round(tdee * m.pct);
             const barPct = m.pct * 100;
             return (
               <div key={m.meal} className="meal-context-row" style={{
                 padding:"14px 16px",
-                borderBottom: i < region.meals.length - 1 ? "1px solid #EDE8DF" : "none",
+                borderBottom: i < region.meals.length - 1 ? "1px solid #F2F8F4" : "none",
                 background: i % 2 === 0 ? "#FDFAF4" : "#fff",
               }}>
                 <div className="meal-meta">
-                  <div style={{ fontSize:12, fontWeight:700, color:"#1A1714" }}>{m.meal}</div>
-                  <div className="meal-bar-container" style={{ height:5, background:"#EDE8DF", borderRadius:20, marginTop:5, overflow:"hidden" }}>
-                    <div style={{ width:`${barPct * 2.8}%`, height:"100%", background:"#C4622D", borderRadius:20 }} />
+                  <div style={{ fontSize:12, fontWeight:700, color:"#17211C" }}>{m.meal}</div>
+                  <div className="meal-bar-container" style={{ height:5, background:"#F2F8F4", borderRadius:20, marginTop:5, overflow:"hidden" }}>
+                    <div style={{ width:`${barPct * 2.8}%`, height:"100%", background:"#0F7A5A", borderRadius:20 }} />
                   </div>
-                  <div className="meal-pct" style={{ fontSize:10, color:"#8A8480", marginTop:3 }}>~{Math.round(m.pct*100)}%</div>
+                  <div className="meal-pct" style={{ fontSize:10, color:"#6B7770", marginTop:3 }}>~{Math.round(m.pct*100)}%</div>
                 </div>
-                <div className="meal-foods" style={{ fontSize:12, color:"#5C5650", lineHeight:1.5 }}>{m.foods}</div>
-                <div className="meal-kcal" style={{ fontSize:14, fontWeight:700, color:"#C4622D", fontVariantNumeric:"tabular-nums", whiteSpace:"nowrap" }}>
+                <div className="meal-foods" style={{ fontSize:12, color:"#3F4B43", lineHeight:1.5 }}>{m.foods}</div>
+                <div className="meal-kcal" style={{ fontSize:14, fontWeight:700, color:"#0F7A5A", fontVariantNumeric:"tabular-nums", whiteSpace:"nowrap" }}>
                   {kcal.toLocaleString()} kcal
                 </div>
               </div>
@@ -191,8 +191,8 @@ export default function MealContext({ tdee, animDelay }: Props) {
 
         {/* Region note + disclaimer */}
         <div style={{ display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:8 }}>
-          <p style={{ fontSize:11, color:"#8A8480", margin:0 }}>{region.note}</p>
-          <p style={{ fontSize:11, color:"#8A8480", margin:0 }}>Approximate values. Portions and preparation vary.</p>
+          <p style={{ fontSize:11, color:"#6B7770", margin:0 }}>{region.note}</p>
+          <p style={{ fontSize:11, color:"#6B7770", margin:0 }}>Approximate values. Portions and preparation vary.</p>
         </div>
       </div>
     </div>

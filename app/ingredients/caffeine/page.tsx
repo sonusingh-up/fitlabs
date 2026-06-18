@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -194,35 +194,35 @@ export default function CaffeinePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/ingredients" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Ingredients</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Caffeine</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/ingredients" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Ingredients</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Caffeine</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 900, margin: "0 auto" }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>ING-005</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Ingredient Research Profile</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>ING-005</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Ingredient Research Profile</span>
             </div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Stimulants & Focus · Performance</p>
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 8, textTransform: "uppercase" }}>Stimulants & Focus · Performance</p>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
               Caffeine: Benefits,<br />Dosage & Side Effects
             </h1>
             <div style={{ marginBottom: 20 }}>
               <EvidenceBadge level="strong" />
             </div>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
               Caffeine is the most widely consumed psychoactive substance globally and the most thoroughly researched legal ergogenic aid in sport. Over 500 studies confirm improvements in endurance, strength, power output, and cognitive performance — with consistent effects across virtually every sport modality tested.
             </p>
           </div>
@@ -239,25 +239,25 @@ export default function CaffeinePage() {
                 { label: "Half-Life", value: "4–6 hours", sub: "varies by CYP1A2 genotype" },
                 { label: "Best Form", value: "Anhydrous", sub: "precise dose, most studied" },
               ].map((s) => (
-                <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{s.value}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{s.sub}</p>
+                <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{s.label}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#17211C", marginBottom: 2 }}>{s.value}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{s.sub}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Medical disclaimer */}
-          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
+          <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
             <AlertTriangle size={14} style={{ color: "#8B7355", flexShrink: 0, marginTop: 2 }} />
-            <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>
+            <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>
               This profile is for informational purposes only. Caffeine is contraindicated at supplement doses during pregnancy and should be used cautiously in those with anxiety disorders, arrhythmia, or hypertension. Consult a healthcare professional if in doubt.
             </p>
           </div>
 
           {/* § 1 — What Is Caffeine */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 01" figure="§ 01" title="What Is" titleItalic="Caffeine?" size="sm" />
             <p>
               Caffeine (1,3,7-trimethylxanthine) is a naturally occurring purine alkaloid found in the seeds, leaves, and fruits of over 60 plant species. Coffee beans (<em>Coffea arabica</em>, ~1.2% caffeine by dry weight), tea leaves (<em>Camellia sinensis</em>, ~2.5%), guarana seeds (~3.6–5.8%), and cacao pods (~0.1–0.5%) are the primary dietary sources. Synthetic caffeine — chemically identical to plant-derived caffeine — is used in most supplements and pharmaceuticals.
@@ -271,15 +271,15 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 2 — How It Works */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 02" figure="§ 02" title="How It Works:" titleItalic="The Science" size="sm" />
             <p>
               Caffeine's primary mechanism is <strong>competitive antagonism of adenosine receptors</strong> — particularly the A1 and A2A subtypes — in the central and peripheral nervous system. Adenosine is an inhibitory neuromodulator that accumulates during wakefulness and promotes fatigue and sleep propensity. By blocking adenosine, caffeine removes this physiological brake on neural activity.
             </p>
 
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
-              <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", borderBottom: "1px solid #2D2926" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>Caffeine Mechanism — Step by Step</p>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
+              <div style={{ padding: "12px 20px", backgroundColor: "#17211C", borderBottom: "1px solid #2D2926" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", margin: 0 }}>Caffeine Mechanism — Step by Step</p>
               </div>
               {[
                 { step: "01", title: "Adenosine accumulates during wakefulness", body: "As neurons fire throughout the day, adenosine (a by-product of ATP hydrolysis) accumulates and binds A1 and A2A receptors, progressively slowing neural activity — creating the sensation of fatigue and sleepiness." },
@@ -288,13 +288,13 @@ export default function CaffeinePage() {
                 { step: "04", title: "Reduced perceived effort — the 'exercise feels easier' effect", body: "The combination of blocked adenosine fatigue signals and elevated catecholamines reduces the subjective effort required for a given exercise intensity (RPE). This allows athletes to maintain higher outputs before stopping." },
                 { step: "05", title: "Peripheral effects on muscle and fat tissue", body: "Caffeine also promotes calcium release from the sarcoplasmic reticulum (improving muscle contractile force) and increases plasma free fatty acid availability via catecholamine-driven lipolysis — contributing to improved fat oxidation during exercise." },
               ].map((s, i) => (
-                <div key={s.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 18, borderRight: "1px solid #EDE8DF" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#C4622D" }}>{s.step}</span>
+                <div key={s.step} style={{ display: "grid", gridTemplateColumns: "52px 1fr", borderBottom: i < 4 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 18, borderRight: "1px solid #F2F8F4" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#0F7A5A" }}>{s.step}</span>
                   </div>
                   <div style={{ padding: "16px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{s.title}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{s.title}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{s.body}</p>
                   </div>
                 </div>
               ))}
@@ -310,19 +310,19 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 3 — Benefits */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 03" figure="§ 03" title="Evidence-Based" titleItalic="Benefits" size="sm" />
             <p style={{ marginBottom: 24 }}>Every benefit below is supported by at least one meta-analysis or multiple independent RCTs. The dose used in the cited study is stated alongside the outcome.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
               {benefits.map((b, i) => (
-                <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden" }}>
-                  <div style={{ padding: "12px 16px", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-                    <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>{b.claim}</p>
+                <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden" }}>
+                  <div style={{ padding: "12px 16px", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0, lineHeight: 1.3 }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
                   <div style={{ padding: "10px 16px" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", marginBottom: 4, letterSpacing: "0.06em" }}>{b.citation}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{b.notes}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", marginBottom: 4, letterSpacing: "0.06em" }}>{b.citation}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{b.notes}</p>
                   </div>
                 </div>
               ))}
@@ -330,16 +330,16 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 4 — Dosage Guide */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 04" figure="§ 04" title="Dosage" titleItalic="Guide" size="sm" />
             <p>Caffeine dosing should be weight-adjusted. The effective range identified in sport science literature is <strong>3–6mg per kg of bodyweight</strong>, taken 30–60 minutes before exercise.</p>
 
             <div style={{ overflowX: "auto", marginBottom: 24 }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, minWidth: 480 }}>
                 <thead>
-                  <tr style={{ backgroundColor: "#1A1714", color: "#F2EBD9" }}>
+                  <tr style={{ backgroundColor: "#17211C", color: "#FFFFFF" }}>
                     {["Bodyweight", "Low Dose (3mg/kg)", "Moderate (4.5mg/kg)", "High Dose (6mg/kg)"].map((h) => (
-                      <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", fontWeight: 500 }}>{h}</th>
+                      <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", fontWeight: 500 }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -350,9 +350,9 @@ export default function CaffeinePage() {
                     ["90 kg", "270mg", "405mg", "540mg"],
                     ["105 kg", "315mg", "472mg", "630mg"],
                   ].map((row, i) => (
-                    <tr key={row[0]} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                    <tr key={row[0]} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                       {row.map((cell) => (
-                        <td key={cell} style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", color: "#2D2926" }}>{cell}</td>
+                        <td key={cell} style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", color: "#2D2926" }}>{cell}</td>
                       ))}
                     </tr>
                   ))}
@@ -380,22 +380,22 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 5 — Forms Compared */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 05" figure="§ 05" title="Supplement Forms" titleItalic="Compared" size="sm" />
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {forms.map((f) => (
-                <div key={f.name} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden" }}>
-                  <div style={{ padding: "10px 16px", backgroundColor: f.recommended ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                    <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14 }}>{f.name}</p>
+                <div key={f.name} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden" }}>
+                  <div style={{ padding: "10px 16px", backgroundColor: f.recommended ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+                    <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{f.name}</p>
                     <span style={{
-                      padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", whiteSpace: "nowrap", flexShrink: 0,
+                      padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", whiteSpace: "nowrap", flexShrink: 0,
                       backgroundColor: f.recommended ? "rgba(74,124,89,0.08)" : "rgba(138,132,128,0.1)",
                       border: f.recommended ? "1px solid rgba(74,124,89,0.2)" : "1px solid rgba(138,132,128,0.2)",
-                      color: f.recommended ? "#4A7C59" : "#8A8480",
+                      color: f.recommended ? "#4A7C59" : "#6B7770",
                     }}>{f.tag}</span>
                   </div>
                   <div style={{ padding: "10px 16px" }}>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{f.verdict}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{f.verdict}</p>
                   </div>
                 </div>
               ))}
@@ -403,21 +403,21 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 6 — Safety */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 06" figure="§ 06" title="Safety Profile" titleItalic="& Side Effects" size="sm" />
             <p style={{ marginBottom: 24 }}>
               Caffeine is safe at doses up to 400mg/day for healthy, non-pregnant adults (European Food Safety Authority, 2015). Side effects are dose-dependent and primarily manifest at the high end of ergogenic doses (4–6mg/kg) or in individuals with lower tolerance.
             </p>
             {safetyPanels.map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
-                <div style={{ padding: "10px 16px", backgroundColor: "rgba(196,98,45,0.06)", borderBottom: "1px solid #D4C9B8" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.12em", textTransform: "uppercase" }}>Myth</span>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", margin: "4px 0 0" }}>{item.myth}</p>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
+                <div style={{ padding: "10px 16px", backgroundColor: "rgba(196,98,45,0.06)", borderBottom: "1px solid #E4E8E5" }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", letterSpacing: "0.12em", textTransform: "uppercase" }}>Myth</span>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#17211C", margin: "4px 0 0" }}>{item.myth}</p>
                 </div>
                 <div style={{ padding: "10px 16px" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#4A7C59", letterSpacing: "0.12em", textTransform: "uppercase" }}>Reality</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#4A7C59", letterSpacing: "0.12em", textTransform: "uppercase" }}>Reality</span>
                   <p style={{ fontSize: 14, color: "#2D2926", margin: "4px 0 4px" }}>{item.reality}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", margin: 0 }}>{item.citation}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", margin: 0 }}>{item.citation}</p>
                 </div>
               </div>
             ))}
@@ -429,20 +429,20 @@ export default function CaffeinePage() {
           </section>
 
           {/* § 7 — Who For */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 07" figure="§ 07" title="Who Should" titleItalic="Take It?" size="sm" />
 
             <h2>Good fit</h2>
             {whoFor.map((g) => (
-              <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: "3px solid #4A7C59", borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
+              <div key={g.group} style={{ border: "1px solid #E4E8E5", borderLeft: "3px solid #4A7C59", borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
-                  <p style={{ fontWeight: 700, color: "#1A1714", margin: 0 }}>{g.group}</p>
-                  <span style={{ padding: "2px 8px", backgroundColor: "rgba(74,124,89,0.08)", border: "1px solid rgba(74,124,89,0.2)", borderRadius: 4, fontSize: 9, color: "#4A7C59", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Recommended</span>
+                  <p style={{ fontWeight: 700, color: "#17211C", margin: 0 }}>{g.group}</p>
+                  <span style={{ padding: "2px 8px", backgroundColor: "rgba(74,124,89,0.08)", border: "1px solid rgba(74,124,89,0.2)", borderRadius: 4, fontSize: 9, color: "#4A7C59", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Recommended</span>
                 </div>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: "0 0 8px" }}>{g.detail}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: "0 0 8px" }}>{g.detail}</p>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {g.tags.map((t) => (
-                    <span key={t} style={{ padding: "2px 7px", backgroundColor: "rgba(74,124,89,0.06)", border: "1px solid rgba(74,124,89,0.15)", borderRadius: 4, fontSize: 9, color: "#4A7C59", fontFamily: "var(--font-dm-mono), monospace" }}>{t}</span>
+                    <span key={t} style={{ padding: "2px 7px", backgroundColor: "rgba(74,124,89,0.06)", border: "1px solid rgba(74,124,89,0.15)", borderRadius: 4, fontSize: 9, color: "#4A7C59", fontFamily: "var(--font-jetbrains), monospace" }}>{t}</span>
                   ))}
                 </div>
               </div>
@@ -450,49 +450,49 @@ export default function CaffeinePage() {
 
             <h2 style={{ marginTop: 24 }}>Use caution / not recommended</h2>
             {cautionGroups.map((g) => (
-              <div key={g.group} style={{ border: "1px solid #D4C9B8", borderLeft: `3px solid ${g.isContraindication ? "#C4622D" : "#D4A96A"}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
+              <div key={g.group} style={{ border: "1px solid #E4E8E5", borderLeft: `3px solid ${g.isContraindication ? "#0F7A5A" : "#D4A96A"}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
-                  <p style={{ fontWeight: 700, color: "#1A1714", margin: 0 }}>{g.group}</p>
-                  <span style={{ padding: "2px 8px", backgroundColor: g.isContraindication ? "rgba(196,98,45,0.1)" : "rgba(212,169,106,0.1)", border: `1px solid ${g.isContraindication ? "rgba(196,98,45,0.2)" : "rgba(212,169,106,0.2)"}`, borderRadius: 4, fontSize: 9, color: g.isContraindication ? "#C4622D" : "#A07840", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>
+                  <p style={{ fontWeight: 700, color: "#17211C", margin: 0 }}>{g.group}</p>
+                  <span style={{ padding: "2px 8px", backgroundColor: g.isContraindication ? "rgba(196,98,45,0.1)" : "rgba(212,169,106,0.1)", border: `1px solid ${g.isContraindication ? "rgba(196,98,45,0.2)" : "rgba(212,169,106,0.2)"}`, borderRadius: 4, fontSize: 9, color: g.isContraindication ? "#0F7A5A" : "#A07840", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>
                     {g.isContraindication ? "Avoid" : "Use Caution"}
                   </span>
                 </div>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>{g.detail}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0 }}>{g.detail}</p>
               </div>
             ))}
           </section>
 
           {/* § 8 — Pricing */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 08" figure="§ 08" title="Pricing &" titleItalic="Where to Buy" size="sm" />
             <p style={{ marginBottom: 8 }}>Caffeine anhydrous is one of the cheapest supplements per effective dose. Prices below are USD (as of May 2026) from major US retailers. Amazon prices may vary.</p>
             <div style={{ overflowX: "auto", marginBottom: 16 }}>
               <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, minWidth: 560 }}>
                 <thead>
-                  <tr style={{ backgroundColor: "#1A1714", color: "#F2EBD9" }}>
+                  <tr style={{ backgroundColor: "#17211C", color: "#FFFFFF" }}>
                     {["Product", "Size", "Price (USD)", "Per Dose (~200mg)", "Verdict"].map((h) => (
-                      <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", fontWeight: 500 }}>{h}</th>
+                      <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.08em", fontWeight: 500 }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {brands.map((b, i) => (
-                    <tr key={b.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", fontWeight: 600, color: "#1A1714" }}>{b.name}</td>
-                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", color: "#5C5650" }}>{b.size}</td>
-                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", color: "#5C5650" }}>{b.price}</td>
-                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", fontSize: 12 }}>{b.perServing}</td>
-                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #EDE8DF", color: "#5C5650", fontSize: 12 }}>{b.verdict}</td>
+                    <tr key={b.name} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", fontWeight: 600, color: "#17211C" }}>{b.name}</td>
+                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", color: "#3F4B43" }}>{b.size}</td>
+                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", color: "#3F4B43" }}>{b.price}</td>
+                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", fontSize: 12 }}>{b.perServing}</td>
+                      <td style={{ padding: "10px 14px", borderBottom: "1px solid #F2F8F4", color: "#3F4B43", fontSize: 12 }}>{b.verdict}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>Prices as of May 2026. Always purchase from reputable retailers and verify NSF or Informed-Sport certification for drug-tested athletes.</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>Prices as of May 2026. Always purchase from reputable retailers and verify NSF or Informed-Sport certification for drug-tested athletes.</p>
           </section>
 
           {/* § 9 — References */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <SectionHeading label="Section 09" figure="§ 09" title="References" titleItalic="& Further Reading" size="sm" />
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {[
@@ -509,11 +509,11 @@ export default function CaffeinePage() {
                 { num: "11", cite: "Del Coso J, Muñoz-Fernández VE, Muñoz G, et al. (2012). Effects of a caffeine-containing energy drink on simulated soccer performance.", journal: "PLOS ONE, 7(2), e31380.", url: "https://doi.org/10.1371/journal.pone.0031380" },
                 { num: "12", cite: "Burke LM. (2008). Caffeine and sports performance.", journal: "Appl Physiol Nutr Metab, 33(6), 1319–34.", url: "https://doi.org/10.1139/H08-130" },
               ].map((r) => (
-                <div key={r.num} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #EDE8DF" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700, flexShrink: 0, minWidth: 20 }}>[{r.num}]</span>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+                <div key={r.num} style={{ display: "flex", gap: 12, padding: "10px 0", borderBottom: "1px solid #F2F8F4" }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, minWidth: 20 }}>[{r.num}]</span>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
                     {r.cite}{" "}<em>{r.journal}</em>{" "}
-                    <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.04em" }}>→ View study</a>
+                    <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.04em" }}>→ View study</a>
                   </p>
                 </div>
               ))}
@@ -524,23 +524,23 @@ export default function CaffeinePage() {
           <section style={{ marginBottom: 48 }} className="ingredient-article">
             <SectionHeading label="Section 10" figure="§ 10" title="Frequently Asked" titleItalic="Questions" size="sm" />
             {faqSchema.mainEntity.map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 8 }}>
-                <div style={{ padding: "12px 16px", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #D4C9B8" }}>
-                  <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14 }}>{item.name}</p>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", marginBottom: 8 }}>
+                <div style={{ padding: "12px 16px", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #E4E8E5" }}>
+                  <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{item.name}</p>
                 </div>
                 <div style={{ padding: "12px 16px" }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{item.acceptedAnswer.text}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.acceptedAnswer.text}</p>
                 </div>
               </div>
             ))}
           </section>
 
           {/* Related */}
-          <div style={{ padding: "20px 24px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "3px solid #D4A96A" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>Medical Disclaimer</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+          <div style={{ padding: "20px 24px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 12, borderLeft: "3px solid #D4A96A" }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>Medical Disclaimer</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
               Ingredient profiles are for informational purposes only and do not constitute medical advice. Consult a qualified healthcare professional before starting any supplementation protocol.{" "}
-              <Link href="/medical-disclaimer" style={{ color: "#C4622D", fontWeight: 600 }}>Full disclaimer →</Link>
+              <Link href="/medical-disclaimer" style={{ color: "#0F7A5A", fontWeight: 600 }}>Full disclaimer →</Link>
             </p>
           </div>
 

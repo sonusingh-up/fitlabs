@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import ReviewCard from "@/components/ui/ReviewCard";
@@ -254,13 +254,13 @@ export default function MyProteinBrandPage() {
         .mp-stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); }
         @media (max-width: 900px) {
           .mp-stats-grid { grid-template-columns: repeat(3, 1fr); }
-          .mp-stats-grid > div { border-right: 1px solid #D4C9B8 !important; border-bottom: 1px solid #D4C9B8; }
+          .mp-stats-grid > div { border-right: 1px solid #E4E8E5 !important; border-bottom: 1px solid #E4E8E5; }
           .mp-stats-grid > div:nth-child(3n) { border-right: none !important; }
           .mp-stats-grid > div:nth-last-child(-n+3) { border-bottom: none; }
         }
         @media (max-width: 480px) {
           .mp-stats-grid { grid-template-columns: repeat(2, 1fr); }
-          .mp-stats-grid > div { border-right: 1px solid #D4C9B8 !important; border-bottom: 1px solid #D4C9B8; }
+          .mp-stats-grid > div { border-right: 1px solid #E4E8E5 !important; border-bottom: 1px solid #E4E8E5; }
           .mp-stats-grid > div:nth-child(2n) { border-right: none !important; }
           .mp-stats-grid > div:nth-last-child(-n+2) { border-bottom: none; }
         }
@@ -268,7 +268,7 @@ export default function MyProteinBrandPage() {
         .mp-overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
         @media (max-width: 767px) { .mp-overview-grid { grid-template-columns: 1fr; gap: 24px; } }
 
-        .mp-fact-row { display: grid; grid-template-columns: 140px 1fr; gap: 12px; padding: 12px 16px; background: #F8F2E4; border: 1px solid #D4C9B8; border-radius: 8px; }
+        .mp-fact-row { display: grid; grid-template-columns: 140px 1fr; gap: 12px; padding: 12px 16px; background: #F6F8F6; border: 1px solid #E4E8E5; border-radius: 8px; }
         @media (max-width: 480px) { .mp-fact-row { grid-template-columns: 1fr; gap: 4px; } }
 
         .mp-verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -315,19 +315,19 @@ export default function MyProteinBrandPage() {
         }
       `}</style>
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }} className="px-page">
             {[{ label: "Home", href: "/" }, { label: "Brands", href: "/brands" }].map((crumb, i, arr) => (
               <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
-                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>}
               </span>
             ))}
-            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Myprotein</span>
+            <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Myprotein</span>
           </div>
         </div>
 
@@ -336,17 +336,17 @@ export default function MyProteinBrandPage() {
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
 
           {/* Ghost letter */}
-          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(6rem, 20vw, 16rem)", fontWeight: 800, color: "rgba(255,255,255,0.02)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>MP</span>
+          <span style={{ position: "absolute", right: -10, bottom: -30, fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(6rem, 20vw, 16rem)", fontWeight: 800, color: "rgba(255,255,255,0.02)", lineHeight: 1, userSelect: "none", pointerEvents: "none", letterSpacing: "-0.05em" }}>MP</span>
 
           <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", width: "100%", padding: "40px 24px 36px", zIndex: 1 }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>BRD-002</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.22em", color: "rgba(255,255,255,0.25)", textTransform: "uppercase" }}>BRD-002</span>
               <span style={{ width: 16, height: 1, backgroundColor: "rgba(255,255,255,0.1)", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", color: "#C4622D", textTransform: "uppercase" }}>Brand Profile</span>
-              <span style={{ padding: "3px 10px", backgroundColor: "rgba(212,201,184,0.15)", border: "1px solid rgba(212,201,184,0.3)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(212,201,184,0.8)", textTransform: "uppercase" }}>Silver Tier</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.22em", color: "#0F7A5A", textTransform: "uppercase" }}>Brand Profile</span>
+              <span style={{ padding: "3px 10px", backgroundColor: "rgba(212,201,184,0.15)", border: "1px solid rgba(212,201,184,0.3)", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(212,201,184,0.8)", textTransform: "uppercase" }}>Silver Tier</span>
             </div>
 
-            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#F2EBD9", lineHeight: 1.0, marginBottom: 10 }}>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 7vw, 4rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "#FFFFFF", lineHeight: 1.0, marginBottom: 10 }}>
               Myprotein
             </h1>
             <p style={{ fontSize: "clamp(13px, 3.5vw, 15px)", color: "rgba(242,235,217,0.55)", lineHeight: 1.6, maxWidth: 520, marginBottom: 18 }}>
@@ -354,19 +354,19 @@ export default function MyProteinBrandPage() {
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
               {["Whey Protein", "Creatine", "BCAA", "Pre-Workout", "Vitamins", "Protein Bars", "Whey Isolate"].map((cat) => (
-                <span key={cat} style={{ padding: "4px 10px", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6, fontSize: 10, color: "rgba(242,235,217,0.4)", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.07em" }}>{cat}</span>
+                <span key={cat} style={{ padding: "4px 10px", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 6, fontSize: 10, color: "rgba(242,235,217,0.4)", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.07em" }}>{cat}</span>
               ))}
             </div>
           </div>
         </div>
 
         {/* ── Stats Strip ─────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
           <div className="mp-stats-grid px-page" style={{ maxWidth: 1280, margin: "0 auto" }}>
             {stats.map((s, i) => (
-              <div key={s.label} style={{ padding: "18px 20px", borderRight: i < stats.length - 1 ? "1px solid #D4C9B8" : "none" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 5 }}>{s.label}</p>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", lineHeight: 1, margin: 0 }}>{s.value}</p>
+              <div key={s.label} style={{ padding: "18px 20px", borderRight: i < stats.length - 1 ? "1px solid #E4E8E5" : "none" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 5 }}>{s.label}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#17211C", lineHeight: 1, margin: 0 }}>{s.value}</p>
               </div>
             ))}
           </div>
@@ -376,12 +376,12 @@ export default function MyProteinBrandPage() {
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section-sm px-page">
 
           {/* Mobile TOC */}
-          <details className="mp-mobile-toc" style={{ marginBottom: 8, border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+          <details className="mp-mobile-toc" style={{ marginBottom: 8, border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
             <summary style={{ padding: "13px 16px", cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center", listStyle: "none" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#5C5650" }}>On this page</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, color: "#A89880", lineHeight: 1 }}>+</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#3F4B43" }}>On this page</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 16, color: "#586259", lineHeight: 1 }}>+</span>
             </summary>
-            <ul style={{ margin: 0, padding: "6px 0", listStyle: "none", borderTop: "1px solid #D4C9B8" }}>
+            <ul style={{ margin: 0, padding: "6px 0", listStyle: "none", borderTop: "1px solid #E4E8E5" }}>
               {[
                 { id: "overview", label: "Brand overview" },
                 { id: "verdict",  label: "Quick verdict" },
@@ -392,8 +392,8 @@ export default function MyProteinBrandPage() {
                 { id: "stance",   label: "Editorial stance" },
               ].map((item) => (
                 <li key={item.id}>
-                  <a href={`#${item.id}`} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", fontSize: 13, color: "#5C5650", textDecoration: "none" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.1em", flexShrink: 0 }}>§</span>
+                  <a href={`#${item.id}`} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 16px", fontSize: 13, color: "#3F4B43", textDecoration: "none" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.1em", flexShrink: 0 }}>§</span>
                     {item.label}
                   </a>
                 </li>
@@ -402,7 +402,7 @@ export default function MyProteinBrandPage() {
           </details>
 
           {/* ── § 01 Brand Overview ────────────────────────────────────────── */}
-          <section id="overview" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="overview" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="Background" figure="§ 01" title="Brand" titleItalic="overview" size="sm" />
             <div className="mp-overview-grid">
               <div>
@@ -418,7 +418,7 @@ export default function MyProteinBrandPage() {
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 {/* Feature image */}
-                <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", background: "linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%)", borderRadius: 10, overflow: "hidden", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", background: "linear-gradient(135deg, #1A1A2E 0%, #0F3460 100%)", borderRadius: 10, overflow: "hidden", border: "1px solid #E4E8E5", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <Image
                     src="/products/myprotein-impact-whey.webp"
                     alt="Myprotein Impact Whey Protein"
@@ -441,7 +441,7 @@ export default function MyProteinBrandPage() {
                     { label: "Global reach",    value: "70+ countries, largest online sports nutrition brand" },
                   ].map((item) => (
                     <div key={item.label} className="mp-fact-row">
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#8A8480", margin: 0 }}>{item.label}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>{item.label}</p>
                       <p style={{ fontSize: 13, color: "#3C3530", margin: 0, lineHeight: 1.5 }}>{item.value}</p>
                     </div>
                   ))}
@@ -451,13 +451,13 @@ export default function MyProteinBrandPage() {
           </section>
 
           {/* ── § 02 Quick Verdict ─────────────────────────────────────────── */}
-          <section id="verdict" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="verdict" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="Assessment" figure="§ 02" title="Quick" titleItalic="verdict" size="sm" />
             <div className="mp-verdict-grid">
-              <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
+              <div style={{ padding: 24, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
                   <span style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#1A6B3A", flexShrink: 0 }} />
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", margin: 0 }}>What works</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", margin: 0 }}>What works</p>
                 </div>
                 <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
                   {greenFlags.map((flag) => (
@@ -465,10 +465,10 @@ export default function MyProteinBrandPage() {
                   ))}
                 </ul>
               </div>
-              <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
+              <div style={{ padding: 24, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
                   <span style={{ width: 8, height: 8, borderRadius: "50%", backgroundColor: "#9B2020", flexShrink: 0 }} />
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9B2020", margin: 0 }}>Watch out for</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#9B2020", margin: 0 }}>Watch out for</p>
                 </div>
                 <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10 }}>
                   {redFlags.map((flag) => (
@@ -480,37 +480,37 @@ export default function MyProteinBrandPage() {
           </section>
 
           {/* ── § 03 Certifications ────────────────────────────────────────── */}
-          <section id="certs" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="certs" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="Verification" figure="§ 03" title="Certifications &" titleItalic="testing" size="sm" />
             <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
               {certifications.map((cert) => {
                 const s = statusStyles[cert.status];
                 return (
                   <div key={cert.name} className="mp-cert-row" style={{ backgroundColor: s.bg, border: `1px solid ${s.border}` }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.06em", color: "#3C3530", margin: 0, fontWeight: 500 }}>{cert.name}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.06em", color: "#3C3530", margin: 0, fontWeight: 500 }}>{cert.name}</p>
                     <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
                       <span style={{ width: 7, height: 7, borderRadius: "50%", backgroundColor: s.dot, flexShrink: 0 }} />
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.07em", color: s.labelColor, margin: 0 }}>{s.label}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.07em", color: s.labelColor, margin: 0 }}>{s.label}</p>
                     </div>
-                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{cert.detail}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.5 }}>{cert.detail}</p>
                   </div>
                 );
               })}
             </div>
             <div style={{ padding: "16px 20px", backgroundColor: "rgba(146,98,10,0.06)", border: "1px solid rgba(146,98,10,0.2)", borderRadius: 8, display: "flex", gap: 12, alignItems: "flex-start" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#92620A", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Note</span>
-              <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#92620A", textTransform: "uppercase", paddingTop: 2, flexShrink: 0 }}>Note</span>
+              <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>
                 The Informed Sport mark on Impact Whey Protein and THE Creatine is genuine and meaningful — each batch is independently tested before release. The important distinction: this badge does not follow the brand name onto every product. When buying Myprotein products outside the certified core range (flavoured variants, bars, vitamins, pre-workout), you are relying on internal quality controls without independent publication. Always verify the specific product and flavour variant is listed on the current Informed Sport registry before purchasing for sport competition use.
               </p>
             </div>
           </section>
 
           {/* ── § 04 Product Lineup ────────────────────────────────────────── */}
-          <section id="products" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="products" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="Products" figure="§ 04" title="Key" titleItalic="product lineup" size="sm" />
             <div className="mp-product-grid">
               {products.map((product) => (
-                <div key={product.slug} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
+                <div key={product.slug} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6", display: "flex", flexDirection: "column" }}>
 
                   {product.image ? (
                     <div className="mp-product-img-wrap">
@@ -523,43 +523,43 @@ export default function MyProteinBrandPage() {
                     </div>
                   ) : (
                     <div className="mp-product-img-placeholder">
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(255,255,255,0.04)", letterSpacing: "-0.05em" }}>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2.8rem", fontWeight: 800, color: "rgba(255,255,255,0.04)", letterSpacing: "-0.05em" }}>
                         {product.name[0]}
                       </span>
-                      <span style={{ position: "absolute", top: 8, right: 10, padding: "2px 8px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", color: "rgba(255,255,255,0.3)" }}>
+                      <span style={{ position: "absolute", top: 8, right: 10, padding: "2px 8px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.08em", color: "rgba(255,255,255,0.3)" }}>
                         {product.category}
                       </span>
-                      <span style={{ position: "absolute", bottom: 7, left: 12, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.2)" }}>
+                      <span style={{ position: "absolute", bottom: 7, left: 12, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.2)" }}>
                         Image coming
                       </span>
                     </div>
                   )}
 
-                  <div style={{ height: 2, background: "linear-gradient(90deg, #C4622D 0%, transparent 70%)", flexShrink: 0 }} />
+                  <div style={{ height: 2, background: "linear-gradient(90deg, #0F7A5A 0%, transparent 70%)", flexShrink: 0 }} />
 
                   <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                      <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, letterSpacing: "-0.02em" }}>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#17211C", margin: 0, letterSpacing: "-0.02em" }}>
                         {product.name}
                       </h3>
                       <div style={{ textAlign: "right", flexShrink: 0, marginLeft: 8 }}>
-                        <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", margin: 0 }}>{product.price}</p>
-                        <p style={{ fontSize: 9, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>{product.priceNote}</p>
+                        <p style={{ fontSize: 13, fontWeight: 700, color: "#17211C", margin: 0 }}>{product.price}</p>
+                        <p style={{ fontSize: 9, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", margin: 0 }}>{product.priceNote}</p>
                       </div>
                     </div>
-                    <p style={{ fontSize: 12.5, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>{product.description}</p>
+                    <p style={{ fontSize: 12.5, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{product.description}</p>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
                       {product.keyIngredients.map((ing) => (
-                        <span key={ing} style={{ padding: "2px 7px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
+                        <span key={ing} style={{ padding: "2px 7px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em" }}>
                           {ing}
                         </span>
                       ))}
                     </div>
-                    <div style={{ marginTop: "auto", paddingTop: 8, borderTop: "1px solid #EDE8DF" }}>
+                    <div style={{ marginTop: "auto", paddingTop: 8, borderTop: "1px solid #F2F8F4" }}>
                       {product.reviewSlug ? (
-                        <Link href={`/reviews/${product.reviewSlug}`} style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>Read full review →</Link>
+                        <Link href={`/reviews/${product.reviewSlug}`} style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>Read full review →</Link>
                       ) : (
-                        <span style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>Review in progress</span>
+                        <span style={{ fontSize: 10, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em" }}>Review in progress</span>
                       )}
                     </div>
                   </div>
@@ -569,28 +569,28 @@ export default function MyProteinBrandPage() {
           </section>
 
           {/* ── § 05 Published Reviews ─────────────────────────────────────── */}
-          <section id="reviews" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="reviews" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="Reviews" figure="§ 05" title="Reviewed" titleItalic="products" size="sm" />
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
               {publishedReviews.map((r) => <ReviewCard key={r.slug} {...r} />)}
             </div>
-            <p style={{ marginTop: 20, fontSize: 13, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
+            <p style={{ marginTop: 20, fontSize: 13, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em" }}>
               Impact Whey Protein review publishing next — full formula breakdown, amino profile, and lab data.
             </p>
           </section>
 
           {/* ── § 06 FAQ ───────────────────────────────────────────────────── */}
-          <section id="faq" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }}>
+          <section id="faq" className="mp-section-anchor" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }}>
             <SectionHeading label="FAQ" figure="§ 06" title="Common" titleItalic="questions" size="sm" />
             <div style={{ display: "flex", flexDirection: "column", gap: 8, maxWidth: 820 }}>
               {faqs.map((faq, i) => (
-                <details key={i} className="mp-faq-item" style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                <details key={i} className="mp-faq-item" style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <summary style={{ padding: "16px 20px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", lineHeight: 1.4 }}>{faq.q}</span>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, color: "#A89880", flexShrink: 0, lineHeight: 1 }}>+</span>
+                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#17211C", lineHeight: 1.4 }}>{faq.q}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 16, color: "#586259", flexShrink: 0, lineHeight: 1 }}>+</span>
                   </summary>
-                  <div style={{ padding: "0 20px 16px", borderTop: "1px solid #EDE8DF" }}>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: "14px 0 0" }}>{faq.a}</p>
+                  <div style={{ padding: "0 20px 16px", borderTop: "1px solid #F2F8F4" }}>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: "14px 0 0" }}>{faq.a}</p>
                   </div>
                 </details>
               ))}
@@ -601,9 +601,9 @@ export default function MyProteinBrandPage() {
           <section id="stance" className="mp-section-anchor" style={{ marginBottom: 56 }}>
             <div className="mp-stance-card" style={{ backgroundColor: "#1A1A2E", borderRadius: 12, maxWidth: 840, border: "1px solid rgba(255,255,255,0.06)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "#3C3C5A" }}>Editorial Stance</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.22em", textTransform: "uppercase", color: "#3C3C5A" }}>Editorial Stance</span>
                 <span style={{ width: 16, height: 1, backgroundColor: "#2A2A40", display: "inline-block" }} />
-                <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>Silver Tier · BRD-002</span>
+                <span style={{ padding: "2px 8px", backgroundColor: "rgba(212,201,184,0.1)", border: "1px solid rgba(212,201,184,0.2)", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "rgba(212,201,184,0.5)", textTransform: "uppercase" }}>Silver Tier · BRD-002</span>
               </div>
               <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.85, marginBottom: 14 }}>
                 Myprotein earns Silver tier on the strength of two things: price and the Informed Sport certification on its core products. Impact Whey Protein and THE Creatine deliver independently verified quality at a price point that no certified competitor has matched. For anyone building a baseline supplement stack on a budget, these two products are the correct defaults.

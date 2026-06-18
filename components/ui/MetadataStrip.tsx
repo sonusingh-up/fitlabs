@@ -15,8 +15,8 @@ export default function MetadataStrip({ items }: MetadataStripProps) {
         display: "flex",
         flexWrap: "wrap",
         gap: 0,
-        borderTop: "1px solid #D4C9B8",
-        borderBottom: "1px solid #D4C9B8",
+        borderTop: "1px solid #E4E8E5",
+        borderBottom: "1px solid #E4E8E5",
       }}
     >
       {items.map((item, i) => (
@@ -24,7 +24,7 @@ export default function MetadataStrip({ items }: MetadataStripProps) {
           key={i}
           className="metadata-strip-item"
           style={{
-            borderRight: i < items.length - 1 ? "1px solid #D4C9B8" : "none",
+            borderRight: i < items.length - 1 ? "1px solid #E4E8E5" : "none",
             display: "flex",
             flexDirection: "column",
             gap: 3,
@@ -32,11 +32,11 @@ export default function MetadataStrip({ items }: MetadataStripProps) {
         >
           <span
             style={{
-              fontFamily: "var(--font-dm-mono), monospace",
+              fontFamily: "var(--font-jetbrains), monospace",
               fontSize: 9,
               letterSpacing: "0.2em",
               textTransform: "uppercase",
-              color: "#A89880",
+              color: "#586259",
             }}
           >
             {item.label}
@@ -45,7 +45,7 @@ export default function MetadataStrip({ items }: MetadataStripProps) {
             style={{
               fontSize: 13,
               fontWeight: 600,
-              color: "#1A1714",
+              color: "#17211C",
               fontFamily: "var(--font-dm-sans), sans-serif",
             }}
           >
