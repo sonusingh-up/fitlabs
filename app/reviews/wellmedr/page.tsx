@@ -638,7 +638,7 @@ export default function WellMedrReview() {
                         {brand.img !== "#" ? (
                           <Image src={brand.img} alt={`${brand.name} product`} width={80} height={80} style={{ objectFit: "contain" }} />
                         ) : (
-                          <img src="#" alt={`${brand.name} logo`} width={80} height={80} style={{ objectFit: "contain", display: "block" }} />
+                          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, fontWeight: 700, color: "#0F7A5A" }}>{brand.name.slice(0,2).toUpperCase()}</span>
                         )}
                       </div>
                       <div style={{ textAlign: "center" }}>

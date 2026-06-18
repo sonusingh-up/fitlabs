@@ -83,10 +83,12 @@ export default function ScoreBreakdown({ rubric, reviewCode }: Props) {
                 <div
                   style={{
                     height: "100%",
-                    width: mounted ? `${pct}%` : "0%",
+                    width: "100%",
                     backgroundColor: color,
                     borderRadius: 3,
-                    transition: "width 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+                    transform: `scaleX(${mounted ? pct / 100 : 0})`,
+                    transformOrigin: "left",
+                    transition: "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)",
                     transitionDelay: `${i * 80}ms`,
                   }}
                 />

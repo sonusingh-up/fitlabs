@@ -110,38 +110,40 @@ export default function TrustPillars() {
                   </span>
                 </div>
 
-                {/* Expandable content */}
+                {/* Expandable content — grid-template-rows avoids max-height thrash */}
                 <div
                   id={panelId}
                   role="region"
                   aria-label={pillar.title}
                   style={{
-                    overflow: "hidden",
-                    maxHeight: isActive ? 200 : 0,
+                    display: "grid",
+                    gridTemplateRows: isActive ? "1fr" : "0fr",
                     opacity: isActive ? 1 : 0,
-                    transition: "max-height 380ms cubic-bezier(0.4,0,0.2,1), opacity 280ms ease",
+                    transition: "grid-template-rows 380ms cubic-bezier(0.16,1,0.3,1), opacity 280ms cubic-bezier(0.16,1,0.3,1)",
                   }}
                 >
-                  <p
-                    style={{
-                      fontSize: 15,
-                      lineHeight: 1.65,
-                      color: "rgba(255,255,255,.80)",
-                      margin: "10px 0 0",
-                    }}
-                  >
-                    {pillar.desc}
-                  </p>
-                  <p
-                    style={{
-                      fontSize: 14,
-                      lineHeight: 1.65,
-                      color: "rgba(255,255,255,.65)",
-                      margin: "10px 0 0",
-                    }}
-                  >
-                    {pillar.detail}
-                  </p>
+                  <div style={{ overflow: "hidden", minHeight: 0 }}>
+                    <p
+                      style={{
+                        fontSize: 15,
+                        lineHeight: 1.65,
+                        color: "rgba(255,255,255,.80)",
+                        margin: "10px 0 0",
+                      }}
+                    >
+                      {pillar.desc}
+                    </p>
+                    <p
+                      style={{
+                        fontSize: 14,
+                        lineHeight: 1.65,
+                        color: "rgba(255,255,255,.65)",
+                        margin: "10px 0 0",
+                      }}
+                    >
+                      {pillar.detail}
+                    </p>
+                  </div>
                 </div>
               </div>
             </button>
