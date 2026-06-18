@@ -1585,13 +1585,17 @@ html, body {
   }
   .hp-hero-aside { display: none !important; }
 
-  /* Newsletter: single-column, hide decorative image */
+  /* Newsletter: single-column, hide decorative image, scale heading */
   .hp-newsletter-grid { grid-template-columns: 1fr !important; }
-  .hp-newsletter-inner { padding: 36px 24px !important; }
+  .hp-newsletter-inner { padding: 32px 24px 36px !important; }
+  .hp-newsletter-inner h2 { font-size: 30px !important; }
+  .hp-newsletter-inner p { font-size: 15px !important; }
   .hp-newsletter-img  { display: none !important; }
 
-  /* Goal cards: 2-column instead of 4 */
+  /* Goal cards: 2-column instead of 4, reduced height */
   .hp-goal-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+  .hp-goal-grid a { min-height: 190px !important; padding: 20px !important; }
+  .hp-goal-grid h3 { font-size: 20px !important; }
 
   /* Section headers: stack label + link vertically */
   .hp-section-header {
@@ -1633,5 +1637,18 @@ html, body {
     padding-top: 48px !important;
     padding-bottom: 36px !important;
     gap: 32px !important;
+  }
+
+  /* Footer bottom bar: stack copyright above links, wrap links in 2×2 */
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+  }
+  .footer-bottom-links {
+    flex-wrap: wrap !important;
+    gap: 10px 18px !important;
   }
 }

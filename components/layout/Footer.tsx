@@ -123,9 +123,9 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div style={{ backgroundColor: "#101A16", color: "#9FB0A7" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "20px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14, fontSize: 13 }}>
+        <div className="footer-bottom-bar" style={{ maxWidth: 1280, margin: "0 auto", padding: "20px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 14, fontSize: 13 }}>
           <span>© 2026 Fitlabreviews. All reviews are editorially independent.</span>
-          <div style={{ display: "flex", gap: 22 }}>
+          <div className="footer-bottom-links" style={{ display: "flex", gap: 22 }}>
             {[
               { label: "Privacy", href: "/privacy" },
               { label: "Terms", href: "/terms" },
