@@ -1,7 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="12" ry="12" fill="#F0ECE4"/>
-  <text x="4" y="46" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="40" fill="#1A1714">FL</text>
-  <circle cx="32" cy="57" r="3" fill="#C4622D"/>
-  <line x1="12" y1="57" x2="26" y2="57" stroke="#9A9080" stroke-width="1.5"/>
-  <line x1="38" y1="57" x2="52" y2="57" stroke="#9A9080" stroke-width="1.5"/>
+  <rect width="64" height="64" rx="14" ry="14" fill="#14a474"></rect>
+  <text x="32" y="43" font-family="&#39;JetBrains Mono&#39;, ui-monospace, &#39;SFMono-Regular&#39;, Menlo, monospace" font-weight="700" font-size="30" letter-spacing="-1" text-anchor="middle" fill="#06120c">FL</text>
+  <rect x="19" y="50" width="26" height="3.2" rx="1.6" fill="#06120c" opacity="0.32"></rect>
 </svg>
