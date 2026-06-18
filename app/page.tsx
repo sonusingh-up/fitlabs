@@ -139,11 +139,27 @@ export default function HomePage() {
             <p style={{ fontSize: "clamp(16px, 2.5vw, 18px)", lineHeight: 1.65, color: "#586259", margin: "0 0 18px", maxWidth: 620 }}>
               We read 40+ cohort studies on sleep duration and mortality. The protective range is narrower — and more specific — than the &ldquo;eight hours&rdquo; rule suggests.
             </p>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "#586259" }}>
-              <span style={{ width: 30, height: 30, borderRadius: "50%", background: "#DBE8E2", display: "inline-block" }} />
-              <span>
-                By <strong style={{ color: "#17211C" }}>Fitlab Editorial</strong> · Reviewed by R. Mehta, RD · May 2026 · 9 min read
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+              {/* Avatar — FL initials */}
+              <span style={{ width: 36, height: 36, borderRadius: "50%", background: "#0F7A5A", display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#FFFFFF", letterSpacing: "0.04em" }}>
+                FL
               </span>
+              <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "5px 10px" }}>
+                <span style={{ fontSize: 14, color: "#586259" }}>
+                  By <strong style={{ color: "#17211C" }}>Fitlab Editorial</strong>
+                </span>
+                {/* Peer-reviewed badge */}
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 5, background: "#E7F2EC", border: "1px solid #C9DFD4", borderRadius: 6, padding: "3px 9px", fontSize: 12, color: "#0A4F3B", fontWeight: 600, whiteSpace: "nowrap" }}>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  R. Mehta, RD
+                </span>
+                <span style={{ height: 12, width: 1, background: "#CFD6D1", flexShrink: 0 }} />
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#6B7770", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>
+                  May 2026 · 9 min
+                </span>
+              </div>
             </div>
           </Link>
         </article>
@@ -192,7 +208,7 @@ export default function HomePage() {
             <p style={{ fontSize: 17, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 26px", maxWidth: 420 }}>
               Weekly supplement research, ingredient deep-dives, and honest product updates straight to your inbox — no hype, no sponsors.
             </p>
-            <div style={{ display: "flex", background: "#FFFFFF", borderRadius: 999, padding: 6, border: "1px solid #CFE2D8", maxWidth: 430 }}>
+            <div className="hp-newsletter-form" style={{ display: "flex", background: "#FFFFFF", borderRadius: 999, padding: 6, border: "1px solid #CFE2D8", maxWidth: 430 }}>
               <label htmlFor="hp-newsletter-email" className="sr-only">Email address</label>
               <input id="hp-newsletter-email" type="email" placeholder="Enter your email" style={{ flex: 1, border: "none", background: "none", padding: "0 18px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, color: "#17211C", outline: "none" }} />
               <button type="button" style={{ background: "#0F7A5A", color: "#FFFFFF", border: "none", fontWeight: 700, fontSize: 14, padding: "12px 26px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap", minHeight: 44 }}>

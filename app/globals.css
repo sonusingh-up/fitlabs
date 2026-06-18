@@ -1656,10 +1656,32 @@ html, body {
 
   /* Newsletter: single-column, hide decorative image, scale heading */
   .hp-newsletter-grid { grid-template-columns: 1fr !important; }
-  .hp-newsletter-inner { padding: 32px 24px 36px !important; }
-  .hp-newsletter-inner h2 { font-size: 30px !important; }
+  .hp-newsletter-inner { padding: 32px 20px 36px !important; }
+  .hp-newsletter-inner h2 { font-size: 28px !important; line-height: 1.1 !important; }
   .hp-newsletter-inner p { font-size: 15px !important; }
   .hp-newsletter-img  { display: none !important; }
+
+  /* Newsletter form: break pill → stacked card on mobile */
+  .hp-newsletter-form {
+    flex-direction: column !important;
+    border-radius: 14px !important;
+    padding: 8px !important;
+    gap: 8px !important;
+    max-width: 100% !important;
+  }
+  .hp-newsletter-form input {
+    padding: 13px 16px !important;
+    min-height: 44px !important;
+    border-radius: 8px !important;
+    background: #F0F5F2 !important;
+    font-size: 16px !important; /* prevents iOS zoom */
+  }
+  .hp-newsletter-form button {
+    width: 100% !important;
+    border-radius: 8px !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+  }
 
   /* Goal cards: 2-column instead of 4, reduced height */
   .hp-goal-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
