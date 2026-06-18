@@ -23,40 +23,40 @@ const tocItems = [
 
 export default function FitnessTravelPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh", fontFamily: "var(--font-hanken), sans-serif" }}>
+    <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh", fontFamily: "var(--font-hanken), sans-serif" }}>
 
       {/* Hero */}
-      <div style={{ backgroundColor: "#1A1714", color: "#F2EBD9", padding: "48px 24px 56px" }}>
+      <div style={{ backgroundColor: "#1A1714", color: "#FFFFFF", padding: "48px 24px 56px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
 
           {/* Breadcrumb */}
-          <nav style={{ fontSize: 12, color: "#5C5650", marginBottom: 20, fontFamily: "var(--font-dm-mono), monospace" }}>
-            <Link href="/" style={{ color: "#A89880", textDecoration: "none" }}>Home</Link>
+          <nav style={{ fontSize: 12, color: "#3F4B43", marginBottom: 20, fontFamily: "var(--font-jetbrains), monospace" }}>
+            <Link href="/" style={{ color: "#586259", textDecoration: "none" }}>Home</Link>
             <span style={{ margin: "0 8px" }}>·</span>
-            <Link href="/blog" style={{ color: "#A89880", textDecoration: "none" }}>Blog</Link>
+            <Link href="/blog" style={{ color: "#586259", textDecoration: "none" }}>Blog</Link>
             <span style={{ margin: "0 8px" }}>·</span>
-            <span style={{ color: "#5C5650" }}>Fitness Travel 2026</span>
+            <span style={{ color: "#3F4B43" }}>Fitness Travel 2026</span>
           </nav>
 
           {/* Figure code + category */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650", letterSpacing: "0.15em" }}>BLG-005</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#3F4B43", letterSpacing: "0.15em" }}>BLG-005</span>
             <span style={{ width: 1, height: 14, backgroundColor: "#3A3530" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "#C4622D", textTransform: "uppercase" }}>Training &amp; Lifestyle</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", color: "#0F7A5A", textTransform: "uppercase" }}>Training &amp; Lifestyle</span>
           </div>
 
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#F2EBD9", marginBottom: 16, lineHeight: 1.2 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.9rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#FFFFFF", marginBottom: 16, lineHeight: 1.2 }}>
             Fitness Travel in 2026: How to Turn Your Vacation Into a Wellness Retreat
           </h1>
-          <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#A89880", marginBottom: 28, lineHeight: 1.6 }}>
+          <p style={{ fontSize: "1.1rem", fontStyle: "italic", color: "#586259", marginBottom: 28, lineHeight: 1.6 }}>
             Travel disrupts sleep, training, nutrition, and circadian rhythm simultaneously — but with the right protocols, a two-week trip need not cost you more than a few percent of fitness.
           </p>
 
           {/* Meta row */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", marginBottom: 36 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>May 26, 2026</span>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>11 min read</span>
-            <span style={{ padding: "4px 10px", borderRadius: 4, fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: "rgba(146,98,10,0.15)", color: "#92620A", border: "1px solid rgba(146,98,10,0.25)" }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>May 26, 2026</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>11 min read</span>
+            <span style={{ padding: "4px 10px", borderRadius: 4, fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", backgroundColor: "rgba(146,98,10,0.15)", color: "#92620A", border: "1px solid rgba(146,98,10,0.25)" }}>
               PRACTICAL GUIDE
             </span>
           </div>
@@ -69,8 +69,8 @@ export default function FitnessTravelPage() {
               { value: "~10%", label: "Strength loss after 2 weeks of detraining in trained individuals (Neufer, 1989 Sports Medicine)" },
             ].map((stat) => (
               <div key={stat.value} style={{ padding: "18px 20px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 10 }}>
-                <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#C4622D", marginBottom: 6 }}>{stat.value}</div>
-                <div style={{ fontSize: 12, color: "#8A8480", lineHeight: 1.6 }}>{stat.label}</div>
+                <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "2rem", fontWeight: 800, color: "#0F7A5A", marginBottom: 6 }}>{stat.value}</div>
+                <div style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.6 }}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function FitnessTravelPage() {
         <div className="layout-sidebar">
 
           {/* Sidebar TOC */}
-          <aside className="hidden lg:block" style={{ borderRight: "1px solid #D4C9B8" }}>
+          <aside className="hidden lg:block" style={{ borderRight: "1px solid #E4E8E5" }}>
             <TableOfContents items={tocItems} />
           </aside>
 
@@ -100,7 +100,7 @@ export default function FitnessTravelPage() {
             </p>
 
             {/* Section 1: Why Fitness Travel Is Booming */}
-            <section id="why-fitness-travel" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="why-fitness-travel" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Why Fitness Travel Is Booming in 2026
               </h2>
@@ -109,9 +109,9 @@ export default function FitnessTravelPage() {
                 Three structural shifts have converged to make fitness travel mainstream rather than niche. First, remote and hybrid work has decoupled travel from fixed holiday windows, allowing people to extend trips and incorporate training without the pressure of a 7-day sprint. Second, wearable health data has made the cost of disruption visible: a week of poor sleep, dehydration, and seat-bound flying now shows up in HRV scores, resting heart rate, and recovery metrics — making prevention more motivating. Third, the wellness hospitality market has responded: IHG reports that 72% of its hotels now offer dedicated fitness facilities versus 44% in 2018, and the average hotel gym has shifted from four treadmills and a cable stack to multi-functional training spaces.
               </p>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8, marginBottom: 20 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>What the Data Shows</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>The Global Wellness Institute's 2024 wellness economy report placed wellness tourism at $1.1 trillion in 2023, projecting $1.4 trillion by 2027. The fastest-growing sub-category is "active adventure tourism" — trips oriented around a specific physical pursuit (trekking, cycling, surfing, mountaineering) rather than passive resort stays.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8, marginBottom: 20 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>What the Data Shows</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>The Global Wellness Institute's 2024 wellness economy report placed wellness tourism at $1.1 trillion in 2023, projecting $1.4 trillion by 2027. The fastest-growing sub-category is "active adventure tourism" — trips oriented around a specific physical pursuit (trekking, cycling, surfing, mountaineering) rather than passive resort stays.</p>
               </div>
 
               <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8 }}>
@@ -120,7 +120,7 @@ export default function FitnessTravelPage() {
             </section>
 
             {/* Section 2: Training on the Road */}
-            <section id="training-on-the-road" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="training-on-the-road" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Training Without Your Gym
               </h2>
@@ -135,12 +135,12 @@ export default function FitnessTravelPage() {
                   { num: "02", title: "The Minimum Effective Dose", text: "Two sessions per week at high effort is enough to prevent meaningful detraining over 14 days. The session does not need to be long: a 30-minute circuit of push variations, squat variations, hinge patterns, and loaded carries (with luggage or backpack) meets the stimulus threshold." },
                   { num: "03", title: "Opportunistic Volume", text: "Incidental activity during travel (walking tours, hiking, swimming, cycling) often exceeds typical daily step counts and contributes meaningful cardiovascular stimulus. A walking tour of Lisbon's hilly districts covers ~12km of vertical challenge; that replaces a tempo run without requiring gym access." },
                 ].map((item) => (
-                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>{item.num}</span>
                       <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
                 ))}
               </div>
@@ -151,7 +151,7 @@ export default function FitnessTravelPage() {
             </section>
 
             {/* Section 3: Hotel Gym Strategy */}
-            <section id="hotel-gym-strategy" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="hotel-gym-strategy" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Getting the Most from Hotel Gyms
               </h2>
@@ -161,9 +161,9 @@ export default function FitnessTravelPage() {
               </p>
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 24 }}>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#1A6B3A", marginBottom: 8, textTransform: "uppercase" }}>Sufficient Setup</div>
-                  <ul style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#1A6B3A", marginBottom: 8, textTransform: "uppercase" }}>Sufficient Setup</div>
+                  <ul style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
                     <li>Adjustable dumbbells (up to at least 30kg/66lb)</li>
                     <li>Flat/incline bench</li>
                     <li>Cable machine or resistance cables</li>
@@ -171,9 +171,9 @@ export default function FitnessTravelPage() {
                     <li>Cardio machine of any type</li>
                   </ul>
                 </div>
-                <div style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700, color: "#92620A", marginBottom: 8, textTransform: "uppercase" }}>Minimal Setup</div>
-                  <ul style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
+                <div style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#92620A", marginBottom: 8, textTransform: "uppercase" }}>Minimal Setup</div>
+                  <ul style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
                     <li>Fixed dumbbells (limited weight range)</li>
                     <li>No bench</li>
                     <li>No pull structure</li>
@@ -187,14 +187,14 @@ export default function FitnessTravelPage() {
                 Day-pass access to commercial gyms is now widely available through apps like GymPass and ClassPass in most major cities, and passes typically cost $12–25/day — a reasonable trade-off for one or two sessions requiring heavy loading during a longer trip.
               </p>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Practical Note</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Train in the morning on travel days. Evening exercise — especially high-intensity — elevates core temperature and delays melatonin onset by 30–90 minutes (Myllymäki et al., 2011, Journal of Sleep Research), compounding the sleep disruption already caused by the new environment and changed light exposure.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Practical Note</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Train in the morning on travel days. Evening exercise — especially high-intensity — elevates core temperature and delays melatonin onset by 30–90 minutes (Myllymäki et al., 2011, Journal of Sleep Research), compounding the sleep disruption already caused by the new environment and changed light exposure.</p>
               </div>
             </section>
 
             {/* Section 4: Nutrition */}
-            <section id="nutrition-while-travelling" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="nutrition-while-travelling" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Nutrition &amp; Eating Well on the Road
               </h2>
@@ -221,19 +221,19 @@ export default function FitnessTravelPage() {
                     text: "Cabin humidity in commercial aircraft is 10–20% — comparable to desert air — versus 40–60% in typical indoor environments. Water turnover is accelerated. The European Food Safety Authority's recommendation of 2–2.5L/day is a floor, not a ceiling, on long-haul flights. Alcohol and caffeine at altitude amplify dehydration disproportionately to their ground-level effects."
                   },
                 ].map((item) => (
-                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>{item.num}</span>
                       <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             {/* Section 5: Supplements */}
-            <section id="supplements-carry-on" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="supplements-carry-on" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Supplements: What to Pack
               </h2>
@@ -251,25 +251,25 @@ export default function FitnessTravelPage() {
                   { rank: "5", name: "Vitamin D3", dose: "1,000–2,000 IU/day", why: "Relevant if travelling from low-UV to high-UV destination or vice versa. Most dietary travel gaps do not include vitamin D — supplementation maintains baseline during the disruption period." },
                   { rank: "6", name: "Electrolyte Tablets", dose: "1 tablet in 500ml water during/post-flight", why: "Sodium, potassium, and magnesium replacement for long-haul flights and high-sweat destination activity. LMNT, Nuun, and generic forms all work." },
                 ].map((item) => (
-                  <div key={item.rank} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.rank} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#C4622D" }}>#{item.rank}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>{item.name}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#0F7A5A" }}>#{item.rank}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, color: "#1A1714" }}>{item.name}</span>
                     </div>
-                    <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", marginBottom: 6 }}>{item.dose}</div>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{item.why}</p>
+                    <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", marginBottom: 6 }}>{item.dose}</div>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{item.why}</p>
                   </div>
                 ))}
               </div>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Carry-On Note</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Powders in unlabelled bags can trigger secondary screening. Keep supplements in original packaging, or decant into clearly labelled zip-lock bags with the printed label inside. TSA and most equivalent agencies permit powders in carry-on (subject to volume and screening checks); checked baggage has no powder volume restrictions.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Carry-On Note</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Powders in unlabelled bags can trigger secondary screening. Keep supplements in original packaging, or decant into clearly labelled zip-lock bags with the printed label inside. TSA and most equivalent agencies permit powders in carry-on (subject to volume and screening checks); checked baggage has no powder volume restrictions.</p>
               </div>
             </section>
 
             {/* Section 6: Jet Lag Protocol */}
-            <section id="jet-lag-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="jet-lag-protocol" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 The Jet Lag Recovery Protocol
               </h2>
@@ -285,19 +285,19 @@ export default function FitnessTravelPage() {
                   { num: "03", title: "Strategic Melatonin Use", text: "0.5–3mg melatonin taken 30 minutes before desired sleep time at destination assists phase advancement for eastward travel. The Cochrane review of melatonin for jet lag (Herxheimer & Petrie, 2002) confirmed it is both effective and safe for short-term use. Higher doses (5–10mg) do not produce stronger effects and increase next-day drowsiness." },
                   { num: "04", title: "Avoid Alcohol as a Sleep Aid", text: "In-flight alcohol may reduce sleep onset latency but suppresses REM sleep and increases nocturnal arousals (Ebrahim et al., 2013, Alcoholism: Clinical and Experimental Research). On travel days, alcohol's circadian effects compound the existing misalignment rather than correcting it." },
                 ].map((item) => (
-                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.num} style={{ padding: "20px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#C4622D" }}>{item.num}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#0F7A5A" }}>{item.num}</span>
                       <h3 style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{item.title}</h3>
                     </div>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{item.text}</p>
                   </div>
                 ))}
               </div>
             </section>
 
             {/* Section 7: Wellness Destinations */}
-            <section id="wellness-destinations-2026" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="wellness-destinations-2026" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Top Wellness Destinations 2026
               </h2>
@@ -339,15 +339,15 @@ export default function FitnessTravelPage() {
                     description: "Year-round surf breaks across all skill levels. Established yoga and Pilates retreat circuit. The Byron Bay area is a hub for biohacking-adjacent wellness tourism. Close proximity to sub-tropical rainforest trails and coastal trail runs."
                   },
                 ].map((item) => (
-                  <div key={item.destination} style={{ display: "grid", gridTemplateColumns: "3px 1fr", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
-                    <div style={{ backgroundColor: "#C4622D" }} />
+                  <div key={item.destination} style={{ display: "grid", gridTemplateColumns: "3px 1fr", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
+                    <div style={{ backgroundColor: "#0F7A5A" }} />
                     <div style={{ padding: "16px 18px" }}>
                       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginBottom: 8 }}>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", textTransform: "uppercase" }}>{item.region}</span>
+                        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", textTransform: "uppercase" }}>{item.region}</span>
                         <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714" }}>{item.destination}</span>
-                        <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: "rgba(196,98,45,0.1)", color: "#C4622D", border: "1px solid rgba(196,98,45,0.2)" }}>{item.tag}</span>
+                        <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", backgroundColor: "rgba(196,98,45,0.1)", color: "#0F7A5A", border: "1px solid rgba(196,98,45,0.2)" }}>{item.tag}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>{item.description}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -355,7 +355,7 @@ export default function FitnessTravelPage() {
             </section>
 
             {/* Section 8: Planning Framework */}
-            <section id="planning-framework" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #EDE8DF" }}>
+            <section id="planning-framework" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", marginBottom: 20 }}>
                 Pre-Trip Planning Framework
               </h2>
@@ -371,19 +371,19 @@ export default function FitnessTravelPage() {
                   { step: "Step 3", title: "Pack Smart Nutrition", items: ["Protein sachets or single-serve tubs (25g each)", "Mixed nuts + jerky for airport transit", "Electrolyte tablets (one strip)", "Protein bars for training-day breakfast backup"] },
                   { step: "Step 4", title: "Prepare for Time Zones", items: ["Begin sleep shift 3 nights before (eastward trips 5+ zones)", "Download a jet lag calculator app (Timeshifter is research-backed)", "Pack 0.5mg melatonin + magnesium glycinate", "Set first-morning light alarm for destination local time"] },
                 ].map((item) => (
-                  <div key={item.step} style={{ padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                    <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700, marginBottom: 4, textTransform: "uppercase" }}>{item.step}</div>
+                  <div key={item.step} style={{ padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                    <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", fontWeight: 700, marginBottom: 4, textTransform: "uppercase" }}>{item.step}</div>
                     <div style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>{item.title}</div>
-                    <ul style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
+                    <ul style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.9, paddingLeft: 16, margin: 0 }}>
                       {item.items.map((i) => <li key={i}>{i}</li>)}
                     </ul>
                   </div>
                 ))}
               </div>
 
-              <div style={{ padding: "18px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #C4622D", borderRadius: 8 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>The Deload Reframe</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>A 2-week trip where you train twice per week and sleep well is not a setback — it is a structured deload. Most evidence-based training programmes prescribe a deload week every 4–8 weeks. The physiological and psychological recovery that comes from reduced training stress often produces a supercompensation effect on return. The goal of fitness travel is not to maintain a training log identical to home — it is to return without having lost meaningful adaptation.</p>
+              <div style={{ padding: "18px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>The Deload Reframe</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>A 2-week trip where you train twice per week and sleep well is not a setback — it is a structured deload. Most evidence-based training programmes prescribe a deload week every 4–8 weeks. The physiological and psychological recovery that comes from reduced training stress often produces a supercompensation effect on return. The goal of fitness travel is not to maintain a training log identical to home — it is to return without having lost meaningful adaptation.</p>
               </div>
             </section>
 
@@ -394,15 +394,15 @@ export default function FitnessTravelPage() {
               </h2>
 
               <div style={{ padding: "28px 30px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 32 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 14 }}>Two sessions per week, protein hit, morning light — that is the entire maintenance protocol.</h3>
-                <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.8 }}>The research on detraining shows that a trained individual needs far less stimulus than they think to preserve fitness over a 2-week holiday. Frequency — not volume, not intensity — is the primary variable. The supplementary infrastructure (jet lag protocol, smart nutrition, quality sleep) reduces the recovery cost of the trip so that training sessions are actually productive rather than survival events. A well-planned fitness trip should feel different from a training week at home — that difference is the point, not a problem to be optimised away.</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 14 }}>Two sessions per week, protein hit, morning light — that is the entire maintenance protocol.</h3>
+                <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.8 }}>The research on detraining shows that a trained individual needs far less stimulus than they think to preserve fitness over a 2-week holiday. Frequency — not volume, not intensity — is the primary variable. The supplementary infrastructure (jet lag protocol, smart nutrition, quality sleep) reduces the recovery cost of the trip so that training sessions are actually productive rather than survival events. A well-planned fitness trip should feel different from a training week at home — that difference is the point, not a problem to be optimised away.</p>
               </div>
 
               {/* References */}
-              <div style={{ padding: "24px 26px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>References</p>
-                <ol style={{ fontSize: 12, color: "#5C5650", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
+              <div style={{ padding: "24px 26px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 16 }}>References</p>
+                <ol style={{ fontSize: 12, color: "#3F4B43", lineHeight: 2, paddingLeft: 20, margin: 0 }}>
                   <li>Global Wellness Institute. Global Wellness Economy Monitor. 2024. Miami, FL.</li>
                   <li>Neufer PD. The effect of detraining and reduced training on the physiological adaptations to aerobic exercise training. Sports Med. 1989;8(5):302–321.</li>
                   <li>Mujika I, Padilla S. Cardiorespiratory and metabolic characteristics of detraining in humans. Med Sci Sports Exerc. 2001;33(3):413–421.</li>
@@ -422,18 +422,18 @@ export default function FitnessTravelPage() {
         </div>
 
         {/* Related Content — full width */}
-        <div style={{ marginTop: 64, paddingTop: 48, borderTop: "1px solid #D4C9B8" }}>
+        <div style={{ marginTop: 64, paddingTop: 48, borderTop: "1px solid #E4E8E5" }}>
 
           {/* Section header */}
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 48 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>Related Content</span>
-            <span style={{ flex: 1, height: 1, backgroundColor: "#D4C9B8" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", textTransform: "uppercase" }}>Training · Travel · Recovery</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>Related Content</span>
+            <span style={{ flex: 1, height: 1, backgroundColor: "#E4E8E5" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", textTransform: "uppercase" }}>Training · Travel · Recovery</span>
           </div>
 
           {/* Research Articles */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Research Articles</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Research Articles</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
               {[
                 { href: "/research/creatine-guide", accent: "#1A6B3A", badge: "Strong Evidence", label: "Performance Science", title: "Creatine Monohydrate: Complete Evidence Review", teaser: "Saturation protocols, maintenance dosing, and evidence for travel continuation." },
@@ -441,14 +441,14 @@ export default function FitnessTravelPage() {
                 { href: "/research/melatonin-jet-lag", accent: "#92620A", badge: "Moderate Evidence", label: "Circadian Research", title: "Melatonin for Jet Lag: What the Cochrane Evidence Shows", teaser: "Dose, timing, and direction-specific protocols from the 2002 Cochrane review." },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", backgroundColor: card.accent === "#1A6B3A" ? "rgba(26,107,58,0.1)" : "rgba(146,98,10,0.1)", color: card.accent, border: `1px solid ${card.accent}33`, alignSelf: "flex-start" }}>{card.badge}</span>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Article →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", backgroundColor: card.accent === "#1A6B3A" ? "rgba(26,107,58,0.1)" : "rgba(146,98,10,0.1)", color: card.accent, border: `1px solid ${card.accent}33`, alignSelf: "flex-start" }}>{card.badge}</span>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>Read Article →</span>
                   </div>
                 </Link>
               ))}
@@ -457,22 +457,22 @@ export default function FitnessTravelPage() {
 
           {/* Related Ingredients */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Related Ingredients</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Related Ingredients</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 16 }}>
               {[
                 { href: "/ingredients/creatine", accent: "#1A6B3A", label: "Performance", title: "Creatine Monohydrate", teaser: "The most evidence-supported supplement for strength maintenance during deload periods." },
                 { href: "/ingredients/magnesium", accent: "#92620A", label: "Recovery", title: "Magnesium Glycinate", teaser: "Sleep onset and quality support — especially useful in unfamiliar environments." },
                 { href: "/ingredients/l-theanine", accent: "#1A6B3A", label: "Calm Focus", title: "L-Theanine", teaser: "Take with caffeine to blunt stimulant jitteriness during long-haul travel days." },
-                { href: "/ingredients/melatonin", accent: "#C4622D", label: "Circadian", title: "Melatonin", teaser: "0.5–1mg for phase advancement in eastward travel. Evidence-backed by Cochrane." },
+                { href: "/ingredients/melatonin", accent: "#0F7A5A", label: "Circadian", title: "Melatonin", teaser: "0.5–1mg for phase advancement in eastward travel. Evidence-backed by Cochrane." },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>View Ingredient →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>View Ingredient →</span>
                   </div>
                 </Link>
               ))}
@@ -481,22 +481,22 @@ export default function FitnessTravelPage() {
 
           {/* Product Reviews */}
           <div style={{ marginBottom: 48 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 20 }}>Product Reviews</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 20 }}>Product Reviews</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
               {[
                 { href: "/reviews/myprotein-creatine", accent: "#1A6B3A", label: "Creatine", title: "MyProtein Creatine Monohydrate", teaser: "Budget-friendly, lab-tested pure monohydrate — ideal for travel continuation packs.", score: "8.7" },
-                { href: "/reviews/on-gold-standard-whey", accent: "#C4622D", label: "Protein", title: "ON Gold Standard Whey", teaser: "Available in individual sachets — removes the powders-in-bags carry-on problem.", score: "9.1" },
+                { href: "/reviews/on-gold-standard-whey", accent: "#0F7A5A", label: "Protein", title: "ON Gold Standard Whey", teaser: "Available in individual sachets — removes the powders-in-bags carry-on problem.", score: "9.1" },
                 { href: "/reviews/wellmedr", accent: "#92620A", label: "GLP-1 Program", title: "WellMedr Weight Management", teaser: "Telehealth-based programme that includes travel support protocols for patients.", score: "9.2" },
               ].map((card) => (
                 <Link key={card.href} href={card.href} className="hub-card"
-                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", backgroundColor: "#F8F2E4" }}>
+                  style={{ display: "grid", gridTemplateColumns: "3px 1fr", textDecoration: "none", border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#F6F8F6" }}>
                   <div style={{ backgroundColor: card.accent }} />
                   <div style={{ padding: "14px 16px", display: "flex", flexDirection: "column", gap: 6 }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, textTransform: "uppercase", color: "#A89880" }}>{card.label}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, textTransform: "uppercase", color: "#586259" }}>{card.label}</span>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{card.title}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700 }}>FSP {card.score}/10</span>
-                    <span style={{ fontSize: 11, color: "#C4622D", fontWeight: 600 }}>Read Review →</span>
+                    <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{card.teaser}</p>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700 }}>FSP {card.score}/10</span>
+                    <span style={{ fontSize: 11, color: "#0F7A5A", fontWeight: 600 }}>Read Review →</span>
                   </div>
                 </Link>
               ))}
@@ -507,10 +507,10 @@ export default function FitnessTravelPage() {
           <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 32 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 8 }}>More from the Blog</p>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", margin: 0 }}>Practical guides on training, nutrition, and evidence-based supplementation</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 8 }}>More from the Blog</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", margin: 0 }}>Practical guides on training, nutrition, and evidence-based supplementation</p>
               </div>
-              <Link href="/blog" style={{ padding: "12px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", textDecoration: "none", borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+              <Link href="/blog" style={{ padding: "12px 24px", backgroundColor: "#0F7A5A", color: "#FFFFFF", textDecoration: "none", borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>
                 Browse All Articles →
               </Link>
             </div>
@@ -518,10 +518,10 @@ export default function FitnessTravelPage() {
 
           {/* Back to Blog + topic tags */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
-            <Link href="/blog" style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#A89880", textDecoration: "none" }}>← Back to Blog</Link>
+            <Link href="/blog" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#586259", textDecoration: "none" }}>← Back to Blog</Link>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
               {["Fitness Travel", "Training", "Jet Lag", "Recovery", "Supplements"].map((tag) => (
-                <span key={tag} style={{ padding: "4px 10px", border: "1px solid #D4C9B8", borderRadius: 20, fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#A89880" }}>{tag}</span>
+                <span key={tag} style={{ padding: "4px 10px", border: "1px solid #E4E8E5", borderRadius: 20, fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#586259" }}>{tag}</span>
               ))}
             </div>
           </div>

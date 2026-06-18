@@ -364,21 +364,21 @@ export default function LegionPulseReview() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* 1. Breadcrumb */}
         <div
-          style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}
+          style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}
           className="breadcrumb-pad"
         >
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/reviews" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Reviews</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/category/pre-workout" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Pre-Workout</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Legion Pulse</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/reviews" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Reviews</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/category/pre-workout" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Pre-Workout</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Legion Pulse</span>
           </div>
         </div>
 
@@ -396,8 +396,8 @@ export default function LegionPulseReview() {
             />
           </div>
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 44, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-051 · PRE-WORKOUT</span>
-            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-051 · PRE-WORKOUT</span>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
               Legion Athletics
               <br />
               <em style={{ fontWeight: 400, color: "#D4A96A" }}>Pulse Pre-Workout</em>
@@ -407,28 +407,28 @@ export default function LegionPulseReview() {
                 {[1,2,3,4,5,6,7,8,9].map((s) => <Star key={s} size={14} fill="#D4A96A" color="#D4A96A" />)}
                 <Star size={14} fill="none" color="#D4A96A" />
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>9 / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>9 / 10 · FSP v2.1</span>
             </div>
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #FFFFFF)" }} />
         </div>
 
         {/* 3. Hero Row */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-051</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A96A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Labdoor Verified</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>REV-2026-051</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#D4A96A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Labdoor Verified</span>
           </div>
           <div className="layout-hero-split">
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>Legion Athletics · Pre-Workout · High-Stimulant</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>Legion Athletics · Pre-Workout · High-Stimulant</p>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Pulse Pre-Workout
                 <br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>The 350mg Theanine Formula: Worth $67 in 2026?</em>
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43", fontSize: "0.7em" }}>The 350mg Theanine Formula: Worth $67 in 2026?</em>
               </h2>
-              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
                 Six ingredients, every one at clinical dose. The formula is deliberately simple — Legion
                 argues that six ingredients done right beats twenty done cheaply. The 1:1
                 caffeine-to-theanine ratio is the most distinctive dosing decision in the{" "}
@@ -441,7 +441,7 @@ export default function LegionPulseReview() {
                   Buy on Amazon <ExternalLink size={13} />
                 </a>
                 <Link href="/methodology"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #E4E8E5", color: "#6B7770", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                   FSP {composite.toFixed(1)} → How we score
                 </Link>
               </div>
@@ -463,11 +463,11 @@ export default function LegionPulseReview() {
 
         {/* 5. Author Box */}
         <div style={{ maxWidth: 1280, margin: "8px auto 0", padding: "0 24px" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "10px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 24 }}>
-            <div style={{ width: 32, height: 32, borderRadius: "50%", background: "linear-gradient(135deg, #D4C9B8, #D4A96A)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: 15, color: "#1A1714", flexShrink: 0 }}>F</div>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 12, padding: "10px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 24 }}>
+            <div style={{ width: 32, height: 32, borderRadius: "50%", background: "linear-gradient(135deg, #E4E8E5, #D4A96A)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: 15, color: "#1A1714", flexShrink: 0 }}>F</div>
             <div>
               <p style={{ fontSize: 13, fontWeight: 600, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 1 }}>Fitlab Research Team</p>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.08em", textTransform: "uppercase", color: "#586259" }}>
                 Reviewed by the full team ·{" "}
                 <Link href="/authors" style={{ color: "#D4A96A", textDecoration: "none" }}>Authors page →</Link>
               </p>
@@ -477,9 +477,9 @@ export default function LegionPulseReview() {
 
         {/* 6. Affiliate Disclosure */}
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links on this page may earn a commission. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#D4A96A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -497,7 +497,7 @@ export default function LegionPulseReview() {
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="container-pad">
           <div className="layout-sidebar">
 
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
@@ -506,10 +506,10 @@ export default function LegionPulseReview() {
               {/* ─── § 1. QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>FSP Quick Verdict</p>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 16, letterSpacing: "-0.02em" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>FSP Quick Verdict</p>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 16, letterSpacing: "-0.02em" }}>
                     The cleanest high-stim pre-workout available.{" "}
-                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>
                       The 1:1 theanine ratio is a genuine differentiator. The price is a real trade-off.
                     </em>
                   </h2>
@@ -526,7 +526,7 @@ export default function LegionPulseReview() {
                   <div className="review-pillar-grid">
                     {rubric.pillars.map((p) => (
                       <div key={p.pillar} style={{ padding: "12px 14px", backgroundColor: "rgba(242,235,217,0.04)", borderRadius: 8, border: "1px solid rgba(212,201,184,0.12)", minWidth: 0 }}>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>{p.pillar}</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{p.pillar}</p>
                         <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#D4A96A", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
                       </div>
                     ))}
@@ -536,31 +536,31 @@ export default function LegionPulseReview() {
 
               {/* Mobile product card */}
               <div className="block sm:hidden" style={{ margin: "0 0 48px" }}>
-                <div style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #D4C9B8", backgroundColor: "#F8F2E4" }}>
+                <div style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }}>
                   <div style={{ background: "linear-gradient(145deg, #0A1220 0%, #060C18 100%)", padding: "28px 24px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, position: "relative", minHeight: 220 }}>
                     <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "24px 24px", borderRadius: "14px 14px 0 0" }} />
-                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(212,169,106,0.15)", border: "1px solid rgba(212,169,106,0.35)", borderRadius: 20, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#D4A96A" }}>
+                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(212,169,106,0.15)", border: "1px solid rgba(212,169,106,0.35)", borderRadius: 20, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#D4A96A" }}>
                       <ShieldCheck size={10} /> Labdoor Certified
                     </span>
                     <div style={{ position: "relative", zIndex: 1 }}>
                       <Image src="/products/legion-pulse-preworkout.webp" alt="Legion Pulse Pre-Workout" width={160} height={200} style={{ objectFit: "contain", filter: "drop-shadow(0 12px 32px rgba(212,169,106,0.4))", display: "block" }} />
                     </div>
-                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F8F2E4)" }} />
+                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F6F8F6)" }} />
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Legion Athletics</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Legion Athletics</p>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Pulse Pre-Workout</p>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #F2F8F4", borderBottom: "1px solid #F2F8F4" }}>
                       {[{ val: "9/10", label: "FSP Score" }, { val: "350mg", label: "Caffeine" }, { val: "8,000mg", label: "Citrulline" }].map((stat) => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
                           <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#D4A96A", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
-                          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>{stat.label}</p>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#586259" }}>{stat.label}</p>
                         </div>
                       ))}
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / 30 servings</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 2 }}>Price / 30 servings</p>
                         <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>~$67.50</p>
                       </div>
                       <a href="https://amzn.to/4o4r29e" target="_blank" rel="nofollow noopener noreferrer"
@@ -573,7 +573,7 @@ export default function LegionPulseReview() {
               </div>
 
               {/* ─── § 2. WHAT IS LEGION PULSE? ──────────────────────────────────── */}
-              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Legion Pulse?</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
                   Legion Pulse is the flagship pre-workout from Legion Athletics, a US supplement brand
@@ -600,9 +600,9 @@ export default function LegionPulseReview() {
                   stim-free products, which simply strip everything that costs money along with the
                   caffeine.
                 </p>
-                <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, borderLeft: "3px solid #D4A96A" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#D4A96A", marginBottom: 6 }}>Who is Legion Pulse for?</p>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+                <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, borderLeft: "3px solid #D4A96A" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#D4A96A", marginBottom: 6 }}>Who is Legion Pulse for?</p>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
                     Lifters who have been burned by under-dosed pre-workouts and want to know exactly what
                     they are taking and why. Athletes who care about natural ingredients and refuse
                     artificial sweeteners. Anyone who trains in contexts where jitteriness impairs
@@ -613,25 +613,25 @@ export default function LegionPulseReview() {
               </section>
 
               {/* ─── § 3. SCORE BREAKDOWN ────────────────────────────────────────── */}
-              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>FSP v2.1 weights: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>FSP v2.1 weights: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%</p>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-051" />
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 16, lineHeight: 1.6, padding: "12px 16px", backgroundColor: "#EDE8DF", borderRadius: 8 }}>
+                <p style={{ fontSize: 13, color: "#6B7770", marginTop: 16, lineHeight: 1.6, padding: "12px 16px", backgroundColor: "#F2F8F4", borderRadius: 8 }}>
                   Composite FSP score: <strong>{composite.toFixed(1)}/10</strong>. Editorial score: <strong>9/10</strong>. The value pillar (6.5) is the honest limit of this review. The formula and transparency pillars are near-perfect. The price premium is real — whether it is justified depends on how much you value natural ingredients sourcing and the higher theanine dose.
                 </p>
               </section>
 
               {/* ─── § 4. FLAGS ──────────────────────────────────────────────────── */}
-              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red &amp; Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* ─── § 5. SUPPLEMENT FACTS ───────────────────────────────────────── */}
-              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 20 }}>
+                <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginBottom: 20 }}>
                   Two scoops (22.76g) per serving. 30 servings per container. Mix with 10–12 oz of water
                   15–30 minutes before training. Half-scoop (one scoop) assessment dose recommended for
                   new users.
@@ -640,9 +640,9 @@ export default function LegionPulseReview() {
                   <table style={{ borderCollapse: "collapse", minWidth: 480, width: "100%" }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
-                        <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", width: "42%" }}>Ingredient</th>
-                        <th style={{ padding: "12px 16px", textAlign: "right", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", width: "28%" }}>Amount / Serving</th>
-                        <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", width: "30%" }}>Clinical Range</th>
+                        <th style={{ padding: "12px 16px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", width: "42%" }}>Ingredient</th>
+                        <th style={{ padding: "12px 16px", textAlign: "right", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", width: "28%" }}>Amount / Serving</th>
+                        <th style={{ padding: "12px 16px", textAlign: "center", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", width: "30%" }}>Clinical Range</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -654,25 +654,25 @@ export default function LegionPulseReview() {
                         { name: "L-Theanine", amount: "350 mg", clinical: "100–400 mg", dosed: true },
                         { name: "Alpha-GPC (50%)", amount: "300 mg", clinical: "200–600 mg", dosed: true },
                       ].map((row, i) => (
-                        <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
+                        <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
                           <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
-                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#1A1714", fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.amount}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, color: "#1A1714", fontWeight: 700, textAlign: "right", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap" }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
-                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: "rgba(45,106,79,0.10)", border: "1px solid rgba(45,106,79,0.25)", borderRadius: 20, fontSize: 11, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>{row.clinical}</span>
+                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: "rgba(45,106,79,0.10)", border: "1px solid rgba(45,106,79,0.25)", borderRadius: 20, fontSize: 11, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>{row.clinical}</span>
                           </td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Sweetener: erythritol + stevia extract. Natural flavours only. No artificial dyes,
                   no sucralose, no Ace-K. Gluten-free. Non-GMO.
                 </p>
               </section>
 
               {/* ─── § 6. INGREDIENT BREAKDOWN ───────────────────────────────────── */}
-              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, marginBottom: 28 }}>
                   Six ingredients. No filler. Here is what each one does and why the dose matters — with
@@ -719,7 +719,7 @@ export default function LegionPulseReview() {
                     body: "Alpha-glycerylphosphorylcholine is a bioavailable choline precursor that crosses the blood-brain barrier, raising acetylcholine synthesis. De Jesus Moreno Moreno (2003, Clinical Therapeutics) demonstrated cognitive improvement at higher clinical doses. In a workout context, the primary mechanism is improved mind-muscle connection and motor pattern execution — most noticeable on isolation exercises and technical lifts. The 300mg of 50% concentrated Alpha-GPC delivers 150mg of active Alpha-GPC, slightly below the aggressive 400–600mg active range used in some trials, but functional for acute focus support.",
                   },
                 ].map((ing) => (
-                  <div key={ing.name} style={{ marginBottom: 20, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #EDE8DF", borderRadius: 10 }}>
+                  <div key={ing.name} style={{ marginBottom: 20, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #F2F8F4", borderRadius: 10 }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
                       <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ing.link ? (
@@ -728,13 +728,13 @@ export default function LegionPulseReview() {
                       </p>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{ing.body}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{ing.body}</p>
                   </div>
                 ))}
               </section>
 
               {/* ─── § 7. LAB & VERIFICATION ─────────────────────────────────────── */}
-              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab &amp; Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16, marginBottom: 24 }}>
                   {[
@@ -745,22 +745,22 @@ export default function LegionPulseReview() {
                   ].map((item) => (
                     <div key={item.cert} style={{ padding: "18px 20px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10, minWidth: 0 }}>
                       <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.cert}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: item.colour, marginBottom: 10 }}>{item.status}</p>
-                      <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>{item.detail}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: item.colour, marginBottom: 10 }}>{item.status}</p>
+                      <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>{item.detail}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 8. CLAIM AUDIT ────────────────────────────────────────────── */}
-              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Claim Audit</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Marketing claims from the Legion Pulse product page, assessed against peer-reviewed evidence.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>Marketing claims from the Legion Pulse product page, assessed against peer-reviewed evidence.</p>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* ─── § 9. HOW TO TAKE IT ─────────────────────────────────────────── */}
-              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   {[
@@ -769,27 +769,27 @@ export default function LegionPulseReview() {
                     { step: "Training Timing", protocol: "Morning or early afternoon only", recommended: true, timing: "No later than 4–5 hours before sleep", notes: "At 350mg single-source caffeine, the half-life means significant residual caffeine for 5–6 hours. Evening training after 5pm risks meaningful sleep disruption — switch to Pulse Stim-Free for late sessions." },
                     { step: "Pair With Creatine", protocol: "3–5g creatine monohydrate separately", recommended: false, timing: "Anytime — timing is not critical", notes: "Legion deliberately excludes creatine from Pulse. Take 3–5g of a standalone creatine monohydrate (see our review of the best creatine options) at a separate time of day to complete the performance stack." },
                   ].map((row) => (
-                    <div key={row.step} style={{ padding: "18px 20px", border: `1px solid ${row.recommended ? "rgba(45,106,79,0.2)" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: row.recommended ? "rgba(45,106,79,0.03)" : "#F8F2E4" }}>
+                    <div key={row.step} style={{ padding: "18px 20px", border: `1px solid ${row.recommended ? "rgba(45,106,79,0.2)" : "#E4E8E5"}`, borderRadius: 10, backgroundColor: row.recommended ? "rgba(45,106,79,0.03)" : "#F6F8F6" }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8, flexWrap: "wrap", gap: 8 }}>
                         <div>
                           <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{row.step}</p>
-                          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#D4A96A" }}>{row.protocol}</p>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#D4A96A" }}>{row.protocol}</p>
                         </div>
                         <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
-                          {row.recommended && <span style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.1)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace" }}>Recommended</span>}
-                          <span style={{ padding: "2px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{row.timing}</span>
+                          {row.recommended && <span style={{ padding: "2px 8px", backgroundColor: "rgba(45,106,79,0.1)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace" }}>Recommended</span>}
+                          <span style={{ padding: "2px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{row.timing}</span>
                         </div>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{row.notes}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{row.notes}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 10. COMPARISON ────────────────────────────────────────────── */}
-              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>
                   Pre-workouts with full label disclosure only. Prices verified May 2026. See our{" "}
                   <Link href="/best/pre-workout" style={{ color: "#D4A96A", textDecoration: "none" }}>best pre-workout roundup</Link>{" "}
                   for the full category ranking.
@@ -799,7 +799,7 @@ export default function LegionPulseReview() {
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         {["Product", "Caffeine", "Citrulline", "Theanine", "3rd-Party", "Price/Serving", "Artificial"].map((h) => (
-                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>{h}</th>
+                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -811,20 +811,20 @@ export default function LegionPulseReview() {
                         { name: "C4 Extreme", caffeine: "200mg", citrulline: "1,500mg", theanine: "None", cert: "Informed Choice", price: "$1.00", art: "Yes", highlight: false },
                         { name: "MusclePharm Assault", caffeine: "200mg", citrulline: "3,000mg", theanine: "None", cert: "None", price: "$0.75", art: "Yes", highlight: false },
                       ].map((row, i) => (
-                        <tr key={row.name} style={{ backgroundColor: row.highlight ? "rgba(212,169,106,0.08)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
+                        <tr key={row.name} style={{ backgroundColor: row.highlight ? "rgba(212,169,106,0.08)" : i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
                           <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: row.highlight ? "#D4A96A" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>{row.name}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace" }}>{row.caffeine}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace" }}>{row.citrulline}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.theanine !== "None" ? "#2D6A4F" : "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: row.theanine !== "None" ? 700 : 400 }}>{row.theanine}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.cert !== "None" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace" }}>{row.cert}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 700 }}>{row.price}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.art === "None" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace" }}>{row.art}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-jetbrains), monospace" }}>{row.caffeine}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-jetbrains), monospace" }}>{row.citrulline}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.theanine !== "None" ? "#2D6A4F" : "#6B7770", fontFamily: "var(--font-jetbrains), monospace", fontWeight: row.theanine !== "None" ? 700 : 400 }}>{row.theanine}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.cert !== "None" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-jetbrains), monospace" }}>{row.cert}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#1A1714", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 700 }}>{row.price}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.art === "None" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-jetbrains), monospace" }}>{row.art}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6 }}>
+                <p style={{ fontSize: 13, color: "#6B7770", marginTop: 12, lineHeight: 1.6 }}>
                   CM = Citrulline Malate. L-Cit = L-Citrulline base. Theanine column empty means the ingredient is absent from that formula.
                   Pulse is the only product here with 350mg theanine — a genuinely unique formulation position.
                   For the{" "}
@@ -834,18 +834,18 @@ export default function LegionPulseReview() {
               </section>
 
               {/* ─── § 11. PRODUCTS AT A GLANCE ──────────────────────────────────── */}
-              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
                   <ProductCard name="Pulse Pre-Workout" brand="Legion Athletics" category="High-Stim Pre-Workout" score={9} priceUSD="~$67.50 / 30 servings" priceINR="₹5,800–₹7,200" tags={["Labdoor", "350mg Theanine", "No Artificial"]} buyUrl="https://amzn.to/4o4r29e" buyLabel="Check Price" reviewSlug="legion-pulse-pre-workout-review-2026" image="legion-pulse-preworkout.webp" bgFrom="#0A1220" bgTo="#060C18" accent="#D4A96A" featured={true} />
-                  <ProductCard name="BULK Black Pre-Workout" brand="Transparent Labs" category="High-Stim Pre-Workout" priceUSD="$59.99 / 30 servings" priceINR="₹5,200–₹6,500" tags={["Informed Choice", "305mg Caffeine", "Nootropic Stack"]} buyUrl="https://amzn.to/3RPRlnm" buyLabel="Check Price" reviewSlug="transparent-labs-bulk-black-review" image="tl-bulk-black-preworkout.webp" bgFrom="#1A0A06" bgTo="#0D0402" accent="#C4622D" />
+                  <ProductCard name="BULK Black Pre-Workout" brand="Transparent Labs" category="High-Stim Pre-Workout" priceUSD="$59.99 / 30 servings" priceINR="₹5,200–₹6,500" tags={["Informed Choice", "305mg Caffeine", "Nootropic Stack"]} buyUrl="https://amzn.to/3RPRlnm" buyLabel="Check Price" reviewSlug="transparent-labs-bulk-black-review" image="tl-bulk-black-preworkout.webp" bgFrom="#1A0A06" bgTo="#0D0402" accent="#0F7A5A" />
                   <ProductCard name="Gorilla Mode Pre-Workout" brand="Gorilla Mind" category="High-Stim Pre-Workout" priceUSD="$49.99 / 30 servings" priceINR="N/A" tags={["350mg Caffeine", "9g L-Citrulline", "No Prop Blend"]} buyUrl="https://amzn.to/gorilla-mode" buyLabel="Check Price" image="gorilla-mode-preworkout.webp" bgFrom="#0A1A0A" bgTo="#060E06" accent="#2D6A4F" />
                   <ProductCard name="C4 Original Pre-Workout" brand="Cellucor" category="Pre-Workout" priceUSD="~$1.00 / serving" priceINR="₹1,500–₹2,000" tags={["200mg Caffeine", "Informed Choice", "Budget"]} buyUrl="https://amzn.to/c4-original" buyLabel="Check Price" image="c4-original-preworkout.webp" bgFrom="#1A1A2E" bgTo="#11111E" accent="#3A5F8B" />
                 </div>
               </section>
 
               {/* ─── § 12. PROS & CONS ───────────────────────────────────────────── */}
-              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros &amp; Cons</h2>
                 <ProsCons
                   pros={[
@@ -870,7 +870,7 @@ export default function LegionPulseReview() {
               </section>
 
               {/* ─── § 13. SAFETY ────────────────────────────────────────────────── */}
-              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety &amp; Side Effects</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {[
@@ -879,16 +879,16 @@ export default function LegionPulseReview() {
                     { title: "Erythritol Sweetener", icon: "✓", risk: "low", body: "Erythritol is a sugar alcohol with a clean safety profile. Unlike other sugar alcohols (sorbitol, xylitol), erythritol is largely absorbed before the large intestine, producing minimal GI distress at typical supplement doses. One recent observational study (Witkowski et al., 2023, Nature Medicine) flagged a potential cardiovascular signal at high habitual dietary erythritol intake — this is from dietary sources at much higher quantities than supplement use. At supplement doses in Pulse, no adverse effect has been established." },
                     { title: "Not Appropriate For", icon: "🚫", risk: "high", body: "Not appropriate for individuals under 18, pregnant or nursing women, anyone with cardiovascular disease or uncontrolled hypertension, individuals sensitive to stimulants, those on MAOI antidepressants, or anyone training within 6 hours of intended sleep time. The Stim-Free version removes all these caffeine-related contraindications." },
                   ].map((item) => (
-                    <div key={item.title} style={{ padding: "18px 20px", backgroundColor: item.risk === "high" ? "rgba(139,58,44,0.06)" : item.risk === "moderate" ? "rgba(139,115,85,0.06)" : "#F8F2E4", border: `1px solid ${item.risk === "high" ? "rgba(139,58,44,0.2)" : item.risk === "moderate" ? "rgba(139,115,85,0.2)" : "#EDE8DF"}`, borderRadius: 10 }}>
+                    <div key={item.title} style={{ padding: "18px 20px", backgroundColor: item.risk === "high" ? "rgba(139,58,44,0.06)" : item.risk === "moderate" ? "rgba(139,115,85,0.06)" : "#F6F8F6", border: `1px solid ${item.risk === "high" ? "rgba(139,58,44,0.2)" : item.risk === "moderate" ? "rgba(139,115,85,0.2)" : "#F2F8F4"}`, borderRadius: 10 }}>
                       <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 10 }}>{item.icon} {item.title}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.body}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.body}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 14. VALUE ─────────────────────────────────────────────────── */}
-              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price &amp; Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="citrulline malate" />
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12, marginTop: 24 }}>
@@ -898,17 +898,17 @@ export default function LegionPulseReview() {
                     { option: "LegionAthletics.com Direct", price: "Subscribe & save available", note: "Loyalty points programme; auto-ship discount" },
                     { option: "Amazon.in (USA)", price: "₹5,800–₹7,200 / tub", note: "Prices verified May 2026. Significant import premium." },
                   ].map((row) => (
-                    <div key={row.option} style={{ padding: "14px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, minWidth: 0 }}>
+                    <div key={row.option} style={{ padding: "14px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, minWidth: 0 }}>
                       <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{row.option}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#D4A96A", marginBottom: 4 }}>{row.price}</p>
-                      <p style={{ fontSize: 12, color: "#8A8480" }}>{row.note}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#D4A96A", marginBottom: 4 }}>{row.price}</p>
+                      <p style={{ fontSize: 12, color: "#6B7770" }}>{row.note}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 15. WHERE TO BUY ──────────────────────────────────────────── */}
-              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
                   {[
@@ -920,9 +920,9 @@ export default function LegionPulseReview() {
                     <div key={item.channel} style={{ padding: "18px 20px", backgroundColor: item.bg, border: `1px solid ${item.border}`, borderRadius: 10 }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8, flexWrap: "wrap", gap: 8 }}>
                         <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{item.channel}</p>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: item.colour, flexShrink: 0 }}>{item.verdict}</span>
+                        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: item.colour, flexShrink: 0 }}>{item.verdict}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: item.cta ? 12 : 0 }}>{item.detail}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: item.cta ? 12 : 0 }}>{item.detail}</p>
                       {item.cta && (
                         <a href="https://amzn.to/4o4r29e" target="_blank" rel="nofollow noopener noreferrer"
                           style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "8px 16px", backgroundColor: "#D4A96A", color: "#1A1714", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
@@ -935,13 +935,13 @@ export default function LegionPulseReview() {
               </section>
 
               {/* ─── § 16. FAQ — with + / – toggle ──────────────────────────────── */}
-              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
                     <details
                       key={i}
-                      style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}
+                      style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderRadius: 8, border: "1px solid #F2F8F4", overflow: "hidden" }}
                     >
                       <summary
                         style={{
@@ -963,8 +963,8 @@ export default function LegionPulseReview() {
                             width: 24,
                             height: 24,
                             borderRadius: "50%",
-                            backgroundColor: "#EDE8DF",
-                            border: "1px solid #D4C9B8",
+                            backgroundColor: "#F2F8F4",
+                            border: "1px solid #E4E8E5",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -975,7 +975,7 @@ export default function LegionPulseReview() {
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#3F4B43", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {faq.acceptedAnswer.text}
                       </p>
                     </details>
@@ -1000,20 +1000,20 @@ export default function LegionPulseReview() {
               {/* ─── § 17. FINAL VERDICT ─────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
                 <div style={{ backgroundColor: "#1A1714", borderRadius: 12, padding: "36px 32px" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 16 }}>FINAL VERDICT · REV-2026-051</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 16 }}>FINAL VERDICT · REV-2026-051</p>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
                       <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#D4A96A", lineHeight: 1 }}>{editorialScore}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.15em", color: "rgba(212,201,184,0.5)" }}>/10 · FSP EDITORIAL</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.15em", color: "rgba(212,201,184,0.5)" }}>/10 · FSP EDITORIAL</p>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12, lineHeight: 1.2 }}>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 12, lineHeight: 1.2 }}>
                         The cleanest formula in the category.{" "}
-                        <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>You pay a premium for it. It is worth it, if natural matters to you.</em>
+                        <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>You pay a premium for it. It is worth it, if natural matters to you.</em>
                       </h3>
                     </div>
                   </div>
-                  <p style={{ fontSize: 15, color: "#D4C9B8", lineHeight: 1.8, marginBottom: 16 }}>
+                  <p style={{ fontSize: 15, color: "#E4E8E5", lineHeight: 1.8, marginBottom: 16 }}>
                     Legion Pulse earns a 9/10 on the FSP because it does two things simultaneously that
                     virtually no competitor manages: clinical doses across all six ingredients, and zero
                     artificial anything. The 350mg theanine decision is evidence-grounded and produces a
@@ -1021,7 +1021,7 @@ export default function LegionPulseReview() {
                     accuracy) provides more granular verification than a standard COA. The formula is
                     exactly what Legion claims it is.
                   </p>
-                  <p style={{ fontSize: 15, color: "#D4C9B8", lineHeight: 1.8, marginBottom: 28 }}>
+                  <p style={{ fontSize: 15, color: "#E4E8E5", lineHeight: 1.8, marginBottom: 28 }}>
                     The value score (6.5/10) is the honest limit. At $2.25/serving, Pulse is the most
                     expensive product in this comparison. Users who want an equivalent ergogenic formula
                     and can accept dual-phase caffeine and 200mg theanine will find{" "}
@@ -1038,7 +1038,7 @@ export default function LegionPulseReview() {
                       Buy Legion Pulse on Amazon <ExternalLink size={14} />
                     </a>
                     <Link href="/best/pre-workout"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 20px", border: "1px solid rgba(212,201,184,0.2)", color: "#A89880", fontSize: 12, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>
+                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "12px 20px", border: "1px solid rgba(212,201,184,0.2)", color: "#586259", fontSize: 12, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em" }}>
                       All pre-workout reviews →
                     </Link>
                   </div>
@@ -1048,7 +1048,7 @@ export default function LegionPulseReview() {
               {/* ─── Research References — clickable ──────────────────────────────── */}
               <section style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
-                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
                       { text: "Pérez-Guisado J, Jakeman PM. (2010). Citrulline malate enhances athletic anaerobic performance and relieves muscle soreness. J Strength Cond Res. 24(5):1215–22.", url: "https://doi.org/10.1519/JSC.0b013e3181cb28e0" },
@@ -1061,10 +1061,10 @@ export default function LegionPulseReview() {
                       { text: "EFSA Panel on Dietetic Products, Nutrition and Allergies. (2015). Scientific Opinion on the safety of caffeine. EFSA Journal. 13(5):4102.", url: "https://doi.org/10.2903/j.efsa.2015.4102" },
                       { text: "Witkowski M et al. (2023). The artificial sweetener erythritol and cardiovascular event risk. Nat Med. 29(3):710–8.", url: "https://doi.org/10.1038/s41591-023-02223-9" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
                         <a href={ref.url} target="_blank" rel="noopener noreferrer"
-                          style={{ color: "#D4A96A", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>
+                          style={{ color: "#D4A96A", textDecoration: "none", fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, whiteSpace: "nowrap" }}>
                           doi →
                         </a>
                       </li>
@@ -1078,14 +1078,14 @@ export default function LegionPulseReview() {
         </div>
 
         {/* Related Reviews */}
-        <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+        <section style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="pad-section-sm px-page">
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Related Reviews</p>
                 <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
-              <Link href="/reviews" style={{ fontSize: 12, color: "#D4A96A", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+              <Link href="/reviews" style={{ fontSize: 12, color: "#D4A96A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
               {relatedReviews.map((r) => <ReviewCard key={r.slug} {...r} />)}

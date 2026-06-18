@@ -122,18 +122,18 @@ const safetyRisks = [
 
 export default function BeefOrganSafetyPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/research" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Research</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Beef Organ Supplement Safety</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/research" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Research</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Beef Organ Supplement Safety</span>
         </div>
       </div>
 
@@ -142,31 +142,31 @@ export default function BeefOrganSafetyPage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>ART-011</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Safety Research</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>ART-011</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>Safety Research</span>
           </div>
           <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.1, marginBottom: 16 }}>
             Beef Organ Supplement Safety
-            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.65em", marginTop: 10 }}>Vitamin A Toxicity, Heavy Metals & Who Should Avoid Them</em>
+            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#3F4B43", fontSize: "0.65em", marginTop: 10 }}>Vitamin A Toxicity, Heavy Metals & Who Should Avoid Them</em>
           </h1>
 
           {/* Author bar */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20, padding: "10px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20, padding: "10px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
             <div style={{ width: 30, height: 30, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, fontWeight: 700 }}>FR</span>
+              <span style={{ color: "#FFFFFF", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700 }}>FR</span>
             </div>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap", alignItems: "center" }}>
               <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>Fitlab Research Team</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>Published May 2026</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>12 min read</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>Published May 2026</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>12 min read</span>
             </div>
           </div>
 
           {/* Medical disclaimer */}
           <div style={{ padding: "12px 16px", backgroundColor: "#FFF8F0", border: "1px solid #E5C4B8", borderRadius: 8, borderLeft: "3px solid #9B2020", marginBottom: 20 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9B2020", marginBottom: 6 }}>Medical Disclaimer</p>
-            <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65 }}>This article is educational and does not constitute medical advice. Consult a physician before starting any supplement, particularly if you are pregnant, have a chronic health condition, or take prescription medication.</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#9B2020", marginBottom: 6 }}>Medical Disclaimer</p>
+            <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.65 }}>This article is educational and does not constitute medical advice. Consult a physician before starting any supplement, particularly if you are pregnant, have a chronic health condition, or take prescription medication.</p>
           </div>
         </div>
 
@@ -181,16 +181,16 @@ export default function BeefOrganSafetyPage() {
             { label: "Safe for most adults", value: "1 serving/day", sub: "With COA-verified product" },
           ].map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", backgroundColor: "#252220", borderRadius: 8 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>{s.label}</p>
-              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{s.value}</p>
-              <p style={{ fontSize: 11, color: "#8A8480" }}>{s.sub}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 4 }}>{s.label}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#FFFFFF", marginBottom: 2 }}>{s.value}</p>
+              <p style={{ fontSize: 11, color: "#6B7770" }}>{s.sub}</p>
             </div>
           ))}
         </div>
 
         {/* Quick answer */}
-        <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>Quick Answer</p>
+        <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, marginBottom: 48 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>Quick Answer</p>
           <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.75 }}>
             For healthy adults without iron overload conditions, daily beef organ supplements from COA-verified brands are safe at label doses. The two primary risks are: (1) vitamin A (retinol) accumulation from liver-containing products — a concern mainly for pregnant women and those consuming multiple liver sources; (2) heavy metal burden from products without independent testing. The solution to both: choose brands that publish batch-level COA data, track total retinol from all sources, and get a ferritin test annually if using iron-dense products long-term.
           </p>
@@ -200,28 +200,28 @@ export default function BeefOrganSafetyPage() {
         <SectionHeading label="Safety" figure="§ 01" title="The four main" titleItalic="risk vectors" size="sm" />
         <div style={{ display: "flex", flexDirection: "column", gap: 20, marginBottom: 48 }}>
           {safetyRisks.map((risk, i) => (
-            <div key={risk.title} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
+            <div key={risk.title} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden" }}>
               <div style={{ padding: "14px 18px", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#5C5650" }}>0{i + 1}</span>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#F2EBD9" }}>{risk.title}</p>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#3F4B43" }}>0{i + 1}</span>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#FFFFFF" }}>{risk.title}</p>
                 </div>
                 <EvidenceBadge level={risk.level} />
               </div>
-              <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
+              <div style={{ padding: "16px 18px", backgroundColor: "#F6F8F6" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14, marginBottom: 14 }}>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 4 }}>Severity</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#586259", textTransform: "uppercase", marginBottom: 4 }}>Severity</p>
                     <p style={{ fontSize: 13, color: "#9B2020", fontWeight: 600 }}>{risk.severity}</p>
                   </div>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#A89880", textTransform: "uppercase", marginBottom: 4 }}>Affected Groups</p>
-                    <p style={{ fontSize: 13, color: "#5C5650" }}>{risk.who}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", color: "#586259", textTransform: "uppercase", marginBottom: 4 }}>Affected Groups</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43" }}>{risk.who}</p>
                   </div>
                 </div>
                 <p style={{ fontSize: 13, color: "#1A1714", lineHeight: 1.65, marginBottom: 10 }}><strong>Data:</strong> {risk.data}</p>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: 10 }}><strong>Mitigation:</strong> {risk.mitigation}</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>{risk.refs}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: 10 }}><strong>Mitigation:</strong> {risk.mitigation}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>{risk.refs}</p>
               </div>
             </div>
           ))}
@@ -230,7 +230,7 @@ export default function BeefOrganSafetyPage() {
         {/* Vitamin A deep dive */}
         <SectionHeading label="Vitamin A" figure="§ 02" title="Retinol toxicity:" titleItalic="what the evidence shows" size="sm" />
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             Retinol (preformed vitamin A) is fat-soluble and accumulates in the liver. Unlike beta-carotene (the plant-based precursor), retinol has no safe upper threshold for excess absorption — the body continues absorbing it regardless of stored amounts.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 20 }}>
@@ -240,16 +240,16 @@ export default function BeefOrganSafetyPage() {
               { phase: "Teratogenicity (pregnancy)", threshold: ">3,000µg/day in first trimester", effects: "Neural crest cell migration defects, ear/heart/CNS malformations. Hard limit." },
               { phase: "Safe range", threshold: "700–3,000µg/day (adults)", effects: "No adverse effects in healthy adults. The typical daily diet provides 600–1,000µg/day." },
             ].map((row) => (
-              <div key={row.phase} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 12, padding: "12px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
+              <div key={row.phase} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 2fr", gap: 12, padding: "12px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{row.phase}</p>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D" }}>{row.threshold}</p>
-                <p style={{ fontSize: 13, color: "#5C5650" }}>{row.effects}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A" }}>{row.threshold}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43" }}>{row.effects}</p>
               </div>
             ))}
           </div>
-          <div style={{ padding: 16, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", marginBottom: 8 }}>Practical Calculation: Single-organ liver supplement</p>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+          <div style={{ padding: 16, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", marginBottom: 8 }}>Practical Calculation: Single-organ liver supplement</p>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
               A 6-capsule serving of freeze-dried beef liver supplement contains approximately 3–6g of dried liver. Fresh-to-dry ratio for beef liver is approximately 4:1 (25% dry weight). So 3–6g dried liver ≈ 12–24g fresh liver equivalent. At 16,899µg retinol/100g, this equates to roughly <strong style={{ color: "#1A1714" }}>2,028–4,056µg retinol per serving</strong> — straddling the UL for some users. At 3g dried liver: ~2,000µg. Most supplements target this lower range.
             </p>
           </div>
@@ -258,7 +258,7 @@ export default function BeefOrganSafetyPage() {
         {/* Heavy metals section */}
         <SectionHeading label="Heavy Metals" figure="§ 03" title="Cadmium, lead, arsenic" titleItalic="in organ supplements" size="sm" />
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 16 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 16 }}>
             The liver is the body's primary detoxification organ — meaning it processes and can concentrate environmental toxins. The kidney is the filtering organ — which means it handles and can bioaccumulate heavy metals that the liver processes.
           </p>
           <div className="review-table-wrap">
@@ -266,7 +266,7 @@ export default function BeefOrganSafetyPage() {
               <thead>
                 <tr style={{ backgroundColor: "#1A1714" }}>
                   {["Metal", "Highest Organ", "Safe Limit (EFSA/EPA)", "COA-verified risk?"].map((h) => (
-                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", color: "#F2EBD9", letterSpacing: "0.08em" }}>{h}</th>
+                    <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#FFFFFF", letterSpacing: "0.08em" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -277,17 +277,17 @@ export default function BeefOrganSafetyPage() {
                   ["Arsenic", "Liver", "No safe inorganic level", "Low (grass-fed, clean soil)"],
                   ["Mercury", "Liver, Kidney", "1.3µg/kg BW/week (EFSA)", "Very Low (land-based animals)"],
                 ].map(([metal, organ, limit, risk], i) => (
-                  <tr key={metal} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={metal} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "10px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{metal}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{organ}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 12, fontFamily: "var(--font-dm-mono), monospace", color: "#8A8480" }}>{limit}</td>
-                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#5C5650" }}>{risk}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#3F4B43" }}>{organ}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 12, fontFamily: "var(--font-jetbrains), monospace", color: "#6B7770" }}>{limit}</td>
+                    <td style={{ padding: "10px 14px", fontSize: 13, color: "#3F4B43" }}>{risk}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 13, color: "#6B7770", marginTop: 12, lineHeight: 1.6 }}>
             Mercury is primarily a concern for marine animals. Grass-fed beef organ supplements present very low mercury risk. Cadmium is the primary concern for kidney supplements — mitigated by clean pasture sourcing and published COA.
           </p>
         </div>
@@ -327,10 +327,10 @@ export default function BeefOrganSafetyPage() {
               detail: "Single serving of a well-dosed liver supplement is likely safe for most. Use products with disclosed doses, stay under 3,000µg retinol RAE/day total from all sources, and involve OB/GYN as you approach conception.",
             },
           ].map((item) => (
-            <div key={item.group} style={{ padding: "14px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, display: "grid", gridTemplateColumns: "2fr 1fr 3fr", gap: 12, alignItems: "start" }}>
+            <div key={item.group} style={{ padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, display: "grid", gridTemplateColumns: "2fr 1fr 3fr", gap: 12, alignItems: "start" }}>
               <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.group}</p>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: item.risk === "Critical" || item.risk === "High" ? "#9B2020" : "#C4622D" }}>{item.risk}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{item.detail}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: item.risk === "Critical" || item.risk === "High" ? "#9B2020" : "#0F7A5A" }}>{item.risk}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{item.detail}</p>
             </div>
           ))}
         </div>
@@ -349,9 +349,9 @@ export default function BeefOrganSafetyPage() {
               "Take with meals, ideally containing fat — improves fat-soluble vitamin absorption and reduces nausea",
               "If you eat whole liver regularly (1–2x/week), reduce or eliminate supplement dose to avoid retinol stacking",
             ].map((tip, i) => (
-              <div key={i} style={{ display: "flex", gap: 12, padding: "10px 14px", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", border: "1px solid #D4C9B8", borderRadius: 6 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", flexShrink: 0, minWidth: 20 }}>{String(i + 1).padStart(2, "0")}</span>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{tip}</p>
+              <div key={i} style={{ display: "flex", gap: 12, padding: "10px 14px", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", border: "1px solid #E4E8E5", borderRadius: 6 }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", flexShrink: 0, minWidth: 20 }}>{String(i + 1).padStart(2, "0")}</span>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{tip}</p>
               </div>
             ))}
           </div>
@@ -359,20 +359,20 @@ export default function BeefOrganSafetyPage() {
 
         {/* Bottom line */}
         <div style={{ padding: 24, backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Bottom Line</p>
-          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>Safe for most adults. Specific risks exist for specific groups.</p>
-          <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Bottom Line</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 12 }}>Safe for most adults. Specific risks exist for specific groups.</p>
+          <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.75 }}>
             Beef organ supplements are not inherently dangerous, but they are not consequence-free either. The risks — vitamin A accumulation, heavy metals, iron overload — are real and dose-dependent. For the majority of healthy adults without the specific contraindications listed above, daily use of a single COA-verified organ supplement at label doses is safe. The key error is naive stacking: multiple liver products, concurrent vitamin A supplements, and daily whole liver meals can together push retinol above safe thresholds without the user realising it.
           </p>
         </div>
 
         {/* FAQ */}
         <SectionHeading label="FAQ" figure="§ 06" title="Common safety" titleItalic="questions" size="sm" />
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
               <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
         </div>
@@ -389,11 +389,11 @@ export default function BeefOrganSafetyPage() {
             { num: 6, text: "USDA FoodData Central. Beef liver, raw. National Agricultural Library.", url: "https://fdc.nal.usda.gov/" },
             { num: 7, text: "Hallberg L et al. Heme iron absorption in man. Am J Clin Nutr, 1979;32(10):2111–2119.", url: "https://pubmed.ncbi.nlm.nih.gov/495550/" },
           ].map((ref) => (
-            <div key={ref.num} style={{ display: "flex", gap: 12, padding: "8px 12px", backgroundColor: "#F8F2E4", borderRadius: 6 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", flexShrink: 0, minWidth: 20 }}>[{ref.num}]</span>
-              <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>
+            <div key={ref.num} style={{ display: "flex", gap: 12, padding: "8px 12px", backgroundColor: "#F6F8F6", borderRadius: 6 }}>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", flexShrink: 0, minWidth: 20 }}>[{ref.num}]</span>
+              <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>
                 {ref.text}{" "}
-                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#C4622D", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace" }}>↗ PubMed</a>
+                <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace" }}>↗ PubMed</a>
               </p>
             </div>
           ))}
@@ -408,7 +408,7 @@ export default function BeefOrganSafetyPage() {
             { name: "Freeze-Dried vs Desiccated: What's the Difference?", href: "/research/freeze-dried-vs-desiccated-organ-supplements" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div style={{ padding: 14, border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+              <div style={{ padding: 14, border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                 <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.name}</p>
               </div>
             </Link>

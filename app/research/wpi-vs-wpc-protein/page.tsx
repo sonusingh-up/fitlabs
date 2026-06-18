@@ -111,79 +111,79 @@ export default function WPIvsWPCResearch() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* ── Breadcrumb ─────────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
           <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/research" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Research</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>WPI vs WPC Protein</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/research" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Research</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>WPI vs WPC Protein</span>
           </div>
         </div>
 
         {/* ── Hero ───────────────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", padding: "48px 24px 40px" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", padding: "48px 24px 40px" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
 
             {/* Evidence badge + meta */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20, alignItems: "center" }}>
-              <span style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.12em" }}>ART-013 · Comparative Analysis · 12 min read</span>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.12em" }}>June 2026</span>
+              <span style={{ padding: "3px 10px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>Strong Evidence</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.12em" }}>ART-013 · Comparative Analysis · 12 min read</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.12em" }}>June 2026</span>
             </div>
 
             {/* H1 */}
             <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#1A1714", lineHeight: 1.1, marginBottom: 20 }}>
               WPI vs WPC Protein:{" "}
-              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>What the Evidence Actually Shows</em>
+              <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>What the Evidence Actually Shows</em>
             </h1>
 
             {/* Lead paragraph */}
-            <p style={{ fontSize: 17, color: "#5C5650", lineHeight: 1.75, marginBottom: 28 }}>
+            <p style={{ fontSize: 17, color: "#3F4B43", lineHeight: 1.75, marginBottom: 28 }}>
               Both start as liquid whey. Both deliver complete protein. The question is whether the extra filtration step that separates isolate from concentrate produces outcomes worth a 35% price premium — or whether it mostly generates marketing copy. The answer depends entirely on who is asking.
             </p>
 
             {/* Tags */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 20 }}>
               {["Whey Protein Isolate", "Whey Protein Concentrate", "Protein Purity", "Lactose", "Muscle Protein Synthesis", "Cost Analysis"].map((tag) => (
-                <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 10, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{tag}</span>
+                <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.15)", borderRadius: 4, fontSize: 10, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em" }}>{tag}</span>
               ))}
             </div>
 
             {/* Author bar */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #D4C9B8" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 16, alignItems: "center", paddingTop: 18, borderTop: "1px solid #E4E8E5" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <div style={{ width: 34, height: 34, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, fontWeight: 700, color: "#2D6A4F", letterSpacing: "0.04em" }}>FLR</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, fontWeight: 700, color: "#2D6A4F", letterSpacing: "0.04em" }}>FLR</span>
                 </div>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Written by</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Written by</p>
                   <Link href="/authors/fitlab-research-team" style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Fitlab Research Team
                   </Link>
                 </div>
               </div>
-              <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+              <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Evidence Standard</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Evidence Standard</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>Peer-reviewed citations only</p>
               </div>
-              <span style={{ color: "#D4C9B8", fontSize: 16 }}>·</span>
+              <span style={{ color: "#E4E8E5", fontSize: 16 }}>·</span>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", margin: "0 0 2px" }}>Last Updated</p>
-                <p style={{ fontSize: 13, color: "#5C5650", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>June 3, 2026</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", margin: "0 0 2px" }}>Last Updated</p>
+                <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>June 3, 2026</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* ── Key Stats Dark Panel ────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714", padding: "32px 24px" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#1A1714", padding: "32px 24px" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 20 }}>Key Findings at a Glance</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 20 }}>Key Findings at a Glance</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 20 }}>
               {[
                 { value: "≥90%", label: "WPI protein by weight vs ~78% for WPC80", sub: "FDA Supplement Facts labelling standard" },
@@ -193,9 +193,9 @@ export default function WPIvsWPCResearch() {
                 { value: "30 min", label: "Earlier peak plasma amino acids for hydrolysed WPI vs WPC", sub: "Tang et al., J Appl Physiol, 2009" },
               ].map((stat) => (
                 <div key={stat.value} style={{ borderLeft: "2px solid #2D6A4F", paddingLeft: 14 }}>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#F2EBD9", margin: "0 0 4px" }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: "#FFFFFF", margin: "0 0 4px" }}>{stat.value}</p>
                   <p style={{ fontSize: 12, color: "rgba(242,235,217,0.7)", lineHeight: 1.4, margin: "0 0 4px" }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.06em", margin: 0 }}>{stat.sub}</p>
                 </div>
               ))}
             </div>
@@ -203,10 +203,10 @@ export default function WPIvsWPCResearch() {
         </div>
 
         {/* ── Quick Answer Box ────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", padding: "28px 24px" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", padding: "28px 24px" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
             <div style={{ borderLeft: "3px solid #1A6B3A", backgroundColor: "rgba(26,107,58,0.04)", padding: "16px 18px", borderRadius: "0 8px 8px 0" }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#1A6B3A", marginBottom: 8 }}>Quick Answer</p>
               <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7, margin: 0 }}>
                 For muscle building, WPI and WPC produce identical results at matched protein doses — strong evidence from a 2018 meta-analysis of 49 RCTs (Morton et al.). WPI is meaningfully better in two specific situations: lactose intolerance (under 1g lactose vs 4–5g per serving) and strict caloric restriction (fewer calories per gram of protein). For everyone else, WPC delivers the same outcome at 35% lower cost.
               </p>
@@ -220,17 +220,17 @@ export default function WPIvsWPCResearch() {
           {/* § 01 — What they are + how processing differs */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 01" figure="§" title="What They Are:" titleItalic="Processing Chain & What Changes" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               Liquid whey — the watery byproduct of cheese production — starts the same for both types. It is around 6% total solids, mostly protein, lactose, and minerals, suspended in water. What you do with it next determines whether the dried powder is concentrate or isolate.
             </p>
 
             {/* Processing comparison table */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
               <div style={{ backgroundColor: "#1A1714", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>PROCESSING COMPARISON</span>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>Liquid Whey → Final Powder</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>PROCESSING COMPARISON</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>Liquid Whey → Final Powder</span>
               </div>
-              <div style={{ backgroundColor: "#F8F2E4" }}>
+              <div style={{ backgroundColor: "#F6F8F6" }}>
                 {[
                   { label: "Filtration method", wpc: "Single-pass ultrafiltration (UF)", wpi: "Multi-pass cross-flow microfiltration or ion exchange" },
                   { label: "Protein by dry weight", wpc: "70–80% (WPC70–80)", wpi: "≥90% (typically 90–95%)" },
@@ -240,19 +240,19 @@ export default function WPIvsWPCResearch() {
                   { label: "Cost per gram protein (US)", wpc: "$0.038–0.048", wpi: "$0.052–0.065" },
                   { label: "Calories per 25g protein", wpc: "120–130 kcal", wpi: "100–110 kcal" },
                 ].map((row, i) => (
-                  <div key={row.label} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", padding: "11px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <div key={row.label} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", padding: "11px 20px", borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <span style={{ fontSize: 12, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.label}</span>
-                    <span style={{ fontSize: 12, color: "#8B7355", fontFamily: "var(--font-dm-mono), monospace" }}>{row.wpc}</span>
-                    <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.wpi}</span>
+                    <span style={{ fontSize: 12, color: "#8B7355", fontFamily: "var(--font-jetbrains), monospace" }}>{row.wpc}</span>
+                    <span style={{ fontSize: 12, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 600 }}>{row.wpi}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 16 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 16 }}>
               <strong style={{ color: "#1A1714" }}>Cross-flow microfiltration (CFM)</strong> pushes liquid whey through ceramic membranes at low temperature and without chemical washes. Protein molecules are retained, fat globules and lactose pass through. The result is a high-purity protein fraction with its native molecular structure intact. This matters because undenatured whey fractions — immunoglobulins, lactoferrin, beta-lactoglobulin — are preserved at higher levels compared to ion-exchange WPI.
             </p>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8 }}>
               <strong style={{ color: "#1A1714" }}>Ion exchange WPI</strong> uses acid-alkali pH manipulation to selectively bind whey proteins to a resin column, then elutes them at a controlled pH. It achieves very high protein yields — sometimes 95%+ — but the chemical processing strips most bioactive fractions. The final product is technically purer by the numbers but biologically less complex. Neither type is universally superior — it depends on what you need from the protein.
             </p>
           </section>
@@ -260,17 +260,17 @@ export default function WPIvsWPCResearch() {
           {/* § 02 — The flagship muscle-building trial */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 02" figure="§" title="The Muscle-Building Evidence:" titleItalic="What the Meta-Analysis Actually Showed" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               The most common reason people agonise over WPI vs WPC is muscle building. The evidence resolves this quickly.
             </p>
 
             {/* Trial card */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
               <div style={{ backgroundColor: "#1A1714", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>MORTON ET AL. · 2018</span>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>British Journal of Sports Medicine · Systematic Review + Meta-Analysis</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>MORTON ET AL. · 2018</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>British Journal of Sports Medicine · Systematic Review + Meta-Analysis</span>
               </div>
-              <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+              <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
                 {[
                   { label: "Studies included", value: "49 RCTs" },
                   { label: "Participants", value: "1,863 adults" },
@@ -280,32 +280,32 @@ export default function WPIvsWPCResearch() {
                   { label: "Effect size", value: "ES 0.22 (lean mass) for supplementation vs placebo" },
                 ].map((d) => (
                   <div key={d.label}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>{d.label}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>{d.label}</p>
                     <p style={{ fontSize: 13, color: "#1A1714", lineHeight: 1.5, margin: 0 }}>{d.value}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               The meta-analysis did not find whey isolate outperforming concentrate in any subgroup analysis. The gain signal came from hitting an adequate leucine threshold — approximately 2.3–2.5g per serving (Norton & Layman, 2006) — which both WPI and WPC80 reliably achieve at 25g protein.
             </p>
 
             {/* Leucine threshold panels */}
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>Leucine Content: WPI vs WPC at 25g Protein</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Leucine Content: WPI vs WPC at 25g Protein</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
               {[
                 { label: "WPI (25g protein)", leucine: "~2.6g", threshold: "Exceeds", color: "#2D6A4F", bg: "rgba(45,106,79,0.05)", border: "rgba(45,106,79,0.2)" },
                 { label: "WPC80 (25g protein)", leucine: "~2.4–2.5g", threshold: "Meets", color: "#92620A", bg: "rgba(146,98,10,0.05)", border: "rgba(146,98,10,0.2)" },
               ].map((item) => (
                 <div key={item.label} style={{ padding: "16px 18px", border: `1px solid ${item.border}`, borderRadius: 8, backgroundColor: item.bg }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: item.color, marginBottom: 6 }}>{item.label}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: item.color, marginBottom: 6 }}>{item.label}</p>
                   <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>{item.leucine} leucine</p>
-                  <p style={{ fontSize: 12, color: "#5C5650" }}><strong>{item.threshold}</strong> the 2.3g mTOR activation threshold (Norton &amp; Layman, 2006)</p>
+                  <p style={{ fontSize: 12, color: "#3F4B43" }}><strong>{item.threshold}</strong> the 2.3g mTOR activation threshold (Norton &amp; Layman, 2006)</p>
                 </div>
               ))}
             </div>
-            <p style={{ fontSize: 14, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.65 }}>
+            <p style={{ fontSize: 14, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.65 }}>
               Both types deliver sufficient leucine at a standard 25g serving to maximally stimulate muscle protein synthesis. The 0.1–0.2g difference between them is below the threshold that produces any detectable difference in anabolic response.
             </p>
           </section>
@@ -313,7 +313,7 @@ export default function WPIvsWPCResearch() {
           {/* § 03 — Lactose: where the real difference lives */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 03" figure="§" title="Lactose Intolerance:" titleItalic="The One Situation Where WPI Clearly Wins" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               Lactose intolerance affects approximately 65% of the global adult population to varying degrees (Storhaug et al., 2017). The mechanism is simple: insufficient lactase enzyme activity means undigested lactose reaches the colon, where bacterial fermentation produces gas, bloating, and — at higher doses — osmotic diarrhoea.
             </p>
 
@@ -325,14 +325,14 @@ export default function WPIvsWPCResearch() {
                 { range: "WPC at 2 servings — 8–10g", risk: "Possible issue", detail: "Wittebol et al. (2022) found symptoms in lactose-intolerant subjects at 12g but not 6g. Two WPC servings may reach or exceed individual sensitivity thresholds." },
               ].map((s, i) => (
                 <div key={s.range} style={{ backgroundColor: s.risk === "No issue" ? "rgba(26,107,58,0.06)" : s.risk === "Possible issue" ? "rgba(138,64,32,0.05)" : "rgba(146,98,10,0.05)", border: `1px solid ${s.risk === "No issue" ? "rgba(26,107,58,0.2)" : s.risk === "Possible issue" ? "rgba(138,64,32,0.2)" : "rgba(146,98,10,0.2)"}`, borderRadius: 8, padding: "14px" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: s.risk === "No issue" ? "#1A6B3A" : s.risk === "Possible issue" ? "#8A4020" : "#92620A", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: s.risk === "No issue" ? "#1A6B3A" : s.risk === "Possible issue" ? "#8A4020" : "#92620A", letterSpacing: "0.12em", textTransform: "uppercase", margin: "0 0 4px" }}>{s.range}</p>
                   <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: "0 0 4px" }}>{s.risk}</p>
-                  <p style={{ fontSize: 11, color: "#5C5650", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
+                  <p style={{ fontSize: 11, color: "#3F4B43", margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
                 </div>
               ))}
             </div>
 
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8 }}>
               For anyone with diagnosed lactose intolerance or persistent GI symptoms from dairy: WPI is the non-negotiable choice. This is the clearest, most evidence-supported practical advantage isolate holds over concentrate.
             </p>
           </section>
@@ -340,17 +340,17 @@ export default function WPIvsWPCResearch() {
           {/* § 04 — Digestion speed */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 04" figure="§" title="Absorption Speed:" titleItalic="30 Minutes That Rarely Matter" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               The absorption speed claim is real — just overstated in its practical significance.
             </p>
 
             {/* Trial card */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 20 }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 20 }}>
               <div style={{ backgroundColor: "#1A1714", padding: "12px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>TANG ET AL. · 2009</span>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>Journal of Applied Physiology · RCT</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>TANG ET AL. · 2009</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(242,235,217,0.35)", letterSpacing: "0.1em" }}>Journal of Applied Physiology · RCT</span>
               </div>
-              <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
+              <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12 }}>
                 {[
                   { label: "Population", value: "Young healthy males, resistance trained" },
                   { label: "Comparison", value: "Hydrolysed WPI vs WPI vs WPC — all at 25g post-exercise" },
@@ -360,7 +360,7 @@ export default function WPIvsWPCResearch() {
                   { label: "Practical implication", value: "Relevant primarily in fasted post-workout states where speed of amino acid delivery genuinely matters" },
                 ].map((d) => (
                   <div key={d.label}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>{d.label}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>{d.label}</p>
                     <p style={{ fontSize: 13, color: "#1A1714", lineHeight: 1.5, margin: 0 }}>{d.value}</p>
                   </div>
                 ))}
@@ -369,13 +369,13 @@ export default function WPIvsWPCResearch() {
 
             {/* Moderate evidence callout */}
             <div style={{ borderLeft: "3px solid #92620A", backgroundColor: "rgba(146,98,10,0.04)", padding: "14px 18px", borderRadius: "0 8px 8px 0", marginBottom: 20 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Moderate</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Moderate</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>
                 Tang et al. showed acute MPS differences but did not track 24-hour net protein balance. Schoenfeld &amp; Aragon (2018) found the post-exercise anabolic window extends 4–6 hours in trained individuals who ate pre-workout. The 30-minute plasma amino acid head start WPI has over WPC becomes irrelevant when amino acids from a pre-workout meal are still elevating blood levels.
               </p>
             </div>
 
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8 }}>
               When absorption speed genuinely matters: fasted training (empty stomach before early morning sessions), very high training frequencies (&gt;2 sessions per day), or post-workout windows where the next meal is delayed beyond 4 hours. For the majority of trained individuals eating pre- and post-workout meals, WPC closes the speed gap within the same practical window.
             </p>
           </section>
@@ -383,7 +383,7 @@ export default function WPIvsWPCResearch() {
           {/* § 05 — Bioactive fractions */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 05" figure="§" title="Bioactive Fractions:" titleItalic="Real Compounds, Overstated at Normal Doses" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               WPC retains higher amounts of native whey fractions that are stripped during WPI processing. These compounds have genuine biological activity — the question is whether standard serving sizes deliver enough to matter.
             </p>
 
@@ -409,18 +409,18 @@ export default function WPIvsWPCResearch() {
                 body: "Most abundant whey protein fraction — present in both WPI and WPC, though slightly higher in WPC. Provides BCAA load and has retinol-binding properties. Allergen in most dairy-sensitive individuals (not the same as lactose intolerance — beta-lactoglobulin allergy is IgE-mediated and rare).",
               },
             ].map((item) => (
-              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 10 }}>
-                <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#2D6A4F", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
+              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, marginBottom: 10 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#2D6A4F", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               </div>
             ))}
 
             <div style={{ borderLeft: "3px solid #92620A", backgroundColor: "rgba(146,98,10,0.04)", padding: "14px 18px", borderRadius: "0 8px 8px 0", marginTop: 16 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Limited for immune claims</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#92620A", marginBottom: 6 }}>Evidence Level: Limited for immune claims</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>
                 The bioactive fraction argument for WPC is directionally true — more fractions are retained — but clinically underpowered at standard serving sizes. If immune support is the goal, a standalone lactoferrin or IgG supplement provides more targeted dosing than relying on WPC as a delivery vehicle.
               </p>
             </div>
@@ -429,34 +429,34 @@ export default function WPIvsWPCResearch() {
           {/* § 06 — Cost and caloric efficiency */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 06" figure="§" title="Cost & Caloric Efficiency:" titleItalic="When the Premium Is and Isn't Justified" size="md" />
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.8, marginBottom: 20 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.8, marginBottom: 20 }}>
               At matched certification tiers, WPI consistently runs 35–40% more per gram of protein than WPC. Over a year of daily use, this gap is substantial.
             </p>
 
             {/* Cost table */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", marginBottom: 24 }}>
               <div style={{ backgroundColor: "#1A1714", padding: "12px 20px" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>ANNUAL COST COMPARISON — 1 SERVING / DAY (25g protein)</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", letterSpacing: "0.12em", fontWeight: 700 }}>ANNUAL COST COMPARISON — 1 SERVING / DAY (25g protein)</span>
               </div>
-              <div style={{ backgroundColor: "#F8F2E4" }}>
+              <div style={{ backgroundColor: "#F6F8F6" }}>
                 {[
                   { tier: "Budget WPC (no certification)", serve: "$0.65", annual: "~$237/year", note: "Highest contamination risk" },
                   { tier: "Mid WPC (Informed Choice)", serve: "$1.10", annual: "~$402/year", note: "Best value with safety guarantee" },
                   { tier: "WPI Standard", serve: "$1.55", annual: "~$566/year", note: "35% premium over mid WPC" },
                   { tier: "WPI Hydrolysed (premium)", serve: "$1.80", annual: "~$657/year", note: "Fastest absorption; highest cost" },
                 ].map((row, i) => (
-                  <div key={row.tier} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 2fr", padding: "11px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", alignItems: "center" }}>
+                  <div key={row.tier} style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 2fr", padding: "11px 20px", borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", alignItems: "center" }}>
                     <span style={{ fontSize: 13, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", fontWeight: 500 }}>{row.tier}</span>
-                    <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#5C5650" }}>{row.serve}</span>
-                    <span style={{ fontSize: 13, fontFamily: "var(--font-dm-mono), monospace", color: "#1A1714", fontWeight: 600 }}>{row.annual}</span>
-                    <span style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>{row.note}</span>
+                    <span style={{ fontSize: 13, fontFamily: "var(--font-jetbrains), monospace", color: "#3F4B43" }}>{row.serve}</span>
+                    <span style={{ fontSize: 13, fontFamily: "var(--font-jetbrains), monospace", color: "#1A1714", fontWeight: 600 }}>{row.annual}</span>
+                    <span style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>{row.note}</span>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Decision framework */}
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>Decision Framework: Is the WPI Premium Justified?</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Decision Framework: Is the WPI Premium Justified?</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
               {[
                 {
@@ -473,7 +473,7 @@ export default function WPIvsWPCResearch() {
                 },
                 {
                   label: "WPC is sufficient",
-                  color: "#C4622D",
+                  color: "#0F7A5A",
                   bg: "rgba(196,98,45,0.05)",
                   border: "rgba(196,98,45,0.2)",
                   items: [
@@ -485,7 +485,7 @@ export default function WPIvsWPCResearch() {
                 },
               ].map((col) => (
                 <div key={col.label} style={{ padding: "16px 18px", border: `1px solid ${col.border}`, borderRadius: 8, backgroundColor: col.bg }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: col.color, marginBottom: 10 }}>{col.label}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: col.color, marginBottom: 10 }}>{col.label}</p>
                   {col.items.map((item) => (
                     <div key={item} style={{ display: "flex", gap: 8, marginBottom: 6 }}>
                       <span style={{ color: col.color, flexShrink: 0, fontSize: 14 }}>✓</span>
@@ -523,11 +523,11 @@ export default function WPIvsWPCResearch() {
                 body: "Amino acid spiking — adding cheap free amino acids (glycine, taurine, creatine) to inflate nitrogen content and fake a higher protein reading — has been documented across both WPI and WPC products. The nitrogen-to-protein conversion factor (6.25) assumes all nitrogen comes from amino acids in intact protein; free amino acid spiking exploits this. Third-party certification with HPLC amino acid profiling eliminates this risk.",
               },
             ].map((item) => (
-              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 10 }}>
-                <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
+              <div key={item.num} style={{ display: "flex", gap: 16, padding: "18px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, marginBottom: 10 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{item.num}</div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontSize: 14 }}>{item.title}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               </div>
             ))}
@@ -537,8 +537,8 @@ export default function WPIvsWPCResearch() {
           <section style={{ marginBottom: 56, backgroundColor: "#1A1714", borderRadius: 12, padding: "36px 36px 32px", overflow: "hidden", position: "relative" }}>
             <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "28px 28px", pointerEvents: "none" }} />
             <div style={{ position: "relative" }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
-              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.2, marginBottom: 20 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.4)", marginBottom: 16 }}>Bottom Line</p>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.2, marginBottom: 20 }}>
                 WPI and WPC produce identical muscle gains — the real difference is lactose, calories, and cost.
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -550,16 +550,16 @@ export default function WPIvsWPCResearch() {
                   "Third-party certification matters more than type. An NSF-certified WPC80 beats an uncertified WPI for safety confidence every time.",
                 ].map((point, i) => (
                   <div key={i} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
-                    <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", flexShrink: 0, marginTop: 3 }}>→</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", flexShrink: 0, marginTop: 3 }}>→</span>
                     <p style={{ fontSize: 14, color: "rgba(242,235,217,0.8)", lineHeight: 1.65, margin: 0 }}>{point}</p>
                   </div>
                 ))}
               </div>
               <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid rgba(242,235,217,0.1)", display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <Link href="/reviews/dymatize-iso100-review-2026" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", backgroundColor: "#2D6A4F", color: "#F2EBD9", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
+                <Link href="/reviews/dymatize-iso100-review-2026" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", backgroundColor: "#2D6A4F", color: "#FFFFFF", fontSize: 12, fontWeight: 700, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                   Best WPI: Dymatize ISO100 Review →
                 </Link>
-                <Link href="/reviews/optimum-nutrition-gold-standard-whey" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", border: "1px solid rgba(242,235,217,0.2)", color: "rgba(242,235,217,0.7)", fontSize: 12, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>
+                <Link href="/reviews/optimum-nutrition-gold-standard-whey" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "9px 18px", border: "1px solid rgba(242,235,217,0.2)", color: "rgba(242,235,217,0.7)", fontSize: 12, borderRadius: 6, textDecoration: "none", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em" }}>
                   Best WPC: ON Gold Standard Review →
                 </Link>
               </div>
@@ -571,13 +571,13 @@ export default function WPIvsWPCResearch() {
             <SectionHeading label="§ 09" figure="§" title="Frequently" titleItalic="Asked Questions" size="md" />
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {faqSchema.mainEntity.map((item, i) => (
-                <details key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4", overflow: "hidden" }}>
+                <details key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6", overflow: "hidden" }}>
                   <summary style={{ padding: "16px 20px", fontFamily: "var(--font-hanken), sans-serif", fontSize: 15, fontWeight: 600, color: "#1A1714", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
                     <span>{item.name}</span>
                     <span style={{ color: "#2D6A4F", fontSize: 18, flexShrink: 0 }}>+</span>
                   </summary>
-                  <div style={{ padding: "0 20px 16px", borderTop: "1px solid #EDE8DF" }}>
-                    <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, margin: "14px 0 0" }}>{item.acceptedAnswer.text}</p>
+                  <div style={{ padding: "0 20px 16px", borderTop: "1px solid #F2F8F4" }}>
+                    <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, margin: "14px 0 0" }}>{item.acceptedAnswer.text}</p>
                   </div>
                 </details>
               ))}
@@ -587,7 +587,7 @@ export default function WPIvsWPCResearch() {
           {/* § 10 — Clinical References */}
           <section style={{ marginBottom: 56 }}>
             <SectionHeading label="§ 10" figure="§" title="Clinical" titleItalic="References" size="md" />
-            <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 14 }}>
+            <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 14 }}>
               All citations link to the primary source on PubMed or publisher DOI.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -634,10 +634,10 @@ export default function WPIvsWPCResearch() {
                 },
               ].map((ref, i) => (
                 <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#2D6A4F", flexShrink: 0, marginTop: 3 }}>{String(i + 1).padStart(2, "0")}</span>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#2D6A4F", flexShrink: 0, marginTop: 3 }}>{String(i + 1).padStart(2, "0")}</span>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
                     {ref.text}{" "}
-                    <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#2D6A4F", fontSize: 11, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
+                    <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#2D6A4F", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>PubMed ↗</a>
                   </p>
                 </div>
               ))}
@@ -646,7 +646,7 @@ export default function WPIvsWPCResearch() {
 
           {/* Related content */}
           <section>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 16 }}>Related Reading</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 16 }}>Related Reading</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12 }}>
               {[
                 { href: "/reviews/dymatize-iso100-review-2026", label: "Dymatize ISO100 Review", sub: "Best WPI — NSF + Informed Choice. FSP 9/10." },
@@ -654,9 +654,9 @@ export default function WPIvsWPCResearch() {
                 { href: "/research/whey-vs-plant-protein", label: "Whey vs Plant Protein", sub: "Head-to-head on amino acid profiles and MPS outcomes." },
                 { href: "/research/protein-timing-myth", label: "The Protein Timing Myth", sub: "Schoenfeld et al. on why total daily intake beats the anabolic window." },
               ].map((link) => (
-                <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", backgroundColor: "#F8F2E4" }}>
+                <Link key={link.href} href={link.href} className="hub-card" style={{ display: "block", padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, textDecoration: "none", backgroundColor: "#F6F8F6" }}>
                   <p style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 13, fontWeight: 600, color: "#1A1714", marginBottom: 4 }}>{link.label}</p>
-                  <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>{link.sub}</p>
+                  <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>{link.sub}</p>
                 </Link>
               ))}
             </div>

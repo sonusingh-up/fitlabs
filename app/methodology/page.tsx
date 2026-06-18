@@ -81,32 +81,30 @@ const greenFlagExamples = [
 
 export default function MethodologyPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
 
-      {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #D7DDD9", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Methodology</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#D7DDD9" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Methodology</span>
         </div>
       </div>
 
-      {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 56px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "60px 24px 56px" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>FSP · v2.1</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Scoring Methodology</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#586259", textTransform: "uppercase" }}>FSP · v2.1</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>Scoring Methodology</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 24 }}>
-            The Fitlab Scoring <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Protocol</em>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: 700, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.0, marginBottom: 24 }}>
+            The Fitlab Scoring <em style={{ fontStyle: "italic", fontWeight: 400, color: "#0F7A5A" }}>Protocol</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#2D2926", lineHeight: 1.8, marginBottom: 16 }}>
+          <p style={{ fontSize: 16, color: "#17211C", lineHeight: 1.8, marginBottom: 16 }}>
             Every review score on Fitlab is calculated using the Fitlab Scoring Protocol (FSP) — a weighted, 5-pillar rubric designed to measure what actually matters in a supplement: whether it does what it claims, whether you can trust the label, and whether it's worth your money.
           </p>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.8 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.8 }}>
             This page explains exactly how FSP works — the weights, the deductions, the audit process, and the limits of our methodology. No black boxes.
           </p>
         </div>
@@ -114,36 +112,34 @@ export default function MethodologyPage() {
 
       <div style={{ maxWidth: 800, margin: "0 auto" }} className="pad-section-sm px-page">
 
-        {/* Formula */}
-        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 01</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 01</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               The Score Formula
             </h2>
           </div>
-          <div style={{ padding: "24px 28px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24, fontFamily: "var(--font-dm-mono), monospace" }}>
-            <p style={{ fontSize: 10, letterSpacing: "0.2em", color: "#5C5650", textTransform: "uppercase", marginBottom: 16 }}>Calculation</p>
-            <p style={{ fontSize: 14, color: "#D4A96A", lineHeight: 2 }}>
+          <div style={{ padding: "24px 28px", backgroundColor: "#0D1810", borderRadius: 14, marginBottom: 24, fontFamily: "var(--font-jetbrains), monospace" }}>
+            <p style={{ fontSize: 10, letterSpacing: "0.14em", color: "#586259", textTransform: "uppercase", marginBottom: 16 }}>Calculation</p>
+            <p style={{ fontSize: 14, color: "#14A474", lineHeight: 2 }}>
               Raw Score = Σ (Pillar Score × Pillar Weight)
             </p>
-            <p style={{ fontSize: 14, color: "#F2EBD9", lineHeight: 2 }}>
+            <p style={{ fontSize: 14, color: "#F6F8F6", lineHeight: 2 }}>
               Composite Score = Raw Score − Σ (Red Flag Deductions)
             </p>
-            <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 2 }}>
+            <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 2 }}>
               Editorial Score = Round(Composite Score)
             </p>
           </div>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75 }}>
-            The <strong style={{ color: "#1A1714" }}>Editorial Score</strong> is the final number displayed on a review. It is the Composite Score rounded to the nearest whole number. In rare cases where the Composite Score and Editorial Score diverge by more than 0.3 points, the reviewer must document their reasoning — this prevents reviewers from inflating or deflating scores beyond what the rubric supports.
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75 }}>
+            The <strong style={{ color: "#17211C" }}>Editorial Score</strong> is the final number displayed on a review. It is the Composite Score rounded to the nearest whole number. In rare cases where the Composite Score and Editorial Score diverge by more than 0.3 points, the reviewer must document their reasoning — this prevents reviewers from inflating or deflating scores beyond what the rubric supports.
           </p>
         </section>
 
-        {/* 5 Pillars */}
-        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 02</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 02</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               The 5 Pillars
             </h2>
           </div>
@@ -153,33 +149,33 @@ export default function MethodologyPage() {
               const meta = PILLAR_META[key];
               const detail = pillarDetails[key];
               return (
-                <div key={key} style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
-                  <div className="layout-pillar-header" style={{ backgroundColor: "#1A1714" }}>
+                <div key={key} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
+                  <div className="layout-pillar-header" style={{ backgroundColor: "#0D1810" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#A89880" }}>0{i + 1}</span>
-                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9", margin: 0 }}>{meta.label}</h3>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#6B7770" }}>0{i + 1}</span>
+                      <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F6F8F6", margin: 0 }}>{meta.label}</h3>
                     </div>
-                    <span style={{ padding: "4px 12px", backgroundColor: "rgba(196,98,45,0.15)", border: "1px solid rgba(196,98,45,0.3)", borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D" }}>
+                    <span style={{ padding: "4px 12px", backgroundColor: "rgba(20,164,116,0.15)", border: "1px solid rgba(20,164,116,0.3)", borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#14A474" }}>
                       {Math.round(meta.weight * 100)}% of score
                     </span>
                   </div>
                   <div style={{ padding: "20px" }}>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, marginBottom: 16 }}>{meta.description}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, marginBottom: 16 }}>{meta.description}</p>
                     <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 16 }}>
                       {detail.what.map((point, j) => (
                         <div key={j} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", flexShrink: 0, marginTop: 2 }}>→</span>
-                          <p style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.6, margin: 0 }}>{point}</p>
+                          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", flexShrink: 0, marginTop: 2 }}>→</span>
+                          <p style={{ fontSize: 13, color: "#17211C", lineHeight: 1.6, margin: 0 }}>{point}</p>
                         </div>
                       ))}
                     </div>
-                    <div style={{ padding: "12px 16px", backgroundColor: "#EDE8DF", borderRadius: 8, borderLeft: "3px solid #D4C9B8", marginBottom: 12 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>How we measure it</p>
-                      <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{detail.how}</p>
+                    <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderRadius: 8, borderLeft: "3px solid #E4E8E5", marginBottom: 12 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>How we measure it</p>
+                      <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{detail.how}</p>
                     </div>
-                    <div style={{ padding: "12px 16px", backgroundColor: "rgba(45,106,79,0.05)", borderRadius: 8, borderLeft: "3px solid rgba(45,106,79,0.3)" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#2D6A4F", marginBottom: 6 }}>What a 10 looks like</p>
-                      <p style={{ fontSize: 12, color: "#2D2926", lineHeight: 1.6, margin: 0 }}>{detail.max}</p>
+                    <div style={{ padding: "12px 16px", backgroundColor: "#E7F2EC", borderRadius: 8, borderLeft: "3px solid #0F7A5A" }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>What a 10 looks like</p>
+                      <p style={{ fontSize: 12, color: "#17211C", lineHeight: 1.6, margin: 0 }}>{detail.max}</p>
                     </div>
                   </div>
                 </div>
@@ -188,91 +184,87 @@ export default function MethodologyPage() {
           </div>
         </section>
 
-        {/* Red Flags */}
-        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 03</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 03</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               Red Flag Deductions
             </h2>
           </div>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 24 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 24 }}>
             Red flags are automatic point deductions applied to the composite score for specific trust-reducing issues. They are applied regardless of how well the product scores on the 5 pillars — a beautifully marketed product with a proprietary blend on its key ingredient cannot hide that fact behind a strong formula score.
           </p>
-          <div style={{ border: "1px solid rgba(139,58,44,0.25)", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ border: "1px solid rgba(139,58,44,0.25)", borderRadius: 14, overflow: "hidden" }}>
             <div style={{ padding: "10px 20px", backgroundColor: "rgba(139,58,44,0.06)", borderBottom: "1px solid rgba(139,58,44,0.15)" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8B3A2C" }}>Defined Red Flags</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8B3A2C" }}>Defined Red Flags</span>
             </div>
             {redFlagExamples.map((item, i) => (
-              <div key={i} style={{ padding: "16px 20px", borderBottom: i < redFlagExamples.length - 1 ? "1px solid rgba(139,58,44,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#FBF5F0" : "#F8EEE8", display: "grid", gridTemplateColumns: "1fr auto", gap: 20, alignItems: "start" }}>
+              <div key={i} style={{ padding: "16px 20px", borderBottom: i < redFlagExamples.length - 1 ? "1px solid rgba(139,58,44,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#FAFAFA" : "#FFFFFF", display: "grid", gridTemplateColumns: "1fr auto", gap: 20, alignItems: "start" }}>
                 <div>
                   <p style={{ fontSize: 13, fontWeight: 600, color: "#8B3A2C", marginBottom: 5, fontFamily: "var(--font-hanken), sans-serif" }}>{item.flag}</p>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5, fontStyle: "italic" }}>{item.example}</p>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5, fontStyle: "italic" }}>{item.example}</p>
                 </div>
-                <span style={{ padding: "3px 10px", backgroundColor: "rgba(139,58,44,0.1)", border: "1px solid rgba(139,58,44,0.2)", borderRadius: 6, fontSize: 11, fontWeight: 700, color: "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" as const }}>{item.deduction}</span>
+                <span style={{ padding: "3px 10px", backgroundColor: "rgba(139,58,44,0.1)", border: "1px solid rgba(139,58,44,0.2)", borderRadius: 6, fontSize: 11, fontWeight: 700, color: "#8B3A2C", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap" as const }}>{item.deduction}</span>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.65, marginTop: 16 }}>
+          <p style={{ fontSize: 13, color: "#6B7770", lineHeight: 1.65, marginTop: 16 }}>
             The maximum total deduction is capped at −3.0 points. A score cannot fall below 1 from deductions alone. Multiple red flags stack.
           </p>
         </section>
 
-        {/* Green Flags */}
-        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 04</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 04</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               Green Flags
             </h2>
           </div>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 24 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 24 }}>
             Green flags do not add points to the score. A product should not receive a higher score simply for doing the right thing — transparency and testing are the baseline expectation, not a bonus. Green flags are displayed as recognitions in the review so readers can see them clearly, but they do not inflate numbers.
           </p>
-          <div style={{ border: "1px solid rgba(45,106,79,0.25)", borderRadius: 12, overflow: "hidden" }}>
-            <div style={{ padding: "10px 20px", backgroundColor: "rgba(45,106,79,0.05)", borderBottom: "1px solid rgba(45,106,79,0.15)" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2D6A4F" }}>Recognition — No Score Boost</span>
+          <div style={{ border: "1px solid rgba(15,122,90,0.25)", borderRadius: 14, overflow: "hidden" }}>
+            <div style={{ padding: "10px 20px", backgroundColor: "rgba(15,122,90,0.05)", borderBottom: "1px solid rgba(15,122,90,0.15)" }}>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#0F7A5A" }}>Recognition — No Score Boost</span>
             </div>
             {greenFlagExamples.map((item, i) => (
-              <div key={i} style={{ padding: "16px 20px", borderBottom: i < greenFlagExamples.length - 1 ? "1px solid rgba(45,106,79,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#F2F8F5" : "#EDF5F1" }}>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#2D6A4F", marginBottom: 5, fontFamily: "var(--font-hanken), sans-serif" }}>{item.flag}</p>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.detail}</p>
+              <div key={i} style={{ padding: "16px 20px", borderBottom: i < greenFlagExamples.length - 1 ? "1px solid rgba(15,122,90,0.1)" : "none", backgroundColor: i % 2 === 0 ? "#F2F8F4" : "#FFFFFF" }}>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "#0F7A5A", marginBottom: 5, fontFamily: "var(--font-hanken), sans-serif" }}>{item.flag}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5 }}>{item.detail}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Claim Audit */}
-        <section id="claim-audit" style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section id="claim-audit" style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 05</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 05</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               How We Audit Claims
             </h2>
           </div>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 20 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20 }}>
             Every review includes a Claim Audit — a table that takes each marketing claim from the product&apos;s label or brand website and checks it against the published literature. Claims are assigned one of four verdicts:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {([
-              { verdict: "Research-Supported", color: "#2D6A4F", bg: "rgba(45,106,79,0.08)", desc: "The claim is supported by at least two independent, peer-reviewed human studies at the relevant dose." },
+              { verdict: "Research-Supported", color: "#0F7A5A", bg: "rgba(15,122,90,0.08)", desc: "The claim is supported by at least two independent, peer-reviewed human studies at the relevant dose." },
               { verdict: "Overstated", color: "#8B7355", bg: "rgba(139,115,85,0.08)", desc: "There is evidence for the mechanism or a partial effect, but the claim goes beyond what the research actually shows." },
               { verdict: "Context-Dependent", color: "#3A5F8B", bg: "rgba(58,95,139,0.08)", desc: "The claim is true for a specific population (e.g., vegans, sleep-deprived athletes) but misleading when generalised." },
               { verdict: "Unsupported", color: "#8B3A2C", bg: "rgba(139,58,44,0.08)", desc: "No credible human RCT or meta-analysis supports this claim at the dose in the product." },
             ]).map((item) => (
-              <div key={item.verdict} style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 16, alignItems: "start", padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <span style={{ padding: "4px 10px", backgroundColor: item.bg, border: `1px solid ${item.color}33`, borderRadius: 6, fontSize: 10, fontWeight: 700, color: item.color, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", textAlign: "center" as const }}>{item.verdict}</span>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+              <div key={item.verdict} style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 16, alignItems: "start", padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <span style={{ padding: "4px 10px", backgroundColor: item.bg, border: `1px solid ${item.color}33`, borderRadius: 6, fontSize: 10, fontWeight: 700, color: item.color, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em", textAlign: "center" as const }}>{item.verdict}</span>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Limitations */}
-        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #D4C9B8" }}>
+        <section style={{ marginBottom: 64, paddingBottom: 64, borderBottom: "1px solid #E4E8E5" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 06</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 06</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               Known Limitations
             </h2>
           </div>
@@ -284,47 +276,45 @@ export default function MethodologyPage() {
               { num: "04", text: "The science evolves. Evidence levels can change as new meta-analyses are published. We aim to update reviews annually but cannot guarantee real-time accuracy." },
               { num: "05", text: "This is not medical advice. No score here implies a product is safe for everyone. Individuals with health conditions, allergies, or on medication should consult a physician." },
             ].map((item) => (
-              <div key={item.num} style={{ display: "flex", gap: 16, alignItems: "flex-start", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", flexShrink: 0, marginTop: 2 }}>{item.num}</span>
-                <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.65, margin: 0 }}>{item.text}</p>
+              <div key={item.num} style={{ display: "flex", gap: 16, alignItems: "flex-start", padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", flexShrink: 0, marginTop: 2 }}>{item.num}</span>
+                <p style={{ fontSize: 14, color: "#17211C", lineHeight: 1.65, margin: 0 }}>{item.text}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Version history */}
         <section style={{ marginBottom: 64 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>§ 07</span>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#0F7A5A", textTransform: "uppercase" }}>§ 07</span>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
               Version History
             </h2>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
             {[
               { version: "FSP v2.1", date: "May 2026", changes: "Added Value Efficiency pillar. Introduced Claim Audit system. Red flag deductions formalised. Green flags separated from scoring." },
               { version: "FSP v2.0", date: "January 2026", changes: "Moved from 4 to 5 pillars. Added Practical Quality as explicit pillar. Weighted formula pillar increased from 30% to 35%." },
               { version: "FSP v1.0", date: "March 2025", changes: "Initial 4-pillar system. Formula, Transparency, Testing, and Value. Uniform weighting." },
             ].map((v, i) => (
-              <div key={v.version} className="layout-version-row" style={{ padding: "16px 20px", borderBottom: i < 2 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, fontWeight: 700, color: "#1A1714" }}>{v.version}</span>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#8A8480" }}>{v.date}</span>
-                <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5, margin: 0 }}>{v.changes}</p>
+              <div key={v.version} className="layout-version-row" style={{ padding: "16px 20px", borderBottom: i < 2 ? "1px solid #E4E8E5" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, fontWeight: 700, color: "#17211C" }}>{v.version}</span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#6B7770" }}>{v.date}</span>
+                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.5, margin: 0 }}>{v.changes}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
-        <div style={{ padding: 28, backgroundColor: "#1A1714", borderRadius: 12, textAlign: "center" as const }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Questions?</p>
-          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 12 }}>
+        <div style={{ padding: 28, backgroundColor: "#0D1810", borderRadius: 14, textAlign: "center" as const }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Questions?</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F6F8F6", marginBottom: 12 }}>
             We document our reasoning. You should be able to reproduce our scores.
           </p>
-          <p style={{ fontSize: 13, color: "#8A8480", lineHeight: 1.65, maxWidth: 480, margin: "0 auto 20px" }}>
+          <p style={{ fontSize: 13, color: "#6B7770", lineHeight: 1.65, maxWidth: 480, margin: "0 auto 20px" }}>
             If you disagree with a score, open a discussion. We update reviews when new evidence emerges or when we&apos;ve made an error.
           </p>
-          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+          <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 24px", backgroundColor: "#14A474", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
             Contact the editorial team →
           </Link>
         </div>

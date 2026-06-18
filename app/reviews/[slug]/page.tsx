@@ -110,37 +110,37 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
-      <div style={{ backgroundColor: "#F2EBD9" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }}>
           <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", alignItems: "center", gap: 8 }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href={`/category/${review.category?.toLowerCase().replace(/\s+/g, "-")}`} style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>{review.category}</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{review.brand}</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href={`/category/${review.category?.toLowerCase().replace(/\s+/g, "-")}`} style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>{review.category}</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{review.brand}</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880" }}>{review.brand?.toUpperCase()}</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D" }}>Full Review · FSP Scored</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770" }}>{review.brand?.toUpperCase()}</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A" }}>Full Review · FSP Scored</span>
             </div>
             <div className="layout-hero-split">
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>
                   {review.brand} · {review.category}
                 </p>
-                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
                   {review.title}
                 </h1>
                 {review.verdict && (
-                  <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.65, maxWidth: 600, marginBottom: 24 }}>
+                  <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.65, maxWidth: 600, marginBottom: 24 }}>
                     {review.verdict}
                   </p>
                 )}
@@ -150,12 +150,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                       href={review.affiliateUrl}
                       target="_blank"
                       rel="noopener noreferrer nofollow"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 14, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                     >
                       Check Price <ExternalLink size={13} />
                     </Link>
                   )}
-                  <Link href="/methodology" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>
+                  <Link href="/methodology" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>
                     FSP Score: {rubric.compositeScore.toFixed(1)} → How we score
                   </Link>
                 </div>
@@ -179,11 +179,11 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
         {/* Affiliate notice */}
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "16px 24px 0" }}>
-          <div style={{ padding: "10px 16px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, display: "flex", alignItems: "center", gap: 10 }}>
-            <AlertTriangle size={13} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
+          <div style={{ padding: "10px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, display: "flex", alignItems: "center", gap: 10 }}>
+            <AlertTriangle size={13} style={{ color: "#6B7770", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               This review may contain affiliate links. Commissions do not influence our ratings or recommendations.{" "}
-              <Link href="/affiliate-disclosure" style={{ color: "#C4622D" }}>Read our disclosure →</Link>
+              <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A" }}>Read our disclosure →</Link>
             </p>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           <div className="layout-sidebar">
 
             {/* TOC sidebar */}
-            <div className="hidden lg:block" style={{ borderRight: "1px solid #D4C9B8" }}>
+            <div className="hidden lg:block" style={{ borderRight: "1px solid #E4E8E5" }}>
               <TableOfContents items={tocItems} />
             </div>
 
@@ -202,17 +202,17 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
               {/* Quick Verdict */}
               <section id="verdict" style={{ marginBottom: 56 }}>
-                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                   Quick Verdict
                 </h2>
-                <div style={{ padding: 24, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, borderLeft: "4px solid #C4622D" }}>
-                  <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: review.bestFor?.length ? 16 : 0 }}>
+                <div style={{ padding: 24, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, borderLeft: "4px solid #0F7A5A" }}>
+                  <p style={{ fontSize: 15, color: "#17211C", lineHeight: 1.75, marginBottom: review.bestFor?.length ? 16 : 0 }}>
                     {review.verdict}
                   </p>
                   {review.tags && review.tags.length > 0 && (
                     <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
                       {review.tags.map((tag: string) => (
-                        <span key={tag} style={{ padding: "4px 10px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 8, fontSize: 11, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em" }}>
+                        <span key={tag} style={{ padding: "4px 10px", backgroundColor: "rgba(15,122,90,0.08)", border: "1px solid rgba(15,122,90,0.2)", borderRadius: 8, fontSize: 11, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em" }}>
                           {tag}
                         </span>
                       ))}
@@ -222,18 +222,18 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 {(review.bestFor?.length || review.notIdealFor?.length) && (
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 16 }}>
                     {review.bestFor?.length > 0 && (
-                      <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#2D6A4F", marginBottom: 8 }}>Best For</p>
+                      <div style={{ padding: 16, border: "1px solid #E4E8E5", borderRadius: 14 }}>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 8 }}>Best For</p>
                         {review.bestFor.map((b: string) => (
-                          <p key={b} style={{ fontSize: 13, color: "#2D2926", padding: "3px 0" }}>· {b}</p>
+                          <p key={b} style={{ fontSize: 13, color: "#17211C", padding: "3px 0" }}>· {b}</p>
                         ))}
                       </div>
                     )}
                     {review.notIdealFor?.length > 0 && (
-                      <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#C4622D", marginBottom: 8 }}>Not Ideal For</p>
+                      <div style={{ padding: 16, border: "1px solid #E4E8E5", borderRadius: 14 }}>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Not Ideal For</p>
                         {review.notIdealFor.map((b: string) => (
-                          <p key={b} style={{ fontSize: 13, color: "#2D2926", padding: "3px 0" }}>· {b}</p>
+                          <p key={b} style={{ fontSize: 13, color: "#17211C", padding: "3px 0" }}>· {b}</p>
                         ))}
                       </div>
                     )}
@@ -244,7 +244,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Score Breakdown */}
               {rubric.pillars.length > 0 && (
                 <section id="score-breakdown" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Score Breakdown
                   </h2>
                   <ScoreBreakdown rubric={rubric} reviewCode={`REV-${slug.slice(0, 8).toUpperCase()}`} />
@@ -254,7 +254,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Flags */}
               {rubric.flags.length > 0 && (
                 <section id="flags" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Red & Green Flags
                   </h2>
                   <FlagSystem flags={rubric.flags} />
@@ -264,22 +264,22 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Ingredients */}
               {review.ingredients?.length > 0 && (
                 <section id="ingredients" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Ingredient Breakdown
                   </h2>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
                     {review.ingredients.map((ing: any, i: number) => (
-                      <div key={ing.name} style={{ padding: "18px 20px", borderBottom: i < review.ingredients.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "grid", gridTemplateColumns: "1fr auto", gap: 16, alignItems: "start" }}>
+                      <div key={ing.name} style={{ padding: "18px 20px", borderBottom: i < review.ingredients.length - 1 ? "1px solid #E4E8E5" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", display: "grid", gridTemplateColumns: "1fr auto", gap: 16, alignItems: "start" }}>
                         <div>
                           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
-                            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714" }}>{ing.name}</span>
+                            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C" }}>{ing.name}</span>
                             {ing.dosage && (
-                              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", backgroundColor: "#EDE8DF", padding: "2px 8px", borderRadius: 4 }}>{ing.dosage}</span>
+                              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43", backgroundColor: "#F6F8F6", padding: "2px 8px", borderRadius: 4 }}>{ing.dosage}</span>
                             )}
                           </div>
-                          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{ing.purpose}</p>
+                          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.5 }}>{ing.purpose}</p>
                           {ing.notes && (
-                            <p style={{ fontSize: 12, color: "#8A8480", lineHeight: 1.5, marginTop: 6 }}>{ing.notes}</p>
+                            <p style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.5, marginTop: 6 }}>{ing.notes}</p>
                           )}
                         </div>
                         <EvidenceBadge level={ing.evidenceLevel} showIcon={false} />
@@ -292,10 +292,10 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Claim Audit */}
               {rubric.claimAudit.length > 0 && (
                 <section id="claim-audit" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 8, letterSpacing: "-0.02em" }}>
                     Claim Audit
                   </h2>
-                  <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, lineHeight: 1.6 }}>
+                  <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20, lineHeight: 1.6 }}>
                     We checked every marketing claim against published peer-reviewed literature.
                   </p>
                   <ClaimAudit items={rubric.claimAudit} />
@@ -305,7 +305,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Pros Cons */}
               {(review.pros?.length > 0 || review.cons?.length > 0) && (
                 <section id="pros-cons" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Pros & Cons
                   </h2>
                   <ProsCons pros={review.pros ?? []} cons={review.cons ?? []} />
@@ -315,7 +315,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Value */}
               {rubric.valueMetric.pricePerServing > 0 && (
                 <section id="value" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Price & Value
                   </h2>
                   <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel={review.category?.toLowerCase().includes("protein") ? "protein" : "active ingredient"} />
@@ -325,30 +325,30 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* Full Review Body */}
               {review.body?.length > 0 && (
                 <section id="body" style={{ marginBottom: 56 }}>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 28, letterSpacing: "-0.02em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 28, letterSpacing: "-0.02em" }}>
                     Full Review
                   </h2>
-                  <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                  <div style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
                     <PortableText
                       value={review.body}
                       components={{
                         block: {
                           normal: ({ children }) => (
-                            <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.85, margin: 0, padding: "0 28px 22px" }}>
+                            <p style={{ fontSize: 15, color: "#17211C", lineHeight: 1.85, margin: 0, padding: "0 28px 22px" }}>
                               {children}
                             </p>
                           ),
                           h2: ({ children }) => (
-                            <div style={{ borderTop: "1px solid #D4C9B8", marginTop: 8, padding: "28px 28px 6px", backgroundColor: "#F8F2E4" }}>
-                              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", marginBottom: 6 }}>Section</p>
-                              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em", margin: 0 }}>
+                            <div style={{ borderTop: "1px solid #E4E8E5", marginTop: 8, padding: "28px 28px 6px", backgroundColor: "#F6F8F6" }}>
+                              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>Section</p>
+                              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.02em", margin: 0 }}>
                                 {children}
                               </h2>
                             </div>
                           ),
                           h3: ({ children }) => (
                             <div style={{ padding: "20px 28px 4px" }}>
-                              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.01em", margin: 0, borderLeft: "3px solid #C4622D", paddingLeft: 12 }}>
+                              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#17211C", letterSpacing: "-0.01em", margin: 0, borderLeft: "3px solid #0F7A5A", paddingLeft: 12 }}>
                                 {children}
                               </h3>
                             </div>
@@ -356,40 +356,40 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                         },
                       }}
                     />
-                    <div style={{ height: 8, backgroundColor: "#F8F2E4", borderTop: "1px solid #EDE8DF" }} />
+                    <div style={{ height: 8, backgroundColor: "#F6F8F6", borderTop: "1px solid #E4E8E5" }} />
                   </div>
                 </section>
               )}
 
               {/* Final Verdict */}
               <section id="final">
-                <div style={{ padding: 32, backgroundColor: "#1A1714", borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Final Verdict</p>
+                <div style={{ padding: 32, backgroundColor: "#0D1810", borderRadius: 14 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Final Verdict</p>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20 }}>
-                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#F2EBD9", letterSpacing: "-0.02em", flex: 1 }}>
+                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#FFFFFF", letterSpacing: "-0.02em", flex: 1 }}>
                       {review.title}
                     </h2>
                     <ReviewScoreBadge rating={rubric.editorialScore} size="md" />
                   </div>
-                  <p style={{ fontSize: 14, color: "#8A8480", lineHeight: 1.75, marginBottom: 20 }}>
+                  <p style={{ fontSize: 14, color: "#6B7770", lineHeight: 1.75, marginBottom: 20 }}>
                     {review.verdict}
                   </p>
                   <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: review.affiliateUrl ? 24 : 0 }}>
-                    <div style={{ padding: "10px 14px", backgroundColor: "rgba(242,235,217,0.05)", border: "1px solid #2D2926", borderRadius: 8 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#5C5650", marginBottom: 4 }}>FSP COMPOSITE</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: "#F2EBD9", lineHeight: 1 }}>
-                        {rubric.compositeScore.toFixed(1)}<span style={{ fontSize: 12, color: "#5C5650" }}>/10</span>
+                    <div style={{ padding: "10px 14px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#586259", marginBottom: 4 }}>FSP COMPOSITE</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: "#FFFFFF", lineHeight: 1 }}>
+                        {rubric.compositeScore.toFixed(1)}<span style={{ fontSize: 12, color: "#586259" }}>/10</span>
                       </p>
                     </div>
-                    <div style={{ padding: "10px 14px", backgroundColor: "rgba(242,235,217,0.05)", border: "1px solid #2D2926", borderRadius: 8 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#5C5650", marginBottom: 4 }}>EDITORIAL SCORE</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: "#2D6A4F", lineHeight: 1 }}>
-                        {rubric.editorialScore}<span style={{ fontSize: 12, color: "#5C5650" }}>/10</span>
+                    <div style={{ padding: "10px 14px", backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", color: "#586259", marginBottom: 4 }}>EDITORIAL SCORE</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 800, color: "#0F7A5A", lineHeight: 1 }}>
+                        {rubric.editorialScore}<span style={{ fontSize: 12, color: "#586259" }}>/10</span>
                       </p>
                     </div>
                   </div>
                   {review.affiliateUrl && (
-                    <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 22px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                    <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 22px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 14, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       View Best Price <ExternalLink size={13} />
                     </Link>
                   )}

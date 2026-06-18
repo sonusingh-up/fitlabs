@@ -207,10 +207,11 @@ export default function RootLayout({
           color: "#17211c",
         }}
       >
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Header />
         {/* Emil Kowalski: activate .animate-fade-up scroll entrances site-wide */}
         <ScrollReveal />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

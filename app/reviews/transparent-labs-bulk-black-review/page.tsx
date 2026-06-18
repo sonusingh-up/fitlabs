@@ -365,11 +365,11 @@ export default function TransparentLabsBulkBlackReview() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* 1. Breadcrumb */}
         <div
-          style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}
+          style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}
           className="breadcrumb-pad"
         >
           <div
@@ -385,31 +385,31 @@ export default function TransparentLabsBulkBlackReview() {
               href="/"
               style={{
                 fontSize: 12,
-                color: "#8A8480",
-                fontFamily: "var(--font-dm-mono), monospace",
+                color: "#6B7770",
+                fontFamily: "var(--font-jetbrains), monospace",
                 textDecoration: "none",
               }}
             >
               Home
             </Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
+            <span style={{ color: "#E4E8E5" }}>/</span>
             <Link
               href="/reviews"
               style={{
                 fontSize: 12,
-                color: "#8A8480",
-                fontFamily: "var(--font-dm-mono), monospace",
+                color: "#6B7770",
+                fontFamily: "var(--font-jetbrains), monospace",
                 textDecoration: "none",
               }}
             >
               Reviews
             </Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
+            <span style={{ color: "#E4E8E5" }}>/</span>
             <span
               style={{
                 fontSize: 12,
-                color: "#5C5650",
-                fontFamily: "var(--font-dm-mono), monospace",
+                color: "#3F4B43",
+                fontFamily: "var(--font-jetbrains), monospace",
               }}
             >
               TL BULK Black
@@ -478,7 +478,7 @@ export default function TransparentLabsBulkBlackReview() {
           >
             <span
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 9,
                 letterSpacing: "0.25em",
                 textTransform: "uppercase",
@@ -492,7 +492,7 @@ export default function TransparentLabsBulkBlackReview() {
                 fontFamily: "var(--font-newsreader), Georgia, serif",
                 fontSize: "clamp(1.6rem, 4vw, 3rem)",
                 fontWeight: 800,
-                color: "#F2EBD9",
+                color: "#FFFFFF",
                 letterSpacing: "-0.02em",
                 textAlign: "center",
                 lineHeight: 1.1,
@@ -502,18 +502,18 @@ export default function TransparentLabsBulkBlackReview() {
             >
               Transparent Labs
               <br />
-              <em style={{ fontWeight: 400, color: "#C4622D" }}>BULK Black Pre-Workout</em>
+              <em style={{ fontWeight: 400, color: "#0F7A5A" }}>BULK Black Pre-Workout</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
               <div style={{ display: "flex", gap: 4 }}>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((s) => (
-                  <Star key={s} size={14} fill="#C4622D" color="#C4622D" />
+                  <Star key={s} size={14} fill="#0F7A5A" color="#0F7A5A" />
                 ))}
-                <Star size={14} fill="none" color="#C4622D" />
+                <Star size={14} fill="none" color="#0F7A5A" />
               </div>
               <span
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 11,
                   color: "rgba(242,235,217,0.5)",
                   letterSpacing: "0.12em",
@@ -531,7 +531,7 @@ export default function TransparentLabsBulkBlackReview() {
               left: 0,
               right: 0,
               height: 60,
-              background: "linear-gradient(transparent, #F2EBD9)",
+              background: "linear-gradient(transparent, #FFFFFF)",
             }}
           />
         </div>
@@ -545,11 +545,11 @@ export default function TransparentLabsBulkBlackReview() {
           >
             <span
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 9,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#A89880",
+                color: "#586259",
                 whiteSpace: "nowrap",
               }}
             >
@@ -559,18 +559,18 @@ export default function TransparentLabsBulkBlackReview() {
               style={{
                 width: 24,
                 height: 1,
-                backgroundColor: "#D4C9B8",
+                backgroundColor: "#E4E8E5",
                 display: "inline-block",
                 flexShrink: 0,
               }}
             />
             <span
               style={{
-                fontFamily: "var(--font-dm-mono), monospace",
+                fontFamily: "var(--font-jetbrains), monospace",
                 fontSize: 9,
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#C4622D",
+                color: "#0F7A5A",
                 whiteSpace: "nowrap",
               }}
             >
@@ -581,11 +581,11 @@ export default function TransparentLabsBulkBlackReview() {
             <div>
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 11,
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "#8A8480",
+                  color: "#6B7770",
                   marginBottom: 8,
                 }}
               >
@@ -608,7 +608,7 @@ export default function TransparentLabsBulkBlackReview() {
                   style={{
                     fontStyle: "italic",
                     fontWeight: 400,
-                    color: "#5C5650",
+                    color: "#3F4B43",
                     fontSize: "0.7em",
                   }}
                 >
@@ -618,7 +618,7 @@ export default function TransparentLabsBulkBlackReview() {
               <p
                 style={{
                   fontSize: 15,
-                  color: "#5C5650",
+                  color: "#3F4B43",
                   lineHeight: 1.7,
                   maxWidth: 580,
                   marginBottom: 24,
@@ -639,8 +639,8 @@ export default function TransparentLabsBulkBlackReview() {
                     alignItems: "center",
                     gap: 8,
                     padding: "10px 20px",
-                    backgroundColor: "#C4622D",
-                    color: "#F2EBD9",
+                    backgroundColor: "#0F7A5A",
+                    color: "#FFFFFF",
                     fontSize: 13,
                     fontWeight: 600,
                     borderRadius: 8,
@@ -657,11 +657,11 @@ export default function TransparentLabsBulkBlackReview() {
                     alignItems: "center",
                     gap: 6,
                     padding: "10px 16px",
-                    border: "1px solid #D4C9B8",
-                    color: "#8A8480",
+                    border: "1px solid #E4E8E5",
+                    color: "#6B7770",
                     fontSize: 12,
                     borderRadius: 8,
-                    fontFamily: "var(--font-dm-mono), monospace",
+                    fontFamily: "var(--font-jetbrains), monospace",
                     textDecoration: "none",
                     letterSpacing: "0.06em",
                   }}
@@ -695,8 +695,8 @@ export default function TransparentLabsBulkBlackReview() {
               alignItems: "center",
               gap: 12,
               padding: "10px 16px",
-              backgroundColor: "#F8F2E4",
-              border: "1px solid #D4C9B8",
+              backgroundColor: "#F6F8F6",
+              border: "1px solid #E4E8E5",
               borderRadius: 24,
             }}
           >
@@ -705,14 +705,14 @@ export default function TransparentLabsBulkBlackReview() {
                 width: 32,
                 height: 32,
                 borderRadius: "50%",
-                background: "linear-gradient(135deg, #D4C9B8, #C4622D)",
+                background: "linear-gradient(135deg, #E4E8E5, #0F7A5A)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontFamily: "Georgia, serif",
                 fontStyle: "italic",
                 fontSize: 15,
-                color: "#F2EBD9",
+                color: "#FFFFFF",
                 flexShrink: 0,
               }}
             >
@@ -732,15 +732,15 @@ export default function TransparentLabsBulkBlackReview() {
               </p>
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 10,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#A89880",
+                  color: "#586259",
                 }}
               >
                 Reviewed by the full team ·{" "}
-                <Link href="/authors" style={{ color: "#C4622D", textDecoration: "none" }}>
+                <Link href="/authors" style={{ color: "#0F7A5A", textDecoration: "none" }}>
                   Authors page →
                 </Link>
               </p>
@@ -753,19 +753,19 @@ export default function TransparentLabsBulkBlackReview() {
           <div
             style={{
               padding: "8px 14px",
-              backgroundColor: "#EDE8DF",
-              border: "1px solid #D4C9B8",
+              backgroundColor: "#F2F8F4",
+              border: "1px solid #E4E8E5",
               borderRadius: 6,
               display: "flex",
               alignItems: "center",
               gap: 8,
             }}
           >
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
             <p
               style={{
                 fontSize: 11,
-                color: "#8A8480",
+                color: "#6B7770",
                 fontFamily: "var(--font-hanken), sans-serif",
               }}
             >
@@ -773,7 +773,7 @@ export default function TransparentLabsBulkBlackReview() {
               are editorially independent.{" "}
               <Link
                 href="/affiliate-disclosure"
-                style={{ color: "#C4622D", textDecoration: "none" }}
+                style={{ color: "#0F7A5A", textDecoration: "none" }}
               >
                 Read our disclosure →
               </Link>
@@ -796,7 +796,7 @@ export default function TransparentLabsBulkBlackReview() {
           <div className="layout-sidebar">
 
             {/* Desktop TOC Sidebar */}
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
@@ -815,11 +815,11 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 9,
                       letterSpacing: "0.2em",
                       textTransform: "uppercase",
-                      color: "#5C5650",
+                      color: "#3F4B43",
                       marginBottom: 12,
                     }}
                   >
@@ -830,14 +830,14 @@ export default function TransparentLabsBulkBlackReview() {
                       fontFamily: "var(--font-newsreader), Georgia, serif",
                       fontSize: "1.4rem",
                       fontWeight: 700,
-                      color: "#F2EBD9",
+                      color: "#FFFFFF",
                       lineHeight: 1.2,
                       marginBottom: 16,
                       letterSpacing: "-0.02em",
                     }}
                   >
                     The best high-stimulant pre-workout formula available.{" "}
-                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>
                       Worth every cent if you train hard and care about what you take.
                     </em>
                   </h2>
@@ -868,11 +868,11 @@ export default function TransparentLabsBulkBlackReview() {
                       >
                         <p
                           style={{
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             fontSize: 9,
                             letterSpacing: "0.12em",
                             textTransform: "uppercase",
-                            color: "#8A8480",
+                            color: "#6B7770",
                             marginBottom: 6,
                           }}
                         >
@@ -883,7 +883,7 @@ export default function TransparentLabsBulkBlackReview() {
                             fontFamily: "var(--font-newsreader), Georgia, serif",
                             fontSize: "1.5rem",
                             fontWeight: 800,
-                            color: "#C4622D",
+                            color: "#0F7A5A",
                             lineHeight: 1,
                           }}
                         >
@@ -904,8 +904,8 @@ export default function TransparentLabsBulkBlackReview() {
                   style={{
                     borderRadius: 14,
                     overflow: "hidden",
-                    border: "1px solid #D4C9B8",
-                    backgroundColor: "#F8F2E4",
+                    border: "1px solid #E4E8E5",
+                    backgroundColor: "#F6F8F6",
                   }}
                 >
                   {/* Dark header with product image */}
@@ -944,7 +944,7 @@ export default function TransparentLabsBulkBlackReview() {
                         backgroundColor: "rgba(45,106,79,0.15)",
                         border: "1px solid rgba(45,106,79,0.35)",
                         borderRadius: 20,
-                        fontFamily: "var(--font-dm-mono), monospace",
+                        fontFamily: "var(--font-jetbrains), monospace",
                         fontSize: 9,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
@@ -975,7 +975,7 @@ export default function TransparentLabsBulkBlackReview() {
                         left: 0,
                         right: 0,
                         height: 48,
-                        background: "linear-gradient(transparent, #F8F2E4)",
+                        background: "linear-gradient(transparent, #F6F8F6)",
                       }}
                     />
                   </div>
@@ -985,11 +985,11 @@ export default function TransparentLabsBulkBlackReview() {
                     {/* Brand + name */}
                     <p
                       style={{
-                        fontFamily: "var(--font-dm-mono), monospace",
+                        fontFamily: "var(--font-jetbrains), monospace",
                         fontSize: 9,
                         letterSpacing: "0.18em",
                         textTransform: "uppercase",
-                        color: "#A89880",
+                        color: "#586259",
                         marginBottom: 4,
                       }}
                     >
@@ -1017,8 +1017,8 @@ export default function TransparentLabsBulkBlackReview() {
                         gap: 8,
                         marginBottom: 16,
                         padding: "12px 0",
-                        borderTop: "1px solid #EDE8DF",
-                        borderBottom: "1px solid #EDE8DF",
+                        borderTop: "1px solid #F2F8F4",
+                        borderBottom: "1px solid #F2F8F4",
                       }}
                     >
                       {[
@@ -1032,7 +1032,7 @@ export default function TransparentLabsBulkBlackReview() {
                               fontFamily: "var(--font-newsreader), Georgia, serif",
                               fontSize: "1rem",
                               fontWeight: 800,
-                              color: "#C4622D",
+                              color: "#0F7A5A",
                               lineHeight: 1,
                               marginBottom: 3,
                             }}
@@ -1041,11 +1041,11 @@ export default function TransparentLabsBulkBlackReview() {
                           </p>
                           <p
                             style={{
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                               fontSize: 9,
                               letterSpacing: "0.08em",
                               textTransform: "uppercase",
-                              color: "#A89880",
+                              color: "#586259",
                             }}
                           >
                             {stat.label}
@@ -1066,11 +1066,11 @@ export default function TransparentLabsBulkBlackReview() {
                       <div>
                         <p
                           style={{
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             fontSize: 9,
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
-                            color: "#A89880",
+                            color: "#586259",
                             marginBottom: 2,
                           }}
                         >
@@ -1096,8 +1096,8 @@ export default function TransparentLabsBulkBlackReview() {
                           alignItems: "center",
                           gap: 6,
                           padding: "10px 18px",
-                          backgroundColor: "#C4622D",
-                          color: "#F2EBD9",
+                          backgroundColor: "#0F7A5A",
+                          color: "#FFFFFF",
                           fontSize: 13,
                           fontWeight: 700,
                           borderRadius: 8,
@@ -1114,7 +1114,7 @@ export default function TransparentLabsBulkBlackReview() {
               </div>
 
               {/* ─── § 2. WHAT IS BULK BLACK? ────────────────────────────────────── */}
-              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1147,26 +1147,26 @@ export default function TransparentLabsBulkBlackReview() {
                 <div
                   style={{
                     padding: "16px 20px",
-                    backgroundColor: "#F8F2E4",
-                    border: "1px solid #D4C9B8",
+                    backgroundColor: "#F6F8F6",
+                    border: "1px solid #E4E8E5",
                     borderRadius: 10,
-                    borderLeft: "3px solid #C4622D",
+                    borderLeft: "3px solid #0F7A5A",
                     marginTop: 20,
                   }}
                 >
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 10,
                       letterSpacing: "0.1em",
                       textTransform: "uppercase",
-                      color: "#C4622D",
+                      color: "#0F7A5A",
                       marginBottom: 6,
                     }}
                   >
                     Who is BULK Black for?
                   </p>
-                  <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7 }}>
+                  <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7 }}>
                     Experienced lifters with established caffeine tolerance (200mg+ daily from all
                     sources). Competitive and tested athletes who need Informed Choice
                     certification. Anyone who has taken pre-workouts that &quot;don&apos;t
@@ -1178,7 +1178,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 3. SCORE BREAKDOWN ────────────────────────────────────────── */}
-              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1191,7 +1191,7 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   Score Breakdown
                 </h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>
                   FSP v2.1 weights: Formula 35% · Transparency 25% · Verification 20% · Value 12%
                   · Practical 8%
                 </p>
@@ -1199,11 +1199,11 @@ export default function TransparentLabsBulkBlackReview() {
                 <p
                   style={{
                     fontSize: 13,
-                    color: "#8A8480",
+                    color: "#6B7770",
                     marginTop: 16,
                     lineHeight: 1.6,
                     padding: "12px 16px",
-                    backgroundColor: "#EDE8DF",
+                    backgroundColor: "#F2F8F4",
                     borderRadius: 8,
                   }}
                 >
@@ -1215,7 +1215,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 4. FLAGS ──────────────────────────────────────────────────── */}
-              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1232,7 +1232,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 5. SUPPLEMENT FACTS ───────────────────────────────────────── */}
-              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1245,7 +1245,7 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   Supplement Facts
                 </h2>
-                <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 20 }}>
+                <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginBottom: 20 }}>
                   One scoop (20.6g) per serving. 30 servings per container. Mix with 10–14 oz of
                   water and consume 20–30 minutes before training. Tolerance assessment: start at
                   ½ scoop.
@@ -1259,10 +1259,10 @@ export default function TransparentLabsBulkBlackReview() {
                             padding: "12px 16px",
                             textAlign: "left",
                             fontSize: 11,
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
-                            color: "#A89880",
+                            color: "#586259",
                             width: "42%",
                           }}
                         >
@@ -1273,10 +1273,10 @@ export default function TransparentLabsBulkBlackReview() {
                             padding: "12px 16px",
                             textAlign: "right",
                             fontSize: 11,
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
-                            color: "#A89880",
+                            color: "#586259",
                             width: "28%",
                           }}
                         >
@@ -1287,10 +1287,10 @@ export default function TransparentLabsBulkBlackReview() {
                             padding: "12px 16px",
                             textAlign: "center",
                             fontSize: 11,
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
-                            color: "#A89880",
+                            color: "#586259",
                             width: "30%",
                           }}
                         >
@@ -1320,8 +1320,8 @@ export default function TransparentLabsBulkBlackReview() {
                         <tr
                           key={row.name}
                           style={{
-                            backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9",
-                            borderBottom: "1px solid #EDE8DF",
+                            backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF",
+                            borderBottom: "1px solid #F2F8F4",
                           }}
                         >
                           <td
@@ -1341,7 +1341,7 @@ export default function TransparentLabsBulkBlackReview() {
                               color: "#1A1714",
                               fontWeight: 700,
                               textAlign: "right",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                               whiteSpace: "nowrap",
                             }}
                           >
@@ -1358,7 +1358,7 @@ export default function TransparentLabsBulkBlackReview() {
                                   borderRadius: 20,
                                   fontSize: 11,
                                   color: "#2D6A4F",
-                                  fontFamily: "var(--font-dm-mono), monospace",
+                                  fontFamily: "var(--font-jetbrains), monospace",
                                   whiteSpace: "nowrap",
                                   fontWeight: 600,
                                 }}
@@ -1369,8 +1369,8 @@ export default function TransparentLabsBulkBlackReview() {
                               <span
                                 style={{
                                   fontSize: 12,
-                                  color: "#A89880",
-                                  fontFamily: "var(--font-dm-mono), monospace",
+                                  color: "#586259",
+                                  fontFamily: "var(--font-jetbrains), monospace",
                                 }}
                               >
                                 —
@@ -1385,7 +1385,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 6. INGREDIENT BREAKDOWN ───────────────────────────────────── */}
-              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1409,14 +1409,14 @@ export default function TransparentLabsBulkBlackReview() {
                 <div style={{ marginBottom: 32 }}>
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 10,
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "#C4622D",
+                      color: "#0F7A5A",
                       marginBottom: 16,
                       paddingBottom: 8,
-                      borderBottom: "1px solid #EDE8DF",
+                      borderBottom: "1px solid #F2F8F4",
                     }}
                   >
                     Endurance &amp; Pump
@@ -1448,8 +1448,8 @@ export default function TransparentLabsBulkBlackReview() {
                       style={{
                         marginBottom: 20,
                         padding: "18px 20px",
-                        backgroundColor: "#F8F2E4",
-                        border: "1px solid #EDE8DF",
+                        backgroundColor: "#F6F8F6",
+                        border: "1px solid #F2F8F4",
                         borderRadius: 10,
                       }}
                     >
@@ -1475,7 +1475,7 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <EvidenceBadge level={ing.evidence} />
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{ing.body}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{ing.body}</p>
                     </div>
                   ))}
                 </div>
@@ -1484,14 +1484,14 @@ export default function TransparentLabsBulkBlackReview() {
                 <div style={{ marginBottom: 32 }}>
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 10,
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "#C4622D",
+                      color: "#0F7A5A",
                       marginBottom: 16,
                       paddingBottom: 8,
-                      borderBottom: "1px solid #EDE8DF",
+                      borderBottom: "1px solid #F2F8F4",
                     }}
                   >
                     Energy &amp; Stimulants
@@ -1518,8 +1518,8 @@ export default function TransparentLabsBulkBlackReview() {
                       style={{
                         marginBottom: 20,
                         padding: "18px 20px",
-                        backgroundColor: "#F8F2E4",
-                        border: "1px solid #EDE8DF",
+                        backgroundColor: "#F6F8F6",
+                        border: "1px solid #F2F8F4",
                         borderRadius: 10,
                       }}
                     >
@@ -1545,7 +1545,7 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <EvidenceBadge level={ing.evidence} />
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{ing.body}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{ing.body}</p>
                     </div>
                   ))}
                 </div>
@@ -1554,14 +1554,14 @@ export default function TransparentLabsBulkBlackReview() {
                 <div style={{ marginBottom: 32 }}>
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 10,
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "#C4622D",
+                      color: "#0F7A5A",
                       marginBottom: 16,
                       paddingBottom: 8,
-                      borderBottom: "1px solid #EDE8DF",
+                      borderBottom: "1px solid #F2F8F4",
                     }}
                   >
                     Focus &amp; Nootropics
@@ -1588,8 +1588,8 @@ export default function TransparentLabsBulkBlackReview() {
                       style={{
                         marginBottom: 20,
                         padding: "18px 20px",
-                        backgroundColor: "#F8F2E4",
-                        border: "1px solid #EDE8DF",
+                        backgroundColor: "#F6F8F6",
+                        border: "1px solid #F2F8F4",
                         borderRadius: 10,
                       }}
                     >
@@ -1615,14 +1615,14 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <EvidenceBadge level={ing.evidence} />
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{ing.body}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{ing.body}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 7. LAB & VERIFICATION ─────────────────────────────────────── */}
-              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1703,7 +1703,7 @@ export default function TransparentLabsBulkBlackReview() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "var(--font-dm-mono), monospace",
+                          fontFamily: "var(--font-jetbrains), monospace",
                           fontSize: 10,
                           letterSpacing: "0.12em",
                           textTransform: "uppercase",
@@ -1713,7 +1713,7 @@ export default function TransparentLabsBulkBlackReview() {
                       >
                         {item.status}
                       </p>
-                      <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}>
+                      <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}>
                         {item.detail}
                       </p>
                     </div>
@@ -1722,12 +1722,12 @@ export default function TransparentLabsBulkBlackReview() {
                 <div
                   style={{
                     padding: "16px 20px",
-                    backgroundColor: "#F8F2E4",
-                    border: "1px solid #D4C9B8",
+                    backgroundColor: "#F6F8F6",
+                    border: "1px solid #E4E8E5",
                     borderRadius: 10,
                   }}
                 >
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                     <strong>Informed Choice vs NSF Certified for Sport:</strong> Both programmes
                     test for WADA-listed banned substances. Informed Choice is operated by LGC Group
                     and is mandatory for UK Sport funding. NSF is the North American standard
@@ -1739,7 +1739,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 8. CLAIM AUDIT ────────────────────────────────────────────── */}
-              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1752,7 +1752,7 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   Claim Audit
                 </h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>
                   Marketing claims from the official Transparent Labs product page and Amazon
                   listing, assessed against published evidence.
                 </p>
@@ -1760,7 +1760,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 9. HOW TO TAKE IT ─────────────────────────────────────────── */}
-              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1812,9 +1812,9 @@ export default function TransparentLabsBulkBlackReview() {
                       key={row.step}
                       style={{
                         padding: "18px 20px",
-                        border: `1px solid ${row.recommended ? "rgba(45,106,79,0.2)" : "#D4C9B8"}`,
+                        border: `1px solid ${row.recommended ? "rgba(45,106,79,0.2)" : "#E4E8E5"}`,
                         borderRadius: 10,
-                        backgroundColor: row.recommended ? "rgba(45,106,79,0.03)" : "#F8F2E4",
+                        backgroundColor: row.recommended ? "rgba(45,106,79,0.03)" : "#F6F8F6",
                       }}
                     >
                       <div
@@ -1840,9 +1840,9 @@ export default function TransparentLabsBulkBlackReview() {
                           </p>
                           <p
                             style={{
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                               fontSize: 11,
-                              color: "#C4622D",
+                              color: "#0F7A5A",
                             }}
                           >
                             {row.protocol}
@@ -1858,7 +1858,7 @@ export default function TransparentLabsBulkBlackReview() {
                                 borderRadius: 4,
                                 fontSize: 10,
                                 color: "#2D6A4F",
-                                fontFamily: "var(--font-dm-mono), monospace",
+                                fontFamily: "var(--font-jetbrains), monospace",
                               }}
                             >
                               Recommended
@@ -1867,19 +1867,19 @@ export default function TransparentLabsBulkBlackReview() {
                           <span
                             style={{
                               padding: "2px 8px",
-                              backgroundColor: "#EDE8DF",
-                              border: "1px solid #D4C9B8",
+                              backgroundColor: "#F2F8F4",
+                              border: "1px solid #E4E8E5",
                               borderRadius: 4,
                               fontSize: 10,
-                              color: "#5C5650",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              color: "#3F4B43",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.timing}
                           </span>
                         </div>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>
                         {row.notes}
                       </p>
                     </div>
@@ -1888,7 +1888,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 10. COMPARISON ────────────────────────────────────────────── */}
-              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -1901,7 +1901,7 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   vs. Competitors
                 </h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>
                   High-stimulant pre-workouts with full label disclosure. Prices verified May 2026.
                 </p>
                 <div className="review-table-wrap">
@@ -1923,10 +1923,10 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "12px 14px",
                               textAlign: "left",
                               fontSize: 10,
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                               letterSpacing: "0.1em",
                               textTransform: "uppercase",
-                              color: "#A89880",
+                              color: "#586259",
                               whiteSpace: "nowrap",
                             }}
                           >
@@ -1994,9 +1994,9 @@ export default function TransparentLabsBulkBlackReview() {
                             backgroundColor: row.highlight
                               ? "rgba(196,98,45,0.07)"
                               : i % 2 === 0
-                              ? "#F8F2E4"
-                              : "#F2EBD9",
-                            borderBottom: "1px solid #EDE8DF",
+                              ? "#F6F8F6"
+                              : "#FFFFFF",
+                            borderBottom: "1px solid #F2F8F4",
                           }}
                         >
                           <td
@@ -2004,7 +2004,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 13,
                               fontWeight: row.highlight ? 700 : 400,
-                              color: row.highlight ? "#C4622D" : "#2D2926",
+                              color: row.highlight ? "#0F7A5A" : "#2D2926",
                               fontFamily: "var(--font-hanken), sans-serif",
                               whiteSpace: "nowrap",
                             }}
@@ -2016,7 +2016,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 12,
                               color: "#1A1714",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.caffeine}
@@ -2026,7 +2026,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 12,
                               color: "#1A1714",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.citrulline}
@@ -2036,7 +2036,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 12,
                               color: "#1A1714",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.beta}
@@ -2047,7 +2047,7 @@ export default function TransparentLabsBulkBlackReview() {
                               fontSize: 12,
                               color:
                                 row.cert !== "None" ? "#2D6A4F" : "#8B3A2C",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.cert}
@@ -2057,7 +2057,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 12,
                               color: "#1A1714",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                               fontWeight: 700,
                             }}
                           >
@@ -2068,7 +2068,7 @@ export default function TransparentLabsBulkBlackReview() {
                               padding: "11px 14px",
                               fontSize: 12,
                               color: row.prop === "None" ? "#2D6A4F" : "#8B3A2C",
-                              fontFamily: "var(--font-dm-mono), monospace",
+                              fontFamily: "var(--font-jetbrains), monospace",
                             }}
                           >
                             {row.prop}
@@ -2078,7 +2078,7 @@ export default function TransparentLabsBulkBlackReview() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6 }}>
+                <p style={{ fontSize: 13, color: "#6B7770", marginTop: 12, lineHeight: 1.6 }}>
                   CM = Citrulline Malate. L-Cit = L-Citrulline base. 8,000mg citrulline malate
                   delivers approximately 5,300mg L-citrulline equivalents; direct dose comparisons
                   require accounting for the malate fraction weight.
@@ -2086,7 +2086,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 11. PRODUCTS AT A GLANCE ──────────────────────────────────── */}
-              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2120,7 +2120,7 @@ export default function TransparentLabsBulkBlackReview() {
                     image="tl-bulk-black-preworkout.webp"
                     bgFrom="#1A0A06"
                     bgTo="#0D0402"
-                    accent="#C4622D"
+                    accent="#0F7A5A"
                     featured={true}
                   />
                   <ProductCard
@@ -2169,7 +2169,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 12. PROS & CONS ───────────────────────────────────────────── */}
-              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2205,7 +2205,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 13. SAFETY ────────────────────────────────────────────────── */}
-              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2254,13 +2254,13 @@ export default function TransparentLabsBulkBlackReview() {
                             ? "rgba(139,58,44,0.06)"
                             : item.risk === "moderate"
                             ? "rgba(139,115,85,0.06)"
-                            : "#F8F2E4",
+                            : "#F6F8F6",
                         border: `1px solid ${
                           item.risk === "high"
                             ? "rgba(139,58,44,0.2)"
                             : item.risk === "moderate"
                             ? "rgba(139,115,85,0.2)"
-                            : "#EDE8DF"
+                            : "#F2F8F4"
                         }`,
                         borderRadius: 10,
                       }}
@@ -2275,7 +2275,7 @@ export default function TransparentLabsBulkBlackReview() {
                       >
                         {item.icon} {item.title}
                       </p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                         {item.body}
                       </p>
                     </div>
@@ -2284,7 +2284,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 14. VALUE ─────────────────────────────────────────────────── */}
-              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2319,8 +2319,8 @@ export default function TransparentLabsBulkBlackReview() {
                       key={row.option}
                       style={{
                         padding: "14px 16px",
-                        backgroundColor: "#F8F2E4",
-                        border: "1px solid #D4C9B8",
+                        backgroundColor: "#F6F8F6",
+                        border: "1px solid #E4E8E5",
                         borderRadius: 10,
                         minWidth: 0,
                       }}
@@ -2337,22 +2337,22 @@ export default function TransparentLabsBulkBlackReview() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "var(--font-dm-mono), monospace",
+                          fontFamily: "var(--font-jetbrains), monospace",
                           fontSize: 12,
-                          color: "#C4622D",
+                          color: "#0F7A5A",
                           marginBottom: 4,
                         }}
                       >
                         {row.price}
                       </p>
-                      <p style={{ fontSize: 12, color: "#8A8480" }}>{row.note}</p>
+                      <p style={{ fontSize: 12, color: "#6B7770" }}>{row.note}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* ─── § 15. WHERE TO BUY ──────────────────────────────────────────── */}
-              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2438,7 +2438,7 @@ export default function TransparentLabsBulkBlackReview() {
                         </p>
                         <span
                           style={{
-                            fontFamily: "var(--font-dm-mono), monospace",
+                            fontFamily: "var(--font-jetbrains), monospace",
                             fontSize: 10,
                             letterSpacing: "0.1em",
                             textTransform: "uppercase",
@@ -2449,7 +2449,7 @@ export default function TransparentLabsBulkBlackReview() {
                           {item.verdict}
                         </span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, marginBottom: item.cta ? 12 : 0 }}>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, marginBottom: item.cta ? 12 : 0 }}>
                         {item.detail}
                       </p>
                       {item.cta && (
@@ -2462,8 +2462,8 @@ export default function TransparentLabsBulkBlackReview() {
                             alignItems: "center",
                             gap: 6,
                             padding: "8px 16px",
-                            backgroundColor: "#C4622D",
-                            color: "#F2EBD9",
+                            backgroundColor: "#0F7A5A",
+                            color: "#FFFFFF",
                             fontSize: 12,
                             fontWeight: 600,
                             borderRadius: 6,
@@ -2480,7 +2480,7 @@ export default function TransparentLabsBulkBlackReview() {
               </section>
 
               {/* ─── § 16. FAQ ───────────────────────────────────────────────────── */}
-              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2
                   style={{
                     fontFamily: "var(--font-newsreader), Georgia, serif",
@@ -2498,9 +2498,9 @@ export default function TransparentLabsBulkBlackReview() {
                     <details
                       key={i}
                       style={{
-                        backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9",
+                        backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF",
                         borderRadius: 8,
-                        border: "1px solid #EDE8DF",
+                        border: "1px solid #F2F8F4",
                       }}
                     >
                       <summary
@@ -2524,7 +2524,7 @@ export default function TransparentLabsBulkBlackReview() {
                         style={{
                           padding: "0 18px 16px",
                           fontSize: 13,
-                          color: "#5C5650",
+                          color: "#3F4B43",
                           lineHeight: 1.7,
                           fontFamily: "var(--font-hanken), sans-serif",
                         }}
@@ -2547,7 +2547,7 @@ export default function TransparentLabsBulkBlackReview() {
                 >
                   <p
                     style={{
-                      fontFamily: "var(--font-dm-mono), monospace",
+                      fontFamily: "var(--font-jetbrains), monospace",
                       fontSize: 9,
                       letterSpacing: "0.25em",
                       textTransform: "uppercase",
@@ -2572,7 +2572,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontFamily: "var(--font-newsreader), Georgia, serif",
                           fontSize: "4rem",
                           fontWeight: 800,
-                          color: "#C4622D",
+                          color: "#0F7A5A",
                           lineHeight: 1,
                         }}
                       >
@@ -2580,7 +2580,7 @@ export default function TransparentLabsBulkBlackReview() {
                       </p>
                       <p
                         style={{
-                          fontFamily: "var(--font-dm-mono), monospace",
+                          fontFamily: "var(--font-jetbrains), monospace",
                           fontSize: 10,
                           letterSpacing: "0.15em",
                           color: "rgba(212,201,184,0.5)",
@@ -2595,7 +2595,7 @@ export default function TransparentLabsBulkBlackReview() {
                           fontFamily: "var(--font-newsreader), Georgia, serif",
                           fontSize: "1.4rem",
                           fontWeight: 700,
-                          color: "#F2EBD9",
+                          color: "#FFFFFF",
                           marginBottom: 12,
                           lineHeight: 1.2,
                         }}
@@ -2605,7 +2605,7 @@ export default function TransparentLabsBulkBlackReview() {
                           style={{
                             fontStyle: "italic",
                             fontWeight: 400,
-                            color: "#A89880",
+                            color: "#586259",
                           }}
                         >
                           Justified for serious athletes. Premium but not overpriced.
@@ -2616,7 +2616,7 @@ export default function TransparentLabsBulkBlackReview() {
                   <p
                     style={{
                       fontSize: 15,
-                      color: "#D4C9B8",
+                      color: "#E4E8E5",
                       lineHeight: 1.8,
                       marginBottom: 16,
                     }}
@@ -2631,7 +2631,7 @@ export default function TransparentLabsBulkBlackReview() {
                   <p
                     style={{
                       fontSize: 15,
-                      color: "#D4C9B8",
+                      color: "#E4E8E5",
                       lineHeight: 1.8,
                       marginBottom: 28,
                     }}
@@ -2660,8 +2660,8 @@ export default function TransparentLabsBulkBlackReview() {
                         alignItems: "center",
                         gap: 8,
                         padding: "12px 24px",
-                        backgroundColor: "#C4622D",
-                        color: "#F2EBD9",
+                        backgroundColor: "#0F7A5A",
+                        color: "#FFFFFF",
                         fontSize: 14,
                         fontWeight: 700,
                         borderRadius: 8,
@@ -2679,11 +2679,11 @@ export default function TransparentLabsBulkBlackReview() {
                         gap: 6,
                         padding: "12px 20px",
                         border: "1px solid rgba(212,201,184,0.2)",
-                        color: "#A89880",
+                        color: "#586259",
                         fontSize: 12,
                         borderRadius: 8,
                         textDecoration: "none",
-                        fontFamily: "var(--font-dm-mono), monospace",
+                        fontFamily: "var(--font-jetbrains), monospace",
                         letterSpacing: "0.06em",
                       }}
                     >
@@ -2710,8 +2710,8 @@ export default function TransparentLabsBulkBlackReview() {
                 <div
                   style={{
                     padding: 20,
-                    backgroundColor: "#F8F2E4",
-                    border: "1px solid #D4C9B8",
+                    backgroundColor: "#F6F8F6",
+                    border: "1px solid #E4E8E5",
                     borderRadius: 10,
                   }}
                 >
@@ -2732,7 +2732,7 @@ export default function TransparentLabsBulkBlackReview() {
                         key={i}
                         style={{
                           fontSize: 12,
-                          color: "#5C5650",
+                          color: "#3F4B43",
                           lineHeight: 1.6,
                           fontFamily: "var(--font-hanken), sans-serif",
                         }}
@@ -2750,7 +2750,7 @@ export default function TransparentLabsBulkBlackReview() {
 
         {/* 9. Related Reviews — OUTSIDE layout-sidebar and container-pad */}
         <section
-          style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}
+          style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}
           className="pad-section-sm px-page"
         >
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
@@ -2765,11 +2765,11 @@ export default function TransparentLabsBulkBlackReview() {
               <div>
                 <p
                   style={{
-                    fontFamily: "var(--font-dm-mono), monospace",
+                    fontFamily: "var(--font-jetbrains), monospace",
                     fontSize: 9,
                     letterSpacing: "0.2em",
                     textTransform: "uppercase",
-                    color: "#A89880",
+                    color: "#586259",
                     marginBottom: 6,
                   }}
                 >
@@ -2791,8 +2791,8 @@ export default function TransparentLabsBulkBlackReview() {
                 href="/reviews"
                 style={{
                   fontSize: 12,
-                  color: "#C4622D",
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  color: "#0F7A5A",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   letterSpacing: "0.08em",
                   textDecoration: "none",
                 }}

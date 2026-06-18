@@ -1154,6 +1154,29 @@ html, body {
   transform: translateX(2px);
 }
 
+/* ── Skip-to-content link ─────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 24px;
+  z-index: 9999;
+  background: #0f7a5a;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 0 0 8px 8px;
+  font-family: var(--font-dm-sans), sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: top 150ms ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #ffffff;
+  outline-offset: -3px;
+}
+
 /* ── Focus ring ───────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid #0f7a5a;
@@ -1389,6 +1412,11 @@ html, body {
   to   { opacity: 1; }
 }
 
+@keyframes header-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 .search-input-wrap {
   display: flex;
   align-items: center;
@@ -1518,6 +1546,9 @@ html, body {
 
 .research-card-link:hover { border-color: #0F7A5A !important; }
 
+.picks-card { transition: box-shadow 180ms ease, transform 180ms ease; }
+.picks-card:hover { box-shadow: 0 8px 28px -6px rgba(10,30,22,0.16); transform: translateY(-3px); }
+
 .footer-bottom-link:hover { color: #FFFFFF !important; }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -1532,4 +1563,69 @@ html, body {
 @media (max-width: 640px) {
   .search-input-wrap { padding: 10px 14px; }
   .search-input { font-size: 16px; }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   HOMEPAGE — MOBILE RESPONSIVE (≤ 767px)
+   ══════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 767px) {
+  /* Hero: single-column, hide trending sidebar */
+  .hp-hero-grid {
+    grid-template-columns: 1fr !important;
+    padding-top: 32px !important;
+    padding-bottom: 40px !important;
+    gap: 0 !important;
+  }
+  .hp-hero-aside { display: none !important; }
+
+  /* Newsletter: single-column, hide decorative image */
+  .hp-newsletter-grid { grid-template-columns: 1fr !important; }
+  .hp-newsletter-inner { padding: 36px 24px !important; }
+  .hp-newsletter-img  { display: none !important; }
+
+  /* Goal cards: 2-column instead of 4 */
+  .hp-goal-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+
+  /* Section headers: stack label + link vertically */
+  .hp-section-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Tools: single-column, hide decorative lifestyle photo */
+  .hp-tools-grid    { grid-template-columns: 1fr !important; }
+  .hp-tools-feature { grid-template-columns: 1fr !important; }
+  .hp-tools-photo   { display: none !important; }
+
+  /* Ingredient library promo: single-column, hide decorative image */
+  .hp-ingredient-grid { grid-template-columns: 1fr !important; }
+  .hp-ingredient-text { padding: 48px 0 !important; }
+  .hp-ingredient-img  { display: none !important; }
+
+  /* Recommended reads: single-column */
+  .hp-reads-grid { grid-template-columns: 1fr !important; }
+
+  /* Editorial standards: single-column, tighter vertical padding */
+  .hp-editorial-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+
+  /* Editor's picks: 2-column instead of 4 */
+  .hp-picks-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+
+  /* From the lab: single-column */
+  .hp-lab-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer: collapse 4-column nav grid to single column */
+  .footer-main-grid {
+    grid-template-columns: 1fr !important;
+    padding-top: 48px !important;
+    padding-bottom: 36px !important;
+    gap: 32px !important;
+  }
 }

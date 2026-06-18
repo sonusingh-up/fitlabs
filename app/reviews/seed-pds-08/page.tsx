@@ -312,12 +312,12 @@ export default function SeedPDS08Review() {
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }} className="px-page">
             {[{ label: "Home", href: "/" }, { label: "Reviews", href: "/reviews" }, { label: "Probiotics", href: "/category/probiotics" }].map((c, i, arr) => (
               <span key={c.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={c.href} style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{c.label}</Link>
+                <Link href={c.href} style={{ fontSize: 11, color: SEED.caption, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{c.label}</Link>
                 {i < arr.length - 1 && <span style={{ color: SEED.border, fontSize: 11 }}>/</span>}
               </span>
             ))}
             <span style={{ color: SEED.border, fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: SEED.muted, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>PDS-08 Pediatric Synbiotic</span>
+            <span style={{ fontSize: 11, color: SEED.muted, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>PDS-08 Pediatric Synbiotic</span>
           </div>
         </div>
 
@@ -328,9 +328,9 @@ export default function SeedPDS08Review() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 0 40px", gap: 32 }}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="hidden sm:flex" style={{ alignItems: "center", gap: 10, marginBottom: 16 }}>
-                  <span style={{ padding: "3px 8px", backgroundColor: "rgba(61,139,55,0.15)", border: "1px solid rgba(61,139,55,0.3)", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: SEED.green }}>Seed</span>
+                  <span style={{ padding: "3px 8px", backgroundColor: "rgba(61,139,55,0.15)", border: "1px solid rgba(61,139,55,0.3)", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: SEED.green }}>Seed</span>
                   <span style={{ color: SEED.darkBorder, fontSize: 10 }}>·</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.darkCaption, whiteSpace: "nowrap" }}>REV-2026-064 · Kids Synbiotic · FSP Scored</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.darkCaption, whiteSpace: "nowrap" }}>REV-2026-064 · Kids Synbiotic · FSP Scored</span>
                 </div>
                 <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: SEED.darkText, letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   Seed PDS-08®<br />
@@ -344,7 +344,7 @@ export default function SeedPDS08Review() {
                     style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: SEED.green, color: SEED.darkText, fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
-                  <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: `1px solid ${SEED.darkBorder}`, color: SEED.darkCaption, fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                  <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: `1px solid ${SEED.darkBorder}`, color: SEED.darkCaption, fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                     FSP {composite.toFixed(1)} → How we score
                   </Link>
                 </div>
@@ -362,7 +362,7 @@ export default function SeedPDS08Review() {
                 {[1,2,3,4,5,6,7,8].map(s => <Star key={s} size={13} fill={SEED.green} color={SEED.green} />)}
                 {[9,10].map(s => <Star key={s} size={13} fill="none" color={`${SEED.green}55`} />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: SEED.darkCaption, letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: SEED.darkCaption, letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
             </div>
           </div>
           <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${SEED.pageBg})` }} />
@@ -389,14 +389,14 @@ export default function SeedPDS08Review() {
               <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: SEED.green }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 3 }}>Written & Reviewed By</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 3 }}>Written & Reviewed By</p>
               <p style={{ fontSize: 14, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: SEED.ink, textDecoration: "none" }}>Fitlab Research Team</Link>
                 <span style={{ fontWeight: 400, color: SEED.caption, fontSize: 12 }}> · Independent Editorial</span>
               </p>
               <p style={{ fontSize: 12, color: SEED.muted }}>Pediatric strain analysis · FSP v2.1 · Cross-referenced with pediatric probiotic literature</p>
             </div>
-            <span style={{ padding: "3px 8px", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, borderRadius: 4, fontSize: 10, color: SEED.muted, fontFamily: "var(--font-dm-mono), monospace" }}>Editorial Review</span>
+            <span style={{ padding: "3px 8px", backgroundColor: SEED.mutedBg, border: `1px solid ${SEED.border}`, borderRadius: 4, fontSize: 10, color: SEED.muted, fontFamily: "var(--font-jetbrains), monospace" }}>Editorial Review</span>
           </div>
         </div>
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
@@ -432,14 +432,14 @@ export default function SeedPDS08Review() {
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 14, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 20 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-064</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-064</p>
                       <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: SEED.darkText, lineHeight: 1.4 }}>
                         The most evidence-backed kids' probiotic. Pediatric-specific strains, a real RCT, and 5g of fiber prebiotic. Nothing else in the kids' category comes close.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
                       <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</div>
-                      <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: SEED.darkMuted, letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
+                      <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: SEED.darkMuted, letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
                   <p style={{ position: "relative", zIndex: 1, fontSize: 14, color: SEED.darkMuted, lineHeight: 1.75 }}>
@@ -453,8 +453,8 @@ export default function SeedPDS08Review() {
                     return (
                       <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 10, textAlign: "center" }}>
                         <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color: seedScoreColor(p.score), lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>{labels[p.pillar]}</div>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: SEED.sepia }}>{weights[p.pillar]} weight</div>
+                        <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>{labels[p.pillar]}</div>
+                        <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: SEED.sepia }}>{weights[p.pillar]} weight</div>
                       </div>
                     );
                   })}
@@ -466,7 +466,7 @@ export default function SeedPDS08Review() {
                 <div style={{ borderRadius: 14, overflow: "hidden", border: `1px solid ${SEED.border}`, backgroundColor: SEED.cardBg }}>
                   <div style={{ background: SEED.bannerBg, padding: "28px 24px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, position: "relative", minHeight: 200 }}>
                     <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: "14px 14px 0 0" }} />
-                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(61,139,55,0.15)", border: "1px solid rgba(61,139,55,0.3)", borderRadius: 20, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.green }}>
+                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(61,139,55,0.15)", border: "1px solid rgba(61,139,55,0.3)", borderRadius: 20, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.green }}>
                       <ShieldCheck size={10} /> Pediatric RCT
                     </span>
                     <div style={{ position: "relative", zIndex: 1, width: 140, height: 170 }}>
@@ -475,19 +475,19 @@ export default function SeedPDS08Review() {
                     <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${SEED.cardBg})` }} />
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>Seed · Ages 3–17</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 4 }}>Seed · Ages 3–17</p>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink, marginBottom: 12 }}>PDS-08® Pediatric Daily Synbiotic</p>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: `1px solid ${SEED.mutedBg}`, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                       {[{ val: `${editorialScore}/10`, label: "FSP Score" }, { val: "24.5B", label: "AFU" }, { val: "5g", label: "Prebiotic" }].map(stat => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
                           <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: SEED.green, lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
-                          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: SEED.caption }}>{stat.label}</p>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: SEED.caption }}>{stat.label}</p>
                         </div>
                       ))}
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 30 sachets</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.caption, marginBottom: 2 }}>Price / 30 sachets</p>
                         <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: SEED.ink }}>$39.99</p>
                       </div>
                       <a href="https://amzn.to/4ecAxQa" target="_blank" rel="nofollow noopener noreferrer"
@@ -533,9 +533,9 @@ export default function SeedPDS08Review() {
                   <table style={{ borderCollapse: "collapse", minWidth: 480, width: "100%" }}>
                     <thead>
                       <tr style={{ backgroundColor: SEED.darkBg }}>
-                        <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "42%" }}>Component</th>
-                        <th style={{ padding: "12px 16px", textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "28%" }}>Amount</th>
-                        <th style={{ padding: "12px 16px", textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "30%" }}>Status</th>
+                        <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "42%" }}>Component</th>
+                        <th style={{ padding: "12px 16px", textAlign: "right", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "28%" }}>Amount</th>
+                        <th style={{ padding: "12px 16px", textAlign: "center", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText, width: "30%" }}>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -549,9 +549,9 @@ export default function SeedPDS08Review() {
                       ].map((row, i) => (
                         <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                           <td style={{ padding: "11px 16px", fontSize: 13, color: SEED.body, fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
-                          <td style={{ padding: "11px 16px", fontSize: 12, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: row.ok ? SEED.greenDeep : SEED.scoreLow }}>{row.amount}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 12, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap", color: row.ok ? SEED.greenDeep : SEED.scoreLow }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
-                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.ok ? SEED.certPass : SEED.certFail, border: `1px solid ${row.ok ? SEED.certPassBorder : SEED.certFailBorder}`, borderRadius: 20, fontSize: 11, color: row.ok ? SEED.certPassText : SEED.certFailText, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>
+                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.ok ? SEED.certPass : SEED.certFail, border: `1px solid ${row.ok ? SEED.certPassBorder : SEED.certFailBorder}`, borderRadius: 20, fontSize: 11, color: row.ok ? SEED.certPassText : SEED.certFailText, fontFamily: "var(--font-jetbrains), monospace", fontWeight: 600 }}>
                               {row.ok ? "Disclosed ✓" : "Undisclosed"}
                             </span>
                           </td>
@@ -614,7 +614,7 @@ export default function SeedPDS08Review() {
                       <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: SEED.ink, margin: 0 }}>{ing.name}</h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>{ing.verdict}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>{ing.verdict}</p>
                     <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
                   </div>
                 ))}
@@ -668,7 +668,7 @@ export default function SeedPDS08Review() {
                   ].map(item => (
                     <div key={item.label} style={{ padding: "12px 14px", backgroundColor: item.status ? SEED.certPass : SEED.certFail, border: `1px solid ${item.status ? SEED.certPassBorder : SEED.certFailBorder}`, borderRadius: 8, display: "flex", alignItems: "center", gap: 10 }}>
                       <span style={{ fontSize: 14, color: item.status ? SEED.certPassText : SEED.certFailText }}>{item.status ? "✓" : "✗"}</span>
-                      <span style={{ fontSize: 12, color: SEED.body, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
+                      <span style={{ fontSize: 12, color: SEED.body, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
                     </div>
                   ))}
                 </div>
@@ -684,7 +684,7 @@ export default function SeedPDS08Review() {
               <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
                 <div style={{ padding: "20px 24px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderLeft: `3px solid ${SEED.green}`, borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 8 }}>Protocol (Ages 3–17)</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.caption, marginBottom: 8 }}>Protocol (Ages 3–17)</p>
                   <p style={{ fontSize: 15, color: SEED.ink, fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Open 1 sachet, mix into cold or room-temperature food or liquid daily.</p>
                   <ul style={{ paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 6 }}>
                     {[
@@ -708,7 +708,7 @@ export default function SeedPDS08Review() {
                     <thead>
                       <tr style={{ backgroundColor: SEED.darkBg }}>
                         {["Product", "Strains", "Potency", "Prebiotic", "Pediatric RCT", "$/Month"].map(h => (
-                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText }}>{h}</th>
+                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: SEED.darkText }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -723,10 +723,10 @@ export default function SeedPDS08Review() {
                         <tr key={row.product} style={{ backgroundColor: row.hi ? "rgba(61,139,55,0.06)" : i % 2 === 0 ? SEED.cardBg : SEED.pageBg, borderBottom: `1px solid ${SEED.mutedBg}` }}>
                           <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.hi ? 700 : 400, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif" }}>{row.product}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: SEED.body, fontFamily: "var(--font-hanken), sans-serif" }}>{row.strains}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, fontWeight: 600, color: row.hi ? SEED.greenDeep : SEED.body, fontFamily: "var(--font-dm-mono), monospace" }}>{row.pot}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, fontWeight: 600, color: row.hi ? SEED.greenDeep : SEED.body, fontFamily: "var(--font-jetbrains), monospace" }}>{row.pot}</td>
                           <td style={{ padding: "11px 14px", fontSize: 12, color: SEED.muted, fontFamily: "var(--font-hanken), sans-serif" }}>{row.pre}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, fontWeight: 600, color: row.rct.includes("✓") ? SEED.greenDeep : SEED.muted, fontFamily: "var(--font-dm-mono), monospace" }}>{row.rct}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: row.hi ? SEED.green : SEED.ink, fontFamily: "var(--font-dm-mono), monospace" }}>{row.price}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, fontWeight: 600, color: row.rct.includes("✓") ? SEED.greenDeep : SEED.muted, fontFamily: "var(--font-jetbrains), monospace" }}>{row.rct}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: row.hi ? SEED.green : SEED.ink, fontFamily: "var(--font-jetbrains), monospace" }}>{row.price}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -766,7 +766,7 @@ export default function SeedPDS08Review() {
                   ].map(item => (
                     <div key={item.label} style={{ padding: "14px 18px", backgroundColor: SEED.cardBg, border: `1px solid ${item.severity === "moderate" ? "rgba(139,115,85,0.3)" : SEED.border}`, borderRadius: 10 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
-                        <span style={{ padding: "2px 8px", backgroundColor: item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EBD9" }}>{item.severity} risk</span>
+                        <span style={{ padding: "2px 8px", backgroundColor: item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>{item.severity} risk</span>
                         <span style={{ fontSize: 13, fontWeight: 700, color: SEED.ink, fontFamily: "var(--font-hanken), sans-serif" }}>{item.label}</span>
                       </div>
                       <p style={{ fontSize: 13, color: SEED.muted, lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.detail}</p>
@@ -786,9 +786,9 @@ export default function SeedPDS08Review() {
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: SEED.ink, marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
                 <div style={{ padding: "24px 28px", backgroundColor: SEED.cardBg, border: `1px solid ${SEED.border}`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.green, marginBottom: 6 }}>Available on Amazon</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: SEED.green, marginBottom: 6 }}>Available on Amazon</p>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: SEED.ink, marginBottom: 4 }}>
-                      $39.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 sachets</span>
+                      $39.99 <span style={{ fontSize: "0.55em", color: SEED.sepia, fontFamily: "var(--font-jetbrains), monospace", fontWeight: 400 }}>/ 30 sachets</span>
                     </p>
                     <p style={{ fontSize: 13, color: SEED.muted, margin: 0 }}>Also at seed.com, Target, Sprouts. Prices verified May 2026.</p>
                   </div>
@@ -825,10 +825,10 @@ export default function SeedPDS08Review() {
                   <div style={{ position: "absolute", inset: 0, ...SEED.dotGrid, borderRadius: 16, pointerEvents: "none" }} />
                   <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 — REV-2026-064</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.green, marginBottom: 8 }}>FSP v2.1 — REV-2026-064</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: SEED.green, lineHeight: 1 }}>{editorialScore}</span>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: SEED.darkMuted }}>/ 10</span>
+                        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, color: SEED.darkMuted }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
@@ -858,7 +858,7 @@ export default function SeedPDS08Review() {
                     ].map((ref, i) => (
                       <li key={i} style={{ fontSize: 12, color: SEED.muted, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
-                        <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: SEED.green, textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
+                        <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: SEED.green, textDecoration: "none", fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
                       </li>
                     ))}
                   </ol>
@@ -874,10 +874,10 @@ export default function SeedPDS08Review() {
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.caption, marginBottom: 6 }}>Seed Product Reviews</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: SEED.caption, marginBottom: 6 }}>Seed Product Reviews</p>
                 <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: SEED.ink, letterSpacing: "-0.02em" }}>More from Seed</h3>
               </div>
-              <Link href="/reviews" style={{ fontSize: 12, color: SEED.green, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+              <Link href="/reviews" style={{ fontSize: 12, color: SEED.green, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
               {relatedReviews.map(r => <ReviewCard key={r.slug} {...r} />)}

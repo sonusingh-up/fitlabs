@@ -50,7 +50,7 @@ export default function SeedViaCap({
       <div style={{ position: "relative", zIndex: 1, marginBottom: 28 }}>
         <p
           style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-jetbrains), monospace",
             fontSize: 9,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
@@ -224,7 +224,7 @@ export default function SeedViaCap({
               />
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 10,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
@@ -271,7 +271,7 @@ export default function SeedViaCap({
               />
               <p
                 style={{
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   fontSize: 10,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",

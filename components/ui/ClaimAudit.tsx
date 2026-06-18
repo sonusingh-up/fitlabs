@@ -20,12 +20,12 @@ export default function ClaimAudit({ items }: Props) {
   const unsupported = items.filter((i) => i.verdict === "unsupported").length;
 
   return (
-    <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+    <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
 
       {/* ── Header bar ─────────────────────────────────────────────────────── */}
       <div style={{
         padding: "12px 20px",
-        backgroundColor: "#1A1714",
+        backgroundColor: "#17211C",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -33,33 +33,33 @@ export default function ClaimAudit({ items }: Props) {
         gap: 8,
       }}>
         <p style={{
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-jetbrains), monospace",
           fontSize: 9,
           letterSpacing: "0.2em",
           textTransform: "uppercase",
-          color: "#5C5650",
+          color: "#3F4B43",
           margin: 0,
         }}>
           Marketing Claim Audit
         </p>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           {supported > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", color: "#2D6A4F", letterSpacing: "0.08em" }}>
+            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#2D6A4F", letterSpacing: "0.08em" }}>
               {supported}× supported
             </span>
           )}
           {overstated > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", color: "#8B7355", letterSpacing: "0.08em" }}>
+            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#8B7355", letterSpacing: "0.08em" }}>
               {overstated}× overstated
             </span>
           )}
           {contextDep > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", color: "#3A5F8B", letterSpacing: "0.08em" }}>
+            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#3A5F8B", letterSpacing: "0.08em" }}>
               {contextDep}× context-dependent
             </span>
           )}
           {unsupported > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-dm-mono), monospace", color: "#8B3A2C", letterSpacing: "0.08em" }}>
+            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#8B3A2C", letterSpacing: "0.08em" }}>
               {unsupported}× unsupported
             </span>
           )}
@@ -69,16 +69,16 @@ export default function ClaimAudit({ items }: Props) {
       {/* ── Column headers — desktop only ──────────────────────────────────── */}
       <div className="claim-col-header-row" style={{
         padding: "8px 20px",
-        backgroundColor: "#EDE8DF",
-        borderBottom: "1px solid #D4C9B8",
+        backgroundColor: "#F2F8F4",
+        borderBottom: "1px solid #E4E8E5",
       }}>
-        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880" }}>
+        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259" }}>
           Marketing Claim
         </span>
-        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", paddingLeft: 16 }}>
+        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", paddingLeft: 16 }}>
           Our Verdict
         </span>
-        <span className="claim-evidence-header" style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", paddingLeft: 16 }}>
+        <span className="claim-evidence-header" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", paddingLeft: 16 }}>
           Evidence
         </span>
       </div>
@@ -92,8 +92,8 @@ export default function ClaimAudit({ items }: Props) {
             key={i}
             className="layout-claim-row"
             style={{
-              borderBottom: isLast ? "none" : "1px solid #EDE8DF",
-              backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9",
+              borderBottom: isLast ? "none" : "1px solid #F2F8F4",
+              backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF",
             }}
           >
             {/* Claim text + notes */}
@@ -112,7 +112,7 @@ export default function ClaimAudit({ items }: Props) {
                   fontSize: 9,
                   fontWeight: 700,
                   color: meta.color,
-                  fontFamily: "var(--font-dm-mono), monospace",
+                  fontFamily: "var(--font-jetbrains), monospace",
                   marginTop: 1,
                 }}>
                   {verdictIcon[item.verdict] ?? "?"}
@@ -120,7 +120,7 @@ export default function ClaimAudit({ items }: Props) {
                 <p style={{
                   fontSize: 13,
                   fontWeight: 600,
-                  color: "#1A1714",
+                  color: "#17211C",
                   lineHeight: 1.4,
                   fontFamily: "var(--font-dm-sans), sans-serif",
                   margin: 0,
@@ -128,7 +128,7 @@ export default function ClaimAudit({ items }: Props) {
                   {item.claim}
                 </p>
               </div>
-              <p style={{ fontSize: 12, color: "#8A8480", lineHeight: 1.6, margin: 0, paddingLeft: 26 }}>
+              <p style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.6, margin: 0, paddingLeft: 26 }}>
                 {item.notes}
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function ClaimAudit({ items }: Props) {
                 fontSize: 9,
                 fontWeight: 700,
                 color: meta.color,
-                fontFamily: "var(--font-dm-mono), monospace",
+                fontFamily: "var(--font-jetbrains), monospace",
                 letterSpacing: "0.06em",
                 lineHeight: 1.5,
                 textAlign: "center",
@@ -174,10 +174,10 @@ export default function ClaimAudit({ items }: Props) {
       })}
 
       {/* ── Footer ─────────────────────────────────────────────────────────── */}
-      <div style={{ padding: "10px 20px", backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8" }}>
-        <p style={{ fontSize: 11, color: "#8A8480", margin: 0 }}>
+      <div style={{ padding: "10px 20px", backgroundColor: "#F2F8F4", borderTop: "1px solid #E4E8E5" }}>
+        <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>
           Claims are audited against published peer-reviewed literature as of the review date.{" "}
-          <a href="/methodology#claim-audit" style={{ color: "#C4622D", textDecoration: "none" }}>
+          <a href="/methodology#claim-audit" style={{ color: "#0F7A5A", textDecoration: "none" }}>
             How we audit claims →
           </a>
         </p>

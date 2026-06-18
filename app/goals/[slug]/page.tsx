@@ -38,28 +38,28 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
   ];
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/goals/muscle-gain" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Goals</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{goal}</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/goals/muscle-gain" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Goals</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{goal}</span>
         </div>
       </div>
 
-      <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+      <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>GOAL GUIDE · G-01</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Evidence-Based Protocol</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>GOAL GUIDE · G-01</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Evidence-Based Protocol</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
-            Best Supplements for <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>{goal}</em>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.0, marginBottom: 16 }}>
+            Best Supplements for <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>{goal}</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.7, maxWidth: 620 }}>
             An evidence-first guide to building a supplement protocol around your goal. We rank ingredients by research quality, not marketing budgets.
           </p>
         </div>
@@ -70,20 +70,20 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
           <SectionHeading label="Supplement Stack" figure="§ 01" title="Recommended" titleItalic="protocol" size="sm" />
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {supplements.map((s) => (
-              <div key={s.name} className="layout-supplement-row" style={{ padding: "18px 20px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, fontWeight: 700, color: "#A89880" }}>#{s.rank}</span>
+              <div key={s.name} className="layout-supplement-row" style={{ padding: "18px 20px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, fontWeight: 700, color: "#586259" }}>#{s.rank}</span>
                 <div>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{s.name}</p>
-                  <p className="supp-mobile-meta">{s.dose} · <span style={{ color: s.priority === "High" ? "#2D6A4F" : s.priority === "Medium" ? "#8B7355" : "#A89880" }}>{s.priority}</span></p>
-                  <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>{s.role}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 2 }}>{s.name}</p>
+                  <p className="supp-mobile-meta">{s.dose} · <span style={{ color: s.priority === "High" ? "#2D6A4F" : s.priority === "Medium" ? "#8B7355" : "#586259" }}>{s.priority}</span></p>
+                  <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>{s.role}</p>
                 </div>
                 <div className="supp-col-hide">
-                  <p style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 3 }}>DOSE</p>
+                  <p style={{ fontSize: 10, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 3 }}>DOSE</p>
                   <p style={{ fontSize: 12, color: "#2D2926" }}>{s.dose}</p>
                 </div>
                 <div className="supp-col-hide">
-                  <p style={{ fontSize: 10, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginBottom: 3 }}>PRIORITY</p>
-                  <span style={{ fontSize: 11, fontWeight: 600, color: s.priority === "High" ? "#2D6A4F" : s.priority === "Medium" ? "#8B7355" : "#A89880" }}>{s.priority}</span>
+                  <p style={{ fontSize: 10, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", marginBottom: 3 }}>PRIORITY</p>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: s.priority === "High" ? "#2D6A4F" : s.priority === "Medium" ? "#8B7355" : "#586259" }}>{s.priority}</span>
                 </div>
                 <EvidenceBadge level={s.evidence} showIcon={false} />
               </div>
@@ -95,8 +95,8 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
           <SectionHeading label="Foundations" figure="§ 02" title="Diet &" titleItalic="lifestyle notes" size="sm" />
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {dietNotes.map((note, i) => (
-              <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start", padding: "16px 18px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", flexShrink: 0, marginTop: 2 }}>{String(i + 1).padStart(2, "0")}</span>
+              <div key={i} style={{ display: "flex", gap: 16, alignItems: "flex-start", padding: "16px 18px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", flexShrink: 0, marginTop: 2 }}>{String(i + 1).padStart(2, "0")}</span>
                 <p style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.65 }}>{note}</p>
               </div>
             ))}
@@ -109,7 +109,7 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
             {topReviews.map((r) => (<ReviewCard key={r.slug} {...r} />))}
           </div>
           <div style={{ marginTop: 24, textAlign: "center" }}>
-            <Link href="/best/muscle-gain" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 22px", border: "1px solid #D4C9B8", color: "#5C5650", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+            <Link href="/best/muscle-gain" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 22px", border: "1px solid #E4E8E5", color: "#3F4B43", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
               See Full Best-Of List →
             </Link>
           </div>

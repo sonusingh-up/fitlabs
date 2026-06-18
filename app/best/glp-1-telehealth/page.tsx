@@ -71,7 +71,7 @@ const topPicks: Provider[] = [
     consultSpeed: "Same-day",
     usOnly: true,
     badge: "Editor's Choice",
-    badgeColor: "#C4622D",
+    badgeColor: "#0F7A5A",
     image: "#",
     buyUrl: "https://www.wellmedr.com/pages/get-started-weight-loss",
     buyLabel: "Get Started at WellMedr ↗",
@@ -290,19 +290,19 @@ export default function BestGlp1TelehealthPage() {
   };
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/best" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Best Of</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>GLP-1 Telehealth</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/best" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Best Of</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>GLP-1 Telehealth</span>
         </div>
       </div>
 
@@ -311,42 +311,42 @@ export default function BestGlp1TelehealthPage() {
         {/* Hero */}
         <div style={{ marginBottom: 56, maxWidth: 780 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>ROUNDUP · 2026</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>5 Platforms Evaluated · US Only</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>ROUNDUP · 2026</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>5 Platforms Evaluated · US Only</span>
           </div>
           <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
             5 Best GLP-1 Telehealth Providers{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>— 2026 Rankings</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>— 2026 Rankings</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, marginBottom: 12 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, marginBottom: 12 }}>
             We evaluated five GLP-1 telehealth platforms on price, medication options (tirzepatide vs semaglutide), microdosing availability, consultation speed, side-effect support, and compounding pharmacy standards. The difference between platforms is significant — especially on price and the ability to manage GI side effects.
           </p>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 20 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginBottom: 20 }}>
             All platforms below require a prescription from a licensed US physician and ship exclusively within the United States. Compounded GLP-1 medications are not FDA-approved drugs — they are legal custom formulations from licensed compounding pharmacies.
           </p>
 
           {/* US-only notice */}
           <div style={{ padding: "12px 16px", backgroundColor: "rgba(196,98,45,0.06)", border: "1px solid rgba(196,98,45,0.2)", borderRadius: 8, marginBottom: 20 }}>
-            <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>
-              <strong style={{ color: "#C4622D" }}>US residents only.</strong>{" "}
+            <p style={{ fontSize: 13, color: "#3F4B43", margin: 0 }}>
+              <strong style={{ color: "#0F7A5A" }}>US residents only.</strong>{" "}
               All GLP-1 telehealth platforms on this page operate exclusively within the United States. International readers should consult a local endocrinologist for branded GLP-1 access.
             </p>
           </div>
 
           {/* Affiliate + medical disclaimer strip */}
-          <div style={{ padding: "10px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, marginBottom: 20 }}>
-            <p style={{ fontSize: 12, color: "#8A8480", margin: 0 }}>
+          <div style={{ padding: "10px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, marginBottom: 20 }}>
+            <p style={{ fontSize: 12, color: "#6B7770", margin: 0 }}>
               <strong>Affiliate disclosure:</strong> WellMedr links are affiliate links — Fitlabreviews may earn a commission. Ro Body, Hers, Found, and SkinnyRx are editorially independent.{" "}
-              <Link href="/editorial-policy" style={{ color: "#C4622D" }}>Policy →</Link>
+              <Link href="/editorial-policy" style={{ color: "#0F7A5A" }}>Policy →</Link>
               {" · "}
               <strong>Medical notice:</strong> GLP-1s are prescription medications. Consult a physician before starting.{" "}
-              <Link href="/medical-disclaimer" style={{ color: "#C4622D" }}>Full disclaimer →</Link>
+              <Link href="/medical-disclaimer" style={{ color: "#0F7A5A" }}>Full disclaimer →</Link>
             </p>
           </div>
 
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-            <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
+            <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>
               Last updated: May 2026 · 5 platforms evaluated · Independent review
             </p>
           </div>
@@ -355,22 +355,22 @@ export default function BestGlp1TelehealthPage() {
         {/* Quick-jump comparison table */}
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="At a Glance" figure="§ 01" title="All 5 picks" titleItalic="side by side" size="sm" />
-          <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
+          <div style={{ overflowX: "auto", border: "1px solid #E4E8E5", borderRadius: 12 }}>
             <table style={{ borderCollapse: "collapse", minWidth: 750, width: "100%", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714" }}>
+                <tr style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#1A1714" }}>
                   {["Platform", "Medication", "Microdosing", "Starting Price", "Consult Speed", "Score", ""].map((h) => (
-                    <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500, whiteSpace: "nowrap" }}>{h}</th>
+                    <th key={h} style={{ padding: "12px 16px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#FFFFFF", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 500, whiteSpace: "nowrap" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {topPicks.map((pick, i) => (
-                  <tr key={pick.slug} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={pick.slug} style={{ borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "12px 16px", verticalAlign: "middle" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                         {/* Provider logo thumbnail */}
-                        <div style={{ width: 44, height: 44, backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <div style={{ width: 44, height: 44, backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
                           <img
                             src={pick.image}
                             alt={`${pick.brand} logo`}
@@ -380,29 +380,29 @@ export default function BestGlp1TelehealthPage() {
                         <div>
                           <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{pick.brand}</div>
                           {pick.badge && (
-                            <span style={{ fontSize: 9, padding: "2px 7px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.05em", whiteSpace: "nowrap" }}>{pick.badge}</span>
+                            <span style={{ fontSize: 9, padding: "2px 7px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.05em", whiteSpace: "nowrap" }}>{pick.badge}</span>
                           )}
                         </div>
                       </div>
                     </td>
-                    <td style={{ padding: "12px 16px", fontSize: 12, color: "#5C5650", verticalAlign: "middle" }}>{pick.medication}</td>
+                    <td style={{ padding: "12px 16px", fontSize: 12, color: "#3F4B43", verticalAlign: "middle" }}>{pick.medication}</td>
                     <td style={{ padding: "12px 16px", fontSize: 12, verticalAlign: "middle", whiteSpace: "nowrap" }}>
-                      <span style={{ color: pick.microdosing.startsWith("Yes") ? "#4A7C59" : "#8A8480", fontWeight: pick.microdosing.startsWith("Yes") ? 600 : 400 }}>
+                      <span style={{ color: pick.microdosing.startsWith("Yes") ? "#4A7C59" : "#6B7770", fontWeight: pick.microdosing.startsWith("Yes") ? 600 : 400 }}>
                         {pick.microdosing}
                       </span>
                     </td>
-                    <td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, color: "#C4622D", verticalAlign: "middle", whiteSpace: "nowrap" }}>{pick.startingPrice}</td>
-                    <td style={{ padding: "12px 16px", fontSize: 12, color: "#5C5650", verticalAlign: "middle", whiteSpace: "nowrap" }}>{pick.consultSpeed}</td>
+                    <td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, color: "#0F7A5A", verticalAlign: "middle", whiteSpace: "nowrap" }}>{pick.startingPrice}</td>
+                    <td style={{ padding: "12px 16px", fontSize: 12, color: "#3F4B43", verticalAlign: "middle", whiteSpace: "nowrap" }}>{pick.consultSpeed}</td>
                     <td style={{ padding: "12px 16px", verticalAlign: "middle" }}>
                       <ReviewScoreBadge rating={pick.rating} size="sm" />
                     </td>
                     <td style={{ padding: "12px 16px", verticalAlign: "middle" }}>
                       {pick.slug === "wellmedr" ? (
-                        <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#C4622D", fontWeight: 600, textDecoration: "none", whiteSpace: "nowrap" }}>
+                        <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 600, textDecoration: "none", whiteSpace: "nowrap" }}>
                           Review →
                         </Link>
                       ) : (
-                        <span style={{ fontSize: 12, color: "#D4C9B8", fontFamily: "var(--font-dm-mono), monospace" }}>—</span>
+                        <span style={{ fontSize: 12, color: "#E4E8E5", fontFamily: "var(--font-jetbrains), monospace" }}>—</span>
                       )}
                     </td>
                   </tr>
@@ -421,21 +421,21 @@ export default function BestGlp1TelehealthPage() {
                 key={pick.slug}
                 id={pick.slug}
                 style={{
-                  border: `1px solid ${pick.rank === 1 ? "#C4622D" : "#D4C9B8"}`,
+                  border: `1px solid ${pick.rank === 1 ? "#0F7A5A" : "#E4E8E5"}`,
                   borderRadius: 12,
                   overflow: "hidden",
-                  backgroundColor: "#F8F2E4",
+                  backgroundColor: "#F6F8F6",
                 }}
               >
                 {/* Pick header */}
-                <div style={{ padding: "20px 24px", borderBottom: "1px solid #D4C9B8", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+                <div style={{ padding: "20px 24px", borderBottom: "1px solid #E4E8E5", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                     {/* Rank badge */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, backgroundColor: pick.rank === 1 ? "#C4622D" : "#EDE8DF", borderRadius: 10, flexShrink: 0 }}>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, fontWeight: 700, color: pick.rank === 1 ? "#fff" : "#5C5650" }}>#{pick.rank}</span>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 44, height: 44, backgroundColor: pick.rank === 1 ? "#0F7A5A" : "#F2F8F4", borderRadius: 10, flexShrink: 0 }}>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, fontWeight: 700, color: pick.rank === 1 ? "#fff" : "#3F4B43" }}>#{pick.rank}</span>
                     </div>
                     <div>
-                      <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 4, textTransform: "uppercase" }}>
+                      <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 4, textTransform: "uppercase" }}>
                         {pick.medication} · From {pick.startingPrice}
                       </div>
                       <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>
@@ -446,7 +446,7 @@ export default function BestGlp1TelehealthPage() {
 
                   {/* Right: image + score + badge */}
                   <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8 }}>
-                    <div style={{ width: 80, height: 80, backgroundColor: "#EDE8DF", border: `2px solid ${pick.rank === 1 ? "#C4622D" : "#D4C9B8"}`, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div style={{ width: 80, height: 80, backgroundColor: "#F2F8F4", border: `2px solid ${pick.rank === 1 ? "#0F7A5A" : "#E4E8E5"}`, borderRadius: 12, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
                       <img
                         src={pick.image}
                         alt={`${pick.brand} GLP-1 telehealth service`}
@@ -455,7 +455,7 @@ export default function BestGlp1TelehealthPage() {
                     </div>
                     <ReviewScoreBadge rating={pick.rating} size="sm" />
                     {pick.badge && (
-                      <span style={{ fontSize: 10, padding: "3px 10px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{pick.badge}</span>
+                      <span style={{ fontSize: 10, padding: "3px 10px", backgroundColor: pick.badgeColor, color: "#fff", borderRadius: 99, fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap" }}>{pick.badge}</span>
                     )}
                   </div>
                 </div>
@@ -463,7 +463,7 @@ export default function BestGlp1TelehealthPage() {
                 {/* Verdict + pros/cons */}
                 <div style={{ padding: "20px 24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>Our Verdict</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Our Verdict</p>
                     <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7, marginBottom: 16 }}>{pick.verdict}</p>
 
                     {/* Key specs mini-grid */}
@@ -474,8 +474,8 @@ export default function BestGlp1TelehealthPage() {
                         { label: "Consult Speed", value: pick.consultSpeed },
                         { label: "Best For", value: pick.bestFor },
                       ].map((s) => (
-                        <div key={s.label} style={{ borderLeft: "2px solid #D4C9B8", paddingLeft: 10 }}>
-                          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 3px" }}>{s.label}</p>
+                        <div key={s.label} style={{ borderLeft: "2px solid #E4E8E5", paddingLeft: 10 }}>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 3px" }}>{s.label}</p>
                           <p style={{ fontSize: 12, color: "#1A1714", fontWeight: 600, margin: 0 }}>{s.value}</p>
                         </div>
                       ))}
@@ -483,7 +483,7 @@ export default function BestGlp1TelehealthPage() {
                   </div>
 
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>Pros</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Pros</p>
                     <ul style={{ listStyle: "none", padding: 0, margin: 0, marginBottom: 16 }}>
                       {pick.pros.map((p) => (
                         <li key={p} style={{ fontSize: 13, color: "#1A1714", padding: "4px 0", display: "flex", alignItems: "flex-start", gap: 8 }}>
@@ -492,7 +492,7 @@ export default function BestGlp1TelehealthPage() {
                         </li>
                       ))}
                     </ul>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>Cons</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Cons</p>
                     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                       {pick.cons.map((c) => (
                         <li key={c} style={{ fontSize: 13, color: "#1A1714", padding: "4px 0", display: "flex", alignItems: "flex-start", gap: 8 }}>
@@ -505,11 +505,11 @@ export default function BestGlp1TelehealthPage() {
                 </div>
 
                 {/* Footer: CTA */}
-                <div style={{ padding: "14px 24px", borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
-                  <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", margin: 0 }}>
+                <div style={{ padding: "14px 24px", borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
+                  <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", margin: 0 }}>
                     US only · From {pick.startingPrice} · {pick.medication}
                     {pick.isAffiliate && (
-                      <span style={{ marginLeft: 8, color: "#C4622D" }}>[affiliate link]</span>
+                      <span style={{ marginLeft: 8, color: "#0F7A5A" }}>[affiliate link]</span>
                     )}
                   </p>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
@@ -520,8 +520,8 @@ export default function BestGlp1TelehealthPage() {
                       style={{
                         display: "inline-flex", alignItems: "center", gap: 6,
                         padding: "8px 16px",
-                        backgroundColor: pick.rank === 1 ? "#C4622D" : "#1A1714",
-                        color: "#F2EBD9",
+                        backgroundColor: pick.rank === 1 ? "#0F7A5A" : "#1A1714",
+                        color: "#FFFFFF",
                         fontSize: 12, fontWeight: 600,
                         borderRadius: 6,
                         fontFamily: "var(--font-hanken), sans-serif",
@@ -532,7 +532,7 @@ export default function BestGlp1TelehealthPage() {
                       {pick.buyLabel}
                     </a>
                     {pick.slug === "wellmedr" && (
-                      <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
+                      <Link href={`/reviews/${pick.slug}`} style={{ fontSize: 13, color: "#0F7A5A", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                         Full review →
                       </Link>
                     )}
@@ -573,35 +573,35 @@ export default function BestGlp1TelehealthPage() {
               <div
                 key={drug.drug}
                 style={{
-                  border: `1px solid ${drug.highlight ? "#C4622D" : "#D4C9B8"}`,
+                  border: `1px solid ${drug.highlight ? "#0F7A5A" : "#E4E8E5"}`,
                   borderRadius: 10,
                   overflow: "hidden",
                 }}
               >
-                <div style={{ padding: "14px 18px", backgroundColor: drug.highlight ? "#C4622D" : "#EDE8DF", borderBottom: "1px solid #D4C9B8" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: drug.highlight ? "rgba(255,255,255,0.7)" : "#8A8480", margin: "0 0 4px" }}>{drug.trial} · n={drug.n}</p>
+                <div style={{ padding: "14px 18px", backgroundColor: drug.highlight ? "#0F7A5A" : "#F2F8F4", borderBottom: "1px solid #E4E8E5" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: drug.highlight ? "rgba(255,255,255,0.7)" : "#6B7770", margin: "0 0 4px" }}>{drug.trial} · n={drug.n}</p>
                   <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: drug.highlight ? "#fff" : "#1A1714", margin: 0 }}>{drug.drug}</p>
-                  <p style={{ fontSize: 11, color: drug.highlight ? "rgba(255,255,255,0.8)" : "#5C5650", margin: "2px 0 0" }}>{drug.brand}</p>
+                  <p style={{ fontSize: 11, color: drug.highlight ? "rgba(255,255,255,0.8)" : "#3F4B43", margin: "2px 0 0" }}>{drug.brand}</p>
                 </div>
-                <div style={{ padding: "16px 18px", backgroundColor: "#F8F2E4" }}>
+                <div style={{ padding: "16px 18px", backgroundColor: "#F6F8F6" }}>
                   <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Mean Weight Loss</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: drug.highlight ? "#C4622D" : "#1A1714", margin: 0 }}>{drug.weightLoss}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Mean Weight Loss</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.8rem", fontWeight: 800, color: drug.highlight ? "#0F7A5A" : "#1A1714", margin: 0 }}>{drug.weightLoss}</p>
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Duration</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259", textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 4px" }}>Duration</p>
                       <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{drug.weeks} wks</p>
                     </div>
                   </div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", margin: "12px 0 0" }}>{drug.citation}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", margin: "12px 0 0" }}>{drug.citation}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, padding: "18px 22px" }}>
-            <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+          <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, padding: "18px 22px" }}>
+            <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
               In the direct head-to-head SURMOUNT-5 trial (Jastreboff 2024, NEJM), tirzepatide produced <strong style={{ color: "#1A1714" }}>20.2% mean weight loss vs 13.7% for semaglutide</strong> at 72 weeks, with 31.6% of tirzepatide patients losing ≥20% of body weight compared to 16.1% on semaglutide. WellMedr&apos;s exclusive use of tirzepatide is the primary clinical reason it earns our top pick.
             </p>
           </div>
@@ -618,12 +618,12 @@ export default function BestGlp1TelehealthPage() {
               { criterion: "Consultation Speed", weight: "15%", desc: "Time from sign-up to prescription issued. Same-day vs 24–72hr turnaround." },
               { criterion: "Ongoing Support", weight: "15%", desc: "Check-in frequency, app quality, async messaging, and escalation pathways." },
             ].map((c) => (
-              <div key={c.criterion} style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, padding: "16px 14px" }}>
+              <div key={c.criterion} style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, padding: "16px 14px" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
                   <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 13 }}>{c.criterion}</p>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700 }}>{c.weight}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", fontWeight: 700 }}>{c.weight}</span>
                 </div>
-                <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.55 }}>{c.desc}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.55 }}>{c.desc}</p>
               </div>
             ))}
           </div>
@@ -632,22 +632,22 @@ export default function BestGlp1TelehealthPage() {
         {/* FAQ */}
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="FAQ" figure="§ 05" title="Frequently Asked" titleItalic="Questions" size="sm" />
-          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {faqItems.map((item, i) => (
               <div
                 key={i}
-                style={{ padding: "18px 24px", borderBottom: i < faqItems.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}
+                style={{ padding: "18px 24px", borderBottom: i < faqItems.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}
               >
                 <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 8, fontSize: 15 }}>{item.q}</p>
-                <p style={{ fontSize: 14, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.a}</p>
+                <p style={{ fontSize: 14, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.a}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Related */}
-        <div style={{ padding: "24px 28px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Related Articles</p>
+        <div style={{ padding: "24px 28px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Related Articles</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12 }}>
             {[
               { href: "/reviews/wellmedr", label: "WellMedr Full Review (2026)", sub: "Our #1 pick — in-depth FSP analysis" },
@@ -655,9 +655,9 @@ export default function BestGlp1TelehealthPage() {
               { href: "/research/microdose-glp1", label: "Microdose GLP-1: Does It Work?", sub: "Evidence for sub-threshold dosing protocols" },
               { href: "/compare/wellmedr-vs-ro-body", label: "WellMedr vs Ro Body", sub: "Head-to-head comparison of our top 2 picks" },
             ].map((link) => (
-              <Link key={link.href} href={link.href} style={{ textDecoration: "none", display: "block", padding: "14px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}>
-                <p style={{ fontSize: 14, color: "#C4622D", fontWeight: 700, margin: "0 0 4px" }}>{link.label} →</p>
-                <p style={{ fontSize: 12, color: "#8A8480", margin: 0 }}>{link.sub}</p>
+              <Link key={link.href} href={link.href} style={{ textDecoration: "none", display: "block", padding: "14px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}>
+                <p style={{ fontSize: 14, color: "#0F7A5A", fontWeight: 700, margin: "0 0 4px" }}>{link.label} →</p>
+                <p style={{ fontSize: 12, color: "#6B7770", margin: 0 }}>{link.sub}</p>
               </Link>
             ))}
           </div>

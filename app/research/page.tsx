@@ -61,7 +61,7 @@ const articles: ResearchArticle[] = [
     summary: "The SELECT trial showed a 20% cardiovascular event reduction. The FLOW trial was stopped early for a 24% kidney failure benefit. GLP-1 agonists also reduce blood pressure, show migraine promise via CGRP modulation, and are being investigated for depression and alcohol use disorder.",
     evidence: "strong",
     tags: ["GLP-1", "Semaglutide", "Cardiovascular", "Kidney Health", "Mental Health"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
   },
   {
     slug: "microdose-glp1",
@@ -113,7 +113,7 @@ const articles: ResearchArticle[] = [
     summary: "Both can support muscle protein synthesis when leucine thresholds are met. We compare digestibility, amino acid profiles, and real-world study outcomes — not marketing claims.",
     evidence: "strong",
     tags: ["Protein", "Plant-Based", "MPS"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
   },
   {
     slug: "caffeine-tolerance-reset",
@@ -152,7 +152,7 @@ const articles: ResearchArticle[] = [
     summary: "The 30-minute anabolic window is largely a myth for trained individuals eating adequate total protein. Schoenfeld et al. (2013) showed total daily protein matters far more than precise timing.",
     evidence: "strong",
     tags: ["Protein", "Timing", "Muscle Gain"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
   },
   {
     slug: "ashwagandha-ksm66-vs-sensoril",

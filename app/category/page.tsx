@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
@@ -20,7 +20,7 @@ const categories = [
     description: "The most important supplement for muscle protein synthesis. We evaluate protein yield accuracy, amino acid profiles, and label honesty.",
     topIngredients: ["Whey Isolate", "Casein", "Pea Protein"],
     keyConsiderations: ["Protein yield per 100g", "Amino spiking risk", "Digestive enzymes"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Muscle Gain", "Recovery", "Weight Loss"],
   },
   {
@@ -59,7 +59,7 @@ const categories = [
     description: "High-calorie supplements for hardgainers. We check calorie sources — quality carbs vs cheap sugars — and protein-per-rupee ratios.",
     topIngredients: ["Whey Protein", "Complex Carbs", "Creatine", "MCT Oil"],
     keyConsiderations: ["Sugar content", "Protein quality", "Calorie density"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Bulking", "Hardgainers", "Weight Gain"],
   },
   {
@@ -137,7 +137,7 @@ const categories = [
     description: "Digestive enzymes, postbiotics, and herb-based gut supplements. We evaluate ingredient doses against clinical evidence and flag proprietary blends that hide key amounts.",
     topIngredients: ["Bromelain", "Ginger Extract", "Peppermint Leaf"],
     keyConsiderations: ["Proprietary blend transparency", "Dose vs clinical trials", "Third-party certification"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     bestFor: ["Bloating", "Digestive Comfort", "IBS Support"],
   },
   {

@@ -87,7 +87,7 @@ export default function SeedResearchCard({
             backgroundColor: trialStyle.bg,
             border: `1px solid ${trialStyle.border}`,
             borderRadius: 20,
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-jetbrains), monospace",
             fontSize: 9,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
@@ -101,7 +101,7 @@ export default function SeedResearchCard({
         {/* Year badge */}
         <span
           style={{
-            fontFamily: "var(--font-dm-mono), monospace",
+            fontFamily: "var(--font-jetbrains), monospace",
             fontSize: 9,
             color: SEED.caption,
             letterSpacing: "0.08em",
@@ -120,7 +120,7 @@ export default function SeedResearchCard({
               backgroundColor: "rgba(61,139,55,0.10)",
               border: "1px solid rgba(61,139,55,0.25)",
               borderRadius: 20,
-              fontFamily: "var(--font-dm-mono), monospace",
+              fontFamily: "var(--font-jetbrains), monospace",
               fontSize: 9,
               letterSpacing: "0.12em",
               textTransform: "uppercase",
@@ -152,7 +152,7 @@ export default function SeedResearchCard({
         style={{
           fontSize: 11,
           color: SEED.caption,
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-jetbrains), monospace",
           letterSpacing: "0.04em",
           marginBottom: 12,
           lineHeight: 1.5,
@@ -196,7 +196,7 @@ export default function SeedResearchCard({
           gap: 5,
           fontSize: 10,
           color: SEED.green,
-          fontFamily: "var(--font-dm-mono), monospace",
+          fontFamily: "var(--font-jetbrains), monospace",
           letterSpacing: "0.08em",
           textDecoration: "none",
         }}

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { reviews, researchBriefs } from "@/lib/data";
-import ReviewCard from "@/components/ui/ReviewCard";
+import Image from "next/image";
+import { researchBriefs } from "@/lib/data";
+import TrustPillars from "@/components/ui/TrustPillars";
 
 export const metadata: Metadata = {
   title: { absolute: "Fitlabreviews — Evidence-Led Supplement Reviews" },
@@ -10,35 +11,116 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const featuredReviews = reviews.slice(0, 4);
 const latestResearch = researchBriefs.slice(0, 3);
 
 const GOAL_CARDS = [
-  { code: "G-01", title: "Muscle Gain",      bg: "#0F7A5A", href: "/goals/muscle-gain",  tags: ["Creatine", "Whey", "Beta-Alanine"] },
-  { code: "G-02", title: "Weight Loss",      bg: "#C98A1E", href: "/goals/fat-loss",     tags: ["Protein", "Caffeine", "L-Carnitine"] },
-  { code: "G-03", title: "Energy & Focus",   bg: "#0A4F3B", href: "/goals/strength",     tags: ["Caffeine", "L-Theanine", "Ashwagandha"] },
-  { code: "G-04", title: "Recovery & Sleep", bg: "#17211C", href: "/goals/recovery",     tags: ["Magnesium", "Ashwagandha", "Glycine"] },
+  {
+    code: "G-01", title: "Muscle Gain", bg: "#0F7A5A", href: "/goals/muscle-gain",
+    desc: "Build lean mass with evidence-backed protocols and foundational diet structure.",
+    tags: ["Creatine", "Whey", "Beta-Alanine"],
+  },
+  {
+    code: "G-02", title: "Weight Loss", bg: "#C98A1E", href: "/goals/fat-loss",
+    desc: "Support your deficit with ingredients that preserve muscle and improve satiety.",
+    tags: ["Protein", "Caffeine", "L-Carnitine"],
+  },
+  {
+    code: "G-03", title: "Energy & Focus", bg: "#0A4F3B", href: "/goals/strength",
+    desc: "Build a clean stimulant stack that performs all day without the afternoon crash.",
+    tags: ["Caffeine", "L-Theanine", "Ashwagandha"],
+  },
+  {
+    code: "G-04", title: "Recovery & Sleep", bg: "#17211C", href: "/goals/recovery",
+    desc: "Reduce soreness, deepen sleep, and optimise your body's natural repair window.",
+    tags: ["Magnesium", "Ashwagandha", "Glycine"],
+  },
 ];
 
 const TOOL_CARDS = [
-  { label: "BMR CALCULATOR",    title: "Find the calories you burn at rest",        href: "/tools/free/bmr-calculator" },
-  { label: "MACROS CALCULATOR", title: "Set your daily carb, protein & fat split",  href: "/tools/free/macros-calculator" },
-  { label: "PROTEIN CALCULATOR", title: "How much protein you actually need",       href: "/tools" },
+  { label: "BMR CALCULATOR",     title: "Find the calories you burn at rest",       href: "/tools/free/bmr-calculator" },
+  { label: "MACROS CALCULATOR",  title: "Set your daily carb, protein & fat split", href: "/tools/free/macros-calculator" },
+  { label: "PROTEIN CALCULATOR", title: "How much protein you actually need",        href: "/tools" },
 ];
+
+const EDITOR_PICKS = [
+  {
+    rank: 1, slug: "dymatize-iso100-review-2026",
+    title: "ISO100 Hydrolyzed Whey Isolate", category: "WHEY ISOLATE", brand: "DYMATIZE",
+    score: 9, specs: "NSF Certified · 25g protein · $67–$85",
+    bg: "#D4E9DF", stripeColor: "rgba(15,122,90,.08)", labelColor: "#0A4F3B",
+    image: "/lifestyle/dymatize_iso100.jpg",
+  },
+  {
+    rank: 2, slug: "transparent-labs-bulk-black-review",
+    title: "BULK Black Pre-Workout", category: "PRE-WORKOUT", brand: "T. LABS",
+    score: 9, specs: "Full disclosure · 275mg caffeine · $49–$55",
+    bg: "#FDF3DE", stripeColor: "rgba(201,138,30,.1)", labelColor: "#7A5A0A",
+    image: "/lifestyle/transparent_labs_bulk.png",
+  },
+  {
+    rank: 3, slug: "heart-and-soil-beef-organs",
+    title: "Beef Organs Complex", category: "ORGAN", brand: "HEART & SOIL",
+    score: 9, specs: "Grass-fed · 6 organs · $52–$58",
+    bg: "#D4E9DF", stripeColor: "rgba(15,122,90,.08)", labelColor: "#0A4F3B",
+    image: "/lifestyle/heart_soil_beef_organs.jpg",
+  },
+  {
+    rank: 4, slug: "seed-ds01-daily-synbiotic-review",
+    title: "DS-01 Daily Synbiotic", category: "PROBIOTIC", brand: "SEED",
+    score: 8, specs: "24 strains · AFU-tested · $49/mo",
+    bg: "#E4EAF0", stripeColor: "rgba(60,90,120,.08)", labelColor: "#3A4F5A",
+    image: "/lifestyle/seed_ds01.jpg",
+  },
+];
+
+const RECOMMENDED_READS = [
+  {
+    slug: "sleep-duration-biological-aging", href: "/research/sleep-duration-biological-aging",
+    category: "LONGEVITY & SLEEP", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Anti-Aging Sweet Spot",
+    mins: 9, evidence: "Strong evidence", warm: false,
+    image: "/lifestyle/sleep_longevity.png",
+  },
+  {
+    slug: "glp1-beyond-weight-loss", href: "/research/glp1-beyond-weight-loss",
+    category: "PHARMACOLOGY", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",
+    mins: 13, evidence: "Strong evidence", warm: false,
+    image: "/lifestyle/fitness_yoga.png",
+  },
+  {
+    slug: "protein-timing-myth", href: "/research/protein-timing-myth",
+    category: "NUTRITION SCIENCE", title: "Protein Timing Is Mostly a Myth — Total Daily Intake Is What Matters",
+    mins: 7, evidence: "Moderate evidence", warm: true,
+    image: "/lifestyle/nutrition_protein.png",
+  },
+  {
+    slug: "diet-depression-anxiety", href: "/blog/diet-depression-anxiety",
+    category: "MENTAL HEALTH", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",
+    mins: 14, evidence: "Strong evidence", warm: false,
+    image: "/lifestyle/article_thumbnail_woman.png",
+  },
+];
+
 
 export default function HomePage() {
   return (
     <>
       {/* ── HERO ── */}
-      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 24px 72px", display: "grid", gridTemplateColumns: "1.55fr 1fr", gap: 56, alignItems: "start" }}>
+      <section className="hp-hero-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 24px 72px", display: "grid", gridTemplateColumns: "1.55fr 1fr", gap: 56, alignItems: "start" }}>
         {/* Featured article */}
         <article>
           <Link href="/research/sleep-duration-biological-aging" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
-            <div style={{ width: "100%", aspectRatio: "16/10", borderRadius: 16, overflow: "hidden", background: "linear-gradient(135deg,#D4E9DF,#EEF6F1)", backgroundImage: "repeating-linear-gradient(45deg,rgba(15,122,90,.06) 0 14px,transparent 14px 28px)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative" }}>
-              <span style={{ position: "absolute", top: 16, left: 16, background: "#0A4F3B", color: "#DFF3E9", fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", padding: "6px 11px", borderRadius: 7 }}>
-                FIG. ART-007 — EDITORIAL
+            <div style={{ width: "100%", aspectRatio: "16/10", borderRadius: 16, overflow: "hidden", position: "relative" }}>
+              <Image
+                src="/lifestyle/sleep_longevity.png"
+                alt="Woman sleeping peacefully — sleep duration and anti-aging research"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center 30%" }}
+                sizes="(max-width: 768px) 100vw, 55vw"
+                priority
+              />
+              <span style={{ position: "absolute", top: 16, left: 16, background: "#0A4F3B", color: "#DFF3E9", fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", padding: "6px 11px", borderRadius: 7, zIndex: 1 }}>
+                FIG. 01 — EDITORIAL
               </span>
-              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".16em", color: "#0F7A5A" }}>[ HERO PHOTOGRAPH ]</span>
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: 12, margin: "22px 0 12px" }}>
@@ -67,7 +149,7 @@ export default function HomePage() {
         </article>
 
         {/* Trending sidebar */}
-        <aside>
+        <aside className="hp-hero-aside">
           <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 22 }}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14A474" strokeWidth="2.4">
               <path d="M3 17l6-6 4 4 8-8" /><path d="M21 7v5h-5" />
@@ -78,17 +160,17 @@ export default function HomePage() {
           </div>
 
           {[
-            { cat: "Pharmacology", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss", href: "/research/glp1-beyond-weight-loss", warm: false },
-            { cat: "Women's Health", title: "Plant-Forward Eating for Menopause: 7 Foods That Fight Weight Gain", href: "/blog/plant-foods-menopause", warm: true },
-            { cat: "Mental Health", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety", href: "/blog/diet-depression-anxiety", warm: false },
-            { cat: "Reviews · 9/10", title: "Dymatize ISO100: The Only Dual-Certified Hydrolyzed Isolate", href: "/reviews/dymatize-iso100-review-2026", warm: true },
+            { cat: "Pharmacology",    title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",          href: "/research/glp1-beyond-weight-loss",       warm: false },
+            { cat: "Women's Health",  title: "Plant-Forward Eating for Menopause: 7 Foods That Fight Weight Gain",         href: "/blog/plant-foods-menopause",             warm: true  },
+            { cat: "Mental Health",   title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",      href: "/blog/diet-depression-anxiety",           warm: false },
+            { cat: "Reviews · 9/10", title: "Dymatize ISO100: The Only Dual-Certified Hydrolyzed Isolate",                href: "/reviews/dymatize-iso100-review-2026",    warm: true  },
           ].map((item, i) => (
             <Link
               key={i}
               href={item.href}
               style={{ display: "flex", gap: 16, textDecoration: "none", color: "inherit", paddingBottom: 20, marginBottom: 20, borderBottom: i < 3 ? "1px solid #E4E8E5" : "none", alignItems: "center" }}
             >
-              <div style={{ width: 88, height: 88, flex: "none", borderRadius: 11, background: item.warm ? "linear-gradient(135deg,#F4E6C9,#FAF3E2)" : "linear-gradient(135deg,#D4E9DF,#EEF6F1)" }} />
+              <div style={{ width: 88, height: 88, flex: "none", borderRadius: 11, background: item.warm ? "linear-gradient(135deg,#F4E6C9,#FAF3E2)" : "linear-gradient(135deg,#D4E9DF,#EEF6F1)", backgroundImage: item.warm ? "repeating-linear-gradient(45deg,rgba(201,138,30,.07) 0 10px,transparent 10px 20px)" : "repeating-linear-gradient(45deg,rgba(15,122,90,.06) 0 10px,transparent 10px 20px)" }} />
               <div>
                 <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 5 }}>
                   {item.cat}
@@ -102,16 +184,17 @@ export default function HomePage() {
 
       {/* ── NEWSLETTER ── */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 84px" }}>
-        <div style={{ borderRadius: 20, overflow: "hidden", display: "grid", gridTemplateColumns: "1.1fr .9fr", background: "linear-gradient(120deg,#E7F2EC,#F2F8F4)" }}>
-          <div style={{ padding: "54px 52px" }}>
+        <div className="hp-newsletter-grid" style={{ borderRadius: 20, overflow: "hidden", display: "grid", gridTemplateColumns: "1.1fr .9fr", background: "linear-gradient(120deg,#E7F2EC,#F2F8F4)" }}>
+          <div className="hp-newsletter-inner" style={{ padding: "54px 52px" }}>
             <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 38, fontWeight: 500, letterSpacing: "-.01em", margin: "0 0 14px", lineHeight: 1.08 }}>
               Evidence first.<br />Noise never.
             </h2>
             <p style={{ fontSize: 17, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 26px", maxWidth: 420 }}>
-              Weekly supplement research, ingredient deep-dives, and honest product updates — no hype, no sponsors.
+              Weekly supplement research, ingredient deep-dives, and honest product updates straight to your inbox — no hype, no sponsors.
             </p>
             <div style={{ display: "flex", background: "#FFFFFF", borderRadius: 999, padding: 6, border: "1px solid #CFE2D8", maxWidth: 430 }}>
-              <input type="email" placeholder="Enter your email" style={{ flex: 1, border: "none", background: "none", padding: "0 18px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, color: "#17211C", outline: "none" }} />
+              <label htmlFor="hp-newsletter-email" className="sr-only">Email address</label>
+              <input id="hp-newsletter-email" type="email" placeholder="Enter your email" style={{ flex: 1, border: "none", background: "none", padding: "0 18px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, color: "#17211C", outline: "none" }} />
               <button type="button" style={{ background: "#0F7A5A", color: "#FFFFFF", border: "none", fontWeight: 700, fontSize: 14, padding: "12px 26px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap" }}>
                 Join free
               </button>
@@ -120,15 +203,22 @@ export default function HomePage() {
               Your <Link href="/privacy" style={{ color: "#0F7A5A" }}>privacy</Link> matters. Unsubscribe anytime.
             </p>
           </div>
-          <div style={{ background: "linear-gradient(135deg,#BFE0CF,#DCF0E4)", backgroundImage: "repeating-linear-gradient(45deg,rgba(15,122,90,.07) 0 16px,transparent 16px 32px)", display: "flex", alignItems: "center", justifyContent: "center", minHeight: 300 }}>
-            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".16em", color: "#0A634A" }}>[ LIFESTYLE PHOTO ]</span>
+          <div className="hp-newsletter-img" style={{ position: "relative", minHeight: 300, overflow: "hidden" }}>
+            <Image
+              src="/lifestyle/health_wellness_editorial.png"
+              alt="Woman enjoying a peaceful morning — healthy lifestyle"
+              fill
+              loading="eager"
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="(max-width: 768px) 100vw, 45vw"
+            />
           </div>
         </div>
       </section>
 
-      {/* ── BROWSE BY GOAL ── */}
+      {/* ── SEC. 01 — BROWSE BY GOAL ── */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 88px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
+        <div className="hp-section-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
           <div>
             <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
               Sec. 01 — Browse by goal
@@ -141,17 +231,18 @@ export default function HomePage() {
             All goal guides →
           </Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 22 }}>
+        <div className="hp-goal-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 22 }}>
           {GOAL_CARDS.map((g) => (
             <Link
               key={g.code}
               href={g.href}
-              style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 16, background: g.bg, display: "flex", flexDirection: "column", minHeight: 280, padding: 26, transition: "transform 200ms var(--ease-out-expo)" }}
+              style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 16, background: g.bg, display: "flex", flexDirection: "column", minHeight: 300, padding: 26, transition: "transform 200ms var(--ease-out-expo)" }}
               className="hover-featured"
             >
-              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, opacity: 0.8, marginBottom: "auto" }}>{g.code}</div>
-              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 26, fontWeight: 500, margin: "18px 0 10px", color: "#FFFFFF" }}>{g.title}</h3>
-              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, opacity: 0.7, marginBottom: 14 }}>{g.code}</div>
+              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 26, fontWeight: 500, margin: "0 0 12px", color: "#FFFFFF" }}>{g.title}</h3>
+              <p style={{ fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,.75)", margin: "0 0 auto" }}>{g.desc}</p>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 20 }}>
                 {g.tags.map((t) => (
                   <span key={t} style={{ fontSize: 11, background: "rgba(255,255,255,.16)", padding: "4px 9px", borderRadius: 6 }}>{t}</span>
                 ))}
@@ -161,32 +252,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FREE TOOLS ── */}
+      {/* ── SEC. 02 — FREE TOOLS ── */}
       <section style={{ background: "#F6F8F6", borderTop: "1px solid #E4E8E5", borderBottom: "1px solid #E4E8E5" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 24px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
-            <div>
-              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
-                Sec. 02 — Free tools
-              </div>
-              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,4vw,40px)", fontWeight: 500, letterSpacing: "-.015em", margin: 0 }}>
-                Calculators &amp; <em style={{ fontStyle: "italic", color: "#0F7A5A" }}>lookups</em>
-              </h2>
+          <div style={{ marginBottom: 34 }}>
+            <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
+              Sec. 02 — Free tools
             </div>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,4vw,40px)", fontWeight: 500, letterSpacing: "-.015em", margin: 0 }}>
+              Calculators &amp; <em style={{ fontStyle: "italic", color: "#0F7A5A" }}>lookups</em>
+            </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 22 }}>
-            <div style={{ borderRadius: 18, background: "linear-gradient(140deg,#E7F2EC,#F2F8F4)", padding: "42px 40px", display: "flex", flexDirection: "column" }}>
-              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 30, fontWeight: 500, margin: "0 0 12px" }}>
-                Dial in your nutrition
-              </h3>
-              <p style={{ fontSize: 16, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 26px", maxWidth: 420 }}>
-                Find your calorie target, daily macros, and protein needs with our free, no-signup calculators — built on the Mifflin-St Jeor equation.
-              </p>
-              <Link href="/tools/free/bmr-calculator" className="btn-primary" style={{ alignSelf: "flex-start", marginBottom: 30 }}>
-                Open BMR Calculator
-              </Link>
+          <div className="hp-tools-grid" style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 22 }}>
+            {/* Feature card */}
+            <div className="hp-tools-feature" style={{ borderRadius: 18, background: "linear-gradient(140deg,#E7F2EC,#F2F8F4)", padding: "42px 40px", display: "grid", gridTemplateColumns: "1fr auto", gap: 24, alignItems: "start", overflow: "hidden", position: "relative" }}>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 30, fontWeight: 500, margin: "0 0 12px" }}>
+                  Dial in your nutrition
+                </h3>
+                <p style={{ fontSize: 16, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 26px", maxWidth: 360 }}>
+                  Find your calorie target, daily macros, and protein needs with our free, no-signup calculators — built on the Mifflin-St Jeor equation.
+                </p>
+                <Link href="/tools/free/bmr-calculator" className="btn-primary" style={{ alignSelf: "flex-start" }}>
+                  Open BMR Calculator
+                </Link>
+              </div>
+              {/* Nutrition photo */}
+              <div className="hp-tools-photo" style={{ width: 180, height: 180, borderRadius: 14, overflow: "hidden", flexShrink: 0, position: "relative" }}>
+                <Image
+                  src="/lifestyle/calculator_lifestyle.png"
+                  alt="Woman tracking nutrition on phone with healthy food"
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  sizes="180px"
+                />
+              </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+            {/* Tool rows */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               {TOOL_CARDS.map((t) => (
                 <Link
                   key={t.label}
@@ -195,7 +298,7 @@ export default function HomePage() {
                   style={{ textDecoration: "none", color: "inherit", background: "#FFFFFF", border: "1px solid #E4E8E5", borderRadius: 14, padding: 22, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16 }}
                 >
                   <div>
-                    <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", marginBottom: 6 }}>{t.label}</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", marginBottom: 6 }}>{t.label}</div>
                     <div style={{ fontWeight: 700, fontSize: 16, lineHeight: 1.3 }}>{t.title}</div>
                   </div>
                   <span style={{ width: 40, height: 40, flex: "none", borderRadius: "50%", background: "#E7F2EC", display: "flex", alignItems: "center", justifyContent: "center", color: "#0F7A5A" }}>
@@ -208,12 +311,135 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── EDITOR'S PICKS ── */}
+      {/* ── INGREDIENT LIBRARY PROMO ── */}
+      <section style={{ background: "#0A4F3B" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
+          <div className="hp-ingredient-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, minHeight: 320 }}>
+            {/* Text */}
+            <div className="hp-ingredient-text" style={{ padding: "64px 48px 64px 0", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,3.5vw,42px)", fontWeight: 500, color: "#FFFFFF", letterSpacing: "-.02em", margin: "0 0 16px", lineHeight: 1.1 }}>
+                Ingredient Library: A&ndash;Z
+              </h2>
+              <p style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(255,255,255,.72)", margin: "0 0 30px", maxWidth: 420 }}>
+                Evidence levels, effective dosing, and real benefits for all 87 profiled ingredients — what the research actually says, not the label.
+              </p>
+              <Link
+                href="/ingredients"
+                style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#FFFFFF", color: "#0A4F3B", fontWeight: 700, fontSize: 15, padding: "13px 26px", borderRadius: 999, textDecoration: "none", alignSelf: "flex-start" }}
+              >
+                Search ingredients
+              </Link>
+            </div>
+            {/* Capsule photo */}
+            <div className="hp-ingredient-img" style={{ position: "relative", overflow: "hidden" }}>
+              <Image
+                src="/lifestyle/capsule_closeup.png"
+                alt="Supplement capsules and powder — ingredient library"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEC. 03 — RECOMMENDED READS ── */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
+        <div style={{ marginBottom: 28 }}>
+          <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
+            Sec. 03 — Recommended reads
+          </div>
+          <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,4vw,40px)", fontWeight: 500, letterSpacing: "-.015em", margin: 0 }}>
+            Worth <em style={{ fontStyle: "italic", color: "#0F7A5A" }}>your time</em>
+          </h2>
+        </div>
+
+        {/* Filter tabs */}
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 40 }}>
+          {["Top Reads", "Fitness", "Nutrition", "Reviews", "Sleep & Recovery"].map((tab, i) => (
+            <span
+              key={tab}
+              style={{
+                padding: "10px 20px", borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: "pointer",
+                background: i === 0 ? "#0F7A5A" : "transparent",
+                color: i === 0 ? "#FFFFFF" : "#3F4B43",
+                border: i === 0 ? "2px solid #0F7A5A" : "2px solid #D7DDD9",
+              }}
+            >
+              {tab}
+            </span>
+          ))}
+        </div>
+
+        {/* 2×2 article grid */}
+        <div className="hp-reads-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+          {RECOMMENDED_READS.map((article) => (
+            <Link
+              key={article.slug}
+              href={article.href}
+              style={{ display: "flex", gap: 20, textDecoration: "none", color: "inherit", alignItems: "flex-start" }}
+            >
+              {/* Thumbnail */}
+              <div style={{ width: 120, height: 100, flex: "none", borderRadius: 12, overflow: "hidden", position: "relative" }}>
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                  sizes="120px"
+                />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 8 }}>
+                  {article.category}
+                </div>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 500, lineHeight: 1.22, margin: "0 0 10px", color: "#17211C" }}>
+                  {article.title}
+                </h3>
+                <div style={{ fontSize: 13, color: "#6B7770" }}>
+                  {article.mins} min · {article.evidence}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SEC. 04 — EDITORIAL STANDARDS ── */}
+      <section style={{ background: "#0D1810" }}>
+        <div className="hp-editorial-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px", display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 80, alignItems: "start" }}>
+          {/* Left */}
+          <div>
+            <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#4A9A78", marginBottom: 20 }}>
+              Sec. 04 — Editorial standards
+            </div>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(30px,3.5vw,44px)", fontWeight: 500, color: "#FFFFFF", letterSpacing: "-.02em", lineHeight: 1.1, margin: "0 0 36px" }}>
+              Why you can trust us on your health journey
+            </h2>
+            {/* Team photo */}
+            <div style={{ width: "100%", aspectRatio: "4/3", borderRadius: 16, overflow: "hidden", position: "relative" }}>
+              <Image
+                src="/lifestyle/team_professionals.png"
+                alt="Editorial team reviewing research together"
+                fill
+                style={{ objectFit: "cover", objectPosition: "center top" }}
+                sizes="(max-width: 768px) 100vw, 40vw"
+              />
+            </div>
+          </div>
+
+          {/* Right — interactive trust pillars */}
+          <TrustPillars />
+        </div>
+      </section>
+
+      {/* ── SEC. 05 — EDITOR'S PICKS ── */}
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px" }}>
+        <div className="hp-section-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
           <div>
             <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
-              Sec. 03 — Fitlab Selects 2026
+              Sec. 05 — Fitlab Selects 2026
             </div>
             <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,4vw,40px)", fontWeight: 500, letterSpacing: "-.015em", margin: 0 }}>
               The editor&apos;s <em style={{ fontStyle: "italic", color: "#0F7A5A" }}>picks</em>
@@ -223,31 +449,54 @@ export default function HomePage() {
             All reviewed products →
           </Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 24 }}>
-          {featuredReviews.map((r) => (
-            <ReviewCard
-              key={r.slug}
-              slug={r.slug}
-              title={r.title}
-              brand={r.brand}
-              category={r.category}
-              rating={r.rating}
-              verdict={r.verdict}
-              publishedAt={r.publishedAt}
-              figNumber={r.figure}
-              tags={r.tags}
-            />
+        <div className="hp-picks-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 22 }}>
+          {EDITOR_PICKS.map((pick) => (
+            <Link
+              key={pick.slug}
+              href={`/reviews/${pick.slug}`}
+              className="picks-card"
+              style={{ textDecoration: "none", color: "inherit", borderRadius: 16, border: "1px solid #E4E8E5", overflow: "hidden", display: "flex", flexDirection: "column", background: "#FFFFFF" }}
+            >
+              {/* Image area */}
+              <div style={{ position: "relative", aspectRatio: "1/0.9", background: pick.bg, backgroundImage: `repeating-linear-gradient(45deg,${pick.stripeColor} 0 14px,transparent 14px 28px)`, overflow: "hidden" }}>
+                <Image
+                  src={pick.image}
+                  alt={pick.title}
+                  fill
+                  style={{ objectFit: "contain", objectPosition: "center", padding: "16px" }}
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <span style={{ position: "absolute", top: 14, left: 14, fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, fontWeight: 600, color: "#6B7770", zIndex: 1 }}>
+                  #{pick.rank}
+                </span>
+                <span style={{ position: "absolute", top: 10, right: 14, width: 42, height: 42, borderRadius: "50%", background: "#0F7A5A", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#FFFFFF", zIndex: 1 }}>
+                  {pick.score}
+                </span>
+              </div>
+              {/* Content */}
+              <div style={{ padding: "18px 20px 20px", display: "flex", flexDirection: "column", flex: 1 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 9 }}>
+                  {pick.category} · {pick.brand}
+                </div>
+                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 600, lineHeight: 1.2, margin: "0 0 10px", color: "#17211C" }}>
+                  {pick.title}
+                </h3>
+                <p style={{ fontSize: 13.5, color: "#6B7770", margin: 0, lineHeight: 1.5 }}>
+                  {pick.specs}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* ── LATEST RESEARCH ── */}
+      {/* ── SEC. 06 — FROM THE LAB ── */}
       <section style={{ background: "#F6F8F6", borderTop: "1px solid #E4E8E5" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "80px 24px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
+          <div className="hp-section-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 34 }}>
             <div>
               <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>
-                Sec. 04 — From the lab
+                Sec. 06 — From the lab
               </div>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,4vw,40px)", fontWeight: 500, letterSpacing: "-.015em", margin: 0 }}>
                 Latest <em style={{ fontStyle: "italic", color: "#0F7A5A" }}>research</em>
@@ -257,7 +506,7 @@ export default function HomePage() {
               All articles →
             </Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
+          <div className="hp-lab-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 24 }}>
             {latestResearch.map((brief, i) => (
               <Link
                 key={brief.slug}
@@ -269,18 +518,21 @@ export default function HomePage() {
                   borderRadius: 16, overflow: "hidden", display: "flex", flexDirection: "column",
                 }}
               >
-                <div style={{ aspectRatio: "16/9", background: i === 1 ? "linear-gradient(135deg,#F4E6C9,#FAF3E2)" : "linear-gradient(135deg,#D4E9DF,#EEF6F1)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <div style={{ aspectRatio: "16/9", background: i === 1 ? "linear-gradient(135deg,#F4E6C9,#FAF3E2)" : "linear-gradient(135deg,#D4E9DF,#EEF6F1)", backgroundImage: i === 1 ? "repeating-linear-gradient(45deg,rgba(201,138,30,.07) 0 12px,transparent 12px 24px)" : "repeating-linear-gradient(45deg,rgba(15,122,90,.06) 0 12px,transparent 12px 24px)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".14em", color: "#0F7A5A", opacity: 0.5 }}>[ ARTICLE ]</span>
                 </div>
                 <div style={{ padding: 22, display: "flex", flexDirection: "column", flex: 1 }}>
-                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 9 }}>
+                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 5 }}>
                     {brief.type}
+                  </div>
+                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 11, opacity: 0.7 }}>
+                    STRONG EVIDENCE
                   </div>
                   <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 22, fontWeight: 500, lineHeight: 1.2, margin: "0 0 14px" }}>
                     {brief.title}
                   </h3>
                   <div style={{ fontSize: 13, color: "#6B7770", marginTop: "auto" }}>
-                    {brief.mins} min read
+                    May 2026 · {brief.mins} min read
                   </div>
                 </div>
               </Link>

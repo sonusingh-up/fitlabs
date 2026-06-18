@@ -340,19 +340,19 @@ export default function PerformanceLabSleepReview() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }} className="px-page">
             {[{ label: "Home", href: "/" }, { label: "Reviews", href: "/reviews" }, { label: "Sleep", href: "/category/sleep-supplements" }].map((c, i, arr) => (
               <span key={c.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={c.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{c.label}</Link>
-                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+                <Link href={c.href} style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{c.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>}
               </span>
             ))}
-            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Performance Lab Sleep</span>
+            <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Performance Lab Sleep</span>
           </div>
         </div>
 
@@ -363,23 +363,23 @@ export default function PerformanceLabSleepReview() {
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "48px 0 40px", gap: 32 }}>
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)", whiteSpace: "nowrap" }}>REV-2026-060</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)", whiteSpace: "nowrap" }}>REV-2026-060</span>
                   <span style={{ width: 24, height: 1, backgroundColor: "rgba(242,235,217,0.15)", display: "inline-block", flexShrink: 0 }} />
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Sleep Supplement</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", whiteSpace: "nowrap" }}>Full Review · FSP Scored · Sleep Supplement</span>
                 </div>
-                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
+                <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.7rem, 4vw, 3.2rem)", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", lineHeight: 1.08, marginBottom: 12 }}>
                   Performance Lab<br />
-                  <em style={{ fontWeight: 400, color: "#A89880", fontSize: "0.65em" }}>Sleep</em>
+                  <em style={{ fontWeight: 400, color: "#586259", fontSize: "0.65em" }}>Sleep</em>
                 </h1>
                 <p style={{ fontSize: 15, color: "rgba(242,235,217,0.65)", lineHeight: 1.7, maxWidth: 520, marginBottom: 24 }}>
                   Four ingredients. Every dose disclosed. No synthetic melatonin. Clean Label Project certified. The most transparent sleep supplement in its price bracket.
                 </p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   <a href="https://amzn.to/4x4WZCs" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#3A6FA8", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#3A6FA8", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                     Buy on Amazon <ExternalLink size={13} />
                   </a>
-                  <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid rgba(242,235,217,0.15)", color: "rgba(242,235,217,0.5)", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                  <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid rgba(242,235,217,0.15)", color: "rgba(242,235,217,0.5)", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                     FSP {composite.toFixed(1)} → How we score
                   </Link>
                 </div>
@@ -399,10 +399,10 @@ export default function PerformanceLabSleepReview() {
                 {[1,2,3,4,5,6,7,8].map(s => <Star key={s} size={13} fill="#3A6FA8" color="#3A6FA8" />)}
                 {[9,10].map(s => <Star key={s} size={13} fill="none" color="rgba(58,111,168,0.35)" />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.4)", letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "rgba(242,235,217,0.4)", letterSpacing: "0.12em" }}>8 / 10 · FSP v2.1</span>
             </div>
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: "linear-gradient(transparent, #FFFFFF)" }} />
         </div>
 
         {/* MetadataStrip */}
@@ -421,29 +421,29 @@ export default function PerformanceLabSleepReview() {
 
         {/* Author box */}
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#FFFFFF" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written & Reviewed By</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Written & Reviewed By</p>
               <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 <Link href="/authors" style={{ color: "#1A1714", textDecoration: "none" }}>Fitlab Research Team</Link>
-                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Independent Editorial</span>
+                <span style={{ fontWeight: 400, color: "#6B7770", fontSize: 12 }}> · Independent Editorial</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650" }}>Ingredient analysis · FSP v2.1 scoring · Claims cross-referenced against PubMed literature</p>
+              <p style={{ fontSize: 12, color: "#3F4B43" }}>Ingredient analysis · FSP v2.1 scoring · Claims cross-referenced against PubMed literature</p>
             </div>
-            <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Editorial Review</span>
+            <span style={{ padding: "3px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Editorial Review</span>
           </div>
         </div>
 
         {/* Affiliate disclosure */}
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links may earn a commission. Scores are editorially independent.{" "}
-              <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Read our disclosure →</Link>
+              <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
           </div>
         </div>
@@ -458,26 +458,26 @@ export default function PerformanceLabSleepReview() {
         {/* Main content */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="container-pad">
           <div className="layout-sidebar">
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
             <article style={{ minWidth: 0 }}>
 
               {/* § 1 Quick Verdict */}
-              <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="verdict" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Quick Verdict</h2>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 14, marginBottom: 28 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 20 }}>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-060</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>FSP v2.1 Verdict — REV-2026-060</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.4 }}>
                         The benchmark for transparent sleep supplementation. Four clean ingredients, every dose disclosed, no synthetic melatonin.
                       </p>
                     </div>
                     <div style={{ textAlign: "center", flexShrink: 0 }}>
                       <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#3A6FA8", lineHeight: 1 }}>{editorialScore}</div>
-                      <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
+                      <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", letterSpacing: "0.1em" }}>/10 · EDITORIAL</div>
                     </div>
                   </div>
                   <p style={{ fontSize: 14, color: "rgba(242,235,217,0.7)", lineHeight: 1.75 }}>
@@ -490,10 +490,10 @@ export default function PerformanceLabSleepReview() {
                     const weights: Record<string, string> = { formula: "35%", transparency: "25%", verification: "20%", value: "12%", practical: "8%" };
                     const color = p.score >= 7 ? "#2D6A4F" : p.score >= 5 ? "#8B7355" : "#8B3A2C";
                     return (
-                      <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, textAlign: "center" }}>
+                      <div key={p.pillar} style={{ padding: "16px 14px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, textAlign: "center" }}>
                         <div style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 800, color, lineHeight: 1, marginBottom: 4 }}>{p.score.toFixed(1)}</div>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#8A8480", marginBottom: 4 }}>{labels[p.pillar]}</div>
-                        <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#A89880" }}>{weights[p.pillar]} weight</div>
+                        <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6B7770", marginBottom: 4 }}>{labels[p.pillar]}</div>
+                        <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#586259" }}>{weights[p.pillar]} weight</div>
                       </div>
                     );
                   })}
@@ -502,35 +502,35 @@ export default function PerformanceLabSleepReview() {
 
               {/* Mobile product card */}
               <div className="block sm:hidden" style={{ margin: "0 0 48px" }}>
-                <div style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #D4C9B8", backgroundColor: "#F8F2E4" }}>
+                <div style={{ borderRadius: 14, overflow: "hidden", border: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }}>
                   <div style={{ background: "linear-gradient(145deg, #091828 0%, #050E18 100%)", padding: "28px 24px 0", display: "flex", flexDirection: "column", alignItems: "center", gap: 12, position: "relative", minHeight: 220 }}>
                     <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "24px 24px", borderRadius: "14px 14px 0 0" }} />
-                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(58,111,168,0.15)", border: "1px solid rgba(58,111,168,0.35)", borderRadius: 20, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6A9FD8" }}>
+                    <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 10px", backgroundColor: "rgba(58,111,168,0.15)", border: "1px solid rgba(58,111,168,0.35)", borderRadius: 20, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#6A9FD8" }}>
                       <ShieldCheck size={10} /> Clean Label Project
                     </span>
                     <div style={{ position: "relative", zIndex: 1, width: 160, height: 200 }}>
                       <Image src="/products/perlab-sleep.webp" alt="Performance Lab Sleep" fill style={{ objectFit: "contain", filter: "drop-shadow(0 12px 32px rgba(58,111,168,0.5))" }} />
                     </div>
-                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F8F2E4)" }} />
+                    <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F6F8F6)" }} />
                   </div>
                   <div style={{ padding: "16px 20px 20px" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>Performance Lab</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>Performance Lab</p>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 800, color: "#1A1714", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 12 }}>Sleep</p>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #EDE8DF", borderBottom: "1px solid #EDE8DF" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 16, padding: "12px 0", borderTop: "1px solid #F2F8F4", borderBottom: "1px solid #F2F8F4" }}>
                       {[{ val: `${editorialScore}/10`, label: "FSP Score" }, { val: "500mg", label: "CherryPURE®" }, { val: "0", label: "Syn. Melatonin" }].map(stat => (
                         <div key={stat.label} style={{ textAlign: "center" }}>
                           <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 800, color: "#3A6FA8", lineHeight: 1, marginBottom: 3 }}>{stat.val}</p>
-                          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#A89880" }}>{stat.label}</p>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.08em", textTransform: "uppercase", color: "#586259" }}>{stat.label}</p>
                         </div>
                       ))}
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
                       <div>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>Price / 30 servings</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 2 }}>Price / 30 servings</p>
                         <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 800, color: "#1A1714" }}>$44.00</p>
                       </div>
                       <a href="https://amzn.to/4x4WZCs" target="_blank" rel="nofollow noopener noreferrer"
-                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#3A6FA8", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 18px", backgroundColor: "#3A6FA8", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", flexShrink: 0 }}>
                         Buy on Amazon <ExternalLink size={12} />
                       </a>
                     </div>
@@ -539,7 +539,7 @@ export default function PerformanceLabSleepReview() {
               </div>
 
               {/* § 2 What Is It */}
-              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="what-is" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>What Is Performance Lab Sleep?</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 16 }}>
                   Performance Lab Sleep is a nightly supplement from Performance Lab — a UK-based nutraceutical brand with a reputation for clean, minimal formulations. The product uses four ingredients: CherryPURE® Montmorency tart cherry extract (500mg, 50:1 ratio), <Link href="/ingredients/l-theanine" style={{ color: "#3A6FA8", textDecoration: "none" }}>L-Tryptophan</Link> (200mg), lemon balm extract (200mg), and a NutriGenesis® magnesium blend (100mg bisglycinate + taurate).
@@ -553,28 +553,28 @@ export default function PerformanceLabSleepReview() {
               </section>
 
               {/* § 3 Score Breakdown */}
-              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="score-breakdown" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-060" />
               </section>
 
               {/* § 4 Flags */}
-              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="flags" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Red & Green Flags</h2>
                 <FlagSystem flags={rubric.flags} />
               </section>
 
               {/* § 5 Supplement Facts */}
-              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="supplement-facts" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>Serving size: 2 NutriCaps® · Servings per container: 30</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20, fontFamily: "var(--font-hanken), sans-serif" }}>Serving size: 2 NutriCaps® · Servings per container: 30</p>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 480, width: "100%" }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
-                        <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F2EBD9", width: "40%" }}>Ingredient</th>
-                        <th style={{ padding: "12px 16px", textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F2EBD9", width: "25%" }}>Amount</th>
-                        <th style={{ padding: "12px 16px", textAlign: "center", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F2EBD9", width: "35%" }}>Clinical Range</th>
+                        <th style={{ padding: "12px 16px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", width: "40%" }}>Ingredient</th>
+                        <th style={{ padding: "12px 16px", textAlign: "right", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", width: "25%" }}>Amount</th>
+                        <th style={{ padding: "12px 16px", textAlign: "center", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF", width: "35%" }}>Clinical Range</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -584,11 +584,11 @@ export default function PerformanceLabSleepReview() {
                         { name: "L-Tryptophan", amount: "200 mg", clinical: "150–300 mg", clinicalOk: true },
                         { name: "Lemon Balm Extract", amount: "200 mg", clinical: "300–600 mg" },
                       ].map((row, i) => (
-                        <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
+                        <tr key={row.name} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
                           <td style={{ padding: "11px 16px", fontSize: 13, color: "#2D2926", fontFamily: "var(--font-hanken), sans-serif" }}>{row.name}</td>
-                          <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", color: "#2D6A4F" }}>{row.amount}</td>
+                          <td style={{ padding: "11px 16px", fontSize: 13, fontWeight: 700, textAlign: "right", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap", color: "#2D6A4F" }}>{row.amount}</td>
                           <td style={{ padding: "11px 16px", textAlign: "center" }}>
-                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.clinicalOk ? "rgba(45,106,79,0.10)" : "rgba(139,115,85,0.10)", border: `1px solid ${row.clinicalOk ? "rgba(45,106,79,0.25)" : "rgba(139,115,85,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.clinicalOk ? "#2D6A4F" : "#8B7355", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
+                            <span style={{ display: "inline-block", padding: "2px 9px", backgroundColor: row.clinicalOk ? "rgba(45,106,79,0.10)" : "rgba(139,115,85,0.10)", border: `1px solid ${row.clinicalOk ? "rgba(45,106,79,0.25)" : "rgba(139,115,85,0.25)"}`, borderRadius: 20, fontSize: 11, color: row.clinicalOk ? "#2D6A4F" : "#8B7355", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>
                               {row.clinical}
                             </span>
                           </td>
@@ -597,13 +597,13 @@ export default function PerformanceLabSleepReview() {
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                   Other ingredients: NutriCaps® Pullulan capsule, Nu-FLOW® Rice Concentrate. No synthetic melatonin, no artificial fillers.
                 </p>
               </section>
 
               {/* § 6 Ingredient Breakdown */}
-              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="ingredients" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 24, letterSpacing: "-0.02em" }}>Ingredient Breakdown</h2>
                 {[
                   {
@@ -631,19 +631,19 @@ export default function PerformanceLabSleepReview() {
                     body: "Magnesium supports GABA receptor function and reduces cortisol. Abbasi et al. (2012) found 500mg supplementation improved insomnia, sleep efficiency, and early waking. The effective range is 200–400mg. Performance Lab Sleep's 100mg is below clinical threshold for primary sleep benefit, but NutriGenesis® bisglycinate + taurate are among the best-absorbed forms — taurate specifically has documented CNS uptake superiority. At 100mg it acts as a cofactor, not a primary driver.",
                   },
                 ].map((ing, i) => (
-                  <div key={ing.name} style={{ marginBottom: i < 3 ? 20 : 0, padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                  <div key={ing.name} style={{ marginBottom: i < 3 ? 20 : 0, padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                     <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, marginBottom: 8, flexWrap: "wrap" }}>
                       <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{ing.name}</h3>
                       <EvidenceBadge level={ing.evidence} />
                     </div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>{ing.verdict}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>{ing.verdict}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{ing.body}</p>
                   </div>
                 ))}
               </section>
 
               {/* § 7 Lab & Verification */}
-              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="lab-data" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Lab & Verification</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
@@ -661,52 +661,52 @@ export default function PerformanceLabSleepReview() {
                           : <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B3A2C" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
                         }
                       </span>
-                      <span style={{ fontSize: 12, color: "#2D2926", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
+                      <span style={{ fontSize: 12, color: "#2D2926", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.04em" }}>{item.label}</span>
                     </div>
                   ))}
                 </div>
-                <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
+                <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     <strong style={{ color: "#1A1714" }}>Clean Label Project</strong> tests for 400+ contaminants including heavy metals (lead, arsenic, cadmium), pesticide residues, plasticisers (BPA, phthalates), and mycotoxins. This is a more comprehensive contaminant screen than most supplement certifications. The absence of Informed Sport certification limits its appeal for competitive athletes — drug-tested athletes should be aware.
                   </p>
                 </div>
               </section>
 
               {/* § 8 Claim Audit */}
-              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="claim-audit" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Claim Audit</h2>
                 <ClaimAudit items={rubric.claimAudit} />
               </section>
 
               {/* § 9 How to Take It */}
-              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="how-to-take" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>How to Take It</h2>
-                <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, marginBottom: 16 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>Brand Protocol</p>
+                <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, marginBottom: 16 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>Brand Protocol</p>
                   <p style={{ fontSize: 15, color: "#1A1714", fontWeight: 600, marginBottom: 8, fontFamily: "var(--font-hanken), sans-serif" }}>Take 2–4 NutriCaps® 30 minutes before sleep. Use daily and consistently for best results.</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>
                     The 2–4 capsule flexibility is a practical advantage. Start at 2 capsules and increase to 4 if needed. For users with sensitive systems, 2 capsules of Performance Lab Sleep is typically sufficient.
                   </p>
                 </div>
-                <div style={{ padding: "20px 24px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Evidence-based timing notes</p>
+                <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 10 }}>Evidence-based timing notes</p>
                   <ul style={{ paddingLeft: 20, margin: 0, display: "flex", flexDirection: "column", gap: 8 }}>
                     {["L-Tryptophan: best absorbed in absence of other large amino acids. Take 30–60 min before a light meal or on an empty stomach.", "CherryPURE® tart cherry: onset for melatonin elevation is 60–90 min — start earlier than 30 min if sleep latency is the primary issue.", "Magnesium glycinate: effects are cumulative. Consistent daily use matters more than precise timing.", "Lemon balm: acute anxiolytic effect within 60 min. Clinically useful for pre-sleep rumination."].map((tip, i) => (
-                      <li key={i} style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>{tip}</li>
+                      <li key={i} style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>{tip}</li>
                     ))}
                   </ul>
                 </div>
               </section>
 
               {/* § 10 Comparison */}
-              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="comparison" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 620, width: "100%" }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         {["Product", "Ingredients", "Syn. Melatonin", "Full Label?", "Certification", "$/Serving"].map(h => (
-                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F2EBD9" }}>{h}</th>
+                          <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -718,25 +718,25 @@ export default function PerformanceLabSleepReview() {
                         { product: "YuSleep", ings: "10 (1 disclosed)", syn: "0.9 mg", full: "No", cert: "None", price: "$2.30", highlight: false },
                         { product: "OLLY Sleep", ings: "3 (partial)", syn: "5 mg", full: "Partial", cert: "None listed", price: "$0.50", highlight: false },
                       ].map((row, i) => (
-                        <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(58,111,168,0.06)" : i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
+                        <tr key={row.product} style={{ backgroundColor: row.highlight ? "rgba(58,111,168,0.06)" : i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
                           <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: row.highlight ? 700 : 400, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.product}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.ings}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.syn === "No" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>{row.syn}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>{row.ings}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: row.syn === "No" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap", fontWeight: 600 }}>{row.syn}</td>
                           <td style={{ padding: "11px 14px", textAlign: "center" }}>
-                            <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: row.full === "Yes" ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.full === "Yes" ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 10, color: row.full === "Yes" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 600 }}>{row.full}</span>
+                            <span style={{ display: "inline-block", padding: "2px 8px", backgroundColor: row.full === "Yes" ? "rgba(45,106,79,0.10)" : "rgba(139,58,44,0.10)", border: `1px solid ${row.full === "Yes" ? "rgba(45,106,79,0.25)" : "rgba(139,58,44,0.25)"}`, borderRadius: 20, fontSize: 10, color: row.full === "Yes" ? "#2D6A4F" : "#8B3A2C", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 600 }}>{row.full}</span>
                           </td>
-                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.cert}</td>
-                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: row.highlight ? "#3A6FA8" : "#1A1714", fontFamily: "var(--font-dm-mono), monospace", whiteSpace: "nowrap" }}>{row.price}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>{row.cert}</td>
+                          <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: row.highlight ? "#3A6FA8" : "#1A1714", fontFamily: "var(--font-jetbrains), monospace", whiteSpace: "nowrap" }}>{row.price}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 13, color: "#8A8480", marginTop: 12, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>Prices verified May 2026.</p>
+                <p style={{ fontSize: 13, color: "#6B7770", marginTop: 12, lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>Prices verified May 2026.</p>
               </section>
 
               {/* § 11 Products at a Glance */}
-              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="products" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
                   <ProductCard name="Performance Lab Sleep" brand="Performance Lab" category="Sleep" score={8} priceUSD="$44.00 / 30 servings" priceINR="N/A" tags={["Clean Label Project", "No Syn. Melatonin"]} buyUrl="https://amzn.to/4x4WZCs" buyLabel="Buy on Amazon" reviewSlug="performance-lab-sleep" image="perlab-sleep.webp" bgFrom="#091828" bgTo="#050E18" accent="#3A6FA8" featured={true} />
@@ -746,7 +746,7 @@ export default function PerformanceLabSleepReview() {
               </section>
 
               {/* § 12 Pros & Cons */}
-              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="pros-cons" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Pros & Cons</h2>
                 <ProsCons
                   pros={["Full supplement facts — every dose disclosed", "No synthetic melatonin — no tolerance or grogginess risk", "Clean Label Project certified (400+ contaminants tested)", "NutriGenesis® magnesium: premium bisglycinate + taurate forms", "CherryPURE® 500mg directly matches Howatson et al. (2012) study dose", "Vegan-certified NutriCaps® pullulan capsule — no gelatin", "2–4 capsule flexibility for dose titration", "B Corp certified company"]}
@@ -755,7 +755,7 @@ export default function PerformanceLabSleepReview() {
               </section>
 
               {/* § 13 Safety */}
-              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="safety" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Safety & Side Effects</h2>
                 <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.75, marginBottom: 20 }}>
                   Performance Lab Sleep has an excellent safety profile. No synthetic melatonin eliminates the principal side effect concern associated with most sleep supplements. All four ingredients are well-characterised at these doses.
@@ -767,19 +767,19 @@ export default function PerformanceLabSleepReview() {
                     { label: "Magnesium + Antibiotics", severity: "low", detail: "Magnesium can reduce absorption of some antibiotics (tetracyclines, fluoroquinolones) when taken simultaneously. Space by at least 2 hours if on these medications." },
                     { label: "General tolerability", severity: "low", detail: "All four ingredients are well-tolerated in healthy adults at these doses. No dependency, withdrawal, or tolerance profile. Safe for long-term nightly use." },
                   ].map(item => (
-                    <div key={item.label} style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: `1px solid ${item.severity === "moderate" ? "rgba(139,115,85,0.3)" : "#D4C9B8"}`, borderRadius: 10 }}>
+                    <div key={item.label} style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: `1px solid ${item.severity === "moderate" ? "rgba(139,115,85,0.3)" : "#E4E8E5"}`, borderRadius: 10 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
-                        <span style={{ padding: "2px 8px", backgroundColor: item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#F2EBD9" }}>{item.severity} risk</span>
+                        <span style={{ padding: "2px 8px", backgroundColor: item.severity === "moderate" ? "#8B7355" : "#4A7C59", borderRadius: 4, fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FFFFFF" }}>{item.severity} risk</span>
                         <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{item.label}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.detail}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-hanken), sans-serif" }}>{item.detail}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
               {/* § 14 Value */}
-              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="value" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Price & Value</h2>
                 <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel="CherryPURE® tart cherry extract" />
                 <div style={{ marginTop: 24 }}>
@@ -788,7 +788,7 @@ export default function PerformanceLabSleepReview() {
                       <thead>
                         <tr style={{ backgroundColor: "#1A1714" }}>
                           {["Option", "Price", "Per Serving", "Saving"].map(h => (
-                            <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#F2EBD9" }}>{h}</th>
+                            <th key={h} style={{ padding: "12px 14px", textAlign: "left", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#FFFFFF" }}>{h}</th>
                           ))}
                         </tr>
                       </thead>
@@ -798,51 +798,51 @@ export default function PerformanceLabSleepReview() {
                           { option: "Monthly subscription", price: "$39.60", perServe: "$1.32", saving: "10% off" },
                           { option: "Smart sub (4 bottles)", price: "$132.00", perServe: "$1.10", saving: "25% off" },
                         ].map((row, i) => (
-                          <tr key={row.option} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
+                          <tr key={row.option} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
                             <td style={{ padding: "11px 14px", fontSize: 13, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.option}</td>
-                            <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-dm-mono), monospace" }}>{row.price}</td>
-                            <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#3A6FA8", fontFamily: "var(--font-dm-mono), monospace" }}>{row.perServe}</td>
-                            <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{row.saving}</td>
+                            <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-jetbrains), monospace" }}>{row.price}</td>
+                            <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 700, color: "#3A6FA8", fontFamily: "var(--font-jetbrains), monospace" }}>{row.perServe}</td>
+                            <td style={{ padding: "11px 14px", fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>{row.saving}</td>
                           </tr>
                         ))}
                       </tbody>
                     </table>
                   </div>
-                  <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>Prices from performancelab.com. Prices verified May 2026.</p>
+                  <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10, fontFamily: "var(--font-hanken), sans-serif" }}>Prices from performancelab.com. Prices verified May 2026.</p>
                 </div>
               </section>
 
               {/* § 15 Where to Buy */}
-              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="where-to-buy" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Where to Buy</h2>
-                <div style={{ padding: "24px 28px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
+                <div style={{ padding: "24px 28px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 16 }}>
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 6 }}>Available on Amazon</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 6 }}>Available on Amazon</p>
                     <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 800, color: "#1A1714", marginBottom: 4 }}>
-                      $44.00 <span style={{ fontSize: "0.55em", color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 400 }}>/ 30 servings</span>
+                      $44.00 <span style={{ fontSize: "0.55em", color: "#586259", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 400 }}>/ 30 servings</span>
                     </p>
-                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0 }}>Prime shipping · Easy returns. Prices verified May 2026.</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", margin: 0 }}>Prime shipping · Easy returns. Prices verified May 2026.</p>
                   </div>
                   <a href="https://amzn.to/4x4WZCs" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#3A6FA8", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#3A6FA8", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap" }}>
                     <ExternalLink size={14} /> Buy on Amazon
                   </a>
                 </div>
               </section>
 
               {/* § 16 FAQ */}
-              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="faq" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <details key={i} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderRadius: 8, border: "1px solid #EDE8DF", overflow: "hidden" }}>
+                    <details key={i} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderRadius: 8, border: "1px solid #F2F8F4", overflow: "hidden" }}>
                       <summary style={{ padding: "15px 18px", cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, userSelect: "none" }}>
                         <span style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4 }}>{faq.name}</span>
-                        <span className="faq-icon-pl-sleep" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#3A6FA8" }}>
+                        <span className="faq-icon-pl-sleep" style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: "#3A6FA8" }}>
                           <Plus size={13} strokeWidth={2.5} />
                         </span>
                       </summary>
-                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#5C5650", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
+                      <p style={{ padding: "0 18px 16px", fontSize: 13, color: "#3F4B43", lineHeight: 1.7, fontFamily: "var(--font-hanken), sans-serif" }}>{faq.acceptedAnswer.text}</p>
                     </details>
                   ))}
                 </div>
@@ -850,26 +850,26 @@ export default function PerformanceLabSleepReview() {
               </section>
 
               {/* § 17 Final Verdict */}
-              <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #EDE8DF" }}>
+              <section id="final" style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #F2F8F4" }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Final Verdict</h2>
                 <div style={{ padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 16 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 24, flexWrap: "wrap", marginBottom: 24 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>FSP v2.1 — REV-2026-060</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3A6FA8", marginBottom: 8 }}>FSP v2.1 — REV-2026-060</p>
                       <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
                         <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4rem", fontWeight: 800, color: "#3A6FA8", lineHeight: 1 }}>{editorialScore}</span>
-                        <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#A89880" }}>/ 10</span>
+                        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, color: "#586259" }}>/ 10</span>
                       </div>
                     </div>
                     <div style={{ flex: 1, minWidth: 240 }}>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.4 }}>Recommended. The cleanest sleep formula at this price point.</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.4 }}>Recommended. The cleanest sleep formula at this price point.</p>
                     </div>
                   </div>
                   <p style={{ fontSize: 14, color: "rgba(242,235,217,0.7)", lineHeight: 1.8, marginBottom: 28 }}>
                     Performance Lab Sleep earns an 8/10 for doing what most sleep supplements don't: disclosing everything, certifying independently, and avoiding synthetic melatonin. The magnesium dose deserves to be doubled, and at $1.47/serving it asks a premium that not every consumer can justify. But for those who want a genuinely clean, certified, science-grounded product — and are happy to pair it with a separate 200–300mg magnesium glycinate supplement if needed — this is the most defensible choice in its category.
                   </p>
                   <a href="https://amzn.to/4x4WZCs" target="_blank" rel="nofollow noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#3A6FA8", color: "#F2EBD9", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", backgroundColor: "#3A6FA8", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 8, textDecoration: "none", fontFamily: "var(--font-hanken), sans-serif" }}>
                     Buy on Amazon <ExternalLink size={14} />
                   </a>
                 </div>
@@ -878,7 +878,7 @@ export default function PerformanceLabSleepReview() {
               {/* Research References */}
               <section style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
-                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
                     {[
                       { text: "Howatson G et al. (2012). Effect of tart cherry juice on melatonin levels and enhanced sleep quality. European Journal of Nutrition, 51(8):909–916.", url: "https://doi.org/10.1007/s00394-011-0263-7" },
@@ -890,9 +890,9 @@ export default function PerformanceLabSleepReview() {
                       { text: "Xie L et al. (2013). Sleep drives metabolite clearance from the adult brain. Science, 342(6156):373–377.", url: "https://doi.org/10.1126/science.1241224" },
                       { text: "Brzezinski A et al. (2005). Effects of exogenous melatonin on sleep: a meta-analysis. Sleep Medicine Reviews, 9(1):41–50.", url: "https://doi.org/10.1016/j.smrv.2004.06.004" },
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>
                         {ref.text}{" "}
-                        <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#3A6FA8", textDecoration: "none", fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
+                        <a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#3A6FA8", textDecoration: "none", fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, whiteSpace: "nowrap" }}>doi →</a>
                       </li>
                     ))}
                   </ol>
@@ -904,14 +904,14 @@ export default function PerformanceLabSleepReview() {
         </div>
 
         {/* Related Reviews */}
-        <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+        <section style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="pad-section-sm px-page">
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Related Reviews</p>
                 <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>More sleep supplement reviews</h3>
               </div>
-              <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+              <Link href="/reviews" style={{ fontSize: 12, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
               {relatedReviews.map(r => <ReviewCard key={r.slug} {...r} />)}

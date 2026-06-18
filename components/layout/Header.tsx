@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, ChevronDown, Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Search, ChevronDown, Menu, X, Loader2 } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 
 /* ─────────────────── Types ─────────────────── */
 type MegaLink = { label: string; az?: string; href: string };
@@ -294,13 +294,20 @@ const POPULAR_TOPICS: FeaturedCard[] = [
 /* ─────────────────── Component ─────────────────── */
 export default function Header() {
   const pathname = usePathname();
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [overlayQuery, setOverlayQuery] = useState("");
+  const [overlayResults, setOverlayResults] = useState<Array<{ url: string; title: string; type: string }>>([]);
+  const [overlayLoading, setOverlayLoading] = useState(false);
+  const [mobileQuery, setMobileQuery] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const searchPanelRef = useRef<HTMLDivElement>(null);
+  const overlayDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -314,6 +321,13 @@ export default function Header() {
         setOpenMenu(null);
         setSearchOpen(false);
         setMobileOpen(false);
+        setOverlayQuery("");
+      }
+      // Cmd+K / Ctrl+K opens search
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setSearchOpen((v) => !v);
+        setOpenMenu(null);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -321,8 +335,83 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    if (searchOpen) setTimeout(() => searchInputRef.current?.focus(), 50);
+    if (searchOpen) {
+      setTimeout(() => searchInputRef.current?.focus(), 50);
+    } else {
+      setOverlayQuery("");
+      setOverlayResults([]);
+    }
   }, [searchOpen]);
+
+  // Live search inside the overlay (top 5 quick results)
+  const runOverlaySearch = useCallback(async (q: string) => {
+    if (!q || q.length < 2) { setOverlayResults([]); return; }
+    setOverlayLoading(true);
+    try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error — pagefind generated post-build
+      const pf = window.pagefind ?? await import(/* webpackIgnore: true */ "/pagefind/pagefind.js").then(async (m: any) => { await m.init(); window.pagefind = m; return m; });
+      const search = await pf.search(q);
+      const top = search.results.slice(0, 5);
+      const data = await Promise.all(top.map((r: { data: () => Promise<{ url: string; meta: { title?: string } }> }) => r.data()));
+      setOverlayResults(data.map((d: { url: string; meta: { title?: string } }) => ({
+        url: d.url.replace(/\.html$/, "").replace(/\/index$/, "") || "/",
+        title: d.meta?.title ?? d.url,
+        type: d.url.includes("/reviews/") ? "Review"
+            : d.url.includes("/ingredients/") ? "Ingredient"
+            : d.url.includes("/research/") ? "Research"
+            : d.url.includes("/blog/") ? "Article"
+            : d.url.includes("/brands/") ? "Brand"
+            : "Page",
+      })));
+    } catch {
+      setOverlayResults([]);
+    } finally {
+      setOverlayLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (overlayDebounceRef.current) clearTimeout(overlayDebounceRef.current);
+    if (overlayQuery.length < 2) { setOverlayResults([]); return; }
+    overlayDebounceRef.current = setTimeout(() => runOverlaySearch(overlayQuery), 240);
+    return () => { if (overlayDebounceRef.current) clearTimeout(overlayDebounceRef.current); };
+  }, [overlayQuery, runOverlaySearch]);
+
+  function handleOverlayKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter" && overlayQuery.trim()) {
+      setSearchOpen(false);
+      router.push(`/search?q=${encodeURIComponent(overlayQuery.trim())}`);
+    }
+  }
+
+  function handleMobileSearchKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter" && mobileQuery.trim()) {
+      setMobileOpen(false);
+      router.push(`/search?q=${encodeURIComponent(mobileQuery.trim())}`);
+    }
+  }
+
+  function handleSearchPanelKeyDown(e: React.KeyboardEvent<HTMLDivElement>) {
+    if (e.key !== "Tab") return;
+    const panel = searchPanelRef.current;
+    if (!panel) return;
+    const focusable = Array.from(
+      panel.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    );
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 
   const activeItem = NAV.find((n) => n.label === openMenu) ?? null;
 
@@ -364,6 +453,7 @@ export default function Header() {
       <div
         ref={navRef}
         onMouseLeave={() => setOpenMenu(null)}
+        onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpenMenu(null); }}
         style={{ borderBottom: "1px solid #E9EDE9", backgroundColor: "#fff", position: "relative" }}
       >
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
@@ -395,10 +485,11 @@ export default function Header() {
                   key={item.label}
                   style={{ position: "relative", height: "100%", display: "flex", alignItems: "center" }}
                   onMouseEnter={() => { setOpenMenu(item.label); setSearchOpen(false); }}
+                  onFocus={() => { setOpenMenu(item.label); setSearchOpen(false); }}
                 >
                   <Link
                     href={item.href}
-                    aria-expanded={open ? "true" : "false"}
+                    {...(item.columns ? { "aria-haspopup": "true" as const } : {})}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -442,8 +533,8 @@ export default function Header() {
                 background: searchOpen ? "#E7F2EC" : "transparent",
                 border: "none",
                 borderRadius: 8,
-                width: 38,
-                height: 38,
+                width: 44,
+                height: 44,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -469,7 +560,7 @@ export default function Header() {
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               style={{
                 color: "#374151",
-                padding: 6,
+                padding: "12px 10px",
                 background: "none",
                 border: "1px solid #D7DDD9",
                 cursor: "pointer",
@@ -526,47 +617,115 @@ export default function Header() {
         {/* ══════════ SEARCH OVERLAY ══════════ */}
         {searchOpen && (
           <>
-            <div className="search-panel">
+            <div ref={searchPanelRef} className="search-panel" role="dialog" aria-modal="true" aria-label="Search" onKeyDown={handleSearchPanelKeyDown}>
               <div style={{ maxWidth: 840, margin: "0 auto", padding: "32px 24px 40px" }}>
+                {/* Input row */}
                 <div className="search-input-wrap">
-                  <Search size={20} style={{ color: "#0F7A5A", flexShrink: 0 }} />
+                  {overlayLoading
+                    ? <Loader2 size={20} style={{ color: "#0F7A5A", flexShrink: 0, animation: "header-spin 1s linear infinite" }} />
+                    : <Search size={20} style={{ color: "#0F7A5A", flexShrink: 0 }} />
+                  }
                   <input
                     ref={searchInputRef}
                     type="search"
                     placeholder="Search for a supplement, ingredient, or condition…"
                     className="search-input"
                     aria-label="Search site"
+                    value={overlayQuery}
+                    onChange={(e) => setOverlayQuery(e.target.value)}
+                    onKeyDown={handleOverlayKeyDown}
                   />
-                  <button onClick={() => setSearchOpen(false)} aria-label="Close search" className="search-close-btn">
-                    <X size={16} />
-                  </button>
-                </div>
-
-                <div style={{ marginTop: 26 }}>
-                  <div className="search-section-label">Trending searches</div>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 9 }}>
-                    {TRENDING_SEARCHES.map((t) => (
-                      <Link key={t} href={`/search?q=${encodeURIComponent(t)}`} className="search-trend-chip">
-                        {t}
-                      </Link>
-                    ))}
+                  <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                    <kbd style={{ fontSize: 11, color: "#6B7770", border: "1px solid #D7DDD9", borderRadius: 5, padding: "2px 7px", fontFamily: "var(--font-jetbrains), monospace", lineHeight: 1.6 }}>↵ Enter</kbd>
+                    <button onClick={() => setSearchOpen(false)} aria-label="Close search" className="search-close-btn">
+                      <X size={16} />
+                    </button>
                   </div>
                 </div>
 
-                <div style={{ marginTop: 28 }}>
-                  <div className="search-section-label">Popular topics</div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                    {POPULAR_TOPICS.map((p) => (
-                      <Link key={p.title} href={p.href} className="search-topic-card">
-                        <div style={{ width: 46, height: 46, flex: "none", borderRadius: 9, background: p.bg }} />
-                        <div>
-                          <div className="search-topic-cat">{p.cat}</div>
-                          <div className="search-topic-title">{p.title}</div>
-                        </div>
-                      </Link>
-                    ))}
+                {/* Live results */}
+                {overlayQuery.length >= 2 && (
+                  <div style={{ marginTop: 16, borderRadius: 12, border: "1px solid #E4E8E5", overflow: "hidden" }}>
+                    {overlayResults.length > 0 ? (
+                      <>
+                        {overlayResults.map((r, i) => (
+                          <Link
+                            key={i}
+                            href={r.url}
+                            onClick={() => setSearchOpen(false)}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 12,
+                              padding: "12px 16px",
+                              borderBottom: i < overlayResults.length - 1 ? "1px solid #F0F4F2" : "none",
+                              textDecoration: "none",
+                              backgroundColor: "#FFFFFF",
+                            }}
+                            className="hub-row-link"
+                          >
+                            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: ".08em", padding: "2px 6px", borderRadius: 4, backgroundColor: "#E7F2EC", color: "#0A4F3B", flexShrink: 0 }}>
+                              {r.type}
+                            </span>
+                            <span style={{ fontSize: 14, fontWeight: 600, color: "#17211C", flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                              {r.title}
+                            </span>
+                            <span style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", flexShrink: 0 }}>
+                              {r.url}
+                            </span>
+                          </Link>
+                        ))}
+                        <Link
+                          href={`/search?q=${encodeURIComponent(overlayQuery)}`}
+                          onClick={() => setSearchOpen(false)}
+                          style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 16px", backgroundColor: "#F6F8F6", textDecoration: "none", fontSize: 13, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-dm-sans), sans-serif" }}
+                        >
+                          See all results for &ldquo;{overlayQuery}&rdquo; →
+                        </Link>
+                      </>
+                    ) : !overlayLoading ? (
+                      <div style={{ padding: "16px", textAlign: "center", backgroundColor: "#F6F8F6" }}>
+                        <span style={{ fontSize: 13, color: "#6B7770" }}>No results — <Link href={`/search?q=${encodeURIComponent(overlayQuery)}`} onClick={() => setSearchOpen(false)} style={{ color: "#0F7A5A", fontWeight: 600 }}>try full search →</Link></span>
+                      </div>
+                    ) : null}
                   </div>
-                </div>
+                )}
+
+                {/* Trending — shown when query is empty */}
+                {overlayQuery.length < 2 && (
+                  <>
+                    <div style={{ marginTop: 26 }}>
+                      <div className="search-section-label">Trending searches</div>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: 9 }}>
+                        {TRENDING_SEARCHES.map((t) => (
+                          <Link
+                            key={t}
+                            href={`/search?q=${encodeURIComponent(t)}`}
+                            className="search-trend-chip"
+                            onClick={() => setSearchOpen(false)}
+                          >
+                            {t}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div style={{ marginTop: 28 }}>
+                      <div className="search-section-label">Popular topics</div>
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                        {POPULAR_TOPICS.map((p) => (
+                          <Link key={p.title} href={p.href} className="search-topic-card" onClick={() => setSearchOpen(false)}>
+                            <div style={{ width: 46, height: 46, flex: "none", borderRadius: 9, background: p.bg }} />
+                            <div>
+                              <div className="search-topic-cat">{p.cat}</div>
+                              <div className="search-topic-title">{p.title}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div className="search-backdrop" onClick={() => setSearchOpen(false)} aria-hidden="true" />
@@ -580,11 +739,27 @@ export default function Header() {
           <div style={{ padding: "8px 16px 24px" }}>
             <div className="mobile-search-row">
               <Search size={17} style={{ color: "#6B7770", flexShrink: 0 }} />
+              <label htmlFor="mobile-search-input" className="sr-only">Search reviews, ingredients</label>
               <input
+                id="mobile-search-input"
                 type="search"
                 placeholder="Search reviews, ingredients…"
+                value={mobileQuery}
+                onChange={(e) => setMobileQuery(e.target.value)}
+                onKeyDown={handleMobileSearchKeyDown}
                 style={{ flex: 1, border: "none", background: "none", outline: "none", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15 }}
               />
+              {mobileQuery && (
+                <button
+                  onClick={() => {
+                    setMobileOpen(false);
+                    router.push(`/search?q=${encodeURIComponent(mobileQuery.trim())}`);
+                  }}
+                  style={{ background: "none", border: "none", cursor: "pointer", color: "#0F7A5A", fontSize: 13, fontWeight: 700, fontFamily: "var(--font-dm-sans), sans-serif", padding: "0 4px" }}
+                >
+                  Go →
+                </button>
+              )}
             </div>
 
             {NAV.map((item) => (
@@ -606,7 +781,8 @@ export default function Header() {
                     <button
                       onClick={() => setMobileExpanded((v) => (v === item.label ? null : item.label))}
                       aria-expanded={mobileExpanded === item.label}
-                      style={{ background: "none", border: "none", cursor: "pointer", padding: "12px 4px", color: "#9CA3AF", display: "flex", alignItems: "center" }}
+                      aria-label={`${mobileExpanded === item.label ? "Collapse" : "Expand"} ${item.label} submenu`}
+                      style={{ background: "none", border: "none", cursor: "pointer", padding: "12px 8px", color: "#586259", display: "flex", alignItems: "center" }}
                     >
                       <ChevronDown
                         size={16}

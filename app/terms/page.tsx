@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -77,37 +77,37 @@ const sections = [
 
 export default function TermsOfUsePage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, alignItems: "center" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8", fontSize: 12 }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Terms of Use</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5", fontSize: 12 }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Terms of Use</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "64px 24px 52px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "64px 24px 52px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>TERMS · TOS-001</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Last Updated June 2026</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>TERMS · TOS-001</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Last Updated June 2026</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 20 }}>
             Terms of{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Use</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>Use</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 620 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 620 }}>
             These terms govern your use of Fitlabreviews.com. By using the Site, you agree to them. Please read them carefully.
           </p>
 
           {/* Plain-language banner */}
-          <div style={{ marginTop: 32, padding: "18px 22px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderLeft: "3px solid #A89880", borderRadius: 8 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>Plain-Language Summary</p>
-            <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
+          <div style={{ marginTop: 32, padding: "18px 22px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #586259", borderRadius: 8 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>Plain-Language Summary</p>
+            <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
               Use the site lawfully. Do not scrape or reproduce content commercially. Our editorial content is not medical advice — consult a professional. We are not liable for supplement decisions you make based on our reviews.
             </p>
           </div>
@@ -121,15 +121,15 @@ export default function TermsOfUsePage() {
             <div
               key={section.id}
               id={section.id}
-              style={{ padding: "40px 0", borderBottom: "1px solid #D4C9B8" }}
+              style={{ padding: "40px 0", borderBottom: "1px solid #E4E8E5" }}
             >
               <div style={{ display: "grid", gridTemplateColumns: "3px 1fr", gap: "0 28px" }}>
-                <div style={{ width: 3, backgroundColor: "#D4C9B8", borderRadius: 2 }} />
+                <div style={{ width: 3, backgroundColor: "#E4E8E5", borderRadius: 2 }} />
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.015em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#17211C", marginBottom: 16, letterSpacing: "-0.015em" }}>
                     {section.title}
                   </h2>
 
@@ -139,9 +139,9 @@ export default function TermsOfUsePage() {
                       {section.items.map((item, ii) => (
                         <li
                           key={ii}
-                          style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 16px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8 }}
+                          style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 16px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8 }}
                         >
-                          <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", fontWeight: 700, flexShrink: 0, paddingTop: 2 }}>
+                          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, paddingTop: 2 }}>
                             {String(ii + 1).padStart(2, "0")}
                           </span>
                           <span style={{ fontSize: 14, color: "#2D2926", lineHeight: 1.65 }}>{item}</span>
@@ -158,7 +158,7 @@ export default function TermsOfUsePage() {
                   {/* Link */}
                   {section.link && (
                     <div style={{ marginTop: 16 }}>
-                      <Link href={section.link.href} style={{ fontSize: 13, color: "#C4622D", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                      <Link href={section.link.href} style={{ fontSize: 13, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                         {section.link.label}
                       </Link>
                     </div>
@@ -170,36 +170,36 @@ export default function TermsOfUsePage() {
         </div>
 
         {/* Contact */}
-        <div style={{ marginTop: 56, padding: "28px 32px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>Questions about these terms?</p>
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, marginBottom: 20 }}>
+        <div style={{ marginTop: 56, padding: "28px 32px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>Questions about these terms?</p>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, marginBottom: 20 }}>
             If you have questions about these Terms of Use, please contact us at{" "}
-            <a href="mailto:editorial@fitlabreviews.com" style={{ color: "#C4622D", fontWeight: 600, textDecoration: "none" }}>editorial@fitlabreviews.com</a>.
+            <a href="mailto:editorial@fitlabreviews.com" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>editorial@fitlabreviews.com</a>.
           </p>
         </div>
 
         {/* CTA Footer */}
-        <div style={{ marginTop: 20, padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Related Policies</p>
-          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 20 }}>
+        <div style={{ marginTop: 20, padding: "32px 36px", backgroundColor: "#17211C", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 10 }}>Related Policies</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 20 }}>
             Our full suite of editorial and legal policies.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Link
               href="/privacy"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Privacy Policy →
             </Link>
             <Link
               href="/medical-disclaimer"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#586259", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Medical Disclaimer
             </Link>
             <Link
               href="/affiliate-disclosure"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#586259", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Affiliate Disclosure
             </Link>

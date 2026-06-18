@@ -183,19 +183,19 @@ export default function AncestralVsHeartAndSoilPage() {
   };
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <Link href="/" style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Home</Link>
-          <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-          <Link href="/compare" style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Compare</Link>
-          <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-          <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Ancestral vs Heart & Soil</span>
+          <Link href="/" style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Home</Link>
+          <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+          <Link href="/compare" style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>Compare</Link>
+          <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+          <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Ancestral vs Heart & Soil</span>
         </div>
       </div>
 
@@ -208,12 +208,12 @@ export default function AncestralVsHeartAndSoilPage() {
             <div style={{ width: 110, height: 130, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
               <img src="/products/ancestral-supplements-beefliv.webp" alt="Ancestral Supplements Beef Liver" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.6))" }} />
             </div>
-            <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9", textAlign: "center" }}>Ancestral Supplements</p>
+            <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#FFFFFF", textAlign: "center" }}>Ancestral Supplements</p>
             <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
-              <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                 Buy ↗
               </a>
-              <Link href="/reviews/ancestral-supplements-beef-liver" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#A89880", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <Link href="/reviews/ancestral-supplements-beef-liver" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#586259", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                 Review →
               </Link>
             </div>
@@ -221,9 +221,9 @@ export default function AncestralVsHeartAndSoilPage() {
 
           {/* VS */}
           <div style={{ textAlign: "center", flexShrink: 0 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)", marginBottom: 8 }}>DIRECT COMPARISON · 2026</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)", marginBottom: 8 }}>DIRECT COMPARISON · 2026</p>
             <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 400, fontStyle: "italic", color: "rgba(242,235,217,0.2)", lineHeight: 1 }}>vs</p>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginTop: 8 }}>Both scored 9 / 10 FSP</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginTop: 8 }}>Both scored 9 / 10 FSP</p>
           </div>
 
           {/* Right product */}
@@ -231,30 +231,30 @@ export default function AncestralVsHeartAndSoilPage() {
             <div style={{ width: 110, height: 130, display: "flex", alignItems: "flex-end", justifyContent: "center" }}>
               <img src="/products/HEART-SOIL.webp" alt="Heart & Soil Beef Organs" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.6))" }} />
             </div>
-            <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9", textAlign: "center" }}>Heart & Soil</p>
+            <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#FFFFFF", textAlign: "center" }}>Heart & Soil</p>
             <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
-              <a href="https://amzn.to/3Q2X5ts" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <a href="https://amzn.to/3Q2X5ts" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                 Buy ↗
               </a>
-              <Link href="/reviews/heart-and-soil-beef-organs" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#A89880", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <Link href="/reviews/heart-and-soil-beef-organs" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "7px 14px", border: "1px solid rgba(242,235,217,0.2)", color: "#586259", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                 Review →
               </Link>
             </div>
           </div>
         </div>
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #F2EBD9)" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 48, background: "linear-gradient(transparent, #FFFFFF)" }} />
       </div>
 
       <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-section px-page">
 
         {/* Intro */}
         <div style={{ marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>FITLAB INDEPENDENT COMPARISON · Last updated May 2026</p>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>FITLAB INDEPENDENT COMPARISON · Last updated May 2026</p>
           <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16, maxWidth: 740 }}>
-            Ancestral Supplements <em style={{ fontWeight: 400, fontStyle: "italic", color: "#5C5650" }}>vs</em> Heart & Soil —{" "}
-            <em style={{ fontWeight: 400, fontStyle: "italic", color: "#8A8480" }}>Which Should You Buy?</em>
+            Ancestral Supplements <em style={{ fontWeight: 400, fontStyle: "italic", color: "#3F4B43" }}>vs</em> Heart & Soil —{" "}
+            <em style={{ fontWeight: 400, fontStyle: "italic", color: "#6B7770" }}>Which Should You Buy?</em>
           </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", maxWidth: 700, lineHeight: 1.75 }}>
+          <p style={{ fontSize: 15, color: "#3F4B43", maxWidth: 700, lineHeight: 1.75 }}>
             Both brands score 9/10 on the Fitlab Scoring Protocol and dominate the premium beef organ supplement market. The decision comes down to one question: do you need Informed Sport drug-testing certification, or do you prioritise verifiable NZ sourcing with batch-specific COA data?
           </p>
         </div>
@@ -262,20 +262,20 @@ export default function AncestralVsHeartAndSoilPage() {
         {/* Product hero cards */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 56 }}>
           {products.map((p) => (
-            <div key={p.slug} style={{ border: "1px solid #D4C9B8", borderRadius: 14, overflow: "hidden", backgroundColor: "#F8F2E4", display: "flex", flexDirection: "column" }}>
+            <div key={p.slug} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden", backgroundColor: "#F6F8F6", display: "flex", flexDirection: "column" }}>
               {/* Image area */}
-              <div style={{ height: 180, backgroundColor: "#EDE8DF", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, position: "relative" }}>
+              <div style={{ height: 180, backgroundColor: "#F2F8F4", display: "flex", alignItems: "center", justifyContent: "center", padding: 20, position: "relative" }}>
                 <img src={p.image} alt={p.name} style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.15))" }} />
                 <div style={{ position: "absolute", top: 12, right: 12, padding: "3px 8px", backgroundColor: "#1A1714", borderRadius: 5 }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880" }}>{p.certifications.includes("Informed") ? "Informed Sport ✓" : "COA Published ✓"}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259" }}>{p.certifications.includes("Informed") ? "Informed Sport ✓" : "COA Published ✓"}</span>
                 </div>
               </div>
               {/* Content */}
               <div style={{ padding: "20px 22px", flex: 1, display: "flex", flexDirection: "column", gap: 12 }}>
                 <div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>{p.brand}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>{p.brand}</p>
                   <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", margin: 0 }}>{p.name}</h2>
-                  <p style={{ fontSize: 12, color: "#8A8480", marginTop: 2 }}>Founded by {p.founder}</p>
+                  <p style={{ fontSize: 12, color: "#6B7770", marginTop: 2 }}>Founded by {p.founder}</p>
                 </div>
                 <ReviewScoreBadge rating={p.rating} size="md" />
                 {/* Key stats */}
@@ -286,25 +286,25 @@ export default function AncestralVsHeartAndSoilPage() {
                     { label: "Caps/serving", val: p.capsPerServing },
                     { label: "Organs", val: p.informedSport ? "5-organ blend" : "Liver-focused" },
                   ].map((stat) => (
-                    <div key={stat.label} style={{ padding: "8px 10px", backgroundColor: "#EDE8DF", borderRadius: 6 }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#A89880", marginBottom: 2 }}>{stat.label}</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{stat.val}</p>
+                    <div key={stat.label} style={{ padding: "8px 10px", backgroundColor: "#F2F8F4", borderRadius: 6 }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: "0.12em", textTransform: "uppercase", color: "#586259", marginBottom: 2 }}>{stat.label}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, fontWeight: 700, color: "#1A1714" }}>{stat.val}</p>
                     </div>
                   ))}
                 </div>
                 {/* Best for / strength */}
-                <div style={{ padding: "12px 14px", backgroundColor: "#EDE8DF", borderRadius: 8, borderLeft: "3px solid #C4622D" }}>
+                <div style={{ padding: "12px 14px", backgroundColor: "#F2F8F4", borderRadius: 8, borderLeft: "3px solid #0F7A5A" }}>
                   <p style={{ fontSize: 11, color: "#1A1714", fontWeight: 600, marginBottom: 4 }}>Best for</p>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{p.bestFor}</p>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5 }}>{p.bestFor}</p>
                 </div>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, flex: 1 }}>{p.verdict}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, flex: 1 }}>{p.verdict}</p>
               </div>
               {/* CTA footer */}
-              <div style={{ padding: "14px 22px", borderTop: "1px solid #D4C9B8", display: "flex", gap: 10 }}>
-                <a href={p.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 16px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <div style={{ padding: "14px 22px", borderTop: "1px solid #E4E8E5", display: "flex", gap: 10 }}>
+                <a href={p.buyUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 16px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Buy on Amazon <ExternalLink size={12} />
                 </a>
-                <Link href={p.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #D4C9B8", color: "#7B3B1A", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                <Link href={p.reviewUrl} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #E4E8E5", color: "#7B3B1A", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Full review →
                 </Link>
               </div>
@@ -315,24 +315,24 @@ export default function AncestralVsHeartAndSoilPage() {
         {/* Specs table */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Specs" figure="§ 01" title="Side-by-side" titleItalic="breakdown" size="sm" />
-          <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
+          <div style={{ overflowX: "auto", border: "1px solid #E4E8E5", borderRadius: 12 }}>
             <table style={{ borderCollapse: "collapse", minWidth: 560, width: "100%", fontFamily: "var(--font-hanken), sans-serif" }}>
               <thead>
-                <tr style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#1A1714" }}>
-                  <th style={{ padding: "14px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Metric</th>
+                <tr style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#1A1714" }}>
+                  <th style={{ padding: "14px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 500 }}>Metric</th>
                   {products.map((p) => (
-                    <th key={p.slug} style={{ padding: "14px 20px", textAlign: "center", fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#F2EBD9" }}>{p.brand}</th>
+                    <th key={p.slug} style={{ padding: "14px 20px", textAlign: "center", fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#FFFFFF" }}>{p.brand}</th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {comparisonRows.map((row, i) => (
-                  <tr key={row.label} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                    <td style={{ padding: "12px 20px", fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>{row.label}</td>
+                  <tr key={row.label} style={{ borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                    <td style={{ padding: "12px 20px", fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", whiteSpace: "nowrap" }}>{row.label}</td>
                     {row.vals.map((val, j) => (
                       <td key={j} style={{ padding: "12px 20px", textAlign: "center", fontSize: 13, color: val.includes("✓") ? "#2D6A4F" : val.includes("✗") ? "#9B2020" : "#1A1714", fontWeight: (row.winner === j) ? 700 : 400 }}>
                         {row.winner === j && (
-                          <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", backgroundColor: "#C4622D", marginRight: 6, verticalAlign: "middle" }} />
+                          <span style={{ display: "inline-block", width: 6, height: 6, borderRadius: "50%", backgroundColor: "#0F7A5A", marginRight: 6, verticalAlign: "middle" }} />
                         )}
                         {val}
                       </td>
@@ -342,76 +342,76 @@ export default function AncestralVsHeartAndSoilPage() {
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: 11, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginTop: 8 }}>· Orange dot = winner in that category</p>
+          <p style={{ fontSize: 11, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", marginTop: 8 }}>· Orange dot = winner in that category</p>
         </section>
 
         {/* Nutrient breakdown */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Nutrient Coverage" figure="§ 02" title="What each product" titleItalic="actually provides" size="sm" />
-          <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.75, marginBottom: 20, maxWidth: 700 }}>
+          <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.75, marginBottom: 20, maxWidth: 700 }}>
             The organ composition determines your nutrient profile. Ancestral's liver-focus gives you very high retinol, B12, folate, and copper. Heart & Soil's 5-organ blend adds CoQ10 (heart), selenium (kidney), enzymes (pancreas), and tuftsin (spleen) at the cost of some depth in the liver nutrients.
           </p>
-          <div style={{ overflowX: "auto", border: "1px solid #D4C9B8", borderRadius: 12 }}>
+          <div style={{ overflowX: "auto", border: "1px solid #E4E8E5", borderRadius: 12 }}>
             <table style={{ borderCollapse: "collapse", minWidth: 560, width: "100%" }}>
               <thead>
                 <tr style={{ backgroundColor: "#1A1714" }}>
-                  <th style={{ padding: "12px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Nutrient</th>
-                  <th style={{ padding: "12px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", fontWeight: 500 }}>Best Source</th>
-                  <th style={{ padding: "12px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#F2EBD9", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Ancestral</th>
-                  <th style={{ padding: "12px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#F2EBD9", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Heart & Soil</th>
+                  <th style={{ padding: "12px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 500 }}>Nutrient</th>
+                  <th style={{ padding: "12px 20px", textAlign: "left", fontSize: 10, letterSpacing: "0.14em", textTransform: "uppercase", color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", fontWeight: 500 }}>Best Source</th>
+                  <th style={{ padding: "12px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#FFFFFF", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Ancestral</th>
+                  <th style={{ padding: "12px 20px", textAlign: "center", fontSize: 13, fontWeight: 700, color: "#FFFFFF", fontFamily: "var(--font-newsreader), Georgia, serif" }}>Heart & Soil</th>
                 </tr>
               </thead>
               <tbody>
                 {nutrientRows.map((row, i) => (
-                  <tr key={row.nutrient} style={{ borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                  <tr key={row.nutrient} style={{ borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                     <td style={{ padding: "11px 20px", fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{row.nutrient}</td>
-                    <td style={{ padding: "11px 20px", fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{row.source}</td>
-                    <td style={{ padding: "11px 20px", textAlign: "center", fontSize: 12, color: row.ancestralWins === true ? "#2D6A4F" : row.ancestralWins === false ? "#9B2020" : "#5C5650", fontWeight: row.ancestralWins === true ? 600 : 400 }}>{row.ancestral}</td>
-                    <td style={{ padding: "11px 20px", textAlign: "center", fontSize: 12, color: row.ancestralWins === false ? "#2D6A4F" : row.ancestralWins === true ? "#9B2020" : "#5C5650", fontWeight: row.ancestralWins === false ? 600 : 400 }}>{row.heartSoil}</td>
+                    <td style={{ padding: "11px 20px", fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>{row.source}</td>
+                    <td style={{ padding: "11px 20px", textAlign: "center", fontSize: 12, color: row.ancestralWins === true ? "#2D6A4F" : row.ancestralWins === false ? "#9B2020" : "#3F4B43", fontWeight: row.ancestralWins === true ? 600 : 400 }}>{row.ancestral}</td>
+                    <td style={{ padding: "11px 20px", textAlign: "center", fontSize: 12, color: row.ancestralWins === false ? "#2D6A4F" : row.ancestralWins === true ? "#9B2020" : "#3F4B43", fontWeight: row.ancestralWins === false ? 600 : 400 }}>{row.heartSoil}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p style={{ fontSize: 11, color: "#A89880", fontFamily: "var(--font-dm-mono), monospace", marginTop: 8 }}>Green = winner in that nutrient. Estimates based on organ composition at standard serving doses.</p>
+          <p style={{ fontSize: 11, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", marginTop: 8 }}>Green = winner in that nutrient. Estimates based on organ composition at standard serving doses.</p>
         </section>
 
         {/* Sourcing deep dive */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Key Differentiator" figure="§ 03" title="The sourcing" titleItalic="question" size="sm" />
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, marginBottom: 16 }}>
-            <div style={{ padding: 24, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
+            <div style={{ padding: 24, border: "1px solid #E4E8E5", borderRadius: 12, backgroundColor: "#F6F8F6" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
                 <img src="/products/ancestral-supplements-beefliv.webp" alt="Ancestral Supplements" style={{ width: 48, height: 56, objectFit: "contain" }} />
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C4622D" }}>Ancestral Supplements</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A" }}>Ancestral Supplements</p>
               </div>
               <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>New Zealand, batch-verified</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, marginBottom: 12 }}>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, marginBottom: 12 }}>
                 New Zealand is widely considered the highest regulatory standard for beef organ supplements. NZ has strict controls on pesticide use, antibiotic restriction, and pasture requirements. Ancestral publishes batch-specific COAs covering lead, cadmium, mercury, and arsenic — you can verify the exact lot you purchased. This level of traceability is rare in the supplement industry.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
                 {["NZ Ministry of Primary Industries oversight", "Year-round pasture feeding (climate default)", "Batch-level heavy metal COA published", "Exact organ dose per capsule disclosed"].map((point) => (
                   <div key={point} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
                     <CheckCircle size={13} color="#2D6A4F" style={{ flexShrink: 0, marginTop: 2 }} />
-                    <p style={{ fontSize: 12, color: "#5C5650" }}>{point}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43" }}>{point}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div style={{ padding: 24, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4" }}>
+            <div style={{ padding: 24, border: "1px solid #E4E8E5", borderRadius: 12, backgroundColor: "#F6F8F6" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
                 <img src="/products/HEART-SOIL.webp" alt="Heart & Soil" style={{ width: 48, height: 56, objectFit: "contain" }} />
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#185FA5" }}>Heart & Soil</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#185FA5" }}>Heart & Soil</p>
               </div>
               <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>US regenerative, Informed Sport tested</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7, marginBottom: 12 }}>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, marginBottom: 12 }}>
                 Heart & Soil sources from named US regenerative farms, visible on their website. Regenerative agriculture goes beyond organic — it focuses on soil health, carbon sequestration, and animal welfare. Informed Sport certification adds a separate layer of quality assurance: every batch is independently tested against 200+ WADA-prohibited substances, which matters more than sourcing for competitive athletes.
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
                 {["Named US regenerative farms (farm-to-capsule transparency)", "Informed Sport batch certification (200+ substances)", "5-organ blend: liver, heart, kidney, spleen, pancreas", "Heavy metal COA published alongside certification"].map((point) => (
                   <div key={point} style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
                     <CheckCircle size={13} color="#2D6A4F" style={{ flexShrink: 0, marginTop: 2 }} />
-                    <p style={{ fontSize: 12, color: "#5C5650" }}>{point}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43" }}>{point}</p>
                   </div>
                 ))}
               </div>
@@ -429,23 +429,23 @@ export default function AncestralVsHeartAndSoilPage() {
               { label: "Per year (daily use)", ancestral: "$540", heartSoil: "$660", winner: "Ancestral" },
               { label: "Annual premium for H&S", ancestral: "—", heartSoil: "+$120/year", winner: "Context" },
             ].map((row) => (
-              <div key={row.label} style={{ padding: "16px 18px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>{row.label}</p>
+              <div key={row.label} style={{ padding: "16px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>{row.label}</p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
                   <div>
-                    <p style={{ fontSize: 10, color: "#8A8480", marginBottom: 2 }}>Ancestral</p>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, fontWeight: 700, color: row.winner === "Ancestral" ? "#2D6A4F" : "#1A1714" }}>{row.ancestral}</p>
+                    <p style={{ fontSize: 10, color: "#6B7770", marginBottom: 2 }}>Ancestral</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 16, fontWeight: 700, color: row.winner === "Ancestral" ? "#2D6A4F" : "#1A1714" }}>{row.ancestral}</p>
                   </div>
                   <div style={{ textAlign: "right" }}>
-                    <p style={{ fontSize: 10, color: "#8A8480", marginBottom: 2 }}>Heart & Soil</p>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 16, fontWeight: 700, color: row.winner === "Heart & Soil" ? "#2D6A4F" : "#1A1714" }}>{row.heartSoil}</p>
+                    <p style={{ fontSize: 10, color: "#6B7770", marginBottom: 2 }}>Heart & Soil</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 16, fontWeight: 700, color: row.winner === "Heart & Soil" ? "#2D6A4F" : "#1A1714" }}>{row.heartSoil}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ padding: "16px 20px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, borderLeft: "3px solid #7B3B1A" }}>
-            <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, borderLeft: "3px solid #7B3B1A" }}>
+            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
               <strong style={{ color: "#1A1714" }}>Is the $120/year Heart & Soil premium worth it?</strong> For drug-tested athletes: yes, absolutely — Informed Sport batch testing is not optional in that context. For general users: Ancestral&apos;s NZ sourcing and batch COA provide strong quality assurance at a lower price. The premium only makes sense if you specifically need certification documentation.
             </p>
           </div>
@@ -454,29 +454,29 @@ export default function AncestralVsHeartAndSoilPage() {
         {/* Category winners */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="Category Winners" figure="§ 05" title="Who wins" titleItalic="each round" size="sm" />
-          <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {categoryWinners.map((item, i) => (
               <div
                 key={item.category}
-                style={{ borderBottom: i < categoryWinners.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}
+                style={{ borderBottom: i < categoryWinners.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}
                 className="flex flex-col lg:grid lg:grid-cols-[1fr_auto_2fr] lg:items-center"
               >
                 {/* Category label */}
                 <div
-                  style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650", letterSpacing: "0.08em", textTransform: "uppercase" }}
+                  style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43", letterSpacing: "0.08em", textTransform: "uppercase" }}
                   className="px-4 pt-3 pb-1 lg:px-5 lg:py-[14px]"
                 >
                   {item.category}
                 </div>
                 {/* Winner badge */}
-                <div className="px-4 pb-2 lg:px-5 lg:py-[14px] lg:border-l lg:border-r lg:border-[#EDE8DF]">
-                  <span style={{ padding: "4px 12px", backgroundColor: item.winner === "Tie" ? "#EDE8DF" : "#1A1714", color: item.winner === "Tie" ? "#5C5650" : "#F2EBD9", fontSize: 10, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap", display: "inline-block" }}>
+                <div className="px-4 pb-2 lg:px-5 lg:py-[14px] lg:border-l lg:border-r lg:border-[#F2F8F4]">
+                  <span style={{ padding: "4px 12px", backgroundColor: item.winner === "Tie" ? "#F2F8F4" : "#1A1714", color: item.winner === "Tie" ? "#3F4B43" : "#FFFFFF", fontSize: 10, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", whiteSpace: "nowrap", display: "inline-block" }}>
                     {item.winner}
                   </span>
                 </div>
                 {/* Note */}
                 <div
-                  style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6 }}
+                  style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6 }}
                   className="px-4 pb-3 lg:px-5 lg:py-[14px]"
                 >
                   {item.note}
@@ -491,7 +491,7 @@ export default function AncestralVsHeartAndSoilPage() {
           <div style={{ padding: 24, border: "1px solid #E5C4B8", borderRadius: 12, backgroundColor: "#FFF8F0" }}>
             <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
               <AlertTriangle size={18} color="#9B2020" style={{ flexShrink: 0, marginTop: 2 }} />
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9B2020" }}>CONTEXT: THE 2025 FDA WARNING LETTER — ANCESTRAL SUPPLEMENTS</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#9B2020" }}>CONTEXT: THE 2025 FDA WARNING LETTER — ANCESTRAL SUPPLEMENTS</p>
             </div>
             <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7, marginBottom: 12 }}>
               In 2025, Ancestral Supplements received an FDA warning letter. This is frequently misrepresented online:
@@ -504,8 +504,8 @@ export default function AncestralVsHeartAndSoilPage() {
                 { type: "clarify", text: "Ancestral updated their website claims in response. Their COA transparency, sourcing, and formulations remain unchanged." },
               ].map((point, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
-                  <span style={{ fontSize: 12, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>—</span>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{point.text}</p>
+                  <span style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 1 }}>—</span>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{point.text}</p>
                 </div>
               ))}
             </div>
@@ -519,10 +519,10 @@ export default function AncestralVsHeartAndSoilPage() {
             {/* Ancestral */}
             <div style={{ backgroundColor: "#1A1714", borderRadius: 14, overflow: "hidden", display: "flex", flexDirection: "column" }}>
               <div style={{ padding: "24px 28px", flex: 1 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Choose Ancestral If…</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Choose Ancestral If…</p>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
                   <img src="/products/ancestral-supplements-beefliv.webp" alt="Ancestral Supplements" style={{ width: 44, height: 52, objectFit: "contain" }} />
-                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9" }}>Ancestral Supplements</h3>
+                  <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF" }}>Ancestral Supplements</h3>
                 </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: "0 0 16px", display: "flex", flexDirection: "column", gap: 6 }}>
                   {[
@@ -533,27 +533,27 @@ export default function AncestralVsHeartAndSoilPage() {
                     "You're not a drug-tested competitive athlete",
                     "Disclosed individual organ doses matter to you",
                   ].map((r) => (
-                    <li key={r} style={{ fontSize: 13, color: "#8A8480", display: "flex", alignItems: "flex-start", gap: 8 }}>
-                      <CheckCircle size={12} color="#C4622D" style={{ flexShrink: 0, marginTop: 2 }} />
+                    <li key={r} style={{ fontSize: 13, color: "#6B7770", display: "flex", alignItems: "flex-start", gap: 8 }}>
+                      <CheckCircle size={12} color="#0F7A5A" style={{ flexShrink: 0, marginTop: 2 }} />
                       {r}
                     </li>
                   ))}
                 </ul>
               </div>
               <div style={{ padding: "16px 28px", borderTop: "1px solid #2D2520", display: "flex", gap: 10 }}>
-                <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                <a href="https://amzn.to/43xRRca" target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Buy on Amazon <ExternalLink size={11} />
                 </a>
-                <Link href="/reviews/ancestral-supplements-beef-liver" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #3D3830", color: "#8A8480", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                <Link href="/reviews/ancestral-supplements-beef-liver" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #3D3830", color: "#6B7770", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Review →
                 </Link>
               </div>
             </div>
 
             {/* Heart & Soil */}
-            <div style={{ backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 14, overflow: "hidden", display: "flex", flexDirection: "column" }}>
+            <div style={{ backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden", display: "flex", flexDirection: "column" }}>
               <div style={{ padding: "24px 28px", flex: 1 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 12 }}>Choose Heart & Soil If…</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 12 }}>Choose Heart & Soil If…</p>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
                   <img src="/products/HEART-SOIL.webp" alt="Heart & Soil" style={{ width: 44, height: 52, objectFit: "contain" }} />
                   <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714" }}>Heart & Soil</h3>
@@ -566,18 +566,18 @@ export default function AncestralVsHeartAndSoilPage() {
                     "Third-party certification is your primary trust signal",
                     "Price is secondary to purity documentation",
                   ].map((r) => (
-                    <li key={r} style={{ fontSize: 13, color: "#5C5650", display: "flex", alignItems: "flex-start", gap: 8 }}>
+                    <li key={r} style={{ fontSize: 13, color: "#3F4B43", display: "flex", alignItems: "flex-start", gap: 8 }}>
                       <CheckCircle size={12} color="#2D6A4F" style={{ flexShrink: 0, marginTop: 2 }} />
                       {r}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div style={{ padding: "16px 28px", borderTop: "1px solid #D4C9B8", display: "flex", gap: 10 }}>
-                <a href="https://amzn.to/3Q2X5ts" target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+              <div style={{ padding: "16px 28px", borderTop: "1px solid #E4E8E5", display: "flex", gap: 10 }}>
+                <a href="https://amzn.to/3Q2X5ts" target="_blank" rel="nofollow noopener noreferrer" style={{ flex: 2, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Buy on Amazon <ExternalLink size={11} />
                 </a>
-                <Link href="/reviews/heart-and-soil-beef-organs" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #D4C9B8", color: "#7B3B1A", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                <Link href="/reviews/heart-and-soil-beef-organs" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", border: "1px solid #E4E8E5", color: "#7B3B1A", fontSize: 12, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                   Review →
                 </Link>
               </div>
@@ -588,9 +588,9 @@ export default function AncestralVsHeartAndSoilPage() {
         {/* FAQ — accordion */}
         <section style={{ marginBottom: 56 }}>
           <SectionHeading label="FAQ" figure="§ 07" title="Common" titleItalic="questions" size="sm" />
-          <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {faqItems.map((faq, i) => (
-              <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+              <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                 <summary>{faq.q}</summary>
                 <p className="faq-answer">{faq.a}</p>
               </details>
@@ -599,10 +599,10 @@ export default function AncestralVsHeartAndSoilPage() {
         </section>
 
         {/* Affiliate disclosure */}
-        <div style={{ padding: "10px 16px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 8, marginBottom: 40 }}>
-          <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>
+        <div style={{ padding: "10px 16px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 8, marginBottom: 40 }}>
+          <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>
             DISCLOSURE: This comparison contains affiliate links. We earn a small commission if you purchase via our links at no extra cost to you. Scores and editorial judgements are independent of affiliate arrangements.{" "}
-            <Link href="/affiliate-disclosure" style={{ color: "#C4622D", textDecoration: "none" }}>Full disclosure →</Link>
+            <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A", textDecoration: "none" }}>Full disclosure →</Link>
           </p>
         </div>
 
@@ -617,9 +617,9 @@ export default function AncestralVsHeartAndSoilPage() {
               { title: "Organ Supplement Reviews Hub", desc: "All 9 organ supplement reviews ranked by FSP score.", href: "/reviews" },
             ].map((item) => (
               <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-                <div style={{ padding: 18, border: "1px solid #D4C9B8", borderRadius: 12, backgroundColor: "#F8F2E4", height: "100%" }}>
+                <div style={{ padding: 18, border: "1px solid #E4E8E5", borderRadius: 12, backgroundColor: "#F6F8F6", height: "100%" }}>
                   <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "0.95rem", fontWeight: 700, color: "#1A1714", marginBottom: 6, lineHeight: 1.3 }}>{item.title}</h3>
-                  <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.desc}</p>
+                  <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5 }}>{item.desc}</p>
                 </div>
               </Link>
             ))}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -61,42 +61,42 @@ const sections = [
 
 export default function MedicalDisclaimerPage() {
   return (
-    <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+    <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, alignItems: "center" }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8", fontSize: 12 }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Medical Disclaimer</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5", fontSize: 12 }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Medical Disclaimer</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "64px 24px 52px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "64px 24px 52px" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20, flexWrap: "wrap" }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>DISCLAIMER · MED-001</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Last Updated May 2026</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>DISCLAIMER · MED-001</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Last Updated May 2026</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 20 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 20 }}>
             Medical{" "}
-            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>Disclaimer</em>
+            <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>Disclaimer</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 620 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 620 }}>
             Our content reflects the published research. It is not medical advice. Read this before relying on anything you find here for a health decision.
           </p>
 
           {/* Warning Banner */}
-          <div style={{ marginTop: 32, padding: "20px 22px", backgroundColor: "#FDF5EE", border: "1px solid #E8C4A0", borderLeft: "3px solid #C4622D", borderRadius: 8, display: "flex", gap: 14, alignItems: "flex-start" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C4622D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
+          <div style={{ marginTop: 32, padding: "20px 22px", backgroundColor: "#FDF5EE", border: "1px solid #E8C4A0", borderLeft: "3px solid #0F7A5A", borderRadius: 8, display: "flex", gap: 14, alignItems: "flex-start" }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F7A5A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0, marginTop: 2 }}>
               <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
               <line x1="12" y1="9" x2="12" y2="13" />
               <line x1="12" y1="17" x2="12.01" y2="17" />
             </svg>
-            <p style={{ fontSize: 14, color: "#5C5650", lineHeight: 1.7, margin: 0 }}>
-              <strong style={{ color: "#1A1714" }}>Important:</strong> The content on Fitlabreviews is for informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before changing your diet, supplement regimen, medication, or health plan.
+            <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: "#17211C" }}>Important:</strong> The content on Fitlabreviews is for informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before changing your diet, supplement regimen, medication, or health plan.
             </p>
           </div>
         </div>
@@ -111,16 +111,16 @@ export default function MedicalDisclaimerPage() {
               id={section.id}
               style={{
                 padding: "36px 0",
-                borderBottom: "1px solid #D4C9B8",
+                borderBottom: "1px solid #E4E8E5",
               }}
             >
               {section.highlight ? (
                 /* Special highlighted callout for prescription medications */
-                <div style={{ padding: "24px 28px", backgroundColor: "#FDF5EE", border: "1px solid #E8C4A0", borderLeft: "3px solid #C4622D", borderRadius: 10 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C4622D", marginBottom: 10 }}>
+                <div style={{ padding: "24px 28px", backgroundColor: "#FDF5EE", border: "1px solid #E8C4A0", borderLeft: "3px solid #0F7A5A", borderRadius: 10 }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 10 }}>
                     ⚠ Special Notice · {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#1A1714", marginBottom: 14, letterSpacing: "-0.015em" }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211C", marginBottom: 14, letterSpacing: "-0.015em" }}>
                     {section.title}
                   </h2>
                   <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, margin: 0 }}>
@@ -129,12 +129,12 @@ export default function MedicalDisclaimerPage() {
                 </div>
               ) : (
                 <div style={{ display: "grid", gridTemplateColumns: "3px 1fr", gap: "0 28px" }}>
-                  <div style={{ width: 3, backgroundColor: "#D4C9B8", borderRadius: 2, alignSelf: "stretch" }} />
+                  <div style={{ width: 3, backgroundColor: "#E4E8E5", borderRadius: 2, alignSelf: "stretch" }} />
                   <div>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 10 }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 10 }}>
                       {String(i + 1).padStart(2, "0")}
                     </p>
-                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#1A1714", marginBottom: 14, letterSpacing: "-0.015em" }}>
+                    <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.25rem", fontWeight: 700, color: "#17211C", marginBottom: 14, letterSpacing: "-0.015em" }}>
                       {section.title}
                     </h2>
                     <p style={{ fontSize: 15, color: "#2D2926", lineHeight: 1.8, margin: 0 }}>
@@ -148,27 +148,27 @@ export default function MedicalDisclaimerPage() {
         </div>
 
         {/* CTA Footer */}
-        <div style={{ marginTop: 56, padding: "32px 36px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8A8480", marginBottom: 10 }}>Related Policies</p>
-          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#F2EBD9", marginBottom: 20 }}>
+        <div style={{ marginTop: 56, padding: "32px 36px", backgroundColor: "#17211C", borderRadius: 12 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 10 }}>Related Policies</p>
+          <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#FFFFFF", marginBottom: 20 }}>
             Our editorial standards and commercial transparency.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <Link
               href="/editorial-policy"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#C4622D", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Editorial Policy →
             </Link>
             <Link
               href="/affiliate-disclosure"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#586259", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Affiliate Disclosure
             </Link>
             <Link
               href="/contact"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#A89880", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+              style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", border: "1px solid #3A3530", backgroundColor: "transparent", color: "#586259", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
             >
               Contact Us
             </Link>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 interface Props { bmr: number; weightKg: number; unit: "imperial"|"metric"; animDelay: number; }
 
@@ -17,11 +17,11 @@ export default function PlateauPredictor({ bmr, weightKg, unit, animDelay }: Pro
 
   return (
     <div style={{ opacity:0, animation:`slideUp 250ms ${animDelay}ms ease-out forwards` }}>
-      <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
+      <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
         <div style={{ fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>
           Plateau Predictor
         </div>
-        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:6 }}>
+        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#17211C", marginBottom:6 }}>
           Your body will adapt. Here&apos;s when.
         </h2>
         <p style={{ fontSize:13, color:"#586259", marginBottom:16, lineHeight:1.6 }}>
@@ -32,16 +32,16 @@ export default function PlateauPredictor({ bmr, weightKg, unit, animDelay }: Pro
         <div className="plateau-timeline" style={{ marginBottom:16 }}>
           {weeks.map(w => (
             <div key={w.label} style={{
-              background: w.label === "Now" ? "#1A1714" : "#fff",
-              border:"1px solid #D4C9B8", borderRadius:10, padding:"12px 8px", textAlign:"center"
+              background: w.label === "Now" ? "#17211C" : "#fff",
+              border:"1px solid #E4E8E5", borderRadius:10, padding:"12px 8px", textAlign:"center"
             }}>
-              <div style={{ fontSize:10, fontWeight:700, color: w.label==="Now" ? "#8A8480" : "#586259", marginBottom:5, letterSpacing:"0.06em" }}>
+              <div style={{ fontSize:10, fontWeight:700, color: w.label==="Now" ? "#6B7770" : "#586259", marginBottom:5, letterSpacing:"0.06em" }}>
                 {w.label}
               </div>
-              <div style={{ fontSize:15, fontWeight:800, fontVariantNumeric:"tabular-nums", color: w.label==="Now" ? "#F2EBD9" : "#1A1714", lineHeight:1 }}>
+              <div style={{ fontSize:15, fontWeight:800, fontVariantNumeric:"tabular-nums", color: w.label==="Now" ? "#FFFFFF" : "#17211C", lineHeight:1 }}>
                 {w.bmrVal.toLocaleString()}
               </div>
-              <div style={{ fontSize:10, color: w.label==="Now" ? "#8A8480" : "#C4622D", marginTop:4, fontWeight:600 }}>
+              <div style={{ fontSize:10, color: w.label==="Now" ? "#6B7770" : "#0F7A5A", marginTop:4, fontWeight:600 }}>
                 {w.delta}
               </div>
             </div>

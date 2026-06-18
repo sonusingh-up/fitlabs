@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertTriangle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -49,17 +49,17 @@ export default function BeefLiverPage() {
   ];
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
         <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/ingredients" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Ingredients</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Beef Liver</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/ingredients" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Ingredients</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Beef Liver</span>
         </div>
       </div>
 
@@ -68,20 +68,20 @@ export default function BeefLiverPage() {
         {/* Hero */}
         <div style={{ marginBottom: 48 }}>
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>ING-2026-011</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C4622D", whiteSpace: "nowrap" }}>Ingredient Research</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>ING-2026-011</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#0F7A5A", whiteSpace: "nowrap" }}>Ingredient Research</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
             Beef Liver Supplement
-            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#5C5650", fontSize: "0.7em", marginTop: 8 }}>Benefits, Dosage, Vitamin A Risks & Best Brands</em>
+            <em style={{ display: "block", fontWeight: 400, fontStyle: "italic", color: "#3F4B43", fontSize: "0.7em", marginTop: 8 }}>Benefits, Dosage, Vitamin A Risks & Best Brands</em>
           </h1>
-          <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.75, marginBottom: 12 }}>Beef liver is gram-for-gram the most nutrient-dense food on the planet. It is the richest source of retinol (preformed vitamin A), the most concentrated dietary B12, and one of the best sources of bioavailable heme iron. Freeze-dried supplements offer these nutrients in capsule form without the taste, prep, and refrigeration requirements of eating whole liver.</p>
-          <p style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>Last updated: May 2026 · Evidence reviewed against current PubMed literature</p>
+          <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.75, marginBottom: 12 }}>Beef liver is gram-for-gram the most nutrient-dense food on the planet. It is the richest source of retinol (preformed vitamin A), the most concentrated dietary B12, and one of the best sources of bioavailable heme iron. Freeze-dried supplements offer these nutrients in capsule form without the taste, prep, and refrigeration requirements of eating whole liver.</p>
+          <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>Last updated: May 2026 · Evidence reviewed against current PubMed literature</p>
         </div>
 
         {/* Stats panel */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 12, marginBottom: 48, padding: 24, backgroundColor: "#1A1714", borderRadius: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))", gap: 12, marginBottom: 48, padding: 24, backgroundColor: "#17211C", borderRadius: 12 }}>
           {[
             { label: "Vitamin B12 per 100g", value: "59.3µg", sub: "2,471% Daily Value" },
             { label: "Retinol (Vit A) per 100g", value: "16,899µg", sub: "Highest food source" },
@@ -91,17 +91,17 @@ export default function BeefLiverPage() {
             { label: "Folate per 100g", value: "290µg", sub: "73% Daily Value" },
           ].map((stat) => (
             <div key={stat.label} style={{ padding: "14px 16px", backgroundColor: "#252220", borderRadius: 8 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#5C5650", marginBottom: 6 }}>{stat.label}</p>
-              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#F2EBD9", marginBottom: 2 }}>{stat.value}</p>
-              <p style={{ fontSize: 11, color: "#8A8480" }}>{stat.sub}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 6 }}>{stat.label}</p>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 700, color: "#FFFFFF", marginBottom: 2 }}>{stat.value}</p>
+              <p style={{ fontSize: 11, color: "#6B7770" }}>{stat.sub}</p>
             </div>
           ))}
         </div>
 
         {/* Quick answer */}
-        <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, marginBottom: 48 }}>
-          <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>Quick Answer</p>
-          <p style={{ fontSize: 14, color: "#1A1714", lineHeight: 1.7 }}>
+        <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, marginBottom: 48 }}>
+          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Quick Answer</p>
+          <p style={{ fontSize: 14, color: "#17211C", lineHeight: 1.7 }}>
             <strong>What it is:</strong> Freeze-dried or desiccated bovine (beef) liver in capsule form. <strong>What it provides:</strong> The highest concentration of retinol, B12, heme iron, and copper available in any food or supplement. <strong>Who it is for:</strong> People who want the nutrient profile of liver without eating it — or who want to supplement a diet already containing some liver. <strong>Main risk:</strong> Vitamin A (retinol) toxicity with excessive intake or stacking with other vitamin A sources. <strong>Recommended dose:</strong> 3–6 capsules/day (1.5–3g freeze-dried liver equivalent).
           </p>
         </div>
@@ -110,13 +110,13 @@ export default function BeefLiverPage() {
         <SectionHeading label="Evidence" figure="§ 01" title="What the research" titleItalic="actually shows" size="sm" />
         <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 48 }}>
           {benefits.map((b, i) => (
-            <div key={i} style={{ padding: 20, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
+            <div key={i} style={{ padding: 20, border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
               <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714" }}>{b.claim}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C" }}>{b.claim}</p>
                 <EvidenceBadge level={b.evidence} />
               </div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", letterSpacing: "0.08em", marginBottom: 6 }}>{b.citation}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{b.notes}</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", letterSpacing: "0.08em", marginBottom: 6 }}>{b.citation}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{b.notes}</p>
             </div>
           ))}
         </div>
@@ -131,14 +131,14 @@ export default function BeefLiverPage() {
               { label: "Retinol ceiling", value: "10,000 IU/day", note: "Tolerable upper intake level for adults" },
               { label: "Timing", value: "With largest meal", note: "Fat-soluble vitamins need dietary fat" },
             ].map((d) => (
-              <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 4 }}>{d.label}</p>
-                <p style={{ fontSize: 16, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-newsreader), Georgia, serif", marginBottom: 4 }}>{d.value}</p>
-                <p style={{ fontSize: 11, color: "#5C5650" }}>{d.note}</p>
+              <div key={d.label} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 4 }}>{d.label}</p>
+                <p style={{ fontSize: 16, fontWeight: 700, color: "#17211C", fontFamily: "var(--font-newsreader), Georgia, serif", marginBottom: 4 }}>{d.value}</p>
+                <p style={{ fontSize: 11, color: "#3F4B43" }}>{d.note}</p>
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
             The standard 6-capsule serving provides approximately 3g of freeze-dried liver — the nutrient equivalent of roughly 15g fresh liver. A full 85g serving of fresh liver contains far more nutrition, which is why supplement advocates suggest eating whole liver 1–2x per week and using supplements on other days.
           </p>
         </div>
@@ -150,7 +150,7 @@ export default function BeefLiverPage() {
             <AlertTriangle size={20} color="#9B2020" style={{ flexShrink: 0, marginTop: 2 }} />
             <div>
               <p style={{ fontSize: 14, fontWeight: 600, color: "#9B2020", marginBottom: 8 }}>Vitamin A (Retinol) Toxicity</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>Beef liver is the richest dietary source of preformed retinol. Unlike beta-carotene from plants (which the body self-regulates), preformed retinol accumulates in liver tissue. Chronic excess causes hepatotoxicity, bone mineral density loss, and hair thinning. Acute overdose (very large single doses) causes headache, nausea, and vomiting.</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>Beef liver is the richest dietary source of preformed retinol. Unlike beta-carotene from plants (which the body self-regulates), preformed retinol accumulates in liver tissue. Chronic excess causes hepatotoxicity, bone mineral density loss, and hair thinning. Acute overdose (very large single doses) causes headache, nausea, and vomiting.</p>
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
@@ -160,12 +160,12 @@ export default function BeefLiverPage() {
               { group: "Hemochromatosis", guidance: "Heme iron absorption is high and unregulated. Organ supplements contraindicated.", risk: "High" },
               { group: "Warfarin users", guidance: "Vitamin K in liver can affect INR. Monitor closely with physician.", risk: "Medium" },
             ].map((item) => (
-              <div key={item.group} style={{ padding: 14, border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
+              <div key={item.group} style={{ padding: 14, border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-                  <p style={{ fontSize: 13, fontWeight: 600, color: "#1A1714" }}>{item.group}</p>
-                  <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: item.risk === "High" ? "#FCEAEA" : item.risk === "Medium" ? "#FAEEDA" : "#EAF3DE", color: item.risk === "High" ? "#9B2020" : item.risk === "Medium" ? "#854F0B" : "#3B6D11", borderRadius: 99, fontFamily: "var(--font-dm-mono), monospace" }}>{item.risk}</span>
+                  <p style={{ fontSize: 13, fontWeight: 600, color: "#17211C" }}>{item.group}</p>
+                  <span style={{ fontSize: 10, padding: "2px 8px", backgroundColor: item.risk === "High" ? "#FCEAEA" : item.risk === "Medium" ? "#FAEEDA" : "#EAF3DE", color: item.risk === "High" ? "#9B2020" : item.risk === "Medium" ? "#854F0B" : "#3B6D11", borderRadius: 99, fontFamily: "var(--font-jetbrains), monospace" }}>{item.risk}</span>
                 </div>
-                <p style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.5 }}>{item.guidance}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.5 }}>{item.guidance}</p>
               </div>
             ))}
           </div>
@@ -179,17 +179,17 @@ export default function BeefLiverPage() {
             { rank: 2, name: "Perfect Supplements Beef Liver", note: "USDA organic certified, budget-friendly. Best pick for organic-focused buyers.", score: "8/10", href: "/reviews/perfect-supplements-beef-liver" },
             { rank: 3, name: "Left Coast Performance Beef Organs", note: "NZ sourced, 5-organ blend, lowest price for NZ provenance.", score: "8/10", href: "/reviews/left-coast-performance-beef-organs" },
           ].map((pick) => (
-            <div key={pick.rank} style={{ padding: 18, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4", display: "flex", gap: 16, alignItems: "flex-start" }}>
-              <div style={{ width: 36, height: 36, backgroundColor: pick.rank === 1 ? "#1A1714" : "#EDE8DF", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, fontWeight: 700, color: pick.rank === 1 ? "#F2EBD9" : "#5C5650" }}>#{pick.rank}</span>
+            <div key={pick.rank} style={{ padding: 18, border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6", display: "flex", gap: 16, alignItems: "flex-start" }}>
+              <div style={{ width: 36, height: 36, backgroundColor: pick.rank === 1 ? "#17211C" : "#F2F8F4", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, fontWeight: 700, color: pick.rank === 1 ? "#FFFFFF" : "#3F4B43" }}>#{pick.rank}</span>
               </div>
               <div style={{ flex: 1 }}>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{pick.name}</p>
-                <p style={{ fontSize: 13, color: "#5C5650" }}>{pick.note}</p>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{pick.name}</p>
+                <p style={{ fontSize: 13, color: "#3F4B43" }}>{pick.note}</p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 6 }}>
-                <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{pick.score}</span>
-                <Link href={pick.href} style={{ fontSize: 11, color: "#C4622D", textDecoration: "none", fontWeight: 600 }}>Review →</Link>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", fontWeight: 700 }}>{pick.score}</span>
+                <Link href={pick.href} style={{ fontSize: 11, color: "#0F7A5A", textDecoration: "none", fontWeight: 600 }}>Review →</Link>
               </div>
             </div>
           ))}
@@ -197,11 +197,11 @@ export default function BeefLiverPage() {
 
         {/* FAQ */}
         <SectionHeading label="FAQ" figure="§ 05" title="Common" titleItalic="questions" size="sm" />
-        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 48 }}>
           {faqSchema.mainEntity.map((item, i) => (
-            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#1A1714", marginBottom: 8 }}>Q. {item.name}</p>
-              <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
+            <div key={i} style={{ padding: "20px 22px", borderBottom: i < faqSchema.mainEntity.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+              <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211C", marginBottom: 8 }}>Q. {item.name}</p>
+              <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.acceptedAnswer.text}</p>
             </div>
           ))}
         </div>
@@ -216,9 +216,9 @@ export default function BeefLiverPage() {
             { name: "Beef Pancreas", desc: "Digestive enzyme source", href: "/ingredients/beef-pancreas" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div style={{ padding: 16, border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#F8F2E4" }}>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{item.name}</p>
-                <p style={{ fontSize: 12, color: "#5C5650" }}>{item.desc}</p>
+              <div style={{ padding: 16, border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F6F8F6" }}>
+                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{item.name}</p>
+                <p style={{ fontSize: 12, color: "#3F4B43" }}>{item.desc}</p>
               </div>
             </Link>
           ))}

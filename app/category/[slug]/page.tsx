@@ -31,39 +31,39 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   ];
 
   return (
-    <div style={{ backgroundColor: "#F2EBD9" }}>
+    <div style={{ backgroundColor: "#FFFFFF" }}>
       {/* Breadcrumb */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8 }}>
-          <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <Link href="/reviews" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Reviews</Link>
-          <span style={{ color: "#D4C9B8" }}>/</span>
-          <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{categoryName}</span>
+          <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <Link href="/reviews" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Reviews</Link>
+          <span style={{ color: "#E4E8E5" }}>/</span>
+          <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{categoryName}</span>
         </div>
       </div>
 
       {/* Hero */}
-      <div style={{ borderBottom: "1px solid #D4C9B8", padding: "60px 24px 48px" }}>
+      <div style={{ borderBottom: "1px solid #E4E8E5", padding: "60px 24px 48px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>CATEGORY · CAT-01</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Supplement Reviews</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>CATEGORY · CAT-01</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Supplement Reviews</span>
           </div>
-          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.0, marginBottom: 16 }}>
-            Best <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650" }}>{categoryName}</em>
+          <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.0, marginBottom: 16 }}>
+            Best <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43" }}>{categoryName}</em>
           </h1>
-          <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.7, maxWidth: 620, marginBottom: 24 }}>
+          <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.7, maxWidth: 620, marginBottom: 24 }}>
             Every product in this category has been independently reviewed for formula quality, label transparency, and value for money.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
             <input
               type="search"
               placeholder="Filter products..."
-              style={{ padding: "10px 16px", border: "1px solid #D4C9B8", borderRadius: 8, fontSize: 13, color: "#2D2926", backgroundColor: "#F8F2E4", fontFamily: "var(--font-hanken), sans-serif", outline: "none", minWidth: 220 }}
+              style={{ padding: "10px 16px", border: "1px solid #E4E8E5", borderRadius: 8, fontSize: 13, color: "#2D2926", backgroundColor: "#F6F8F6", fontFamily: "var(--font-hanken), sans-serif", outline: "none", minWidth: 220 }}
             />
-            <Link href={`/best/${slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, textDecoration: "none" }}>
+            <Link href={`/best/${slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#17211C", color: "#FFFFFF", fontSize: 13, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", fontWeight: 600, textDecoration: "none" }}>
               See Top Picks →
             </Link>
           </div>
@@ -75,12 +75,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         {/* Key Ingredients */}
         <section style={{ marginBottom: 64 }}>
           <SectionHeading label="Key Ingredients" figure="§ 01" title="What to" titleItalic="look for" size="sm" />
-          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
             {keyIngredients.map((ing, i) => (
-              <div key={ing.name} style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 16, alignItems: "center", padding: "16px 20px", borderBottom: "1px solid #EDE8DF", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+              <div key={ing.name} style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 16, alignItems: "center", padding: "16px 20px", borderBottom: "1px solid #F2F8F4", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                 <div>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{ing.name}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.5 }}>{ing.note}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{ing.name}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.5 }}>{ing.note}</p>
                 </div>
                 <EvidenceBadge level={ing.evidence} showIcon={false} />
               </div>

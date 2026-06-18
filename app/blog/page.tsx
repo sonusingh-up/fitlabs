@@ -59,7 +59,7 @@ const posts: BlogPost[] = [
     publishedAt: "May 2026",
     excerpt: "20% MACE reduction in SELECT, 24% kidney failure reduction in FLOW, ~50% drop in alcohol relapse — GLP-1 agonists are proving effective far outside the metabolic clinic.",
     tags: ["GLP-1", "Cardiovascular", "Ozempic"],
-    accent: "#C4622D",
+    accent: "#0F7A5A",
     featured: false,
     evidenceBadge: "strong",
   },

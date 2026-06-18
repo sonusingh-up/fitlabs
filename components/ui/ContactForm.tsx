@@ -38,7 +38,7 @@ export default function ContactForm() {
         { label: "Subject", name: "subject", type: "text", placeholder: "e.g. Correction for creatine review", maxLength: 200 },
       ].map((field) => (
         <div key={field.name}>
-          <label htmlFor={field.name} style={{ display: "block", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>
+          <label htmlFor={field.name} style={{ display: "block", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>
             {field.label}
           </label>
           <input
@@ -51,11 +51,11 @@ export default function ContactForm() {
             style={{
               width: "100%",
               padding: "10px 14px",
-              backgroundColor: "#F8F2E4",
-              border: "1px solid #D4C9B8",
+              backgroundColor: "#F6F8F6",
+              border: "1px solid #E4E8E5",
               borderRadius: 8,
               fontSize: 14,
-              color: "#1A1714",
+              color: "#17211C",
               fontFamily: "var(--font-dm-sans), sans-serif",
               outline: "none",
               boxSizing: "border-box",
@@ -64,7 +64,7 @@ export default function ContactForm() {
         </div>
       ))}
       <div>
-        <label htmlFor="message" style={{ display: "block", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 6 }}>
+        <label htmlFor="message" style={{ display: "block", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>
           Message
         </label>
         <textarea
@@ -77,11 +77,11 @@ export default function ContactForm() {
           style={{
             width: "100%",
             padding: "10px 14px",
-            backgroundColor: "#F8F2E4",
-            border: "1px solid #D4C9B8",
+            backgroundColor: "#F6F8F6",
+            border: "1px solid #E4E8E5",
             borderRadius: 8,
             fontSize: 14,
-            color: "#1A1714",
+            color: "#17211C",
             fontFamily: "var(--font-dm-sans), sans-serif",
             outline: "none",
             resize: "vertical",
@@ -94,13 +94,13 @@ export default function ContactForm() {
         disabled={status === "sending"}
         style={{
           padding: "11px 24px",
-          backgroundColor: "#1A1714",
-          color: "#F2EBD9",
+          backgroundColor: "#0F7A5A",
+          color: "#FFFFFF",
           fontSize: 13,
-          fontWeight: 600,
+          fontWeight: 700,
           letterSpacing: "0.04em",
           border: "none",
-          borderRadius: 8,
+          borderRadius: 999,
           cursor: status === "sending" ? "wait" : "pointer",
           fontFamily: "var(--font-dm-sans), sans-serif",
           alignSelf: "flex-start",
@@ -113,7 +113,7 @@ export default function ContactForm() {
         <p style={{ color: "#2D6A4F", fontSize: 14, margin: 0 }}>Message sent successfully.</p>
       )}
       {status === "error" && (
-        <p style={{ color: "#C4622D", fontSize: 14, margin: 0 }}>Failed to send. Please try again.</p>
+        <p role="alert" style={{ color: "#C8412B", fontSize: 14, margin: 0 }}>Failed to send. Please try again.</p>
       )}
     </form>
   );

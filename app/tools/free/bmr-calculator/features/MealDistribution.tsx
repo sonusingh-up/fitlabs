@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 
 interface Props { goalCals: number; animDelay: number; }
@@ -16,18 +16,18 @@ export default function MealDistribution({ goalCals, animDelay }: Props) {
 
   return (
     <div style={{ opacity:0, animation:`slideUp 250ms ${animDelay}ms ease-out forwards` }}>
-      <div style={{ background:"#FDFAF4", border:"1px solid #D4C9B8", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
+      <div style={{ background:"#FDFAF4", border:"1px solid #E4E8E5", borderRadius:16, padding:"24px 24px 20px", marginBottom:16 }}>
         <div style={{ fontSize:11, fontWeight:700, color:"#586259", letterSpacing:"0.08em", textTransform:"uppercase", marginBottom:6 }}>Meal Distribution</div>
-        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#1A1714", marginBottom:16 }}>Spread your calories across your day.</h2>
+        <h2 style={{ fontFamily:"var(--font-newsreader),serif", fontSize:20, fontWeight:700, color:"#17211C", marginBottom:16 }}>Spread your calories across your day.</h2>
 
         {/* Mode selector */}
-        <div style={{ display:"flex", background:"#EDE8DF", borderRadius:10, padding:4, gap:4, marginBottom:20, width:"fit-content" }}>
+        <div style={{ display:"flex", background:"#F2F8F4", borderRadius:10, padding:4, gap:4, marginBottom:20, width:"fit-content" }}>
           {(["3","4","if"] as Mode[]).map(m => (
             <button key={m} onClick={() => setMode(m)} style={{
               padding:"7px 16px", borderRadius:8, border:"none", cursor:"pointer",
               fontFamily:"var(--font-hanken),sans-serif", fontSize:13, fontWeight:600,
-              background: mode === m ? "#1A1714" : "transparent",
-              color: mode === m ? "#F2EBD9" : "#5C5650",
+              background: mode === m ? "#17211C" : "transparent",
+              color: mode === m ? "#FFFFFF" : "#3F4B43",
               transition:"all 0.15s",
             }}>{CONFIGS[m].label}</button>
           ))}
@@ -40,18 +40,18 @@ export default function MealDistribution({ goalCals, animDelay }: Props) {
             const pct = cfg.splits[i] * 100;
             return (
               <div key={label} style={{ display:"grid", gridTemplateColumns:"140px 1fr 70px", gap:12, alignItems:"center" }}>
-                <span style={{ fontSize:13, fontWeight:600, color:"#1A1714" }}>{label}</span>
-                <div style={{ background:"#EDE8DF", borderRadius:20, height:8, overflow:"hidden" }}>
-                  <div style={{ width:`${pct}%`, height:"100%", background:"#C4622D", borderRadius:20, transition:"width 0.3s" }} />
+                <span style={{ fontSize:13, fontWeight:600, color:"#17211C" }}>{label}</span>
+                <div style={{ background:"#F2F8F4", borderRadius:20, height:8, overflow:"hidden" }}>
+                  <div style={{ width:`${pct}%`, height:"100%", background:"#0F7A5A", borderRadius:20, transition:"width 0.3s" }} />
                 </div>
-                <span style={{ fontSize:13, fontWeight:700, color:"#1A1714", textAlign:"right", fontVariantNumeric:"tabular-nums" }}>
+                <span style={{ fontSize:13, fontWeight:700, color:"#17211C", textAlign:"right", fontVariantNumeric:"tabular-nums" }}>
                   {kcal.toLocaleString()} kcal
                 </span>
               </div>
             );
           })}
         </div>
-        <p style={{ fontSize:11, color:"#8A8480", marginTop:14, marginBottom:0 }}>Based on your fat loss target of {goalCals.toLocaleString()} kcal/day.</p>
+        <p style={{ fontSize:11, color:"#6B7770", marginTop:14, marginBottom:0 }}>Based on your fat loss target of {goalCals.toLocaleString()} kcal/day.</p>
       </div>
     </div>
   );

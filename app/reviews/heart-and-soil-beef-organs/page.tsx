@@ -197,10 +197,10 @@ export default function HeartAndSoilReviewPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
 
         {/* ── Breadcrumb ─────────────────────────────────────────────────────── */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="breadcrumb-pad">
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="breadcrumb-pad">
           <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
             {[
               { label: "Home", href: "/" },
@@ -208,12 +208,12 @@ export default function HeartAndSoilReviewPage() {
               { label: "Organ Supplements", href: "/category/organ-supplements" },
             ].map((crumb, i, arr) => (
               <span key={crumb.href} style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <Link href={crumb.href} style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
-                {i < arr.length - 1 && <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>}
+                <Link href={crumb.href} style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.08em" }}>{crumb.label}</Link>
+                {i < arr.length - 1 && <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>}
               </span>
             ))}
-            <span style={{ color: "#D4C9B8", fontSize: 11 }}>/</span>
-            <span style={{ fontSize: 11, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Heart &amp; Soil Beef Organs</span>
+            <span style={{ color: "#E4E8E5", fontSize: 11 }}>/</span>
+            <span style={{ fontSize: 11, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Heart &amp; Soil Beef Organs</span>
           </div>
         </div>
 
@@ -221,41 +221,41 @@ export default function HeartAndSoilReviewPage() {
         <div style={{ width: "100%", height: 300, background: "linear-gradient(145deg, #1E1208 0%, #120C06 100%)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(242,235,217,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(242,235,217,0.03) 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
           <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-start", flexDirection: "column", paddingTop: 40, gap: 12 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-046 · ORGAN SUPPLEMENT</span>
-            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#F2EBD9", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
-              Heart &amp; Soil<br /><em style={{ fontWeight: 400, color: "#A89880" }}>Beef Organs</em>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", color: "rgba(242,235,217,0.3)" }}>REV-2026-046 · ORGAN SUPPLEMENT</span>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 4vw, 3rem)", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", textAlign: "center", lineHeight: 1.1, maxWidth: 560, padding: "0 24px" }}>
+              Heart &amp; Soil<br /><em style={{ fontWeight: 400, color: "#586259" }}>Beef Organs</em>
             </h1>
             <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 8 }}>
               <div style={{ display: "flex", gap: 4 }}>
                 {Array.from({ length: editorialScore }, (_, i) => <Star key={i} size={14} fill="#7B3B1A" color="#7B3B1A" />)}
                 {Array.from({ length: 10 - editorialScore }, (_, i) => <Star key={`e${i}`} size={14} fill="none" color="#7B3B1A" />)}
               </div>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "rgba(242,235,217,0.5)", letterSpacing: "0.12em" }}>{editorialScore} / 10 · FSP v2.1</span>
             </div>
           </div>
           <div className="hidden sm:flex" style={{ position: "absolute", right: "6%", bottom: 0, width: 130, height: 160, alignItems: "flex-end", justifyContent: "center" }}>
             <img src="/products/HEART-SOIL.webp" alt="Heart & Soil Beef Organs" style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }} />
           </div>
-          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #F2EBD9)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, background: "linear-gradient(transparent, #FFFFFF)" }} />
         </div>
 
         {/* ── Hero row ───────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "0 auto" }} className="pad-hero px-page">
           <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", whiteSpace: "nowrap" }}>REV-2026-046</span>
-            <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block", flexShrink: 0 }} />
-            <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · US Regenerative 5-Organ</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", whiteSpace: "nowrap" }}>REV-2026-046</span>
+            <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block", flexShrink: 0 }} />
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#7B3B1A", whiteSpace: "nowrap" }}>Full Review · FSP Scored · US Regenerative 5-Organ</span>
           </div>
           <div className="layout-hero-split">
             <div>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A8480", marginBottom: 8 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", marginBottom: 8 }}>
                 Heart &amp; Soil · Organ Supplement · 5-Organ Blend
               </p>
               <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem, 3.5vw, 2.6rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.08, marginBottom: 16 }}>
                 Beef Organs — Best for Athletes<br />
-                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#5C5650", fontSize: "0.7em" }}>Is the Informed Sport Premium Worth It in 2026?</em>
+                <em style={{ fontStyle: "italic", fontWeight: 400, color: "#3F4B43", fontSize: "0.7em" }}>Is the Informed Sport Premium Worth It in 2026?</em>
               </h2>
-              <p style={{ fontSize: 15, color: "#5C5650", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
+              <p style={{ fontSize: 15, color: "#3F4B43", lineHeight: 1.7, maxWidth: 580, marginBottom: 24 }}>
                 Five organs, US regenerative sourcing, Informed Sport certified. Dr. Saladino's nose-to-tail formula is the most comprehensive in the category — but the proprietary blend and premium price raise real questions.
               </p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -263,11 +263,11 @@ export default function HeartAndSoilReviewPage() {
                   href={heartSoilUrl}
                   target="_blank"
                   rel="nofollow noopener noreferrer"
-                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 13, fontWeight: 600, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}
                 >
                   Check Price <ExternalLink size={13} />
                 </a>
-                <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #D4C9B8", color: "#8A8480", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
+                <Link href="/methodology" style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 16px", border: "1px solid #E4E8E5", color: "#6B7770", fontSize: 12, borderRadius: 8, fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none", letterSpacing: "0.06em" }}>
                   FSP {rubric.compositeScore.toFixed(1)} → How we score
                 </Link>
               </div>
@@ -290,32 +290,32 @@ export default function HeartAndSoilReviewPage() {
 
         {/* ── Author box ─────────────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "16px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "16px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
             <div style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "#1A1714", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#F2EBD9" }}>FL</span>
+              <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 13, fontWeight: 700, color: "#FFFFFF" }}>FL</span>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 3 }}>Written &amp; Reviewed By</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 3 }}>Written &amp; Reviewed By</p>
               <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 2 }}>
                 Fitlab Research Team
-                <span style={{ fontWeight: 400, color: "#8A8480", fontSize: 12 }}> · Fitlabreviews Editorial</span>
+                <span style={{ fontWeight: 400, color: "#6B7770", fontSize: 12 }}> · Fitlabreviews Editorial</span>
               </p>
-              <p style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>
+              <p style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>
                 Organ supplement research · Informed Sport certification analysis · Regenerative agriculture sourcing review
               </p>
             </div>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <span style={{ padding: "3px 8px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 4, fontSize: 10, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Research Review</span>
-              <span style={{ padding: "3px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em" }}>Evidence-Led</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 4, fontSize: 10, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Research Review</span>
+              <span style={{ padding: "3px 8px", backgroundColor: "rgba(45,106,79,0.08)", border: "1px solid rgba(45,106,79,0.2)", borderRadius: 4, fontSize: 10, color: "#2D6A4F", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>Evidence-Led</span>
             </div>
           </div>
         </div>
 
         {/* ── Affiliate notice ───────────────────────────────────────────────── */}
         <div style={{ maxWidth: 1280, margin: "12px auto 0", padding: "0 24px" }}>
-          <div style={{ padding: "8px 14px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
-            <AlertTriangle size={12} style={{ color: "#A89880", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-hanken), sans-serif" }}>
+          <div style={{ padding: "8px 14px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6, display: "flex", alignItems: "center", gap: 8 }}>
+            <AlertTriangle size={12} style={{ color: "#586259", flexShrink: 0 }} />
+            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-hanken), sans-serif" }}>
               Affiliate disclosure: links above may earn us a commission at no extra cost to you. Scores and verdicts are editorially independent.{" "}
               <Link href="/affiliate-disclosure" style={{ color: "#7B3B1A", textDecoration: "none" }}>Read our disclosure →</Link>
             </p>
@@ -323,7 +323,7 @@ export default function HeartAndSoilReviewPage() {
         </div>
 
         {/* Mobile TOC */}
-        <div className="block lg:hidden" style={{ borderTop: "1px solid #D4C9B8", borderBottom: "1px solid #D4C9B8", marginTop: 16 }}>
+        <div className="block lg:hidden" style={{ borderTop: "1px solid #E4E8E5", borderBottom: "1px solid #E4E8E5", marginTop: 16 }}>
           <div style={{ maxWidth: 1280, margin: "0 auto" }} className="px-page">
             <MobileTOC items={tocItems} />
           </div>
@@ -334,7 +334,7 @@ export default function HeartAndSoilReviewPage() {
           <div className="layout-sidebar">
 
             {/* Desktop TOC */}
-            <aside style={{ borderRight: "1px solid #D4C9B8" }} className="hidden lg:block">
+            <aside style={{ borderRight: "1px solid #E4E8E5" }} className="hidden lg:block">
               <TableOfContents items={tocItems} />
             </aside>
 
@@ -344,7 +344,7 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── QUICK VERDICT ──────────────────────────────────────────── */}
               <section id="verdict" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "24px 28px", backgroundColor: "#1A1714", borderRadius: 12, marginBottom: 24 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 12 }}>Quick Verdict · REV-2026-046</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 12 }}>Quick Verdict · REV-2026-046</p>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
                     Heart &amp; Soil is the best beef organ supplement for athletes and the most comprehensive nose-to-tail formula on the market. The Informed Sport certification is decisive for drug-tested competitors — no other organ supplement offers this.
                   </p>
@@ -356,8 +356,8 @@ export default function HeartAndSoilReviewPage() {
                 <div className="review-pillar-grid">
                   {rubric.pillars.map((p) => (
                     <div key={p.pillar} style={{ backgroundColor: "rgba(242,235,217,0.04)", border: "1px solid rgba(212,201,184,0.12)", borderRadius: 8, padding: "12px 14px" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 6 }}>{p.pillar}</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: p.score >= 8.5 ? "#2D6A4F" : p.score >= 7 ? "#A89880" : "#8B3A2C", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(212,201,184,0.4)", marginBottom: 6 }}>{p.pillar}</p>
+                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: p.score >= 8.5 ? "#2D6A4F" : p.score >= 7 ? "#586259" : "#8B3A2C", lineHeight: 1 }}>{p.score.toFixed(1)}</p>
                     </div>
                   ))}
                 </div>
@@ -379,9 +379,9 @@ export default function HeartAndSoilReviewPage() {
                   The Informed Sport certification distinguishes Heart &amp; Soil from every other organ supplement in this category. Every batch is independently tested for over 200 WADA-prohibited substances. For drug-tested athletes, this is the only verifiably safe option.
                 </p>
 
-                <div style={{ padding: "18px 22px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF", borderLeft: "3px solid #7B3B1A" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>Regenerative vs Organic vs Grass-Fed</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                <div style={{ padding: "18px 22px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F2F8F4", borderLeft: "3px solid #7B3B1A" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#7B3B1A", marginBottom: 8 }}>Regenerative vs Organic vs Grass-Fed</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                     Heart &amp; Soil&apos;s US regenerative sourcing goes beyond USDA Organic. Regenerative agriculture requires active soil health improvement through managed grazing, reduced tillage, and carbon sequestration. Farm partners are named on the brand&apos;s website — this level of supply chain transparency is rare in the organ supplement category.
                   </p>
                 </div>
@@ -391,7 +391,7 @@ export default function HeartAndSoilReviewPage() {
               <section id="score-breakdown" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FSP Score Breakdown</h2>
                 <ScoreBreakdown rubric={rubric} reviewCode="REV-2026-046" />
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 12 }}>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 12 }}>
                   FSP v2.1 composite: {composite.toFixed(2)}/10 → editorial score: {editorialScore}/10.
                   Weighting: Formula 35% · Transparency 25% · Verification 20% · Value 12% · Practical 8%.
                 </p>
@@ -407,18 +407,18 @@ export default function HeartAndSoilReviewPage() {
               <section id="supplement-facts" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>Supplement Facts</h2>
 
-                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   <div style={{ padding: "16px 20px", backgroundColor: "#1A1714", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#5C5650", marginBottom: 4 }}>Supplement Facts</p>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", color: "#A89880" }}>Serving size: 6 capsules · Servings per container: 30</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 4 }}>Supplement Facts</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", color: "#586259" }}>Serving size: 6 capsules · Servings per container: 30</p>
                     </div>
                   </div>
 
-                  <div style={{ padding: "0 20px", backgroundColor: "#F8F2E4" }}>
-                    <div style={{ padding: "12px 0", borderBottom: "1px solid #EDE8DF", display: "flex", justifyContent: "space-between" }}>
+                  <div style={{ padding: "0 20px", backgroundColor: "#F6F8F6" }}>
+                    <div style={{ padding: "12px 0", borderBottom: "1px solid #F2F8F4", display: "flex", justifyContent: "space-between" }}>
                       <span style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>Beef Organ Blend (Freeze-Dried)</span>
-                      <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-dm-mono), monospace" }}>3,000mg</span>
+                      <span style={{ fontSize: 13, fontWeight: 700, color: "#7B3B1A", fontFamily: "var(--font-jetbrains), monospace" }}>3,000mg</span>
                     </div>
                     {[
                       ["Organs included", "Liver, Heart, Kidney, Spleen, Pancreas"],
@@ -427,16 +427,16 @@ export default function HeartAndSoilReviewPage() {
                       ["Certification", "Informed Sport (every batch)"],
                       ["Processing", "Freeze-Dried"],
                     ].map(([label, value], i) => (
-                      <div key={label} style={{ padding: "8px 0", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", display: "flex", justifyContent: "space-between" }}>
-                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-hanken), sans-serif" }}>{label}</span>
-                        <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>{value}</span>
+                      <div key={label} style={{ padding: "8px 0", borderBottom: i < 4 ? "1px solid #F2F8F4" : "none", display: "flex", justifyContent: "space-between" }}>
+                        <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-hanken), sans-serif" }}>{label}</span>
+                        <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>{value}</span>
                       </div>
                     ))}
                   </div>
 
-                  <div style={{ padding: "12px 20px", backgroundColor: "#EDE8DF", borderTop: "1px solid #D4C9B8" }}>
-                    <p style={{ fontSize: 11, color: "#8A8480", lineHeight: 1.6 }}>
-                      <strong style={{ color: "#5C5650" }}>Proprietary blend note:</strong> Individual organ weights are not disclosed. A 3,000mg blend distributed across five organs means significantly less liver per serving than a single-organ liver product — which reduces retinol load, but prevents precise vitamin A calculation.
+                  <div style={{ padding: "12px 20px", backgroundColor: "#F2F8F4", borderTop: "1px solid #E4E8E5" }}>
+                    <p style={{ fontSize: 11, color: "#6B7770", lineHeight: 1.6 }}>
+                      <strong style={{ color: "#3F4B43" }}>Proprietary blend note:</strong> Individual organ weights are not disclosed. A 3,000mg blend distributed across five organs means significantly less liver per serving than a single-organ liver product — which reduces retinol load, but prevents precise vitamin A calculation.
                     </p>
                   </div>
                 </div>
@@ -445,9 +445,9 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── KEY NUTRIENTS ──────────────────────────────────────────── */}
               <section id="nutrients" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Key Nutrients per Serving</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Approximate values per 6-capsule serving based on known nutrient density of these organs. Lower retinol estimates reflect dilution across 5 organs vs a single-organ liver product.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>Approximate values per 6-capsule serving based on known nutrient density of these organs. Lower retinol estimates reflect dilution across 5 organs vs a single-organ liver product.</p>
 
-                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {[
                     { nutrient: "Retinol (Vit A)", amount: "~500–2,000 IU", dv: "~5–20% DV", evidence: "strong" as EvidenceLevel, note: "Liver is the primary source. Diluted across 5 organs — significantly less than a single-organ liver product. This is a safety advantage for those monitoring retinol intake." },
                     { nutrient: "Vitamin B12", amount: "~8–15 µg", dv: "~300–600% DV", evidence: "strong" as EvidenceLevel, note: "Liver and kidney are the two richest B12 sources. Both are in this blend — B12 delivery is excellent." },
@@ -456,28 +456,28 @@ export default function HeartAndSoilReviewPage() {
                     { nutrient: "Selenium", amount: "~15–30 µg", dv: "~25–55% DV", evidence: "strong" as EvidenceLevel, note: "Beef kidney is the primary selenium source. Relevant for thyroid function and antioxidant defense." },
                     { nutrient: "Zinc", amount: "~1–2 mg", dv: "~9–18% DV", evidence: "moderate" as EvidenceLevel, note: "Spleen is a meaningful zinc source. Zinc is a cofactor for immune function and testosterone synthesis." },
                   ].map((row, i) => (
-                    <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "160px 1fr", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none" }}>
-                      <div style={{ padding: "14px 16px", borderRight: "1px solid #EDE8DF" }}>
+                    <div key={row.nutrient} style={{ display: "grid", gridTemplateColumns: "160px 1fr", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: i < 5 ? "1px solid #F2F8F4" : "none" }}>
+                      <div style={{ padding: "14px 16px", borderRight: "1px solid #F2F8F4" }}>
                         <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 4 }}>{row.nutrient}</p>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>{row.amount}</p>
-                        <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#8A8480", marginTop: 2 }}>{row.dv}</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#7B3B1A", fontWeight: 600 }}>{row.amount}</p>
+                        <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#6B7770", marginTop: 2 }}>{row.dv}</p>
                         <div style={{ marginTop: 6 }}>
                           <EvidenceBadge level={row.evidence} showIcon={false} />
                         </div>
                       </div>
                       <div style={{ padding: "14px 16px" }}>
-                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.65 }}>{row.note}</p>
+                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65 }}>{row.note}</p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 11, color: "#8A8480", marginTop: 8 }}>Values are estimates from published organ nutrient density data. Actual values vary by batch, season, and animal. Exact organ-to-organ ratios are not disclosed (proprietary blend).</p>
+                <p style={{ fontSize: 11, color: "#6B7770", marginTop: 8 }}>Values are estimates from published organ nutrient density data. Actual values vary by batch, season, and animal. Exact organ-to-organ ratios are not disclosed (proprietary blend).</p>
               </section>
 
               {/* ─── LAB & VERIFICATION ─────────────────────────────────────── */}
               <section id="lab-data" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Lab Data &amp; Verification</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Heart &amp; Soil holds the highest verification standard available for organ supplements — Informed Sport certification. Every batch is independently tested before release.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>Heart &amp; Soil holds the highest verification standard available for organ supplements — Informed Sport certification. Every batch is independently tested before release.</p>
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 12, marginBottom: 20 }}>
                   {[
@@ -490,17 +490,17 @@ export default function HeartAndSoilReviewPage() {
                   ].map((cert) => (
                     <div key={cert.test} style={{ padding: "16px", border: `1px solid ${cert.color}33`, borderRadius: 10, backgroundColor: cert.bg }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                        <span style={{ width: 20, height: 20, borderRadius: "50%", backgroundColor: cert.bg, border: `1px solid ${cert.color}44`, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: cert.color, fontFamily: "var(--font-dm-mono), monospace" }}>{cert.icon}</span>
+                        <span style={{ width: 20, height: 20, borderRadius: "50%", backgroundColor: cert.bg, border: `1px solid ${cert.color}44`, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: cert.color, fontFamily: "var(--font-jetbrains), monospace" }}>{cert.icon}</span>
                         <span style={{ fontSize: 12, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{cert.test}</span>
                       </div>
-                      <p style={{ fontSize: 11, color: cert.color, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em", marginBottom: 4, fontWeight: 700 }}>{cert.status}</p>
-                      <p style={{ fontSize: 11, color: "#5C5650" }}>{cert.result}</p>
+                      <p style={{ fontSize: 11, color: cert.color, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em", marginBottom: 4, fontWeight: 700 }}>{cert.status}</p>
+                      <p style={{ fontSize: 11, color: "#3F4B43" }}>{cert.result}</p>
                     </div>
                   ))}
                 </div>
 
-                <div style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: "#EDE8DF" }}>
-                  <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                <div style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: "#F2F8F4" }}>
+                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                     <strong>Verify certification:</strong> Go to <em>informed-sport.com/certified-products</em> and search for Heart &amp; Soil to confirm current batch certification status. Informed Sport publishes a searchable database of all certified products.
                   </p>
                 </div>
@@ -524,9 +524,9 @@ export default function HeartAndSoilReviewPage() {
                     { q: "Do not exceed", a: "6 caps without medical guidance. At 6 caps, retinol intake from the liver fraction is likely well below the 10,000 IU/day UL. At 12 caps (sometimes suggested in ancestral health circles), this needs monitoring." },
                     { q: "Consistent daily use", a: "More important than timing. Organ nutrition builds gradually — consistent daily use maintains circulating nutrient levels better than sporadic high-dose days." },
                   ].map((item, i) => (
-                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                       <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 6 }}>{item.q}</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.a}</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.a}</p>
                     </div>
                   ))}
                 </div>
@@ -535,13 +535,13 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── COMPARISON ─────────────────────────────────────────────── */}
               <section id="comparison" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>vs. Competitors</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>Heart &amp; Soil is the premium tier in this roundup. Key differentiators are Informed Sport certification, US regenerative sourcing, and the 5-organ formula.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>Heart &amp; Soil is the premium tier in this roundup. Key differentiators are Informed Sport certification, US regenerative sourcing, and the 5-organ formula.</p>
                 <div className="review-table-wrap">
                   <table style={{ borderCollapse: "collapse", minWidth: 580 }}>
                     <thead>
                       <tr style={{ backgroundColor: "#1A1714" }}>
                         {["", "Heart & Soil", "Ancestral Supps", "Left Coast Perf.", "Perfect Supps"].map((h, i) => (
-                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 1 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 4 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
+                          <th key={h} style={{ padding: "12px 14px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: i === 1 ? "#C8A870" : "rgba(242,235,217,0.4)", textAlign: "left", borderRight: i < 4 ? "1px solid rgba(255,255,255,0.05)" : "none", whiteSpace: "nowrap" }}>{h}</th>
                         ))}
                       </tr>
                     </thead>
@@ -555,23 +555,23 @@ export default function HeartAndSoilReviewPage() {
                         { metric: "Dose disclosure", vals: ["Proprietary blend", "Single ingredient", "Proprietary blend", "Single ingredient"] },
                         { metric: "Athletes safe", vals: ["Yes (verified)", "No cert", "No cert", "No cert"] },
                       ].map((row, i) => (
-                        <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                          <td style={{ padding: "9px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480", borderRight: "1px solid #EDE8DF", whiteSpace: "nowrap" }}>{row.metric}</td>
+                        <tr key={row.metric} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
+                          <td style={{ padding: "9px 14px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770", borderRight: "1px solid #F2F8F4", whiteSpace: "nowrap" }}>{row.metric}</td>
                           {row.vals.map((v, j) => (
-                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#7B3B1A" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: j < 3 ? "1px solid #EDE8DF" : "none", fontWeight: j === 0 ? 700 : 400, whiteSpace: "nowrap" }}>{v}</td>
+                            <td key={j} style={{ padding: "9px 14px", fontSize: 12, color: j === 0 ? "#7B3B1A" : "#2D2926", fontFamily: "var(--font-hanken), sans-serif", borderRight: j < 3 ? "1px solid #F2F8F4" : "none", fontWeight: j === 0 ? 700 : 400, whiteSpace: "nowrap" }}>{v}</td>
                           ))}
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Prices verified May 2026. Heart &amp; Soil sold direct at heartandsoil.co — check site for current pricing and bundles.</p>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10 }}>Prices verified May 2026. Heart &amp; Soil sold direct at heartandsoil.co — check site for current pricing and bundles.</p>
               </section>
 
               {/* ─── PRODUCTS AT A GLANCE ───────────────────────────────────── */}
               <section id="products" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Products at a Glance</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 24 }}>Top organ supplements compared — prices verified May 2026.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 24 }}>Top organ supplements compared — prices verified May 2026.</p>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 20 }}>
                   <ProductCard
                     name="Beef Organs"
@@ -632,7 +632,7 @@ export default function HeartAndSoilReviewPage() {
                     reviewSlug="perfect-supplements-beef-liver"
                     bgFrom="#1E1B18"
                     bgTo="#141210"
-                    accent="#5C5650"
+                    accent="#3F4B43"
                   />
                 </div>
               </section>
@@ -659,14 +659,14 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── SAFETY & VITAMIN A ─────────────────────────────────────── */}
               <section id="safety" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 8, letterSpacing: "-0.02em" }}>Safety &amp; Vitamin A</h2>
-                <p style={{ fontSize: 14, color: "#8A8480", marginBottom: 20 }}>The proprietary blend makes retinol calculation impossible — a notable concern given Vitamin A&apos;s toxicity potential.</p>
+                <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20 }}>The proprietary blend makes retinol calculation impossible — a notable concern given Vitamin A&apos;s toxicity potential.</p>
 
-                <div style={{ padding: "20px 24px", border: "1px solid #C4622D44", borderRadius: 12, backgroundColor: "#FDF5EF", marginBottom: 20 }}>
+                <div style={{ padding: "20px 24px", border: "1px solid #0F7A5A44", borderRadius: 12, backgroundColor: "#FDF5EF", marginBottom: 20 }}>
                   <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-                    <AlertTriangle size={18} color="#C4622D" style={{ flexShrink: 0, marginTop: 2 }} />
+                    <AlertTriangle size={18} color="#0F7A5A" style={{ flexShrink: 0, marginTop: 2 }} />
                     <div>
-                      <p style={{ fontSize: 13, fontWeight: 700, color: "#C4622D", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 8 }}>Pregnant women: consult your OB/GYN before use</p>
-                      <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>
+                      <p style={{ fontSize: 13, fontWeight: 700, color: "#0F7A5A", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 8 }}>Pregnant women: consult your OB/GYN before use</p>
+                      <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>
                         The proprietary blend in Heart &amp; Soil makes it impossible to calculate exact retinol intake — a critical consideration given retinol&apos;s teratogenic potential above 10,000 IU/day. For pregnant women, a product with disclosed ingredient doses is safer.
                       </p>
                     </div>
@@ -691,11 +691,11 @@ export default function HeartAndSoilReviewPage() {
                       body: "The Informed Sport certification verifies every batch for WADA-prohibited substances. For drug-tested athletes, this is the decisive factor — no other organ supplement offers this assurance.",
                     },
                   ].map((item, i) => (
-                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #D4C9B8", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "flex", gap: 12, alignItems: "flex-start" }}>
+                    <div key={i} style={{ padding: "16px 20px", border: "1px solid #E4E8E5", borderRadius: 10, backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", display: "flex", gap: 12, alignItems: "flex-start" }}>
                       <div style={{ flexShrink: 0, marginTop: 2 }}>{item.icon}</div>
                       <div>
                         <p style={{ fontSize: 13, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif", marginBottom: 6 }}>{item.title}</p>
-                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.7 }}>{item.body}</p>
+                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7 }}>{item.body}</p>
                       </div>
                     </div>
                   ))}
@@ -713,14 +713,14 @@ export default function HeartAndSoilReviewPage() {
                     { size: "Subscribe & Save", usd: "~$47–50/mo", note: "~15% off, cancellable" },
                     { size: "Bundle options", usd: "Varies", note: "Check heartandsoil.co" },
                   ].map((p) => (
-                    <div key={p.size} style={{ padding: "14px 16px", border: "1px solid #D4C9B8", borderRadius: 8, backgroundColor: "#F8F2E4" }}>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{p.size}</p>
+                    <div key={p.size} style={{ padding: "14px 16px", border: "1px solid #E4E8E5", borderRadius: 8, backgroundColor: "#F6F8F6" }}>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{p.size}</p>
                       <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{p.usd}</p>
-                      <p style={{ fontSize: 11, color: "#8A8480" }}>{p.note}</p>
+                      <p style={{ fontSize: 11, color: "#6B7770" }}>{p.note}</p>
                     </div>
                   ))}
                 </div>
-                <p style={{ fontSize: 12, color: "#8A8480", marginTop: 10 }}>Prices verified May 2026 at heartandsoil.co. International shipping available.</p>
+                <p style={{ fontSize: 12, color: "#6B7770", marginTop: 10 }}>Prices verified May 2026 at heartandsoil.co. International shipping available.</p>
               </section>
 
               {/* ─── WHERE TO BUY ───────────────────────────────────────────── */}
@@ -744,17 +744,17 @@ export default function HeartAndSoilReviewPage() {
                       url: heartSoilUrl,
                     },
                   ].map((channel) => (
-                    <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#D4C9B8"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F8F2E4", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+                    <div key={channel.channel} style={{ padding: "16px 20px", border: `1px solid ${channel.recommended ? "#2D6A4F33" : "#E4E8E5"}`, borderRadius: 10, backgroundColor: channel.recommended ? "#F0F8F3" : "#F6F8F6", display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
                       <div style={{ flex: 1, minWidth: 200 }}>
                         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
                           <p style={{ fontSize: 14, fontWeight: 700, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{channel.channel}</p>
-                          {channel.recommended && <span style={{ padding: "1px 7px", backgroundColor: "#2D6A4F", borderRadius: 4, fontSize: 8, color: "#F2EBD9", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>Recommended</span>}
+                          {channel.recommended && <span style={{ padding: "1px 7px", backgroundColor: "#2D6A4F", borderRadius: 4, fontSize: 8, color: "#FFFFFF", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", textTransform: "uppercase", fontWeight: 700 }}>Recommended</span>}
                         </div>
-                        <p style={{ fontSize: 13, color: "#5C5650", lineHeight: 1.6 }}>{channel.notes}</p>
+                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6 }}>{channel.notes}</p>
                       </div>
                       <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", gap: 8, flexShrink: 0 }}>
                         <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714" }}>{channel.price}</p>
-                        <a href={channel.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "6px 12px", backgroundColor: "#1A1714", color: "#F2EBD9", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
+                        <a href={channel.url} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "6px 12px", backgroundColor: "#1A1714", color: "#FFFFFF", fontSize: 11, fontWeight: 600, borderRadius: 6, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", whiteSpace: "nowrap" }}>
                           Shop Now <ExternalLink size={10} />
                         </a>
                       </div>
@@ -766,9 +766,9 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── FAQ ────────────────────────────────────────────────────── */}
               <section id="faq" style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#1A1714", marginBottom: 20, letterSpacing: "-0.02em" }}>FAQ</h2>
-                <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+                <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {faqSchema.mainEntity.map((faq, i) => (
-                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                    <details key={i} className="faq-item" style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                       <summary>{faq.name}</summary>
                       <p className="faq-answer">{faq.acceptedAnswer.text}</p>
                     </details>
@@ -779,10 +779,10 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── FINAL VERDICT ──────────────────────────────────────────── */}
               <section id="final" style={{ marginBottom: 56 }}>
                 <div style={{ padding: "28px 32px", backgroundColor: "#1A1714", borderRadius: 12 }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#5C5650", marginBottom: 16 }}>Final Verdict · REV-2026-046</p>
-                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#F2EBD9", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#3F4B43", marginBottom: 16 }}>Final Verdict · REV-2026-046</p>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.6rem", fontWeight: 700, color: "#FFFFFF", lineHeight: 1.1, marginBottom: 20, letterSpacing: "-0.02em" }}>
                     The best organ supplement for athletes.{" "}
-                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#A89880" }}>Overpriced for everyone else.</em>
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#586259" }}>Overpriced for everyone else.</em>
                   </h2>
                   <p style={{ fontSize: 15, color: "#C8BEA8", lineHeight: 1.8, marginBottom: 16 }}>
                     Heart &amp; Soil earns a 9/10 for delivering the broadest organ nutrition, the highest verification standard (Informed Sport), and credible US regenerative sourcing. The proprietary blend and premium price are its only real weaknesses — and for athletes who need batch drug testing, neither matters.
@@ -793,13 +793,13 @@ export default function HeartAndSoilReviewPage() {
                   <div style={{ marginTop: 24, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
                     <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                       <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "3rem", fontWeight: 800, color: "#7B3B1A", lineHeight: 1 }}>{editorialScore}</span>
-                      <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 14, color: "#5C5650" }}>/10</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, color: "#3F4B43" }}>/10</span>
                     </div>
                     <div>
-                      <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#5C5650" }}>FSP Editorial Score</p>
-                      <p style={{ fontSize: 12, color: "#8A8480" }}>Best for athletes. Informed Sport certified. Premium price.</p>
+                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#3F4B43" }}>FSP Editorial Score</p>
+                      <p style={{ fontSize: 12, color: "#6B7770" }}>Best for athletes. Informed Sport certified. Premium price.</p>
                     </div>
-                    <a href={heartSoilUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#F2EBD9", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
+                    <a href={heartSoilUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ marginLeft: "auto", display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 20px", backgroundColor: "#7B3B1A", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 8, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none" }}>
                       Check Price <ExternalLink size={12} />
                     </a>
                   </div>
@@ -809,7 +809,7 @@ export default function HeartAndSoilReviewPage() {
               {/* ─── RESEARCH REFERENCES ────────────────────────────────────── */}
               <section style={{ marginBottom: 56 }}>
                 <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", marginBottom: 16, letterSpacing: "-0.02em" }}>Research References</h2>
-                <div style={{ padding: 20, backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 10 }}>
+                <div style={{ padding: 20, backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 10 }}>
                   <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
                     {[
                       "Spitze AR et al. (2003). Taurine and carnosine content of various mammalian tissues. JAVMA. — Referenced for organ nutrient density.",
@@ -818,7 +818,7 @@ export default function HeartAndSoilReviewPage() {
                       "Institute of Medicine. Dietary Reference Intakes for Vitamin A. National Academies Press, 2001. Tolerable Upper Intake Level for preformed retinol: 10,000 IU/day.",
                       "Informed Sport. Certification and batch testing methodology. informed-sport.com.",
                     ].map((ref, i) => (
-                      <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-dm-mono), monospace" }}>↗</a></li>
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-hanken), sans-serif" }}>{ref}{" "}<a href={"https://scholar.google.com/scholar?q=" + encodeURIComponent(ref.split("(")[0].trim().substring(0,80))} target="_blank" rel="noopener noreferrer" style={{ color: "#7B3B1A", textDecoration: "none", fontSize: 10, fontFamily: "var(--font-jetbrains), monospace" }}>↗</a></li>
                     ))}
                   </ol>
                 </div>
@@ -829,14 +829,14 @@ export default function HeartAndSoilReviewPage() {
         </div>
 
         {/* ── Related Reviews ────────────────────────────────────────────────── */}
-        <section style={{ borderTop: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }} className="pad-section-sm px-page">
+        <section style={{ borderTop: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }} className="pad-section-sm px-page">
           <div style={{ maxWidth: 1280, margin: "0 auto" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 28 }}>
               <div>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>Related Reviews</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>Related Reviews</p>
                 <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#1A1714", letterSpacing: "-0.02em" }}>You might also read</h3>
               </div>
-              <Link href="/reviews" style={{ fontSize: 12, color: "#C4622D", fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
+              <Link href="/reviews" style={{ fontSize: 12, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", textDecoration: "none" }}>All reviews →</Link>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
               {relatedReviews.map((r) => <ReviewCard key={r.slug} {...r} />)}

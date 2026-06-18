@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { AlertTriangle, CheckCircle, XCircle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -158,35 +158,35 @@ export default function TirzepatidePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div style={{ backgroundColor: "#F2EBD9" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
-        <div style={{ borderBottom: "1px solid #D4C9B8", backgroundColor: "#EDE8DF" }}>
+        <div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F2F8F4" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", padding: "12px 24px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <Link href="/" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <Link href="/ingredients" style={{ fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace", textDecoration: "none" }}>Ingredients</Link>
-            <span style={{ color: "#D4C9B8" }}>/</span>
-            <span style={{ fontSize: 12, color: "#5C5650", fontFamily: "var(--font-dm-mono), monospace" }}>Tirzepatide</span>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Home</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <Link href="/ingredients" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", textDecoration: "none" }}>Ingredients</Link>
+            <span style={{ color: "#E4E8E5" }}>/</span>
+            <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Tirzepatide</span>
           </div>
         </div>
 
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #D4C9B8" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 900, margin: "0 auto" }} className="px-page">
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#A89880", textTransform: "uppercase" }}>ING-013</span>
-              <span style={{ width: 24, height: 1, backgroundColor: "#D4C9B8", display: "inline-block" }} />
-              <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#C4622D", textTransform: "uppercase" }}>Medication Research Profile · Prescription Only</span>
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#586259", textTransform: "uppercase" }}>ING-013</span>
+              <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
+              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Medication Research Profile · Prescription Only</span>
             </div>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#8A8480", marginBottom: 8, textTransform: "uppercase" }}>Weight Management · GIP/GLP-1 Dual Agonist</p>
-            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#1A1714", lineHeight: 1.05, marginBottom: 16 }}>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: "0.12em", color: "#6B7770", marginBottom: 8, textTransform: "uppercase" }}>Weight Management · GIP/GLP-1 Dual Agonist</p>
+            <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.8rem, 5vw, 3.2rem)", fontWeight: 800, letterSpacing: "-0.025em", color: "#17211C", lineHeight: 1.05, marginBottom: 16 }}>
               Tirzepatide: Mechanism,<br />Benefits & Side Effects
             </h1>
             <div style={{ marginBottom: 20 }}>
               <EvidenceBadge level="strong" />
             </div>
-            <p style={{ fontSize: 16, color: "#5C5650", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
+            <p style={{ fontSize: 16, color: "#3F4B43", lineHeight: 1.75, maxWidth: 680, marginBottom: 0 }}>
               Tirzepatide is a dual GIP and GLP-1 receptor agonist approved by the FDA for chronic weight management (as Zepbound) and type 2 diabetes (as Mounjaro). It has produced the largest weight-loss effect sizes of any approved medication in randomised controlled trials — a mean of 20.9% body weight reduction at the highest dose over 72 weeks. Here is what the clinical evidence actually shows.
             </p>
           </div>
@@ -203,10 +203,10 @@ export default function TirzepatidePage() {
                 { label: "Primary Use", value: "Weight loss", sub: "Also T2D · cardiometabolic risk" },
                 { label: "Availability", value: "Rx only", sub: "Zepbound · Mounjaro · compounded" },
               ].map((stat) => (
-                <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F8F2E4" }}>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#A89880", marginBottom: 6 }}>{stat.label}</p>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#1A1714", marginBottom: 2 }}>{stat.value}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#8A8480" }}>{stat.sub}</p>
+                <div key={stat.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#586259", marginBottom: 6 }}>{stat.label}</p>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.15rem", fontWeight: 700, color: "#17211C", marginBottom: 2 }}>{stat.value}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{stat.sub}</p>
                 </div>
               ))}
             </div>
@@ -222,7 +222,7 @@ export default function TirzepatidePage() {
           </div>
 
           {/* 1. What Is Tirzepatide? */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>What Is Tirzepatide?</h2>
             <p>
               Tirzepatide is a synthetic peptide that simultaneously activates two hormone receptors involved in metabolic regulation: the <strong>glucose-dependent insulinotropic polypeptide (GIP) receptor</strong> and the <strong>glucagon-like peptide-1 (GLP-1) receptor</strong>. This dual agonism distinguishes it from earlier GLP-1-only medications like semaglutide and liraglutide, and is responsible for its comparatively larger effect on body weight.
@@ -233,17 +233,17 @@ export default function TirzepatidePage() {
             <p>
               Unlike most supplements reviewed on this site, tirzepatide is not an over-the-counter product. It is a prescription-only injectable medication requiring medical assessment, ongoing supervision, and — given its mechanism of action affecting glucose homeostasis and appetite regulation — careful patient selection.
             </p>
-            <div style={{ padding: "14px 20px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, marginTop: 20 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#A89880", marginBottom: 8 }}>Brand Names at a Glance</p>
+            <div style={{ padding: "14px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, marginTop: 20 }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#586259", marginBottom: 8 }}>Brand Names at a Glance</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 12 }}>
                 {[
                   { brand: "Zepbound", indication: "Chronic weight management (obesity)", approved: "Nov 2023", dose: "2.5–15mg/week" },
                   { brand: "Mounjaro", indication: "Type 2 diabetes (glycaemic control)", approved: "May 2022", dose: "2.5–15mg/week" },
                 ].map((b) => (
-                  <div key={b.brand} style={{ padding: "12px 16px", border: "1px solid #D4C9B8", borderRadius: 6, backgroundColor: "#F2EBD9" }}>
-                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 4 }}>{b.brand}</p>
-                    <p style={{ fontSize: 12, color: "#5C5650", marginBottom: 2 }}>{b.indication}</p>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880" }}>FDA approved: {b.approved} · {b.dose}</p>
+                  <div key={b.brand} style={{ padding: "12px 16px", border: "1px solid #E4E8E5", borderRadius: 6, backgroundColor: "#FFFFFF" }}>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 4 }}>{b.brand}</p>
+                    <p style={{ fontSize: 12, color: "#3F4B43", marginBottom: 2 }}>{b.indication}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259" }}>FDA approved: {b.approved} · {b.dose}</p>
                   </div>
                 ))}
               </div>
@@ -251,15 +251,15 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 2. Mechanism of Action */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>How Tirzepatide Works: The Dual Agonist Mechanism</h2>
             <p>
               Tirzepatide&apos;s weight loss and glycaemic effects stem from its simultaneous activation of GIP and GLP-1 receptors — two incretin hormone receptors that govern post-meal insulin secretion, appetite regulation, and energy balance. This dual mechanism is why tirzepatide consistently outperforms GLP-1-only agents like semaglutide in head-to-head comparisons.
             </p>
 
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
-              <div style={{ padding: "12px 20px", backgroundColor: "#1A1714" }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#A89880", margin: 0 }}>Mechanism Pathway — Step by Step</p>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 24, marginTop: 8 }}>
+              <div style={{ padding: "12px 20px", backgroundColor: "#17211C" }}>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#586259", margin: 0 }}>Mechanism Pathway — Step by Step</p>
               </div>
               {[
                 { step: "01", title: "GLP-1 receptor activation — satiety and insulin", body: "GLP-1 is secreted by intestinal L-cells after eating. Tirzepatide mimics GLP-1 with greater potency and far longer duration than native GLP-1 (half-life ~5 days vs seconds for endogenous GLP-1). GLP-1 receptor activation in the pancreas stimulates glucose-dependent insulin secretion and suppresses glucagon. In the brain (hypothalamus, brainstem), it activates satiety circuits reducing appetite and food intake. In the gut, it slows gastric emptying — prolonging feelings of fullness after meals." },
@@ -268,11 +268,11 @@ export default function TirzepatidePage() {
                 { step: "04", title: "Glucose-dependent insulin secretion (no hypoglycaemia risk alone)", body: "Both GIP and GLP-1 stimulate insulin only when blood glucose is elevated — not at normal fasting glucose levels. This glucose-dependent mechanism means tirzepatide does not cause hypoglycaemia as monotherapy in non-diabetic patients. Hypoglycaemia risk is relevant in type 2 diabetes patients when tirzepatide is combined with insulin or sulfonylureas, where combined glucose-lowering can overshoot." },
                 { step: "05", title: "Gastric emptying slowing and satiety reinforcement", body: "Tirzepatide significantly delays gastric emptying, particularly during the early months of treatment. This extends postprandial satiety and blunts post-meal glucose peaks. The GI side effects (nausea, vomiting, constipation) are a direct consequence of this mechanism — slowed gut motility causes delayed gastric drainage. The side effect burden typically lessens as gastric accommodation adapts over weeks of treatment." },
               ].map((s, i) => (
-                <div key={s.step} style={{ padding: "20px 24px", borderBottom: i < 4 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", display: "flex", gap: 20 }}>
-                  <div style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{s.step}</div>
+                <div key={s.step} style={{ padding: "20px 24px", borderBottom: i < 4 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", display: "flex", gap: 20 }}>
+                  <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{s.step}</div>
                   <div>
-                    <p style={{ fontWeight: 700, color: "#1A1714", marginBottom: 6, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{s.title}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{s.body}</p>
+                    <p style={{ fontWeight: 700, color: "#17211C", marginBottom: 6, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{s.title}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.65 }}>{s.body}</p>
                   </div>
                 </div>
               ))}
@@ -280,21 +280,21 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 3. Evidence-Based Benefits */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Evidence-Based Benefits</h2>
             <p style={{ marginBottom: 24 }}>
               Tirzepatide has one of the most robust clinical evidence bases of any approved weight-management medication. The SURMOUNT programme — seven phase 3 RCTs — collectively enrolled over 20,000 participants across diverse populations.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {benefits.map((b) => (
-                <div key={b.claim} style={{ border: "1px solid #D4C9B8", borderRadius: 10, overflow: "hidden" }}>
-                  <div style={{ padding: "12px 18px", backgroundColor: "#F8F2E4", borderBottom: "1px solid #D4C9B8", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, flexWrap: "wrap" }}>
-                    <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontSize: 14, fontFamily: "var(--font-hanken), sans-serif" }}>{b.claim}</p>
+                <div key={b.claim} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden" }}>
+                  <div style={{ padding: "12px 18px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, flexWrap: "wrap" }}>
+                    <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14, fontFamily: "var(--font-hanken), sans-serif" }}>{b.claim}</p>
                     <EvidenceBadge level={b.evidence} showIcon={false} />
                   </div>
-                  <div style={{ padding: "12px 18px", backgroundColor: "#F2EBD9" }}>
-                    <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#C4622D", marginBottom: 6, letterSpacing: "0.06em" }}>{b.citation}</p>
-                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{b.notes}</p>
+                  <div style={{ padding: "12px 18px", backgroundColor: "#FFFFFF" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", marginBottom: 6, letterSpacing: "0.06em" }}>{b.citation}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.65 }}>{b.notes}</p>
                   </div>
                 </div>
               ))}
@@ -302,15 +302,15 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 4. Dosage Guide */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Dosage Schedule</h2>
             <p>
               Tirzepatide is administered as a once-weekly subcutaneous injection. The FDA-approved titration schedule is designed to minimise GI side effects by allowing the body to adapt before escalating to higher doses.
             </p>
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 20 }}>
-              <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", display: "grid", gridTemplateColumns: "80px 120px 1fr 120px" }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 20 }}>
+              <div style={{ padding: "12px 20px", backgroundColor: "#17211C", display: "grid", gridTemplateColumns: "80px 120px 1fr 120px" }}>
                 {["Week", "Dose", "Clinical Notes", "Escalate If"].map((h) => (
-                  <span key={h} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)" }}>{h}</span>
+                  <span key={h} style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)" }}>{h}</span>
                 ))}
               </div>
               {[
@@ -321,29 +321,29 @@ export default function TirzepatidePage() {
                 { weeks: "17–20", dose: "12.5mg/week", notes: "Higher maintenance option. Not always necessary — some patients achieve goals at 10mg.", escalate: "If tolerated" },
                 { weeks: "21+", dose: "15mg/week", notes: "Maximum FDA-approved dose. Associated with greatest weight loss in SURMOUNT-1. Not all patients need or tolerate this dose.", escalate: "Maximum dose" },
               ].map((row, i) => (
-                <div key={row.weeks} style={{ display: "grid", gridTemplateColumns: "80px 120px 1fr 120px", padding: "12px 20px", borderBottom: i < 5 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#5C5650" }}>{row.weeks}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{row.dose}</span>
-                  <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.55 }}>{row.notes}</p>
-                  <span style={{ fontSize: 11, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{row.escalate}</span>
+                <div key={row.weeks} style={{ display: "grid", gridTemplateColumns: "80px 120px 1fr 120px", padding: "12px 20px", borderBottom: i < 5 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", gap: 12, alignItems: "flex-start" }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#3F4B43" }}>{row.weeks}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", fontWeight: 700 }}>{row.dose}</span>
+                  <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.55 }}>{row.notes}</p>
+                  <span style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>{row.escalate}</span>
                 </div>
               ))}
             </div>
-            <div style={{ padding: "12px 16px", backgroundColor: "#EDE8DF", border: "1px solid #D4C9B8", borderRadius: 6 }}>
-              <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.6 }}>
+            <div style={{ padding: "12px 16px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderRadius: 6 }}>
+              <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.6 }}>
                 <strong>Slow titration note:</strong> Some patients benefit from longer periods at each dose before escalating — particularly those with significant GI sensitivity. Telehealth providers like WellMedr offer structured microdosing protocols that start below the standard 2.5mg initiation dose for patients with prior GI intolerance.{" "}
-                <Link href="/reviews/wellmedr" style={{ color: "#C4622D" }}>See WellMedr review →</Link>
+                <Link href="/reviews/wellmedr" style={{ color: "#0F7A5A" }}>See WellMedr review →</Link>
               </p>
             </div>
           </section>
 
           {/* 5. Supplement Forms Compared */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Brand-Name vs Compounded Tirzepatide</h2>
             <p>
               Tirzepatide is available in two primary forms for US patients: FDA-approved brand-name products, and compounded versions prepared by licensed compounding pharmacies. The regulatory landscape for compounded tirzepatide has changed significantly in 2025–2026.
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 16 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 16 }}>
               {[
                 {
                   name: "Zepbound (Eli Lilly)",
@@ -373,35 +373,35 @@ export default function TirzepatidePage() {
                   recommended: false,
                 },
               ].map((form, i) => (
-                <div key={form.name} style={{ padding: "18px 22px", borderBottom: i < 2 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
+                <div key={form.name} style={{ padding: "18px 22px", borderBottom: i < 2 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                       {form.recommended
                         ? <CheckCircle size={14} style={{ color: "#2D6A4F", flexShrink: 0 }} />
                         : <AlertTriangle size={14} style={{ color: "#854F0B", flexShrink: 0 }} />}
-                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714" }}>{form.name}</span>
+                      <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C" }}>{form.name}</span>
                     </div>
-                    <span style={{ padding: "2px 9px", backgroundColor: form.tagBg, borderRadius: 4, fontSize: 10, color: form.tagColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.06em" }}>{form.tag}</span>
+                    <span style={{ padding: "2px 9px", backgroundColor: form.tagBg, borderRadius: 4, fontSize: 10, color: form.tagColor, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em" }}>{form.tag}</span>
                   </div>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 11, color: "#C4622D", marginBottom: 6 }}>{form.cost}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.65 }}>{form.verdict}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", marginBottom: 6 }}>{form.cost}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.65 }}>{form.verdict}</p>
                 </div>
               ))}
             </div>
           </section>
 
           {/* 6. Safety Profile */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Safety Profile & Side Effects</h2>
             <p>
               Tirzepatide has a well-characterised safety and tolerability profile from over 20,000 participants across the SURMOUNT programme. The most common issues are GI-related, most pronounced during dose escalation, and typically diminish with time.
             </p>
 
             {/* GI side effects table */}
-            <div style={{ border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden", marginBottom: 24 }}>
-              <div style={{ padding: "12px 20px", backgroundColor: "#1A1714", display: "grid", gridTemplateColumns: "1fr 100px 100px 1fr" }}>
+            <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 24 }}>
+              <div style={{ padding: "12px 20px", backgroundColor: "#17211C", display: "grid", gridTemplateColumns: "1fr 100px 100px 1fr" }}>
                 {["Side Effect", "Tirzepatide", "Placebo", "Clinical Context"].map((h) => (
-                  <span key={h} style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)" }}>{h}</span>
+                  <span key={h} style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)" }}>{h}</span>
                 ))}
               </div>
               {[
@@ -413,20 +413,20 @@ export default function TirzepatidePage() {
                 { effect: "Injection site reactions", tir: "3–7%", pla: "1–2%", context: "Redness, bruising, or tenderness at injection site. Rotate injection sites weekly to minimise." },
                 { effect: "Pancreatitis", tir: "<1% (rare)", pla: "<1%", context: "Rare but documented. Contraindicated in patients with history of pancreatitis. Seek immediate care for persistent severe abdominal pain." },
               ].map((row, i) => (
-                <div key={row.effect} style={{ display: "grid", gridTemplateColumns: "1fr 100px 100px 1fr", padding: "11px 20px", borderBottom: i < 6 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", gap: 12, alignItems: "flex-start" }}>
-                  <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.effect}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{row.tir}</span>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#8A8480" }}>{row.pla}</span>
-                  <p style={{ fontSize: 12, color: "#5C5650", margin: 0, lineHeight: 1.55 }}>{row.context}</p>
+                <div key={row.effect} style={{ display: "grid", gridTemplateColumns: "1fr 100px 100px 1fr", padding: "11px 20px", borderBottom: i < 6 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", gap: 12, alignItems: "flex-start" }}>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: "#17211C", fontFamily: "var(--font-hanken), sans-serif" }}>{row.effect}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", fontWeight: 700 }}>{row.tir}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#6B7770" }}>{row.pla}</span>
+                  <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.55 }}>{row.context}</p>
                 </div>
               ))}
             </div>
-            <p style={{ fontSize: 12, color: "#8A8480", marginBottom: 24 }}>
+            <p style={{ fontSize: 12, color: "#6B7770", marginBottom: 24 }}>
               Incidence rates from SURMOUNT-1 (Jastreboff et al., NEJM 2022) at combined active doses. Rates are highest at maximum titrated doses and during escalation phases.
             </p>
 
             {/* Myth/reality cards */}
-            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#1A1714", marginBottom: 16 }}>Common Misconceptions</h3>
+            <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", marginBottom: 16 }}>Common Misconceptions</h3>
             {[
               {
                 myth: "Tirzepatide causes thyroid cancer in humans",
@@ -444,22 +444,22 @@ export default function TirzepatidePage() {
                 citation: "Aronne et al. (2024) — NEJM (SURMOUNT-4)",
               },
             ].map((item, i) => (
-              <div key={i} style={{ border: "1px solid #D4C9B8", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
-                <div style={{ padding: "10px 16px", backgroundColor: "rgba(196,98,45,0.06)", borderBottom: "1px solid #D4C9B8" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#C4622D", letterSpacing: "0.12em", textTransform: "uppercase" }}>Myth</span>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#1A1714", margin: "4px 0 0", fontFamily: "var(--font-hanken), sans-serif" }}>{item.myth}</p>
+              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 8, overflow: "hidden", marginBottom: 12 }}>
+                <div style={{ padding: "10px 16px", backgroundColor: "rgba(196,98,45,0.06)", borderBottom: "1px solid #E4E8E5" }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#0F7A5A", letterSpacing: "0.12em", textTransform: "uppercase" }}>Myth</span>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#17211C", margin: "4px 0 0", fontFamily: "var(--font-hanken), sans-serif" }}>{item.myth}</p>
                 </div>
                 <div style={{ padding: "12px 16px" }}>
-                  <span style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, color: "#4A7C59", letterSpacing: "0.12em", textTransform: "uppercase" }}>Reality</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "#4A7C59", letterSpacing: "0.12em", textTransform: "uppercase" }}>Reality</span>
                   <p style={{ fontSize: 13, color: "#2D2926", margin: "4px 0 8px", lineHeight: 1.65 }}>{item.reality}</p>
-                  <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 10, color: "#A89880", margin: 0 }}>{item.citation}</p>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#586259", margin: 0 }}>{item.citation}</p>
                 </div>
               </div>
             ))}
 
             {/* Absolute contraindications */}
             <div style={{ padding: "16px 20px", backgroundColor: "#FAEAEA", border: "1px solid #D9A0A0", borderRadius: 10, marginTop: 20 }}>
-              <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#8B3A2C", marginBottom: 12 }}>Absolute Contraindications — Do Not Use If</p>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.16em", textTransform: "uppercase", color: "#8B3A2C", marginBottom: 12 }}>Absolute Contraindications — Do Not Use If</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 8 }}>
                 {[
                   "Personal or family history of medullary thyroid carcinoma",
@@ -470,7 +470,7 @@ export default function TirzepatidePage() {
                   "Known hypersensitivity to tirzepatide or excipients",
                 ].map((c) => (
                   <div key={c} style={{ display: "flex", alignItems: "flex-start", gap: 6 }}>
-                    <XCircle size={11} style={{ color: "#C4622D", flexShrink: 0, marginTop: 1 }} />
+                    <XCircle size={11} style={{ color: "#0F7A5A", flexShrink: 0, marginTop: 1 }} />
                     <span style={{ fontSize: 12, color: "#5C2020", fontFamily: "var(--font-hanken), sans-serif" }}>{c}</span>
                   </div>
                 ))}
@@ -479,7 +479,7 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 7. Who Should Use It */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Who Should (and Shouldn&apos;t) Use Tirzepatide</h2>
 
             {[
@@ -511,14 +511,14 @@ export default function TirzepatidePage() {
               },
             ].map((col) => (
               <div key={col.label} style={{ marginBottom: 16 }}>
-                <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: col.tagColor, marginBottom: 10 }}>{col.label}</p>
+                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: col.tagColor, marginBottom: 10 }}>{col.label}</p>
                 {col.items.map((item) => (
-                  <div key={item.group} style={{ border: "1px solid #D4C9B8", borderLeft: `3px solid ${col.borderColor}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8, backgroundColor: "#F8F2E4" }}>
+                  <div key={item.group} style={{ border: "1px solid #E4E8E5", borderLeft: `3px solid ${col.borderColor}`, borderRadius: 8, padding: "14px 18px", marginBottom: 8, backgroundColor: "#F6F8F6" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 4, gap: 12 }}>
-                      <p style={{ fontWeight: 700, color: "#1A1714", margin: 0, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{item.group}</p>
-                      <span style={{ padding: "2px 8px", backgroundColor: col.tagBg, border: `1px solid ${col.borderColor}30`, borderRadius: 4, fontSize: 9, color: col.tagColor, fontFamily: "var(--font-dm-mono), monospace", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{col.tagText}</span>
+                      <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontFamily: "var(--font-hanken), sans-serif", fontSize: 14 }}>{item.group}</p>
+                      <span style={{ padding: "2px 8px", backgroundColor: col.tagBg, border: `1px solid ${col.borderColor}30`, borderRadius: 4, fontSize: 9, color: col.tagColor, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{col.tagText}</span>
                     </div>
-                    <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.6 }}>{item.detail}</p>
+                    <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.6 }}>{item.detail}</p>
                   </div>
                 ))}
               </div>
@@ -526,17 +526,17 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 8. Pricing & Access */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Pricing & Telehealth Access (US Only)</h2>
             <p>
               Tirzepatide is a US-only prescription medication for weight management. Pricing varies significantly between brand-name and compounded routes. The majority of US commercial insurance plans do not cover GLP-1 medications for weight loss — only for type 2 diabetes.
             </p>
-            <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #D4C9B8", marginBottom: 20 }}>
+            <div style={{ overflowX: "auto", borderRadius: 12, border: "1px solid #E4E8E5", marginBottom: 20 }}>
               <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 520 }}>
                 <thead>
-                  <tr style={{ backgroundColor: "#1A1714" }}>
+                  <tr style={{ backgroundColor: "#17211C" }}>
                     {["Route", "Monthly Cost (USD)", "Notes", "Insurance"].map((h) => (
-                      <th key={h} style={{ padding: "10px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)", textAlign: "left" }}>{h}</th>
+                      <th key={h} style={{ padding: "10px 14px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(242,235,217,0.5)", textAlign: "left" }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -546,23 +546,23 @@ export default function TirzepatidePage() {
                     { route: "Mounjaro (brand, T2D)", cost: "$800–1,000/mo", notes: "Lilly savings available for T2D; lower co-pay with insurance", ins: "Often covered for T2D" },
                     { route: "Compounded (via telehealth)", cost: "$150–350/mo + service fee", notes: "WellMedr service from $88/mo + pharmacy cost. Availability varies by state", ins: "Not covered" },
                   ].map((row, i) => (
-                    <tr key={row.route} style={{ backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9", borderBottom: "1px solid #EDE8DF" }}>
-                      <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 600, color: "#1A1714", fontFamily: "var(--font-hanken), sans-serif" }}>{row.route}</td>
-                      <td style={{ padding: "11px 14px", fontFamily: "var(--font-dm-mono), monospace", fontSize: 12, color: "#C4622D", fontWeight: 700 }}>{row.cost}</td>
-                      <td style={{ padding: "11px 14px", fontSize: 12, color: "#5C5650" }}>{row.notes}</td>
-                      <td style={{ padding: "11px 14px", fontSize: 12, color: "#8A8480", fontFamily: "var(--font-dm-mono), monospace" }}>{row.ins}</td>
+                    <tr key={row.route} style={{ backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF", borderBottom: "1px solid #F2F8F4" }}>
+                      <td style={{ padding: "11px 14px", fontSize: 13, fontWeight: 600, color: "#17211C", fontFamily: "var(--font-hanken), sans-serif" }}>{row.route}</td>
+                      <td style={{ padding: "11px 14px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", fontWeight: 700 }}>{row.cost}</td>
+                      <td style={{ padding: "11px 14px", fontSize: 12, color: "#3F4B43" }}>{row.notes}</td>
+                      <td style={{ padding: "11px 14px", fontSize: 12, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>{row.ins}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p style={{ fontSize: 12, color: "#8A8480", marginBottom: 0 }}>
+            <p style={{ fontSize: 12, color: "#6B7770", marginBottom: 0 }}>
               Prices as of May 2026. Subject to change. Verify current costs directly with providers and pharmacies. The Lilly insulin value programme and LillyDirect portal offer additional savings options for eligible patients.
             </p>
           </section>
 
           {/* 9. References */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>References</h2>
             <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
               {[
@@ -577,7 +577,7 @@ export default function TirzepatidePage() {
                 "Drucker DJ. (2022). GLP-1 physiology informs the pharmacotherapy of obesity. *Molecular Metabolism*, 57, 101351. doi:10.1016/j.molmet.2021.101351",
                 "Coskun T, Urva S, Roell WC, et al. (2022). LY3298176, a novel dual GIP and GLP-1 receptor agonist for the treatment of type 2 diabetes mellitus. *Molecular Metabolism*, 18, 3–14. doi:10.1016/j.molmet.2018.09.009",
               ].map((ref, i) => (
-                <li key={i} style={{ fontSize: 12, color: "#5C5650", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>
+                <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.65, fontFamily: "var(--font-hanken), sans-serif" }}>
                   {ref.split("*").map((part, j) =>
                     j % 2 === 1
                       ? <em key={j}>{part}</em>
@@ -589,9 +589,9 @@ export default function TirzepatidePage() {
           </section>
 
           {/* 10. FAQ */}
-          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #D4C9B8" }} className="ingredient-article">
+          <section style={{ marginBottom: 56, paddingBottom: 56, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
             <h2>Frequently Asked Questions</h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #D4C9B8", borderRadius: 12, overflow: "hidden" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 0, border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
               {[
                 { q: "How much weight can you lose on tirzepatide?", a: "In SURMOUNT-1, adults with obesity lost a mean of 20.9% of body weight at the highest dose (15mg/week) over 72 weeks. At 5mg/week the mean was 15.0%. These are clinical trial results in a selected population — individual outcomes vary significantly based on diet, activity, starting weight, and adherence. These figures are not guaranteed outcomes for all users." },
                 { q: "Is tirzepatide better than semaglutide for weight loss?", a: "Head-to-head data from SURMOUNT-5 (2024) showed tirzepatide 10–15mg/week produced 47% more weight loss than semaglutide 2.4mg/week (20.2% vs 13.7%) over 72 weeks. Both are highly effective — tirzepatide's dual GIP/GLP-1 mechanism appears to provide an additive benefit, but semaglutide remains a highly proven option, particularly where tirzepatide is not covered or accessible." },
@@ -601,9 +601,9 @@ export default function TirzepatidePage() {
                 { q: "Does weight come back after stopping tirzepatide?", a: "Yes. SURMOUNT-4 showed patients regained approximately two-thirds of lost weight within 12 months after discontinuation. Obesity is a chronic condition — long-term or indefinite treatment is likely necessary for most patients to maintain results." },
                 { q: "Can I get tirzepatide online without an in-person doctor visit?", a: "Yes — US-based telehealth platforms (such as WellMedr) can prescribe tirzepatide following a virtual consultation with a licensed provider. A valid prescription is still required. Compounded tirzepatide availability varies by state and is subject to FDA compounding regulations — confirm current status with the provider before enrolling." },
               ].map((item, i, arr) => (
-                <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #EDE8DF" : "none", backgroundColor: i % 2 === 0 ? "#F8F2E4" : "#F2EBD9" }}>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#1A1714", marginBottom: 6 }}>{item.q}</p>
-                  <p style={{ fontSize: 13, color: "#5C5650", margin: 0, lineHeight: 1.7 }}>{item.a}</p>
+                <div key={i} style={{ padding: "18px 22px", borderBottom: i < arr.length - 1 ? "1px solid #F2F8F4" : "none", backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF" }}>
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{item.q}</p>
+                  <p style={{ fontSize: 13, color: "#3F4B43", margin: 0, lineHeight: 1.7 }}>{item.a}</p>
                 </div>
               ))}
             </div>
@@ -611,7 +611,7 @@ export default function TirzepatidePage() {
 
           {/* 11. Related Reviews */}
           <section style={{ marginBottom: 40 }}>
-            <p style={{ fontFamily: "var(--font-dm-mono), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#8A8480", marginBottom: 14 }}>Related Articles</p>
+            <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 14 }}>Related Articles</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
                 { href: "/reviews/wellmedr", label: "WellMedr Review (2026) — GLP-1 Telehealth Rated 8/10" },
@@ -620,9 +620,9 @@ export default function TirzepatidePage() {
                 { href: "/compare/wellmedr-vs-ro-body", label: "WellMedr vs Ro Body — Head-to-Head Comparison" },
                 { href: "/goals/weight-loss", label: "Weight Loss Supplement Guide — Fitlabreviews" },
               ].map((link) => (
-                <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F8F2E4", border: "1px solid #D4C9B8", borderRadius: 8, textDecoration: "none", color: "#C4622D", fontSize: 13, fontFamily: "var(--font-hanken), sans-serif" }}>
+                <Link key={link.href} href={link.href} style={{ display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 8, textDecoration: "none", color: "#0F7A5A", fontSize: 13, fontFamily: "var(--font-hanken), sans-serif" }}>
                   <span style={{ flex: 1 }}>{link.label}</span>
-                  <span style={{ fontSize: 11, color: "#A89880" }}>→</span>
+                  <span style={{ fontSize: 11, color: "#586259" }}>→</span>
                 </Link>
               ))}
             </div>

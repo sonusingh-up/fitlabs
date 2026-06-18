@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useRef } from "react";
 
 interface Props {
@@ -23,7 +23,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
     ctx.fillRect(0, 0, W, H);
 
     // Top accent stripe
-    ctx.fillStyle = "#C4622D";
+    ctx.fillStyle = "#0F7A5A";
     ctx.fillRect(0, 0, W, 4);
 
     // Header
@@ -57,7 +57,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
       ctx.fillText(r.label, 32, y);
 
       ctx.font = "bold 18px system-ui";
-      ctx.fillStyle = "#C4622D";
+      ctx.fillStyle = "#0F7A5A";
       ctx.textAlign = "right";
       ctx.fillText(r.val, W - 32, y);
       ctx.textAlign = "left";
@@ -91,7 +91,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
         background:"#1C1C1C", borderRadius:16, padding:"24px 28px",
         border:"1px solid #2D2D2D", marginBottom:12,
       }}>
-        <div style={{ height:3, background:"#C4622D", borderRadius:2, marginBottom:16 }} />
+        <div style={{ height:3, background:"#0F7A5A", borderRadius:2, marginBottom:16 }} />
         <p style={{ fontSize:10, color:"#586259", letterSpacing:"0.12em", fontWeight:700, marginBottom:16 }}>
           FITLAB · EVIDENCE-LED SUPPLEMENT RESEARCH
         </p>
@@ -103,7 +103,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
         ].map((r, i) => (
           <div key={i} style={{ display:"flex", justifyContent:"space-between", padding:"9px 0", borderBottom:"1px solid #2A2A2A" }}>
             <span style={{ fontSize:13, color:"#6b7770" }}>{r.label}</span>
-            <span style={{ fontSize:14, fontWeight:700, color:"#C4622D", fontVariantNumeric:"tabular-nums" }}>{r.val}</span>
+            <span style={{ fontSize:14, fontWeight:700, color:"#0F7A5A", fontVariantNumeric:"tabular-nums" }}>{r.val}</span>
           </div>
         ))}
         <p style={{ fontSize:11, color:"#4B5563", marginTop:14, marginBottom:0 }}>
@@ -113,7 +113,7 @@ export default function ShareableCard({ bmr, tdee, cut, activityLabel, weightKg,
 
       <button onClick={drawAndDownload} style={{
         width:"100%", padding:"13px 0", borderRadius:10, border:"none",
-        background:"#C4622D", color:"#FDFAF4", fontSize:15, fontWeight:700,
+        background:"#0F7A5A", color:"#FDFAF4", fontSize:15, fontWeight:700,
         cursor:"pointer", fontFamily:"var(--font-hanken),sans-serif",
         boxShadow:"0 4px 16px rgba(196,98,45,0.3)",
       }}>

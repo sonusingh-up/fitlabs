@@ -29,7 +29,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#FAF5EC", fontFamily: "var(--font-dm-sans), sans-serif" }}>
       {/* Main footer grid */}
-      <div style={{ maxWidth: 1280, margin: "0 auto", padding: "72px 24px 56px", display: "grid", gridTemplateColumns: "1.3fr 1fr 1fr 1fr", gap: 40 }}>
+      <div className="footer-main-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "72px 24px 56px", display: "grid", gridTemplateColumns: "1.3fr 1fr 1fr 1fr", gap: 40 }}>
 
         {/* Brand + newsletter */}
         <div>
