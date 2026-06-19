@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import CookieConsent from "@/components/ui/CookieConsent";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -187,6 +188,19 @@ export default function RootLayout({
         />
         {/* RSS Feed discovery */}
         <link rel="alternate" type="application/rss+xml" title="Fitlabreviews — Latest Reviews" href="/feed.xml" />
+        {/* Google Consent Mode v2 — default to denied until user accepts */}
+        <Script id="consent-mode-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'granted',
+            });
+          `}
+        </Script>
         {/* Google Analytics — only render when GA_ID is available */}
         {GA_ID && (
           <>
@@ -219,6 +233,7 @@ export default function RootLayout({
         <ScrollReveal />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

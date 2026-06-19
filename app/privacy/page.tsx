@@ -27,7 +27,7 @@ const sections = [
       },
       {
         label: "Cookies",
-        body: "We use functional cookies (essential for site operation), analytics cookies (GA4), and preference cookies. We do not use advertising or retargeting cookies. You can manage cookie preferences through your browser settings.",
+        body: "We use functional cookies (essential for site operation), analytics cookies (GA4), advertising cookies (Google AdSense), and preference cookies. You can manage cookie preferences through the consent banner shown on your first visit or through your browser settings.",
       },
     ],
   },
@@ -44,13 +44,14 @@ const sections = [
       { name: "Sanity CMS", purpose: "Content management backend", link: "https://www.sanity.io/legal/privacy" },
       { name: "Vercel", purpose: "Hosting and edge delivery", link: "https://vercel.com/legal/privacy-policy" },
       { name: "Resend / Mailchimp", purpose: "Newsletter delivery", link: "https://resend.com/legal/privacy-policy" },
+      { name: "Google AdSense", purpose: "Contextual and personalised advertising", link: "https://policies.google.com/technologies/ads" },
       { name: "CourtListener (via API)", purpose: "Legal citation research tool", link: "https://free.law/privacy/" },
     ],
   },
   {
     id: "cookies-policy",
     title: "Cookies Policy",
-    body: "Cookies are small text files stored by your browser. We use: (1) Essential cookies — required for basic functionality (e.g. session management). These cannot be disabled. (2) Analytics cookies — GA4 cookies that help us understand traffic patterns. You can opt out by using the Google Analytics opt-out browser add-on or by disabling third-party cookies in your browser settings. (3) Preference cookies — remember display preferences such as dark/light mode if applicable. No cookies are used for advertising, retargeting, or cross-site tracking.",
+    body: "Cookies are small text files stored by your browser. We use: (1) Essential cookies — required for basic functionality (e.g. session management). These cannot be disabled. (2) Analytics cookies — GA4 cookies that help us understand traffic patterns. You can opt out by using the Google Analytics opt-out browser add-on or by disabling third-party cookies in your browser settings. (3) Preference cookies — remember display preferences such as dark/light mode if applicable. (4) Advertising cookies — Google AdSense uses cookies to serve ads based on your interests and browsing history. You can opt out of personalised advertising at adssettings.google.com or via the cookie consent banner on this site.",
   },
   {
     id: "data-retention",
@@ -119,7 +120,7 @@ export default function PrivacyPolicyPage() {
           <div style={{ marginTop: 32, padding: "18px 22px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #5B8FA8", borderRadius: 8 }}>
             <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#5B8FA8", marginBottom: 6 }}>Plain-Language Summary</p>
             <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>
-              We collect only what we need. We use Google Analytics for traffic data (anonymised). We send newsletters only to opt-in subscribers. We do not sell your data, ever.
+              We collect only what we need. We use Google Analytics for traffic data (anonymised) and Google AdSense for advertising. We send newsletters only to opt-in subscribers. We do not sell your data, ever.
             </p>
           </div>
         </div>
