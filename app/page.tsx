@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { researchBriefs } from "@/lib/data";
-import { allArticles } from "@/lib/articles";
+import { allArticles, getArticleImage } from "@/lib/articles";
 import TrustPillars from "@/components/ui/TrustPillars";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import RecommendedReads from "@/components/ui/RecommendedReads";
@@ -148,7 +148,7 @@ export default function HomePage() {
           </Link>
         </article>
 
-        {/* Trending sidebar */}
+        {/* Trending sidebar — auto from registry */}
         <aside className="hp-hero-aside">
           <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 22 }}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14A474" strokeWidth="2.4">
@@ -159,21 +159,28 @@ export default function HomePage() {
             </h2>
           </div>
 
-          {[
-            { cat: "Pharmacology",    title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",          href: "/research/glp1-beyond-weight-loss",       warm: false },
-            { cat: "Women's Health",  title: "Plant-Forward Eating for Menopause: 7 Foods That Fight Weight Gain",         href: "/blog/plant-foods-menopause",             warm: true  },
-            { cat: "Mental Health",   title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",      href: "/blog/diet-depression-anxiety",           warm: false },
-            { cat: "Reviews · 9/10", title: "Dymatize ISO100: The Only Dual-Certified Hydrolyzed Isolate",                href: "/reviews/dymatize-iso100-review-2026",    warm: true  },
-          ].map((item, i) => (
+          {allArticles
+            .filter(a => a.slug !== "sleep-window-anti-aging")
+            .sort((a, b) => b.date.localeCompare(a.date))
+            .slice(0, 4)
+            .map((item, i) => (
             <Link
-              key={i}
+              key={item.slug}
               href={item.href}
               style={{ display: "flex", gap: 16, textDecoration: "none", color: "inherit", paddingBottom: 20, marginBottom: 20, borderBottom: i < 3 ? "1px solid #E4E8E5" : "none", alignItems: "center" }}
             >
-              <div style={{ width: 88, height: 88, flex: "none", borderRadius: 11, background: item.warm ? "linear-gradient(135deg,#F4E6C9,#FAF3E2)" : "linear-gradient(135deg,#D4E9DF,#EEF6F1)", backgroundImage: item.warm ? "repeating-linear-gradient(45deg,rgba(201,138,30,.07) 0 10px,transparent 10px 20px)" : "repeating-linear-gradient(45deg,rgba(15,122,90,.06) 0 10px,transparent 10px 20px)" }} />
+              <div style={{ width: 88, height: 88, flex: "none", borderRadius: 11, overflow: "hidden", position: "relative" }}>
+                <Image
+                  src={getArticleImage(item)}
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="88px"
+                />
+              </div>
               <div>
                 <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 5 }}>
-                  {item.cat}
+                  {item.category}
                 </div>
                 <div style={{ fontWeight: 700, fontSize: 15, lineHeight: 1.28 }}>{item.title}</div>
               </div>
