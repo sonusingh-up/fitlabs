@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { researchBriefs } from "@/lib/data";
 import TrustPillars from "@/components/ui/TrustPillars";
+import NewsletterForm from "@/components/ui/NewsletterForm";
+import RecommendedReads from "@/components/ui/RecommendedReads";
 
 export const metadata: Metadata = {
   title: { absolute: "Fitlabreviews — Evidence-Led Supplement Reviews" },
@@ -79,24 +81,28 @@ const RECOMMENDED_READS = [
     category: "LONGEVITY & SLEEP", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Anti-Aging Sweet Spot",
     mins: 9, evidence: "Strong evidence", warm: false,
     image: "/lifestyle/sleep_longevity.png",
+    tags: ["Sleep & Recovery", "Fitness"],
   },
   {
     slug: "glp1-beyond-weight-loss", href: "/research/glp1-beyond-weight-loss",
     category: "PHARMACOLOGY", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",
     mins: 13, evidence: "Strong evidence", warm: false,
     image: "/lifestyle/fitness_yoga.png",
+    tags: ["Nutrition", "Reviews"],
   },
   {
     slug: "protein-timing-myth", href: "/research/protein-timing-myth",
     category: "NUTRITION SCIENCE", title: "Protein Timing Is Mostly a Myth — Total Daily Intake Is What Matters",
     mins: 7, evidence: "Moderate evidence", warm: true,
     image: "/lifestyle/nutrition_protein.png",
+    tags: ["Nutrition", "Fitness"],
   },
   {
     slug: "diet-depression-anxiety", href: "/blog/diet-depression-anxiety",
     category: "MENTAL HEALTH", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",
     mins: 14, evidence: "Strong evidence", warm: false,
     image: "/lifestyle/article_thumbnail_woman.png",
+    tags: ["Nutrition"],
   },
 ];
 
@@ -208,13 +214,7 @@ export default function HomePage() {
             <p style={{ fontSize: 17, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 26px", maxWidth: 420 }}>
               Weekly supplement research, ingredient deep-dives, and honest product updates straight to your inbox — no hype, no sponsors.
             </p>
-            <div className="hp-newsletter-form" style={{ display: "flex", background: "#FFFFFF", borderRadius: 999, padding: 6, border: "1px solid #CFE2D8", maxWidth: 430 }}>
-              <label htmlFor="hp-newsletter-email" className="sr-only">Email address</label>
-              <input id="hp-newsletter-email" type="email" placeholder="Enter your email" style={{ flex: 1, border: "none", background: "none", padding: "0 18px", fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 15, color: "#17211C", outline: "none" }} />
-              <button type="button" style={{ background: "#0F7A5A", color: "#FFFFFF", border: "none", fontWeight: 700, fontSize: 14, padding: "12px 26px", borderRadius: 999, cursor: "pointer", whiteSpace: "nowrap", minHeight: 44 }}>
-                Join free
-              </button>
-            </div>
+            <NewsletterForm />
             <p style={{ fontSize: 12, color: "#6B7770", marginTop: 14 }}>
               Your <Link href="/privacy" style={{ color: "#0F7A5A" }}>privacy</Link> matters. Unsubscribe anytime.
             </p>
@@ -360,11 +360,11 @@ export default function HomePage() {
                 Search ingredients
               </Link>
             </div>
-            {/* Capsule photo */}
+            {/* Custom illustration */}
             <div className="hp-ingredient-img" style={{ position: "relative", overflow: "hidden" }}>
               <Image
-                src="/lifestyle/capsule_closeup.png"
-                alt="Supplement capsules and powder — ingredient library"
+                src="/illustrations/ingredient-library.png"
+                alt="Botanical science illustration — molecules, capsules, and leaf forms"
                 fill
                 style={{ objectFit: "cover", objectPosition: "center" }}
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -385,56 +385,7 @@ export default function HomePage() {
           </h2>
         </div>
 
-        {/* Filter tabs — horizontal scroll on mobile (Healthline §3) */}
-        <div className="hp-filter-scroll" style={{ marginBottom: 40 }}>
-          {["Top Reads", "Fitness", "Nutrition", "Reviews", "Sleep & Recovery"].map((tab, i) => (
-            <span
-              key={tab}
-              style={{
-                padding: "10px 20px", borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: "pointer",
-                background: i === 0 ? "#0F7A5A" : "transparent",
-                color: i === 0 ? "#FFFFFF" : "#3F4B43",
-                border: i === 0 ? "2px solid #0F7A5A" : "2px solid #D7DDD9",
-                whiteSpace: "nowrap",
-              }}
-            >
-              {tab}
-            </span>
-          ))}
-        </div>
-
-        {/* 2×2 article grid */}
-        <div className="hp-reads-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
-          {RECOMMENDED_READS.map((article) => (
-            <Link
-              key={article.slug}
-              href={article.href}
-              style={{ display: "flex", gap: 20, textDecoration: "none", color: "inherit", alignItems: "flex-start" }}
-            >
-              {/* Thumbnail */}
-              <div style={{ width: 120, height: 100, flex: "none", borderRadius: 12, overflow: "hidden", position: "relative" }}>
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  sizes="120px"
-                />
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 8 }}>
-                  {article.category}
-                </div>
-                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 500, lineHeight: 1.22, margin: "0 0 10px", color: "#17211C" }}>
-                  {article.title}
-                </h3>
-                <div style={{ fontSize: 13, color: "#6B7770" }}>
-                  {article.mins} min · {article.evidence}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <RecommendedReads articles={RECOMMENDED_READS} />
       </section>
 
       {/* ── SEC. 04 — EDITORIAL STANDARDS ── */}
