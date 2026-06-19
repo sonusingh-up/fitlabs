@@ -47,8 +47,50 @@ export const metadata: Metadata = {
 };
 ```
 
+### 1b. JSON-LD Schemas (Article + FAQPage)
+Both schemas are required. Placed as `const` declarations after metadata.
+
+```tsx
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "...",
+  description: "...",
+  image: "https://fitlabreviews.com/lifestyle/...",
+  datePublished: "YYYY-MM-DD",   // original — never change
+  dateModified: "2026-06-19",    // today's date
+  author: { "@type": "Organization", name: "Fitlabreviews Editorial", url: "https://fitlabreviews.com/about" },
+  publisher: { "@id": "https://fitlabreviews.com/#organization" },
+  mainEntityOfPage: { "@type": "WebPage", "@id": "https://fitlabreviews.com/blog/<slug>" },
+  articleSection: "...",
+  wordCount: ...,
+};
+
+const faqList = [
+  { q: "...", a: "..." },  // minimum 6 Q&A pairs
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqList.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+```
+
+Inject both at the top of the return statement:
+```tsx
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+```
+
 ### 2. TOC items array
-- 6–9 sections minimum
+- Must include `{ id: "key-takeaways", label: "Key Takeaways" }` as the first item
+- Must include `{ id: "faq", label: "FAQ" }` as the last item
+- 6–9 body sections between those two
 - IDs must match `id` attributes on `<section>` elements exactly
 
 ### 3. Hero block
@@ -83,6 +125,38 @@ import MobileTOC from "@/components/ui/MobileTOC";
 
 `MobileTOC` is a `"use client"` component — importing it into a Server Component page is fine. Next.js handles the RSC boundary automatically.
 
+### 4b. Credibility row (between hero and content grid)
+Full-width bar showing author, fact-check date, and source count. Placed between the hero div and the content grid div.
+
+```tsx
+<div style={{ borderBottom: "1px solid #E4E8E5", backgroundColor: "#F6F8F6" }}>
+  <div style={{ maxWidth: 1100, margin: "0 auto", padding: "10px 24px", display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+      <div style={{ width: 28, height: 28, borderRadius: "50%", backgroundColor: "#0F7A5A", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 700, color: "#FFFFFF" }}>FE</span>
+      </div>
+      <span style={{ fontSize: 12, color: "#17211C", fontWeight: 600 }}>Fitlabreviews Editorial</span>
+    </div>
+    <span style={{ width: 1, height: 14, backgroundColor: "#D4C9B8" }} />
+    <span style={{ fontSize: 11, color: "#586259", fontFamily: "var(--font-jetbrains), monospace" }}>Fact-checked [Month] 2026</span>
+    <span style={{ width: 1, height: 14, backgroundColor: "#D4C9B8" }} />
+    <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", fontWeight: 700, color: "#1A6B3A", backgroundColor: "rgba(26,107,58,0.08)", border: "1px solid rgba(26,107,58,0.2)", textTransform: "uppercase" }}>N Peer-reviewed sources</span>
+  </div>
+</div>
+```
+
+### 4c. Key Takeaways box (first item inside article body)
+Green-bordered summary box targeting featured snippets. Placed before the opening paragraph, after MobileTOC.
+
+```tsx
+<div id="key-takeaways" style={{ padding: "20px 22px", backgroundColor: "#F2F8F4", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: "0 8px 8px 0", marginBottom: 36 }}>
+  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 10, fontWeight: 700 }}>Key Takeaways</p>
+  <ul style={{ margin: 0, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 6 }}>
+    <li style={{ fontSize: 13, color: "#2D2926", lineHeight: 1.65 }}>4–5 bullet points with <strong>bolded key facts</strong></li>
+  </ul>
+</div>
+```
+
 ### 5. Opening paragraph (no H2)
 - 3–4 sentences that frame the specific insight the article delivers
 - No "In this article we will..." openers
@@ -97,8 +171,45 @@ Each section:
 </section>
 ```
 
-### 7. Bottom Line section (last section)
+### 6b. "What this means for you" callout boxes
+Add 2–3 of these throughout the article, after the most evidence-dense sections. They translate research into a practical, personal takeaway.
+
+```tsx
+<div style={{ marginTop: 20, padding: "14px 18px", backgroundColor: "#E8F5EF", borderRadius: 8, borderLeft: "3px solid #0F7A5A" }}>
+  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 4, fontWeight: 700 }}>What this means for you</p>
+  <p style={{ fontSize: 13, color: "#17211C", lineHeight: 1.65, margin: 0 }}>Practical, direct takeaway sentence.</p>
+</div>
+```
+
+### 6c. FAQ accordion section (after Bottom Line, before References)
+Minimum 6 Q&A pairs targeting "People Also Ask" queries. Uses native `<details>/<summary>` elements with `faq-item` CSS class. The `faqList` array is shared between the FAQ schema and the rendered accordion.
+
+```tsx
+<section id="faq" style={{ marginBottom: 48 }}>
+  <h2 ...>Frequently Asked Questions</h2>
+  <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+    {faqList.map((faq, i) => (
+      <details key={i} className="faq-item" style={{ borderBottom: "1px solid #E4E8E5" }}>
+        <summary style={{ padding: "16px 0", fontSize: 14, fontWeight: 600, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
+          {faq.q}
+          <span className="faq-toggle" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 14, color: "#0F7A5A", flexShrink: 0 }}>+</span>
+        </summary>
+        <div style={{ paddingBottom: 16 }}>
+          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.75, margin: 0 }}>{faq.a}</p>
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+```
+
+### 7. Bottom Line section
 - Dark panel `backgroundColor: "#1A1714"` with editorial verdict
+- Must include **evidence grade badge** next to "Bottom Line" label:
+  ```tsx
+  <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", fontWeight: 700, color: "#14A474", backgroundColor: "rgba(20,164,116,0.12)", border: "1px solid rgba(20,164,116,0.25)", textTransform: "uppercase" }}>Grade A — Strong Evidence</span>
+  ```
+  Use Grade A (Strong), Grade B (Moderate), or Grade C (Limited) depending on evidence quality.
 - References block immediately after — every cited study listed as:
   `Author Last, Initials. Title fragment. Journal. Year;Vol(Issue):pages.`
 
@@ -272,7 +383,14 @@ Before marking the task done, verify every item:
 - [ ] Year references use 2026
 - [ ] Every factual claim has an inline citation
 - [ ] No AI fluff phrases present
-- [ ] Gold standard article structure followed (breadcrumb → hero → sidebar TOC → article → bottom line → references)
+- [ ] JSON-LD: Article schema with correct datePublished/dateModified
+- [ ] JSON-LD: FAQPage schema with ≥6 Q&A pairs
+- [ ] Credibility row present between hero and content grid
+- [ ] Key Takeaways box present at top of article body (4–5 bullets)
+- [ ] ≥2 "What this means for you" callout boxes after evidence-heavy sections
+- [ ] FAQ accordion section with ≥6 questions rendered from faqList
+- [ ] Evidence grade badge in Bottom Line panel
+- [ ] Gold standard article structure followed (breadcrumb → hero → credibility row → sidebar TOC → key takeaways → article → bottom line → FAQ → references → related content)
 - [ ] `hub-row-link` or `hub-card` class NOT used on article content (those are for hub pages only)
 - [ ] Back to Blog link present at bottom
 
