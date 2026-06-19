@@ -389,17 +389,55 @@ export default function SleepWindowArticle() {
             </section>
 
             {/* Inline Newsletter CTA */}
-            <div style={{ margin: "0 0 48px", padding: "24px 28px", borderRadius: 14, backgroundColor: "#FFF5EB", border: "1px solid #EBD8C3", display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
-              <div style={{ flex: 1, minWidth: 200 }}>
-                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#C98A1E", marginBottom: 6, fontWeight: 700 }}>The Research Dispatch</p>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.05rem", fontWeight: 700, color: "#1A1714", margin: 0, lineHeight: 1.3 }}>
-                  Evidence-based insights like this — straight to your inbox, every week.
-                </p>
-                <p style={{ fontSize: 12, color: "#586259", marginTop: 6, marginBottom: 0, lineHeight: 1.5 }}>No hype. No sponsors. Just the research that matters.</p>
+            <div style={{ margin: "0 0 48px", borderRadius: 16, overflow: "hidden", position: "relative" }}>
+              {/* Background */}
+              <div style={{ background: "linear-gradient(135deg, #17211C 0%, #0A4F3B 60%, #0F7A5A 100%)", padding: "36px 32px", position: "relative", overflow: "hidden" }}>
+                {/* Decorative circles */}
+                <div style={{ position: "absolute", top: -30, right: -30, width: 120, height: 120, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.06)" }} />
+                <div style={{ position: "absolute", top: -10, right: -10, width: 80, height: 80, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.04)" }} />
+                <div style={{ position: "absolute", bottom: -40, left: 60, width: 100, height: 100, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.05)" }} />
+                {/* Decorative dots */}
+                <div style={{ position: "absolute", top: 20, right: 50, display: "grid", gridTemplateColumns: "repeat(5, 6px)", gap: 8, opacity: 0.15 }}>
+                  {Array.from({ length: 15 }).map((_, i) => (
+                    <div key={i} style={{ width: 3, height: 3, borderRadius: "50%", backgroundColor: "#FFFFFF" }} />
+                  ))}
+                </div>
+
+                {/* Content */}
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+                    <div style={{ width: 28, height: 28, borderRadius: "50%", backgroundColor: "#C98A1E", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontSize: 13 }}>✉</span>
+                    </div>
+                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#C98A1E", fontWeight: 700 }}>The Research Dispatch</span>
+                  </div>
+
+                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.1rem, 3vw, 1.4rem)", fontWeight: 700, color: "#F5F0E8", margin: 0, lineHeight: 1.3, marginBottom: 6 }}>
+                    Get insights like this —{" "}
+                    <em style={{ fontStyle: "italic", fontWeight: 400, color: "#14A474" }}>straight to your inbox.</em>
+                  </p>
+                  <p style={{ fontSize: 13, color: "#8B9B90", marginTop: 0, marginBottom: 20, lineHeight: 1.5 }}>
+                    Evidence-based. No sponsors. Free every Thursday.
+                  </p>
+
+                  {/* CTA row */}
+                  <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+                    <Link href="/#newsletter" style={{ padding: "12px 28px", backgroundColor: "#C98A1E", color: "#FFFFFF", borderRadius: 10, fontSize: 13, fontWeight: 700, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", flexShrink: 0, letterSpacing: "0.03em", display: "inline-flex", alignItems: "center", gap: 8 }}>
+                      Subscribe Free <span style={{ fontSize: 16 }}>→</span>
+                    </Link>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <div style={{ display: "flex" }}>
+                        {["FR", "PS", "RD"].map((initials, i) => (
+                          <div key={initials} style={{ width: 24, height: 24, borderRadius: "50%", backgroundColor: i === 0 ? "#0F7A5A" : i === 1 ? "#2D6A4F" : "#3D6B80", border: "2px solid #17211C", marginLeft: i > 0 ? -6 : 0, display: "flex", alignItems: "center", justifyContent: "center", zIndex: 3 - i }}>
+                            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 7, fontWeight: 700, color: "#FFFFFF" }}>{initials}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>Join 2,400+ readers</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <Link href="/#newsletter" style={{ padding: "10px 22px", backgroundColor: "#0F7A5A", color: "#FFFFFF", borderRadius: 8, fontSize: 12, fontWeight: 700, fontFamily: "var(--font-hanken), sans-serif", textDecoration: "none", flexShrink: 0, letterSpacing: "0.04em", whiteSpace: "nowrap" }}>
-                Subscribe Free →
-              </Link>
             </div>
 
             {/* Section 6 */}
