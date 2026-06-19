@@ -25,6 +25,19 @@ type BlogPost = {
 
 const posts: BlogPost[] = [
   {
+    slug: "glp1-companion-supplements-2026",
+    title: "GLP-1 Companion Supplements: The 2026 Trend Explained",
+    category: "Nutrition",
+    figure: "BLG-006",
+    readTime: "8 min",
+    publishedAt: "June 2026",
+    excerpt: "As GLP-1 users look to mitigate muscle loss and gastrointestinal side effects, companion supplements have surged. We review the evidence behind the trend.",
+    tags: ["GLP-1", "Supplements", "Muscle Loss"],
+    accent: "#0F7A5A",
+    featured: true,
+    evidenceBadge: "moderate",
+  },
+  {
     slug: "sleep-window-anti-aging",
     title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Sweet Spot for Anti-Aging",
     category: "Longevity & Sleep",
@@ -93,7 +106,7 @@ const posts: BlogPost[] = [
 
 const categoryGroups = [
   { label: "Longevity & Science", categories: ["Longevity & Sleep", "Pharmacology"] },
-  { label: "Nutrition & Health", categories: ["Mental Health", "Women's Health"] },
+  { label: "Nutrition & Health", categories: ["Mental Health", "Women's Health", "Nutrition"] },
   { label: "Training & Lifestyle", categories: ["Training & Lifestyle"] },
 ];
 
