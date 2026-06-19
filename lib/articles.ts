@@ -128,6 +128,26 @@ export const allArticles: ArticleEntry[] = [
   },
 ];
 
+const FALLBACK_IMAGES: Record<string, string> = {
+  "LONGEVITY & SLEEP": "/illustrations/fallback-sleep.png",
+  "SLEEP": "/illustrations/fallback-sleep.png",
+  "NUTRITION": "/illustrations/fallback-nutrition.png",
+  "NUTRITION SCIENCE": "/illustrations/fallback-nutrition.png",
+  "MENTAL HEALTH": "/illustrations/fallback-nutrition.png",
+  "WOMEN'S HEALTH": "/illustrations/fallback-nutrition.png",
+  "FITNESS": "/illustrations/fallback-fitness.png",
+  "SPORTS SCIENCE": "/illustrations/fallback-fitness.png",
+  "PHARMACOLOGY": "/illustrations/fallback-pharma.png",
+  "SAFETY & QUALITY": "/illustrations/fallback-pharma.png",
+  "SUPPLEMENT SCIENCE": "/illustrations/fallback-pharma.png",
+  "REVIEWS": "/illustrations/fallback-reviews.png",
+};
+
+export function getArticleImage(article: ArticleEntry): string {
+  if (article.image) return article.image;
+  return FALLBACK_IMAGES[article.category] || "/illustrations/fallback-default.png";
+}
+
 export function getArticlesByTag(tag: string): ArticleEntry[] {
   if (tag === "Top Reads") return allArticles.filter(a => a.featured).concat(allArticles.filter(a => !a.featured)).slice(0, 8);
   return allArticles.filter(a => a.tags.includes(tag));

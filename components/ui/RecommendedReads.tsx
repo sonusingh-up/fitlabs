@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import type { ArticleEntry } from "@/lib/articles";
+import { type ArticleEntry, getArticleImage } from "@/lib/articles";
 
 const TABS = ["Top Reads", "Fitness", "Nutrition", "Reviews", "Sleep & Recovery"];
 
@@ -60,7 +60,7 @@ export default function RecommendedReads({ articles }: { articles: ArticleEntry[
           >
             <div style={{ width: 120, height: 100, flex: "none", borderRadius: 12, overflow: "hidden", position: "relative" }}>
               <Image
-                src={article.image}
+                src={getArticleImage(article)}
                 alt={article.title}
                 fill
                 style={{ objectFit: "cover", objectPosition: "center" }}
