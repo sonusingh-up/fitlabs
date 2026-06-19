@@ -381,7 +381,7 @@ export default function HomePage() {
             {/* Bottom Graphic */}
             <div style={{ position: "relative", width: "80%", height: 280, marginTop: "auto", alignSelf: "center", zIndex: 1, transform: "translateY(20px)" }}>
               <Image
-                src="https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/ingredient_library_hero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5ncmVkaWVudF9saWJyYXJ5X2hlcm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg3NjU0MSwiZXhwIjo0OTM1NDc2NTQxfQ.rH4_I1YibyhQQ5_lp9hKJVHFEWZSVKDrAaUmSDjWXRY"
+                src="https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/ingredient_library_hero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5ncmVkaWVudF9saWJyYXJ5X2hlcm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg3ODI1MywiZXhwIjoxOTM5NTU4MjUzfQ.huAgk7XpVAlrH6NZtv64Jz08ul4Rv-icA04kJKxZYgU"
                 alt="Weekly pill organizer filled with supplements"
                 fill
                 style={{ objectFit: "contain", objectPosition: "bottom center" }}
