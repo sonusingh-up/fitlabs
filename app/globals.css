@@ -193,6 +193,123 @@
   }
 }
 
+.layout-ingredient-promo {
+  display: flex;
+  gap: 24px;
+  min-height: 480px;
+}
+.promo-small-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.promo-small-card {
+  flex: 1;
+}
+.promo-big-card {
+  flex: 2.2;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #2D8681 0%, #87BEB6 100%);
+  padding: 64px 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.promo-big-card-title {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  line-height: 1.1;
+  max-width: 540px;
+}
+.promo-big-card-desc {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 36px;
+  max-width: 540px;
+}
+.promo-big-card-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #FFFFFF;
+  color: #2B827E;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  z-index: 2;
+}
+.promo-big-card-img {
+  position: relative;
+  width: 110%;
+  height: 320px;
+  margin-top: 32px;
+  align-self: center;
+  z-index: 1;
+  transform: translateY(30px);
+}
+.promo-big-card-image {
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+@media (max-width: 900px) {
+  .layout-ingredient-promo {
+    flex-direction: column;
+  }
+  .promo-small-cards {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    order: 2; /* Render below big card */
+    margin-right: -24px;
+    padding-right: 24px;
+    scroll-padding-left: 0;
+  }
+  .promo-small-cards::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for a cleaner UX on mobile */
+  }
+  .promo-small-card {
+    flex: 0 0 calc(100% - 32px);
+    scroll-snap-align: start;
+  }
+  
+  /* Mobile alignment fixes */
+  .promo-big-card {
+    order: 1; /* Render above small cards */
+    align-items: flex-start;
+    text-align: left;
+    padding: 40px 32px 0; /* less padding */
+  }
+  .promo-big-card-title {
+    max-width: 100%;
+  }
+  .promo-big-card-desc {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+  .promo-big-card-img {
+    width: 130%; /* Expand to bleed right */
+    height: 280px;
+    margin-top: 16px; /* Very tight gap below the button */
+    align-self: flex-end; /* Align right */
+    transform: translate(15%, 20px); /* Push out to bottom-right corner */
+  }
+  .promo-big-card-image {
+    object-position: bottom right; /* Pin image to bottom right */
+  }
+}
+
 .layout-compare-cards {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

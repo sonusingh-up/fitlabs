@@ -328,11 +328,11 @@ export default function HomePage() {
 
       {/* ── INGREDIENT LIBRARY PROMO (HEALTHLINE REDESIGN) ── */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 2.2fr", gap: 24, minHeight: 480 }}>
+        <div className="layout-ingredient-promo">
           
           {/* Left Column: 3 Stacked Cards */}
-          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-            <Link href="/goals" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #1C6B6D, #2A7E7D)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div className="promo-small-cards">
+            <Link href="/goals" className="hover-scale promo-small-card" style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #1C6B6D, #2A7E7D)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div>
                 <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Goal Guides</div>
                 <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Identify supplements for your objective</div>
@@ -342,7 +342,7 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href="/reviews" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #449596, #58A6A5)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <Link href="/reviews" className="hover-scale promo-small-card" style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #449596, #58A6A5)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div>
                 <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Product Reviews</div>
                 <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Compare top-rated brands online</div>
@@ -352,7 +352,7 @@ export default function HomePage() {
               </div>
             </Link>
             
-            <Link href="/research" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #66B2AE, #7EC1BB)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+            <Link href="/research" className="hover-scale promo-small-card" style={{ textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #66B2AE, #7EC1BB)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div>
                 <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Science Hub</div>
                 <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Find clinical trials &amp; deep-dives</div>
@@ -364,28 +364,29 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Main Directory Card */}
-          <div style={{ borderRadius: 24, background: "linear-gradient(180deg, #2D8681 0%, #87BEB6 100%)", padding: "64px 48px 0", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", position: "relative", overflow: "hidden" }}>
-            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 600, color: "#FFFFFF", letterSpacing: "-.01em", margin: "0 0 16px", lineHeight: 1.1 }}>
+          <div className="promo-big-card">
+            <h2 className="promo-big-card-title">
               Ingredient Library: A to Z
             </h2>
-            <p style={{ fontSize: 18, lineHeight: 1.6, color: "rgba(255,255,255,.9)", margin: "0 0 36px", maxWidth: 540 }}>
+            <p className="promo-big-card-desc">
               Learn everything you need to know about specific active ingredients, natural extracts, and over-the-counter supplements.
             </p>
             <Link
               href="/ingredients"
-              style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#2B827E", fontWeight: 700, fontSize: 16, padding: "14px 36px", borderRadius: 999, textDecoration: "none", zIndex: 2 }}
+              className="promo-big-card-btn hover-scale"
             >
               Search ingredients
             </Link>
 
             {/* Bottom Graphic */}
-            <div style={{ position: "relative", width: "80%", height: 280, marginTop: "auto", alignSelf: "center", zIndex: 1, transform: "translateY(20px)" }}>
+            <div className="promo-big-card-img">
               <Image
                 src="https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/ingredient_library_hero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5ncmVkaWVudF9saWJyYXJ5X2hlcm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg3ODI1MywiZXhwIjoxOTM5NTU4MjUzfQ.huAgk7XpVAlrH6NZtv64Jz08ul4Rv-icA04kJKxZYgU"
                 alt="Weekly pill organizer filled with supplements"
                 fill
-                style={{ objectFit: "contain", objectPosition: "bottom center" }}
+                className="promo-big-card-image"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                priority
               />
             </div>
           </div>
