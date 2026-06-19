@@ -326,36 +326,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── INGREDIENT LIBRARY PROMO ── */}
-      <section style={{ background: "#0A4F3B" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px" }}>
-          <div className="hp-ingredient-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 0, minHeight: 320 }}>
-            {/* Text */}
-            <div className="hp-ingredient-text" style={{ padding: "64px 48px 64px 0", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(28px,3.5vw,42px)", fontWeight: 500, color: "#FFFFFF", letterSpacing: "-.02em", margin: "0 0 16px", lineHeight: 1.1 }}>
-                Ingredient Library: A&ndash;Z
-              </h2>
-              <p style={{ fontSize: 17, lineHeight: 1.65, color: "rgba(255,255,255,.72)", margin: "0 0 30px", maxWidth: 420 }}>
-                Evidence levels, effective dosing, and real benefits for all 87 profiled ingredients — what the research actually says, not the label.
-              </p>
-              <Link
-                href="/ingredients"
-                style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#FFFFFF", color: "#0A4F3B", fontWeight: 700, fontSize: 15, padding: "13px 26px", borderRadius: 999, textDecoration: "none", alignSelf: "flex-start" }}
-              >
-                Search ingredients
-              </Link>
-            </div>
-            {/* Custom illustration */}
-            <div className="hp-ingredient-img" style={{ position: "relative", overflow: "hidden" }}>
+      {/* ── INGREDIENT LIBRARY PROMO (HEALTHLINE REDESIGN) ── */}
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 2.2fr", gap: 24, minHeight: 480 }}>
+          
+          {/* Left Column: 3 Stacked Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <Link href="/goals" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #1C6B6D, #2A7E7D)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Goal Guides</div>
+                <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Identify supplements for your objective</div>
+              </div>
+              <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF", color: "#2A7E7D", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 16 }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </Link>
+            
+            <Link href="/reviews" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #449596, #58A6A5)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Product Reviews</div>
+                <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Compare top-rated brands online</div>
+              </div>
+              <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF", color: "#58A6A5", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 16 }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </Link>
+            
+            <Link href="/research" className="hover-scale" style={{ flex: 1, textDecoration: "none", color: "#FFFFFF", borderRadius: 24, background: "linear-gradient(135deg, #66B2AE, #7EC1BB)", padding: "28px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <div>
+                <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.9, marginBottom: 8, textTransform: "uppercase", letterSpacing: "0.05em" }}>Science Hub</div>
+                <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.3 }}>Find clinical trials &amp; deep-dives</div>
+              </div>
+              <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#FFFFFF", color: "#7EC1BB", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 16 }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </div>
+            </Link>
+          </div>
+
+          {/* Right Column: Main Directory Card */}
+          <div style={{ borderRadius: 24, background: "linear-gradient(180deg, #2D8681 0%, #87BEB6 100%)", padding: "64px 48px 0", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", position: "relative", overflow: "hidden" }}>
+            <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(32px, 4vw, 48px)", fontWeight: 600, color: "#FFFFFF", letterSpacing: "-.01em", margin: "0 0 16px", lineHeight: 1.1 }}>
+              Ingredient Library: A to Z
+            </h2>
+            <p style={{ fontSize: 18, lineHeight: 1.6, color: "rgba(255,255,255,.9)", margin: "0 0 36px", maxWidth: 540 }}>
+              Learn everything you need to know about specific active ingredients, natural extracts, and over-the-counter supplements.
+            </p>
+            <Link
+              href="/ingredients"
+              style={{ display: "inline-flex", alignItems: "center", background: "#FFFFFF", color: "#2B827E", fontWeight: 700, fontSize: 16, padding: "14px 36px", borderRadius: 999, textDecoration: "none", zIndex: 2 }}
+            >
+              Search ingredients
+            </Link>
+
+            {/* Bottom Graphic */}
+            <div style={{ position: "relative", width: "80%", height: 280, marginTop: "auto", alignSelf: "center", zIndex: 1, transform: "translateY(20px)" }}>
               <Image
-                src="/illustrations/ingredient-library.png"
-                alt="Botanical science illustration — molecules, capsules, and leaf forms"
+                src="https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/ingredient_library_hero.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5ncmVkaWVudF9saWJyYXJ5X2hlcm8ucG5nIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg3NjU0MSwiZXhwIjo0OTM1NDc2NTQxfQ.rH4_I1YibyhQQ5_lp9hKJVHFEWZSVKDrAaUmSDjWXRY"
+                alt="Weekly pill organizer filled with supplements"
                 fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                style={{ objectFit: "contain", objectPosition: "bottom center" }}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
+          
         </div>
       </section>
 

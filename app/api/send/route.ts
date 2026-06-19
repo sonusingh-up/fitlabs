@@ -1,5 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
+import { supabase } from "../../../lib/supabase";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "sonusingh.up@yahoo.com";
 const ALLOWED_ORIGIN = "https://fitlabreviews.com";
@@ -39,7 +40,17 @@ function checkOrigin(req: NextRequest): boolean {
 
 function getResend() {
   const key = process.env.RESEND_API_KEY;
-  if (!key) throw new Error("RESEND_API_KEY is not set");
+  if (!key) {
+    console.warn("[API/send] RESEND_API_KEY is not set. Mocking Resend for development.");
+    return {
+      emails: {
+        send: async (options: any) => {
+          console.log("[API/send] Mock sending email to:", options.to, "Subject:", options.subject);
+          return { data: { id: "mock-id-" + Date.now() }, error: null };
+        }
+      }
+    } as any;
+  }
   return new Resend(key);
 }
 
@@ -238,6 +249,21 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
       }
 
+      // Insert into Supabase
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert([{ 
+          name: safeName, 
+          email: safeEmail, 
+          subject: safeSubject, 
+          message: safeMessage 
+        }]);
+      
+      if (dbError) {
+        console.error("[API/send] Supabase error:", dbError.message);
+        // We'll still try to send the email even if the db fails, to avoid data loss on user's end if resend works
+      }
+
       const [notification, confirmation] = await Promise.all([
         resend.emails.send({
           from: "Fitlabreviews <onboarding@resend.dev>",
@@ -271,6 +297,17 @@ export async function POST(req: NextRequest) {
 
       if (!EMAIL_RE.test(safeEmail)) {
         return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+      }
+
+      // Insert into Supabase
+      const { error: dbError } = await supabase
+        .from('subscribers')
+        .insert([{ email: safeEmail, source: 'newsletter_form' }]);
+      
+      // If error is unique constraint violation (code 23505), we can ignore it since they're already subscribed
+      if (dbError && dbError.code !== '23505') {
+        console.error("[API/send] Supabase error:", dbError.message);
+        // We can choose to return an error, but let's proceed to send emails anyway to maintain user experience
       }
 
       const [notification, welcome] = await Promise.all([
