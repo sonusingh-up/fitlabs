@@ -31,7 +31,7 @@ export const allArticles: ArticleEntry[] = [
     title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",
     category: "PHARMACOLOGY", tags: ["Nutrition", "Reviews"],
     mins: 13, evidence: "Strong evidence",
-    image: "/lifestyle/fitness_yoga.png",
+    image: "/illustrations/article-glp1-blog.png",
     date: "2026-04-22", featured: true,
   },
   {
@@ -40,7 +40,7 @@ export const allArticles: ArticleEntry[] = [
     title: "Plant-Forward Eating for Menopause: 7 Foods That Combat Weight Gain",
     category: "NUTRITION", tags: ["Nutrition", "Fitness"],
     mins: 10, evidence: "Moderate evidence",
-    image: "/lifestyle/nutrition_protein.png",
+    image: "/illustrations/article-plant-menopause.png",
     date: "2026-05-28",
   },
   {
@@ -58,7 +58,7 @@ export const allArticles: ArticleEntry[] = [
     title: "The Complete Guide to Staying Fit While Travelling (2026)",
     category: "FITNESS", tags: ["Fitness"],
     mins: 9, evidence: "Moderate evidence",
-    image: "/lifestyle/fitness_yoga.png",
+    image: "/illustrations/article-fitness-travel.png",
     date: "2026-04-05",
   },
 
@@ -78,7 +78,7 @@ export const allArticles: ArticleEntry[] = [
     title: "GLP-1 Benefits Beyond Weight Loss: Heart, Brain & Mood",
     category: "PHARMACOLOGY", tags: ["Nutrition", "Reviews"],
     mins: 20, evidence: "Strong evidence",
-    image: "/lifestyle/fitness_yoga.png",
+    image: "/illustrations/article-glp1-research.png",
     date: "2026-03-20",
   },
   {
@@ -87,7 +87,7 @@ export const allArticles: ArticleEntry[] = [
     title: "Creatine for Brain Health: Cognition, Memory & Neuroprotection",
     category: "SPORTS SCIENCE", tags: ["Fitness", "Nutrition"],
     mins: 15, evidence: "Moderate evidence",
-    image: "/lifestyle/supplement_product.png",
+    image: "/illustrations/article-creatine-brain.png",
     date: "2026-05-05",
   },
   {
@@ -96,7 +96,7 @@ export const allArticles: ArticleEntry[] = [
     title: "WPI vs WPC Protein: What the Evidence Actually Shows",
     category: "NUTRITION SCIENCE", tags: ["Nutrition", "Reviews", "Fitness"],
     mins: 16, evidence: "Strong evidence",
-    image: "/lifestyle/nutrition_protein.png",
+    image: "/illustrations/article-wpi-wpc.png",
     date: "2026-04-18",
   },
   {
@@ -123,7 +123,7 @@ export const allArticles: ArticleEntry[] = [
     title: "Freeze-Dried vs Desiccated Organ Supplements (2026)",
     category: "SUPPLEMENT SCIENCE", tags: ["Nutrition", "Reviews"],
     mins: 11, evidence: "Moderate evidence",
-    image: "/lifestyle/supplement_product.png",
+    image: "/illustrations/article-freeze-dried.png",
     date: "2026-03-10",
   },
 ];
