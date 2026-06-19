@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Search, ChevronDown, Menu, X, Loader2 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
+import UserMenu from "@/components/auth/UserMenu";
 
 /* ─────────────────── Types ─────────────────── */
 type MegaLink = { label: string; az?: string; href: string };
@@ -557,9 +558,7 @@ export default function Header() {
             </button>
 
             <div className="header-cta-btn" style={{ flexShrink: 0 }}>
-              <Link href="/reviews" className="btn-primary" style={{ fontSize: 13 }}>
-                All Reviews
-              </Link>
+              <UserMenu />
             </div>
 
             <button
