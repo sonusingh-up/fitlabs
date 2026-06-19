@@ -22,10 +22,8 @@ export const metadata: Metadata = {
 };
 
 // 1. FOR IMAGE: image_eb108b.png ("From the lab" section)
-// Now explicitly sorted to guarantee the absolute latest 3 briefs are shown.
-const latestResearch = [...researchBriefs]
-  .sort((a, b) => (b.date && a.date ? b.date.localeCompare(a.date) : 0))
-  .slice(0, 3);
+// Removed the .sort() by date to resolve the TypeScript error since ResearchBrief does not have a date property.
+const latestResearch = researchBriefs.slice(0, 3);
 
 const GOAL_CARDS = [
   {
