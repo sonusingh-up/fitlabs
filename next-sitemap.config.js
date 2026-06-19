@@ -18,7 +18,7 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*"],
+  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/studio", "/studio/**"],
 
   additionalPaths: async (config) => {
     const paths = [];
@@ -68,7 +68,7 @@ module.exports = {
   robotsTxtOptions: {
     // Single wildcard block — allow + disallow must be in one policy entry
     policies: [
-      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/"] },
+      { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/", "/studio"] },
       // AI crawlers — explicitly welcomed for GEO (Generative Engine Optimisation)
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
