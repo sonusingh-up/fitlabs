@@ -24,6 +24,7 @@ const securityHeaders = [
       "frame-ancestors 'none'",
     ].join("; "),
   },
+  { key: "X-Robots-Tag", value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
 ];
 
 const nextConfig: NextConfig = {

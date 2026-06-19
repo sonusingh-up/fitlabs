@@ -18,21 +18,21 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/studio", "/studio/**"],
+  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/studio", "/studio/**", "/feed.xml", "/llms.txt", "/opengraph-image"],
 
   additionalPaths: async (config) => {
     const paths = [];
 
-    // Static hub pages
+    // Static hub pages — no fake lastmod; Google will use its own crawl date
     for (const p of HIGH_PRIORITY_PATHS) {
       paths.push(await config.transform(config, p));
     }
 
-    // Dynamic Sanity content
+    // Dynamic Sanity content — use REAL timestamps from CMS
     const [reviews, ingredients, brands] = await Promise.all([
-      sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, updatedAt, publishedAt }`),
-      sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current }`),
-      sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current }`),
+      sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, _updatedAt, updatedAt, publishedAt }`),
+      sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current, _updatedAt, _createdAt }`),
+      sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current, _updatedAt, _createdAt }`),
     ]);
 
     for (const r of reviews) {
@@ -40,7 +40,7 @@ module.exports = {
         loc: `/reviews/${r.slug}`,
         changefreq: "monthly",
         priority: 0.9,
-        lastmod: (r.updatedAt || r.publishedAt || new Date().toISOString()),
+        lastmod: r._updatedAt || r.updatedAt || r.publishedAt,
       });
     }
 
@@ -49,7 +49,7 @@ module.exports = {
         loc: `/ingredients/${i.slug}`,
         changefreq: "monthly",
         priority: 0.8,
-        lastmod: new Date().toISOString(),
+        lastmod: i._updatedAt || i._createdAt,
       });
     }
 
@@ -58,7 +58,7 @@ module.exports = {
         loc: `/brands/${b.slug}`,
         changefreq: "monthly",
         priority: 0.7,
-        lastmod: new Date().toISOString(),
+        lastmod: b._updatedAt || b._createdAt,
       });
     }
 
@@ -66,10 +66,8 @@ module.exports = {
   },
 
   robotsTxtOptions: {
-    // Single wildcard block — allow + disallow must be in one policy entry
     policies: [
       { userAgent: "*", allow: "/", disallow: ["/api/", "/_next/", "/studio"] },
-      // AI crawlers — explicitly welcomed for GEO (Generative Engine Optimisation)
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "ChatGPT-User", allow: "/" },
       { userAgent: "OAI-SearchBot", allow: "/" },
@@ -83,7 +81,6 @@ module.exports = {
       { userAgent: "cohere-ai", allow: "/" },
       { userAgent: "YouBot", allow: "/" },
     ],
-    // No additionalSitemaps — robots.txt auto-points to sitemap.xml (the index)
   },
 
   transform: async (config, path) => {
@@ -92,7 +89,8 @@ module.exports = {
       loc: path,
       changefreq: isReview ? "monthly" : config.changefreq,
       priority: HIGH_PRIORITY_PATHS.includes(path) ? 1.0 : isReview ? 0.9 : config.priority,
-      lastmod: new Date().toISOString(),
+      // Omit lastmod for auto-discovered static pages — Google trusts absent
+      // lastmod more than one that falsely claims "just updated" on every build
     };
   },
 };
