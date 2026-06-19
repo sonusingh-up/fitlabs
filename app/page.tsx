@@ -130,14 +130,14 @@ export default function HomePage() {
               </span>
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "5px 10px" }}>
                 <span style={{ fontSize: 14, color: "#586259" }}>
-                  By <strong style={{ color: "#17211C" }}>Fitlab Editorial</strong>
+                  By <strong style={{ color: "#17211C" }}>Fitlab Research Team</strong>
                 </span>
                 {/* Peer-reviewed badge */}
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 5, background: "#E7F2EC", border: "1px solid #C9DFD4", borderRadius: 6, padding: "3px 9px", fontSize: 12, color: "#0A4F3B", fontWeight: 600, whiteSpace: "nowrap" }}>
                   <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  R. Mehta, RD
+                  Pankaj Singh, B. Pharm
                 </span>
                 <span style={{ height: 12, width: 1, background: "#CFD6D1", flexShrink: 0 }} />
                 <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#6B7770", letterSpacing: "0.04em", whiteSpace: "nowrap" }}>
