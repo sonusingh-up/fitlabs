@@ -1,72 +1,105 @@
 import { NextResponse } from "next/server";
+import { readdirSync, statSync } from "fs";
+import { join } from "path";
+
+export const revalidate = 3600;
 
 const SITE_URL = "https://fitlabreviews.com";
 const SITE_NAME = "Fitlabreviews";
 const SITE_DESCRIPTION =
   "Evidence-led supplement reviews, ingredient analysis, and wellness guidance. Editorially independent, formula-first.";
 
-const reviews = [
-  {
-    slug: "optimum-nutrition-gold-standard-whey",
-    title: "ON Gold Standard Whey — Review",
-    description:
-      "The benchmark protein powder. Consistent quality, excellent amino acid profile, and the cleanest label at this price tier. FSP Score: 9/10.",
-    category: "Protein Powder",
-    publishedAt: "2025-04-10",
-    author: "Fitlab Research Team",
-  },
-  {
-    slug: "musclepharm-assault-pre-workout",
-    title: "MusclePharm Assault Pre-Workout — Review",
-    description:
-      "Solid stimulant blend with transparent labelling but under-dosed citrulline is a notable gap. FSP Score: 7/10.",
-    category: "Pre-Workout",
-    publishedAt: "2025-03-22",
-    author: "Fitlab Research Team",
-  },
-  {
-    slug: "myprotein-creatine-monohydrate",
-    title: "MyProtein Creatine Monohydrate — Review",
-    description:
-      "The cleanest, most affordable creatine monohydrate available in USA. No frills, just results. FSP Score: 8/10.",
-    category: "Creatine",
-    publishedAt: "2025-03-08",
-    author: "Fitlab Research Team",
-  },
-  {
-    slug: "muscleblaze-biozyme-whey",
-    title: "MuscleBlaze Biozyme Whey — Review",
-    description:
-      "USA-optimised whey with enzyme blend for improved absorption. Strong value proposition for the domestic market. FSP Score: 8/10.",
-    category: "Protein Powder",
-    publishedAt: "2025-02-28",
-    author: "Fitlab Research Team",
-  },
-];
+interface FeedEntry {
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  publishedAt: string;
+  author: string;
+  section: string;
+}
 
-const ingredients = [
-  {
-    slug: "creatine",
-    title: "Creatine Monohydrate — Ingredient Profile",
-    description:
-      "One of the most studied ergogenic aids in sports science. Evidence summary: consistently improves short-burst power output and lean mass gains.",
-    publishedAt: "2025-03-01",
-  },
-  {
-    slug: "whey-protein",
-    title: "Whey Protein Isolate — Ingredient Profile",
-    description:
-      "Complete protein with high leucine content. Rapid absorption post-exercise makes it the gold standard for muscle protein synthesis.",
-    publishedAt: "2025-03-01",
-  },
-  {
-    slug: "caffeine",
-    title: "Caffeine — Ingredient Profile",
-    description:
-      "The world's most-used ergogenic compound. Evidence-backed for alertness, endurance, and fat oxidation at doses 3–6 mg/kg body weight.",
-    publishedAt: "2025-03-01",
-  },
-];
+function discoverStaticRoutes(section: string): string[] {
+  const dir = join(process.cwd(), "app", section);
+  try {
+    return readdirSync(dir)
+      .filter((name) => {
+        if (name.startsWith("[") || name === "page.tsx") return false;
+        const sub = join(dir, name);
+        return statSync(sub).isDirectory() && statSync(join(sub, "page.tsx")).isFile();
+      });
+  } catch {
+    return [];
+  }
+}
+
+function titleFromSlug(slug: string): string {
+  return slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function buildEntries(): FeedEntry[] {
+  const entries: FeedEntry[] = [];
+  const author = "Fitlab Research Team";
+
+  for (const slug of discoverStaticRoutes("reviews")) {
+    entries.push({
+      slug,
+      title: `${titleFromSlug(slug)} — Review`,
+      description: `FSP-scored product review with ingredient analysis, claim audit, and value comparison.`,
+      category: "Product Review",
+      publishedAt: getFileMtime(join("app", "reviews", slug, "page.tsx")),
+      author,
+      section: "reviews",
+    });
+  }
+
+  for (const slug of discoverStaticRoutes("blog")) {
+    entries.push({
+      slug,
+      title: titleFromSlug(slug),
+      description: `Evidence-based article covering the latest research and practical guidance.`,
+      category: "Blog",
+      publishedAt: getFileMtime(join("app", "blog", slug, "page.tsx")),
+      author,
+      section: "blog",
+    });
+  }
+
+  for (const slug of discoverStaticRoutes("research")) {
+    entries.push({
+      slug,
+      title: `${titleFromSlug(slug)} — Research Deep-Dive`,
+      description: `Trial breakdowns, mechanism analysis, and clinical evidence summary.`,
+      category: "Research",
+      publishedAt: getFileMtime(join("app", "research", slug, "page.tsx")),
+      author,
+      section: "research",
+    });
+  }
+
+  for (const slug of discoverStaticRoutes("ingredients")) {
+    entries.push({
+      slug,
+      title: `${titleFromSlug(slug)} — Ingredient Profile`,
+      description: `Evidence-based ingredient analysis with dosing, mechanisms, and safety data.`,
+      category: "Ingredient Research",
+      publishedAt: getFileMtime(join("app", "ingredients", slug, "page.tsx")),
+      author,
+      section: "ingredients",
+    });
+  }
+
+  entries.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  return entries;
+}
+
+function getFileMtime(relPath: string): string {
+  try {
+    return statSync(join(process.cwd(), relPath)).mtime.toISOString();
+  } catch {
+    return new Date().toISOString();
+  }
+}
 
 function escapeXml(str: string): string {
   return str
@@ -77,51 +110,19 @@ function escapeXml(str: string): string {
     .replace(/'/g, "&apos;");
 }
 
-function buildItem(opts: {
-  title: string;
-  link: string;
-  description: string;
-  pubDate: string;
-  category?: string;
-  author?: string;
-}): string {
-  const pub = new Date(opts.pubDate).toUTCString();
-  return `
-    <item>
-      <title>${escapeXml(opts.title)}</title>
-      <link>${escapeXml(opts.link)}</link>
-      <guid isPermaLink="true">${escapeXml(opts.link)}</guid>
-      <description>${escapeXml(opts.description)}</description>
-      <pubDate>${pub}</pubDate>
-      ${opts.category ? `<category>${escapeXml(opts.category)}</category>` : ""}
-      ${opts.author ? `<author>${escapeXml(opts.author)}</author>` : ""}
-    </item>`;
-}
-
 export async function GET() {
-  const reviewItems = reviews.map((r) =>
-    buildItem({
-      title: r.title,
-      link: `${SITE_URL}/reviews/${r.slug}`,
-      description: r.description,
-      pubDate: r.publishedAt,
-      category: r.category,
-      author: r.author,
-    })
-  );
+  const entries = buildEntries();
 
-  const ingredientItems = ingredients.map((i) =>
-    buildItem({
-      title: i.title,
-      link: `${SITE_URL}/ingredients/${i.slug}`,
-      description: i.description,
-      pubDate: i.publishedAt,
-      category: "Ingredient Research",
-      author: "Fitlab Research Team",
-    })
-  );
-
-  const allItems = [...reviewItems, ...ingredientItems].join("");
+  const items = entries.map((e) => `
+    <item>
+      <title>${escapeXml(e.title)}</title>
+      <link>${escapeXml(`${SITE_URL}/${e.section}/${e.slug}`)}</link>
+      <guid isPermaLink="true">${escapeXml(`${SITE_URL}/${e.section}/${e.slug}`)}</guid>
+      <description>${escapeXml(e.description)}</description>
+      <pubDate>${new Date(e.publishedAt).toUTCString()}</pubDate>
+      <category>${escapeXml(e.category)}</category>
+      <author>${escapeXml(e.author)}</author>
+    </item>`).join("");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
@@ -138,11 +139,11 @@ export async function GET() {
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>${SITE_URL}/logo-banner.svg</url>
+      <url>${SITE_URL}/og-image.png</url>
       <title>${escapeXml(SITE_NAME)}</title>
       <link>${SITE_URL}</link>
     </image>
-    ${allItems}
+    ${items}
   </channel>
 </rss>`;
 

@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -83,10 +83,11 @@ export const metadata: Metadata = {
       "Research-grade supplement reviews, ingredient analysis, and wellness guidance. Reviews · No Bias.",
     images: [
       {
-        url: "/logo-banner.svg",
+        url: "/opengraph-image",
         width: 1200,
-        height: 300,
-        alt: "Fitlabreviews — Reviews · No Bias",
+        height: 630,
+        alt: "Fitlabreviews — Evidence-Led Supplement Reviews",
+        type: "image/png",
       },
     ],
   },
@@ -94,7 +95,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fitlabreviews — Evidence-Led Supplement Reviews",
     description: "Research-grade supplement reviews. No bias.",
-    images: ["/logo-banner.svg"],
+    images: ["/opengraph-image"],
   },
   icons: {
     icon: [
