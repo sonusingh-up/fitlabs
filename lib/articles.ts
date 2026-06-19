@@ -61,6 +61,15 @@ export const allArticles: ArticleEntry[] = [
     image: "/illustrations/article-fitness-travel.png",
     date: "2026-04-05",
   },
+  {
+    slug: "glp1-companion-supplements-2026", type: "blog",
+    href: "/blog/glp1-companion-supplements-2026",
+    title: "7 GLP-1 Companion Supplements Trending in 2026",
+    category: "PHARMACOLOGY", tags: ["Nutrition", "Reviews"],
+    mins: 14, evidence: "Strong evidence",
+    image: "/illustrations/article-glp1-blog.png",
+    date: "2026-06-18", featured: true,
+  },
 
   // ── Research articles ─────────────────────────────────────
   {

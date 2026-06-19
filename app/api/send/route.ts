@@ -249,19 +249,11 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
       }
 
-      // Insert into Supabase
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert([{ 
-          name: safeName, 
-          email: safeEmail, 
-          subject: safeSubject, 
-          message: safeMessage 
-        }]);
-      
-      if (dbError) {
-        console.error("[API/send] Supabase error:", dbError.message);
-        // We'll still try to send the email even if the db fails, to avoid data loss on user's end if resend works
+      if (supabase) {
+        const { error: dbError } = await supabase
+          .from('contact_submissions')
+          .insert([{ name: safeName, email: safeEmail, subject: safeSubject, message: safeMessage }]);
+        if (dbError) console.error("[API/send] Supabase error:", dbError.message);
       }
 
       const [notification, confirmation] = await Promise.all([
@@ -300,14 +292,11 @@ export async function POST(req: NextRequest) {
       }
 
       // Insert into Supabase
-      const { error: dbError } = await supabase
-        .from('subscribers')
-        .insert([{ email: safeEmail, source: 'newsletter_form' }]);
-      
-      // If error is unique constraint violation (code 23505), we can ignore it since they're already subscribed
-      if (dbError && dbError.code !== '23505') {
-        console.error("[API/send] Supabase error:", dbError.message);
-        // We can choose to return an error, but let's proceed to send emails anyway to maintain user experience
+      if (supabase) {
+        const { error: dbError } = await supabase
+          .from('subscribers')
+          .insert([{ email: safeEmail, source: 'newsletter_form' }]);
+        if (dbError && dbError.code !== '23505') console.error("[API/send] Supabase error:", dbError.message);
       }
 
       const [notification, welcome] = await Promise.all([
