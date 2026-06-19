@@ -3,21 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-interface Article {
-  slug: string;
-  href: string;
-  category: string;
-  title: string;
-  mins: number;
-  evidence: string;
-  image: string;
-  tags: string[];
-}
+import type { ArticleEntry } from "@/lib/articles";
 
 const TABS = ["Top Reads", "Fitness", "Nutrition", "Reviews", "Sleep & Recovery"];
 
-export default function RecommendedReads({ articles }: { articles: Article[] }) {
+export default function RecommendedReads({ articles }: { articles: ArticleEntry[] }) {
   const [active, setActive] = useState("Top Reads");
 
   const filtered = active === "Top Reads"
@@ -27,27 +17,38 @@ export default function RecommendedReads({ articles }: { articles: Article[] }) 
   return (
     <>
       <div className="hp-filter-scroll" style={{ marginBottom: 40 }}>
-        {TABS.map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActive(tab)}
-            style={{
-              padding: "10px 20px",
-              borderRadius: 999,
-              fontSize: 14,
-              fontWeight: 600,
-              cursor: "pointer",
-              background: active === tab ? "#0F7A5A" : "transparent",
-              color: active === tab ? "#FFFFFF" : "#3F4B43",
-              border: active === tab ? "2px solid #0F7A5A" : "2px solid #D7DDD9",
-              whiteSpace: "nowrap",
-              fontFamily: "var(--font-hanken), sans-serif",
-              transition: "all 0.15s ease",
-            }}
-          >
-            {tab}
-          </button>
-        ))}
+        {TABS.map((tab) => {
+          const count = tab === "Top Reads" ? articles.length : articles.filter(a => a.tags.includes(tab)).length;
+          return (
+            <button
+              key={tab}
+              onClick={() => setActive(tab)}
+              style={{
+                padding: "10px 20px",
+                borderRadius: 999,
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: "pointer",
+                background: active === tab ? "#0F7A5A" : "transparent",
+                color: active === tab ? "#FFFFFF" : "#3F4B43",
+                border: active === tab ? "2px solid #0F7A5A" : "2px solid #D7DDD9",
+                whiteSpace: "nowrap",
+                fontFamily: "var(--font-hanken), sans-serif",
+                transition: "all 0.15s ease",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
+              }}
+            >
+              {tab}
+              {active !== tab && count > 0 && (
+                <span style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace" }}>
+                  {count}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       <div className="hp-reads-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
@@ -67,8 +68,13 @@ export default function RecommendedReads({ articles }: { articles: Article[] }) 
               />
             </div>
             <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 8 }}>
-                {article.category}
+              <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#0F7A5A" }}>
+                  {article.category}
+                </span>
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: ".06em", textTransform: "uppercase", color: "#FFFFFF", backgroundColor: article.type === "research" ? "#17211C" : article.type === "blog" ? "#0F7A5A" : "#C98A1E", padding: "1px 6px", borderRadius: 4 }}>
+                  {article.type}
+                </span>
               </div>
               <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 500, lineHeight: 1.22, margin: "0 0 10px", color: "#17211C" }}>
                 {article.title}

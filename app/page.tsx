@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { researchBriefs } from "@/lib/data";
+import { allArticles } from "@/lib/articles";
 import TrustPillars from "@/components/ui/TrustPillars";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import RecommendedReads from "@/components/ui/RecommendedReads";
@@ -75,36 +76,13 @@ const EDITOR_PICKS = [
   },
 ];
 
-const RECOMMENDED_READS = [
-  {
-    slug: "sleep-duration-biological-aging", href: "/research/sleep-duration-biological-aging",
-    category: "LONGEVITY & SLEEP", title: "The Perfect Sleep Window: Why 6.4–7.8 Hours Is the Anti-Aging Sweet Spot",
-    mins: 9, evidence: "Strong evidence", warm: false,
-    image: "/lifestyle/sleep_longevity.png",
-    tags: ["Sleep & Recovery", "Fitness"],
-  },
-  {
-    slug: "glp1-beyond-weight-loss", href: "/research/glp1-beyond-weight-loss",
-    category: "PHARMACOLOGY", title: "GLP-1 Drugs Like Ozempic & Wegovy: 5 Benefits Beyond Weight Loss",
-    mins: 13, evidence: "Strong evidence", warm: false,
-    image: "/lifestyle/fitness_yoga.png",
-    tags: ["Nutrition", "Reviews"],
-  },
-  {
-    slug: "protein-timing-myth", href: "/research/protein-timing-myth",
-    category: "NUTRITION SCIENCE", title: "Protein Timing Is Mostly a Myth — Total Daily Intake Is What Matters",
-    mins: 7, evidence: "Moderate evidence", warm: true,
-    image: "/lifestyle/nutrition_protein.png",
-    tags: ["Nutrition", "Fitness"],
-  },
-  {
-    slug: "diet-depression-anxiety", href: "/blog/diet-depression-anxiety",
-    category: "MENTAL HEALTH", title: "Food as Medicine: How Your Diet Directly Impacts Depression & Anxiety",
-    mins: 14, evidence: "Strong evidence", warm: false,
-    image: "/lifestyle/article_thumbnail_woman.png",
-    tags: ["Nutrition"],
-  },
-];
+const RECOMMENDED_READS = allArticles
+  .sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return b.date.localeCompare(a.date);
+  })
+  .slice(0, 8);
 
 
 export default function HomePage() {
