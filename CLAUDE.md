@@ -462,7 +462,97 @@ Brand pages live at `app/brands/[brand-name]/page.tsx` — one file per brand, n
 
 ---
 
-## 16. Build Verification
+## 16. Article Registry — Auto-Feed System
+
+### Rule: Every new article MUST be registered in `lib/articles.ts`
+The homepage "Recommended Reads" section, "Trending now" sidebar, and filter tabs all pull from a central registry at `lib/articles.ts`. If an article is not in this file, it will NOT appear on the homepage.
+
+**After creating any new page** (blog, research, ingredient, or review), add an entry:
+```typescript
+// In lib/articles.ts → allArticles array
+{
+  slug: "your-article-slug", type: "blog",        // "blog" | "research" | "ingredient" | "review"
+  href: "/blog/your-article-slug",
+  title: "Your Full Article Title",
+  category: "CATEGORY NAME",                       // e.g. "PHARMACOLOGY", "NUTRITION", "FITNESS"
+  tags: ["Nutrition", "Reviews"],                   // determines which filter tabs show it
+  mins: 12, evidence: "Strong evidence",            // or "Moderate evidence" / "Limited evidence"
+  image: "/illustrations/your-image.png",           // unique illustration or photo
+  date: "2026-06-19",                               // publish date YYYY-MM-DD
+  featured: true,                                   // set true for hero/priority placement
+},
+```
+
+**Available filter tags:** `"Fitness"`, `"Nutrition"`, `"Reviews"`, `"Sleep & Recovery"` — articles can have multiple tags.
+
+**Image fallback system:** If an article has no `image` field, `getArticleImage()` auto-assigns a category-based illustration from `/public/illustrations/fallback-*.png`. But every article should have its own unique illustration.
+
+**How the homepage uses the registry:**
+- **Hero "Trending now" sidebar** — 4 most recent articles (excluding the featured hero article)
+- **"Worth your time" section** — up to 8 articles, featured first then by date, filterable by tag
+- **Filter tab counts** — auto-calculated from tags
+
+### Skill integration
+The `/blog-fit`, `/research-article`, `/ingredient-article`, and `/review-article` skills should all add an entry to `lib/articles.ts` as their final step. This is non-negotiable — an article without a registry entry is invisible on the homepage.
+
+---
+
+## 17. Reusable UI Components for Articles
+
+New articles should use these shared components:
+
+| Component | Import | Purpose |
+|---|---|---|
+| `ReadingProgress` | `@/components/ui/ReadingProgress` | Green progress bar fixed at top of page |
+| `ShareButtons` | `@/components/ui/ShareButtons` | X, LinkedIn, copy-link buttons (sidebar + mobile) |
+| `NewsletterForm` | `@/components/ui/NewsletterForm` | Working newsletter form with Resend + Supabase |
+| `TableOfContents` | `@/components/ui/TableOfContents` | Desktop sidebar TOC |
+| `MobileTOC` | `@/components/ui/MobileTOC` | Collapsible mobile TOC |
+
+### Blog article required imports:
+```tsx
+import ReadingProgress from "@/components/ui/ReadingProgress";
+import ShareButtons from "@/components/ui/ShareButtons";
+```
+
+Add `<ReadingProgress />` after JSON-LD scripts. Add `<ShareButtons title="..." slug="..." />` in the sidebar below TOC.
+
+---
+
+## 18. Design Tokens — Card & Section Colors
+
+Blog articles use a warm editorial palette for cards and callouts:
+
+| Element | Background | Border | Text |
+|---|---|---|---|
+| Study reference cards | `#FFF5EB` | `#EBD8C3` (left: `#C98A1E`) | `#3D2E22` |
+| Key Takeaways box | `#FFF5EB` | `#EBD8C3` (left: `#C98A1E`) | `#2D2926` |
+| "What this means" callout | `#FFF5EB` | `#EBD8C3` (left: `#0F7A5A`) | `#17211C` |
+| Mechanism panels (01, 02...) | `#FFF5EB` | `#EBD8C3` | Numbers: `#C98A1E` |
+| Bottom Line header | `#FFF5EB` | `#EBD8C3` | `#1A1714` |
+| Bottom Line body | `#FAECD8` | — | `#3D2E22` |
+| FAQ toggle circles | `#FFF5EB` | `#EBD8C3` | `#0F7A5A` |
+| Newsletter CTA | gradient `#17211C → #0F7A5A` | — | `#F5F0E8` |
+
+The site's standard green palette (`#0F7A5A`, `#17211C`, `#E4E8E5`, `#F6F8F6`) is used for everything outside of cards — headers, nav, footer, dividers.
+
+---
+
+## 19. Supabase Integration
+
+Supabase is connected for:
+- **Newsletter subscribers** — stored in `subscribers` table on form submission
+- **Contact form submissions** — stored in `contact_submissions` table
+
+The Supabase client (`lib/supabase.ts`) is gracefully optional — returns `null` when env vars are missing. API routes check `if (supabase)` before DB operations so builds pass without Supabase configured locally.
+
+Required env vars (set in Vercel, not local):
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+---
+
+## 20. Build Verification
 
 Before every `git push`, run:
 ```bash
@@ -470,3 +560,11 @@ npm run build
 ```
 Fix all TypeScript errors and warnings before pushing.
 The postbuild runs `next-sitemap` and `pagefind` automatically.
+
+### Pre-push checklist for new articles:
+- [ ] Article page created at correct static route
+- [ ] Entry added to `lib/articles.ts` with all fields
+- [ ] Article has a unique illustration (not shared stock photo)
+- [ ] JSON-LD schemas included (Article + FAQPage)
+- [ ] `ReadingProgress` and `ShareButtons` components imported
+- [ ] `npm run build` passes clean

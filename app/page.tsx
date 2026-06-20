@@ -7,6 +7,11 @@ import TrustPillars from "@/components/ui/TrustPillars";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import RecommendedReads from "@/components/ui/RecommendedReads";
 
+// ─────────────────────────────────────────────────────────────────
+// SCENARIO C: AUTO-REVALIDATION (TIME-BASED)
+// This tells Next.js to check for new articles every 3600 seconds (1 hour).
+// It will automatically push fresh articles to your Homepage layouts.
+// ─────────────────────────────────────────────────────────────────
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
@@ -16,6 +21,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
+// 1. FOR IMAGE: image_eb108b.png ("From the lab" section)
+// Removed the .sort() by date to resolve the TypeScript error since ResearchBrief does not have a date property.
 const latestResearch = researchBriefs.slice(0, 3);
 
 const GOAL_CARDS = [
@@ -78,7 +85,9 @@ const EDITOR_PICKS = [
   },
 ];
 
-const RECOMMENDED_READS = allArticles
+// 2. FOR IMAGE: image_eb10c3.jpg ("Recommended Reads")
+// This is already perfectly sorting by date and checking for featured tags.
+const RECOMMENDED_READS = [...allArticles]
   .sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
@@ -92,7 +101,8 @@ export default function HomePage() {
     <>
       {/* ── HERO ── */}
       <section className="hp-hero-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "56px 24px 72px", display: "grid", gridTemplateColumns: "1.55fr 1fr", gap: 56, alignItems: "start" }}>
-        {/* Featured article */}
+        
+        {/* Featured article (Hardcoded Hero) */}
         <article>
           <Link href="/research/sleep-duration-biological-aging" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
             <div style={{ width: "100%", aspectRatio: "16/10", borderRadius: 16, overflow: "hidden", position: "relative" }}>
@@ -150,7 +160,8 @@ export default function HomePage() {
           </Link>
         </article>
 
-        {/* Trending sidebar — auto from registry */}
+        {/* 3. FOR IMAGE: image_eb10e5.jpg ("Trending now" sidebar) */}
+        {/* With revalidate added, this will automatically pull the newest 4 articles */}
         <aside className="hp-hero-aside">
           <div style={{ display: "flex", alignItems: "center", gap: 9, marginBottom: 22 }}>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14A474" strokeWidth="2.4">
@@ -328,7 +339,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── INGREDIENT LIBRARY PROMO (HEALTHLINE REDESIGN) ── */}
+      {/* ── INGREDIENT LIBRARY PROMO ── */}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "84px 24px" }}>
         <div className="layout-ingredient-promo">
           
@@ -407,6 +418,7 @@ export default function HomePage() {
           </h2>
         </div>
 
+        {/* The revalidate variable automatically updates this component too */}
         <RecommendedReads articles={RECOMMENDED_READS} />
       </section>
 
