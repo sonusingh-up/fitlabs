@@ -9,7 +9,6 @@ import { ExternalLink, AlertTriangle, Star, ChevronRight, CheckCircle2, XCircle,
 import { PortableText } from "@portabletext/react";
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
-import AuthorPopup from "@/components/ui/AuthorPopup";
 import ProsCons from "@/components/ui/ProsCons";
 import MetadataStrip from "@/components/ui/MetadataStrip";
 import TableOfContents from "@/components/ui/TableOfContents";
@@ -18,26 +17,23 @@ import ScoreBreakdown from "@/components/ui/ScoreBreakdown";
 import FlagSystem from "@/components/ui/FlagSystem";
 import ClaimAudit from "@/components/ui/ClaimAudit";
 import ValueMetricPanel from "@/components/ui/ValueMetricPanel";
-import ReviewCard from "@/components/ui/ReviewCard";
 import ReadingProgress from "@/components/ui/ReadingProgress";
+import AuthorPopup from "@/components/ui/AuthorPopup";
 import { computeComposite } from "@/lib/scoring";
 import { getReviewBySlug, getAllReviewSlugs, urlFor } from "@/lib/sanity";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 const tocItems = [
   { id: "key-takeaways", label: "Key Takeaways" },
-  { id: "verdict", label: "Quick Verdict" },
-  { id: "product-specs", label: "Product Specs" },
-  { id: "score-breakdown", label: "Score Breakdown" },
-  { id: "flags", label: "Red & Green Flags" },
-  { id: "tester-experience", label: "Our Experience" },
+  { id: "our-experience", label: "Our Experience" },
   { id: "ingredients", label: "Ingredients" },
+  { id: "score-breakdown", label: "Score Breakdown" },
   { id: "claim-audit", label: "Claim Audit" },
   { id: "pros-cons", label: "Pros & Cons" },
   { id: "value", label: "Price & Value" },
-  { id: "body", label: "Full Review" },
+  { id: "alternatives", label: "Alternatives" },
   { id: "faq", label: "FAQ" },
-  { id: "final", label: "Final Verdict" },
+  { id: "takeaway", label: "Takeaway" },
 ];
 
 export async function generateStaticParams() {
@@ -51,20 +47,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!review) return { title: "Review Not Found" };
   const heroImg = review.heroImage ? urlFor(review.heroImage).width(1200).height(630).url() : undefined;
   return {
-    title: `${review.title}`,
+    title: review.title,
     description: review.metaDescription || `Evidence-led review of ${review.title}: ingredient analysis, FSP score, and honest verdict.`,
     alternates: { canonical: `/reviews/${slug}` },
     ...(heroImg ? { openGraph: { images: [{ url: heroImg, width: 1200, height: 630, alt: review.title }] } } : {}),
   };
 }
-
-const PILLAR_ICONS: Record<string, React.ReactNode> = {
-  formula: <FlaskConical size={16} />,
-  transparency: <Shield size={16} />,
-  verification: <CheckCircle2 size={16} />,
-  value: <Scale size={16} />,
-  practical: <Sparkles size={16} />,
-};
 
 export default async function ReviewPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -80,69 +68,30 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     editorialScore: (review.editorialScore ?? 5) as ReviewRating,
   };
   rubric.compositeScore = computeComposite(rubric.pillars, rubric.flags);
-
   const heroImageUrl = review.heroImage ? urlFor(review.heroImage).width(1200).height(630).url() : null;
 
-  const publishedDate = review.publishedAt
-    ? new Date(review.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
-    : "—";
-  const updatedDate = review.updatedAt
-    ? new Date(review.updatedAt).toLocaleDateString("en-US", { month: "long", year: "numeric" })
-    : publishedDate;
+  const publishedDate = review.publishedAt ? new Date(review.publishedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "—";
+  const updatedDate = review.updatedAt ? new Date(review.updatedAt).toLocaleDateString("en-US", { month: "long", year: "numeric" }) : publishedDate;
 
   const reviewSchema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
+    "@context": "https://schema.org", "@type": "Review",
     "@id": `https://fitlabreviews.com/reviews/${slug}#review`,
     name: `${review.title} — Fitlabreviews FSP Review`,
     ...(heroImageUrl ? { image: heroImageUrl } : {}),
     reviewBody: review.verdict,
     reviewRating: { "@type": "Rating", ratingValue: rubric.editorialScore, bestRating: 10, worstRating: 1 },
-    datePublished: review.publishedAt ?? "",
-    dateModified: review.updatedAt ?? review.publishedAt ?? "",
-    author: {
-      "@type": review.author ? "Person" : "Organization",
-      name: review.author?.name ?? "Fitlab Research Team",
-      url: review.author ? `https://fitlabreviews.com/authors/${review.author.slug}` : "https://fitlabreviews.com/authors",
-    },
+    datePublished: review.publishedAt ?? "", dateModified: review.updatedAt ?? review.publishedAt ?? "",
+    author: { "@type": review.author ? "Person" : "Organization", name: review.author?.name ?? "Fitlab Research Team", url: review.author ? `https://fitlabreviews.com/authors/${review.author.slug}` : "https://fitlabreviews.com/authors" },
     publisher: { "@id": "https://fitlabreviews.com/#organization" },
-    itemReviewed: {
-      "@type": "Product",
-      name: review.title,
-      ...(heroImageUrl ? { image: heroImageUrl } : {}),
-      brand: { "@type": "Brand", name: review.brand },
-      category: review.category,
-    },
+    itemReviewed: { "@type": "Product", name: review.title, ...(heroImageUrl ? { image: heroImageUrl } : {}), brand: { "@type": "Brand", name: review.brand }, category: review.category },
     url: `https://fitlabreviews.com/reviews/${slug}`,
   };
-
   const faqSchema = review.faqItems && review.faqItems.length >= 4 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: review.faqItems.map((f: { question: string; answer: string }) => ({
-      "@type": "Question",
-      name: f.question,
-      acceptedAnswer: { "@type": "Answer", text: f.answer },
-    })),
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: review.faqItems.map((f: { question: string; answer: string }) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
   } : null;
 
-  // Shared card style
-  const card = {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 20,
-    border: "1px solid #E8EDE9",
-    overflow: "hidden" as const,
-  };
-  const cardInner = { padding: "28px 28px" };
-  const sectionGap = { marginBottom: 24 };
-  const h2Style = {
-    fontFamily: "var(--font-playfair), Georgia, serif",
-    fontSize: "1.45rem",
-    fontWeight: 800 as const,
-    color: "#17211C",
-    letterSpacing: "-0.02em",
-    margin: "0 0 20px",
-  };
+  const sectionDivider = { borderBottom: "1px solid #E9EDE9", paddingBottom: 40, marginBottom: 40 };
 
   return (
     <>
@@ -150,648 +99,362 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <ReadingProgress />
 
-      <div style={{ backgroundColor: "#F4F7F5", minHeight: "100vh" }}>
+      <div style={{ backgroundColor: "#FFFFFF" }}>
 
-        {/* ═══ HERO BANNER ═══ */}
-        <div style={{ background: "linear-gradient(145deg, #17211C 0%, #0F3D2E 40%, #1A6B4B 100%)", position: "relative", overflow: "hidden" }}>
-          <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "radial-gradient(circle at 20% 80%, rgba(255,255,255,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.2) 0%, transparent 50%)" }} />
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "48px 24px 56px", position: "relative", zIndex: 1 }}>
-            {/* Breadcrumb */}
-            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 24, flexWrap: "wrap" }}>
-              <Link href="/" style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>Home</Link>
-              <ChevronRight size={12} style={{ color: "rgba(255,255,255,0.3)" }} />
-              <Link href="/reviews" style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>Reviews</Link>
-              <ChevronRight size={12} style={{ color: "rgba(255,255,255,0.3)" }} />
-              <span style={{ fontSize: 12, color: "rgba(255,255,255,0.8)", fontFamily: "var(--font-dm-sans)" }}>{review.brand}</span>
-            </div>
-
-            <div style={{ display: "flex", gap: 40, alignItems: "flex-start", flexWrap: "wrap" }}>
-              {/* Left — text */}
-              <div style={{ flex: "1 1 500px", minWidth: 0 }}>
-                {/* Badges */}
-                <div className="hidden sm:flex" style={{ alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
-                  {review.reviewCode && <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em" }}>{review.reviewCode}</span>}
-                  <span style={{ padding: "4px 10px", backgroundColor: "rgba(15,122,90,0.2)", border: "1px solid rgba(15,122,90,0.3)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "#4ADE80", letterSpacing: "0.1em" }}>FSP SCORED</span>
-                  <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em" }}>EVIDENCE BASED</span>
-                  {review.category && <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.06)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.5)" }}>{review.category.toUpperCase()}</span>}
-                </div>
-
-                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, color: "rgba(255,255,255,0.5)", marginBottom: 8 }}>{review.brand} · {review.category}</p>
-                <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4.5vw, 2.8rem)", fontWeight: 900, color: "#FFFFFF", letterSpacing: "-0.03em", lineHeight: 1.08, marginBottom: 20 }}>
-                  {review.title}
-                </h1>
-                {review.verdict && (
-                  <p style={{ fontSize: 16, color: "rgba(255,255,255,0.7)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>{review.verdict}</p>
-                )}
-
-                {/* CTA row */}
-                <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                  {review.affiliateUrl && (
-                    <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)" }}>
-                      Check Price <ExternalLink size={14} />
-                    </Link>
-                  )}
-                  <Link href="/methodology" style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", fontFamily: "var(--font-dm-sans)", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-                    FSP {rubric.compositeScore.toFixed(1)}/10 — How we score <ArrowRight size={12} />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Right — product image + score */}
-              <div style={{ flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-                {/* Product image */}
-                {heroImageUrl && (
-                  <div className="hidden sm:flex" style={{ width: 180, height: 180, borderRadius: 20, overflow: "hidden", backgroundColor: "rgba(255,255,255,0.06)", border: "2px solid rgba(255,255,255,0.1)", alignItems: "center", justifyContent: "center" }}>
-                    <Image src={heroImageUrl} alt={review.title} width={180} height={180} style={{ objectFit: "cover", width: "100%", height: "100%" }} />
-                  </div>
-                )}
-                {/* Score ring */}
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-                  <div style={{ width: 100, height: 100, borderRadius: "50%", background: "rgba(255,255,255,0.06)", border: "3px solid rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 36, fontWeight: 900, color: "#FFFFFF", lineHeight: 1 }}>{rubric.editorialScore}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, color: "rgba(255,255,255,0.4)", letterSpacing: "0.08em" }}>/10</span>
-                  </div>
-                  <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 700, color: "#4ADE80", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                    {rubric.editorialScore >= 9 ? "EXCEPTIONAL" : rubric.editorialScore >= 8 ? "EXCELLENT" : rubric.editorialScore >= 7 ? "GOOD" : "AVERAGE"}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Star rating */}
-            <div style={{ display: "flex", gap: 4, marginTop: 20 }}>
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} size={16} style={{ color: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "rgba(255,255,255,0.15)", fill: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "none" }} />
-              ))}
-              <span style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", fontFamily: "var(--font-dm-sans)", marginLeft: 8 }}>{rubric.editorialScore}/10 editorial score</span>
-            </div>
+        {/* ── Breadcrumb ── */}
+        <div style={{ borderBottom: "1px solid #E9EDE9", backgroundColor: "#F6F8F6" }} className="breadcrumb-pad">
+          <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+            <Link href="/" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>Home</Link>
+            <ChevronRight size={12} style={{ color: "#D4C9B8" }} />
+            <Link href="/reviews" style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>Reviews</Link>
+            <ChevronRight size={12} style={{ color: "#D4C9B8" }} />
+            <span style={{ fontSize: 12, color: "#17211C", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>{review.brand}</span>
           </div>
         </div>
 
-        {/* ═══ METADATA STRIP ═══ */}
-        <div style={{ maxWidth: 1200, margin: "-24px auto 0", padding: "0 24px", position: "relative", zIndex: 2 }}>
-          <div style={{ ...card, padding: "16px 24px" }}>
-            <MetadataStrip items={[
-              { label: "Published", value: publishedDate },
-              { label: "Last Updated", value: updatedDate },
-              ...(review.testingPeriod ? [{ label: "Testing Period", value: review.testingPeriod }] : []),
-              ...(review.tubsTested ? [{ label: "Tubs Tested", value: review.tubsTested }] : []),
-              { label: "Price Range", value: review.priceRange ? review.priceRange.charAt(0).toUpperCase() + review.priceRange.slice(1) : "—" },
-              { label: "FSP Score", value: `${rubric.editorialScore}/10` },
-            ]} />
+        {/* ── Article header ── */}
+        <div className="pad-hero" style={{ borderBottom: "1px solid #E9EDE9" }}>
+          <div style={{ maxWidth: 740, margin: "0 auto" }} className="px-page">
+            <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
+              <span style={{ padding: "3px 9px", backgroundColor: "#E7F2EC", borderRadius: 6, fontSize: 11, fontWeight: 600, color: "#0A4F3B", fontFamily: "var(--font-dm-sans)" }}>Evidence Based</span>
+              {review.reviewCode && <span style={{ fontSize: 11, color: "#9CA3AF", fontFamily: "var(--font-jetbrains), monospace" }}>{review.reviewCode}</span>}
+            </div>
+            <h1 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.8rem, 4.5vw, 2.6rem)", fontWeight: 800, color: "#17211C", letterSpacing: "-0.02em", lineHeight: 1.15, marginBottom: 16 }}>
+              {review.title} Review ({new Date().getFullYear()})
+            </h1>
+            <p style={{ fontSize: 17, color: "#3F4B43", lineHeight: 1.7, marginBottom: 20 }}>{review.verdict}</p>
+
+            {/* Author row */}
+            <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 16 }}>
+              {review.author && (
+                <AuthorPopup label="Written by" author={{ name: review.author.name, slug: review.author.slug, role: review.author.role, bio: review.author.bio, avatarUrl: review.author.avatar ? urlFor(review.author.avatar).width(128).height(128).url() : undefined, credentials: review.author.credentials, linkedIn: review.author.linkedIn }} />
+              )}
+              {review.reviewer && (
+                <>
+                  <div style={{ width: 1, height: 28, backgroundColor: "#E4E8E5" }} />
+                  <AuthorPopup label="Reviewed by" author={{ name: review.reviewer.name, slug: review.reviewer.slug, role: review.reviewer.role, bio: review.reviewer.bio, avatarUrl: review.reviewer.avatar ? urlFor(review.reviewer.avatar).width(128).height(128).url() : undefined, credentials: review.reviewer.credentials, linkedIn: review.reviewer.linkedIn }} />
+                </>
+              )}
+            </div>
+            <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans)" }}>Updated {updatedDate}</p>
           </div>
         </div>
 
-        {/* ═══ BODY ═══ */}
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "24px 24px 80px" }}>
-
-          {/* Author box */}
-          {(review.author || review.reviewer) && (
-            <div style={{ ...sectionGap, ...card, padding: "20px 24px" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 20, flexWrap: "wrap" }}>
-                {review.author && (
-                  <AuthorPopup
-                    label="Written by"
-                    author={{
-                      name: review.author.name,
-                      slug: review.author.slug,
-                      role: review.author.role,
-                      bio: review.author.bio,
-                      avatarUrl: review.author.avatar ? urlFor(review.author.avatar).width(128).height(128).url() : undefined,
-                      credentials: review.author.credentials,
-                      linkedIn: review.author.linkedIn,
-                    }}
-                  />
-                )}
-                {review.reviewer && (
-                  <>
-                    <div style={{ width: 1, height: 36, backgroundColor: "#E8EDE9" }} />
-                    <AuthorPopup
-                      label="Reviewed by"
-                      author={{
-                        name: review.reviewer.name,
-                        slug: review.reviewer.slug,
-                        role: review.reviewer.role,
-                        bio: review.reviewer.bio,
-                        avatarUrl: review.reviewer.avatar ? urlFor(review.reviewer.avatar).width(128).height(128).url() : undefined,
-                        credentials: review.reviewer.credentials,
-                        linkedIn: review.reviewer.linkedIn,
-                      }}
-                    />
-                  </>
-                )}
-                <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 6, padding: "4px 10px", backgroundColor: "#E7F2EC", borderRadius: 8 }}>
-                  <Shield size={12} style={{ color: "#0F7A5A" }} />
-                  <span style={{ fontSize: 10, color: "#0A4F3B", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>EDITORIALLY INDEPENDENT</span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Affiliate notice */}
-          <div style={{ ...sectionGap, padding: "12px 18px", backgroundColor: "rgba(15,122,90,0.04)", border: "1px solid rgba(15,122,90,0.1)", borderRadius: 14, display: "flex", alignItems: "center", gap: 10 }}>
-            <AlertTriangle size={13} style={{ color: "#6B7770", flexShrink: 0 }} />
-            <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
-              This review may contain affiliate links. Commissions do not influence our ratings.{" "}
-              <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A", fontWeight: 600 }}>Read our disclosure →</Link>
-            </p>
+        {/* ── Hero image ── */}
+        {heroImageUrl && (
+          <div style={{ maxWidth: 740, margin: "0 auto", padding: "32px 24px 0" }}>
+            <Image src={heroImageUrl} alt={review.title} width={1200} height={630} priority style={{ width: "100%", height: "auto", borderRadius: 12, objectFit: "cover" }} />
           </div>
+        )}
 
-          {/* Two-column: TOC + Content */}
+        {/* ── Body: TOC sidebar + article ── */}
+        <div style={{ maxWidth: 1100, margin: "0 auto" }} className="container-pad">
           <div className="layout-sidebar">
 
-            {/* TOC sidebar */}
             <aside className="hidden lg:block" style={{ borderRight: "1px solid #E4E8E5" }}>
               <TableOfContents items={tocItems} />
             </aside>
 
-            <article style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: 24 }}>
+            <article style={{ minWidth: 0, maxWidth: 740 }} className="ingredient-article">
 
-              {/* Mobile TOC */}
-              <div className="block lg:hidden">
+              <div className="block lg:hidden" style={{ marginBottom: 32 }}>
                 <MobileTOC items={tocItems} />
               </div>
 
-              {/* ── KEY TAKEAWAYS ── */}
-              {review.keyTakeaways && review.keyTakeaways.length > 0 && (
-                <div id="key-takeaways" style={{ ...card, borderLeft: "4px solid #0F7A5A" }}>
-                  <div style={cardInner}>
-                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
-                      <div style={{ width: 28, height: 28, borderRadius: 8, background: "linear-gradient(135deg, #0F7A5A, #14A474)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
-                        <Sparkles size={14} />
-                      </div>
-                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, color: "#0A4F3B", letterSpacing: "0.05em", textTransform: "uppercase" }}>Key Takeaways</span>
-                    </div>
-                    <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
-                      {review.keyTakeaways.map((t: string, i: number) => (
-                        <li key={i} style={{ fontSize: 15, color: "#17211C", lineHeight: 1.65, fontFamily: "var(--font-dm-sans)" }}>{t}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
+              {/* ════════ KEY TAKEAWAYS (boxed) ════════ */}
+              <div id="key-takeaways" style={{ padding: "20px 24px", backgroundColor: "#F2F8F4", borderLeft: "4px solid #0F7A5A", borderRadius: "0 12px 12px 0", marginBottom: 40 }}>
+                <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, color: "#0A4F3B", marginBottom: 12, letterSpacing: "0.04em", textTransform: "uppercase" }}>Key Takeaways</p>
+                <ul style={{ margin: 0, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 8 }}>
+                  {(review.keyTakeaways && review.keyTakeaways.length > 0 ? review.keyTakeaways : [
+                    review.verdict,
+                    ...(review.bestFor?.length ? [`Best suited for: ${review.bestFor.join(", ")}.`] : []),
+                    `FSP composite score: ${rubric.compositeScore.toFixed(1)}/10; editorial score: ${rubric.editorialScore}/10.`,
+                  ]).map((t: string, i: number) => (
+                    <li key={i} style={{ fontSize: 15, color: "#17211C", lineHeight: 1.65 }}>{t}</li>
+                  ))}
+                </ul>
+              </div>
 
-              {/* ── WHY TRUST US ── */}
-              <div style={{ ...card, background: "linear-gradient(145deg, #F2F8F4, #E7F2EC)" }}>
-                <div style={cardInner}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 14 }}>
-                    <Shield size={16} style={{ color: "#0F7A5A" }} />
-                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, fontWeight: 700, color: "#17211C" }}>Why trust Fitlabreviews</span>
-                  </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
-                    {[
-                      { val: "142+", label: "Products reviewed" },
-                      { val: "87+", label: "Ingredients profiled" },
-                      { val: "FSP v2.1", label: "Scoring protocol" },
-                      { val: "0", label: "Sponsored reviews" },
-                    ].map((s) => (
-                      <div key={s.label} style={{ textAlign: "center", padding: "12px 8px" }}>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 800, color: "#0F7A5A", margin: 0, lineHeight: 1 }}>{s.val}</p>
-                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "#586259", margin: "4px 0 0" }}>{s.label}</p>
-                      </div>
+              {/* ── Trust line (not a card — just a one-liner) ── */}
+              <p style={{ fontSize: 12, color: "#9CA3AF", marginBottom: 40, display: "flex", alignItems: "center", gap: 6 }}>
+                <Shield size={12} style={{ color: "#0F7A5A" }} />
+                142+ products reviewed · Editorially independent · No sponsored content ·{" "}
+                <Link href="/methodology" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>How we evaluate →</Link>
+              </p>
+
+              {/* ════════ PRODUCT SPECS (boxed — compact inline card) ════════ */}
+              <div style={{ padding: "20px 24px", border: "1px solid #E4E8E5", borderRadius: 12, marginBottom: 40, display: "flex", gap: 20, alignItems: "center", flexWrap: "wrap" }}>
+                {heroImageUrl && (
+                  <Image src={heroImageUrl} alt={review.title} width={100} height={100} style={{ borderRadius: 10, objectFit: "cover", flexShrink: 0 }} />
+                )}
+                <div style={{ flex: 1, minWidth: 200 }}>
+                  <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, fontWeight: 700, color: "#17211C", margin: "0 0 4px" }}>{review.title}</p>
+                  <div style={{ display: "flex", gap: 3, marginBottom: 6 }}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} size={14} style={{ color: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "#E4E8E5", fill: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "none" }} />
                     ))}
+                    <span style={{ fontSize: 13, color: "#17211C", fontWeight: 700, fontFamily: "var(--font-dm-sans)", marginLeft: 4 }}>{rubric.editorialScore}/10</span>
                   </div>
-                  <Link href="/methodology" style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 12, fontSize: 12, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
-                    How we evaluate and score products <ArrowRight size={12} />
-                  </Link>
-                </div>
-              </div>
-
-              {/* ── QUICK VERDICT ── */}
-              <div id="verdict" style={card}>
-                <div style={cardInner}>
-                  <h2 style={h2Style}>Quick Verdict</h2>
-                  <div style={{ padding: "20px 22px", background: "linear-gradient(135deg, #F2F8F4, #E7F2EC)", borderRadius: 16, borderLeft: "4px solid #0F7A5A", marginBottom: review.bestFor?.length ? 20 : 0 }}>
-                    <p style={{ fontSize: 15, color: "#17211C", lineHeight: 1.75, margin: 0 }}>{review.verdict}</p>
-                  </div>
-                  {review.tags && review.tags.length > 0 && (
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 16 }}>
-                      {review.tags.map((tag: string) => (
-                        <span key={tag} style={{ padding: "5px 12px", background: "linear-gradient(135deg, rgba(15,122,90,0.06), rgba(15,122,90,0.1))", borderRadius: 10, fontSize: 11, color: "#0A4F3B", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>{tag}</span>
-                      ))}
-                    </div>
-                  )}
-                  {(review.bestFor?.length > 0 || review.notIdealFor?.length > 0) && (
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 20 }}>
-                      {review.bestFor?.length > 0 && (
-                        <div style={{ padding: "18px 20px", background: "linear-gradient(145deg, #E7F2EC, #D4E9DF)", borderRadius: 16 }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
-                            <CheckCircle2 size={14} color="#0F7A5A" />
-                            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 700, color: "#0A4F3B", letterSpacing: "0.08em", textTransform: "uppercase" }}>Best For</span>
-                          </div>
-                          {review.bestFor.map((b: string) => <p key={b} style={{ fontSize: 13, color: "#17211C", padding: "3px 0", fontFamily: "var(--font-dm-sans)" }}>· {b}</p>)}
-                        </div>
-                      )}
-                      {review.notIdealFor?.length > 0 && (
-                        <div style={{ padding: "18px 20px", backgroundColor: "#F6F8F6", borderRadius: 16 }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 10 }}>
-                            <XCircle size={14} color="#9CA3AF" />
-                            <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, fontWeight: 700, color: "#6B7770", letterSpacing: "0.08em", textTransform: "uppercase" }}>Not Ideal For</span>
-                          </div>
-                          {review.notIdealFor.map((b: string) => <p key={b} style={{ fontSize: 13, color: "#586259", padding: "3px 0", fontFamily: "var(--font-dm-sans)" }}>· {b}</p>)}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* ── PRODUCT SPECS CARD ── */}
-              {(review.productSpecs || review.valueMetric?.pricePerServing > 0) && (
-                <div id="product-specs" style={{ borderRadius: 20, overflow: "hidden", background: "linear-gradient(145deg, #17211C 0%, #0F3D2E 100%)" }}>
-                  <div style={{ padding: "24px 28px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20 }}>
-                      <div>
-                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>PRODUCT SPECS</p>
-                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{review.title}</p>
-                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "4px 0 0" }}>{review.brand} · {review.category}</p>
-                      </div>
-                      <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star key={i} size={14} style={{ color: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "rgba(255,255,255,0.15)", fill: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "none" }} />
-                        ))}
-                      </div>
-                    </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: 1, backgroundColor: "rgba(255,255,255,0.06)", borderRadius: 12, overflow: "hidden" }}>
-                      {[
-                        ...(review.productSpecs?.servings ? [{ label: "Servings", value: review.productSpecs.servings }] : []),
-                        ...(review.productSpecs?.servingSize ? [{ label: "Serving Size", value: review.productSpecs.servingSize }] : []),
-                        ...(review.productSpecs?.calories ? [{ label: "Calories", value: review.productSpecs.calories }] : []),
-                        ...(review.productSpecs?.protein ? [{ label: "Protein", value: review.productSpecs.protein }] : []),
-                        ...(review.valueMetric?.pricePerServing > 0 ? [{ label: "Price/Serving", value: `$${review.valueMetric.pricePerServing.toFixed(2)}` }] : []),
-                        { label: "FSP Score", value: `${rubric.editorialScore}/10` },
-                      ].map((s: { label: string; value: string }) => (
-                        <div key={s.label} style={{ padding: "14px 12px", backgroundColor: "rgba(0,0,0,0.2)", textAlign: "center" }}>
-                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(255,255,255,0.4)", marginBottom: 4, textTransform: "uppercase" }}>{s.label}</p>
-                          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{s.value}</p>
-                        </div>
-                      ))}
-                    </div>
-                    {/* Certifications */}
-                    {review.productSpecs?.certifications && review.productSpecs.certifications.length > 0 && (
-                      <div style={{ display: "flex", gap: 6, marginTop: 14, flexWrap: "wrap" }}>
-                        {review.productSpecs.certifications.map((c: string) => (
-                          <span key={c} style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "4px 10px", backgroundColor: "rgba(15,122,90,0.15)", border: "1px solid rgba(15,122,90,0.25)", borderRadius: 8, fontSize: 10, color: "#4ADE80", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>
-                            <Shield size={10} /> {c}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                    {/* CTA */}
-                    {review.affiliateUrl && (
-                      <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
-                        style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 18, padding: "13px 24px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)", width: "100%" }}>
-                        Shop {review.title} <ExternalLink size={14} />
-                      </Link>
-                    )}
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", fontSize: 12, color: "#6B7770", fontFamily: "var(--font-dm-sans)" }}>
+                    {review.valueMetric?.pricePerServing > 0 && <span>${review.valueMetric.pricePerServing.toFixed(2)}/serving</span>}
+                    {review.category && <span>· {review.category}</span>}
+                    {review.priceRange && <span>· {review.priceRange.charAt(0).toUpperCase() + review.priceRange.slice(1)}</span>}
                   </div>
                 </div>
-              )}
-
-              {/* ── SCORE BREAKDOWN ── */}
-              {rubric.pillars.length > 0 && (
-                <div id="score-breakdown" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Score Breakdown</h2>
-                    <ScoreBreakdown rubric={rubric} reviewCode={review.reviewCode || `REV-${slug.slice(0, 8).toUpperCase()}`} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── FLAGS ── */}
-              {rubric.flags.length > 0 && (
-                <div id="flags" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Red & Green Flags</h2>
-                    <FlagSystem flags={rubric.flags} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── TESTER EXPERIENCE ── */}
-              {review.testerExperience?.name && (
-                <div id="tester-experience" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Our Experience with {review.title}</h2>
-                    {/* Tester profile */}
-                    <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 18px", background: "linear-gradient(145deg, #F2F8F4, #E7F2EC)", borderRadius: 14, marginBottom: 24 }}>
-                      {review.testerExperience.avatar ? (
-                        <Image src={urlFor(review.testerExperience.avatar).width(80).height(80).url()} alt={review.testerExperience.name} width={56} height={56} style={{ borderRadius: "50%", objectFit: "cover", border: "2px solid #D4E9DF" }} />
-                      ) : (
-                        <div style={{ width: 56, height: 56, borderRadius: "50%", background: "linear-gradient(135deg, #0F7A5A, #0A4F3B)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "var(--font-dm-sans)", border: "2px solid #D4E9DF" }}>
-                          {review.testerExperience.name.split(" ").map((w: string) => w[0]).join("").slice(0, 2)}
-                        </div>
-                      )}
-                      <div>
-                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0 }}>{review.testerExperience.name}</p>
-                        {review.testerExperience.role && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "#586259", margin: "2px 0 0" }}>{review.testerExperience.role}</p>}
-                        {review.testerExperience.motivation && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "#6B7770", margin: "4px 0 0", fontStyle: "italic" }}>&ldquo;{review.testerExperience.motivation}&rdquo;</p>}
-                      </div>
-                    </div>
-
-                    {/* Experience sections */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                      {[
-                        { label: "How I used it", icon: "01", content: review.testerExperience.howUsed },
-                        { label: "Taste & texture", icon: "02", content: review.testerExperience.taste },
-                        { label: "Results", icon: "03", content: review.testerExperience.results },
-                        { label: "Final thoughts", icon: "04", content: review.testerExperience.finalThoughts },
-                      ].filter((s) => s.content).map((s) => (
-                        <div key={s.label} style={{ display: "flex", gap: 14, padding: "16px 18px", backgroundColor: "#F8FAF8", borderRadius: 14 }}>
-                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 700, color: "#E4E8E5", lineHeight: 1, flexShrink: 0, width: 30 }}>{s.icon}</span>
-                          <div>
-                            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{s.label}</p>
-                            <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans)" }}>{s.content}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Repeated CTA after experience */}
-              {review.affiliateUrl && review.testerExperience?.name && (
-                <div style={{ textAlign: "center" }}>
+                {review.affiliateUrl && (
                   <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
-                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)" }}>
-                    Try {review.title} <ExternalLink size={14} />
+                    style={{ padding: "10px 20px", background: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 10, fontFamily: "var(--font-dm-sans)", textDecoration: "none", flexShrink: 0, display: "flex", alignItems: "center", gap: 6 }}>
+                    Shop now <ExternalLink size={13} />
                   </Link>
-                </div>
-              )}
+                )}
+              </div>
 
-              {/* ── INGREDIENTS ── */}
-              {review.ingredients?.length > 0 && (
-                <div id="ingredients" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Ingredient Breakdown</h2>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                      {review.ingredients.map((ing: any, i: number) => (
-                        <div key={ing.name} style={{ padding: "16px 18px", backgroundColor: i % 2 === 0 ? "#F8FAF8" : "#FFFFFF", borderRadius: 14, border: "1px solid #E8EDE9" }}>
-                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12, marginBottom: 6 }}>
-                            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#17211C" }}>{ing.name}</span>
-                              {ing.dosage && <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, color: "#0F7A5A", backgroundColor: "rgba(15,122,90,0.06)", padding: "2px 8px", borderRadius: 6 }}>{ing.dosage}</span>}
-                            </div>
-                            <EvidenceBadge level={ing.evidenceLevel} showIcon={false} />
-                          </div>
-                          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.5, margin: 0, fontFamily: "var(--font-dm-sans)" }}>{ing.purpose}</p>
-                          {ing.notes && <p style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.5, marginTop: 6, fontFamily: "var(--font-dm-sans)" }}>{ing.notes}</p>}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* ── CLAIM AUDIT ── */}
-              {rubric.claimAudit.length > 0 && (
-                <div id="claim-audit" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Claim Audit</h2>
-                    <p style={{ fontSize: 14, color: "#6B7770", marginBottom: 20, lineHeight: 1.6, fontFamily: "var(--font-dm-sans)" }}>
-                      We checked every marketing claim against published peer-reviewed literature.
-                    </p>
-                    <ClaimAudit items={rubric.claimAudit} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── PROS & CONS ── */}
+              {/* ════════ PROS & CONS (boxed — two columns) ════════ */}
               {(review.pros?.length > 0 || review.cons?.length > 0) && (
-                <div id="pros-cons" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Pros & Cons</h2>
-                    <ProsCons pros={review.pros ?? []} cons={review.cons ?? []} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── VALUE ── */}
-              {rubric.valueMetric.pricePerServing > 0 && (
-                <div id="value" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Price & Value</h2>
-                    <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel={review.category?.toLowerCase().includes("protein") ? "protein" : "active ingredient"} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── FULL REVIEW BODY ── */}
-              {review.body?.length > 0 && (
-                <div id="body" style={card}>
-                  <div style={{ ...cardInner, padding: "0" }}>
-                    <div style={{ padding: "28px 28px 8px" }}>
-                      <h2 style={h2Style}>Full Review</h2>
-                    </div>
-                    <PortableText
-                      value={review.body}
-                      components={{
-                        block: {
-                          normal: ({ children }) => (
-                            <p style={{ fontSize: 15, color: "#17211C", lineHeight: 1.85, margin: 0, padding: "0 28px 20px", fontFamily: "var(--font-dm-sans)" }}>{children}</p>
-                          ),
-                          h2: ({ children }) => (
-                            <div style={{ borderTop: "1px solid #E8EDE9", padding: "24px 28px 8px", backgroundColor: "#F8FAF8" }}>
-                              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>Section</p>
-                              <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: 0 }}>{children}</h2>
-                            </div>
-                          ),
-                          h3: ({ children }) => (
-                            <div style={{ padding: "16px 28px 4px" }}>
-                              <h3 style={{ fontFamily: "var(--font-dm-sans)", fontSize: "1rem", fontWeight: 700, color: "#17211C", margin: 0, borderLeft: "3px solid #0F7A5A", paddingLeft: 12 }}>{children}</h3>
-                            </div>
-                          ),
-                        },
-                      }}
-                    />
-                    <div style={{ height: 8, backgroundColor: "#F8FAF8", borderTop: "1px solid #E8EDE9", borderRadius: "0 0 20px 20px" }} />
-                  </div>
-                </div>
-              )}
-
-              {/* ── FAQ ── */}
-              {review.faqItems && review.faqItems.length > 0 && (
-                <div id="faq" style={card}>
-                  <div style={cardInner}>
-                    <h2 style={h2Style}>Frequently Asked Questions</h2>
-                    <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                      {review.faqItems.map((item: { question: string; answer: string }, i: number) => (
-                        <details key={i} style={{ borderRadius: 14, overflow: "hidden", backgroundColor: "#F8FAF8", border: "1px solid #E8EDE9" }}>
-                          <summary style={{ padding: "14px 18px", cursor: "pointer", fontWeight: 700, color: "#17211C", fontSize: 14, fontFamily: "var(--font-dm-sans)", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                            {item.question}
-                            <ChevronRight size={16} style={{ color: "#9CA3AF", flexShrink: 0, transition: "transform 200ms" }} />
-                          </summary>
-                          <div style={{ padding: "0 18px 16px" }}>
-                            <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0, fontFamily: "var(--font-dm-sans)" }}>{item.answer}</p>
-                          </div>
-                        </details>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* ── REFERENCES ── */}
-              {review.references && review.references.length > 0 && (
-                <div style={card}>
-                  <div style={cardInner}>
-                    <details>
-                      <summary style={{ cursor: "pointer", fontFamily: "var(--font-dm-sans)", fontSize: 14, fontWeight: 700, color: "#17211C", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                        Research References ({review.references.length})
-                        <ChevronRight size={16} style={{ color: "#9CA3AF" }} />
-                      </summary>
-                      <ol style={{ paddingLeft: 20, marginTop: 16, display: "flex", flexDirection: "column", gap: 8 }}>
-                        {review.references.map((ref: { text: string; url?: string }, i: number) => (
-                          <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>
-                            {ref.text}
-                            {ref.url && <>{" "}<a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>PubMed ↗</a></>}
-                          </li>
-                        ))}
-                      </ol>
-                    </details>
-                  </div>
-                </div>
-              )}
-
-              {/* ── FINAL VERDICT ── */}
-              <div id="final" style={{ borderRadius: 20, overflow: "hidden", background: "linear-gradient(145deg, #17211C 0%, #0F3D2E 60%, #1A6B4B 100%)" }}>
-                <div style={{ padding: "36px 32px" }}>
-                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(255,255,255,0.35)", marginBottom: 16 }}>Final Verdict · {review.reviewCode || "FSP Scored"}</p>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 20, marginBottom: 20 }}>
-                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.5rem", fontWeight: 800, color: "#FFFFFF", letterSpacing: "-0.02em", flex: 1 }}>{review.title}</h2>
-                    <ReviewScoreBadge rating={rubric.editorialScore} size="md" />
-                  </div>
-                  <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.75, marginBottom: 24, fontFamily: "var(--font-dm-sans)" }}>{review.verdict}</p>
-                  <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: review.affiliateUrl ? 24 : 0 }}>
-                    <div style={{ padding: "12px 16px", backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}>
-                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", color: "rgba(255,255,255,0.35)", marginBottom: 4 }}>FSP COMPOSITE</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 800, color: "#FFFFFF", lineHeight: 1 }}>{rubric.compositeScore.toFixed(1)}<span style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>/10</span></p>
-                    </div>
-                    <div style={{ padding: "12px 16px", backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 12 }}>
-                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", color: "rgba(255,255,255,0.35)", marginBottom: 4 }}>EDITORIAL</p>
-                      <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 800, color: "#4ADE80", lineHeight: 1 }}>{rubric.editorialScore}<span style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>/10</span></p>
-                    </div>
-                  </div>
+                <div id="pros-cons" style={{ ...sectionDivider }}>
+                  <ProsCons pros={review.pros ?? []} cons={review.cons ?? []} />
                   {review.affiliateUrl && (
-                    <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
-                      style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)" }}>
-                      View Best Price <ExternalLink size={14} />
-                    </Link>
+                    <div style={{ textAlign: "center", marginTop: 20 }}>
+                      <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
+                        style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 24px", background: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 10, fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
+                        Shop now <ExternalLink size={13} />
+                      </Link>
+                    </div>
                   )}
                 </div>
+              )}
+
+              {/* ════════ OUR EXPERIENCE (flowing text — only profile is boxed) ════════ */}
+              {review.testerExperience?.name && (
+                <div id="our-experience" style={sectionDivider}>
+                  <h2>Our experience with {review.title}</h2>
+
+                  {/* Tester profile — small boxed card */}
+                  <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 18px", backgroundColor: "#F6F8F6", borderRadius: 10, marginBottom: 24 }}>
+                    {review.testerExperience.avatar ? (
+                      <Image src={urlFor(review.testerExperience.avatar).width(80).height(80).url()} alt={review.testerExperience.name} width={48} height={48} style={{ borderRadius: "50%", objectFit: "cover" }} />
+                    ) : (
+                      <div style={{ width: 48, height: 48, borderRadius: "50%", background: "#0F7A5A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, fontWeight: 700, color: "#fff", fontFamily: "var(--font-dm-sans)" }}>
+                        {review.testerExperience.name.split(" ").map((w: string) => w[0]).join("").slice(0, 2)}
+                      </div>
+                    )}
+                    <div>
+                      <p style={{ fontSize: 14, fontWeight: 700, color: "#17211C", margin: 0 }}>{review.testerExperience.name}</p>
+                      {review.testerExperience.role && <p style={{ fontSize: 12, color: "#6B7770", margin: "2px 0 0" }}>{review.testerExperience.role}</p>}
+                    </div>
+                  </div>
+
+                  {review.testerExperience.motivation && <p>{review.testerExperience.motivation}</p>}
+
+                  {review.testerExperience.howUsed && (
+                    <>
+                      <h3>How I used it</h3>
+                      <p>{review.testerExperience.howUsed}</p>
+                    </>
+                  )}
+                  {review.testerExperience.taste && (
+                    <>
+                      <h3>Taste and texture</h3>
+                      <p>{review.testerExperience.taste}</p>
+                    </>
+                  )}
+                  {review.testerExperience.results && (
+                    <>
+                      <h3>Results</h3>
+                      <p>{review.testerExperience.results}</p>
+                    </>
+                  )}
+                  {review.testerExperience.finalThoughts && (
+                    <>
+                      <h3>Final thoughts</h3>
+                      <p>{review.testerExperience.finalThoughts}</p>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* ════════ INGREDIENTS (flowing text) ════════ */}
+              {review.ingredients?.length > 0 && (
+                <div id="ingredients" style={sectionDivider}>
+                  <h2>Breaking down the active ingredients</h2>
+                  <p>We examined each ingredient in {review.title} against published clinical evidence. Here is what the label contains and what the research says about each component.</p>
+
+                  {review.ingredients.map((ing: any, i: number) => (
+                    <div key={ing.name} style={{ marginBottom: i < review.ingredients.length - 1 ? 24 : 0 }}>
+                      <h3 style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                        {ing.name}
+                        {ing.dosage && <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, color: "#0F7A5A", fontWeight: 500 }}>({ing.dosage})</span>}
+                      </h3>
+                      <p>{ing.purpose}</p>
+                      {ing.notes && <p style={{ fontSize: 14, color: "#6B7770" }}>{ing.notes}</p>}
+                      <EvidenceBadge level={ing.evidenceLevel} />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ════════ SCORE BREAKDOWN (component — no extra card wrapper) ════════ */}
+              {rubric.pillars.length > 0 && (
+                <div id="score-breakdown" style={sectionDivider}>
+                  <h2>FSP score breakdown</h2>
+                  <p>Every product is scored using the Fitlab Scoring Protocol (FSP v2.1), a weighted composite of five pillars. Red flags incur point deductions.</p>
+                  <ScoreBreakdown rubric={rubric} reviewCode={review.reviewCode || `REV-${slug.slice(0, 8).toUpperCase()}`} />
+                </div>
+              )}
+
+              {/* ════════ FLAGS (component — no card wrapper) ════════ */}
+              {rubric.flags.length > 0 && (
+                <div style={sectionDivider}>
+                  <h2>Red and green flags</h2>
+                  <FlagSystem flags={rubric.flags} />
+                </div>
+              )}
+
+              {/* ════════ CLAIM AUDIT (component — no card wrapper) ════════ */}
+              {rubric.claimAudit.length > 0 && (
+                <div id="claim-audit" style={sectionDivider}>
+                  <h2>Claim audit</h2>
+                  <p>We checked every marketing claim {review.brand} makes about {review.title} against published peer-reviewed literature.</p>
+                  <ClaimAudit items={rubric.claimAudit} />
+                </div>
+              )}
+
+              {/* ════════ PRICE & VALUE (flowing text + component) ════════ */}
+              {rubric.valueMetric.pricePerServing > 0 && (
+                <div id="value" style={sectionDivider}>
+                  <h2>How much does {review.title} cost?</h2>
+                  <p>
+                    At ${rubric.valueMetric.pricePerServing.toFixed(2)} per serving, {review.title} sits{" "}
+                    {rubric.valueMetric.efficiency === "above" ? "below" : rubric.valueMetric.efficiency === "below" ? "above" : "at"}{" "}
+                    the category average of ${rubric.valueMetric.categoryAvgPricePerGram.toFixed(2)} per gram of {review.category?.toLowerCase().includes("protein") ? "protein" : "active ingredient"}.
+                    {rubric.valueMetric.efficiency === "above" ? " This is good value for money." : rubric.valueMetric.efficiency === "below" ? " The premium is significant — consider whether the quality justifies the cost." : ""}
+                  </p>
+                  <ValueMetricPanel metric={rubric.valueMetric} activeIngredientLabel={review.category?.toLowerCase().includes("protein") ? "protein" : "active ingredient"} />
+                </div>
+              )}
+
+              {/* ════════ FULL REVIEW BODY (flowing text) ════════ */}
+              {review.body?.length > 0 && (
+                <div style={sectionDivider}>
+                  <PortableText value={review.body} />
+                </div>
+              )}
+
+              {/* ════════ ALTERNATIVES TABLE (table — boxed) ════════ */}
+              {review.relatedReviews && review.relatedReviews.length > 0 && (
+                <div id="alternatives" style={sectionDivider}>
+                  <h2>{review.title} alternatives</h2>
+                  <p>If {review.title} does not match your budget or needs, these alternatives scored well in the same category.</p>
+                  <div className="review-table-wrap">
+                    <table style={{ borderCollapse: "collapse", minWidth: 600, width: "100%" }}>
+                      <thead>
+                        <tr style={{ borderBottom: "2px solid #E4E8E5" }}>
+                          {["Product", "Score", "Category", "Price Tier", ""].map((h) => (
+                            <th key={h} style={{ textAlign: "left", padding: "10px 12px", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#6B7770", letterSpacing: "0.1em", textTransform: "uppercase", fontWeight: 600 }}>{h}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {review.relatedReviews.map((rel: { slug: string; title: string; brand: string; category: string; editorialScore: number; verdict: string; publishedAt: string; heroImage?: any; affiliateUrl?: string; priceRange?: string }, i: number) => (
+                          <tr key={rel.slug} style={{ borderBottom: "1px solid #F0F3F1", backgroundColor: i % 2 === 0 ? "#FAFBFA" : "#FFFFFF" }}>
+                            <td style={{ padding: "14px 12px" }}>
+                              <Link href={`/reviews/${rel.slug}`} style={{ fontSize: 14, fontWeight: 600, color: "#17211C", textDecoration: "none" }}>{rel.title}</Link>
+                              <p style={{ fontSize: 12, color: "#6B7770", margin: "2px 0 0" }}>{rel.brand}</p>
+                            </td>
+                            <td style={{ padding: "14px 12px" }}>
+                              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#0F7A5A" }}>{rel.editorialScore}/10</span>
+                            </td>
+                            <td style={{ padding: "14px 12px", fontSize: 13, color: "#3F4B43" }}>{rel.category}</td>
+                            <td style={{ padding: "14px 12px", fontSize: 13, color: "#3F4B43" }}>{rel.priceRange ? rel.priceRange.charAt(0).toUpperCase() + rel.priceRange.slice(1) : "—"}</td>
+                            <td style={{ padding: "14px 12px" }}>
+                              {rel.affiliateUrl ? (
+                                <Link href={rel.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>Shop →</Link>
+                              ) : (
+                                <Link href={`/reviews/${rel.slug}`} style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>Read →</Link>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {/* ════════ FAQ (flowing text — not accordion cards) ════════ */}
+              {review.faqItems && review.faqItems.length > 0 && (
+                <div id="faq" style={sectionDivider}>
+                  <h2>Frequently asked questions</h2>
+                  {review.faqItems.map((item: { question: string; answer: string }, i: number) => (
+                    <div key={i} style={{ marginBottom: 20 }}>
+                      <h3>{item.question}</h3>
+                      <p>{item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* ════════ REFERENCES (flowing text) ════════ */}
+              {review.references && review.references.length > 0 && (
+                <div style={{ ...sectionDivider, fontSize: 13, color: "#6B7770" }}>
+                  <details>
+                    <summary style={{ cursor: "pointer", fontWeight: 600, color: "#17211C", fontSize: 14 }}>
+                      Sources ({review.references.length})
+                    </summary>
+                    <ol style={{ paddingLeft: 20, marginTop: 12, display: "flex", flexDirection: "column", gap: 6 }}>
+                      {review.references.map((ref: { text: string; url?: string }, i: number) => (
+                        <li key={i} style={{ fontSize: 12, lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>
+                          {ref.text}
+                          {ref.url && <>{" "}<a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>PubMed ↗</a></>}
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                </div>
+              )}
+
+              {/* ════════ TAKEAWAY (flowing text — the final verdict) ════════ */}
+              <div id="takeaway" style={{ marginBottom: 40 }}>
+                <h2>Takeaway</h2>
+                <p>{review.verdict}</p>
+                {review.bestFor?.length > 0 && (
+                  <>
+                    <p><strong>You should consider {review.title} if you:</strong></p>
+                    <ul>
+                      {review.bestFor.map((b: string) => <li key={b}>{b}</li>)}
+                    </ul>
+                  </>
+                )}
+                {review.notIdealFor?.length > 0 && (
+                  <>
+                    <p><strong>{review.title} might not be worth it if you:</strong></p>
+                    <ul>
+                      {review.notIdealFor.map((b: string) => <li key={b}>{b}</li>)}
+                    </ul>
+                  </>
+                )}
+                {review.affiliateUrl && (
+                  <p>
+                    <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
+                      style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "10px 24px", background: "#0F7A5A", color: "#FFFFFF", fontSize: 13, fontWeight: 700, borderRadius: 10, fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
+                      Shop {review.title} <ExternalLink size={13} />
+                    </Link>
+                  </p>
+                )}
+              </div>
+
+              {/* ── Affiliate disclosure (one-liner) ── */}
+              <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderRadius: 10, display: "flex", alignItems: "center", gap: 8, marginBottom: 40 }}>
+                <AlertTriangle size={12} style={{ color: "#9CA3AF", flexShrink: 0 }} />
+                <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>
+                  This review may contain affiliate links. Commissions do not influence our ratings.{" "}
+                  <Link href="/affiliate-disclosure" style={{ color: "#0F7A5A", fontWeight: 600 }}>Read our disclosure →</Link>
+                </p>
               </div>
 
             </article>
           </div>
         </div>
-
-        {/* ═══ COMPARE PRODUCTS ═══ */}
-        {review.relatedReviews && review.relatedReviews.length > 0 && (
-          <div style={{ backgroundColor: "#FFFFFF", borderTop: "1px solid #E8EDE9", padding: "56px 24px" }}>
-            <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 28, flexWrap: "wrap", gap: 12 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: 12, background: "linear-gradient(135deg, #0F7A5A, #14A474)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
-                    <Scale size={18} />
-                  </div>
-                  <div>
-                    <h2 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "1.3rem", fontWeight: 800, color: "#17211C", margin: 0 }}>Compare Products</h2>
-                    <p style={{ fontSize: 12, color: "#6B7770", fontFamily: "var(--font-dm-sans)", margin: 0 }}>See how {review.title} stacks up</p>
-                  </div>
-                </div>
-                <Link href="/compare" style={{ fontSize: 13, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-dm-sans)", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
-                  All comparisons <ArrowRight size={14} />
-                </Link>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
-                {review.relatedReviews.map((rel: { slug: string; title: string; brand: string; category: string; editorialScore: number; verdict: string; publishedAt: string; heroImage?: any; affiliateUrl?: string; priceRange?: string }) => {
-                  const relImg = rel.heroImage ? urlFor(rel.heroImage).width(400).height(300).url() : null;
-                  return (
-                    <div key={rel.slug} style={{ borderRadius: 20, border: "1px solid #E8EDE9", overflow: "hidden", backgroundColor: "#FFFFFF", transition: "box-shadow 200ms" }}>
-                      {/* Product image */}
-                      <div style={{ height: 180, background: relImg ? undefined : "linear-gradient(145deg, #E7F2EC, #D4E9DF)", position: "relative", overflow: "hidden" }}>
-                        {relImg ? (
-                          <Image src={relImg} alt={rel.title} width={400} height={300} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                        ) : (
-                          <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                            <div style={{ width: 64, height: 64, borderRadius: "50%", background: "linear-gradient(135deg, #0F7A5A, #0A4F3B)", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-                              <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 900, color: "#fff", lineHeight: 1 }}>{rel.editorialScore}</span>
-                              <span style={{ fontSize: 8, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-jetbrains), monospace" }}>/10</span>
-                            </div>
-                          </div>
-                        )}
-                        {/* Score badge overlay */}
-                        <div style={{ position: "absolute", top: 12, right: 12, width: 44, height: 44, borderRadius: "50%", background: "linear-gradient(135deg, #0F7A5A, #0A4F3B)", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}>
-                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 900, color: "#fff", lineHeight: 1 }}>{rel.editorialScore}</span>
-                          <span style={{ fontSize: 7, color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-jetbrains), monospace" }}>/10</span>
-                        </div>
-                        {/* Category tag */}
-                        <div style={{ position: "absolute", top: 12, left: 12, padding: "4px 10px", backgroundColor: "rgba(0,0,0,0.5)", backdropFilter: "blur(8px)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "#fff", letterSpacing: "0.08em" }}>
-                          {rel.category?.toUpperCase()}
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div style={{ padding: "18px 20px" }}>
-                        <p style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-dm-sans)", marginBottom: 4 }}>{rel.brand}</p>
-                        <h3 style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 16, fontWeight: 700, color: "#17211C", margin: "0 0 8px", lineHeight: 1.3 }}>{rel.title}</h3>
-                        <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.5, fontFamily: "var(--font-dm-sans)", margin: "0 0 16px", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{rel.verdict}</p>
-
-                        {/* Star rating */}
-                        <div style={{ display: "flex", gap: 3, marginBottom: 16 }}>
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <Star key={i} size={13} style={{ color: i < Math.round(rel.editorialScore / 2) ? "#F59E0B" : "#E4E8E5", fill: i < Math.round(rel.editorialScore / 2) ? "#F59E0B" : "none" }} />
-                          ))}
-                          {rel.priceRange && <span style={{ fontSize: 11, color: "#6B7770", fontFamily: "var(--font-dm-sans)", marginLeft: 8 }}>{rel.priceRange.charAt(0).toUpperCase() + rel.priceRange.slice(1)}</span>}
-                        </div>
-
-                        {/* Action buttons */}
-                        <div style={{ display: "flex", gap: 8 }}>
-                          <Link href={`/reviews/${rel.slug}`}
-                            style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 12, fontSize: 13, fontWeight: 600, color: "#17211C", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
-                            Read Review <ArrowRight size={13} />
-                          </Link>
-                          {rel.affiliateUrl && (
-                            <Link href={rel.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
-                              style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 14px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", borderRadius: 12, fontSize: 13, fontWeight: 700, color: "#FFFFFF", fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 2px 8px rgba(15,122,90,0.2)" }}>
-                              Buy <ExternalLink size={12} />
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ═══ RELATED INGREDIENTS ═══ */}
-        {review.relatedIngredients && review.relatedIngredients.length > 0 && (
-          <div style={{ borderTop: "1px solid #E8EDE9", padding: "48px 24px", backgroundColor: "#F4F7F5" }}>
-            <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                <div style={{ width: 32, height: 32, borderRadius: 10, background: "linear-gradient(135deg, #E7F2EC, #D4E9DF)", display: "flex", alignItems: "center", justifyContent: "center", color: "#0F7A5A" }}>
-                  <FlaskConical size={16} />
-                </div>
-                <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 16, fontWeight: 700, color: "#17211C" }}>The science behind the label</span>
-              </div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-                {review.relatedIngredients.map((ing: { name: string; slug: string }) => (
-                  <Link key={ing.slug} href={`/ingredients/${ing.slug}`}
-                    style={{ padding: "12px 20px", backgroundColor: "#FFFFFF", border: "1px solid #E8EDE9", borderRadius: 14, fontSize: 14, color: "#17211C", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-dm-sans)", display: "flex", alignItems: "center", gap: 8, boxShadow: "0 2px 8px rgba(0,0,0,0.04)" }}>
-                    {ing.name} <ArrowRight size={14} style={{ color: "#0F7A5A" }} />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
       </div>
     </>
   );
