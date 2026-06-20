@@ -6,8 +6,7 @@ import {
   RefreshCw, Home, FileText, BookOpen, FlaskConical, Building2,
   Loader2, CheckCircle2, AlertTriangle, Zap, Clock, Globe,
 } from "lucide-react";
-
-const REVALIDATE_SECRET = process.env.NEXT_PUBLIC_REVALIDATE_SECRET || "fitlab-dev-secret";
+import { revalidatePaths } from "./actions";
 
 type Section = {
   id: string;
@@ -71,21 +70,13 @@ export default function AdminPanel({ userEmail }: { userEmail: string }) {
   async function handleRevalidate(section: Section) {
     setLoading(section.id);
     try {
-      const res = await fetch("/api/revalidate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": REVALIDATE_SECRET,
-        },
-        body: JSON.stringify({ paths: section.paths }),
-      });
-      const data = await res.json();
+      const data = await revalidatePaths(section.paths);
       setLog((prev) => [{
         time: new Date().toLocaleTimeString(),
         section: section.label,
         paths: section.paths,
-        status: res.ok ? "ok" : "error",
-        message: res.ok ? `Revalidated ${data.results?.length ?? 0} path(s)` : data.error,
+        status: "ok",
+        message: `Revalidated ${data.results?.length ?? 0} path(s)`,
       }, ...prev]);
     } catch (err) {
       setLog((prev) => [{
