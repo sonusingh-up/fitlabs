@@ -16,170 +16,61 @@ const verdictIcon: Record<string, string> = {
 export default function ClaimAudit({ items }: Props) {
   const supported = items.filter((i) => i.verdict === "supported").length;
   const overstated = items.filter((i) => i.verdict === "overstated").length;
-  const contextDep = items.filter((i) => i.verdict === "context-dependent").length;
   const unsupported = items.filter((i) => i.verdict === "unsupported").length;
 
   return (
-    <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
+    <div style={{ borderRadius: 16, overflow: "hidden", border: "1px solid #E4E8E5" }}>
 
-      {/* ── Header bar ─────────────────────────────────────────────────────── */}
-      <div style={{
-        padding: "12px 20px",
-        backgroundColor: "#17211C",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        gap: 8,
-      }}>
-        <p style={{
-          fontFamily: "var(--font-jetbrains), monospace",
-          fontSize: 9,
-          letterSpacing: "0.2em",
-          textTransform: "uppercase",
-          color: "#3F4B43",
-          margin: 0,
-        }}>
-          Marketing Claim Audit
-        </p>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          {supported > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#2D6A4F", letterSpacing: "0.08em" }}>
-              {supported}× supported
-            </span>
-          )}
-          {overstated > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#8B7355", letterSpacing: "0.08em" }}>
-              {overstated}× overstated
-            </span>
-          )}
-          {contextDep > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#3A5F8B", letterSpacing: "0.08em" }}>
-              {contextDep}× context-dependent
-            </span>
-          )}
-          {unsupported > 0 && (
-            <span style={{ fontSize: 9, fontFamily: "var(--font-jetbrains), monospace", color: "#8B3A2C", letterSpacing: "0.08em" }}>
-              {unsupported}× unsupported
-            </span>
-          )}
+      {/* Header */}
+      <div style={{ padding: "16px 24px", background: "linear-gradient(135deg, #0F7A5A 0%, #17806A 100%)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 8 }}>
+        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, fontWeight: 700, color: "#FFFFFF", margin: 0 }}>Claim Audit</p>
+        <div style={{ display: "flex", gap: 12 }}>
+          {supported > 0 && <span style={{ fontSize: 11, color: "#BBF7D0", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>{supported} supported</span>}
+          {overstated > 0 && <span style={{ fontSize: 11, color: "#FDE68A", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>{overstated} overstated</span>}
+          {unsupported > 0 && <span style={{ fontSize: 11, color: "#FECACA", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>{unsupported} unsupported</span>}
         </div>
       </div>
 
-      {/* ── Column headers — desktop only ──────────────────────────────────── */}
-      <div className="claim-col-header-row" style={{
-        padding: "8px 20px",
-        backgroundColor: "#F2F8F4",
-        borderBottom: "1px solid #E4E8E5",
-      }}>
-        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259" }}>
-          Marketing Claim
-        </span>
-        <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", paddingLeft: 16 }}>
-          Our Verdict
-        </span>
-        <span className="claim-evidence-header" style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.14em", textTransform: "uppercase", color: "#586259", paddingLeft: 16 }}>
-          Evidence
-        </span>
+      {/* Column headers */}
+      <div className="claim-col-header-row" style={{ padding: "10px 24px", backgroundColor: "#F8FAF8", borderBottom: "1px solid #E4E8E5" }}>
+        <span style={{ fontSize: 11, color: "#9CA3AF", fontWeight: 600 }}>Claim</span>
+        <span style={{ fontSize: 11, color: "#9CA3AF", fontWeight: 600, paddingLeft: 16 }}>Verdict</span>
+        <span className="claim-evidence-header" style={{ fontSize: 11, color: "#9CA3AF", fontWeight: 600, paddingLeft: 16 }}>Evidence</span>
       </div>
 
-      {/* ── Rows ───────────────────────────────────────────────────────────── */}
+      {/* Rows */}
       {items.map((item, i) => {
         const meta = claimVerdictMeta(item.verdict);
-        const isLast = i === items.length - 1;
         return (
-          <div
-            key={i}
-            className="layout-claim-row"
-            style={{
-              borderBottom: isLast ? "none" : "1px solid #F2F8F4",
-              backgroundColor: i % 2 === 0 ? "#F6F8F6" : "#FFFFFF",
-            }}
-          >
-            {/* Claim text + notes */}
-            <div style={{ padding: "16px 20px" }}>
-              <div style={{ display: "flex", alignItems: "flex-start", gap: 8, marginBottom: 6 }}>
-                <span style={{
-                  flexShrink: 0,
-                  width: 18,
-                  height: 18,
-                  borderRadius: "50%",
-                  backgroundColor: meta.bg,
-                  border: `1px solid ${meta.color}44`,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 9,
-                  fontWeight: 700,
-                  color: meta.color,
-                  fontFamily: "var(--font-jetbrains), monospace",
-                  marginTop: 1,
-                }}>
+          <div key={i} className="layout-claim-row" style={{ borderBottom: i < items.length - 1 ? "1px solid #F0F3F1" : "none", backgroundColor: "#FFFFFF" }}>
+            <div style={{ padding: "18px 24px" }}>
+              <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 6 }}>
+                <span style={{ flexShrink: 0, width: 22, height: 22, borderRadius: "50%", backgroundColor: meta.bg, border: `1.5px solid ${meta.color}44`, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700, color: meta.color, marginTop: 1 }}>
                   {verdictIcon[item.verdict] ?? "?"}
                 </span>
-                <p style={{
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: "#17211C",
-                  lineHeight: 1.4,
-                  fontFamily: "var(--font-dm-sans), sans-serif",
-                  margin: 0,
-                }}>
-                  {item.claim}
-                </p>
+                <div>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#17211C", lineHeight: 1.4, margin: "0 0 4px" }}>{item.claim}</p>
+                  <p style={{ fontSize: 13, color: "#6B7770", lineHeight: 1.6, margin: 0 }}>{item.notes}</p>
+                </div>
               </div>
-              <p style={{ fontSize: 12, color: "#6B7770", lineHeight: 1.6, margin: 0, paddingLeft: 26 }}>
-                {item.notes}
-              </p>
             </div>
-
-            {/* Verdict badge */}
-            <div className="claim-verdict-cell" style={{
-              padding: "16px 14px",
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-            }}>
-              <span style={{
-                display: "inline-block",
-                padding: "5px 10px",
-                backgroundColor: meta.bg,
-                border: `1px solid ${meta.color}33`,
-                borderRadius: 6,
-                fontSize: 9,
-                fontWeight: 700,
-                color: meta.color,
-                fontFamily: "var(--font-jetbrains), monospace",
-                letterSpacing: "0.06em",
-                lineHeight: 1.5,
-                textAlign: "center",
-                whiteSpace: "normal",
-                wordBreak: "break-word",
-              }}>
+            <div className="claim-verdict-cell" style={{ padding: "18px 14px", display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
+              <span style={{ display: "inline-block", padding: "5px 12px", backgroundColor: meta.bg, border: `1px solid ${meta.color}33`, borderRadius: 8, fontSize: 11, fontWeight: 600, color: meta.color, whiteSpace: "nowrap" as const }}>
                 {meta.label}
               </span>
             </div>
-
-            {/* Evidence badge */}
-            <div className="claim-evidence-cell" style={{
-              padding: "16px 14px",
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-            }}>
+            <div className="claim-evidence-cell" style={{ padding: "18px 14px", display: "flex", alignItems: "flex-start", justifyContent: "center" }}>
               <EvidenceBadge level={item.evidence} showIcon={false} />
             </div>
           </div>
         );
       })}
 
-      {/* ── Footer ─────────────────────────────────────────────────────────── */}
-      <div style={{ padding: "10px 20px", backgroundColor: "#F2F8F4", borderTop: "1px solid #E4E8E5" }}>
-        <p style={{ fontSize: 11, color: "#6B7770", margin: 0 }}>
-          Claims are audited against published peer-reviewed literature as of the review date.{" "}
-          <a href="/methodology#claim-audit" style={{ color: "#0F7A5A", textDecoration: "none" }}>
-            How we audit claims →
-          </a>
+      {/* Footer */}
+      <div style={{ padding: "12px 24px", backgroundColor: "#F8FAF8", borderTop: "1px solid #E4E8E5" }}>
+        <p style={{ fontSize: 12, color: "#9CA3AF", margin: 0 }}>
+          Audited against peer-reviewed literature.{" "}
+          <a href="/methodology#claim-audit" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>How we audit claims →</a>
         </p>
       </div>
     </div>
