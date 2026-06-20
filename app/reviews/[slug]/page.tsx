@@ -16,7 +16,7 @@ import FlagSystem from "@/components/ui/FlagSystem";
 import ClaimAudit from "@/components/ui/ClaimAudit";
 import ValueMetricPanel from "@/components/ui/ValueMetricPanel";
 import { computeComposite } from "@/lib/scoring";
-import { getReviewBySlug, getAllReviewSlugs } from "@/lib/sanity";
+import { getReviewBySlug, getAllReviewSlugs, urlFor } from "@/lib/sanity";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 const tocItems = [
@@ -78,11 +78,14 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     ? new Date(review.updatedAt).toLocaleDateString("en-IN", { month: "long", year: "numeric" })
     : publishedDate;
 
+  const heroImageUrl = review.heroImage ? urlFor(review.heroImage).width(1200).height(630).url() : null;
+
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
     "@id": `https://fitlabreviews.com/reviews/${slug}#review`,
     name: `${review.title} — Fitlabreviews FSP Review`,
+    ...(heroImageUrl ? { image: heroImageUrl } : {}),
     reviewBody: review.verdict,
     reviewRating: {
       "@type": "Rating",
@@ -101,6 +104,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     itemReviewed: {
       "@type": "Product",
       name: review.title,
+      ...(heroImageUrl ? { image: heroImageUrl } : {}),
       brand: { "@type": "Brand", name: review.brand },
       category: review.category,
     },

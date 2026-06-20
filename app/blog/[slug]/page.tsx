@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { PortableText } from "@portabletext/react";
 
@@ -8,7 +9,9 @@ export const revalidate = 3600;
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import TableOfContents from "@/components/ui/TableOfContents";
 import MobileTOC from "@/components/ui/MobileTOC";
-import { getBlogBySlug, getAllBlogSlugs } from "@/lib/sanity";
+import ReadingProgress from "@/components/ui/ReadingProgress";
+import ShareButtons from "@/components/ui/ShareButtons";
+import { getBlogBySlug, getAllBlogSlugs, urlFor } from "@/lib/sanity";
 import type { EvidenceLevel } from "@/lib/types";
 
 export async function generateStaticParams() {
@@ -25,10 +28,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       alternates: { canonical: `/blog/${slug}` },
     };
   }
+  const ogImage = post.heroImage ? urlFor(post.heroImage).width(1200).height(630).url() : undefined;
   return {
     title: post.title.length > 55 ? post.title.slice(0, 52) + "..." : post.title,
     description: (post.metaDescription || post.summary || "").slice(0, 160),
     alternates: { canonical: `/blog/${slug}` },
+    ...(ogImage ? {
+      openGraph: {
+        images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+      },
+    } : {}),
   };
 }
 
@@ -39,20 +48,23 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 
   const pageUrl = `https://fitlabreviews.com/blog/${slug}`;
   const evidence = (post.evidenceLevel || "moderate") as EvidenceLevel;
+  const heroImageUrl = post.heroImage ? urlFor(post.heroImage).width(1200).height(630).url() : null;
 
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.summary || post.metaDescription,
+    ...(heroImageUrl ? { image: heroImageUrl } : {}),
     articleSection: post.category || "Blog",
     author: post.author
       ? { "@type": "Person", name: post.author.name, url: `https://fitlabreviews.com/authors/${post.author.slug}` }
-      : { "@type": "Organization", name: "Fitlabreviews Research Team" },
-    publisher: { "@type": "Organization", name: "Fitlabreviews", url: "https://fitlabreviews.com" },
+      : { "@type": "Organization", name: "Fitlabreviews Editorial", url: "https://fitlabreviews.com/about" },
+    publisher: { "@id": "https://fitlabreviews.com/#organization" },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt || post.publishedAt,
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+    inLanguage: "en-US",
   };
 
   const faqSchema = post.faqItems && post.faqItems.length >= 4 ? {
@@ -72,6 +84,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
+      <ReadingProgress />
       <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
@@ -85,8 +98,22 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
           </div>
         </div>
 
+        {/* Feature image banner */}
+        {heroImageUrl && (
+          <div style={{ position: "relative", width: "100%", maxHeight: 420, overflow: "hidden", backgroundColor: "#0B1426" }}>
+            <Image
+              src={heroImageUrl}
+              alt={post.title}
+              width={1200}
+              height={630}
+              priority
+              style={{ width: "100%", height: "auto", objectFit: "cover", opacity: 0.92 }}
+            />
+          </div>
+        )}
+
         {/* Hero */}
-        <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
+        <div style={{ borderBottom: "1px solid #E4E8E5", ...(heroImageUrl ? { background: "linear-gradient(180deg, #F2F8F4 0%, #FFFFFF 100%)" } : {}) }} className="pad-hero">
           <div style={{ maxWidth: 1100, margin: "0 auto" }} className="px-page">
             {post.figureCode && (
               <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16 }}>
@@ -164,6 +191,9 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
             {tocItems.length > 0 && (
               <aside className="hidden lg:block" style={{ borderRight: "1px solid #D4C9B8" }}>
                 <TableOfContents items={tocItems} />
+                <div style={{ marginTop: 24 }}>
+                  <ShareButtons title={post.title} slug={slug} />
+                </div>
               </aside>
             )}
 
