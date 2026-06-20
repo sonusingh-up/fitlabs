@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Brand Directory",
   description: "Independent brand profiles covering formula quality, label transparency, third-party testing, and reliability ratings for every major supplement manufacturer.",

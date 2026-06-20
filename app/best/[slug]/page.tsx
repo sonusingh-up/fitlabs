@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+
+export const revalidate = 3600;
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
 import ComparisonTable from "@/components/ui/ComparisonTable";
 import SectionHeading from "@/components/ui/SectionHeading";

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
+
+export const revalidate = 3600;
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { ReviewRating, EvidenceLevel } from "@/lib/types";

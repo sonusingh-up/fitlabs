@@ -4,6 +4,8 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 import type { ReviewRating } from "@/lib/types";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Reviews — Evidence-Rated, Formula-First",
   description: "Independent supplement reviews rated via the Fitlab Scoring Protocol. Each covers formula quality, label transparency, third-party testing, and value.",

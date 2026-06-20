@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import TableOfContents from "@/components/ui/TableOfContents";
+
+export const revalidate = 3600;
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import type { EvidenceLevel } from "@/lib/types";
 

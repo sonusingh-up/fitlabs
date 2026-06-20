@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Stacks by Fitness Goal — Evidence-Based",
   description: "Goal-based supplement guides for muscle gain, fat loss, endurance, recovery, and more. Each guide recommends ingredients ranked by evidence strength, not marketing.",

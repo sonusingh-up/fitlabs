@@ -14,7 +14,7 @@ export async function proxy(request: NextRequest) {
   }
 
   // Auth session refresh on protected & auth routes
-  if (pathname.startsWith("/account") || pathname.startsWith("/auth/")) {
+  if (pathname.startsWith("/account") || pathname.startsWith("/auth/") || pathname.startsWith("/admin")) {
     let supabaseResponse = NextResponse.next({ request });
 
     const supabase = createServerClient(
@@ -42,8 +42,8 @@ export async function proxy(request: NextRequest) {
       data: { user },
     } = await supabase.auth.getUser();
 
-    // Redirect unauthenticated users away from /account
-    if (!user && pathname.startsWith("/account")) {
+    // Redirect unauthenticated users away from /account and /admin
+    if (!user && (pathname.startsWith("/account") || pathname.startsWith("/admin"))) {
       const url = request.nextUrl.clone();
       url.pathname = "/auth/login";
       url.searchParams.set("redirect", pathname);

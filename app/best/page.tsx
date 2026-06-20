@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Best Supplement Picks — Ranked Roundups",
   description: "Evidence-ranked best-of lists for every major supplement category. Each roundup compares top products on formula quality, value, and third-party verification.",

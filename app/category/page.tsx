@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Reviews by Category",
   description: "Browse supplement reviews by category. Every category page includes key ingredient analysis, evidence ratings, and independently reviewed products.",

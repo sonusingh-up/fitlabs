@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FeaturedBmrCalc from "./FeaturedBmrCalc";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Free Calculators & Tools (2026) — BMR, Macros, TDEE",
   description:

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+
+export const revalidate = 3600;
 import { ExternalLink, AlertTriangle } from "lucide-react";
 import { PortableText } from "@portabletext/react";
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
