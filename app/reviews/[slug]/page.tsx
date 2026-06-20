@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
 export const revalidate = 3600;
-import { ExternalLink, AlertTriangle } from "lucide-react";
+import { ExternalLink, AlertTriangle, Star } from "lucide-react";
+import ReviewCard from "@/components/ui/ReviewCard";
 import { PortableText } from "@portabletext/react";
 import ReviewScoreBadge from "@/components/ui/ReviewScoreBadge";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
@@ -106,12 +107,23 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
     url: `https://fitlabreviews.com/reviews/${slug}`,
   };
 
+  const faqSchema = review.faqItems && review.faqItems.length >= 4 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: review.faqItems.map((f: { question: string; answer: string }) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  } : null;
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <div style={{ backgroundColor: "#FFFFFF" }}>
 
         {/* Breadcrumb */}
@@ -172,10 +184,10 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           <MetadataStrip items={[
             { label: "Published", value: publishedDate },
             { label: "Last Updated", value: updatedDate },
-            { label: "Category", value: review.category ?? "—" },
+            ...(review.testingPeriod ? [{ label: "Testing Period", value: review.testingPeriod }] : []),
+            ...(review.tubsTested ? [{ label: "Tubs Tested", value: review.tubsTested }] : []),
             { label: "Price Range", value: review.priceRange ? review.priceRange.charAt(0).toUpperCase() + review.priceRange.slice(1) : "—" },
-            ...(review.bestFor?.length ? [{ label: "Best For", value: review.bestFor[0] }] : []),
-            ...(review.author?.name ? [{ label: "Reviewed By", value: review.author.name }] : []),
+            { label: "FSP Score", value: `${rubric.editorialScore}/10` },
           ]} />
         </div>
 
@@ -249,7 +261,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                   <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
                     Score Breakdown
                   </h2>
-                  <ScoreBreakdown rubric={rubric} reviewCode={`REV-${slug.slice(0, 8).toUpperCase()}`} />
+                  <ScoreBreakdown rubric={rubric} reviewCode={review.reviewCode || `REV-${slug.slice(0, 8).toUpperCase()}`} />
                 </section>
               )}
 
@@ -398,9 +410,85 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 </div>
               </section>
 
+              {/* FAQ */}
+              {review.faqItems && review.faqItems.length > 0 && (
+                <section id="faq" style={{ marginTop: 56, marginBottom: 56 }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20, letterSpacing: "-0.02em" }}>
+                    Frequently Asked Questions
+                  </h2>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    {review.faqItems.map((item: { question: string; answer: string }, i: number) => (
+                      <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
+                        <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5" }}>
+                          <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{item.question}</p>
+                        </div>
+                        <div style={{ padding: "12px 16px" }}>
+                          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.answer}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* References */}
+              {review.references && review.references.length > 0 && (
+                <section style={{ marginBottom: 56 }}>
+                  <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#17211C", marginBottom: 16 }}>Research References</h2>
+                  <ol style={{ paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+                    {review.references.map((ref: { text: string; url?: string }, i: number) => (
+                      <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>
+                        {ref.text}
+                        {ref.url && <>{" "}<a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>PubMed ↗</a></>}
+                      </li>
+                    ))}
+                  </ol>
+                </section>
+              )}
+
             </div>
           </div>
         </div>
+
+        {/* Related Reviews */}
+        {review.relatedReviews && review.relatedReviews.length > 0 && (
+          <div style={{ backgroundColor: "#F6F8F6", borderTop: "1px solid #E4E8E5", padding: "48px 24px" }}>
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 20 }}>You might also read</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+                {review.relatedReviews.map((rel: { slug: string; title: string; brand: string; category: string; editorialScore: number; verdict: string; publishedAt: string }) => (
+                  <ReviewCard
+                    key={rel.slug}
+                    slug={rel.slug}
+                    title={rel.title}
+                    brand={rel.brand}
+                    category={rel.category}
+                    rating={rel.editorialScore as ReviewRating}
+                    verdict={rel.verdict}
+                    publishedAt={rel.publishedAt}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Related Ingredients */}
+        {review.relatedIngredients && review.relatedIngredients.length > 0 && (
+          <div style={{ borderTop: "1px solid #E4E8E5", padding: "48px 24px" }}>
+            <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 16 }}>The science behind the label</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {review.relatedIngredients.map((ing: { name: string; slug: string }) => (
+                  <Link key={ing.slug} href={`/ingredients/${ing.slug}`} style={{ padding: "10px 18px", border: "1px solid #E4E8E5", borderRadius: 14, backgroundColor: "#F6F8F6", fontSize: 13, color: "#17211C", fontWeight: 600, textDecoration: "none" }}>
+                    {ing.name} →
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
       </div>
     </>
   );

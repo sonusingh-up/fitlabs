@@ -107,9 +107,40 @@ export const reviewSchema = defineType({
       ]
     }),
 
+    // Review metadata
+    defineField({ name: "reviewCode", title: "Review Code (e.g. REV-2026-041)", type: "string" }),
+    defineField({ name: "testingPeriod", title: "Testing Period (e.g. 4 Years)", type: "string" }),
+    defineField({ name: "tubsTested", title: "Tubs Tested (e.g. 20+)", type: "string" }),
+
+    // FAQ
+    defineField({
+      name: "faqItems", title: "FAQ Items", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "question", title: "Question", type: "string" }),
+        defineField({ name: "answer", title: "Answer", type: "text", rows: 3 }),
+      ]}],
+    }),
+
+    // References
+    defineField({
+      name: "references", title: "Research References", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "text", title: "Citation Text", type: "string" }),
+        defineField({ name: "url", title: "URL (PubMed/DOI)", type: "url" }),
+      ]}],
+    }),
+
+    // Related content
+    defineField({ name: "relatedReviews", title: "Related Reviews", type: "array",
+      of: [{ type: "reference", to: [{ type: "review" }] }],
+    }),
+    defineField({ name: "relatedIngredients", title: "Related Ingredients", type: "array",
+      of: [{ type: "reference", to: [{ type: "ingredient" }] }],
+    }),
+
     // Rich body content
     defineField({ name: "body", title: "Full Review Body", type: "array",
-      of: [{ type: "block" }, { type: "image" }]
+      of: [{ type: "block" }, { type: "image" }],
     }),
 
     // Author reference
