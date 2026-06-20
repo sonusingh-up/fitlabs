@@ -51,7 +51,14 @@ export async function proxy(request: NextRequest) {
     }
 
     // Redirect authenticated users away from auth pages
-    if (user && pathname.startsWith("/auth/")) {
+    // (except /auth/reset-password — user must be logged in to set a new password,
+    //  and /auth/callback — needs to complete the code exchange)
+    if (
+      user &&
+      pathname.startsWith("/auth/") &&
+      !pathname.startsWith("/auth/reset-password") &&
+      !pathname.startsWith("/auth/callback")
+    ) {
       const redirect = request.nextUrl.searchParams.get("redirect") || "/account";
       const url = request.nextUrl.clone();
       url.pathname = redirect;
