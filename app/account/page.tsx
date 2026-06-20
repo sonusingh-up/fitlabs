@@ -14,11 +14,18 @@ export default async function AccountPage() {
 
   if (!user) redirect("/auth/login");
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("full_name, avatar_url")
-    .eq("id", user.id)
-    .single();
+  const [{ data: profile }, { data: savedReviews }] = await Promise.all([
+    supabase
+      .from("profiles")
+      .select("full_name, avatar_url, email_notifications")
+      .eq("id", user.id)
+      .single(),
+    supabase
+      .from("saved_reviews")
+      .select("slug, title, rating, category")
+      .eq("user_id", user.id)
+      .order("saved_at", { ascending: false }),
+  ]);
 
   return (
     <AccountClient
@@ -30,6 +37,8 @@ export default async function AccountPage() {
         provider: user.app_metadata?.provider ?? "email",
         createdAt: user.created_at,
       }}
+      savedReviews={savedReviews ?? []}
+      emailNotifications={profile?.email_notifications ?? true}
     />
   );
 }
