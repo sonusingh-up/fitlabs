@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { authors } from "../page";
+
+export const revalidate = 86400;
 import type { ReviewRating } from "@/lib/types";
 import ReviewCard from "@/components/ui/ReviewCard";
 

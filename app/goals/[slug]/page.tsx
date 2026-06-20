@@ -5,6 +5,8 @@ import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { ReviewRating, EvidenceLevel } from "@/lib/types";
 
+export const revalidate = 3600;
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   return {

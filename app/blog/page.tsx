@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Fitness, Nutrition & Longevity Blog",
   description: "Evidence-led articles on sleep science, GLP-1 research, nutritional psychiatry, and fitness travel — every claim named and cited. No fluff, no sponsored content.",

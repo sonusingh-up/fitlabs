@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Comparisons — Head-to-Head, FSP-Scored",
   description:

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ReviewCard from "@/components/ui/ReviewCard";
+
+export const revalidate = 86400;
 import type { ReviewRating } from "@/lib/types";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

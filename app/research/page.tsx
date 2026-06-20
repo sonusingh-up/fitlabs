@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import HubMasthead from "@/components/ui/HubMasthead";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Research & Science Articles",
   description: "Evidence-graded research on supplement science, longevity, GLP-1 medications, and sleep biology. Every claim linked to named peer-reviewed studies.",

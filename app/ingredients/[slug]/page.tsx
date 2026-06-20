@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+
+export const revalidate = 86400;
 import { AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import { ingredientsDb } from "@/lib/ingredients-db";

@@ -7,6 +7,8 @@ import TrustPillars from "@/components/ui/TrustPillars";
 import NewsletterForm from "@/components/ui/NewsletterForm";
 import RecommendedReads from "@/components/ui/RecommendedReads";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: { absolute: "Fitlabreviews — Evidence-Led Supplement Reviews" },
   description:

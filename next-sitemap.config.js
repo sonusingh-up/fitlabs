@@ -18,7 +18,7 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/studio", "/studio/**", "/feed.xml", "/llms.txt", "/opengraph-image", "/auth", "/auth/**", "/account"],
+  exclude: ["/privacy", "/terms", "/search", "/api/*", "/_next/*", "/studio", "/studio/**", "/feed.xml", "/llms.txt", "/opengraph-image", "/auth", "/auth/**", "/account", "/admin"],
 
   additionalPaths: async (config) => {
     const paths = [];

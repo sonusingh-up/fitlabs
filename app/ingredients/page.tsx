@@ -6,6 +6,8 @@ import HubMasthead from "@/components/ui/HubMasthead";
 import { ingredientsDb } from "@/lib/ingredients-db";
 import type { EvidenceLevel } from "@/lib/types";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "Supplement Ingredient Research Index",
   description:

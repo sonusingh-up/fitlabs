@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "Our Research Team & Authors",
   description: "Meet the research team behind Fitlabreviews — independent supplement researchers, formula analysts, and evidence-based writers who score every product we review.",
