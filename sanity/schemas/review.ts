@@ -143,8 +143,9 @@ export const reviewSchema = defineType({
       of: [{ type: "block" }, { type: "image" }],
     }),
 
-    // Author reference
-    defineField({ name: "author", title: "Author", type: "reference", to: [{ type: "author" }] }),
+    // Author references
+    defineField({ name: "author", title: "Written By", type: "reference", to: [{ type: "author" }] }),
+    defineField({ name: "reviewer", title: "Reviewed By", type: "reference", to: [{ type: "author" }] }),
   ],
   preview: {
     select: { title: "title", subtitle: "brand", media: "heroImage" },

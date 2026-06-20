@@ -31,9 +31,10 @@ export async function getReviewBySlug(slug: string) {
       reviewCode, testingPeriod, tubsTested,
       faqItems[]{ question, answer },
       references[]{ text, url },
-      relatedReviews[]->{ title, "slug": slug.current, brand, category, editorialScore, verdict, publishedAt },
+      relatedReviews[]->{ title, "slug": slug.current, brand, category, editorialScore, verdict, publishedAt, heroImage, affiliateUrl, priceRange },
       relatedIngredients[]->{ name, "slug": slug.current, category, evidenceLevel, figNumber },
-      author->{ name, "slug": slug.current, role, avatar, credentials }
+      author->{ name, "slug": slug.current, role, bio, avatar, credentials, linkedIn },
+      reviewer->{ name, "slug": slug.current, role, bio, avatar, credentials, linkedIn }
     }`,
     { slug }
   );
