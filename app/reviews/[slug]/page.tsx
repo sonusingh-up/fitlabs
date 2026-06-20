@@ -25,10 +25,13 @@ import { getReviewBySlug, getAllReviewSlugs, urlFor } from "@/lib/sanity";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
 
 const tocItems = [
+  { id: "key-takeaways", label: "Key Takeaways" },
   { id: "verdict", label: "Quick Verdict" },
+  { id: "product-specs", label: "Product Specs" },
   { id: "score-breakdown", label: "Score Breakdown" },
   { id: "flags", label: "Red & Green Flags" },
-  { id: "ingredients", label: "Ingredient Breakdown" },
+  { id: "tester-experience", label: "Our Experience" },
+  { id: "ingredients", label: "Ingredients" },
   { id: "claim-audit", label: "Claim Audit" },
   { id: "pros-cons", label: "Pros & Cons" },
   { id: "value", label: "Price & Value" },
@@ -169,6 +172,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <div className="hidden sm:flex" style={{ alignItems: "center", gap: 10, marginBottom: 16, flexWrap: "wrap" }}>
                   {review.reviewCode && <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em" }}>{review.reviewCode}</span>}
                   <span style={{ padding: "4px 10px", backgroundColor: "rgba(15,122,90,0.2)", border: "1px solid rgba(15,122,90,0.3)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "#4ADE80", letterSpacing: "0.1em" }}>FSP SCORED</span>
+                  <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.12)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em" }}>EVIDENCE BASED</span>
                   {review.category && <span style={{ padding: "4px 10px", backgroundColor: "rgba(255,255,255,0.06)", borderRadius: 8, fontSize: 10, fontFamily: "var(--font-jetbrains), monospace", color: "rgba(255,255,255,0.5)" }}>{review.category.toUpperCase()}</span>}
                 </div>
 
@@ -309,6 +313,51 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <MobileTOC items={tocItems} />
               </div>
 
+              {/* ── KEY TAKEAWAYS ── */}
+              {review.keyTakeaways && review.keyTakeaways.length > 0 && (
+                <div id="key-takeaways" style={{ ...card, borderLeft: "4px solid #0F7A5A" }}>
+                  <div style={cardInner}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
+                      <div style={{ width: 28, height: 28, borderRadius: 8, background: "linear-gradient(135deg, #0F7A5A, #14A474)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}>
+                        <Sparkles size={14} />
+                      </div>
+                      <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, color: "#0A4F3B", letterSpacing: "0.05em", textTransform: "uppercase" }}>Key Takeaways</span>
+                    </div>
+                    <ul style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 10 }}>
+                      {review.keyTakeaways.map((t: string, i: number) => (
+                        <li key={i} style={{ fontSize: 15, color: "#17211C", lineHeight: 1.65, fontFamily: "var(--font-dm-sans)" }}>{t}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {/* ── WHY TRUST US ── */}
+              <div style={{ ...card, background: "linear-gradient(145deg, #F2F8F4, #E7F2EC)" }}>
+                <div style={cardInner}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 14 }}>
+                    <Shield size={16} style={{ color: "#0F7A5A" }} />
+                    <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 14, fontWeight: 700, color: "#17211C" }}>Why trust Fitlabreviews</span>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 12 }}>
+                    {[
+                      { val: "142+", label: "Products reviewed" },
+                      { val: "87+", label: "Ingredients profiled" },
+                      { val: "FSP v2.1", label: "Scoring protocol" },
+                      { val: "0", label: "Sponsored reviews" },
+                    ].map((s) => (
+                      <div key={s.label} style={{ textAlign: "center", padding: "12px 8px" }}>
+                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 800, color: "#0F7A5A", margin: 0, lineHeight: 1 }}>{s.val}</p>
+                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "#586259", margin: "4px 0 0" }}>{s.label}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <Link href="/methodology" style={{ display: "flex", alignItems: "center", gap: 4, marginTop: 12, fontSize: 12, color: "#0F7A5A", fontWeight: 600, fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
+                    How we evaluate and score products <ArrowRight size={12} />
+                  </Link>
+                </div>
+              </div>
+
               {/* ── QUICK VERDICT ── */}
               <div id="verdict" style={card}>
                 <div style={cardInner}>
@@ -348,6 +397,58 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 </div>
               </div>
 
+              {/* ── PRODUCT SPECS CARD ── */}
+              {(review.productSpecs || review.valueMetric?.pricePerServing > 0) && (
+                <div id="product-specs" style={{ borderRadius: 20, overflow: "hidden", background: "linear-gradient(145deg, #17211C 0%, #0F3D2E 100%)" }}>
+                  <div style={{ padding: "24px 28px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 20 }}>
+                      <div>
+                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 11, color: "rgba(255,255,255,0.4)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4 }}>PRODUCT SPECS</p>
+                        <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 18, fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{review.title}</p>
+                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "4px 0 0" }}>{review.brand} · {review.category}</p>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} size={14} style={{ color: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "rgba(255,255,255,0.15)", fill: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "none" }} />
+                        ))}
+                      </div>
+                    </div>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: 1, backgroundColor: "rgba(255,255,255,0.06)", borderRadius: 12, overflow: "hidden" }}>
+                      {[
+                        ...(review.productSpecs?.servings ? [{ label: "Servings", value: review.productSpecs.servings }] : []),
+                        ...(review.productSpecs?.servingSize ? [{ label: "Serving Size", value: review.productSpecs.servingSize }] : []),
+                        ...(review.productSpecs?.calories ? [{ label: "Calories", value: review.productSpecs.calories }] : []),
+                        ...(review.productSpecs?.protein ? [{ label: "Protein", value: review.productSpecs.protein }] : []),
+                        ...(review.valueMetric?.pricePerServing > 0 ? [{ label: "Price/Serving", value: `$${review.valueMetric.pricePerServing.toFixed(2)}` }] : []),
+                        { label: "FSP Score", value: `${rubric.editorialScore}/10` },
+                      ].map((s: { label: string; value: string }) => (
+                        <div key={s.label} style={{ padding: "14px 12px", backgroundColor: "rgba(0,0,0,0.2)", textAlign: "center" }}>
+                          <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", color: "rgba(255,255,255,0.4)", marginBottom: 4, textTransform: "uppercase" }}>{s.label}</p>
+                          <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#FFFFFF", margin: 0 }}>{s.value}</p>
+                        </div>
+                      ))}
+                    </div>
+                    {/* Certifications */}
+                    {review.productSpecs?.certifications && review.productSpecs.certifications.length > 0 && (
+                      <div style={{ display: "flex", gap: 6, marginTop: 14, flexWrap: "wrap" }}>
+                        {review.productSpecs.certifications.map((c: string) => (
+                          <span key={c} style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "4px 10px", backgroundColor: "rgba(15,122,90,0.15)", border: "1px solid rgba(15,122,90,0.25)", borderRadius: 8, fontSize: 10, color: "#4ADE80", fontFamily: "var(--font-dm-sans)", fontWeight: 600 }}>
+                            <Shield size={10} /> {c}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    {/* CTA */}
+                    {review.affiliateUrl && (
+                      <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
+                        style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginTop: 18, padding: "13px 24px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)", width: "100%" }}>
+                        Shop {review.title} <ExternalLink size={14} />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* ── SCORE BREAKDOWN ── */}
               {rubric.pillars.length > 0 && (
                 <div id="score-breakdown" style={card}>
@@ -365,6 +466,58 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                     <h2 style={h2Style}>Red & Green Flags</h2>
                     <FlagSystem flags={rubric.flags} />
                   </div>
+                </div>
+              )}
+
+              {/* ── TESTER EXPERIENCE ── */}
+              {review.testerExperience?.name && (
+                <div id="tester-experience" style={card}>
+                  <div style={cardInner}>
+                    <h2 style={h2Style}>Our Experience with {review.title}</h2>
+                    {/* Tester profile */}
+                    <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "16px 18px", background: "linear-gradient(145deg, #F2F8F4, #E7F2EC)", borderRadius: 14, marginBottom: 24 }}>
+                      {review.testerExperience.avatar ? (
+                        <Image src={urlFor(review.testerExperience.avatar).width(80).height(80).url()} alt={review.testerExperience.name} width={56} height={56} style={{ borderRadius: "50%", objectFit: "cover", border: "2px solid #D4E9DF" }} />
+                      ) : (
+                        <div style={{ width: 56, height: 56, borderRadius: "50%", background: "linear-gradient(135deg, #0F7A5A, #0A4F3B)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "var(--font-dm-sans)", border: "2px solid #D4E9DF" }}>
+                          {review.testerExperience.name.split(" ").map((w: string) => w[0]).join("").slice(0, 2)}
+                        </div>
+                      )}
+                      <div>
+                        <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 15, fontWeight: 700, color: "#17211C", margin: 0 }}>{review.testerExperience.name}</p>
+                        {review.testerExperience.role && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "#586259", margin: "2px 0 0" }}>{review.testerExperience.role}</p>}
+                        {review.testerExperience.motivation && <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, color: "#6B7770", margin: "4px 0 0", fontStyle: "italic" }}>&ldquo;{review.testerExperience.motivation}&rdquo;</p>}
+                      </div>
+                    </div>
+
+                    {/* Experience sections */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                      {[
+                        { label: "How I used it", icon: "01", content: review.testerExperience.howUsed },
+                        { label: "Taste & texture", icon: "02", content: review.testerExperience.taste },
+                        { label: "Results", icon: "03", content: review.testerExperience.results },
+                        { label: "Final thoughts", icon: "04", content: review.testerExperience.finalThoughts },
+                      ].filter((s) => s.content).map((s) => (
+                        <div key={s.label} style={{ display: "flex", gap: 14, padding: "16px 18px", backgroundColor: "#F8FAF8", borderRadius: 14 }}>
+                          <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 22, fontWeight: 700, color: "#E4E8E5", lineHeight: 1, flexShrink: 0, width: 30 }}>{s.icon}</span>
+                          <div>
+                            <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 13, fontWeight: 700, color: "#17211C", marginBottom: 6 }}>{s.label}</p>
+                            <p style={{ fontSize: 14, color: "#3F4B43", lineHeight: 1.7, margin: 0, fontFamily: "var(--font-dm-sans)" }}>{s.content}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Repeated CTA after experience */}
+              {review.affiliateUrl && review.testerExperience?.name && (
+                <div style={{ textAlign: "center" }}>
+                  <Link href={review.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow"
+                    style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 28px", background: "linear-gradient(135deg, #0F7A5A, #14A474)", color: "#FFFFFF", fontSize: 14, fontWeight: 700, borderRadius: 14, fontFamily: "var(--font-dm-sans)", textDecoration: "none", boxShadow: "0 4px 14px rgba(15,122,90,0.3)" }}>
+                    Try {review.title} <ExternalLink size={14} />
+                  </Link>
                 </div>
               )}
 
