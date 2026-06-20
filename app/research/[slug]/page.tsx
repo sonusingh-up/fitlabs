@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { getResearchBySlug, getAllResearchSlugs } from "@/lib/sanity";
+import { getResearchBySlug, getAllResearchSlugs, urlFor } from "@/lib/sanity";
 import type { EvidenceLevel } from "@/lib/types";
 
 // ── Static params ───────────────────────────────────────────────────────────

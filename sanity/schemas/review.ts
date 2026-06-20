@@ -111,6 +111,34 @@ export const reviewSchema = defineType({
     defineField({ name: "reviewCode", title: "Review Code (e.g. REV-2026-041)", type: "string" }),
     defineField({ name: "testingPeriod", title: "Testing Period (e.g. 4 Years)", type: "string" }),
     defineField({ name: "tubsTested", title: "Tubs Tested (e.g. 20+)", type: "string" }),
+    defineField({ name: "keyTakeaways", title: "Key Takeaways (3-4 bullets)", type: "array", of: [{ type: "string" }] }),
+
+    // Product specs
+    defineField({
+      name: "productSpecs", title: "Product Specs Card", type: "object",
+      fields: [
+        defineField({ name: "servings", title: "Servings per container", type: "string" }),
+        defineField({ name: "servingSize", title: "Serving size", type: "string" }),
+        defineField({ name: "calories", title: "Calories", type: "string" }),
+        defineField({ name: "protein", title: "Protein", type: "string" }),
+        defineField({ name: "certifications", title: "Certifications", type: "array", of: [{ type: "string" }] }),
+      ],
+    }),
+
+    // Tester experience
+    defineField({
+      name: "testerExperience", title: "Personal Tester Experience", type: "object",
+      fields: [
+        defineField({ name: "name", title: "Tester Name", type: "string" }),
+        defineField({ name: "role", title: "Role/Background", type: "string" }),
+        defineField({ name: "avatar", title: "Tester Photo", type: "image", options: { hotspot: true } }),
+        defineField({ name: "motivation", title: "Why they tested it", type: "text", rows: 2 }),
+        defineField({ name: "howUsed", title: "How I used it", type: "text", rows: 4 }),
+        defineField({ name: "taste", title: "Taste & texture notes", type: "text", rows: 3 }),
+        defineField({ name: "results", title: "Results observed", type: "text", rows: 4 }),
+        defineField({ name: "finalThoughts", title: "Final thoughts", type: "text", rows: 3 }),
+      ],
+    }),
 
     // FAQ
     defineField({
@@ -143,8 +171,9 @@ export const reviewSchema = defineType({
       of: [{ type: "block" }, { type: "image" }],
     }),
 
-    // Author reference
-    defineField({ name: "author", title: "Author", type: "reference", to: [{ type: "author" }] }),
+    // Author references
+    defineField({ name: "author", title: "Written By", type: "reference", to: [{ type: "author" }] }),
+    defineField({ name: "reviewer", title: "Reviewed By", type: "reference", to: [{ type: "author" }] }),
   ],
   preview: {
     select: { title: "title", subtitle: "brand", media: "heroImage" },

@@ -39,6 +39,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cdn.sanity.io",
+        pathname: "/images/**",
+      },
+      {
+        protocol: "https",
         hostname: "szpdxovusioijennckfg.supabase.co",
         pathname: "/storage/v1/object/sign/**",
       },
