@@ -180,14 +180,21 @@ Before committing any new page or metadata change, verify:
 
 ## 10. File Structure for Reviews
 
-New dedicated reviews go in static routes — NOT the dynamic `[slug]` template:
+Reviews can be published two ways:
+
+**Option A: Sanity CMS (preferred for new content)**
+Publish via Sanity Studio (`/studio`). The `[slug]` template renders Sanity content
+with the full Healthline/Forbes-style design — right sticky sidebar, Quick Look card,
+comparison cards, accordion FAQs, "How we reviewed" section, and mobile sticky CTA.
+
+**Option B: Static `.tsx` files (for custom layouts)**
 ```
 app/reviews/[product-slug]/page.tsx   ← static, takes priority over [slug]
-app/reviews/[slug]/page.tsx           ← fallback template for unreviewed products
+app/reviews/[slug]/page.tsx           ← Sanity-powered template (Healthline layout)
 ```
 
 Static pages take Next.js routing priority over dynamic routes.
-Use static pages for all fully-written reviews.
+Use static pages only when the review needs a custom layout beyond what Sanity provides.
 
 ---
 
@@ -384,14 +391,34 @@ Use the `/review-article <slug>` slash command to build a new product review art
    <div style={{ display: "flex", position: "absolute", ... }}>
    ```
 
-**Required sections that reviews must have (beyond the body sections):**
-- Feature banner (full-width dark gradient with `<h1>`, stars, product image) before the hero row
-- Hero row (uses `<h2>`, not `<h1>`, since h1 is in the banner)
-- `Star` import from `lucide-react` (needed for feature banner rating stars)
-- Author box after MetadataStrip
-- Affiliate disclosure after author box
-- Research references as the final section inside `</article>`
-- Related reviews as a full-width bottom section **outside** the `container-pad` div
+**Review template layout (Healthline/Forbes style — `app/reviews/[slug]/page.tsx`):**
+- Two-column layout: article left (70%) + right sticky sidebar (30%)
+- CSS class: `.review-layout` (grid) + `.review-sidebar` (sticky top:80px)
+- Sidebar contains: product mini-card, TableOfContents, category links, ArticleFeedback
+- Mobile: single column + sticky bottom CTA bar (`StickyBuyBar` component)
+
+**Required sections (top to bottom):**
+- Affiliate disclosure bar (top of page)
+- Breadcrumb (Home > Category > Product)
+- h1 title with "Evidence Based" badge + review code
+- Author row — always shows (fallback: "Fitlab Research Team" + "Pankaj Singh, B. Pharm")
+- Hero image (only when Sanity heroImage is uploaded)
+- Quick Look product card (image/placeholder + stars + verdict + specs + CTA)
+- Key Takeaways (amber left-border callout)
+- Pros & Cons
+- Our Experience (tester section — when available)
+- Ingredients breakdown (flowing text with EvidenceBadge)
+- FSP Score Breakdown (teal gradient header)
+- Red & Green Flags
+- Claim Audit (teal gradient header)
+- Price & Value (USD — $ not ₹)
+- Full Review (Portable Text body)
+- Compare with alternatives (product cards with image/placeholder + CTA buttons)
+- FAQ (accordion `<details>/<summary>`)
+- Takeaway (who should / shouldn't buy)
+- "Get started with [product]" CTA card
+- "How we reviewed this article" (Sources tab + editorial policy)
+- "Read next" related articles grid (full-width)
 
 **ScoringRubric pattern — compositeScore must be assigned AFTER const:**
 ```typescript
@@ -508,6 +535,10 @@ New articles should use these shared components:
 | `NewsletterForm` | `@/components/ui/NewsletterForm` | Working newsletter form with Resend + Supabase |
 | `TableOfContents` | `@/components/ui/TableOfContents` | Desktop sidebar TOC |
 | `MobileTOC` | `@/components/ui/MobileTOC` | Collapsible mobile TOC |
+| `AuthorPopup` | `@/components/ui/AuthorPopup` | Clickable author with modal popup (bio, credentials, links) |
+| `StickyBuyBar` | `@/components/ui/StickyBuyBar` | Mobile-only fixed bottom CTA bar |
+| `ArticleFeedback` | `@/components/ui/ArticleFeedback` | "Was this article helpful?" Yes/No feedback |
+| `UserMenu` | `@/components/auth/UserMenu` | Header user dropdown (login/profile/logout) |
 
 ### Blog article required imports:
 ```tsx
@@ -540,15 +571,36 @@ The site's standard green palette (`#0F7A5A`, `#17211C`, `#E4E8E5`, `#F6F8F6`) i
 
 ## 19. Supabase Integration
 
-Supabase is connected for:
-- **Newsletter subscribers** — stored in `subscribers` table on form submission
-- **Contact form submissions** — stored in `contact_submissions` table
+Supabase handles auth + user data + form storage:
 
-The Supabase client (`lib/supabase.ts`) is gracefully optional — returns `null` when env vars are missing. API routes check `if (supabase)` before DB operations so builds pass without Supabase configured locally.
+**Auth system** (`@supabase/ssr` + cookie-based sessions):
+- Login: `/auth/login` — email/password + Google OAuth
+- Signup: `/auth/signup` — with email confirmation
+- Password reset: `/auth/forgot-password` → `/auth/reset-password`
+- User account: `/account` — profile editing, saved reviews, notification prefs, delete account
+- Session refresh: `proxy.ts` (Next.js 16 uses proxy, not middleware)
+- Admin panel: `/admin` — ISR revalidation (restricted to `ADMIN_EMAILS` in `lib/admin.ts`)
 
-Required env vars (set in Vercel, not local):
-- `NEXT_PUBLIC_SUPABASE_URL`
-- `SUPABASE_SERVICE_ROLE_KEY`
+**Supabase clients:**
+- `lib/supabase.ts` — service role key (server-side admin operations)
+- `lib/supabase-browser.ts` — anon key (client-side auth via `createBrowserClient`)
+- `lib/supabase-server.ts` — anon key + cookies (server components via `createServerClient`)
+
+**Database tables:**
+- `auth.users` — managed by Supabase Auth
+- `profiles` — auto-created on signup via trigger (full_name, avatar_url, email_notifications)
+- `saved_reviews` — user bookmarks (user_id, slug, title, rating, category)
+- `subscribers` — newsletter signups
+- `contact_submissions` — contact form entries
+
+**RLS policies:** All user tables have Row Level Security. Users can only read/write their own data.
+
+**Required env vars:**
+- `NEXT_PUBLIC_SUPABASE_URL` — public (required for browser auth)
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` — public (designed to be exposed, RLS protects data)
+- `SUPABASE_SERVICE_ROLE_KEY` — server-only (admin operations, account deletion)
+
+**Security rule:** NEVER expose secrets via `NEXT_PUBLIC_*`. The admin panel uses Server Actions (`app/admin/actions.ts`), not client-side API calls with secret tokens.
 
 ---
 
@@ -562,9 +614,71 @@ Fix all TypeScript errors and warnings before pushing.
 The postbuild runs `next-sitemap` and `pagefind` automatically.
 
 ### Pre-push checklist for new articles:
-- [ ] Article page created at correct static route
-- [ ] Entry added to `lib/articles.ts` with all fields
-- [ ] Article has a unique illustration (not shared stock photo)
-- [ ] JSON-LD schemas included (Article + FAQPage)
-- [ ] `ReadingProgress` and `ShareButtons` components imported
+- [ ] Article page created at correct static route (or published via Sanity)
+- [ ] Entry added to `lib/articles.ts` with all fields (for static pages)
+- [ ] JSON-LD schemas included (Article/Review + FAQPage)
 - [ ] `npm run build` passes clean
+
+---
+
+## 21. Sanity CMS Integration
+
+**Project ID:** `381hs563` · **Dataset:** `production` · **Studio:** `/studio`
+
+**8 content types** (schemas in `sanity/schemas/`):
+| Type | Schema File | GROQ in `lib/sanity.ts` |
+|------|------------|------------------------|
+| `review` | `review.ts` | `getReviewBySlug()`, `getAllReviewSlugs()`, `getAllReviews()` |
+| `blog` | `blog.ts` | `getBlogBySlug()`, `getAllBlogSlugs()` |
+| `ingredient` | `ingredient.ts` | `getIngredientBySlug()`, `getAllIngredientSlugs()` |
+| `research` | `others.ts` | `getResearchBySlug()`, `getAllResearchSlugs()` |
+| `brand` | `others.ts` | `getBrandBySlug()`, `getAllBrandSlugs()` |
+| `bestList` | `others.ts` | `getBestBySlug()`, `getAllBestSlugs()` |
+| `comparison` | `others.ts` | `getComparisonBySlug()` |
+| `author` | `others.ts` | `getAuthorBySlug()` |
+
+**Rich templates:** Every `[slug]` dynamic route renders Sanity content with the same design as static pages. Missing fields gracefully hide their sections.
+
+**Image handling:** Use `urlFor(image).width(w).height(h).url()` from `lib/sanity.ts`. The `cdn.sanity.io` domain is whitelisted in `next.config.ts` (remotePatterns + CSP).
+
+**Webhook for auto-revalidation:** `/api/revalidate/sanity` — receives Sanity publish events and calls `revalidatePath()` on the relevant hub + specific page. Set up in Sanity Dashboard → API → Webhooks.
+
+---
+
+## 22. Incremental Static Regeneration (ISR)
+
+**Every content page has ISR** — `export const revalidate` at the module level:
+- Hub pages (/, /reviews, /blog, etc.): `revalidate = 3600` (1 hour)
+- Review/research/best/category `[slug]`: `revalidate = 3600` (1 hour)
+- Ingredient/brand/author `[slug]`: `revalidate = 86400` (24 hours)
+- Auth/account pages: dynamic (no ISR — user-specific)
+
+**Admin revalidation panel** (`/admin`):
+- Protected — requires login + admin email check (`lib/admin.ts`)
+- One-click buttons to revalidate any hub section or custom path
+- Uses Server Actions (`app/admin/actions.ts`) — no secrets on client
+
+**Revalidation API endpoints:**
+- `/api/revalidate` — manual revalidation with `REVALIDATE_SECRET` header
+- `/api/revalidate/sanity` — Sanity webhook endpoint (auto-revalidates on publish)
+
+**IndexNow:** `scripts/indexnow.mjs` runs in postbuild, pings Bing/Google with all site URLs.
+
+---
+
+## 23. Review UI Components
+
+All review components use consistent design tokens (teal gradient headers, 16px border-radius, USD currency):
+
+| Component | File | Props |
+|-----------|------|-------|
+| `ScoreBreakdown` | `components/ui/ScoreBreakdown.tsx` | `rubric: ScoringRubric`, `reviewCode?: string` |
+| `FlagSystem` | `components/ui/FlagSystem.tsx` | `flags: ReviewFlag[]` |
+| `ClaimAudit` | `components/ui/ClaimAudit.tsx` | `items: ClaimAuditItem[]` |
+| `ValueMetricPanel` | `components/ui/ValueMetricPanel.tsx` | `metric: ValueMetric`, `activeIngredientLabel?: string` |
+| `ProsCons` | `components/ui/ProsCons.tsx` | `pros: string[]`, `cons: string[]` |
+| `AuthorPopup` | `components/ui/AuthorPopup.tsx` | `author: Author`, `label: string` — clickable, opens modal |
+| `StickyBuyBar` | `components/ui/StickyBuyBar.tsx` | `productName`, `price?`, `url` — mobile only, fixed bottom |
+| `ArticleFeedback` | `components/ui/ArticleFeedback.tsx` | `slug` — "Was this helpful?" Yes/No |
+
+**Currency rule:** ValueMetricPanel uses **USD ($)** — never ₹ (rupees).
