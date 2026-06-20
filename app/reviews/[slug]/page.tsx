@@ -165,25 +165,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           </div>
         </div>
 
-        {/* ── Hero / feature image ── */}
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 24px 0" }}>
-          {heroImageUrl ? (
+        {/* ── Hero image (only when available) ── */}
+        {heroImageUrl && (
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 24px 0" }}>
             <Image src={heroImageUrl} alt={review.title} width={1200} height={630} priority style={{ width: "100%", height: "auto", borderRadius: 12, objectFit: "cover" }} />
-          ) : (
-            <div style={{ width: "100%", height: 280, borderRadius: 12, background: "linear-gradient(135deg, #17211C 0%, #0F3D2E 50%, #1A6B4B 100%)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden" }}>
-              <div style={{ position: "absolute", inset: 0, opacity: 0.05, backgroundImage: "radial-gradient(circle at 30% 70%, rgba(255,255,255,0.4) 0%, transparent 50%)" }} />
-              <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
-                <p style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: "clamp(1.4rem, 3vw, 2rem)", fontWeight: 800, color: "#FFFFFF", margin: "0 0 8px", letterSpacing: "-0.02em" }}>{review.title}</p>
-                <div style={{ display: "flex", gap: 4, justifyContent: "center", marginBottom: 8 }}>
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={18} style={{ color: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "rgba(255,255,255,0.2)", fill: i < Math.round(rubric.editorialScore / 2) ? "#F59E0B" : "none" }} />
-                  ))}
-                </div>
-                <p style={{ fontSize: 14, color: "rgba(255,255,255,0.5)" }}>{review.brand} · {review.category} · FSP {rubric.editorialScore}/10</p>
-              </div>
-            </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* ══════════════════════════════════════════════════════════════
             TWO-COLUMN LAYOUT: Article (left) + Sticky Sidebar (right)
