@@ -17,6 +17,7 @@ export default defineConfig({
           .title("Content")
           .items([
             S.listItem().title("Reviews").schemaType("review").child(S.documentTypeList("review")),
+            S.listItem().title("Blog").schemaType("blog").child(S.documentTypeList("blog")),
             S.listItem().title("Ingredients").schemaType("ingredient").child(S.documentTypeList("ingredient")),
             S.listItem().title("Authors").schemaType("author").child(S.documentTypeList("author")),
             S.listItem().title("Brands").schemaType("brand").child(S.documentTypeList("brand")),

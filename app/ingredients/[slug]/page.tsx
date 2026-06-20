@@ -3,24 +3,76 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export const revalidate = 86400;
+
 import { AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import { ingredientsDb } from "@/lib/ingredients-db";
+import { getIngredientBySlug, getAllIngredientSlugs } from "@/lib/sanity";
 import type { EvidenceLevel } from "@/lib/types";
 
-// ── Static params: tell Next.js every slug in the DB ─────────────────────────
+// ── Static params: Sanity slugs + local DB slugs (deduplicated) ─────────────
 export async function generateStaticParams() {
-  return ingredientsDb.map((ing) => ({ slug: ing.slug }));
+  const sanitySlugs = await getAllIngredientSlugs();
+  const localSlugs = ingredientsDb.map((i) => i.slug);
+  const all = new Set([...sanitySlugs.map((s) => s.slug), ...localSlugs]);
+  return Array.from(all).map((slug) => ({ slug }));
 }
 
-// ── Metadata ──────────────────────────────────────────────────────────────────
+// ── Resolve data: Sanity first, fall back to local DB ───────────────────────
+async function resolveIngredient(slug: string) {
+  const sanity = await getIngredientBySlug(slug);
+  if (sanity) {
+    return {
+      slug: sanity.slug,
+      name: sanity.name,
+      figure: sanity.figNumber || "ING-000",
+      category: sanity.category || "",
+      evidence: (sanity.evidenceLevel || "limited") as EvidenceLevel,
+      dose: sanity.dose || "See studies",
+      mechanism: sanity.mechanism || "",
+      bestFor: sanity.bestFor || [],
+      summary: sanity.summary || "",
+      aka: sanity.aka || [],
+      intro: sanity.intro || sanity.summary || "",
+      mechanismDetail: sanity.mechanismDetail || "",
+      keyBenefits: (sanity.keyBenefits || []).map((b: { claim: string; evidence: string; note: string }) => ({
+        claim: b.claim,
+        evidence: (b.evidence || "limited") as EvidenceLevel,
+        note: b.note,
+      })),
+      dosageNotes: sanity.dosageNotes || "",
+      safetyNotes: sanity.safetyNotes || "",
+      whoFor: sanity.whoFor || "",
+      relatedSlugs: sanity.relatedSlugs || [],
+      faqItems: sanity.faqItems || [],
+      publishedAt: sanity.publishedAt || "2026-01-01",
+      updatedAt: sanity.updatedAt || sanity.publishedAt || "2026-01-01",
+      source: "sanity" as const,
+    };
+  }
+
+  const local = ingredientsDb.find((i) => i.slug === slug);
+  if (local) {
+    return {
+      ...local,
+      faqItems: [] as { question: string; answer: string }[],
+      publishedAt: "2026-01-01",
+      updatedAt: "2026-06-20",
+      source: "local" as const,
+    };
+  }
+
+  return null;
+}
+
+// ── Metadata ────────────────────────────────────────────────────────────────
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const ing = ingredientsDb.find((i) => i.slug === slug);
+  const ing = await resolveIngredient(slug);
   if (!ing) return { title: "Ingredient Not Found" };
 
   const titleRaw = `${ing.name}: Benefits, Dosage & Side Effects`;
@@ -34,7 +86,7 @@ export async function generateMetadata({
   };
 }
 
-// ── Evidence colours ──────────────────────────────────────────────────────────
+// ── Evidence colours ────────────────────────────────────────────────────────
 const evidenceColour: Record<EvidenceLevel, string> = {
   strong: "#0F7A5A",
   moderate: "#0A4F3B",
@@ -43,14 +95,14 @@ const evidenceColour: Record<EvidenceLevel, string> = {
   insufficient: "#6B7770",
 };
 
-// ── Page ──────────────────────────────────────────────────────────────────────
+// ── Page ────────────────────────────────────────────────────────────────────
 export default async function IngredientPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const ing = ingredientsDb.find((i) => i.slug === slug);
+  const ing = await resolveIngredient(slug);
   if (!ing) notFound();
 
   const pageUrl = `https://fitlabreviews.com/ingredients/${slug}`;
@@ -68,36 +120,28 @@ export default async function IngredientPage({
       url: "https://fitlabreviews.com/authors/fitlab-research-team",
     },
     publisher: { "@type": "Organization", name: "Fitlabreviews", url: "https://fitlabreviews.com" },
-    datePublished: "2026-05-30",
-    dateModified: "2026-05-30",
+    datePublished: ing.publishedAt,
+    dateModified: ing.updatedAt,
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
   };
+
+  const faqEntries = ing.faqItems.length >= 4
+    ? ing.faqItems
+    : [
+        { question: `What is the recommended dose of ${ing.name}?`, answer: ing.dosageNotes },
+        { question: `Is ${ing.name} safe?`, answer: ing.safetyNotes },
+        { question: `How does ${ing.name} work?`, answer: ing.mechanismDetail },
+        { question: `Who should take ${ing.name}?`, answer: ing.whoFor },
+      ];
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: `What is the recommended dose of ${ing.name}?`,
-        acceptedAnswer: { "@type": "Answer", text: ing.dosageNotes },
-      },
-      {
-        "@type": "Question",
-        name: `Is ${ing.name} safe?`,
-        acceptedAnswer: { "@type": "Answer", text: ing.safetyNotes },
-      },
-      {
-        "@type": "Question",
-        name: `How does ${ing.name} work?`,
-        acceptedAnswer: { "@type": "Answer", text: ing.mechanismDetail },
-      },
-      {
-        "@type": "Question",
-        name: `Who should take ${ing.name}?`,
-        acceptedAnswer: { "@type": "Answer", text: ing.whoFor },
-      },
-    ],
+    mainEntity: faqEntries.map((f: { question: string; answer: string }) => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
   };
 
   return (
@@ -121,7 +165,7 @@ export default async function IngredientPage({
         {/* Hero */}
         <div style={{ borderBottom: "1px solid #E4E8E5" }} className="pad-hero">
           <div style={{ maxWidth: 900, margin: "0 auto" }} className="px-page">
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
+            <div className="hidden sm:flex" style={{ alignItems: "center", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
               <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#6B7770", textTransform: "uppercase" }}>{ing.figure}</span>
               <span style={{ width: 24, height: 1, backgroundColor: "#E4E8E5", display: "inline-block" }} />
               <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", color: "#0F7A5A", textTransform: "uppercase" }}>Ingredient Research Profile</span>
@@ -145,22 +189,24 @@ export default async function IngredientPage({
         <div style={{ maxWidth: 900, margin: "0 auto" }} className="pad-section-sm px-page">
 
           {/* Stats grid */}
-          <div style={{ marginBottom: 48 }}>
-            <div className="ing-stats-grid">
-              {[
-                { label: "Effective Dose", value: ing.dose, sub: "per clinical evidence" },
-                { label: "Evidence Level", value: ing.evidence.charAt(0).toUpperCase() + ing.evidence.slice(1), sub: ing.category },
-                { label: "Mechanism", value: ing.mechanism, sub: "primary action" },
-                { label: "Best For", value: ing.bestFor[0], sub: ing.bestFor.slice(1).join(", ") || "—" },
-              ].map((s) => (
-                <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
-                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{s.label}</p>
-                  <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
-                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{s.sub}</p>
-                </div>
-              ))}
+          {ing.dose && (
+            <div style={{ marginBottom: 48 }}>
+              <div className="ing-stats-grid">
+                {[
+                  { label: "Effective Dose", value: ing.dose, sub: "per clinical evidence" },
+                  { label: "Evidence Level", value: ing.evidence.charAt(0).toUpperCase() + ing.evidence.slice(1), sub: ing.category },
+                  { label: "Mechanism", value: ing.mechanism || "—", sub: "primary action" },
+                  { label: "Best For", value: ing.bestFor[0] || "—", sub: ing.bestFor.slice(1).join(", ") || "—" },
+                ].map((s) => (
+                  <div key={s.label} style={{ padding: "20px 16px", backgroundColor: "#F6F8F6" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#6B7770", marginBottom: 6 }}>{s.label}</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", marginBottom: 2, lineHeight: 1.2 }}>{s.value}</p>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#6B7770" }}>{s.sub}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Medical disclaimer */}
           <div style={{ marginBottom: 48, padding: "14px 18px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, display: "flex", gap: 12, alignItems: "flex-start" }}>
@@ -171,121 +217,138 @@ export default async function IngredientPage({
           </div>
 
           {/* § 1 What is it */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>What Is {ing.name}?</h2>
-            <p>{ing.intro}</p>
-          </section>
+          {ing.intro && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>What Is {ing.name}?</h2>
+              <p>{ing.intro}</p>
+            </section>
+          )}
 
           {/* § 2 How it works */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>How It Works: The Science</h2>
-            <p style={{ marginBottom: 20 }}>{ing.mechanismDetail}</p>
-            <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, borderLeft: "3px solid #0F7A5A" }}>
-              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>Primary Mechanism</p>
-              <p style={{ fontSize: 13, color: "#17211C", margin: 0, fontWeight: 600 }}>{ing.mechanism}</p>
-            </div>
-          </section>
+          {ing.mechanismDetail && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>How It Works: The Science</h2>
+              <p style={{ marginBottom: 20 }}>{ing.mechanismDetail}</p>
+              {ing.mechanism && (
+                <div style={{ padding: "16px 20px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, borderLeft: "3px solid #0F7A5A" }}>
+                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 6 }}>Primary Mechanism</p>
+                  <p style={{ fontSize: 13, color: "#17211C", margin: 0, fontWeight: 600 }}>{ing.mechanism}</p>
+                </div>
+              )}
+            </section>
+          )}
 
           {/* § 3 Evidence-Based Benefits */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>Evidence-Based Benefits</h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {ing.keyBenefits.map((b, i) => (
-                <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
-                  <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
-                    <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14, lineHeight: 1.4 }}>{b.claim}</p>
-                    <span style={{
-                      padding: "2px 8px",
-                      borderRadius: 4,
-                      fontSize: 9,
-                      fontFamily: "var(--font-jetbrains), monospace",
-                      letterSpacing: "0.08em",
-                      whiteSpace: "nowrap",
-                      flexShrink: 0,
-                      backgroundColor: `${evidenceColour[b.evidence]}14`,
-                      border: `1px solid ${evidenceColour[b.evidence]}33`,
-                      color: evidenceColour[b.evidence],
-                    }}>
-                      {b.evidence}
-                    </span>
+          {ing.keyBenefits && ing.keyBenefits.length > 0 && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>Evidence-Based Benefits</h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {ing.keyBenefits.map((b: { claim: string; evidence: EvidenceLevel; note: string }, i: number) => (
+                  <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
+                    <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
+                      <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14, lineHeight: 1.4 }}>{b.claim}</p>
+                      <span style={{
+                        padding: "2px 8px",
+                        borderRadius: 4,
+                        fontSize: 9,
+                        fontFamily: "var(--font-jetbrains), monospace",
+                        letterSpacing: "0.08em",
+                        whiteSpace: "nowrap",
+                        flexShrink: 0,
+                        backgroundColor: `${evidenceColour[b.evidence]}14`,
+                        border: `1px solid ${evidenceColour[b.evidence]}33`,
+                        color: evidenceColour[b.evidence],
+                      }}>
+                        {b.evidence}
+                      </span>
+                    </div>
+                    <div style={{ padding: "10px 16px" }}>
+                      <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>{b.note}</p>
+                    </div>
                   </div>
-                  <div style={{ padding: "10px 16px" }}>
-                    <p style={{ fontSize: 12, color: "#3F4B43", margin: 0, lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>{b.note}</p>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* § 4 Dosage Guide */}
+          {ing.dosageNotes && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>Dosage Guide</h2>
+              {ing.dose && (
+                <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, marginBottom: 20 }}>
+                  <div style={{ display: "flex", gap: 16, alignItems: "baseline", marginBottom: 8, flexWrap: "wrap" }}>
+                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>Effective Dose</p>
+                    <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#0F7A5A", margin: 0 }}>{ing.dose}</p>
+                  </div>
+                </div>
+              )}
+              <p>{ing.dosageNotes}</p>
+            </section>
+          )}
+
+          {/* § 5 Safety */}
+          {ing.safetyNotes && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>Safety Profile & Side Effects</h2>
+              <p>{ing.safetyNotes}</p>
+            </section>
+          )}
+
+          {/* § 6 Who it's for */}
+          {(ing.bestFor.length > 0 || ing.whoFor) && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>Who Should (and Shouldn&apos;t) Take It</h2>
+              <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+                {ing.bestFor.length > 0 && (
+                  <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 14, padding: "16px 18px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                      <CheckCircle2 size={14} color="#0F7A5A" />
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0F7A5A" }}>Best for</span>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      {ing.bestFor.map((tag: string) => (
+                        <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(15,122,90,0.08)", border: "1px solid rgba(15,122,90,0.2)", borderRadius: 4, fontSize: 11, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace" }}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {ing.whoFor && (
+                  <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #6B7770", borderRadius: 14, padding: "16px 18px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
+                      <XCircle size={14} color="#6B7770" />
+                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770" }}>Who it&apos;s for</span>
+                    </div>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{ing.whoFor}</p>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {/* § 7 FAQ */}
+          {faqEntries.length > 0 && faqEntries[0].answer && (
+            <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
+              <h2>Frequently Asked Questions</h2>
+              {faqEntries.map((item: { question: string; answer: string }, i: number) => (
+                <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden", marginBottom: 8 }}>
+                  <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5" }}>
+                    <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{item.question}</p>
+                  </div>
+                  <div style={{ padding: "12px 16px" }}>
+                    <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.answer}</p>
                   </div>
                 </div>
               ))}
-            </div>
-          </section>
-
-          {/* § 4 Dosage Guide */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>Dosage Guide</h2>
-            <div style={{ padding: "20px 24px", backgroundColor: "#F6F8F6", border: "1px solid #E4E8E5", borderRadius: 14, marginBottom: 20 }}>
-              <div style={{ display: "flex", gap: 16, alignItems: "baseline", marginBottom: 8, flexWrap: "wrap" }}>
-                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.15em", textTransform: "uppercase", color: "#6B7770", margin: 0 }}>Effective Dose</p>
-                <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.4rem", fontWeight: 700, color: "#0F7A5A", margin: 0 }}>{ing.dose}</p>
-              </div>
-            </div>
-            <p>{ing.dosageNotes}</p>
-          </section>
-
-          {/* § 5 Safety */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>Safety Profile & Side Effects</h2>
-            <p>{ing.safetyNotes}</p>
-          </section>
-
-          {/* § 6 Who it's for */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>Who Should (and Shouldn&apos;t) Take It</h2>
-            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #0F7A5A", borderRadius: 14, padding: "16px 18px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                  <CheckCircle2 size={14} color="#0F7A5A" />
-                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#0F7A5A" }}>Best for</span>
-                </div>
-                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                  {ing.bestFor.map((tag) => (
-                    <span key={tag} style={{ padding: "3px 9px", backgroundColor: "rgba(15,122,90,0.08)", border: "1px solid rgba(15,122,90,0.2)", borderRadius: 4, fontSize: 11, color: "#0F7A5A", fontFamily: "var(--font-jetbrains), monospace" }}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <div style={{ flex: "1 1 280px", border: "1px solid #E4E8E5", borderLeft: "3px solid #6B7770", borderRadius: 14, padding: "16px 18px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-                  <XCircle size={14} color="#6B7770" />
-                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.1em", textTransform: "uppercase", color: "#6B7770" }}>Who it's for</span>
-                </div>
-                <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.6, margin: 0 }}>{ing.whoFor}</p>
-              </div>
-            </div>
-          </section>
-
-          {/* § 7 FAQ */}
-          <section style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #E4E8E5" }} className="ingredient-article">
-            <h2>Frequently Asked Questions</h2>
-            {[
-              { q: `What is the recommended dose of ${ing.name}?`, a: ing.dosageNotes },
-              { q: `Is ${ing.name} safe?`, a: ing.safetyNotes },
-              { q: `How does ${ing.name} work?`, a: ing.mechanismDetail },
-              { q: `Who should take ${ing.name}?`, a: ing.whoFor },
-            ].map((item, i) => (
-              <div key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden", marginBottom: 8 }}>
-                <div style={{ padding: "12px 16px", backgroundColor: "#F6F8F6", borderBottom: "1px solid #E4E8E5" }}>
-                  <p style={{ fontWeight: 700, color: "#17211C", margin: 0, fontSize: 14 }}>{item.q}</p>
-                </div>
-                <div style={{ padding: "12px 16px" }}>
-                  <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.a}</p>
-                </div>
-              </div>
-            ))}
-          </section>
+            </section>
+          )}
 
           {/* Related */}
           {ing.relatedSlugs && ing.relatedSlugs.length > 0 && (
             <section style={{ marginBottom: 48 }}>
               <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.2em", textTransform: "uppercase", color: "#6B7770", marginBottom: 16 }}>Related Ingredients</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {ing.relatedSlugs.map((relSlug) => {
+                {ing.relatedSlugs.map((relSlug: string) => {
                   const rel = ingredientsDb.find((i) => i.slug === relSlug);
                   return (
                     <Link

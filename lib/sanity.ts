@@ -28,7 +28,12 @@ export async function getReviewBySlug(slug: string) {
       heroImage, publishedAt, updatedAt, tags, priceRange, affiliateUrl,
       metaDescription, pillars, flags, ingredients, claimAudit, pros, cons,
       bestFor, notIdealFor, valueMetric, body,
-      author->{ name, "slug": slug.current, role, avatar }
+      reviewCode, testingPeriod, tubsTested,
+      faqItems[]{ question, answer },
+      references[]{ text, url },
+      relatedReviews[]->{ title, "slug": slug.current, brand, category, editorialScore, verdict, publishedAt },
+      relatedIngredients[]->{ name, "slug": slug.current, category, evidenceLevel, figNumber },
+      author->{ name, "slug": slug.current, role, avatar, credentials }
     }`,
     { slug }
   );
@@ -56,7 +61,12 @@ export async function getIngredientBySlug(slug: string) {
   return sanityClient.fetch(
     `*[_type == "ingredient" && slug.current == $slug][0]{
       name, "slug": slug.current, category, summary, evidenceLevel,
-      topBenefit, figNumber, metaDescription, body, publishedAt
+      topBenefit, figNumber, metaDescription, body, publishedAt, updatedAt,
+      aka, intro, dose, mechanism, mechanismDetail,
+      keyBenefits[]{ claim, evidence, note },
+      dosageNotes, safetyNotes, whoFor,
+      bestFor, relatedSlugs,
+      faqItems[]{ question, answer }
     }`,
     { slug }
   );
@@ -100,7 +110,12 @@ export async function getBrandBySlug(slug: string) {
   return sanityClient.fetch(
     `*[_type == "brand" && slug.current == $slug][0]{
       name, "slug": slug.current, country, logo, summary,
-      founded, certifications, metaDescription, body, publishedAt
+      founded, figureCode, rating, reviewCount, categories, verdict,
+      stats[]{ label, value },
+      greenFlags, redFlags, certifications,
+      faqItems[]{ question, answer },
+      relatedReviews[]->{ title, "slug": slug.current, brand, category, editorialScore, verdict, publishedAt },
+      metaDescription, body, publishedAt, updatedAt
     }`,
     { slug }
   );
@@ -136,12 +151,46 @@ export async function getResearchBySlug(slug: string) {
   if (!sanityConfigured) return null;
   return sanityClient.fetch(
     `*[_type == "research" && slug.current == $slug][0]{
-      title, "slug": slug.current, summary, metaDescription, body,
-      author->{ name, "slug": slug.current, role },
+      title, "slug": slug.current, titleItalic, summary, metaDescription,
+      figureCode, evidenceLevel, readTime, quickAnswer,
+      statsPanel[]{ label, value, sub },
+      mechanismPanels[]{ num, title, body },
+      faqItems[]{ question, answer },
+      references[]{ text, url },
+      relatedArticles[]{ href, label },
+      body,
+      author->{ name, "slug": slug.current, role, avatar },
       relatedIngredients[]->{ name, "slug": slug.current },
-      publishedAt, tags
+      publishedAt, updatedAt, tags
     }`,
     { slug }
+  );
+}
+
+// ─── BLOG ────────────────────────────────────────────────────────────────────
+
+export async function getAllBlogSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
+  return sanityClient.fetch(`*[_type == "blog"]{ "slug": slug.current }`);
+}
+
+export async function getBlogBySlug(slug: string) {
+  if (!sanityConfigured) return null;
+  return sanityClient.fetch(
+    `*[_type == "blog" && slug.current == $slug][0]{
+      title, "slug": slug.current, titleItalic, category, figureCode,
+      readTime, evidenceLevel, summary, metaDescription, heroImage,
+      statCallouts[]{ value, label },
+      author->{ name, "slug": slug.current, role, avatar },
+      reviewer->{ name, "slug": slug.current, role, avatar },
+      tocItems[]{ id, label },
+      mechanismPanels[]{ num, title, body },
+      faqItems[]{ question, answer },
+      references[]{ text, url },
+      relatedArticles[]{ href, label },
+      body, publishedAt, updatedAt, tags
+    }`,
+    { slug },
   );
 }
 
