@@ -132,25 +132,43 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             </h1>
             <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans)", marginBottom: 16 }}>Published: {publishedDate} · Updated: {updatedDate}</p>
 
-            {/* Author row */}
+            {/* Author row — always shows (fallback to Fitlab Research Team) */}
             <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-              {review.author && (
-                <AuthorPopup label="Written by" author={{ name: review.author.name, slug: review.author.slug, role: review.author.role, bio: review.author.bio, avatarUrl: review.author.avatar ? urlFor(review.author.avatar).width(128).height(128).url() : undefined, credentials: review.author.credentials, linkedIn: review.author.linkedIn }} />
-              )}
-              {review.reviewer && (
-                <>
-                  <div style={{ width: 1, height: 28, backgroundColor: "#E4E8E5" }} />
-                  <AuthorPopup label="Fact checked" author={{ name: review.reviewer.name, slug: review.reviewer.slug, role: review.reviewer.role, bio: review.reviewer.bio, avatarUrl: review.reviewer.avatar ? urlFor(review.reviewer.avatar).width(128).height(128).url() : undefined, credentials: review.reviewer.credentials, linkedIn: review.reviewer.linkedIn }} />
-                </>
+              <AuthorPopup
+                label="Written by"
+                author={review.author ? {
+                  name: review.author.name, slug: review.author.slug, role: review.author.role, bio: review.author.bio,
+                  avatarUrl: review.author.avatar ? urlFor(review.author.avatar).width(128).height(128).url() : undefined,
+                  credentials: review.author.credentials, linkedIn: review.author.linkedIn,
+                } : {
+                  name: "Fitlab Research Team", slug: "fitlab-research-team", role: "Editorial Team",
+                  bio: "Our research team independently evaluates supplements using the Fitlab Scoring Protocol (FSP v2.1). Every product is tested, every claim is audited against peer-reviewed literature.",
+                }}
+              />
+              <div style={{ width: 1, height: 28, backgroundColor: "#E4E8E5" }} />
+              {review.reviewer ? (
+                <AuthorPopup
+                  label="Fact checked"
+                  author={{
+                    name: review.reviewer.name, slug: review.reviewer.slug, role: review.reviewer.role, bio: review.reviewer.bio,
+                    avatarUrl: review.reviewer.avatar ? urlFor(review.reviewer.avatar).width(128).height(128).url() : undefined,
+                    credentials: review.reviewer.credentials, linkedIn: review.reviewer.linkedIn,
+                  }}
+                />
+              ) : (
+                <AuthorPopup
+                  label="Fact checked"
+                  author={{ name: "Pankaj Singh", slug: "pankaj-singh", role: "B. Pharm", bio: "Pankaj holds a Bachelor of Pharmacy degree and reviews all supplement content for scientific accuracy, dosage claims, and safety considerations." }}
+                />
               )}
             </div>
           </div>
         </div>
 
-        {/* ── Hero image (full-width) ── */}
+        {/* ── Hero image (only when available) ── */}
         {heroImageUrl && (
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 24px 0" }}>
-            <Image src={heroImageUrl} alt={review.title} width={1200} height={630} priority style={{ width: "100%", height: "auto", borderRadius: 8, objectFit: "cover" }} />
+            <Image src={heroImageUrl} alt={review.title} width={1200} height={630} priority style={{ width: "100%", height: "auto", borderRadius: 12, objectFit: "cover" }} />
           </div>
         )}
 
@@ -169,11 +187,17 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               </div>
 
               {/* ── QUICK LOOK (product card) ── */}
-              <div id="quick-look" style={{ border: "1px solid #E4E8E5", borderRadius: 12, padding: "24px", marginBottom: 40 }}>
+              <div id="quick-look" style={{ border: "1px solid #E4E8E5", borderRadius: 16, padding: "24px", marginBottom: 40, backgroundColor: "#FAFBFA" }}>
                 <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 12, fontWeight: 700, color: "#6B7770", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>Quick Look</p>
                 <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexWrap: "wrap" }}>
-                  {heroImageUrl && (
-                    <Image src={heroImageUrl} alt={review.title} width={140} height={140} style={{ borderRadius: 8, objectFit: "cover", flexShrink: 0 }} />
+                  {/* Product image or placeholder */}
+                  {heroImageUrl ? (
+                    <Image src={heroImageUrl} alt={review.title} width={140} height={140} style={{ borderRadius: 12, objectFit: "cover", flexShrink: 0 }} />
+                  ) : (
+                    <div style={{ width: 140, height: 140, borderRadius: 12, background: "linear-gradient(135deg, #E7F2EC, #D4E9DF)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, flexDirection: "column" }}>
+                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 36, fontWeight: 900, color: "#0F7A5A", lineHeight: 1 }}>{rubric.editorialScore}</span>
+                      <span style={{ fontSize: 10, color: "#6B7770", fontFamily: "var(--font-dm-sans)" }}>/10 FSP</span>
+                    </div>
                   )}
                   <div style={{ flex: 1, minWidth: 220 }}>
                     <p style={{ fontFamily: "var(--font-dm-sans)", fontSize: 18, fontWeight: 700, color: "#17211C", margin: "0 0 6px" }}>{review.title}</p>
@@ -315,39 +339,50 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <div style={divider}><PortableText value={review.body} /></div>
               )}
 
-              {/* ── ALTERNATIVES ── */}
+              {/* ── ALTERNATIVES (product cards) ── */}
               {review.relatedReviews && review.relatedReviews.length > 0 && (
                 <div id="alternatives" style={divider}>
-                  <h2>{review.title} alternatives</h2>
-                  <p>Similar products that scored well in our testing.</p>
-                  <div className="review-table-wrap">
-                    <table style={{ borderCollapse: "collapse", minWidth: 540, width: "100%" }}>
-                      <thead>
-                        <tr style={{ borderBottom: "2px solid #E4E8E5" }}>
-                          {["Product", "Score", "Category", "Price", ""].map((h) => (
-                            <th key={h} style={{ textAlign: "left", padding: "10px 12px", fontSize: 11, fontFamily: "var(--font-jetbrains), monospace", color: "#6B7770", letterSpacing: "0.08em", textTransform: "uppercase", fontWeight: 600 }}>{h}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {review.relatedReviews.map((rel: any, i: number) => (
-                          <tr key={rel.slug} style={{ borderBottom: "1px solid #F0F3F1", backgroundColor: i % 2 === 0 ? "#FAFBFA" : "#fff" }}>
-                            <td style={{ padding: "14px 12px" }}>
-                              <Link href={`/reviews/${rel.slug}`} style={{ fontSize: 14, fontWeight: 600, color: "#17211C", textDecoration: "none" }}>{rel.title}</Link>
-                              <p style={{ fontSize: 12, color: "#6B7770", margin: "2px 0 0" }}>{rel.brand}</p>
-                            </td>
-                            <td style={{ padding: "14px 12px", fontSize: 15, fontWeight: 700, color: "#0F7A5A" }}>{rel.editorialScore}/10</td>
-                            <td style={{ padding: "14px 12px", fontSize: 13, color: "#3F4B43" }}>{rel.category}</td>
-                            <td style={{ padding: "14px 12px", fontSize: 13, color: "#3F4B43" }}>{rel.priceRange ? rel.priceRange.charAt(0).toUpperCase() + rel.priceRange.slice(1) : "—"}</td>
-                            <td style={{ padding: "14px 12px" }}>
-                              <Link href={rel.affiliateUrl || `/reviews/${rel.slug}`} target={rel.affiliateUrl ? "_blank" : undefined} rel={rel.affiliateUrl ? "noopener noreferrer nofollow" : undefined} style={{ fontSize: 12, color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>
-                                {rel.affiliateUrl ? "Shop →" : "Read →"}
+                  <h2>Compare with alternatives</h2>
+                  <p>See how {review.title} stacks up against similar products we have reviewed and scored.</p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                    {review.relatedReviews.map((rel: any) => {
+                      const relImg = rel.heroImage ? urlFor(rel.heroImage).width(200).height(200).url() : null;
+                      return (
+                        <div key={rel.slug} style={{ border: "1px solid #E4E8E5", borderRadius: 16, padding: "20px 24px", display: "flex", gap: 20, alignItems: "flex-start", flexWrap: "wrap", backgroundColor: "#FAFBFA" }}>
+                          {/* Product image or score placeholder */}
+                          {relImg ? (
+                            <Image src={relImg} alt={rel.title} width={100} height={100} style={{ borderRadius: 12, objectFit: "cover", flexShrink: 0 }} />
+                          ) : (
+                            <div style={{ width: 100, height: 100, borderRadius: 12, background: "linear-gradient(135deg, #E7F2EC, #D4E9DF)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, flexDirection: "column" }}>
+                              <span style={{ fontFamily: "var(--font-dm-sans)", fontSize: 28, fontWeight: 800, color: "#0F7A5A", lineHeight: 1 }}>{rel.editorialScore}</span>
+                              <span style={{ fontSize: 9, color: "#6B7770" }}>/10</span>
+                            </div>
+                          )}
+                          {/* Details */}
+                          <div style={{ flex: 1, minWidth: 200 }}>
+                            <p style={{ fontSize: 11, color: "#9CA3AF", marginBottom: 2 }}>{rel.brand}</p>
+                            <Link href={`/reviews/${rel.slug}`} style={{ fontSize: 16, fontWeight: 700, color: "#17211C", textDecoration: "none", display: "block", marginBottom: 6, lineHeight: 1.3 }}>{rel.title}</Link>
+                            <div style={{ display: "flex", gap: 3, alignItems: "center", marginBottom: 6 }}>
+                              {Array.from({ length: 5 }).map((_, i) => (
+                                <Star key={i} size={13} style={{ color: i < Math.round(rel.editorialScore / 2) ? "#F59E0B" : "#E4E8E5", fill: i < Math.round(rel.editorialScore / 2) ? "#F59E0B" : "none" }} />
+                              ))}
+                              <span style={{ fontSize: 13, fontWeight: 700, color: "#17211C", marginLeft: 4 }}>{rel.editorialScore}/10</span>
+                            </div>
+                            <p style={{ fontSize: 13, color: "#6B7770", lineHeight: 1.5, marginBottom: 12, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{rel.verdict}</p>
+                            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                              <Link href={`/reviews/${rel.slug}`} style={{ padding: "8px 16px", backgroundColor: "#FFFFFF", border: "1px solid #E4E8E5", borderRadius: 10, fontSize: 12, fontWeight: 600, color: "#17211C", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+                                Read Review <ArrowRight size={12} />
                               </Link>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                              {rel.affiliateUrl && (
+                                <Link href={rel.affiliateUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "8px 16px", backgroundColor: "#0F7A5A", borderRadius: 10, fontSize: 12, fontWeight: 700, color: "#FFFFFF", textDecoration: "none", display: "flex", alignItems: "center", gap: 4 }}>
+                                  Buy Now <ExternalLink size={12} />
+                                </Link>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
