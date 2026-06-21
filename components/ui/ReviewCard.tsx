@@ -34,9 +34,6 @@ function getGradient(category: string) {
   return categoryGradient.default;
 }
 
-const EXPO = "cubic-bezier(0.16, 1, 0.3, 1)";
-const QUART = "cubic-bezier(0.25, 1, 0.5, 1)";
-
 export default function ReviewCard({
   slug,
   title,
@@ -57,23 +54,23 @@ export default function ReviewCard({
         href={`/reviews/${slug}`}
         style={{
           display: "flex",
-          gap: 16,
-          alignItems: "flex-start",
-          padding: "16px 0",
-          borderBottom: "1px solid #eef1ef",
+          gap: 14,
+          alignItems: "center",
+          padding: "14px 0",
+          borderBottom: "1px solid #F0F3F1",
           textDecoration: "none",
-          transition: `opacity 150ms ${EXPO}`,
         }}
       >
         <ReviewScoreBadge rating={rating} size="sm" showLabel={false} />
         <div style={{ flex: 1, minWidth: 0 }}>
-          <p style={{ fontSize: 10, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>
+          <p style={{ fontSize: 9, color: "#C4C9C5", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 3, fontWeight: 600 }}>
             {brand} · {category}
           </p>
-          <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 15, fontWeight: 700, color: "#17211c", lineHeight: 1.2 }}>
+          <h4 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 14, fontWeight: 700, color: "#17211c", lineHeight: 1.25 }}>
             {title}
           </h4>
         </div>
+        <ArrowRight size={12} style={{ color: "#C4C9C5", flexShrink: 0 }} />
       </Link>
     );
   }
@@ -82,56 +79,49 @@ export default function ReviewCard({
     return (
       <Link
         href={`/reviews/${slug}`}
+        className="review-card-hover"
         style={{
           display: "block",
           backgroundColor: "#17211c",
-          borderRadius: 14,
+          borderRadius: 12,
           overflow: "hidden",
           textDecoration: "none",
-          transition: `transform 200ms ${EXPO}, box-shadow 200ms ${QUART}`,
-          willChange: "transform",
-        }}
-        onMouseEnter={(e) => {
-          const el = e.currentTarget as HTMLElement;
-          el.style.transform = "translateY(-5px)";
-          el.style.boxShadow = "0 20px 60px -15px rgba(0,0,0,0.3)";
-        }}
-        onMouseLeave={(e) => {
-          const el = e.currentTarget as HTMLElement;
-          el.style.transform = "translateY(0)";
-          el.style.boxShadow = "none";
+          transition: "transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
-        <div style={{ height: 180, background: getGradient(category), position: "relative", overflow: "hidden", padding: "20px 24px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-          <span style={{ position: "absolute", right: 20, bottom: -12, fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "6rem", fontWeight: 800, color: "rgba(255,255,255,0.04)", lineHeight: 1, userSelect: "none", pointerEvents: "none" }}>
-            {category[0]}
-          </span>
+        <div style={{
+          height: 160,
+          background: getGradient(category),
+          position: "relative",
+          overflow: "hidden",
+          padding: "18px 22px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}>
           <div style={{ position: "relative", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-            {figNumber && (
-              <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", fontWeight: 600 }}>
-                FIG. {figNumber}
-              </span>
-            )}
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              {figNumber && (
+                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.2)", fontWeight: 600 }}>
+                  FIG. {figNumber}
+                </span>
+              )}
+            </div>
             <ReviewScoreBadge rating={rating} size="sm" showLabel={false} />
           </div>
-          <div style={{ position: "relative" }}>
-            <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 11, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0f7a5a", fontWeight: 600 }}>{category}</span>
-          </div>
+          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0f7a5a", fontWeight: 600 }}>{category}</span>
         </div>
 
-        <div style={{ height: 2, background: "linear-gradient(90deg, #0f7a5a 0%, transparent 70%)" }} />
-
-        <div style={{ padding: "22px 24px 26px" }}>
-          <p style={{ fontSize: 11, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 10, fontWeight: 600 }}>{brand}</p>
-          <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.2rem, 2.5vw, 1.65rem)", fontWeight: 700, color: "#F9FAFB", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 12 }}>
+        <div style={{ padding: "20px 22px 24px" }}>
+          <p style={{ fontSize: 9, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>{brand}</p>
+          <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.15rem, 2.5vw, 1.5rem)", fontWeight: 700, color: "#F9FAFB", lineHeight: 1.15, letterSpacing: "-0.02em", marginBottom: 10 }}>
             {title}
           </h3>
-          <p style={{ fontSize: 13, color: "#6b7770", lineHeight: 1.65, marginBottom: 24 }}>{verdict}</p>
+          <p style={{ fontSize: 13, color: "#6b7770", lineHeight: 1.6, marginBottom: 20 }}>{verdict}</p>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <span style={{ fontSize: 11, color: "#586259", fontFamily: "var(--font-hanken), sans-serif" }}>{date}</span>
-            <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: "#0f7a5a", fontWeight: 600 }}>
-              Read Review{" "}
-              <span className="arrow-nudge"><ArrowRight size={12} /></span>
+            <span style={{ fontSize: 10, color: "#586259", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>{date}</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: "#0f7a5a", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>
+              Read Review <span className="arrow-nudge"><ArrowRight size={12} /></span>
             </span>
           </div>
         </div>
@@ -142,67 +132,55 @@ export default function ReviewCard({
   return (
     <Link
       href={`/reviews/${slug}`}
+      className="review-card-hover"
       style={{
         display: "block",
         backgroundColor: "#FFFFFF",
-        border: "1px solid #e4e8e5",
-        borderRadius: 14,
+        border: "1px solid #F0F3F1",
+        borderRadius: 12,
         overflow: "hidden",
         textDecoration: "none",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-        transition: `transform 200ms ${EXPO}, box-shadow 200ms ${QUART}, border-color 200ms ${EXPO}`,
-        willChange: "transform",
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget as HTMLElement;
-        el.style.boxShadow = "0 12px 40px -10px rgba(0,0,0,0.12)";
-        el.style.transform = "translateY(-4px)";
-        el.style.borderColor = "#D1D5DB";
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget as HTMLElement;
-        el.style.boxShadow = "0 1px 3px rgba(0,0,0,0.04)";
-        el.style.transform = "translateY(0)";
-        el.style.borderColor = "#e4e8e5";
+        transition: "transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s",
       }}
     >
-      <div style={{ height: 128, background: getGradient(category), position: "relative", overflow: "hidden", padding: "14px 18px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-        <span style={{ position: "absolute", right: 16, bottom: -8, fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "4.5rem", fontWeight: 800, color: "rgba(255,255,255,0.04)", lineHeight: 1, userSelect: "none", pointerEvents: "none" }}>
-          {category[0]}
-        </span>
+      <div style={{
+        height: 110,
+        background: getGradient(category),
+        position: "relative",
+        overflow: "hidden",
+        padding: "14px 18px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}>
         <div style={{ position: "relative", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           {figNumber ? (
-            <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "rgba(255,255,255,0.3)", fontWeight: 600 }}>FIG. {figNumber}</span>
+            <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.2)", fontWeight: 600 }}>FIG. {figNumber}</span>
           ) : <span />}
-          <span style={{ fontFamily: "var(--font-hanken), sans-serif", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0f7a5a", fontWeight: 600 }}>{category}</span>
+          <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0f7a5a", fontWeight: 600 }}>{category}</span>
         </div>
-        <div style={{ position: "relative" }}>
-          <ReviewScoreBadge rating={rating} size="sm" showLabel={false} />
-        </div>
+        <ReviewScoreBadge rating={rating} size="sm" showLabel={false} />
       </div>
 
-      <div style={{ height: 1, background: "linear-gradient(90deg, rgba(14,135,132,0.3) 0%, transparent 60%)" }} />
-
-      <div style={{ padding: "18px 20px 22px" }}>
-        <p style={{ fontSize: 11, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 8, fontWeight: 600 }}>{brand}</p>
-        <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1rem, 2vw, 1.25rem)", fontWeight: 700, color: "#17211c", lineHeight: 1.2, letterSpacing: "-0.015em", marginBottom: 10 }}>
+      <div style={{ padding: "16px 18px 20px" }}>
+        <p style={{ fontSize: 9, color: "#C4C9C5", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 6, fontWeight: 600 }}>{brand}</p>
+        <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1rem, 2vw, 1.2rem)", fontWeight: 700, color: "#17211c", lineHeight: 1.2, letterSpacing: "-0.015em", marginBottom: 8 }}>
           {title}
         </h3>
-        <p style={{ fontSize: 13, color: "#586259", lineHeight: 1.65, marginBottom: 16 }}>{verdict}</p>
+        <p style={{ fontSize: 13, color: "#6B7770", lineHeight: 1.6, marginBottom: 14 }}>{verdict}</p>
         {tags.length > 0 && (
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginBottom: 16 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 14 }}>
             {tags.slice(0, 3).map((tag) => (
-              <span key={tag} style={{ padding: "3px 8px", backgroundColor: "#eef1ef", border: "1px solid #e4e8e5", borderRadius: 6, fontSize: 10, color: "#586259", fontFamily: "var(--font-hanken), sans-serif", letterSpacing: "0.06em", textTransform: "uppercase", fontWeight: 500 }}>
+              <span key={tag} style={{ padding: "2px 8px", backgroundColor: "#F6F8F6", border: "1px solid #F0F3F1", borderRadius: 4, fontSize: 9, color: "#6B7770", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.06em", textTransform: "uppercase" }}>
                 {tag}
               </span>
             ))}
           </div>
         )}
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 14, borderTop: "1px solid #eef1ef" }}>
-          <span style={{ fontSize: 11, color: "#6b7770", fontFamily: "var(--font-hanken), sans-serif" }}>{date}</span>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: 12, borderTop: "1px solid #F0F3F1" }}>
+          <span style={{ fontSize: 10, color: "#C4C9C5", fontFamily: "var(--font-jetbrains), monospace", letterSpacing: "0.08em" }}>{date}</span>
           <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 12, color: "#17211c", fontWeight: 600, fontFamily: "var(--font-hanken), sans-serif" }}>
-            Read{" "}
-            <span className="arrow-nudge"><ArrowRight size={11} /></span>
+            Read <span className="arrow-nudge"><ArrowRight size={11} /></span>
           </span>
         </div>
       </div>

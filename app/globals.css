@@ -667,6 +667,14 @@ html, body {
   .review-pillar-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Review card hover ─────────────────────────────────────────────── */
+@media (hover: hover) {
+  .review-card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px -10px rgba(0,0,0,0.1);
+  }
+}
+
 /* ── FAQ accordion ─────────────────────────────────────────────────── */
 .faq-item {
   border-bottom: 1px solid #F5F5F5;
