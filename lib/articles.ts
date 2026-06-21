@@ -135,6 +135,17 @@ export const allArticles: ArticleEntry[] = [
     image: "/illustrations/article-freeze-dried.png",
     date: "2026-03-10",
   },
+
+  // ── Review articles ──────────────────────────────────────
+  {
+    slug: "citrus-burn", type: "review" as ArticleType,
+    href: "/reviews/citrus-burn",
+    title: "Citrus Burn Review: Prop Blend Fat Burner, FSP 4/10",
+    category: "REVIEWS", tags: ["Nutrition", "Reviews"],
+    mins: 14, evidence: "Limited evidence",
+    image: "/illustrations/fallback-reviews.png",
+    date: "2026-06-21",
+  },
 ];
 
 const FALLBACK_IMAGES: Record<string, string> = {
