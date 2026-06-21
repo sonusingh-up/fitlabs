@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, BookOpen, Star } from "lucide-react";
+import { ExternalLink, BookOpen } from "lucide-react";
 
 export interface ProductCardProps {
   name: string;
@@ -43,32 +43,43 @@ export default function ProductCard({
   accent = "#0f7a5a",
   featured = false,
 }: ProductCardProps) {
+  const circ = 2 * Math.PI * 20;
+  const filled = score !== undefined ? (score / maxScore) * circ : 0;
+
   return (
     <div
       style={{
-        border: featured ? `1px solid ${accent}55` : "1px solid #e4e8e5",
-        borderRadius: 14,
+        border: featured ? `1px solid ${accent}40` : "1px solid #F0F3F1",
+        borderRadius: 12,
         overflow: "hidden",
         backgroundColor: "#FFFFFF",
         display: "flex",
         flexDirection: "column",
         position: "relative",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+        transition: "box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = "0 8px 30px rgba(0,0,0,0.08)";
+        e.currentTarget.style.transform = "translateY(-2px)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = "none";
+        e.currentTarget.style.transform = "translateY(0)";
       }}
     >
       {featured && (
         <div style={{
           position: "absolute",
-          top: 12,
-          left: 12,
+          top: 10,
+          left: 10,
           zIndex: 10,
           padding: "2px 8px",
           backgroundColor: accent,
           borderRadius: 4,
           fontSize: 8,
-          fontFamily: "var(--font-hanken), sans-serif",
+          fontFamily: "var(--font-jetbrains), monospace",
           fontWeight: 700,
-          letterSpacing: "0.16em",
+          letterSpacing: "0.14em",
           textTransform: "uppercase",
           color: "#F9FAFB",
         }}>
@@ -76,8 +87,9 @@ export default function ProductCard({
         </div>
       )}
 
+      {/* Image area */}
       <div style={{
-        height: 180,
+        height: 170,
         background: `linear-gradient(145deg, ${bgFrom} 0%, ${bgTo} 100%)`,
         position: "relative",
         overflow: "hidden",
@@ -86,16 +98,8 @@ export default function ProductCard({
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        gap: 8,
+        gap: 6,
       }}>
-        <div style={{
-          position: "absolute",
-          inset: 0,
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
-          backgroundSize: "24px 24px",
-          zIndex: 0,
-        }} />
-
         {image ? (
           <>
             <Image
@@ -107,19 +111,19 @@ export default function ProductCard({
             />
             {score !== undefined && (
               <div style={{ position: "absolute", bottom: 10, right: 10, zIndex: 3 }}>
-                <svg width={52} height={52} viewBox="0 0 52 52">
-                  <circle cx={26} cy={26} r={22} fill="rgba(17,24,39,0.82)" />
-                  <circle cx={26} cy={26} r={20} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={3} />
+                <svg width={48} height={48} viewBox="0 0 48 48">
+                  <circle cx={24} cy={24} r={20} fill="rgba(17,24,39,0.85)" />
+                  <circle cx={24} cy={24} r={18} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={2.5} />
                   <circle
-                    cx={26} cy={26} r={20}
+                    cx={24} cy={24} r={18}
                     fill="none"
                     stroke={accent}
-                    strokeWidth={3}
-                    strokeDasharray={`${(score / maxScore) * 125.7} 125.7`}
+                    strokeWidth={2.5}
+                    strokeDasharray={`${(score / maxScore) * (2 * Math.PI * 18)} ${2 * Math.PI * 18}`}
                     strokeLinecap="round"
-                    transform="rotate(-90 26 26)"
+                    transform="rotate(-90 24 24)"
                   />
-                  <text x={26} y={31} textAnchor="middle" fill="#F9FAFB" fontSize={15} fontWeight={800} fontFamily="Georgia, serif">
+                  <text x={24} y={29} textAnchor="middle" fill="#F9FAFB" fontSize={14} fontWeight={800} fontFamily="Georgia, serif">
                     {score}
                   </text>
                 </svg>
@@ -127,73 +131,54 @@ export default function ProductCard({
             )}
           </>
         ) : (
-          <>
-            {score !== undefined && (
-              <div style={{ position: "relative", zIndex: 2 }}>
-                <svg width={72} height={72} viewBox="0 0 72 72">
-                  <circle cx={36} cy={36} r={30} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={4} />
-                  <circle
-                    cx={36} cy={36} r={30}
-                    fill="none"
-                    stroke={accent}
-                    strokeWidth={4}
-                    strokeDasharray={`${(score / maxScore) * 188.5} 188.5`}
-                    strokeLinecap="round"
-                    transform="rotate(-90 36 36)"
-                  />
-                  <text x={36} y={40} textAnchor="middle" fill="#F9FAFB" fontSize={20} fontWeight={800} fontFamily="Georgia, serif">
-                    {score}
-                  </text>
-                </svg>
-              </div>
-            )}
-            {score !== undefined && (
-              <div style={{ display: "flex", gap: 2, position: "relative", zIndex: 2 }}>
-                {Array.from({ length: 10 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={8}
-                    fill={i < score ? accent : "none"}
-                    color={i < score ? accent : "rgba(255,255,255,0.2)"}
-                  />
-                ))}
-              </div>
-            )}
-          </>
+          score !== undefined && (
+            <svg width={64} height={64} viewBox="0 0 64 64" style={{ position: "relative", zIndex: 2 }}>
+              <circle cx={32} cy={32} r={26} fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth={3} />
+              <circle
+                cx={32} cy={32} r={26}
+                fill="none"
+                stroke={accent}
+                strokeWidth={3}
+                strokeDasharray={`${(score / maxScore) * (2 * Math.PI * 26)} ${2 * Math.PI * 26}`}
+                strokeLinecap="round"
+                transform="rotate(-90 32 32)"
+              />
+              <text x={32} y={37} textAnchor="middle" fill="#F9FAFB" fontSize={18} fontWeight={800} fontFamily="Georgia, serif">
+                {score}
+              </text>
+            </svg>
+          )
         )}
 
         <span style={{
           position: "absolute",
           bottom: 8,
-          left: image ? 12 : "50%",
+          left: image ? 10 : "50%",
           transform: image ? "none" : "translateX(-50%)",
           zIndex: 3,
-          fontFamily: "var(--font-hanken), sans-serif",
+          fontFamily: "var(--font-jetbrains), monospace",
           fontSize: 8,
           fontWeight: 600,
-          letterSpacing: "0.18em",
+          letterSpacing: "0.14em",
           textTransform: "uppercase",
-          color: "rgba(255,255,255,0.38)",
+          color: "rgba(255,255,255,0.3)",
           whiteSpace: "nowrap",
         }}>
           {category}
         </span>
-
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 40, background: `linear-gradient(transparent, ${bgTo})`, zIndex: 2 }} />
       </div>
 
-      <div style={{ height: 2, backgroundColor: accent, flexShrink: 0 }} />
-
-      <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 10 }}>
+      {/* Content */}
+      <div style={{ padding: "14px 16px 16px", flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
         <div>
           <p style={{
-            fontFamily: "var(--font-hanken), sans-serif",
+            fontFamily: "var(--font-jetbrains), monospace",
             fontSize: 9,
             fontWeight: 600,
-            letterSpacing: "0.14em",
+            letterSpacing: "0.12em",
             textTransform: "uppercase",
-            color: "#6b7770",
-            marginBottom: 4,
+            color: "#C4C9C5",
+            marginBottom: 3,
           }}>
             {brand}
           </p>
@@ -214,13 +199,12 @@ export default function ProductCard({
             {tags.map((tag) => (
               <span key={tag} style={{
                 padding: "2px 7px",
-                backgroundColor: "#eef1ef",
-                border: "1px solid #e4e8e5",
-                borderRadius: 6,
+                backgroundColor: "#F6F8F6",
+                border: "1px solid #F0F3F1",
+                borderRadius: 4,
                 fontSize: 9,
-                color: "#586259",
-                fontFamily: "var(--font-hanken), sans-serif",
-                fontWeight: 500,
+                color: "#6B7770",
+                fontFamily: "var(--font-jetbrains), monospace",
                 letterSpacing: "0.06em",
               }}>
                 {tag}
@@ -232,20 +216,21 @@ export default function ProductCard({
         <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
           <span style={{
             fontFamily: "var(--font-newsreader), Georgia, serif",
-            fontSize: "1.1rem",
+            fontSize: "1.05rem",
             fontWeight: 700,
             color: "#17211c",
           }}>
             {priceUSD}
           </span>
-          <span style={{
-            fontFamily: "var(--font-hanken), sans-serif",
-            fontSize: 10,
-            fontWeight: 500,
-            color: "#6b7770",
-          }}>
-            {priceINR}
-          </span>
+          {priceINR && priceINR !== "N/A" && (
+            <span style={{
+              fontFamily: "var(--font-jetbrains), monospace",
+              fontSize: 10,
+              color: "#C4C9C5",
+            }}>
+              {priceINR}
+            </span>
+          )}
         </div>
 
         <div style={{ display: "flex", gap: 8, marginTop: "auto", flexWrap: "wrap" }}>
@@ -259,15 +244,16 @@ export default function ProductCard({
               alignItems: "center",
               justifyContent: "center",
               gap: 5,
-              padding: "8px 12px",
+              padding: "9px 12px",
               backgroundColor: accent,
               color: "#F9FAFB",
               fontSize: 11,
               fontWeight: 700,
-              borderRadius: 7,
+              borderRadius: 8,
               fontFamily: "var(--font-hanken), sans-serif",
               textDecoration: "none",
               whiteSpace: "nowrap",
+              transition: "opacity 0.15s",
             }}
           >
             {buyLabel} <ExternalLink size={10} />
@@ -281,16 +267,17 @@ export default function ProductCard({
                 alignItems: "center",
                 justifyContent: "center",
                 gap: 5,
-                padding: "8px 12px",
-                border: "1px solid #e4e8e5",
-                color: "#586259",
+                padding: "9px 12px",
+                border: "1px solid #F0F3F1",
+                color: "#6B7770",
                 fontSize: 11,
-                fontWeight: 500,
-                borderRadius: 7,
+                fontWeight: 600,
+                borderRadius: 8,
                 fontFamily: "var(--font-hanken), sans-serif",
                 textDecoration: "none",
                 whiteSpace: "nowrap",
                 backgroundColor: "#FFFFFF",
+                transition: "border-color 0.15s",
               }}
             >
               <BookOpen size={10} /> Read Review
