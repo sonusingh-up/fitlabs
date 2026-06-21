@@ -106,7 +106,8 @@ export interface ComparisonProduct {
   name: string;
   brand: string;
   rating: ReviewRating;
-  price: number;
+  /** USD-first. A number renders as "$N"; a string (e.g. "$74.99") renders as-is. */
+  price: number | string;
   priceUnit: string;
   pros: string[];
   cons: string[];

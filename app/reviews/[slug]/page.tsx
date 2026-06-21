@@ -19,6 +19,7 @@ import TableOfContents from "@/components/ui/TableOfContents";
 import AuthorPopup from "@/components/ui/AuthorPopup";
 import ArticleFeedback from "@/components/ui/ArticleFeedback";
 import StickyBuyBar from "@/components/ui/StickyBuyBar";
+import SourcesToggle from "@/components/ui/SourcesToggle";
 import { computeComposite } from "@/lib/scoring";
 import { getReviewBySlug, getAllReviewSlugs, urlFor } from "@/lib/sanity";
 import type { ReviewRating, ScoringRubric } from "@/lib/types";
@@ -431,23 +432,19 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               <div style={{ marginBottom: 40 }}>
                 <p style={{ fontSize: 12, color: "#9CA3AF", fontFamily: "var(--font-dm-sans)", marginBottom: 16 }}>Last reviewed on {updatedDate}</p>
                 <h3 style={{ fontSize: 15, fontWeight: 700, color: "#17211C", marginBottom: 12 }}>How we reviewed this article:</h3>
-                <div style={{ display: "flex", gap: 0, borderBottom: "1px solid #E4E8E5" }}>
-                  {review.references && review.references.length > 0 && (
-                    <details style={{ flex: 1 }}>
-                      <summary style={{ cursor: "pointer", padding: "10px 16px", fontSize: 13, fontWeight: 600, color: "#17211C", fontFamily: "var(--font-dm-sans)", listStyle: "none", borderBottom: "2px solid #0F7A5A", display: "inline-block" }}>
-                        Sources ({review.references.length})
-                      </summary>
-                      <ol style={{ paddingLeft: 20, paddingTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
-                        {review.references.map((ref: { text: string; url?: string }, i: number) => (
-                          <li key={i} style={{ fontSize: 12, color: "#3F4B43", lineHeight: 1.6, fontFamily: "var(--font-jetbrains), monospace" }}>
-                            {ref.text}
-                            {ref.url && <>{" "}<a href={ref.url} target="_blank" rel="noopener noreferrer" style={{ color: "#0F7A5A" }}>↗</a></>}
-                          </li>
-                        ))}
-                      </ol>
-                    </details>
-                  )}
-                </div>
+                {review.references && review.references.length > 0 && (
+                  <SourcesToggle
+                    sources={review.references}
+                    history={[
+                      ...(review.updatedAt && review.updatedAt !== review.publishedAt
+                        ? [{ date: updatedDate, note: "Reviewed for accuracy, scoring, and current pricing." }]
+                        : []),
+                      ...(review.publishedAt
+                        ? [{ date: publishedDate, note: "Article first published." }]
+                        : []),
+                    ]}
+                  />
+                )}
                 <p style={{ fontSize: 12, color: "#9CA3AF", marginTop: 12, lineHeight: 1.6 }}>
                   Fitlabreviews has strict sourcing guidelines and relies on peer-reviewed studies, academic research, and clinical evidence.{" "}
                   <Link href="/editorial-policy" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none" }}>Read our editorial policy →</Link>
@@ -556,6 +553,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
       {review.affiliateUrl && (
         <StickyBuyBar
           productName={review.title}
+          brand={review.brand}
+          rating={rubric.editorialScore}
           price={review.valueMetric?.pricePerServing > 0 ? `$${review.valueMetric.pricePerServing.toFixed(2)}/serving` : undefined}
           url={review.affiliateUrl}
         />

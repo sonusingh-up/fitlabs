@@ -75,7 +75,7 @@ export default function ComparisonTable({ products, categories = defaultCategori
             </td>
             {products.map((p) => (
               <td key={p.name} style={{ padding: "12px 20px", textAlign: "center", fontSize: 14, color: "#17211C", fontWeight: 500 }}>
-                ₹{p.price} {p.priceUnit}
+                {typeof p.price === "number" ? `$${p.price}` : p.price}{p.priceUnit ? ` ${p.priceUnit}` : ""}
               </td>
             ))}
           </tr>
