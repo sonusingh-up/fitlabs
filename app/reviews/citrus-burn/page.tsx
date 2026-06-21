@@ -304,7 +304,7 @@ const alternatives = [
     perServe: "~$1.67",
     why: "Fully disclosed doses for every ingredient. Third-party tested. Contains forskolin, 5-HTP, and chromium at clinically relevant amounts. Transparent label is the key differentiator — you know exactly what you are taking.",
     image: "https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/transparent_labs_recomp.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvdHJhbnNwYXJlbnRfbGFic19yZWNvbXAud2VicCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIwMTYxNDcsImV4cCI6MTc4MzkxNjk0N30.N6kna7jr2MZ2BO4ctu3v3uT8wAxA3z3ookozXdjt2rs",
-    buyUrl: "https://www.amazon.com/s?k=Transparent+Labs+Recomp&tag=fitlabreviews-20",
+    buyUrl: "https://www.amazon.com/s?k=Transparent+Labs+Recomp&tag=supplementstr-20",
   },
   {
     name: "Jacked Factory Burn XT",
@@ -315,7 +315,7 @@ const alternatives = [
     perServe: "~$1.00",
     why: "Clinically dosed green tea extract (EGCG), caffeine anhydrous, cayenne pepper, and acetyl L-carnitine. Every dose on the label. GMP-certified, third-party tested. Half the price of Citrus Burn with better transparency.",
     image: "https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/Jacked-Factory-Burn-XT.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvSmFja2VkLUZhY3RvcnktQnVybi1YVC53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjAxNjE4OCwiZXhwIjoyNDc1ODA4MTg4fQ.t96uiCVfLTnCFrvYkaZNozyAVgBebbL5AxdmJBx3AvA",
-    buyUrl: "https://www.amazon.com/s?k=Jacked+Factory+Burn+XT&tag=fitlabreviews-20",
+    buyUrl: "https://www.amazon.com/s?k=Jacked+Factory+Burn+XT&tag=supplementstr-20",
   },
   {
     name: "Metamucil 4-in-1 Psyllium Husk GLP-1",
@@ -326,7 +326,7 @@ const alternatives = [
     perServe: "~$0.42",
     why: "Psyllium husk is one of the most evidence-backed fibers for appetite reduction and glycemic control. The GLP-1-adjacent framing is marketing, but the underlying mechanism — delayed gastric emptying and increased satiety via soluble fiber — has strong RCT support. A fraction of the price.",
     image: "https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/psyllium_husk.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvcHN5bGxpdW1faHVzay53ZWJwIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjAxNjMxNSwiZXhwIjoyNDc1ODA4MzE1fQ.ao7nCkkKdLf55hG9mp8EtN7ZJqQqWOSIQKxrNg9P8P8",
-    buyUrl: "https://www.amazon.com/s?k=Metamucil+Psyllium+Husk+Capsules&tag=fitlabreviews-20",
+    buyUrl: "https://www.amazon.com/s?k=Metamucil+Psyllium+Husk+Capsules&tag=supplementstr-20",
   },
   {
     name: "Nature's Bounty Green Tea Extract 315mg",
@@ -337,7 +337,7 @@ const alternatives = [
     perServe: "~$0.09",
     why: "Pure green tea extract standardized to EGCG — the single most evidence-backed thermogenic compound in Citrus Burn's formula. Hurley et al. (2014) meta-analysis found green tea catechins increase fat oxidation by 16%. At $0.09/serving, you get the most proven ingredient alone for a fraction of the cost.",
     image: "https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/green_tea_extract.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvZ3JlZW5fdGVhX2V4dHJhY3Qud2VicCIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIwMTYzODUsImV4cCI6MjQ3NTgwODM4NX0.DJ7rynOvmiH-KGtpWv1uYe2Jy3AmK3szvVbCNp-odFw",
-    buyUrl: "https://www.amazon.com/s?k=Nature%27s+Bounty+Green+Tea+Extract+315mg&tag=fitlabreviews-20",
+    buyUrl: "https://www.amazon.com/s?k=Nature%27s+Bounty+Green+Tea+Extract+315mg&tag=supplementstr-20",
   },
   {
     name: "Nutricost Caffeine Pills 200mg",
@@ -348,7 +348,7 @@ const alternatives = [
     perServe: "~$0.05",
     why: "Caffeine is the most studied thermogenic compound on earth. Dulloo et al. (1989) showed 100mg caffeine increases metabolic rate by 3–4%. At $0.05 per 200mg dose, this delivers a stronger evidence base for fat oxidation than the entire Citrus Burn proprietary blend — at 1/50th the cost.",
     image: "https://szpdxovusioijennckfg.supabase.co/storage/v1/object/sign/images/nutricost-caffeine.webp?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV83ZTlhOGU1OS1mY2MwLTRmODUtYjE2YS1jYjBkYmM0MjljOTMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvbnV0cmljb3N0LWNhZmZlaW5lLndlYnAiLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMDE2NDU5LCJleHAiOjI0NzU4MDg0NTl9.LAFZ3Ke8TeHqKrORTNtsZ4nIhlbkIxd8QyAOLmgulxA",
-    buyUrl: "https://www.amazon.com/s?k=Nutricost+Caffeine+Pills+200mg&tag=fitlabreviews-20",
+    buyUrl: "https://www.amazon.com/s?k=Nutricost+Caffeine+Pills+200mg&tag=supplementstr-20",
   },
 ];
 
