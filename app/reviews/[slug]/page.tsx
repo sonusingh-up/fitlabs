@@ -409,15 +409,19 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 {sectionEyebrow("§ 04", "IF IT'S NOT FOR YOU")}
                 <h2 style={h2("", "")}>Best <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>alternatives</em></h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                  {alternatives.map((a: { brand: string; name: string; slug?: string; rating: number; price?: string; priceNote?: string; angle?: string; why?: string; affiliateUrl?: string }, i: number) => {
+                  {alternatives.map((a: { brand: string; name: string; slug?: string; rating: number; price?: string; priceNote?: string; angle?: string; why?: string; affiliateUrl?: string; imageUrl?: string }, i: number) => {
                     const aColor = scoreHex(a.rating);
                     const tints = ["#E7F2EC", "#E8EEF5", "#FBF0DD", "#EFEAF6"];
                     return (
                       <article key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, background: "#fff", padding: 22, display: "flex", gap: 20, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(16,30,22,.04)" }}>
-                        <div style={{ flexShrink: 0, width: 88, height: 88, borderRadius: 12, background: tints[i % tints.length], display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <div style={{ flexShrink: 0, width: 88, height: 88, borderRadius: 12, background: tints[i % tints.length], display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                          {a.imageUrl ? (
+                            <img src={a.imageUrl} alt={`${a.brand} ${a.name}`} width={88} height={88} style={{ width: 88, height: 88, objectFit: "contain" }} />
+                          ) : (
                           <div style={{ width: 44, height: 64, borderRadius: 6, background: "#fff", boxShadow: "0 5px 14px rgba(16,30,22,.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                             <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900, fontSize: 15, color: "#17211C", letterSpacing: "-.02em" }}>{(a.brand ?? "?").slice(0, 2).toUpperCase()}</span>
                           </div>
+                          )}
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 14 }}>
