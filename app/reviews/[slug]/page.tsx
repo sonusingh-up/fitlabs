@@ -336,16 +336,16 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 {sectionEyebrow("§ 03", "WHAT'S INSIDE")}
                 <h2 className="rv-nr" style={h2("", "")}>Ingredient &amp; dosage <em className="rv-h2em">analysis</em></h2>
                 <div style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
-                  <div style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", background: "#0F7A5A" }}>
+                  <div className="review-ing-head" style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", background: "#0F7A5A" }}>
                     {["Ingredient", "Per serving", "Our take"].map((h) => (
                       <span key={h} className="rv-jb" style={{ padding: "12px 18px", fontSize: 10, letterSpacing: ".12em", textTransform: "uppercase", color: "#fff", fontWeight: 600 }}>{h}</span>
                     ))}
                   </div>
                   {review.ingredients.map((ing: { name: string; dosage?: string; notes?: string; purpose?: string; take?: string; flag?: string; evidenceLevel?: string }, i: number) => (
-                    <div key={i} style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", borderBottom: "1px solid #EEF1EF", background: i % 2 === 1 ? "#F8FAF8" : "#fff", alignItems: "center" }}>
+                    <div key={i} className="review-ing-row" style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", borderBottom: "1px solid #EEF1EF", background: i % 2 === 1 ? "#F8FAF8" : "#fff", alignItems: "center" }}>
                       <span style={{ padding: "14px 18px", fontSize: 14, fontWeight: 600, color: "#17211C" }}>{ing.name}</span>
                       <span className="rv-jb" style={{ padding: "14px 18px", fontSize: 13, fontWeight: 700, color: "#0F7A5A" }}>{ing.dosage ?? "—"}</span>
-                      <span style={{ padding: "14px 18px", fontSize: 13, lineHeight: 1.5, color: "#3F4B43" }}>
+                      <span className="review-ing-take" style={{ padding: "14px 18px", fontSize: 13, lineHeight: 1.5, color: "#3F4B43" }}>
                         <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
                           <span style={{ width: 7, height: 7, borderRadius: "50%", background: flagHex(ing.flag, ing.evidenceLevel), flexShrink: 0 }} />
                           {ing.take ?? ing.notes ?? ing.purpose ?? "—"}

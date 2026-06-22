@@ -713,16 +713,33 @@ details[open] > .review-otp-summary .review-otp-icon::after { content: "\2013"; 
 
 /* responsive collapse */
 @media (max-width: 1024px) {
-  .review-shell { flex-direction: column; }
+  /* align-items:stretch overrides the inline flex-start so <main> fills the
+     content box instead of sizing to content and overflowing (clipped by
+     body overflow-x:hidden). This is the root mobile-overflow fix. */
+  .review-shell { flex-direction: column; align-items: stretch !important; }
+  .review-shell > main { width: 100% !important; max-width: 100% !important; }
   .review-sidebar { width: 100% !important; }
   .review-hero { flex-direction: column; gap: 28px !important; }
   .review-hero-visual { width: 100% !important; }
+  /* shorter hero product panel on mobile — 380px is too tall for a monogram */
+  .review-hero-visual > div { height: 260px !important; }
 }
 @media (max-width: 700px) {
   .review-hero-scorerow { flex-direction: column; }
+  .review-hero-scorerow > div:first-child { width: 100% !important; }
   .review-stat-grid { grid-template-columns: 1fr 1fr !important; }
   .review-proscons { grid-template-columns: 1fr !important; }
   .review-otp-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  /* tighter gutters on small phones for more reading width */
+  .review-shell { padding-left: 16px !important; padding-right: 16px !important; }
+  .review-hero > div, .review-hero { padding-left: 16px !important; padding-right: 16px !important; }
+  .review-hero-visual > div { height: 220px !important; }
+  /* stack the 3-col ingredient table into label / dose+take rows */
+  .review-ing-head { display: none !important; }
+  .review-ing-row { grid-template-columns: 1fr auto !important; row-gap: 2px !important; padding: 12px 14px !important; }
+  .review-ing-row > .review-ing-take { grid-column: 1 / -1 !important; padding-top: 4px !important; }
 }
 
 /* ── Roundup (best-of) template ─────────────────────────────────────── */
@@ -737,7 +754,10 @@ details[open] > .review-otp-summary .review-otp-icon::after { content: "\2013"; 
 .best-readmore[open] .best-readmore-chev::after { content: "\25B4"; }
 
 @media (max-width: 1024px) {
-  .best-shell { flex-direction: column; }
+  /* align-items:stretch overrides the inline flex-start so <main> fills the
+     column instead of sizing to content (~642px) and overflowing. */
+  .best-shell { flex-direction: column; align-items: stretch !important; }
+  .best-shell > main { width: 100% !important; max-width: 100% !important; }
   .best-rail { display: none !important; }
   .best-sidebar { width: 100% !important; }
 }
@@ -747,6 +767,9 @@ details[open] > .review-otp-summary .review-otp-icon::after { content: "\2013"; 
   .best-trust { grid-template-columns: 1fr !important; gap: 28px !important; }
   .best-trust > div { border-left: none !important; padding: 0 !important; }
   .best-proscons { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  .best-shell { padding-left: 16px !important; padding-right: 16px !important; }
 }
 
 /* ── FAQ accordion ─────────────────────────────────────────────────── */
