@@ -205,6 +205,43 @@ export async function getBlogBySlug(slug: string) {
   );
 }
 
+// ─── GOALS ──────────────────────────────────────────────────────────────────
+
+export async function getAllGoalSlugs(): Promise<{ slug: string }[]> {
+  if (!sanityConfigured) return [];
+  return sanityClient.fetch(`*[_type == "goal"]{ "slug": slug.current }`);
+}
+
+export async function getGoalBySlug(slug: string) {
+  if (!sanityConfigured) return null;
+  return sanityClient.fetch(
+    `*[_type == "goal" && slug.current == $slug][0]{
+      title, titleItalic, "slug": slug.current, figureCode, category, categoryLabel,
+      summary, metaTitle, metaDescription, readTime, evidenceLevel, citedStudies,
+      heroStats[]{ value, label, accent },
+      keyTakeaways,
+      sections[]{ id, label, figure, heading, headingItalic, intro, body,
+        numberedPanels[]{ num, title, desc },
+        gridCards[]{ label, value, note },
+        callout, calloutLabel
+      },
+      supplements[]{ rank, name, role, evidence, dose, timing, mechanism, citation, priority },
+      avoidList[]{ name, reason },
+      bottomLine[]{ rank, text },
+      bottomLineClosing,
+      mistakes[]{ mistake, fix },
+      timeline[]{ col1, col2, col3, col4 },
+      timelineHeaders,
+      timelineNote,
+      faqItems[]{ question, answer },
+      references[]{ text, journal, url },
+      relatedGoals[]{ slug, title, desc, accent },
+      publishedAt, updatedAt
+    }`,
+    { slug }
+  );
+}
+
 // ─── COMPARISONS ─────────────────────────────────────────────────────────────
 
 export async function getAllComparisonSlugs(): Promise<{ slug: string }[]> {

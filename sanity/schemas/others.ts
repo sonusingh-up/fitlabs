@@ -156,6 +156,149 @@ export const researchSchema = defineType({
   preview: { select: { title: "title" } },
 });
 
+export const goalSchema = defineType({
+  name: "goal",
+  title: "Goal Guides",
+  type: "document",
+  fields: [
+    defineField({ name: "title", title: "Page Title (h1)", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "titleItalic", title: "Italic portion of h1", type: "string" }),
+    defineField({ name: "slug", title: "Slug (e.g. longevity)", type: "slug", options: { source: "title" }, validation: (r) => r.required() }),
+    defineField({ name: "figureCode", title: "Figure Code (e.g. GOL-009)", type: "string" }),
+    defineField({ name: "category", title: "Category (e.g. Wellness)", type: "string" }),
+    defineField({ name: "categoryLabel", title: "Hero label (e.g. WELLNESS · SPECIALIST GOAL)", type: "string" }),
+    defineField({ name: "summary", title: "Hero summary paragraph", type: "text", rows: 3 }),
+    defineField({ name: "metaTitle", title: "SEO Title (≤55 chars)", type: "string" }),
+    defineField({ name: "metaDescription", title: "Meta Description (140–160 chars)", type: "text", rows: 2 }),
+    defineField({ name: "readTime", title: "Read Time (e.g. 14 min)", type: "string" }),
+    defineField({ name: "evidenceLevel", title: "Evidence Level", type: "string",
+      options: { list: ["strong", "moderate", "limited", "emerging"] },
+    }),
+    defineField({ name: "citedStudies", title: "Number of cited studies", type: "number" }),
+    defineField({
+      name: "heroStats", title: "Hero Stat Cards (3 max)", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "value", title: "Value", type: "string" }),
+        defineField({ name: "label", title: "Label", type: "string" }),
+        defineField({ name: "accent", title: "Accent style (green/neutral/gold)", type: "string",
+          options: { list: ["green", "neutral", "gold"] },
+        }),
+      ]}],
+    }),
+    defineField({ name: "keyTakeaways", title: "Key Takeaways (5–6 bullets)", type: "array", of: [{ type: "text", rows: 2 }] }),
+    defineField({
+      name: "sections", title: "Content Sections", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "id", title: "Anchor ID (kebab-case)", type: "string" }),
+        defineField({ name: "label", title: "Section Label (e.g. Macronutrients)", type: "string" }),
+        defineField({ name: "figure", title: "Section Number (e.g. § 01)", type: "string" }),
+        defineField({ name: "heading", title: "Heading", type: "string" }),
+        defineField({ name: "headingItalic", title: "Heading italic part", type: "string" }),
+        defineField({ name: "intro", title: "Intro paragraph", type: "text", rows: 4 }),
+        defineField({ name: "body", title: "Section body (Portable Text)", type: "array",
+          of: [{ type: "block" }, { type: "image" }],
+        }),
+        defineField({
+          name: "numberedPanels", title: "Numbered Panels (optional)", type: "array",
+          of: [{ type: "object", fields: [
+            defineField({ name: "num", title: "Number", type: "string" }),
+            defineField({ name: "title", title: "Title", type: "string" }),
+            defineField({ name: "desc", title: "Description", type: "text", rows: 4 }),
+          ]}],
+        }),
+        defineField({
+          name: "gridCards", title: "Grid Cards (optional)", type: "array",
+          of: [{ type: "object", fields: [
+            defineField({ name: "label", title: "Label", type: "string" }),
+            defineField({ name: "value", title: "Value", type: "string" }),
+            defineField({ name: "note", title: "Note", type: "string" }),
+          ]}],
+        }),
+        defineField({ name: "callout", title: "Callout box text (optional)", type: "text", rows: 3 }),
+        defineField({ name: "calloutLabel", title: "Callout label (e.g. What This Means)", type: "string" }),
+      ]}],
+    }),
+    defineField({
+      name: "supplements", title: "Supplement Stack", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "rank", title: "Rank", type: "number" }),
+        defineField({ name: "name", title: "Supplement Name", type: "string" }),
+        defineField({ name: "role", title: "Role", type: "string" }),
+        defineField({ name: "evidence", title: "Evidence Level", type: "string",
+          options: { list: ["strong", "moderate", "limited", "emerging"] },
+        }),
+        defineField({ name: "dose", title: "Dose", type: "string" }),
+        defineField({ name: "timing", title: "Timing", type: "string" }),
+        defineField({ name: "mechanism", title: "Mechanism", type: "text", rows: 3 }),
+        defineField({ name: "citation", title: "Citation", type: "string" }),
+        defineField({ name: "priority", title: "Priority", type: "string",
+          options: { list: ["Essential", "Recommended", "Optional"] },
+        }),
+      ]}],
+    }),
+    defineField({
+      name: "avoidList", title: "Save Your Money (supplements to avoid)", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "name", title: "Name", type: "string" }),
+        defineField({ name: "reason", title: "Reason", type: "text", rows: 2 }),
+      ]}],
+    }),
+    defineField({
+      name: "bottomLine", title: "Bottom Line Hierarchy", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "rank", title: "Rank (1st, 2nd...)", type: "string" }),
+        defineField({ name: "text", title: "Text", type: "text", rows: 2 }),
+      ]}],
+    }),
+    defineField({ name: "bottomLineClosing", title: "Bottom Line closing paragraph", type: "text", rows: 3 }),
+    defineField({
+      name: "mistakes", title: "Common Mistakes", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "mistake", title: "Mistake", type: "string" }),
+        defineField({ name: "fix", title: "Fix", type: "text", rows: 3 }),
+      ]}],
+    }),
+    defineField({
+      name: "timeline", title: "Timeline Table Rows", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "col1", title: "Column 1", type: "string" }),
+        defineField({ name: "col2", title: "Column 2", type: "string" }),
+        defineField({ name: "col3", title: "Column 3", type: "string" }),
+        defineField({ name: "col4", title: "Column 4", type: "string" }),
+      ]}],
+    }),
+    defineField({ name: "timelineHeaders", title: "Timeline Table Headers (4)", type: "array", of: [{ type: "string" }] }),
+    defineField({ name: "timelineNote", title: "Timeline footnote", type: "text", rows: 2 }),
+    defineField({
+      name: "faqItems", title: "FAQ Items", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "question", title: "Question", type: "string" }),
+        defineField({ name: "answer", title: "Answer", type: "text", rows: 4 }),
+      ]}],
+    }),
+    defineField({
+      name: "references", title: "References", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "text", title: "Citation Text", type: "string" }),
+        defineField({ name: "journal", title: "Journal / Year", type: "string" }),
+        defineField({ name: "url", title: "PubMed URL", type: "url" }),
+      ]}],
+    }),
+    defineField({
+      name: "relatedGoals", title: "Related Goals", type: "array",
+      of: [{ type: "object", fields: [
+        defineField({ name: "slug", title: "Slug", type: "string" }),
+        defineField({ name: "title", title: "Title", type: "string" }),
+        defineField({ name: "desc", title: "Description", type: "string" }),
+        defineField({ name: "accent", title: "Accent Color", type: "string" }),
+      ]}],
+    }),
+    defineField({ name: "publishedAt", title: "Published Date", type: "date" }),
+    defineField({ name: "updatedAt", title: "Last Updated", type: "date" }),
+  ],
+  preview: { select: { title: "title", subtitle: "category" } },
+});
+
 export const comparisonSchema = defineType({
   name: "comparison",
   title: "Comparisons",
