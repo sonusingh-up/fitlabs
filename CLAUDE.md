@@ -288,6 +288,14 @@ Read the matching template before writing any new research article.
 
 ## 14. Review Article Skill
 
+> **⚠ NEW REVIEWS GO THROUGH SANITY (June 2026).** The redesigned review template
+> at `app/reviews/[slug]/page.tsx` (Single Review design) is the path for **all new
+> reviews** — author them as Sanity `review` documents, not static `.tsx` files.
+> See **`docs/review-template-requirements.md`** (field reference + workflow) and
+> **`docs/review-template-example.json`** (ready-to-fill skeleton). The ~30 existing
+> static review pages are **retained as-is**; do not migrate them. The static
+> `/review-article` skill below is kept only for the rare custom-layout review.
+
 Use the `/review-article <slug>` slash command to build a new product review article.
 
 **What it does:**
