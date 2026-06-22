@@ -675,6 +675,61 @@ html, body {
   }
 }
 
+/* ── Review / Roundup template (matches design templates) ──────────── */
+.nudge { display: inline-flex; transition: transform .2s cubic-bezier(.16,1,.3,1); }
+.jl { transition: color .15s ease; }
+.jl:hover { color: #0a634a !important; }
+.jl:hover .nudge, .acc-head:hover .nudge { transform: translateX(3px); }
+.buybtn { transition: transform .15s ease, box-shadow .15s ease; }
+.buybtn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(15,122,90,.28); }
+
+/* native details accordions — remove default marker, toggle +/- icon */
+.review-otp-summary, .review-faq > summary { list-style: none; }
+.review-otp-summary::-webkit-details-marker,
+.review-faq > summary::-webkit-details-marker { display: none; }
+.review-otp-icon::after { content: "+"; }
+details[open] > .review-otp-summary .review-otp-icon::after { content: "\2013"; }
+.review-faq-icon::after { content: "+"; }
+.review-faq[open] .review-faq-icon::after { content: "\2013"; }
+
+/* responsive collapse */
+@media (max-width: 1024px) {
+  .review-shell { flex-direction: column; }
+  .review-sidebar { width: 100% !important; }
+  .review-hero { flex-direction: column; gap: 28px !important; }
+  .review-hero-visual { width: 100% !important; }
+}
+@media (max-width: 700px) {
+  .review-hero-scorerow { flex-direction: column; }
+  .review-stat-grid { grid-template-columns: 1fr 1fr !important; }
+  .review-proscons { grid-template-columns: 1fr !important; }
+  .review-otp-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Roundup (best-of) template ─────────────────────────────────────── */
+.toc-link:hover { color: #0F7A5A !important; }
+.best-acc-sum, .best-readmore > summary { list-style: none; }
+.best-acc-sum::-webkit-details-marker, .best-readmore > summary::-webkit-details-marker { display: none; }
+.best-acc-icon::after { content: "+"; }
+.best-acc[open] .best-acc-icon::after { content: "\2013"; }
+.best-readmore-label::after { content: "Read full review"; }
+.best-readmore[open] .best-readmore-label::after { content: "Show less"; }
+.best-readmore-chev::after { content: "\25BE"; }
+.best-readmore[open] .best-readmore-chev::after { content: "\25B4"; }
+
+@media (max-width: 1024px) {
+  .best-shell { flex-direction: column; }
+  .best-rail { display: none !important; }
+  .best-sidebar { width: 100% !important; }
+}
+@media (max-width: 640px) {
+  .best-pick-body { flex-direction: column; align-items: center !important; text-align: left; }
+  .best-criteria { grid-template-columns: 1fr !important; }
+  .best-trust { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .best-trust > div { border-left: none !important; padding: 0 !important; }
+  .best-proscons { grid-template-columns: 1fr !important; }
+}
+
 /* ── FAQ accordion ─────────────────────────────────────────────────── */
 .faq-item {
   border-bottom: 1px solid #F5F5F5;

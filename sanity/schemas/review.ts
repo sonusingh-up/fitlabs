@@ -66,8 +66,77 @@ export const reviewSchema = defineType({
           },
           { name: "purpose", title: "Purpose", type: "string" },
           { name: "notes", title: "Notes", type: "text", rows: 2 },
+          { name: "take", title: "Our take (short)", type: "string",
+            description: "One-line verdict shown in the ingredient analysis table" },
+          { name: "flag", title: "Flag", type: "string",
+            options: { list: ["good","warn","bad"] },
+            description: "Colour dot in the analysis table: good=green, warn=amber, bad=red" },
         ]
       }]
+    }),
+
+    // At-a-glance quick stats (4 cards under the hero)
+    defineField({
+      name: "quickStats", title: "Quick Stats (at-a-glance, 4 cards)", type: "array",
+      of: [{
+        type: "object", fields: [
+          { name: "label", title: "Label (e.g. Protein)", type: "string" },
+          { name: "value", title: "Value (e.g. 25g)", type: "string" },
+          { name: "note", title: "Note (e.g. per serving)", type: "string" },
+        ]
+      }]
+    }),
+
+    // Flat specs & nutrition table (key/value rows)
+    defineField({
+      name: "specs", title: "Specs & Nutrition (key/value rows)", type: "array",
+      of: [{
+        type: "object", fields: [
+          { name: "label", title: "Label", type: "string" },
+          { name: "value", title: "Value", type: "string" },
+        ]
+      }]
+    }),
+
+    // Best alternatives cards
+    defineField({
+      name: "alternatives", title: "Best Alternatives", type: "array",
+      of: [{
+        type: "object", fields: [
+          { name: "brand", title: "Brand", type: "string" },
+          { name: "name", title: "Product Name", type: "string" },
+          { name: "slug", title: "Review slug (links to /reviews/[slug])", type: "string" },
+          { name: "rating", title: "FSP Score (1–10)", type: "number" },
+          { name: "price", title: "Price tier", type: "string", options: { list: ["$","$$","$$$"] } },
+          { name: "priceNote", title: "Price note (e.g. ~$1.95/serving)", type: "string" },
+          { name: "angle", title: "Angle (e.g. Choose this if taste matters most.)", type: "string" },
+          { name: "why", title: "Why (1 sentence)", type: "text", rows: 2 },
+          { name: "affiliateUrl", title: "Affiliate URL", type: "url" },
+        ]
+      }]
+    }),
+
+    // Review history (Sources/History toggle)
+    defineField({
+      name: "reviewHistory", title: "Review History", type: "array",
+      of: [{
+        type: "object", fields: [
+          { name: "date", title: "Date (e.g. Jun 21, 2026)", type: "string" },
+          { name: "note", title: "Note", type: "string" },
+        ]
+      }]
+    }),
+
+    // Buy box (sidebar)
+    defineField({
+      name: "buyBox", title: "Buy Box (sidebar)", type: "object",
+      fields: [
+        { name: "priceDisplay", title: "Price (e.g. $74.99)", type: "string" },
+        { name: "priceUnit", title: "Unit (e.g. / 5 lb tub)", type: "string" },
+        { name: "perServingNote", title: "Per-serving note (e.g. ≈ $1.90 per 25g serving · 76 servings)", type: "string" },
+        { name: "retailerName", title: "Primary retailer name (e.g. Naked Nutrition)", type: "string" },
+        { name: "secondaryUrl", title: "Secondary retailer URL (e.g. Amazon)", type: "url" },
+      ],
     }),
 
     // Claim Audit
