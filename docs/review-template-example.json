@@ -1,0 +1,101 @@
+{
+  "_comment": "Skeleton for a NEW review document rendered by /reviews/[slug]. Copy, fill every value, then create via Sanity Studio or the Sanity MCP create_documents (type: 'review'). See docs/review-template-requirements.md for the field reference. _key values must be unique within each array. Remove all _comment keys before importing.",
+
+  "_id": "REPLACE-with-slug",
+  "_type": "review",
+
+  "title": "Product Name (no 'Review', no brand suffix)",
+  "slug": { "_type": "slug", "current": "product-slug" },
+  "brand": "Brand Name",
+  "category": "Fat Burner",
+  "editorialScore": 7,
+  "reviewCode": "REV-2026-061",
+  "priceRange": "mid",
+  "tags": ["Reviews", "Nutrition"],
+  "publishedAt": "2026-06-22",
+  "updatedAt": "2026-06-22",
+  "affiliateUrl": "https://example.com/affiliate-link",
+  "metaDescription": "Brand Product review: key fact 1, key fact 2, price, comparison. FSP 7/10. (140-160 chars)",
+  "verdict": "Two to four sentences. The honest bottom line a reader should walk away with — where you stand and why.",
+
+  "pillars": [
+    { "_key": "p1", "pillar": "formula",      "score": 7,   "notes": "One-paragraph justification for the formula score." },
+    { "_key": "p2", "pillar": "transparency", "score": 6,   "notes": "..." },
+    { "_key": "p3", "pillar": "verification", "score": 7,   "notes": "..." },
+    { "_key": "p4", "pillar": "value",        "score": 6.5, "notes": "..." },
+    { "_key": "p5", "pillar": "practical",    "score": 8,   "notes": "..." }
+  ],
+
+  "flags": [
+    { "_key": "f1", "type": "green", "label": "A genuine strength", "detail": "Specific, verifiable detail." },
+    { "_key": "f2", "type": "red",   "label": "A real problem",     "detail": "Specific, verifiable detail.", "deduction": 0.3 }
+  ],
+
+  "claimAudit": [
+    { "_key": "c1", "claim": "\"Marketing claim, quoted\"", "verdict": "overstated", "evidence": "limited", "notes": "What the evidence actually shows (author, year)." }
+  ],
+
+  "valueMetric": {
+    "pricePerServing": 1.5,
+    "primaryActiveGrams": 0,
+    "pricePerGramActive": 0,
+    "categoryAvgPricePerGram": 0.45,
+    "efficiency": "below"
+  },
+
+  "quickStats": [
+    { "_key": "qs1", "label": "Protein", "value": "25g",  "note": "per serving" },
+    { "_key": "qs2", "label": "Calories","value": "120",  "note": "per serving" },
+    { "_key": "qs3", "label": "Form",    "value": "Powder","note": "" },
+    { "_key": "qs4", "label": "Cost",    "value": "$$",   "note": "~$1.50/serving" }
+  ],
+
+  "ingredients": [
+    { "_key": "i1", "name": "Ingredient A", "dosage": "1000mg", "evidenceLevel": "strong",   "take": "One-line verdict.", "flag": "good" },
+    { "_key": "i2", "name": "Ingredient B", "dosage": "Undisclosed", "evidenceLevel": "limited", "take": "One-line verdict.", "flag": "warn" }
+  ],
+
+  "pros": ["Strength one", "Strength two", "Strength three"],
+  "cons": ["Limitation one", "Limitation two"],
+
+  "specs": [
+    { "_key": "sp1", "label": "Brand", "value": "Brand Name" },
+    { "_key": "sp2", "label": "Serving size", "value": "30g" },
+    { "_key": "sp3", "label": "Servings per container", "value": "30" },
+    { "_key": "sp4", "label": "Third-party tested", "value": "Yes — Informed Choice" }
+  ],
+
+  "alternatives": [
+    { "_key": "alt1", "brand": "Alt Brand", "name": "Alt Product", "rating": 8, "price": "$$", "priceNote": "~$1.95/serving", "angle": "Choose this if taste matters most.", "why": "One-sentence rationale.", "slug": "alt-review-slug", "affiliateUrl": "https://www.amazon.com/s?k=Alt+Product&tag=supplementstr-20" }
+  ],
+
+  "faqItems": [
+    { "_key": "faq1", "question": "Question one?", "answer": "Answer." },
+    { "_key": "faq2", "question": "Question two?", "answer": "Answer." },
+    { "_key": "faq3", "question": "Question three?", "answer": "Answer." },
+    { "_key": "faq4", "question": "Question four?", "answer": "Answer (>=4 FAQs emit FAQPage schema)." }
+  ],
+
+  "references": [
+    { "_key": "ref1", "text": "Author A, et al. (Year). Title. Journal. Vol(Issue):pages.", "url": "https://doi.org/..." }
+  ],
+
+  "reviewHistory": [
+    { "_key": "rh1", "date": "Jun 22, 2026", "note": "Original review published." }
+  ],
+
+  "buyBox": {
+    "priceDisplay": "$49.99",
+    "priceUnit": "/ tub",
+    "perServingNote": "≈ $1.50 per serving · 30 servings",
+    "retailerName": "Brand Store",
+    "secondaryUrl": "https://www.amazon.com/s?k=Product&tag=supplementstr-20"
+  },
+
+  "body": [
+    { "_type": "block", "_key": "b1", "style": "normal", "markDefs": [],
+      "children": [ { "_type": "span", "_key": "b1s1", "text": "Deep-dive paragraph one.", "marks": [] } ] },
+    { "_type": "block", "_key": "b2", "style": "normal", "markDefs": [],
+      "children": [ { "_type": "span", "_key": "b2s1", "text": "Deep-dive paragraph two.", "marks": [] } ] }
+  ]
+}
