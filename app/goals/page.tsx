@@ -147,6 +147,21 @@ const goals: Goal[] = [
     accent: "#0F7A5A",
     priority: "Specialist",
   },
+  {
+    slug: "longevity",
+    title: "Supplements for",
+    titleItalic: "Longevity",
+    figure: "GOL-009",
+    category: "Wellness",
+    difficulty: "Intermediate",
+    supplementCount: 5,
+    topIngredients: ["Omega-3 (EPA+DHA)", "Vitamin D3", "Magnesium", "Creatine", "CoQ10"],
+    summary: "No supplement extends human lifespan in a randomised trial. The evidence is observational: omega-3, vitamin D, and magnesium sufficiency correlate with lower all-cause mortality across large cohorts.",
+    outcome: "Correct deficiency gaps linked to aging biomarkers",
+    tags: ["Longevity", "Anti-Aging", "Healthspan"],
+    accent: "#3A7D9B",
+    priority: "Specialist",
+  },
 ];
 
 const categoryGroups = [

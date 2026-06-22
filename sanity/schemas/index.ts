@@ -1,7 +1,7 @@
 import { reviewSchema } from "./review";
 import { ingredientSchema } from "./ingredient";
 import { blogSchema } from "./blog";
-import { authorSchema, brandSchema, bestListSchema, researchSchema, comparisonSchema } from "./others";
+import { authorSchema, brandSchema, bestListSchema, researchSchema, comparisonSchema, goalSchema } from "./others";
 
 export const schemaTypes = [
   reviewSchema,
@@ -12,4 +12,5 @@ export const schemaTypes = [
   bestListSchema,
   researchSchema,
   comparisonSchema,
+  goalSchema,
 ];
