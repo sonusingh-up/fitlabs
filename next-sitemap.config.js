@@ -28,11 +28,16 @@ module.exports = {
       paths.push(await config.transform(config, p));
     }
 
-    // Dynamic Sanity content — use REAL timestamps from CMS
-    const [reviews, ingredients, brands] = await Promise.all([
+    // Dynamic Sanity content — use REAL timestamps from CMS.
+    // These are [slug] dynamic routes: next-sitemap does not reliably
+    // auto-discover App Router dynamic routes, so every Sanity-backed
+    // [slug] type must be enumerated here or it will be absent from the sitemap.
+    const [reviews, ingredients, brands, goals, blogs] = await Promise.all([
       sanity.fetch(`*[_type == "review" && defined(slug.current)]{ "slug": slug.current, _updatedAt, updatedAt, publishedAt }`),
       sanity.fetch(`*[_type == "ingredient" && defined(slug.current)]{ "slug": slug.current, _updatedAt, _createdAt }`),
       sanity.fetch(`*[_type == "brand" && defined(slug.current)]{ "slug": slug.current, _updatedAt, _createdAt }`),
+      sanity.fetch(`*[_type == "goal" && defined(slug.current)]{ "slug": slug.current, _updatedAt, updatedAt, publishedAt }`),
+      sanity.fetch(`*[_type == "blog" && defined(slug.current)]{ "slug": slug.current, _updatedAt, updatedAt, publishedAt }`),
     ]);
 
     for (const r of reviews) {
@@ -59,6 +64,24 @@ module.exports = {
         changefreq: "monthly",
         priority: 0.7,
         lastmod: b._updatedAt || b._createdAt,
+      });
+    }
+
+    for (const g of goals) {
+      paths.push({
+        loc: `/goals/${g.slug}`,
+        changefreq: "monthly",
+        priority: 0.8,
+        lastmod: g._updatedAt || g.updatedAt || g.publishedAt,
+      });
+    }
+
+    for (const bl of blogs) {
+      paths.push({
+        loc: `/blog/${bl.slug}`,
+        changefreq: "monthly",
+        priority: 0.7,
+        lastmod: bl._updatedAt || bl.updatedAt || bl.publishedAt,
       });
     }
 
