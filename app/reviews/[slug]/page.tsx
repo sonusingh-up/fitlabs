@@ -170,12 +170,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
   const sectionEyebrow = (num: string, label: string) => (
     <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".12em", color: "#6B7770" }}>{num}</span>
+      <span className="rv-jb" style={{ fontSize: 11, letterSpacing: ".12em", color: "#6B7770" }}>{num}</span>
       <span style={{ width: 24, height: 1, background: "#E4E8E5" }} />
-      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".12em", color: "#0F7A5A", fontWeight: 600 }}>{label}</span>
+      <span className="rv-jb" style={{ fontSize: 11, letterSpacing: ".12em", color: "#0F7A5A", fontWeight: 600 }}>{label}</span>
     </div>
   );
-  const h2 = (plain: string, ital: string): React.CSSProperties => ({ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 700, color: "#17211C", letterSpacing: "-.025em", lineHeight: 1.08, margin: "0 0 22px" });
+  const h2 = (plain: string, ital: string): React.CSSProperties => ({ fontSize: "clamp(1.6rem,3vw,2.2rem)", fontWeight: 700, color: "#17211C", letterSpacing: "-.025em", lineHeight: 1.08, margin: "0 0 22px" });
 
   return (
     <>
@@ -186,12 +186,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
         {/* Breadcrumb */}
         <div style={{ borderBottom: "1px solid #E4E8E5", background: "#F2F8F4" }}>
-          <div style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, flexWrap: "wrap" }}>
-            <Link href="/" style={{ color: "#6B7770", textDecoration: "none" }}>Home</Link>
-            <span style={{ color: "#C8D2CB" }}>/</span>
-            <Link href="/reviews" style={{ color: "#6B7770", textDecoration: "none" }}>Reviews</Link>
-            <span style={{ color: "#C8D2CB" }}>/</span>
-            {review.category && <><Link href={`/category/${categorySlug}`} style={{ color: "#6B7770", textDecoration: "none" }}>{review.category}</Link><span style={{ color: "#C8D2CB" }}>/</span></>}
+          <div className="rv-jb" style={{ maxWidth: 1280, margin: "0 auto", padding: "12px 24px", display: "flex", alignItems: "center", gap: 8, fontSize: 12, flexWrap: "wrap" }}>
+            <Link href="/" className="rv-breadcrumb-link">Home</Link>
+            <span className="rv-breadcrumb-sep">/</span>
+            <Link href="/reviews" className="rv-breadcrumb-link">Reviews</Link>
+            <span className="rv-breadcrumb-sep">/</span>
+            {review.category && <><Link href={`/category/${categorySlug}`} className="rv-breadcrumb-link">{review.category}</Link><span className="rv-breadcrumb-sep">/</span></>}
             <span style={{ color: "#3F4B43" }}>{review.title}</span>
           </div>
         </div>
@@ -202,13 +202,13 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             {/* product visual */}
             <div className="review-hero-visual" style={{ flex: "none", width: 340 }}>
               <div style={{ position: "relative", height: 380, borderRadius: 18, background: "linear-gradient(150deg,#0F2420 0%,#17211c 72%)", overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <span style={{ position: "absolute", right: -26, bottom: -58, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 300, fontWeight: 900, color: "rgba(255,255,255,.05)", lineHeight: .7 }}>{monogram[0]}</span>
-                <span style={{ position: "absolute", top: 16, left: 18, fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".16em", color: "rgba(255,255,255,.5)" }}>{review.reviewCode ? review.reviewCode : "FIG. 01"} · TESTED IN-HOUSE</span>
+                <span className="rv-pf" style={{ position: "absolute", right: -26, bottom: -58, fontSize: 300, fontWeight: 900, color: "rgba(255,255,255,.05)", lineHeight: .7 }}>{monogram[0]}</span>
+                <span className="rv-jb" style={{ position: "absolute", top: 16, left: 18, fontSize: 10, letterSpacing: ".16em", color: "rgba(255,255,255,.5)" }}>{review.reviewCode ? review.reviewCode : "FIG. 01"} · TESTED IN-HOUSE</span>
                 {heroImageUrl ? (
                   <Image src={heroImageUrl} alt={review.title} fill style={{ objectFit: "contain", padding: 28, zIndex: 1 }} />
                 ) : (
                   <div style={{ width: 150, height: 230, borderRadius: 12, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.14)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900, fontSize: 46, color: "#fff", letterSpacing: "-.03em", opacity: .92 }}>{monogram}</span>
+                    <span className="rv-pf" style={{ fontWeight: 900, fontSize: 46, color: "#fff", letterSpacing: "-.03em", opacity: .92 }}>{monogram}</span>
                   </div>
                 )}
               </div>
@@ -217,14 +217,14 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             {/* hero meta */}
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14, flexWrap: "wrap" }}>
-                <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".16em", textTransform: "uppercase", color: "#0F7A5A", fontWeight: 600 }}>{review.category}</span>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 9px", background: em.bg, border: `1px solid ${em.color}33`, borderRadius: 8, fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 600, fontSize: 9, letterSpacing: ".10em", textTransform: "uppercase", color: em.color }}>
+                <span className="rv-jb" style={{ fontSize: 11, letterSpacing: ".16em", textTransform: "uppercase", color: "#0F7A5A", fontWeight: 600 }}>{review.category}</span>
+                <span className="rv-dm" style={{ display: "inline-flex", alignItems: "center", gap: 5, padding: "4px 9px", background: em.bg, border: `1px solid ${em.color}33`, borderRadius: 8, fontWeight: 600, fontSize: 9, letterSpacing: ".10em", textTransform: "uppercase", color: em.color }}>
                   <span style={{ letterSpacing: 2, fontSize: 8 }}>{em.icon}</span>{em.label}
                 </span>
               </div>
 
-              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 12, letterSpacing: ".1em", color: "#6B7770", margin: "0 0 8px" }}>{review.brand?.toUpperCase()}</p>
-              <h1 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "clamp(2.2rem,4.2vw,3.2rem)", fontWeight: 700, letterSpacing: "-.03em", color: "#17211C", lineHeight: 1.02, margin: 0 }}>
+              <p className="rv-jb" style={{ fontSize: 12, letterSpacing: ".1em", color: "#6B7770", margin: "0 0 8px" }}>{review.brand?.toUpperCase()}</p>
+              <h1 className="rv-nr" style={{ fontSize: "clamp(2.2rem,4.2vw,3.2rem)", fontWeight: 700, letterSpacing: "-.03em", color: "#17211C", lineHeight: 1.02, margin: 0 }}>
                 {review.title} <em style={{ fontStyle: "italic", fontWeight: 500, color: "#586259" }}>Review</em>
               </h1>
 
@@ -233,9 +233,9 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {/* score + verdict row */}
               <div className="review-hero-scorerow" style={{ display: "flex", gap: 24, alignItems: "stretch", marginTop: 26 }}>
                 <div style={{ flex: "none", width: 150, borderRadius: 14, background: `${sColor}14`, border: `1px solid ${sColor}33`, padding: 20, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 8, letterSpacing: ".14em", color: sColor, marginBottom: 2 }}>FSP SCORE</span>
-                  <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 52, fontWeight: 700, color: sColor, lineHeight: 1 }}>{score}<span style={{ fontSize: 22, fontWeight: 400, color: "#8A958D" }}>/10</span></span>
-                  <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 12, fontWeight: 700, color: sColor, marginTop: 4 }}>{verdictWord}</span>
+                  <span className="rv-jb" style={{ fontSize: 8, letterSpacing: ".14em", color: sColor, marginBottom: 2 }}>FSP SCORE</span>
+                  <span className="rv-nr" style={{ fontSize: 52, fontWeight: 700, color: sColor, lineHeight: 1 }}>{score}<span style={{ fontSize: 22, fontWeight: 400, color: "#8A958D" }}>/10</span></span>
+                  <span className="rv-dm" style={{ fontSize: 12, fontWeight: 700, color: sColor, marginTop: 4 }}>{verdictWord}</span>
                   <div style={{ display: "flex", gap: 2, marginTop: 6 }}>
                     {[0, 1, 2, 3, 4].map((i) => (
                       <svg key={i} width={12} height={12} viewBox="0 0 24 24" fill={i < fullStars ? "#C98A1E" : "#DCE2DD"}><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z" /></svg>
@@ -243,7 +243,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                   </div>
                 </div>
                 <div style={{ flex: 1, minWidth: 0, borderRadius: 14, border: "1px solid #E4E8E5", background: "#F8FAF8", padding: "20px 22px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                  <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "#0F7A5A", margin: "0 0 8px" }}>Our verdict</p>
+                  <p className="rv-mono-label-accent" style={{ fontSize: 10, letterSpacing: ".16em", margin: "0 0 8px" }}>Our verdict</p>
                   <p style={{ fontSize: 15, lineHeight: 1.6, color: "#2D3A31", margin: 0 }}>{review.keyTakeaways?.[0] ?? review.verdict ?? `Scored ${score}/10 against the Fitlab Scoring Protocol.`}</p>
                 </div>
               </div>
@@ -258,12 +258,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           <main style={{ flex: 1, minWidth: 0, maxWidth: 740 }}>
 
             {/* byline */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "8px 14px", paddingBottom: 22, marginBottom: 32, borderBottom: "1px solid #E4E8E5", fontSize: 13, color: "#586259", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-              <span>Medically reviewed by <Link href={`/authors/${review.reviewer?.slug ?? "pankaj-singh"}`} style={{ color: "#0F7A5A", textDecoration: "none", fontWeight: 600 }}>{review.reviewer?.name ?? "Pankaj Singh"}</Link></span>
-              <span style={{ color: "#C8D2CB" }}>·</span>
-              <span>Written by <Link href={`/authors/${review.author?.slug ?? "fitlab-research-team"}`} style={{ color: "#0F7A5A", textDecoration: "none", fontWeight: 600 }}>{review.author?.name ?? "Fitlab Research Team"}</Link></span>
-              <span style={{ color: "#C8D2CB" }}>·</span>
-              <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".04em", color: "#6B7770" }}>UPDATED {updatedDate}</span>
+            <div className="rv-dm" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "8px 14px", paddingBottom: 22, marginBottom: 32, borderBottom: "1px solid #E4E8E5", fontSize: 13, color: "#586259" }}>
+              <span>Medically reviewed by <Link href={`/authors/${review.reviewer?.slug ?? "pankaj-singh"}`} className="rv-link">{review.reviewer?.name ?? "Pankaj Singh"}</Link></span>
+              <span className="rv-breadcrumb-sep">·</span>
+              <span>Written by <Link href={`/authors/${review.author?.slug ?? "fitlab-research-team"}`} className="rv-link">{review.author?.name ?? "Fitlab Research Team"}</Link></span>
+              <span className="rv-breadcrumb-sep">·</span>
+              <span className="rv-jb" style={{ fontSize: 11, letterSpacing: ".04em", color: "#6B7770" }}>UPDATED {updatedDate}</span>
             </div>
 
             {/* AT A GLANCE */}
@@ -272,8 +272,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <div className="review-stat-grid" style={{ display: "grid", gridTemplateColumns: `repeat(${quickStats.length}, 1fr)`, gap: 1, background: "#E4E8E5", border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
                   {quickStats.map((s) => (
                     <div key={s.label} style={{ background: "#fff", padding: "18px 16px" }}>
-                      <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: ".12em", textTransform: "uppercase", color: "#9AA39C", margin: "0 0 8px" }}>{s.label}</p>
-                      <p style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 22, fontWeight: 700, color: "#17211C", margin: 0, lineHeight: 1, letterSpacing: "-.02em" }}>{s.value}</p>
+                      <p className="rv-mono-label" style={{ fontSize: 9, margin: "0 0 8px" }}>{s.label}</p>
+                      <p className="rv-nr" style={{ fontSize: 22, fontWeight: 700, color: "#17211C", margin: 0, lineHeight: 1, letterSpacing: "-.02em" }}>{s.value}</p>
                       {s.note && <p style={{ fontSize: 11, color: "#6B7770", margin: "6px 0 0" }}>{s.note}</p>}
                     </div>
                   ))}
@@ -285,13 +285,13 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             {toc.length > 0 && (
               <details open style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden", marginBottom: 40 }}>
                 <summary className="review-otp-summary" style={{ background: "#F2F8F4", cursor: "pointer", padding: "16px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", listStyle: "none" }}>
-                  <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, fontSize: 15, color: "#17211C" }}>On this page</span>
+                  <span className="rv-dm" style={{ fontWeight: 700, fontSize: 15, color: "#17211C" }}>On this page</span>
                   <span className="review-otp-icon" style={{ fontSize: 20, color: "#0F7A5A", lineHeight: 1, fontWeight: 400 }} />
                 </summary>
                 <div className="review-otp-grid" style={{ padding: "16px 20px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px 24px" }}>
                   {toc.map((t, i) => (
-                    <a key={t.id} href={`#${t.id}`} style={{ display: "flex", gap: 10, padding: "6px 0", fontSize: 13.5, color: "#3F4B43", textDecoration: "none", fontFamily: "var(--font-dm-sans), sans-serif" }}>
-                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, color: "#0F7A5A", minWidth: 16 }}>{String(i + 1).padStart(2, "0")}</span>{t.label}
+                    <a key={t.id} href={`#${t.id}`} className="rv-dm" style={{ display: "flex", gap: 10, padding: "6px 0", fontSize: 13.5, color: "#3F4B43", textDecoration: "none" }}>
+                      <span className="rv-jb" style={{ fontSize: 10, color: "#0F7A5A", minWidth: 16 }}>{String(i + 1).padStart(2, "0")}</span>{t.label}
                     </a>
                   ))}
                 </div>
@@ -300,16 +300,16 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* SCORECARD */}
             {pillarRows.length > 0 && (
-              <section id="scorecard" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
+              <section id="scorecard" className="rv-section">
                 {sectionEyebrow("§ 01", "THE SCORECARD")}
-                <h2 style={h2("", "")}>How it scored <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>by pillar</em></h2>
+                <h2 className="rv-nr" style={h2("", "")}>How it scored <em className="rv-h2em">by pillar</em></h2>
                 <p style={{ fontSize: 14, lineHeight: 1.65, color: "#6B7770", margin: "-12px 0 24px" }}>Scored against the <strong style={{ color: "#3F4B43" }}>Fitlab Scoring Protocol</strong> — five weighted pillars totalling 100%.</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
                   {pillarRows.map((p) => (
                     <div key={p.name}>
                       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, marginBottom: 7 }}>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 14.5, fontWeight: 700, color: "#17211C" }}>{p.name} <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, fontWeight: 400, color: "#9AA39C", letterSpacing: ".04em" }}>· {p.weight} weight</span></span>
-                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 16, fontWeight: 700, color: p.color }}>{p.score}<span style={{ fontSize: 11, fontWeight: 400, color: "#9AA39C" }}>/10</span></span>
+                        <span className="rv-dm" style={{ fontSize: 14.5, fontWeight: 700, color: "#17211C" }}>{p.name} <span className="rv-jb" style={{ fontSize: 10, fontWeight: 400, color: "#9AA39C", letterSpacing: ".04em" }}>· {p.weight} weight</span></span>
+                        <span className="rv-nr" style={{ fontSize: 16, fontWeight: 700, color: p.color }}>{p.score}<span style={{ fontSize: 11, fontWeight: 400, color: "#9AA39C" }}>/10</span></span>
                       </div>
                       <div style={{ height: 8, borderRadius: 99, background: "#EEF1EF", overflow: "hidden" }}>
                         <div style={{ height: "100%", width: p.pct, background: p.color, borderRadius: 99 }} />
@@ -323,28 +323,28 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* VERDICT / DEEP DIVE */}
             {review.body?.length > 0 && (
-              <section id="verdict" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
+              <section id="verdict" className="rv-section">
                 {sectionEyebrow("§ 02", "FULL REVIEW")}
-                <h2 style={h2("", "")}>What we <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>found</em></h2>
+                <h2 className="rv-nr" style={h2("", "")}>What we <em className="rv-h2em">found</em></h2>
                 <PortableText value={review.body} components={ptComponents} />
               </section>
             )}
 
             {/* INGREDIENT ANALYSIS */}
             {review.ingredients?.length > 0 && (
-              <section id="ingredients" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
+              <section id="ingredients" className="rv-section">
                 {sectionEyebrow("§ 03", "WHAT'S INSIDE")}
-                <h2 style={h2("", "")}>Ingredient &amp; dosage <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>analysis</em></h2>
+                <h2 className="rv-nr" style={h2("", "")}>Ingredient &amp; dosage <em className="rv-h2em">analysis</em></h2>
                 <div style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
                   <div style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", background: "#0F7A5A" }}>
                     {["Ingredient", "Per serving", "Our take"].map((h) => (
-                      <span key={h} style={{ padding: "12px 18px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".12em", textTransform: "uppercase", color: "#fff", fontWeight: 600 }}>{h}</span>
+                      <span key={h} className="rv-jb" style={{ padding: "12px 18px", fontSize: 10, letterSpacing: ".12em", textTransform: "uppercase", color: "#fff", fontWeight: 600 }}>{h}</span>
                     ))}
                   </div>
                   {review.ingredients.map((ing: { name: string; dosage?: string; notes?: string; purpose?: string; take?: string; flag?: string; evidenceLevel?: string }, i: number) => (
                     <div key={i} style={{ display: "grid", gridTemplateColumns: "1.4fr 0.8fr 1.4fr", borderBottom: "1px solid #EEF1EF", background: i % 2 === 1 ? "#F8FAF8" : "#fff", alignItems: "center" }}>
                       <span style={{ padding: "14px 18px", fontSize: 14, fontWeight: 600, color: "#17211C" }}>{ing.name}</span>
-                      <span style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains), monospace", fontSize: 13, fontWeight: 700, color: "#0F7A5A" }}>{ing.dosage ?? "—"}</span>
+                      <span className="rv-jb" style={{ padding: "14px 18px", fontSize: 13, fontWeight: 700, color: "#0F7A5A" }}>{ing.dosage ?? "—"}</span>
                       <span style={{ padding: "14px 18px", fontSize: 13, lineHeight: 1.5, color: "#3F4B43" }}>
                         <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
                           <span style={{ width: 7, height: 7, borderRadius: "50%", background: flagHex(ing.flag, ing.evidenceLevel), flexShrink: 0 }} />
@@ -359,12 +359,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* PROS & CONS */}
             {(review.pros?.length > 0 || review.cons?.length > 0) && (
-              <section id="pros-cons" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
-                <h2 style={h2("", "")}>Pros &amp; <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>cons</em></h2>
+              <section id="pros-cons" className="rv-section">
+                <h2 className="rv-nr" style={h2("", "")}>Pros &amp; <em className="rv-h2em">cons</em></h2>
                 <div className="review-proscons" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
                   <div style={{ background: "rgba(15,122,90,.05)", border: "1px solid rgba(15,122,90,.15)", borderRadius: 14, padding: 22 }}>
-                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".18em", textTransform: "uppercase", color: "#0F7A5A", margin: "0 0 16px" }}>What we liked</p>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
+                    <p className="rv-jb" style={{ fontSize: 10, letterSpacing: ".18em", textTransform: "uppercase", color: "#0F7A5A", margin: "0 0 16px" }}>What we liked</p>
+                    <ul className="rv-list-col">
                       {(review.pros ?? []).map((pro: string, i: number) => (
                         <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                           <span style={{ flexShrink: 0, marginTop: 1, color: "#0F7A5A" }}><svg width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg></span>
@@ -374,8 +374,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                     </ul>
                   </div>
                   <div style={{ background: "rgba(217,119,6,.05)", border: "1px solid rgba(217,119,6,.18)", borderRadius: 14, padding: 22 }}>
-                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".18em", textTransform: "uppercase", color: "#B7791F", margin: "0 0 16px" }}>Worth noting</p>
-                    <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
+                    <p className="rv-jb" style={{ fontSize: 10, letterSpacing: ".18em", textTransform: "uppercase", color: "#B7791F", margin: "0 0 16px" }}>Worth noting</p>
+                    <ul className="rv-list-col">
                       {(review.cons ?? []).map((con: string, i: number) => (
                         <li key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
                           <span style={{ flexShrink: 0, marginTop: 1, color: "#B7791F" }}><svg width={15} height={15} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round"><path d="M5 12h14" /></svg></span>
@@ -390,12 +390,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* SPECS */}
             {specs.length > 0 && (
-              <section id="specs" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
-                <h2 style={h2("", "")}>Specs &amp; <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>nutrition</em></h2>
+              <section id="specs" className="rv-section">
+                <h2 className="rv-nr" style={h2("", "")}>Specs &amp; <em className="rv-h2em">nutrition</em></h2>
                 <div style={{ border: "1px solid #E4E8E5", borderRadius: 14, overflow: "hidden" }}>
                   {specs.map((sp, i) => (
-                    <div key={i} style={{ display: "flex", justifyContent: "space-between", gap: 18, padding: "13px 20px", borderBottom: "1px solid #F3F6F4", background: i % 2 === 1 ? "#F8FAF8" : "#fff" }}>
-                      <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#6B7770" }}>{sp.label}</span>
+                    <div key={i} className="rv-spec-row" style={{ borderBottom: "1px solid #F3F6F4" }}>
+                      <span className="rv-jb" style={{ fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "#6B7770" }}>{sp.label}</span>
                       <span style={{ fontSize: 14, color: "#17211C", fontWeight: 500, textAlign: "right" }}>{sp.value}</span>
                     </div>
                   ))}
@@ -405,38 +405,38 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* BEST ALTERNATIVES */}
             {alternatives.length > 0 && (
-              <section id="alternatives" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
+              <section id="alternatives" className="rv-section">
                 {sectionEyebrow("§ 04", "IF IT'S NOT FOR YOU")}
-                <h2 style={h2("", "")}>Best <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>alternatives</em></h2>
+                <h2 className="rv-nr" style={h2("", "")}>Best <em className="rv-h2em">alternatives</em></h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                   {alternatives.map((a: { brand: string; name: string; slug?: string; rating: number; price?: string; priceNote?: string; angle?: string; why?: string; affiliateUrl?: string; imageUrl?: string }, i: number) => {
                     const aColor = scoreHex(a.rating);
                     const tints = ["#E7F2EC", "#E8EEF5", "#FBF0DD", "#EFEAF6"];
                     return (
-                      <article key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 14, background: "#fff", padding: 22, display: "flex", gap: 20, alignItems: "flex-start", boxShadow: "0 1px 2px rgba(16,30,22,.04)" }}>
-                        <div style={{ flexShrink: 0, width: 88, height: 88, borderRadius: 12, background: tints[i % tints.length], display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                      <article key={i} className="rv-alt-card">
+                        <div className="rv-alt-thumb" style={{ background: tints[i % tints.length] }}>
                           {a.imageUrl ? (
                             <img src={a.imageUrl} alt={`${a.brand} ${a.name}`} width={88} height={88} style={{ width: 88, height: 88, objectFit: "contain" }} />
                           ) : (
                           <div style={{ width: 44, height: 64, borderRadius: 6, background: "#fff", boxShadow: "0 5px 14px rgba(16,30,22,.12)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                            <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900, fontSize: 15, color: "#17211C", letterSpacing: "-.02em" }}>{(a.brand ?? "?").slice(0, 2).toUpperCase()}</span>
+                            <span className="rv-pf" style={{ fontWeight: 900, fontSize: 15, color: "#17211C", letterSpacing: "-.02em" }}>{(a.brand ?? "?").slice(0, 2).toUpperCase()}</span>
                           </div>
                           )}
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 14 }}>
                             <div>
-                              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".1em", color: "#6B7770", margin: "0 0 3px" }}>{a.brand}</p>
-                              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: 0, lineHeight: 1.15 }}>{a.name}</h3>
+                              <p className="rv-jb" style={{ fontSize: 10, letterSpacing: ".1em", color: "#6B7770", margin: "0 0 3px" }}>{a.brand}</p>
+                              <h3 className="rv-nr" style={{ fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: 0, lineHeight: 1.15 }}>{a.name}</h3>
                             </div>
-                            <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 20, fontWeight: 700, color: aColor, lineHeight: 1, flexShrink: 0 }}>{a.rating}<span style={{ fontSize: 11, fontWeight: 400, color: "#9AA39C" }}>/10</span></span>
+                            <span className="rv-nr" style={{ fontSize: 20, fontWeight: 700, color: aColor, lineHeight: 1, flexShrink: 0 }}>{a.rating}<span style={{ fontSize: 11, fontWeight: 400, color: "#9AA39C" }}>/10</span></span>
                           </div>
-                          {a.angle && <p style={{ fontSize: 13, fontWeight: 700, color: "#0F7A5A", margin: "12px 0 5px", fontFamily: "var(--font-dm-sans), sans-serif" }}>{a.angle}</p>}
+                          {a.angle && <p className="rv-dm" style={{ fontSize: 13, fontWeight: 700, color: "#0F7A5A", margin: "12px 0 5px" }}>{a.angle}</p>}
                           {a.why && <p style={{ fontSize: 14, lineHeight: 1.6, color: "#3F4B43", margin: 0 }}>{a.why}</p>}
                           <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 14, flexWrap: "wrap" }}>
-                            {a.price && <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontWeight: 700, fontSize: 13, color: "#0F7A5A" }}>{a.price} {a.priceNote && <span style={{ fontWeight: 400, color: "#9AA39C" }}>· {a.priceNote}</span>}</span>}
-                            {a.slug && <Link href={`/reviews/${a.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#17211c", textDecoration: "none" }}>Read review <span className="nudge">→</span></Link>}
-                            {a.affiliateUrl && <a href={a.affiliateUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#0F7A5A", textDecoration: "none" }}>Check price →</a>}
+                            {a.price && <span className="rv-jb" style={{ fontWeight: 700, fontSize: 13, color: "#0F7A5A" }}>{a.price} {a.priceNote && <span style={{ fontWeight: 400, color: "#9AA39C" }}>· {a.priceNote}</span>}</span>}
+                            {a.slug && <Link href={`/reviews/${a.slug}`} className="rv-dm" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 700, color: "#17211c", textDecoration: "none" }}>Read review <span className="nudge">→</span></Link>}
+                            {a.affiliateUrl && <a href={a.affiliateUrl} target="_blank" rel="nofollow noopener noreferrer" className="rv-dm" style={{ fontSize: 13, fontWeight: 700, color: "#0F7A5A", textDecoration: "none" }}>Check price →</a>}
                           </div>
                         </div>
                       </article>
@@ -448,14 +448,14 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* FAQ */}
             {faqs.length > 0 && (
-              <section id="faq" style={{ scrollMarginTop: 90, marginBottom: 52 }}>
+              <section id="faq" className="rv-section">
                 {sectionEyebrow("§ 05", "FAQ")}
-                <h2 style={h2("", "")}>Common <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>questions</em></h2>
+                <h2 className="rv-nr" style={h2("", "")}>Common <em className="rv-h2em">questions</em></h2>
                 <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {faqs.map((f: { question: string; answer: string }, i: number) => (
                     <details key={i} className="review-faq" style={{ borderBottom: i < faqs.length - 1 ? "1px solid #EEF1EF" : "none", background: i % 2 === 1 ? "#F8FAF8" : "#fff" }}>
                       <summary style={{ cursor: "pointer", padding: "18px 20px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, listStyle: "none" }}>
-                        <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, fontSize: 14.5, color: "#17211C", lineHeight: 1.4 }}>{f.question}</span>
+                        <span className="rv-dm" style={{ fontWeight: 700, fontSize: 14.5, color: "#17211C", lineHeight: 1.4 }}>{f.question}</span>
                         <span className="review-faq-icon" style={{ fontSize: 20, color: "#0F7A5A", lineHeight: 1, fontWeight: 400, flexShrink: 0 }} />
                       </summary>
                       <p style={{ fontSize: 14, lineHeight: 1.75, color: "#3F4B43", margin: 0, padding: "0 20px 20px" }}>{f.answer}</p>
@@ -471,8 +471,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
                 <h2 style={{ ...h2("", ""), margin: "0 0 16px" }}>The bottom line</h2>
                 <div className="review-bottomline" style={{ display: "flex", gap: 20, alignItems: "flex-start", padding: 24, border: "1px solid #DCEAE0", background: "#EFF6F0", borderRadius: 14 }}>
                   <div style={{ flexShrink: 0, width: 72, height: 72, borderRadius: 12, background: sColor, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
-                    <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 26, fontWeight: 700, color: "#fff", lineHeight: 1 }}>{score}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 6.5, letterSpacing: ".1em", color: "rgba(255,255,255,.85)" }}>OUT OF 10</span>
+                    <span className="rv-nr" style={{ fontSize: 26, fontWeight: 700, color: "#fff", lineHeight: 1 }}>{score}</span>
+                    <span className="rv-jb" style={{ fontSize: 6.5, letterSpacing: ".1em", color: "rgba(255,255,255,.85)" }}>OUT OF 10</span>
                   </div>
                   <p style={{ fontSize: 15.5, lineHeight: 1.7, color: "#2D3A31", margin: 0 }}>{review.verdict}</p>
                 </div>
@@ -481,8 +481,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
             {/* SOURCES / HISTORY + SHARE */}
             <section id="sources" style={{ borderTop: "1px solid #E4E8E5", paddingTop: 28, marginBottom: 8, scrollMarginTop: 90 }}>
-              <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".06em", color: "#9AA39C", margin: "0 0 18px" }}>LAST REVIEWED ON {updatedDate}</p>
-              <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: "0 0 14px" }}>How we reviewed this product</h3>
+              <p className="rv-jb" style={{ fontSize: 11, letterSpacing: ".06em", color: "#9AA39C", margin: "0 0 18px" }}>LAST REVIEWED ON {updatedDate}</p>
+              <h3 className="rv-nr" style={{ fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: "0 0 14px" }}>How we reviewed this product</h3>
               {(sources.length > 0 || history.length > 0) && <SourcesToggle sources={sources} history={history} />}
               <p style={{ fontSize: 12, color: "#9AA39C", marginTop: 18, lineHeight: 1.6 }}>
                 Fitlabreviews has strict sourcing guidelines and relies on peer-reviewed studies, academic research, and clinical evidence.{" "}
@@ -498,32 +498,32 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
               {review.affiliateUrl && (
                 <div style={{ border: "1px solid #E4E8E5", borderRadius: 16, overflow: "hidden", boxShadow: "0 2px 10px rgba(16,30,22,.05)" }}>
                   <div style={{ background: "#0F7A5A", padding: "10px 18px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".14em", color: "#fff", fontWeight: 600 }}>EDITOR&apos;S CHOICE</span>
-                    <span style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 12, fontWeight: 700, color: "#fff" }}>{score}/10</span>
+                    <span className="rv-jb" style={{ fontSize: 10, letterSpacing: ".14em", color: "#fff", fontWeight: 600 }}>EDITOR&apos;S CHOICE</span>
+                    <span className="rv-dm" style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>{score}/10</span>
                   </div>
                   <div style={{ padding: 22 }}>
-                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 11, letterSpacing: ".1em", color: "#6B7770", margin: 0 }}>{(buy.retailerName ?? review.brand)?.toUpperCase()}</p>
-                    <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.3rem", fontWeight: 700, color: "#17211C", margin: "5px 0 12px" }}>{review.title}</h3>
+                    <p className="rv-jb" style={{ fontSize: 11, letterSpacing: ".1em", color: "#6B7770", margin: 0 }}>{(buy.retailerName ?? review.brand)?.toUpperCase()}</p>
+                    <h3 className="rv-nr" style={{ fontSize: "1.3rem", fontWeight: 700, color: "#17211C", margin: "5px 0 12px" }}>{review.title}</h3>
                     {buy.priceDisplay && (
                       <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 4 }}>
-                        <span style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: 32, fontWeight: 700, color: "#17211C", letterSpacing: "-.02em" }}>{buy.priceDisplay}</span>
+                        <span className="rv-nr" style={{ fontSize: 32, fontWeight: 700, color: "#17211C", letterSpacing: "-.02em" }}>{buy.priceDisplay}</span>
                         {buy.priceUnit && <span style={{ fontSize: 13, color: "#6B7770" }}>{buy.priceUnit}</span>}
                       </div>
                     )}
                     {perServingNote && <p style={{ fontSize: 12.5, color: "#6B7770", margin: "0 0 18px" }}>{perServingNote}</p>}
-                    <a href={review.affiliateUrl} target="_blank" rel="nofollow noopener noreferrer" className="buybtn" style={{ display: "block", textAlign: "center", background: "#0F7A5A", color: "#fff", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: ".02em", padding: 14, borderRadius: 10, textDecoration: "none" }}>Check price{buy.retailerName ? ` at ${buy.retailerName}` : ""}</a>
-                    {buy.secondaryUrl && <a href={buy.secondaryUrl} target="_blank" rel="nofollow noopener noreferrer" style={{ display: "block", textAlign: "center", marginTop: 10, fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 600, color: "#0F7A5A", textDecoration: "none" }}>See it on Amazon →</a>}
-                    <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: ".06em", color: "#9AA39C", margin: "14px 0 0", textAlign: "center" }}>AFFILIATE LINK · WE MAY EARN A COMMISSION</p>
+                    <a href={review.affiliateUrl} target="_blank" rel="nofollow noopener noreferrer" className="buybtn rv-dm" style={{ display: "block", textAlign: "center", background: "#0F7A5A", color: "#fff", fontWeight: 700, fontSize: 14, letterSpacing: ".02em", padding: 14, borderRadius: 10, textDecoration: "none" }}>Check price{buy.retailerName ? ` at ${buy.retailerName}` : ""}</a>
+                    {buy.secondaryUrl && <a href={buy.secondaryUrl} target="_blank" rel="nofollow noopener noreferrer" className="rv-dm" style={{ display: "block", textAlign: "center", marginTop: 10, fontSize: 13, fontWeight: 600, color: "#0F7A5A", textDecoration: "none" }}>See it on Amazon →</a>}
+                    <p className="rv-jb" style={{ fontSize: 9, letterSpacing: ".06em", color: "#9AA39C", margin: "14px 0 0", textAlign: "center" }}>AFFILIATE LINK · WE MAY EARN A COMMISSION</p>
                   </div>
                 </div>
               )}
 
               {/* newsletter */}
               <div style={{ background: "#E7F2EC", borderRadius: 14, padding: 24 }}>
-                <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "#0F7A5A", margin: "0 0 10px" }}>Fitlabreviews newsletter</p>
-                <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: "0 0 10px", lineHeight: 1.2 }}>Get the Research Dispatch</h3>
+                <p className="rv-mono-label-accent" style={{ margin: "0 0 10px" }}>Fitlabreviews newsletter</p>
+                <h3 className="rv-nr" style={{ fontSize: "1.2rem", fontWeight: 700, color: "#17211C", margin: "0 0 10px", lineHeight: 1.2 }}>Get the Research Dispatch</h3>
                 <p style={{ fontSize: 13, lineHeight: 1.6, color: "#3F4B43", margin: "0 0 18px" }}>Evidence-led supplement reviews in your inbox. No hype, no sponsors.</p>
-                <Link href="/#newsletter" style={{ display: "block", textAlign: "center", background: "#0F7A5A", color: "#fff", fontFamily: "var(--font-dm-sans), sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: ".04em", padding: 13, borderRadius: 8, textDecoration: "none" }}>JOIN NOW</Link>
+                <Link href="/#newsletter" className="rv-dm" style={{ display: "block", textAlign: "center", background: "#0F7A5A", color: "#fff", fontWeight: 700, fontSize: 13, letterSpacing: ".04em", padding: 13, borderRadius: 8, textDecoration: "none" }}>JOIN NOW</Link>
               </div>
             </div>
           </aside>
@@ -534,18 +534,18 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           <section style={{ borderTop: "1px solid #E4E8E5", background: "#FBFCFB", marginTop: 56 }}>
             <div style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 24px 56px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-                <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-.02em", margin: 0 }}>Read next</h2>
+                <h2 className="rv-nr" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#17211C", letterSpacing: "-.02em", margin: 0 }}>Read next</h2>
                 <span style={{ flex: 1, height: 1, background: "#E4E8E5" }} />
-                <Link href="/reviews" className="jl" style={{ fontFamily: "var(--font-dm-sans), sans-serif", fontSize: 13, fontWeight: 700, color: "#0F7A5A", textDecoration: "none" }}>All reviews →</Link>
+                <Link href="/reviews" className="jl rv-dm" style={{ fontSize: 13, fontWeight: 700, color: "#0F7A5A", textDecoration: "none" }}>All reviews →</Link>
               </div>
               <div className="review-readnext" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
                 {review.relatedReviews.slice(0, 4).map((r: { slug: string; title: string; brand: string; editorialScore?: number; verdict?: string }) => (
                   <Link key={r.slug} href={`/reviews/${r.slug}`} style={{ textDecoration: "none", display: "block" }}>
                     <div style={{ position: "relative", height: 150, borderRadius: 14, overflow: "hidden", background: "linear-gradient(150deg,#143a30,#0f2a23)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <span style={{ position: "absolute", right: -14, bottom: -34, fontFamily: "var(--font-playfair), Georgia, serif", fontSize: 150, fontWeight: 900, color: "rgba(255,255,255,.06)", lineHeight: .7 }}>{r.title?.[0]}</span>
-                      <span style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900, fontSize: 30, color: "rgba(255,255,255,.9)" }}>{(r.brand ?? "?").slice(0, 2).toUpperCase()}</span>
+                      <span className="rv-pf" style={{ position: "absolute", right: -14, bottom: -34, fontSize: 150, fontWeight: 900, color: "rgba(255,255,255,.06)", lineHeight: .7 }}>{r.title?.[0]}</span>
+                      <span className="rv-pf" style={{ fontWeight: 900, fontSize: 30, color: "rgba(255,255,255,.9)" }}>{(r.brand ?? "?").slice(0, 2).toUpperCase()}</span>
                     </div>
-                    <h3 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.1rem", fontWeight: 700, color: "#17211C", letterSpacing: "-.01em", lineHeight: 1.2, margin: "14px 0 6px" }}>{r.title}</h3>
+                    <h3 className="rv-nr" style={{ fontSize: "1.1rem", fontWeight: 700, color: "#17211C", letterSpacing: "-.01em", lineHeight: 1.2, margin: "14px 0 6px" }}>{r.title}</h3>
                     {r.verdict && <p style={{ fontSize: 13, lineHeight: 1.55, color: "#586259", margin: 0 }}>{r.verdict}</p>}
                   </Link>
                 ))}
