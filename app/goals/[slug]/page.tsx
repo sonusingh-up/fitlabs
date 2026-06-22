@@ -10,6 +10,7 @@ import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getGoalBySlug, getAllGoalSlugs } from "@/lib/sanity";
 import type { EvidenceLevel } from "@/lib/types";
+import GoalAuthGate from "@/components/ui/GoalAuthGate";
 import React from "react";
 
 const linkStyle = { color: "#0F7A5A", fontWeight: 600 as const, textDecoration: "none" as const, borderBottom: "1px solid rgba(15,122,90,0.3)" };
@@ -270,6 +271,7 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
               <p style={{ fontSize: 16, color: "#2D2926", lineHeight: 1.85, marginBottom: 48 }}>{g.summary}</p>
             )}
 
+            <GoalAuthGate>
             {/* Dynamic sections */}
             {(g.sections || []).map((sec: {
               id: string; label: string; figure?: string; heading: string; headingItalic?: string;
@@ -473,6 +475,7 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
                 <Link href="/editorial-policy" style={{ color: "#0F7A5A", fontWeight: 600 }}>Read our editorial policy →</Link>
               </p>
             </div>
+            </GoalAuthGate>
           </article>
         </div>
       </div>

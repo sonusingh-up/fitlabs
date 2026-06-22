@@ -7,6 +7,7 @@ import ShareButtons from "@/components/ui/ShareButtons";
 import EvidenceBadge from "@/components/ui/EvidenceBadge";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { EvidenceLevel } from "@/lib/types";
+import GoalAuthGate from "@/components/ui/GoalAuthGate";
 
 export const revalidate = 86400;
 
@@ -310,6 +311,7 @@ export default function MuscleGainGoalPage() {
               Muscle hypertrophy is a slow, energy-expensive biological process. Your body adds contractile tissue only when it receives a consistent signal — mechanical tension from resistance training — paired with adequate protein, sufficient calories, and time to recover. Supplements sit at the margin of this equation. They cannot create a stimulus that training does not provide, and they cannot compensate for a protein deficit. What they can do, in a small number of well-studied cases, is accelerate <Link href="/goals/recovery" style={{ color: "#0F7A5A", fontWeight: 600, textDecoration: "none", borderBottom: "1px solid rgba(15,122,90,0.3)" }}>recovery</Link>, improve work capacity, and make it easier to hit your daily targets. This guide separates those few cases from the hundreds of products that occupy shelf space without occupying the literature.
             </p>
 
+            <GoalAuthGate>
             {/* § 01 — Why Most People Fail */}
             <section id="why-most-fail" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
               <SectionHeading label="Reality Check" figure="§ 01" title="Why Most People" titleItalic="fail to gain muscle" size="sm" />
@@ -709,7 +711,7 @@ export default function MuscleGainGoalPage() {
                 <Link href="/editorial-policy" style={{ color: "#0F7A5A", fontWeight: 600 }}>Read our editorial policy →</Link>
               </p>
             </div>
-
+            </GoalAuthGate>
           </article>
         </div>
       </div>
