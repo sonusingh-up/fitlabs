@@ -436,8 +436,8 @@ export default async function BestOfPage({ params }: { params: Promise<{ slug: s
           <section id="compare" style={{ scrollMarginTop: 90, marginBottom: 56 }}>
             {sectionEyebrow("§ 04", "SIDE BY SIDE")}
             <h2 style={{ ...h2, margin: "0 0 24px" }}>How they <em style={{ fontStyle: "italic", fontWeight: 500, color: "#6B7770" }}>compare</em></h2>
-            <div style={{ overflowX: "auto", border: "1px solid #E4E8E5", borderRadius: 12 }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-dm-sans), sans-serif", minWidth: 640 }}>
+            <div className="review-table-wrap" style={{ border: "1px solid #E4E8E5" }}>
+              <table style={{ borderCollapse: "collapse", fontFamily: "var(--font-dm-sans), sans-serif", minWidth: 640 }}>
                 <thead>
                   <tr>
                     {["Product", "Score", "Price", "Protein type", "Cal / Protein"].map((th) => (
