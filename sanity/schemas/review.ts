@@ -112,6 +112,7 @@ export const reviewSchema = defineType({
           { name: "angle", title: "Angle (e.g. Choose this if taste matters most.)", type: "string" },
           { name: "why", title: "Why (1 sentence)", type: "text", rows: 2 },
           { name: "affiliateUrl", title: "Affiliate URL", type: "url" },
+          { name: "imageUrl", title: "Product image URL", type: "url" },
         ]
       }]
     }),

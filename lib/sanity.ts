@@ -34,7 +34,7 @@ export async function getReviewBySlug(slug: string) {
       keyTakeaways,
       quickStats[]{ label, value, note },
       specs[]{ label, value },
-      alternatives[]{ brand, name, slug, rating, price, priceNote, angle, why, affiliateUrl },
+      alternatives[]{ brand, name, slug, rating, price, priceNote, angle, why, affiliateUrl, imageUrl },
       reviewHistory[]{ date, note },
       buyBox{ priceDisplay, priceUnit, perServingNote, retailerName, secondaryUrl },
       productSpecs{ servings, servingSize, calories, protein, certifications },
