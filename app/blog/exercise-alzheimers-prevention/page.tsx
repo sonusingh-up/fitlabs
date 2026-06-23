@@ -19,7 +19,7 @@ const articleSchema = {
   headline: "Exercise & Alzheimer's: How Movement Cuts Risk 45%",
   description:
     "Aerobic exercise cuts Alzheimer's risk by 35–45% at 150 min/week. The BDNF mechanism, the protective dose, and how to start at any age.",
-  image: "https://fitlabreviews.com/lifestyle/exercise-brain-health.jpg",
+  image: "https://fitlabreviews.com/lifestyle/exercise-brain-health.webp",
   datePublished: "2026-06-22",
   dateModified: "2026-06-22",
   author: { "@type": "Organization", name: "Fitlabreviews Editorial", url: "https://fitlabreviews.com/about" },
