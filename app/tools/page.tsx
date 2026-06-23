@@ -44,8 +44,8 @@ const tools: ToolCard[] = [
   {
     title: "Protein Calculator",
     description: "How much you actually need",
-    href: "#",
-    status: "soon",
+    href: "/tools/protein-calculator",
+    status: "live",
   },
   {
     title: "TDEE Calculator",

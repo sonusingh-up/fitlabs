@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import TableOfContents from "@/components/ui/TableOfContents";
 import MobileTOC from "@/components/ui/MobileTOC";
 import ReadingProgress from "@/components/ui/ReadingProgress";
@@ -19,7 +18,7 @@ const articleSchema = {
   headline: "Highest Calorie-Burning Exercises, Ranked by Science",
   description:
     "The highest calorie-burning exercises ranked: rowing, HIIT, heavy lifting, running. What the science says and how to start without quitting.",
-  image: "https://fitlabreviews.com/lifestyle/calorie-burning-exercises.jpg",
+  image: "https://fitlabreviews.com/lifestyle/calorie-burning-exercises.png",
   datePublished: "2026-06-22",
   dateModified: "2026-06-22",
   author: { "@type": "Organization", name: "Fitlabreviews Editorial", url: "https://fitlabreviews.com/about" },
@@ -117,18 +116,6 @@ export default function CalorieBurningExercises() {
           <span style={{ color: "#E4E8E5" }}>/</span>
           <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>High-Calorie Exercises</span>
         </div>
-      </div>
-
-      {/* Feature image banner */}
-      <div style={{ position: "relative", width: "100%", maxHeight: 420, overflow: "hidden", backgroundColor: "#0B1426" }}>
-        <Image
-          src="/lifestyle/calorie-burning-exercises.jpg"
-          alt="Woman doing high-intensity jump rope intervals outdoors"
-          width={1600}
-          height={854}
-          priority
-          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-        />
       </div>
 
       {/* Hero */}
