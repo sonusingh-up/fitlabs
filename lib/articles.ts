@@ -162,8 +162,17 @@ export const allArticles: ArticleEntry[] = [
     image: "/illustrations/article-freeze-dried.png",
     date: "2026-03-10",
   },
-
+  
   // ── Review articles ──────────────────────────────────────
+  {
+    slug: "fairlife-protein-shake", type: "review" as ArticleType,
+    href: "/reviews/fairlife-protein-shake",
+    title: "Fairlife Protein Shake Review: 30 g Protein, 150 Cal, FSP 8/10",
+    category: "REVIEWS", tags: ["Nutrition", "Reviews"],
+    mins: 14, evidence: "Strong evidence",
+    image: "/illustrations/fallback-reviews.png",
+    date: "2026-06-23", featured: true,
+  },
   {
     slug: "citrus-burn", type: "review" as ArticleType,
     href: "/reviews/citrus-burn",
