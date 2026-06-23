@@ -528,10 +528,9 @@
   .header-desktop-nav { display: flex; }
 }
 
-.header-cta-btn { display: none !important; }
-@media (min-width: 1024px) {
-  .header-cta-btn { display: inline-flex !important; }
-}
+/* Sign-in / account button — visible at all widths (UserMenu collapses to a
+   compact avatar/pill on mobile, so it fits alongside search + hamburger). */
+.header-cta-btn { display: inline-flex !important; }
 
 .header-hamburger { display: flex; align-items: center; }
 @media (min-width: 1024px) {
