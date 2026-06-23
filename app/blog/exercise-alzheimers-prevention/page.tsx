@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import TableOfContents from "@/components/ui/TableOfContents";
 import MobileTOC from "@/components/ui/MobileTOC";
 import ReadingProgress from "@/components/ui/ReadingProgress";
@@ -18,7 +19,7 @@ const articleSchema = {
   headline: "Exercise & Alzheimer's: How Movement Cuts Risk 45%",
   description:
     "Aerobic exercise cuts Alzheimer's risk by 35–45% at 150 min/week. The BDNF mechanism, the protective dose, and how to start at any age.",
-  image: "https://fitlabreviews.com/lifestyle/exercise-brain-health.png",
+  image: "https://fitlabreviews.com/lifestyle/exercise-brain-health.jpg",
   datePublished: "2026-06-22",
   dateModified: "2026-06-22",
   author: { "@type": "Organization", name: "Fitlabreviews Editorial", url: "https://fitlabreviews.com/about" },
@@ -122,6 +123,18 @@ export default function ExerciseAlzheimers() {
           <span style={{ color: "#E4E8E5" }}>/</span>
           <span style={{ fontSize: 12, color: "#3F4B43", fontFamily: "var(--font-jetbrains), monospace" }}>Exercise & Brain Health</span>
         </div>
+      </div>
+
+      {/* Feature image banner */}
+      <div style={{ position: "relative", width: "100%", maxHeight: 420, overflow: "hidden", backgroundColor: "#0B1426" }}>
+        <Image
+          src="/lifestyle/exercise-brain-health.jpg"
+          alt="Woman stretching at home as part of a regular aerobic exercise routine"
+          width={1600}
+          height={854}
+          priority
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+        />
       </div>
 
       {/* Hero */}

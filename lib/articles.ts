@@ -85,7 +85,7 @@ export const allArticles: ArticleEntry[] = [
     title: "Highest Calorie-Burning Exercises, Ranked by Science",
     category: "FITNESS", tags: ["Fitness"],
     mins: 8, evidence: "Strong evidence",
-    image: "/lifestyle/calorie-burning-exercises.jpg",
+    image: "/lifestyle/fitness_yoga.png",
     date: "2026-06-22",
   },
   {
@@ -94,7 +94,7 @@ export const allArticles: ArticleEntry[] = [
     title: "Exercise & Alzheimer's: How Movement Cuts Risk 45%",
     category: "BRAIN HEALTH", tags: ["Fitness"],
     mins: 9, evidence: "Strong evidence",
-    image: "/lifestyle/exercise-brain-health.jpg",
+    image: "/illustrations/article-creatine-brain.png",
     date: "2026-06-22", featured: true,
   },
 

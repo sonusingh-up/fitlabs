@@ -77,7 +77,7 @@ const EDITOR_PICKS = [
     image: "/lifestyle/heart_soil_beef_organs.jpg",
   },
   {
-    rank: 4, slug: "seed-ds01-daily-synbiotic-review",
+    rank: 4, slug: "seed-ds-01",
     title: "DS-01 Daily Synbiotic", category: "PROBIOTIC", brand: "SEED",
     score: 8, specs: "24 strains · AFU-tested · $49/mo",
     bg: "#E4EAF0", stripeColor: "rgba(60,90,120,.08)", labelColor: "#3A4F5A",
@@ -104,7 +104,7 @@ export default function HomePage() {
         
         {/* Featured article (Hardcoded Hero) */}
         <article>
-          <Link href="/research/sleep-duration-biological-aging" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
+          <Link href="/blog/sleep-window-anti-aging" style={{ textDecoration: "none", color: "inherit", display: "block" }}>
             <div style={{ width: "100%", aspectRatio: "16/10", borderRadius: 16, overflow: "hidden", position: "relative" }}>
               <Image
                 src="/lifestyle/sleep_longevity.png"
