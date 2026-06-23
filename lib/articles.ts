@@ -70,6 +70,33 @@ export const allArticles: ArticleEntry[] = [
     image: "/illustrations/article-glp1-blog.png",
     date: "2026-06-18", featured: true,
   },
+  {
+    slug: "strength-training-longevity", type: "blog",
+    href: "/blog/strength-training-longevity",
+    title: "Strength Training & Longevity: Why 2 Hours a Week Works",
+    category: "FITNESS", tags: ["Fitness"],
+    mins: 9, evidence: "Strong evidence",
+    image: "/illustrations/fallback-fitness.png",
+    date: "2026-06-22", featured: true,
+  },
+  {
+    slug: "highest-calorie-burning-exercises", type: "blog",
+    href: "/blog/highest-calorie-burning-exercises",
+    title: "Highest Calorie-Burning Exercises, Ranked by Science",
+    category: "FITNESS", tags: ["Fitness"],
+    mins: 8, evidence: "Strong evidence",
+    image: "/lifestyle/calorie-burning-exercises.jpg",
+    date: "2026-06-22",
+  },
+  {
+    slug: "exercise-alzheimers-prevention", type: "blog",
+    href: "/blog/exercise-alzheimers-prevention",
+    title: "Exercise & Alzheimer's: How Movement Cuts Risk 45%",
+    category: "BRAIN HEALTH", tags: ["Fitness"],
+    mins: 9, evidence: "Strong evidence",
+    image: "/lifestyle/exercise-brain-health.jpg",
+    date: "2026-06-22", featured: true,
+  },
 
   // ── Research articles ─────────────────────────────────────
   {
