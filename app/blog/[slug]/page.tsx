@@ -243,18 +243,13 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
 
               {/* FAQ */}
               {post.faqItems && post.faqItems.length > 0 && (
-                <section style={{ marginBottom: 48 }}>
+                <section id="faq" style={{ marginBottom: 48 }}>
                   <h2 style={{ fontFamily: "var(--font-newsreader), Georgia, serif", fontSize: "1.5rem", fontWeight: 700, color: "#17211C", marginBottom: 20 }}>Frequently Asked Questions</h2>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                     {post.faqItems.map((item: { question: string; answer: string }, i: number) => (
-                      <details key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
-                        <summary style={{ padding: "14px 16px", cursor: "pointer", fontWeight: 700, color: "#17211C", fontSize: 14, backgroundColor: "#F6F8F6", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                          {item.question}
-                          <span style={{ fontSize: 18, color: "#9CA3AF", flexShrink: 0, marginLeft: 8 }}>+</span>
-                        </summary>
-                        <div style={{ padding: "12px 16px" }}>
-                          <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.65, margin: 0 }}>{item.answer}</p>
-                        </div>
+                      <details key={i} className="faq-item">
+                        <summary>{item.question}</summary>
+                        <p className="faq-answer">{item.answer}</p>
                       </details>
                     ))}
                   </div>
@@ -286,7 +281,7 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
                   <p style={{ fontFamily: "var(--font-jetbrains), monospace", fontSize: 9, letterSpacing: "0.18em", textTransform: "uppercase", color: "#0F7A5A", marginBottom: 12 }}>Related Reading</p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     {post.relatedArticles.map((rel: { href: string; label: string }, i: number) => (
-                      <Link key={i} href={rel.href} style={{ fontSize: 14, fontWeight: 600, color: "#17211C", textDecoration: "none", padding: "10px 14px", backgroundColor: "#FFFFFF", borderRadius: 8, border: "1px solid #E4E8E5" }}>
+                      <Link key={i} href={rel.href} className="fl-related-card">
                         {rel.label} →
                       </Link>
                     ))}
