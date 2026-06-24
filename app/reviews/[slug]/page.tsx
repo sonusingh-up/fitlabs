@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!review) return { title: "Review Not Found" };
   const heroImg = review.heroImage ? urlFor(review.heroImage).width(1200).height(630).url() : undefined;
   return {
-    title: review.title,
+    title: review.title.includes("Review") ? review.title : `${review.title} Review`,
     description: review.metaDescription || `Evidence-led review of ${review.title}: ingredient analysis, FSP score, and honest verdict.`,
     alternates: { canonical: `/reviews/${slug}` },
     ...(heroImg ? { openGraph: { images: [{ url: heroImg, width: 1200, height: 630, alt: review.title }] } } : {}),
@@ -225,7 +225,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
               <p className="rv-jb" style={{ fontSize: 12, letterSpacing: ".1em", color: "#6B7770", margin: "0 0 8px" }}>{review.brand?.toUpperCase()}</p>
               <h1 className="rv-nr" style={{ fontSize: "clamp(2.2rem,4.2vw,3.2rem)", fontWeight: 700, letterSpacing: "-.03em", color: "#17211C", lineHeight: 1.02, margin: 0 }}>
-                {review.title} <em style={{ fontStyle: "italic", fontWeight: 500, color: "#586259" }}>Review</em>
+                {review.title} {!review.title.includes("Review") && <em style={{ fontStyle: "italic", fontWeight: 500, color: "#586259" }}>Review</em>}
               </h1>
 
               {review.verdict && <p style={{ fontSize: 17, lineHeight: 1.6, color: "#3F4B43", margin: "16px 0 0", maxWidth: 560 }}>{review.verdict}</p>}
