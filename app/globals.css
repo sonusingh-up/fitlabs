@@ -818,6 +818,33 @@ details[open] > .review-otp-summary .review-otp-icon::after { content: "\2013"; 
   line-height: 1.75;
 }
 
+/* ── Article section anchor offset — clean in-page TOC navigation ─────── */
+section[id]:not(.rv-section), details[id] { scroll-margin-top: 84px; }
+
+/* ── Related-reading link cards (blog / research) ────────────────────── */
+.fl-related-card {
+  display: block;
+  padding: 12px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #E4E8E5;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #17211C;
+  text-decoration: none;
+  transition: transform var(--duration-fast) var(--ease-out-expo),
+              border-color var(--duration-fast) var(--ease-out-expo),
+              background-color var(--duration-fast) var(--ease-out-expo);
+}
+@media (hover: hover) {
+  .fl-related-card:hover {
+    transform: translateX(4px);
+    border-color: #0F7A5A;
+    background-color: #F2F8F4;
+  }
+}
+.fl-related-card:active { transform: translateX(2px) scale(0.995); }
+
 /* ── Keyframes ───────────────────────────────────────────────────────── */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(16px); }

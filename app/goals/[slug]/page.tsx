@@ -431,18 +431,11 @@ export default async function GoalPage({ params }: { params: Promise<{ slug: str
             {g.faqItems?.length > 0 && (
               <section id="faq" style={{ marginBottom: 48, paddingBottom: 48, borderBottom: "1px solid #F2F8F4" }}>
                 <SectionHeading label="Common Questions" figure={nextSection()} title="Frequently" titleItalic="Asked" size="sm" />
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ border: "1px solid #E4E8E5", borderRadius: 12, overflow: "hidden" }}>
                   {g.faqItems.map((item: { question: string; answer: string }, i: number) => (
-                    <details key={i} style={{ border: "1px solid #E4E8E5", borderRadius: 10, overflow: "hidden", backgroundColor: "#FFFFFF" }}>
-                      <summary style={{ padding: "16px 20px", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, fontSize: 14, fontWeight: 600, color: "#17211C", fontFamily: "var(--font-hanken), sans-serif", lineHeight: 1.4, listStyle: "none" }}>
-                        <span style={{ width: 26, height: 26, borderRadius: "50%", backgroundColor: "#FFF5EB", border: "1px solid #EBD8C3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                          <span style={{ fontSize: 13, color: "#0F7A5A", fontWeight: 700 }}>+</span>
-                        </span>
-                        {item.question}
-                      </summary>
-                      <div style={{ padding: "0 20px 18px 58px" }}>
-                        <p style={{ fontSize: 13, color: "#3F4B43", lineHeight: 1.7, margin: 0 }}>{item.answer}</p>
-                      </div>
+                    <details key={i} className="faq-item">
+                      <summary>{item.question}</summary>
+                      <p className="faq-answer">{item.answer}</p>
                     </details>
                   ))}
                 </div>
