@@ -3,6 +3,8 @@ import { ingredientSchema } from "./ingredient";
 import { blogSchema } from "./blog";
 import { authorSchema, brandSchema, bestListSchema, researchSchema, comparisonSchema, goalSchema } from "./others";
 
+import { tdeeCalculatorSchema } from "./tdeeCalculator";
+
 export const schemaTypes = [
   reviewSchema,
   ingredientSchema,
@@ -13,4 +15,5 @@ export const schemaTypes = [
   researchSchema,
   comparisonSchema,
   goalSchema,
+  tdeeCalculatorSchema,
 ];

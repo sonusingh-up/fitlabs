@@ -17,11 +17,13 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Fairlife Protein Shake Review (2026): 30g, 150 Cal",
+  title: "Fairlife Protein Shake Review (2026) — 8/10",
   description:
     "Fairlife Nutrition Plan review: 30g protein, 150 cal, lactose-free via ultra-filtration, 60% DV calcium. Taste, macros, sweetener analysis. FSP 8/10.",
   alternates: { canonical: "/reviews/fairlife-protein-shake" },
   openGraph: {
     title: "Fairlife Protein Shake Review (2026): 30g, 150 Cal",
+    title: "Fairlife Protein Shake Review (2026) — 8/10",
     description:
       "Fairlife delivers 30g complete milk protein in 150 calories — best-in-class caloric efficiency for an RTD shake. Full FSP scoring, nutrition deep dive, and honest sweetener analysis.",
     url: "https://fitlabreviews.com/reviews/fairlife-protein-shake",

@@ -262,3 +262,14 @@ export async function getComparisonBySlug(slug: string) {
     { slug }
   );
 }
+
+// ─── TOOLS ───────────────────────────────────────────────────────────────────
+
+export async function getTDEECalculatorContent() {
+  if (!sanityConfigured) return null;
+  return sanityClient.fetch(
+    `*[_type == "tdeeCalculator"][0]{
+      seoTitle, seoDescription, tooltips, educationalContent
+    }`
+  );
+}
