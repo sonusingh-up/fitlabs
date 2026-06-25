@@ -4,7 +4,7 @@ import { PILLAR_META, PILLAR_ORDER } from "@/lib/scoring";
 
 export const metadata: Metadata = {
   title: "How We Score Supplements — FSP v2.1",
-  description: "Fitlab Scoring Protocol explained: 5 weighted pillars, red-flag deductions, claim auditing, and how every composite score is calculated.",
+  description: "Fitlab Scoring Protocol (FSP v2.1) explained: 5 weighted pillars, red-flag deductions, claim auditing, and how every composite score is calculated.",
   alternates: { canonical: "/methodology" },
 };
 
