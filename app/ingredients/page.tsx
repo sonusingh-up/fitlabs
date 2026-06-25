@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Supplement Ingredient Research Index",
   description:
-    "Evidence-based profiles for 175+ supplement ingredients: dosage guidelines, mechanism of action, safety data, and form comparisons across sports nutrition and health.",
+    "Evidence-based profiles for 175+ supplement ingredients: dosage guidelines, mechanisms, safety data, and form comparisons for sports nutrition.",
   alternates: { canonical: "/ingredients" },
 };
 

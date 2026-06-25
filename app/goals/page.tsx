@@ -6,7 +6,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Supplement Stacks by Fitness Goal — Evidence-Based",
-  description: "Goal-based supplement guides for muscle gain, fat loss, endurance, recovery, and more. Each guide recommends ingredients ranked by evidence strength, not marketing.",
+  description: "Goal-based supplement guides for muscle gain, fat loss, endurance, and recovery. Each stack ranks ingredients by evidence strength, not marketing.",
   alternates: { canonical: "/goals" },
 };
 

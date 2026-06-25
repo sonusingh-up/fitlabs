@@ -7,7 +7,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Fitness, Nutrition & Longevity Blog",
-  description: "Evidence-led articles on sleep science, GLP-1 research, nutritional psychiatry, and fitness travel — every claim named and cited. No fluff, no sponsored content.",
+  description: "Evidence-led articles on sleep science, GLP-1 research, nutritional psychiatry, and fitness — every claim named and cited. No sponsored content.",
   alternates: { canonical: "/blog" },
 };
 
