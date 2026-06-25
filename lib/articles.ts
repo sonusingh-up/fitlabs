@@ -168,7 +168,6 @@ export const allArticles: ArticleEntry[] = [
     slug: "fairlife-protein-shake", type: "review" as ArticleType,
     href: "/reviews/fairlife-protein-shake",
     title: "Fairlife Protein Shake Review (2026): 30g, 150 Cal",
-    title: "Fairlife Protein Shake Review: 30 g Protein, 150 Cal, FSP 8/10",
     category: "REVIEWS", tags: ["Nutrition", "Reviews"],
     mins: 14, evidence: "Strong evidence",
     image: "/illustrations/fallback-reviews.png",
