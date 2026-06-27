@@ -5,8 +5,8 @@ import type { NextRequest } from "next/server";
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // .html → clean URL redirect (existing behaviour)
-  if (pathname.endsWith(".html")) {
+  // .html → clean URL redirect (skip Google Search Console verification files)
+  if (pathname.endsWith(".html") && !pathname.startsWith("/google")) {
     const newPath = pathname.slice(0, -5) || "/";
     const url = request.nextUrl.clone();
     url.pathname = newPath;
