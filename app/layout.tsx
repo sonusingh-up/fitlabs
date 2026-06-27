@@ -106,6 +106,9 @@ export const metadata: Metadata = {
     ],
     shortcut: "/favicon.svg",
   },
+  verification: {
+    google: "google527672898716d4cf",
+  },
   robots: {
     index: true,
     follow: true,
